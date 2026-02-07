@@ -1,0 +1,41 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_pickablepets"
+	group: "00000000DEB299A3"
+	icon: "pickablepets:altar"
+	id: "00000000B2311DED"
+	order_index: 7
+	quest_links: [ ]
+	quests: [{
+		hide_dependency_lines: true
+		hide_details_until_startable: true
+		hide_until_deps_complete: true
+		id: "000000000E63C79A"
+		invisible: true
+		invisible_until_tasks: 1
+		rewards: [
+			{
+				id: "00000000A41F6979"
+				type: "xp"
+				xp: 4
+			}
+			{
+				exclude_from_claim_all: true
+				id: "00000000E7C4BBBC"
+				table_id: 2687819013L
+				type: "random"
+			}
+		]
+		shape: "circle"
+		tasks: [{
+			consume_items: false
+			id: "000000002F0633BA"
+			item: "pickablepets:altar"
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Pickable Pets"
+}

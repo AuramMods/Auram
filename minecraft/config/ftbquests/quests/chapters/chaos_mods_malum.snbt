@@ -1,0 +1,3461 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_malum"
+	group: "00000000DEB299A3"
+	icon: "malum:soul_stained_steel_ingot"
+	id: "0000000051F16E80"
+	order_index: 49
+	quest_links: [ ]
+	quests: [
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000005ADAB9C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F7BA6C0D"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000D7BD68C"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "0000000056ACEA2B"
+				item: "malum:stripped_soulwood_log"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000003868FCDB"
+				"00000000F6A68D48"
+				"00000000050B986D"
+				"0000000053E01B12"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000029BD3666"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BE58D565"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000049B6E215"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000035132FA0"
+					item: "malum:spectral_optic"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CE3AAB85"
+					item: "malum:spirit_altar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000217F32BE"
+					item: "malum:spirit_jar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005AF6D7AA"
+					item: "malum:spirit_pouch"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"00000000A44A6195"
+				"00000000EFFB4367"
+				"000000005C56CD3B"
+				"000000008E0A6032"
+				"00000000D6ABA561"
+				"00000000ECA26453"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005C93377F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005CB48C17"
+					type: "xp"
+					xp: 22
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000043C1DCA4"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000317B92ED"
+					item: "malum:soulwood_planks_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DA3775E9"
+					item: "malum:soulwood_planks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002A43D364"
+					item: "malum:soulwood_tiles_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000083ACA133"
+					item: "malum:soulwood_trapdoor"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"00000000A44A6195"
+				"00000000EFFB4367"
+				"000000005C56CD3B"
+				"000000008E0A6032"
+				"00000000D6ABA561"
+				"0000000052D07F79"
+				"0000000084776289"
+				"00000000ECA26453"
+				"00000000C7D66A95"
+				"00000000B71BCD30"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008CF585BA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D9BB2BD1"
+					type: "xp"
+					xp: 22
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007141ECB3"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C68CE980"
+					item: "malum:soulwood_planks_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000022E92FF4"
+					item: "malum:soulwood_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EB8FA28C"
+					item: "malum:soulwood_item_pedestal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000093DF7287"
+					item: "malum:soulwood_item_stand"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"00000000A44A6195"
+				"00000000EFFB4367"
+				"000000005C56CD3B"
+				"000000008E0A6032"
+				"00000000ECA26453"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D40FDAA0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003D5133F0"
+					type: "xp"
+					xp: 22
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003A7A0002"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AEBA46DC"
+					item: "malum:soulwood_beam"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006C0519D6"
+					item: "malum:soulwood_boards_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C7397A6A"
+					item: "malum:soulwood_boards_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003FD4CE61"
+					item: "malum:soulwood_boat"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000A44A6195"
+				"00000000CD3DA79A"
+				"00000000D66B2541"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E6BEB38F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000708BFA81"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004D9184E0"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000071EACA54"
+					item: "malum:smooth_twisted_rock_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008718CF9C"
+					item: "malum:smooth_twisted_rock_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B211DA0C"
+					item: "malum:smooth_twisted_rock_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005888FD80"
+					item: "malum:soul_stained_steel_plating"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000A44A6195"
+				"000000009210D006"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000272776F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000436172A9"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000061D0A046"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000826140FD"
+					item: "malum:small_twisted_rock_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000032C356F7"
+					item: "malum:smooth_tainted_rock_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009157945C"
+					item: "malum:smooth_tainted_rock_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C184AFE9"
+					item: "malum:smooth_tainted_rock_wall"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000009210D006"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007C02A4D7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000099B02578"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009161D193"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C3CBA7FF"
+					item: "malum:small_tainted_rock_bricks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C86CAB8C"
+					item: "malum:small_tainted_rock_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005F5F6C03"
+					item: "malum:small_twisted_rock_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C336E3BC"
+					item: "malum:small_twisted_rock_bricks_stairs"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"000000003781EF21"
+				"00000000D6ABA561"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000091E34147"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000041BF69E"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009FB15900"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004389B598"
+					item: "malum:rustic_soulwood_tiles_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003631F3DE"
+					item: "thermal:silver_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006DCAD00F"
+					item: "minecraft:skeleton_skull"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000010AAC530"
+					item: "malum:small_tainted_rock_bricks_slab"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000005ADAB9C"
+				"0000000051F61283"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008E0A6032"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004E0BCB23"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002FC29973"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000A97BF75F"
+				item: "malum:soulwood_planks"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000005C56CD3B"
+				"0000000051F61283"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A44A6195"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000005E104A7"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F94EFBB8"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E1CB7E79"
+					item: "malum:smooth_tainted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000005200021"
+					item: "malum:smooth_twisted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D33D8D0C"
+					item: "malum:soulwood_boards"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000076ACC2B5"
+					item: "malum:tainted_rock_tiles"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000005C56CD3B"
+				"000000008E0A6032"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EFFB4367"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007B033DA9"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000011F3B864"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003280F971"
+					item: "malum:vertical_rustic_soulwood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000907AA415"
+					item: "malum:vertical_soulwood_planks"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000B1A2B3F5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000046800B8E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A4A0C27E"
+					type: "xp"
+					xp: 37
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FB0406D4"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000035C16376"
+					item: "malum:charcoal_fragment"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000163F6FD9"
+					item: "malum:chunk_of_brilliance"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045AD98A4"
+					item: "malum:coal_fragment"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000088512733"
+					item: "malum:cut_tainted_rock"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000005ADAB9C"
+				"00000000CD3DA79A"
+				"00000000F6A68D48"
+				"0000000051F61283"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000012321610"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000411480AC"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007836766D"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EFD8CB6D"
+					item: "malum:arcane_charcoal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A1D35667"
+					item: "malum:blazing_quartz"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000043987248"
+					item: "malum:block_of_hallowed_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058F6CC53"
+					item: "malum:block_of_soul_stained_steel"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"0000000065B04AAB"
+				"00000000B0D110D6"
+				"0000000053E01B12"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FB99DD85"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000223B2DDC"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C469B1EE"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FE6FB55B"
+					item: "malum:runewood_panel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000093852144"
+					item: "malum:runewood_planks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DA36F852"
+					item: "malum:runewood_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000084F18004"
+					item: "malum:runic_small_tainted_rock_bricks"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"0000000065B04AAB"
+				"0000000030F362F0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003868FCDB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F72F584F"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D725B8E8"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BA147DDD"
+					item: "malum:cut_twisted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DA1A09CD"
+					item: "malum:polished_twisted_rock_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000874CCA44"
+					item: "malum:processed_soulstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000419CCC50"
+					item: "malum:runewood_boards_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000000758A117"
+				"0000000030F362F0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F6A68D48"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000F304DBB"
+					type: "xp"
+					xp: 32
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C3590CAA"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B902C300"
+					item: "malum:block_of_hex_ash"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000061EEE3C"
+					item: "malum:block_of_raw_soulstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000018F67B2E"
+					item: "malum:hallowed_gold_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C9531DD"
+					item: "malum:malignant_pewter_ingot"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"00000000A44A6195"
+				"00000000EFFB4367"
+				"0000000065B04AAB"
+				"000000005C56CD3B"
+				"000000008E0A6032"
+				"00000000B0D110D6"
+				"0000000053E01B12"
+				"00000000ECA26453"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D6ABA561"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000582981C1"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E046802B"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000029EE1B4C"
+					item: "malum:rustic_soulwood_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003317F656"
+					item: "malum:small_tainted_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000034268F43"
+					item: "malum:solid_runewood_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001207F589"
+					item: "malum:solid_soulwood_trapdoor"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0000000065B04AAB"
+				"000000009210D006"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B0D110D6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000036F87926"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008C26B1E1"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DD13F770"
+					item: "malum:runewood_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C0EAAACC"
+					item: "malum:rustic_runewood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000047F71496"
+					item: "malum:twisted_rock_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B7A62BD4"
+					item: "malum:vertical_runewood_boards"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000005C56CD3B"
+				"0000000065B04AAB"
+				"00000000B0D110D6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000052D07F79"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002655090F"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003906AA8D"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F7F24AD3"
+					item: "malum:runic_tainted_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089030F7D"
+					item: "malum:rustic_runewood_planks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000342BE0D8"
+					item: "malum:rustic_runewood_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E15D7BB8"
+					item: "malum:rustic_soulwood_planks_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000030F362F0"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000050B986D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C7EFF9F7"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A539F655"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000061920FBE"
+					item: "malum:spectral_lens"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000361122E4"
+					item: "malum:stripped_runewood_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007A8A3A32"
+					item: "malum:tainted_rock_column"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006B28C8C1"
+					item: "malum:tainted_rock_slab"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"00000000A44A6195"
+				"00000000EFFB4367"
+				"000000005C56CD3B"
+				"000000008E0A6032"
+				"00000000ECA26453"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000084776289"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000099E5E418"
+					type: "xp"
+					xp: 40
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000008F75DCA"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007AECF9D7"
+					item: "malum:soulwood_boards_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007B1C2D54"
+					item: "malum:soulwood_panel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A3E09388"
+					item: "malum:soulwood_planks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000953B4077"
+					item: "malum:soulwood_tiles_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000065B04AAB"
+				"000000005C56CD3B"
+				"00000000B0D110D6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000000A25D48"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002E3FF775"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000143F3AAE"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BB8B3E22"
+					item: "malum:runic_twisted_rock_tiles_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000037CD98D0"
+					item: "malum:rustic_runewood_planks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008C8B9CD3"
+					item: "malum:rustic_runewood_tiles_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF3B3982"
+					item: "malum:rustic_soulwood_planks_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000CDA92912"
+				"000000009210D006"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000846105EB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000595063D1"
+					type: "xp"
+					xp: 37
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002F75D096"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EFFD51C8"
+					item: "malum:runic_twisted_rock_bricks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019F82EA0"
+					item: "malum:runic_twisted_rock_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A41A4648"
+					item: "malum:runic_twisted_rock_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000790B7B14"
+					item: "malum:runic_twisted_rock_tiles_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000EFFB4367"
+				"00000000ECA26453"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C7D66A95"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E9E7098E"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002A49F171"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003C037152"
+					item: "malum:vertical_soulwood_boards_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000469AA1F7"
+					item: "malum:vertical_soulwood_planks_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000EFFB4367"
+				"0000000065B04AAB"
+				"00000000B0D110D6"
+				"0000000053E01B12"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B71BCD30"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000124DE635"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000737518B4"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FA3523B7"
+					item: "malum:vertical_runewood_boards_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000788D6983"
+					item: "malum:vertical_runewood_planks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004DA4B81C"
+					item: "malum:vertical_rustic_runewood_planks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003D26CF3A"
+					item: "malum:vertical_rustic_soulwood_planks_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000B1A2B3F5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000082A1B7BB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003D518F1A"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E8F59123"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000C9C1081"
+					item: "malum:runic_tainted_rock_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004AD95CB5"
+					item: "malum:runic_tainted_rock_tiles_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000072E1C24"
+					item: "malum:runic_tainted_rock_tiles_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C4311DD6"
+					item: "malum:runic_twisted_rock_bricks_slab"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000EFFB4367"
+				"0000000053E01B12"
+				"00000000ECA26453"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000FB9AA1B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E36A5C93"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004358F0AC"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B81CF4D8"
+					item: "malum:vertical_rustic_runewood_planks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A299CA9F"
+					item: "malum:vertical_rustic_soulwood_planks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005660D48C"
+					item: "malum:vertical_soulwood_boards_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AF1D8EA3"
+					item: "malum:vertical_soulwood_planks_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000065B04AAB"
+				"00000000B0D110D6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E5E5FFA3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006B6B4368"
+					type: "xp"
+					xp: 40
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FB250B64"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000484FA00C"
+					item: "malum:twisted_rock_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000777952B9"
+					item: "immersiveengineering:nugget_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E9E31963"
+					item: "malum:vertical_runewood_boards_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000033E0433D"
+					item: "malum:vertical_runewood_planks_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000B0D110D6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F5B593E9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A97E6309"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000091A0291D"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000183888D5"
+					item: "malum:twisted_rock_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C63010F"
+					item: "malum:twisted_rock_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007966D98F"
+					item: "malum:twisted_rock_tiles_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000095D42E6"
+					item: "malum:twisted_rock_tiles_wall"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000D66B2541"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CD3DA79A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000062FE8E1A"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000444287EF"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "00000000671C0909"
+				item: "malum:soul_stained_steel_ingot"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000018DBFFCA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007A596087"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000010588B14"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CF1F4582"
+					item: "malum:twisted_rock_item_pedestal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019F90070"
+					item: "malum:twisted_rock_item_stand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006FF22AAA"
+					item: "malum:twisted_rock_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000745EA4C6"
+					item: "malum:twisted_rock_slab"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000009210D006"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CC7533B4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C86A7CB9"
+					type: "xp"
+					xp: 27
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003673BB1A"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000668DBA1B"
+					item: "malum:twisted_rock_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D5067CF"
+					item: "malum:twisted_rock_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001D8E0A35"
+					item: "malum:twisted_rock_column"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F7BBF39"
+					item: "malum:twisted_rock_column_cap"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000009210D006"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000987125A4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004A8B8B75"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000BCAC8A7"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000002153D7A7"
+				item: "malum:runic_small_twisted_rock_bricks"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000012321610"
+				"000000009210D006"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006748A157"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008426AB51"
+					type: "xp"
+					xp: 26
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000084FF9507"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000093777A32"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F189BF85"
+					item: "malum:trans_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A40ED9BB"
+					item: "malum:twisted_rock_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D5C3DE9"
+					item: "malum:twisted_rock_bricks_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000000758A117"
+				"0000000030F362F0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003781EF21"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005CD9FE46"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A2C6DA7B"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D7B22918"
+					item: "malum:blighted_gunk"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E7F9B3F"
+					item: "malum:cluster_of_brilliance"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001ADD237A"
+					item: "malum:cthonic_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000D14ADA5"
+					item: "malum:grim_talc"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000A44A6195"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009F12A642"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B7A1E84F"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000018FDEB5C"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F8AD5A98"
+					item: "malum:tainted_rock_tiles_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DDE756FA"
+					item: "malum:tainted_rock_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000066D19E48"
+					item: "malum:the_device"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075D39528"
+					item: "thermal:tin_nugget"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000A44A6195"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008AC4152E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FF244762"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000075368B73"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001CF44CD8"
+					item: "malum:tainted_rock_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F8B712A4"
+					item: "malum:tainted_rock_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000881142BC"
+					item: "malum:tainted_rock_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004295CB77"
+					item: "malum:tainted_rock_tiles_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"00000000050B986D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000038B9F40B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B52AC734"
+					type: "xp"
+					xp: 31
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B66CC338"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F10E1FB3"
+					item: "malum:tainted_rock_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008206E4BA"
+					item: "malum:tainted_rock_column_cap"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E0EE371E"
+					item: "malum:tainted_rock_item_pedestal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E4427660"
+					item: "malum:tainted_rock_item_stand"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000005C56CD3B"
+				"00000000050B986D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009F2A790A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000092B7FE26"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000026752229"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A14D8174"
+					item: "malum:stripped_runewood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F7226293"
+					item: "malum:tainted_rock_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F82FA819"
+					item: "malum:tainted_rock_bricks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001AFD9020"
+					item: "malum:tainted_rock_bricks_wall"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003972F7FC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DC261E02"
+					type: "xp"
+					xp: 26
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AA7E7891"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005966034D"
+					item: "malum:intersex_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000099886F9"
+					item: "minecraft:iron_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D6BD7A97"
+					item: "thermal:lead_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AB4ABF65"
+					item: "malum:lesbian_prideweave"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000003868FCDB"
+				"00000000F6A68D48"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AD32E93E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000029C35150"
+					type: "xp"
+					xp: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B43DA95D"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F40B4B3D"
+					item: "malum:genderqueer_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000345E7CB4"
+					item: "malum:gilded_belt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004852923A"
+					item: "malum:gilded_ring"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001D10C8C8"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["000000003868FCDB"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000517B2661"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005E7C026F"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005B4F92CA"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C553359D"
+					item: "malum:enby_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000055A2A8CD"
+					item: "malum:encyclopedia_arcana"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008756C7F9"
+					item: "malum:gay_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DE25DB18"
+					item: "malum:genderfluid_prideweave"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000CD3DA79A"
+				"0000000012321610"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001971530A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007CAE53B5"
+					type: "xp"
+					xp: 35
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008BCAC115"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A8D8FA96"
+					item: "malum:demiboy_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B51BCAF"
+					item: "malum:demigirl_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BD6C92BE"
+					item: "malum:dreaded_weave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001BE3E815"
+					item: "malum:elaborate_brooch"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000B1A2B3F5"
+				"00000000A44A6195"
+				"00000000EFFB4367"
+				"0000000065B04AAB"
+				"000000005C56CD3B"
+				"00000000FB99DD85"
+				"000000008E0A6032"
+				"00000000B0D110D6"
+				"0000000053E01B12"
+				"0000000084776289"
+				"00000000ECA26453"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DED0D705"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000003B59041"
+					type: "xp"
+					xp: 36
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008B5CB871"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A9CC2423"
+					item: "malum:cursed_sap_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EED9AA73"
+					item: "malum:cursed_sapball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C596601B"
+					item: "malum:cut_runewood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000E353160"
+					item: "malum:cut_soulwood_planks"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000005ADAB9C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000051F61283"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000044D8BDCD"
+					type: "xp"
+					xp: 26
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001AD76344"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E0579F72"
+					item: "malum:revealed_soulwood_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B819E00"
+					item: "malum:soulwood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F70ABD77"
+					item: "malum:stripped_soulwood"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000A44A6195"
+				"00000000EFFB4367"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B1A2B3F5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000059DE9D64"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006487BFEC"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EB3D9FEE"
+					item: "malum:polished_tainted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002D6A08C2"
+					item: "malum:polished_twisted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B84BABC1"
+					item: "malum:runic_tainted_rock_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000014FC4A3A"
+					item: "malum:rustic_soulwood_tiles"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000008E0A6032"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005C56CD3B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000019CF4A1B"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E4B809E4"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AEFA16EC"
+					item: "malum:rustic_soulwood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007AA48B0C"
+					item: "malum:tainted_rock_bricks"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000065B04AAB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008616DD1D"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000019BAF4EC"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FCA9A63B"
+					item: "malum:runewood_boards"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B4352CE1"
+					item: "malum:rustic_runewood_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A29DEA56"
+					item: "malum:vertical_runewood_planks"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000758A117"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B0E01BE6"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BB391AC1"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002DBB260C"
+					item: "malum:block_of_brilliance"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058B1E96A"
+					item: "malum:block_of_grim_talc"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D303363D"
+					item: "malum:cthonic_gold_fragment"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000013053756"
+					item: "malum:hallowed_gold_nugget"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000030F362F0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C6220E34"
+					type: "xp"
+					xp: 23
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F69FB97D"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007E948C7F"
+					item: "malum:hex_ash"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000061ADAA9"
+					item: "malum:malignant_pewter_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001A1028D2"
+					item: "malum:mass_of_blighted_gunk"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FA8ABDEB"
+					item: "malum:raw_soulstone"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000A44A6195"
+				"00000000EFFB4367"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ECA26453"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000078FC806D"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000067F3537C"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FA6074B8"
+					item: "malum:soulwood_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001BC2CF5C"
+					item: "malum:vertical_soulwood_boards"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009210D006"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000EEFF426"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CAAE00F7"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000053336CA3"
+					item: "malum:runic_twisted_rock_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D65820EB"
+					item: "malum:small_twisted_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000072F65E8A"
+					item: "malum:twisted_rock_bricks"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000046800B8E"
+				"000000003868FCDB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000035C0FE49"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001ADF4E60"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F889E55A"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000087F8C3F"
+					item: "malum:chiseled_twisted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ED24318E"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000027DA2A0C"
+					item: "tconstruct:cobalt_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002ACBC640"
+					item: "create:copper_nugget"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000052D07F79"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EC091CD9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FBF643CF"
+					type: "xp"
+					xp: 28
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D0F6A90E"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008B04D96D"
+					item: "malum:runic_small_twisted_rock_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BD7B5E36"
+					item: "malum:runic_tainted_rock_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000502E9C6"
+					item: "malum:runic_tainted_rock_bricks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000572FCA19"
+					item: "malum:runic_tainted_rock_bricks_wall"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000046800B8E"
+				"000000003868FCDB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CA1396B5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F64A0CB3"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000094A26A28"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CD5112CB"
+					item: "minecraft:charcoal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000061C4454B"
+					item: "malum:checkered_tainted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AEBA4CB9"
+					item: "malum:checkered_twisted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000047EF522D"
+					item: "malum:chiseled_tainted_rock"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000FB99DD85"
+				"00000000D6ABA561"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000058F1A40C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000027E92686"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E0C27E02"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FE56B0D9"
+					item: "malum:runic_small_tainted_rock_bricks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C3256D7"
+					item: "malum:runic_small_tainted_rock_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089A33393"
+					item: "malum:runic_small_twisted_rock_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000844B6361"
+					item: "malum:runic_small_twisted_rock_bricks_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000012321610"
+				"00000000F6A68D48"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000069A4501C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A96BC608"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000009CA94D0"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006911C515"
+					item: "malum:runic_brooch"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001ECC46A6"
+					item: "malum:runic_sap_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003E727144"
+					item: "malum:runic_sapball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E7596438"
+					item: "malum:runic_small_tainted_rock_bricks_slab"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000003781EF21"
+				"0000000030F362F0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EE42066F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000056427568"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000713D40C6"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000083B762BD"
+					item: "malum:cornered_weave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2D97220"
+					item: "malum:crushed_brilliance"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F34BE53E"
+					item: "create:crushed_raw_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B75D8E9C"
+					item: "malum:crushed_soulstone"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000065B04AAB"
+				"00000000D6ABA561"
+				"00000000B0D110D6"
+				"0000000053E01B12"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000075C94D4D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000003B80FA8"
+					type: "xp"
+					xp: 31
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004E11F397"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E2107AA4"
+					item: "malum:runewood_planks_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D00755A"
+					item: "malum:runewood_planks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000022048167"
+					item: "malum:runewood_tiles_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003B9EA400"
+					item: "malum:runewood_trapdoor"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000065B04AAB"
+				"00000000FB99DD85"
+				"000000003868FCDB"
+				"00000000B0D110D6"
+				"0000000052D07F79"
+				"0000000053E01B12"
+				"00000000B71BCD30"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001640D7F4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000033F63490"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000095341971"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AA5B927E"
+					item: "malum:runewood_planks_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009DA82B8A"
+					item: "malum:runewood_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006333D186"
+					item: "malum:runewood_item_pedestal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001AC4C962"
+					item: "malum:runewood_item_stand"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000065B04AAB"
+				"00000000B0D110D6"
+				"0000000053E01B12"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009DAB6974"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004042B0CC"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006547F2CC"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CD95582B"
+					item: "malum:runewood_beam"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F2814924"
+					item: "malum:runewood_boards_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005F4D7649"
+					item: "malum:runewood_boards_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008F5F4711"
+					item: "malum:runewood_boat"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D66B2541"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000066F9E645"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000060710840"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000CC1E6FF0"
+				item: "malum:soul_stained_steel_nugget"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000003781EF21"
+				"0000000012321610"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000015AA544B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F0C6BE3E"
+					type: "xp"
+					xp: 28
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000032948F5A"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C4583C0B"
+					item: "immersiveengineering:nugget_aluminum"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C61BE9C"
+					item: "malum:ancient_weave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000828BF4D8"
+					item: "malum:arcane_charcoal_fragment"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000605B909F"
+					item: "malum:aro_prideweave"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000987125A4"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CDA92912"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E4CDBCC8"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000041C92A0C"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000116DEB38"
+				item: "malum:runic_twisted_rock_bricks"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000B0D110D6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000053E01B12"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000257CD8C3"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004164D71D"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CA6A2D55"
+					item: "malum:runewood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000139039CD"
+					item: "malum:vertical_rustic_runewood_planks"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000B1A2B3F5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009DF01CFA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000665F064E"
+					type: "xp"
+					xp: 32
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000760A501A"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D1FE8BD6"
+					item: "malum:polished_tainted_rock_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000041306A95"
+					item: "malum:polished_twisted_rock_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F08F201D"
+					item: "malum:polished_twisted_rock_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BDE7D16C"
+					item: "malum:poly_prideweave"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000B1A2B3F5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001E752020"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000361AE72E"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E89B95B4"
+					table_id: 1178931755L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000049D917B9"
+					item: "malum:pan_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C4133207"
+					item: "malum:plural_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000AEFC7EF"
+					item: "malum:polished_tainted_rock_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C8FBA8D9"
+					item: "malum:polished_tainted_rock_stairs"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+	]
+	title: "Malum"
+}

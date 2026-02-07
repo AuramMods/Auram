@@ -1,0 +1,39 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_cofh_core"
+	group: "00000000DEB299A3"
+	id: "000000006A38C826"
+	order_index: 116
+	quest_links: [ ]
+	quests: [{
+		hide_dependency_lines: true
+		hide_details_until_startable: true
+		hide_until_deps_complete: true
+		id: "000000004F85FDC0"
+		invisible: true
+		invisible_until_tasks: 1
+		rewards: [
+			{
+				id: "0000000002312CCE"
+				type: "xp"
+				xp: 11
+			}
+			{
+				exclude_from_claim_all: true
+				id: "0000000081CA0532"
+				table_id: 1250235175L
+				type: "random"
+			}
+		]
+		shape: "circle"
+		tasks: [{
+			consume_items: false
+			id: "000000004EF7E1BE"
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "CoFH Core"
+}

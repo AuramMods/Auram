@@ -1,0 +1,41 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_patchouli"
+	group: "00000000DEB299A3"
+	icon: "patchouli:guide_book"
+	id: "00000000F90F9DC6"
+	order_index: 78
+	quest_links: [ ]
+	quests: [{
+		hide_dependency_lines: true
+		hide_details_until_startable: true
+		hide_until_deps_complete: true
+		id: "00000000824C52E8"
+		invisible: true
+		invisible_until_tasks: 1
+		rewards: [
+			{
+				id: "0000000059DBC57B"
+				type: "xp"
+				xp: 5
+			}
+			{
+				exclude_from_claim_all: true
+				id: "000000008F0E93BE"
+				table_id: 2438214536L
+				type: "random"
+			}
+		]
+		shape: "circle"
+		tasks: [{
+			consume_items: false
+			id: "000000007A6F4C60"
+			item: "patchouli:guide_book"
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Patchouli"
+}

@@ -1,0 +1,2582 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_integrateddynamics"
+	group: "00000000DEB299A3"
+	icon: "integrateddynamics:crystalized_menril_chunk"
+	id: "00000000A1725316"
+	order_index: 21
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["00000000712CCDE8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000024CDD114"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AD33B997"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008606A786"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004251B59F"
+					item: "integrateddynamics:crystalized_chorus_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BF14EC4F"
+					item: "integrateddynamics:crystalized_chorus_chunk"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002CD04DE2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FD2399FD"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007870EC7A"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001A31A364"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FFC78432"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000004DFBF4DE"
+				"00000000492D2962"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DF73A50E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000024521FAE"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008CBE094F"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008F510ED7"
+					item: "minecraft:netherrack"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004F342488"
+					item: "integrateddynamics:part_network_reader"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000E408ACD7"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000010915211"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D194796E"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002251834A"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000129F883E"
+					item: "integrateddynamics:part_connector_omni_directional"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002BC46C66"
+					item: "integrateddynamics:on_the_dynamics_of_integration"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000492D2962"
+				"00000000E408ACD7"
+				"00000000B9F0F7F6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000530EE7B8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000015304D53"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B8CE7392"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000966CFEB2"
+					item: "minecraft:orange_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B83A9477"
+					item: "integrateddynamics:enhancement_offset"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000B9F0F7F6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001ADDEA44"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E577A6EE"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000076C5FAF0"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000078AB63B9"
+					item: "integrateddynamics:menril_fence_gate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CDAD98E0"
+					item: "integrateddynamics:menril_slab"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000B9F0F7F6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B25ADF46"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000221A1533"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B5F38276"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B3B6E50A"
+					item: "integrateddynamics:menril_planks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005FF693F0"
+					item: "integrateddynamics:menril_torch_stone"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000004DFBF4DE"
+				"00000000492D2962"
+				"00000000B9F0F7F6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000009362FCB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BC81F064"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EF656E85"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DA3C4043"
+					item: "integrateddynamics:menril_torch"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008CDA26AA"
+					item: "integrateddynamics:part_connector_mono_directional"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000004DFBF4DE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D3301192"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D8E8967C"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000097B24A10"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A953A696"
+					item: "minecraft:pink_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000065C0A86F"
+					item: "integrateddynamics:portable_logic_programmer"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001F03A65F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006DC194F1"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000247A720E"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009B75CABB"
+					item: "create:powdered_obsidian"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024F03557"
+					item: "minecraft:prismarine_crystals"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000414ECAE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A8E2C0D1"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008316FD73"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000025E699A3"
+					item: "integrateddynamics:proto_chorus"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004515A2EE"
+					item: "integrateddynamics:proxy"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E4698B50"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E1BA3A7A"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000085929432"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A0C0D6C5"
+					item: "minecraft:sponge"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000280E757A"
+					item: "integratedterminals:part_terminal_storage"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008DAB01B7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000059CFD881"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000061F73009"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003E2AEF01"
+					item: "crystalcraft_unlimited_java:raw_platinum"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009F1C33F6"
+					item: "thermal:raw_silver"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D27EE8FE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B1A68583"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007AD3EC2F"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000012DFE15E"
+					item: "thermal:raw_tin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003FCF7F59"
+					item: "crystalcraft_unlimited_java:raw_tungsten"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000081D1C5EC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008B6D4EF8"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000803C2521"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000353FAB3B"
+					item: "immersiveengineering:raw_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D0A29F4"
+					item: "create:raw_zinc"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000E408ACD7"
+				"00000000712CCDE8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A565028A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000021AEC5DE"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000001DD473F"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000DDD645AB"
+				item: "integrateddynamics:variablestore"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000043C9C80F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C3B1CDCD"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000007878376"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FFE80E00"
+					item: "minecraft:red_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000059D4840B"
+					item: "minecraft:red_sand"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000B9F0F7F6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000310E1C9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000029ED39CF"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BB7875E5"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CA5EEBCE"
+					item: "integrateddynamics:squeezer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000050051817"
+					item: "integrateddynamics:part_static_light_panel"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005213CF18"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A66811B5"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003FB73FFF"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B979B7AC"
+					item: "immersiveengineering:raw_aluminum"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E184360D"
+					item: "crystalcraft_unlimited_java:raw_cobalt"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000E408ACD7"
+				"00000000712CCDE8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004DFBF4DE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DCDDF13E"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EED06345"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F0B5618A"
+					item: "integrateddynamics:cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001190DB9D"
+					item: "integrateddynamics:logic_programmer"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000005912C81"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006F30863C"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000567C0693"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000631F3588"
+					item: "minecraft:raw_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006F7B26B3"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000E408ACD7"
+				"00000000DDEF2E35"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000492D2962"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DDC16743"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001765E59B"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D80C35E1"
+					item: "integrateddynamics:energy_battery"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000057278563"
+					item: "integrateddynamics:variable_transformer_input"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000C83966C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E1EC49AA"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D255829F"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ACA0F11B"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000144F667A"
+					item: "thermal:raw_lead"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000712CCDE8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F0DB970D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000444827E9"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000054B266A4"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000121CE503"
+					item: "integrateddynamics:crystalized_menril_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F4D68288"
+					item: "integrateddynamics:drying_basin"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000088FC4510"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000426D658E"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000024DCB2B3"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001FD0B731"
+					item: "thermal:raw_nickel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E2E9675B"
+					item: "mekanism:raw_osmium"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000492D2962"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EDB8C527"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007ABBFC66"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000048450CEF"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000028CC262C"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C00CB43F"
+					item: "integrateddynamics:part_redstone_reader"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000E408ACD7"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DDEF2E35"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D5CAFB84"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000038084E91"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "00000000D93FA26D"
+				item: "integrateddynamics:variable"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000B9F0F7F6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AFEF9E76"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006964961C"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E6E8EB8F"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003479D395"
+					item: "integrateddynamics:part_redstone_writer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E0868CCD"
+					item: "minecraft:sand"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000032D87375"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000069247048"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007EC97A90"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005DC718E6"
+					item: "integrateddynamics:menril_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DF3F3820"
+					item: "integrateddynamics:menril_wood_stripped"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E408ACD7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A1FA8E09"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B9A702AD"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000C487DE32"
+				item: "integrateddynamics:crystalized_menril_chunk"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000492D2962"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D36DA28B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000CB8AB58"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008D3DD953"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009DE4A36B"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004A875D62"
+					item: "integrateddynamics:part_audio_reader"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000B9F0F7F6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000351540E9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000049E47E64"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000077DF4A4D"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008514EE85"
+					item: "integrateddynamics:part_audio_writer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BE4D0E60"
+					item: "minecraft:black_dye"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000A565028A"
+				"00000000E408ACD7"
+				"00000000DDEF2E35"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000365D19C7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002C957A3C"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000A04E023"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008FDD4457"
+					item: "minecraft:dead_bush"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C8AE6554"
+					item: "integrateddynamics:delay"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000966C7915"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000019F35BB6"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000072959036"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007ACAF0A1"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CE8C0EDE"
+					item: "minecraft:dirt"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000000310E1C9"
+				"00000000B9F0F7F6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B9518A2A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000049F8D997"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000C4DABB3"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001D0C3662"
+					item: "integrateddynamics:part_display_panel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2664044"
+					item: "minecraft:dried_kelp"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000000310E1C9"
+				"00000000B9F0F7F6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E7988B78"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000087137766"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006A94A1D5"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C6E5EBB2"
+					item: "integrateddynamics:part_dynamic_light_panel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7FBD5DD"
+					item: "integrateddynamics:part_effect_writer"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008E7B068A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001FA1A2B3"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E7C7B47A"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000780D0AEE"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C45EE04D"
+					item: "minecraft:sugar"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009FDDE875"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000077E654D5"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005C44BC62"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001AFF62D9"
+					item: "minecraft:terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003D41F94E"
+					item: "minecraft:white_dye"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000492D2962"
+				"00000000E408ACD7"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003A124D5E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000067B8B768"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007A0D9894"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000041960F68"
+					item: "integrateddynamics:part_world_reader"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B12FD310"
+					item: "integrateddynamics:wrench"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000712CCDE8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CC4419C5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D61D5018"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BBDCF4B0"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F14B8746"
+					item: "integrateddynamics:crystalized_menril_block_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001D9A017E"
+					item: "integrateddynamics:crystalized_menril_block_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000302AA6B5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AF958AE9"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FB501075"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000041B7DE5F"
+				item: "minecraft:yellow_dye"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007BD1443F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AC406DE5"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000570EE0EA"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CFC6E20A"
+					item: "minecraft:glowstone_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000337AF3EB"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000492D2962"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003AB93542"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F3888C60"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D02AEA0E"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007863E267"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000634CAAD5"
+					item: "integrateddynamics:part_entity_reader"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000492D2962"
+				"00000000B9F0F7F6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000031340289"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008854603A"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001F748DE1"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FB9C1E9E"
+					item: "integrateddynamics:part_entity_writer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029B69570"
+					item: "integrateddynamics:part_extradimensional_reader"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001F43069F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000464B13E3"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000024FC2B7"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000003B7CA8B"
+					item: "integrateddynamics:facade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006734B9D5"
+					item: "minecraft:flint"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000492D2962"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AA1C4A47"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F69321CB"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008409E3E0"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B7E65FB1"
+					item: "integrateddynamics:part_fluid_reader"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003D50D267"
+					item: "integrateddynamics:coal_generator"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D74F95E7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000665C07B2"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F7A12050"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E8CC9E29"
+					item: "minecraft:charcoal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006E75BE46"
+					item: "minecraft:coal"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000E408ACD7"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004B115B4A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004254F70C"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000190305CD"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BD6C6A94"
+					item: "integrateddynamics:labeller"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BFA147C0"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000064DDADA6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003A044A1B"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000048A4F71"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C9186831"
+					item: "mekanism:dust_coal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000029F0AFF"
+					item: "minecraft:coarse_dirt"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E70EFFCD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000015CAF56E"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008D43A884"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000E821A4F"
+					item: "minecraft:leather"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000061CEAD7F"
+					item: "minecraft:light_blue_dye"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000492D2962"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000078FA94E8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002E2DBFE7"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B3F190F8"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000080F746AB"
+					item: "minecraft:blaze_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007134CF1C"
+					item: "integrateddynamics:part_block_reader"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000E408ACD7"
+				"0000000024CDD114"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DF220632"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ACE9CF73"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000050258F0B"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003E77527A"
+					item: "minecraft:light_gray_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F64CB7AD"
+					item: "integrateddynamics:logic_director"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005685088D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001BA19F14"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000505969E0"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000056E0F630"
+					item: "minecraft:blue_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B98D090"
+					item: "minecraft:brick"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000492D2962"
+				"00000000B9F0F7F6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ADB046ED"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000068EDCAFF"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A9B7DB08"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002DDDF849"
+					item: "integrateddynamics:part_machine_reader"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DCCA078D"
+					item: "integrateddynamics:part_machine_writer"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000712CCDE8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F8C9C2DF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000066EDD9C5"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009AA70955"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D6683599"
+					item: "integrateddynamics:crystalized_chorus_block_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000372F58FB"
+					item: "integrateddynamics:crystalized_chorus_block_stairs"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000F0DB970D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F5554AC1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C63855F0"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000001EEC570"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A50825E9"
+					item: "integrateddynamics:crystalized_menril_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009D748110"
+					item: "integrateddynamics:crystalized_menril_brick_stairs"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F6CD4563"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004F47B977"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C2A3F905"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AAE0D5F6"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000839B48BD"
+					item: "minecraft:cracked_stone_bricks"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AE76E52A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000099AFECF1"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006B7D9381"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004F840C0B"
+					item: "minecraft:gravel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008D18988B"
+					item: "minecraft:green_dye"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000024CDD114"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000065C2D8EC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000270BFE76"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F0458BB9"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003FAF8AC2"
+					item: "integrateddynamics:crystalized_chorus_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CD1C844C"
+					item: "integrateddynamics:crystalized_chorus_brick_stairs"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000492D2962"
+				"00000000B9F0F7F6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C763571A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000807488B"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CF4ADBF2"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000295335BE"
+					item: "integrateddynamics:part_inventory_reader"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000040F26CA7"
+					item: "integrateddynamics:part_inventory_writer"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000E408ACD7"
+				"00000000DDEF2E35"
+				"0000000032D87375"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B9F0F7F6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000713B178F"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A94CBE24"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D9A0CE56"
+					item: "integrateddynamics:menril_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F1A02FC3"
+					item: "integrateddynamics:variable_transformer_output"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000712CCDE8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000016A1047D"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000DD9706A"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C3672282"
+					item: "integrateddynamics:crystalized_chorus_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005B4DC099"
+					item: "integrateddynamics:crystalized_menril_block"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AF579731"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000022C24607"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007F2D7DFB"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C9726E9B"
+					item: "minecraft:magenta_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004E2A6CBB"
+					item: "minecraft:magma_block"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000E408ACD7"
+				"00000000DDEF2E35"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000033CC5286"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006D69354E"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000028DE7F2E"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000026CD6A9A"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000218C2A93"
+					item: "integrateddynamics:materializer"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"000000000310E1C9"
+				"00000000492D2962"
+				"00000000F0DB970D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006915005C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E8C8C1CC"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000B9C8B46"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005C3D9603"
+					item: "integrateddynamics:mechanical_drying_basin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006A2D8E5E"
+					item: "integrateddynamics:mechanical_squeezer"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000B9F0F7F6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009EA07CF3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C136A021"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B0CFC11F"
+					table_id: 3498565885L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000729E1A2"
+					item: "integrateddynamics:menril_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FD170A7A"
+					item: "integrateddynamics:menril_fence"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 9.0d
+		}
+	]
+	title: "IntegratedDynamics"
+}

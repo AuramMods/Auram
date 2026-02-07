@@ -1,0 +1,4498 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_bewitchment"
+	group: "00000000DEB299A3"
+	icon: "bewitchment:aqua_cerate"
+	id: "0000000018D27A54"
+	order_index: 51
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["00000000FCFA0C5A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B20BE83A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001C841161"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D887B5FD"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007449F2CE"
+					item: "bewitchment:zephyr_harness"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B1B9EB89"
+					item: "minecraft:zombie_head"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000FEBB85BF"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000720F66D6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002A366E84"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000048E520EF"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001CACB41C"
+					item: "minecraft:wither_skeleton_skull"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DBDE2FB3"
+					item: "bewitchment:yellow_coffin"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000EC24B2E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000060CFA239"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F8AAD35A"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002A5854D9"
+					item: {
+						Count: 1
+						id: "bewitchment:waystone"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000633B9EF6"
+					item: "bewitchment:witch_cauldron"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002E36C1B4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001FE4BB7F"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CED5A707"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CAAAA482"
+					item: "bewitchment:witchberry_cookie"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004DCFE574"
+					item: "bewitchment:witchberry_pie"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000F4728D7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FD99BDFC"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C828AEAC"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008FB36F88"
+					item: {
+						Count: 1
+						id: "bewitchment:vampiric_poppet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009BB88341"
+					item: {
+						Count: 1
+						id: "bewitchment:voodoo_poppet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000068A5EFFD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006C932E39"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AB267183"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000037388F85"
+					item: {
+						Count: 1
+						id: "bewitchment:voodoo_protection_poppet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000162B709C"
+					item: "bewitchment:warped_poppet_shelf"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000D745B8A1"
+				"000000007911C8BB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AEB70EF9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000012421A6C"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005B63EE8A"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005EBE925A"
+					item: "bewitchment:trapped_cypress_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE96C1BC"
+					item: "bewitchment:trapped_dragons_blood_chest"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004768A889"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000071367D2D"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004404DDEB"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000444861F6"
+				item: "bewitchment:earth_ichor"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000FC00BDED"
+				"00000000B8255464"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000025C7C2E1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B5F96415"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D07BE3FE"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000013A5B2AB"
+					item: "bewitchment:trapped_elder_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C9DD78E1"
+					item: "bewitchment:trapped_juniper_chest"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006575DF26"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AC34F9E1"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BBB986B2"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002384A9C5"
+					item: "bewitchment:spruce_poppet_shelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FDFD03C1"
+					item: "bewitchment:stone_witch_altar"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000004768A889"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CE1269BD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000287BB922"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000979A60CE"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000094596FF0"
+					item: "bewitchment:taglock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007257666D"
+					item: "bewitchment:thick_bramble"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000E98E0265"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000147AD064"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005CC3A5A2"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A4181624"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000377917EB"
+					item: "thermal:silver_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A16034A"
+					item: "thermal:silver_nugget"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000A34292EE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FE393187"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000002615FFC"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000713443D0"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E2398B83"
+					item: "minecraft:skeleton_skull"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000046A26E07"
+					item: "bewitchment:specter_bangle"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000FEBB85BF"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000554F3E2B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003517153C"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C0010A23"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FAE74F70"
+					item: "bewitchment:salt_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000053E66EFA"
+					item: "thermal:silver_block"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FD860F72"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F8FE2D4F"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000085360448"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E4272AF2"
+					item: "bewitchment:silver_arrow"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A211FAA1"
+					item: "bewitchment:silver_candelabra"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000FEBB85BF"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000820036FB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000E6E0550"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D06595F0"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009A2EBFBD"
+					item: "bewitchment:birch_poppet_shelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C54C911A"
+					item: "bewitchment:black_coffin"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"000000002DDD9B36"
+				"00000000A57BE51F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A04B1FB0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E11D5EF1"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000049B9CD7D"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003DB936EF"
+					item: "bewitchment:ruin_sigil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000ABDEB8C"
+					item: "bewitchment:mending_sigil"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["000000007E0F79D3"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E439B4C1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A2CC0C8C"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007050C184"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000024A7A222"
+					item: {
+						Count: 1
+						id: "bewitchment:besmirched_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B36C81DF"
+					item: {
+						Count: 1
+						id: "bewitchment:besmirched_robes"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"000000002DDD9B36"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B259C6DD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000069C7D1B1"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001BEDDAA9"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BCE79BE3"
+					item: "bewitchment:smelly_sigil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024C5D92B"
+					item: "bewitchment:heavy_sigil"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000972F116F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000076D9DBE7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002C0C021A"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000006F3F71B"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000069FEA108"
+					item: "minecraft:blaze_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000814FC3C6"
+					item: "thermal:raw_silver_block"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000002DDD9B36"
+				"000000003F492E7F"
+				"00000000FEBB85BF"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E3308BB9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007E352D72"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006F385334"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000036DA9CC4"
+					item: "bewitchment:judgment_sigil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007C1655E6"
+					item: "bewitchment:decay_sigil"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C5C054AF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DCC7AC57"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007F00B312"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006F3DC366"
+					item: "minecraft:black_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D5405E22"
+					item: "bewitchment:blackstone_witch_altar"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["000000002DDD9B36"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007A227D1A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B2343B78"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C6E1FB22"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C18F2C28"
+					item: "bewitchment:sentinel_sigil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000BCC3F61"
+					item: "bewitchment:extending_sigil"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000005BF8F57E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BB3532C2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009FB48BC5"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000F2549F3"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009A8D3077"
+					item: {
+						Count: 1
+						id: "bewitchment:alchemist_hood"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000005FE29F4"
+					item: {
+						Count: 1
+						id: "bewitchment:alchemist_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000002DDD9B36"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C8C13820"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A62ADB02"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000811F4BCA"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A9117F9A"
+					item: "bewitchment:shrieking_sigil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006C7C73EE"
+					item: "bewitchment:cleansing_sigil"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000005BF8F57E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000151B1F03"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000482BD643"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003522F8CD"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000079E89FAA"
+					item: "bewitchment:alchemist_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003D0944FB"
+					item: {
+						Count: 1
+						id: "bewitchment:alchemist_hat"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000008C592DBE"
+				"00000000845871D4"
+				"000000002DDD9B36"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000330CE2AB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A1364819"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F091C8C8"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002673512C"
+					item: "bewitchment:slippery_sigil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000025448040"
+					item: "bewitchment:shadows_sigil"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000007E0F79D3"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000053CCB7A9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000002DDF67B"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004DE7B3CA"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000792C88D9"
+					item: {
+						Count: 1
+						id: "bewitchment:besmirched_hat"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000496CDF0C"
+					item: {
+						Count: 1
+						id: "bewitchment:besmirched_hood"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000286688E8"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001B9BAE0B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FB30A8A8"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000791A535"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005A9B834E"
+					item: "bewitchment:purpur_witch_altar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000026DB1961"
+					item: "bewitchment:red_coffin"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000005BF8F57E"
+				"000000007E0F79D3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005F455A8E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005470239B"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009F9E66FB"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000273868BE"
+					item: {
+						Count: 1
+						id: "bewitchment:alchemist_robes"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008CF9D5A3"
+					item: "bewitchment:besmirched_carpet"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000002DDD9B36"
+				"00000000A34292EE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000064CB5F6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008BB113CC"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AEFA0D15"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B1D91ADE"
+					item: "minecraft:red_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000381D76E6"
+					item: "bewitchment:scorched_bramble"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000286688E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003749CDC1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D534E548"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000099049D77"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000054B1ADA2"
+					item: {
+						Count: 1
+						id: "bewitchment:protection_poppet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008AF8D1BA"
+					item: "bewitchment:purple_coffin"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A2704FBF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000098BF876E"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DD10A711"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E503C381"
+					item: "bewitchment:acacia_poppet_shelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006110E162"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000096ED7A63"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000799697D0"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D1C4C2A4"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000079752058"
+					item: "bewitchment:oak_bark"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DD47DBD9"
+					item: "bewitchment:spruce_bark"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000005DA1DC5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008E2E800F"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000048B32267"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C4285231"
+					item: "bewitchment:stripped_cypress_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D03E0919"
+					item: "bewitchment:stripped_dragons_blood_wood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000054D2DB0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000019D79A6F"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000066544A0"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "00000000543ADD6A"
+				item: "bewitchment:dragons_blood_resin_block"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000845871D4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000086EDF8F6"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AF9826E2"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000694F7B2A"
+					item: "bewitchment:elder_bark"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C387FA17"
+					item: "bewitchment:elder_wood"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A57BE51F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000018D0AE61"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000134762F6"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D2E8945B"
+					item: "bewitchment:juniper_bark"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A29B3293"
+					item: "bewitchment:juniper_wood"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C94E8815"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005766B9BE"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000811D4A21"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F47713C5"
+					item: "bewitchment:stripped_elder_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000884D279B"
+					item: "bewitchment:stripped_juniper_wood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003F492E7F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002191E1E0"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000C4F54D7"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A6E7E41F"
+					item: "bewitchment:birch_bark"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000072C0F46D"
+					item: "bewitchment:cypress_bark"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007FFCEC42"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008D0FF986"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000088789399"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003814BC5A"
+					item: "bewitchment:cypress_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000050935B9"
+					item: "bewitchment:dragons_blood_wood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000072C041C1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008C741D80"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002A6DB442"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A0136794"
+					item: "bewitchment:pink_coffin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D3E8206B"
+					item: "minecraft:player_head"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000003F492E7F"
+				"000000007E0F79D3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002FE6415D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000065A64B63"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007700B187"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008936DF08"
+					item: "bewitchment:prickly_belt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E1127196"
+					item: "bewitchment:prismarine_witch_altar"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005D486D03"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000017115786"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009962C4A7"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007C8EE03F"
+					item: "bewitchment:netherite_candelabra"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004B8DDF09"
+					item: "bewitchment:oak_poppet_shelf"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000286688E8"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000022AFF721"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005C95D360"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A81065A7"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008B491003"
+					item: "bewitchment:obsidian_witch_altar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000027722054"
+					item: "bewitchment:orange_coffin"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007DD0007F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006AEFF181"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008D2F9C93"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007FCAF2ED"
+					item: {
+						Count: 1
+						id: "bewitchment:mending_poppet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000043313A43"
+					item: "bewitchment:mossy_cobblestone_witch_altar"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000005BF8F57E"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CEAD6CD2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000A7B72B5"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FC3BAE8A"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000072019E83"
+					item: "bewitchment:nazar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000847E7B22"
+					item: "bewitchment:nether_brick_witch_altar"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000286688E8"
+				"00000000FEBB85BF"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000040B789FD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000892C381D"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000919DBAD"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E1D31241"
+					item: "bewitchment:light_blue_coffin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C1F21C43"
+					item: "bewitchment:light_gray_coffin"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000286688E8"
+				"00000000FEBB85BF"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000068011A58"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F2E5C837"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000082FD7F28"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004B1635FD"
+					item: "bewitchment:lime_coffin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000092BCD597"
+					item: "bewitchment:magenta_coffin"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000048BDE886"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000345F933"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008B5B00E6"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E4669B8B"
+					item: "bewitchment:juniper_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE7E6A5F"
+					item: "bewitchment:juniper_sign"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000864F38D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004DFD990B"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009861B8B7"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000072CDE391"
+					item: "bewitchment:juniper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FA7C6241"
+					item: "bewitchment:juniper_trapdoor"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000004768A889"
+				"000000007E0F79D3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FCFA0C5A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000027D86425"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C2CEB4EC"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005B6819DC"
+					item: "bewitchment:heaven_extract"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000094D35043"
+					item: "bewitchment:hedgewitch_wool"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000A34292EE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007E0F79D3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000082FF759E"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004CDB5ABB"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000A2513C3"
+					item: "bewitchment:aqua_cerate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000002024979"
+					item: "bewitchment:besmirched_wool"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000972F116F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000095157723"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CBF6A869"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004BA19CE0"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009D5DE357"
+					item: "bewitchment:juniper_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E0A30F6A"
+					item: "bewitchment:juniper_poppet_shelf"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000017232FEA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004FA6AED9"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000041371D5E"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000418A5C6E"
+					item: "bewitchment:juniper_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E05C0679"
+					item: "bewitchment:juniper_door"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B954D06B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CD700663"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000025648949"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B84384CB"
+					item: "bewitchment:juniper_fence"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009CEDE6D3"
+					item: "bewitchment:juniper_fence_gate"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000FEBB85BF"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FAE26400"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004013EF91"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F1AEEA01"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CC8126F5"
+					item: {
+						Count: 1
+						id: "bewitchment:judgment_poppet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E93D3EB1"
+					item: "bewitchment:jungle_poppet_shelf"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000B8255464"
+				"00000000FCFA0C5A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000057CA224C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000319A4679"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F43E1548"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002D03AF7E"
+					item: "bewitchment:juniper_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001BCEE6F1"
+					item: "bewitchment:juniper_broom"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000FCFA0C5A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001AC18409"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000036980E3D"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000087CAE613"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000028F18EBC"
+					item: {
+						Count: 1
+						id: "bewitchment:hedgewitch_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E6F28756"
+					item: {
+						Count: 1
+						id: "bewitchment:hedgewitch_robes"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000A34292EE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A38E9268"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000035B1CA61"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000087F0A0E"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CADE9D4C"
+					item: "bewitchment:hellish_bauble"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CAE3C5E4"
+					item: "bewitchment:iron_candelabra"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000FCFA0C5A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F5A67051"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FB5DEAED"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000035390422"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000034DB07D7"
+					item: "bewitchment:grotesque_stew"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008EAACD3C"
+					item: "bewitchment:hedgewitch_carpet"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000FCFA0C5A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003A57AB18"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004BA2ACBD"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CFDC1A8B"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F2011EF0"
+					item: {
+						Count: 1
+						id: "bewitchment:hedgewitch_hat"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D95107E6"
+					item: {
+						Count: 1
+						id: "bewitchment:hedgewitch_hood"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003D6B8050"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009D746D77"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000048544F30"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000EC1A201"
+					item: "bewitchment:gray_coffin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007D6552E5"
+					item: "bewitchment:green_coffin"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000005DA1DC5"
+				"000000007FFCEC42"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000286688E8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D666A2EA"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008241CB67"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000023E4C8A2"
+					item: "bewitchment:cypress_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F8721009"
+					item: "bewitchment:dragons_blood_planks"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008C592DBE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001EF278DA"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006973F7F2"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000007CC3FBD0"
+				item: "bewitchment:wood_ash"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"00000000C94E8815"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000047F96448"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008006ED1F"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000364F9515"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000046ED8042"
+					item: "bewitchment:elder_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000066F9F0E2"
+					item: "bewitchment:juniper_planks"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000054D2DB0"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002DDD9B36"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000034123A27"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FEE9C43A"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000053F999E7"
+				item: "bewitchment:dragons_blood_resin"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000005BF8F57E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004228E168"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000063D87593"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004667F6F9"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008DBDCE51"
+					item: "bewitchment:glowing_bramble"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000025DB0F6A"
+					item: "bewitchment:golden_candelabra"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"00000000E98E0265"
+				"000000005BF8F57E"
+				"000000004768A889"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FDD7208F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CABC97EC"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007B7FD791"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006AD1BEE8"
+					item: {
+						Count: 1
+						id: "bewitchment:golden_chalk"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D2AD6140"
+					item: "bewitchment:golden_witch_altar"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000E98E0265"
+				"00000000FCFA0C5A"
+				"00000000A34292EE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B58ECCC8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FB047B4C"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008D318FD5"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DDEC3823"
+					item: {
+						Count: 1
+						id: "bewitchment:fiery_chalk"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000013BF30AA"
+					item: "bewitchment:fleeting_bramble"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000000DA0E24C"
+				"000000007E0F79D3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D51F7863"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E8C261FB"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000860351EB"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FB57067F"
+					item: "bewitchment:fruiting_bramble"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006801713A"
+					item: "bewitchment:garlic_bread"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"00000000E98E0265"
+				"000000003F492E7F"
+				"000000007E0F79D3"
+				"00000000A34292EE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000883EF01A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004D789AEB"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000F389E11"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002A07A8D7"
+					item: {
+						Count: 1
+						id: "bewitchment:eldritch_chalk"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B57A60CF"
+					item: "bewitchment:end_stone_witch_altar"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000A34292EE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F37A5825"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004F30735B"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E2B7C829"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000912BE05"
+					item: "bewitchment:ender_bramble"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000331D456"
+					item: {
+						Count: 1
+						id: "bewitchment:fatigue_poppet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000037D9FF7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002DDF316C"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000ADAA9225"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F74C3E63"
+					item: "bewitchment:elder_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001FD3EDD4"
+					item: "bewitchment:elder_sign"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002D46FD0D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000753885AF"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003C0A4C93"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F85C9EBC"
+					item: "bewitchment:elder_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089C5A87A"
+					item: "bewitchment:elder_trapdoor"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CA91B338"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BEF0C5F8"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006C420CD0"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003CEC1A66"
+					item: "bewitchment:elder_fence"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003F3761DD"
+					item: "bewitchment:elder_fence_gate"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000000DA0E24C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000057885944"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000FB8E9F0"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D9F338AE"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006E5B2498"
+					item: "bewitchment:elder_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001004B384"
+					item: "bewitchment:elder_poppet_shelf"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A34292EE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AB0DBA40"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006FB37991"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000017E37541"
+					item: "bewitchment:fiery_serum"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019EF1E67"
+					item: "bewitchment:grim_elixir"
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000FCFA0C5A"
+				"000000007E0F79D3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005BF8F57E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AFEE7D59"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000018052D50"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FB7ADBEA"
+					item: "bewitchment:alchemist_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000206F4A1C"
+					item: "bewitchment:cleansing_balm"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008F800A92"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001C1DB90C"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EA23315A"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000826F0B67"
+					item: "bewitchment:elder_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BF7C7BBE"
+					item: "bewitchment:elder_door"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000286688E8"
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"00000000A57BE51F"
+				"000000004768A889"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000665A34CA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006E40EEA2"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F1697CF2"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000049177B5E"
+					item: "bewitchment:dragons_blood_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005C9D7CCF"
+					item: "bewitchment:druid_band"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000FC00BDED"
+				"00000000FCFA0C5A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000003912C7D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000017479710"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000047D8F980"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009DB458F6"
+					item: "bewitchment:elder_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000786C00AF"
+					item: "bewitchment:elder_broom"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000286688E8"
+				"000000007911C8BB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006888EEA6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000E83A771"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000841E7445"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EB73DE28"
+					item: "bewitchment:dragons_blood_poppet_shelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AF3ABF59"
+					item: "bewitchment:dragons_blood_pressure_plate"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000070F5DE9A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000807099FF"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004EBAF2F6"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CB435787"
+					item: "bewitchment:dragons_blood_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008D76867E"
+					item: "bewitchment:dragons_blood_stairs"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000014C19356"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000047E3EE0E"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000012743508"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006098327A"
+					item: "bewitchment:dragons_blood_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E777E42"
+					item: "bewitchment:dragons_blood_fence"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E2A8E35B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000023E259E2"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001DA44DBA"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004405B242"
+					item: "bewitchment:dragons_blood_fence_gate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F265D1B"
+					item: "bewitchment:dragons_blood_hanging_sign"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000E254E9D9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D6B24E76"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000844F1356"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004D411719"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F59BF03A"
+					item: {
+						Count: 1
+						id: "bewitchment:death_protection_poppet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AE8256AC"
+					item: "bewitchment:dragons_blood_chest_boat"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000286688E8"
+				"00000000FCFA0C5A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EFE672EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000433AB0AA"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000041AA548F"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000712FA435"
+					item: "bewitchment:dragons_blood_broom"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000078D1C391"
+					item: "bewitchment:dragons_blood_button"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000032C1DBCD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FDA1C0F3"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000008D6C3CA"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007E836BF1"
+					item: "bewitchment:cypress_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005EA6E46C"
+					item: "bewitchment:dark_oak_poppet_shelf"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D745B8A1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000044216C03"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003714A4ED"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A41AF4E7"
+					item: "bewitchment:cypress_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CECA48C0"
+					item: "bewitchment:cypress_chest"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000096ED7A63"
+				"00000000845871D4"
+				"000000008C592DBE"
+				"00000000A57BE51F"
+				"000000003F492E7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E98E0265"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002AABBBCA"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000094A57F76"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000D6F1A06"
+					item: {
+						Count: 1
+						id: "bewitchment:athame"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7D05A58"
+					item: {
+						Count: 1
+						id: "bewitchment:chalk"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007911C8BB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F56BB56C"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003E73A737"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F1DCC728"
+					item: "bewitchment:dragons_blood_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C862E84B"
+					item: "bewitchment:dragons_blood_slab"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E254E9D9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D741AEB4"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DFF35553"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000044A4D62D"
+					item: "bewitchment:cypress_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FAA258DF"
+					item: "bewitchment:dragons_blood_boat"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000DA0E24C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000010956485"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000241A9B2B"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B1232E2B"
+					item: "bewitchment:elder_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BF24F7D4"
+					item: "bewitchment:grilled_garlic"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FC00BDED"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008178D171"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003759198A"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F039C31A"
+					item: "bewitchment:elder_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C62B6DF"
+					item: "bewitchment:elder_chest"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000972F116F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000040CAFA8"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007590CC9F"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001AB7BCD7"
+					item: "bewitchment:juniper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007D763866"
+					item: "bewitchment:raw_silver"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000047F96448"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B8255464"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F6FE7FDA"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007D177586"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005015967A"
+					item: "bewitchment:juniper_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004ECB30B3"
+					item: "bewitchment:juniper_chest"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FEBB85BF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FCF4EEBC"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003D8FC46A"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C1288359"
+					item: "bewitchment:salt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001450A033"
+					item: "bewitchment:white_coffin"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000286688E8"
+				"00000000E254E9D9"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002FABC90E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000010881556"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000440A7289"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BDEE6524"
+					item: "bewitchment:cypress_poppet_shelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001DCA318C"
+					item: "bewitchment:cypress_pressure_plate"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ACD63108"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000097016445"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000281A89A0"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000058D12EFE"
+					item: "bewitchment:cypress_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000041BEB080"
+					item: "bewitchment:cypress_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CC684421"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000082D5A08F"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000984A3685"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000014F6438C"
+					item: "bewitchment:cypress_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A97E2B01"
+					item: "bewitchment:cypress_fence"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FA6D823F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000851940C0"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000065644703"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B10A4041"
+					item: "bewitchment:cypress_fence_gate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D4D56BDE"
+					item: "bewitchment:cypress_hanging_sign"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000D745B8A1"
+				"00000000FEBB85BF"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F7AA5ECB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000054F44366"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A3A3E72A"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B6824E79"
+					item: "bewitchment:cyan_coffin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000488F2EEA"
+					item: "bewitchment:cypress_chest_boat"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000286688E8"
+				"00000000FCFA0C5A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000096C250AF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000017DA542E"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000097DAE8B6"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CFE48B20"
+					item: "bewitchment:cypress_broom"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000901F409B"
+					item: "bewitchment:cypress_button"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DA40DA04"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BE935324"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D545E73B"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001034EFF7"
+					item: "minecraft:creeper_head"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C1B6BF69"
+					item: "bewitchment:crimson_poppet_shelf"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000096F24B75"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005E0821EE"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F7FC8633"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000015CB75B4"
+					item: "bewitchment:crystal_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A5197B77"
+					item: {
+						Count: 1
+						id: "bewitchment:curse_poppet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B0A59BA8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002F998CF3"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000D7EE226"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D16B748F"
+					item: "bewitchment:blue_coffin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000106094A"
+					item: "bewitchment:book_of_shadows"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000286688E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004547812E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000008C14AD0"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DBE4AC7F"
+					table_id: 2258745687L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D3F0A900"
+					item: "bewitchment:brazier"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FAC8169B"
+					item: "bewitchment:brown_coffin"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+	]
+	title: "Bewitchment"
+}

@@ -1,0 +1,24 @@
+
+["LLM Config"]
+	#Base URL for OpenAI API requests. Change this if using a proxy or custom endpoint. For ollama use 'http://localhost:11434/v1/'. Or for openai use 'https://api.openai.com/v1/'.
+	llmBaseUrl = "https://openrouter.ai/api/v1"
+	#The AI model to use for various text generation tasks. It is recommended to use local models!
+	llmModel = "openrouter/free"
+	#API key for OpenAI requests. Not needed for local models like ollama or llama.cpp.
+	llmKey = "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"
+
+["Chaos Generation"]
+	#The default difficulty level (0-100) if none is specified in the command.
+	#Range: 0 ~ 100
+	defaultDifficulty = 50
+	#Multiplier for how much EMC variance is allowed per difficulty point.
+	#Range: 0.1 ~ 5.0
+	varianceMultiplier = 1.9
+	#Enable verbose logging to console during chaos generation.
+	debugMode = false
+	#If true, quests will use the LLM to help generate quest text and objectives.
+	questsUseLLM = false
+	#Number of threads to use for quest generation tasks. Set to 0 to use available processors.
+	#Range: 0 ~ 64
+	questThreads = 0
+

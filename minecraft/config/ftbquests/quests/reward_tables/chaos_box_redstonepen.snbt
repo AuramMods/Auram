@@ -1,0 +1,48 @@
+{
+	icon: "redstonepen:basic_lever"
+	id: "0000000073CD0DF8"
+	loot_crate: {
+		color: 16777215
+		drops: {
+			boss: 1
+			monster: 0
+			passive: 0
+		}
+		item_name: "Box of Redstone Pen"
+		string_id: "chaos_box_redstonepen"
+	}
+	loot_size: 1
+	order_index: 91
+	rewards: [
+		{ item: "redstonepen:pulse_relay", weight: 6.0f }
+		{ item: "redstonepen:bistable_relay", weight: 7.0f }
+		{ item: "redstonepen:basic_button", weight: 5.0f }
+		{ item: "redstonepen:basic_lever", weight: 4.0f }
+		{ item: "redstonepen:inverted_relay", weight: 8.0f }
+		{ item: "redstonepen:control_box", weight: 14.0f }
+		{
+			item: {
+				Count: 1
+				id: "redstonepen:quill"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 12.0f
+		}
+		{ item: "redstonepen:basic_pulse_button", weight: 11.0f }
+		{ item: "redstonepen:relay", weight: 9.0f }
+		{ item: "redstonepen:bridge_relay", weight: 10.0f }
+		{
+			item: {
+				Count: 1
+				id: "redstonepen:pen"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 13.0f
+		}
+	]
+	title: "Redstone Pen Rewards"
+}

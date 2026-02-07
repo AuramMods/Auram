@@ -1,0 +1,41 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_refinedstorageaddons"
+	group: "00000000DEB299A3"
+	icon: "refinedstorageaddons:wireless_crafting_grid"
+	id: "0000000068D6FE42"
+	order_index: 59
+	quest_links: [ ]
+	quests: [{
+		hide_dependency_lines: true
+		hide_details_until_startable: true
+		hide_until_deps_complete: true
+		id: "00000000144D54C2"
+		invisible: true
+		invisible_until_tasks: 1
+		rewards: [
+			{
+				id: "0000000032FAE9FE"
+				type: "xp"
+				xp: 7
+			}
+			{
+				exclude_from_claim_all: true
+				id: "0000000071A922DC"
+				table_id: 1381014387L
+				type: "random"
+			}
+		]
+		shape: "circle"
+		tasks: [{
+			consume_items: false
+			id: "00000000E912EB2E"
+			item: "refinedstorageaddons:wireless_crafting_grid"
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Refined Storage Addons"
+}

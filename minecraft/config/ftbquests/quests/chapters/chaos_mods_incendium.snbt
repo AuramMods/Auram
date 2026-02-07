@@ -1,0 +1,53 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_incendium"
+	group: "00000000DEB299A3"
+	icon: {
+		Count: 1
+		id: "minecraft:elytra"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "000000000B881292"
+	order_index: 93
+	quest_links: [ ]
+	quests: [{
+		hide_dependency_lines: true
+		hide_details_until_startable: true
+		hide_until_deps_complete: true
+		id: "00000000BEC47352"
+		invisible: true
+		invisible_until_tasks: 1
+		rewards: [
+			{
+				id: "00000000AE68A7B6"
+				type: "xp"
+				xp: 5
+			}
+			{
+				exclude_from_claim_all: true
+				id: "000000000EE9A6FA"
+				table_id: 939093517L
+				type: "random"
+			}
+		]
+		shape: "circle"
+		tasks: [{
+			consume_items: false
+			id: "0000000051901E10"
+			item: {
+				Count: 1
+				id: "minecraft:elytra"
+				tag: {
+					Damage: 0
+				}
+			}
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Incendium"
+}

@@ -1,0 +1,41 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_naturescompass"
+	group: "00000000DEB299A3"
+	icon: "naturescompass:naturescompass"
+	id: "00000000F26E4C89"
+	order_index: 1
+	quest_links: [ ]
+	quests: [{
+		hide_dependency_lines: true
+		hide_details_until_startable: true
+		hide_until_deps_complete: true
+		id: "000000008E823325"
+		invisible: true
+		invisible_until_tasks: 1
+		rewards: [
+			{
+				id: "000000001775105C"
+				type: "xp"
+				xp: 3
+			}
+			{
+				exclude_from_claim_all: true
+				id: "0000000041E1E7B9"
+				table_id: 1768839851L
+				type: "random"
+			}
+		]
+		shape: "circle"
+		tasks: [{
+			consume_items: false
+			id: "000000008B1399BD"
+			item: "naturescompass:naturescompass"
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Nature's Compass"
+}
