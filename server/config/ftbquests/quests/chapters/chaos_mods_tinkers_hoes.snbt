@@ -1,0 +1,172 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_tinkers_hoes"
+	group: "00000000DEB299A3"
+	icon: "tinkers_hoes:slender_blade"
+	id: "00000000644B6843"
+	order_index: 29
+	quest_links: [ ]
+	quests: [
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000E32B4E2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008B49578E"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000098C68278"
+					table_id: 1367036212L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000039687165"
+				item: "tinkers_hoes:slender_blade"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000000E32B4E2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005A1106D3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007667F2B7"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000010A2B315"
+					table_id: 1367036212L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000070E0C104"
+				item: "tinkers_hoes:slender_blade_gold_cast"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000000E32B4E2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000092EA0D03"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005A7E7D04"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000824BD11E"
+					table_id: 1367036212L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000F975D911"
+				item: "tinkers_hoes:slender_blade_red_sand_cast"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004A620B90"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000779DCB47"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004D253CC7"
+					table_id: 1367036212L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000FF9CCCC1"
+				item: {
+					Count: 1
+					id: "tinkers_hoes:hoe"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003C09811A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EAED9111"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BD275CA8"
+					table_id: 1367036212L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000DD77D767"
+				item: "tinkers_hoes:slender_blade_sand_cast"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+	]
+	title: "Tinkers' Hoes"
+}

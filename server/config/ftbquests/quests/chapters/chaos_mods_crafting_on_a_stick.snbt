@@ -1,0 +1,562 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_crafting_on_a_stick"
+	group: "00000000DEB299A3"
+	icon: "crafting_on_a_stick:anvil"
+	id: "00000000D46D48A8"
+	order_index: 55
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["00000000AFC4ED27"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D0EEEB09"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000003B2BEE0"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005C683583"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000DA678D33"
+				item: "minecraft:anvil"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005C004A3F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000085F8641D"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007C14A659"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000008848CB3D"
+				item: "crafting_on_a_stick:crafting_table"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000FB941740"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BB5B68C9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000928F910B"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002D03FCC9"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000004CD22DB3"
+				item: "minecraft:cartography_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CE931788"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F320D06A"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000420EB7B2"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000081F021C3"
+				item: "crafting_on_a_stick:damaged_anvil"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FB941740"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F4833722"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004B0966B8"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000006551611C"
+				item: "crafting_on_a_stick:cartography_table"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001DD5B118"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000078E04BB"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EB047EC1"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000494A7E75"
+				item: "crafting_on_a_stick:chipped_anvil"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000014D4DF1D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000614DD3E5"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D2023E78"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000004EE8207"
+				item: "crafting_on_a_stick:smithing_table"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FA9C04BE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002D7F5AF2"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006CD4A2CD"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000CEEE960D"
+				item: "crafting_on_a_stick:stonecutter"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A1593751"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A071BC57"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000042156B72"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000CF12C34B"
+				item: "crafting_on_a_stick:grindstone"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001545168D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F7B2672F"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001F6A2F60"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000009A5DBD84"
+				item: "crafting_on_a_stick:loom"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000FA9C04BE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000865C350E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000432487B8"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AE868150"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000007E2DC003"
+				item: "minecraft:stonecutter"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000001545168D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002BAD10D5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A26607D3"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C59E2443"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000F6EC7A13"
+				item: "minecraft:loom"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000014D4DF1D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000683C9BC5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007CA41F88"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CB394FFB"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000EF200B87"
+				item: "minecraft:smithing_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000CE931788"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B7C35427"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001B417580"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D19D057F"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000006BEF1133"
+				item: "minecraft:damaged_anvil"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AFC4ED27"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F9EFCF89"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A239739B"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000001C69C170"
+				item: "crafting_on_a_stick:anvil"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000A1593751"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AFC48754"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000111F5316"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CDD06B5D"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000D92A189C"
+				item: "minecraft:grindstone"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000001DD5B118"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B1977924"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000059E555BC"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FA45E49A"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000821D1598"
+				item: "minecraft:chipped_anvil"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000005C004A3F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000918A76E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CCBCBDB7"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000134C9267"
+					table_id: 2586227428L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000D0870648"
+				item: "minecraft:crafting_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+	]
+	title: "Crafting On A Stick"
+}

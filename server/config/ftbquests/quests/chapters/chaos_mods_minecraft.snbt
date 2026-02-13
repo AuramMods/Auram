@@ -1,0 +1,6814 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_minecraft"
+	group: "00000000DEB299A3"
+	icon: {
+		Count: 1
+		id: "minecraft:chainmail_chestplate"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "00000000CDF2B770"
+	order_index: 16
+	quest_links: [ ]
+	quests: [
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BE0FF24B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009447969E"
+					type: "xp"
+					xp: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002389250C"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000411E6EED"
+					item: "minecraft:raw_copper_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000016526734"
+					item: "minecraft:raw_gold_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089CA59AA"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D9C488D2"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000030FFC810"
+					item: "minecraft:netherite_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C8CA7BE"
+					item: "minecraft:slime_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000069CD430C"
+					item: "minecraft:wheat"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000044F3D8EA"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000358E56A7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C78B8863"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AB141A9A"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000009FE2842E"
+				item: "minecraft:chain"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"00000000358E56A7"
+				"00000000845BD1B4"
+				"000000001912B152"
+				"00000000D447A33A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C370A4B4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CFA69361"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000245F3152"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A8B2D12B"
+					item: "biomeswevegone:dacite_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000014174218"
+					item: "minecraft:dark_oak_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002307D054"
+					item: "minecraft:dark_oak_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000C1AEA2D"
+					item: "minecraft:dark_oak_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009F803B41"
+					item: "minecraft:dark_oak_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000627C4377"
+					item: "minecraft:dark_oak_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000016BAF93C"
+					item: "minecraft:dark_oak_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000B4F154D3"
+				"0000000049DDE0DB"
+				"00000000D447A33A"
+				"000000002D671EDD"
+				"00000000974C8D13"
+				"000000008B0831BC"
+				"0000000001814326"
+				"00000000682DDED3"
+				"0000000003328A1B"
+				"0000000058D88D1D"
+				"00000000845BD1B4"
+				"000000005FEFDE38"
+				"000000002F850812"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BABCDC81"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000037D3D1E4"
+					type: "xp"
+					xp: 60
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000840E7261"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000486C5C36"
+					item: "minecraft:dark_oak_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029A41D20"
+					item: "minecraft:dark_prismarine_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000035F1064"
+					item: "minecraft:dark_prismarine_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000999471F8"
+					item: "minecraft:daylight_detector"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E93EC89"
+					item: "minecraft:decorated_pot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005253213F"
+					item: "minecraft:deepslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000055044421"
+					item: "minecraft:deepslate_brick_slab"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A51F7318"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003F3E87EE"
+					type: "xp"
+					xp: 41
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C3D4561D"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BAB5F758"
+					item: "biomeswevegone:dacite_cobblestone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CC43980F"
+					item: "biomeswevegone:dacite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D5E5C350"
+					item: "biomeswevegone:dacite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C9F54C07"
+					item: "biomeswevegone:dacite_tile_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C01547A"
+					item: "biomeswevegone:dacite_tile_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ACBEA289"
+					item: "biomeswevegone:dacite_tile_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CFB78AC9"
+					item: "biomeswevegone:dacite_tiles"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0000000003328A1B"
+				"00000000845BD1B4"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000057769624"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BCA738E1"
+					type: "xp"
+					xp: 28
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004F2C15D5"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000065FCA2A4"
+					item: "minecraft:cut_red_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AA9AF1B1"
+					item: "minecraft:cut_red_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007F12277D"
+					item: "minecraft:cut_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D99472F8"
+					item: "biomeswevegone:cut_white_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E3B2FB9D"
+					item: "biomeswevegone:cut_white_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000046A59FBB"
+					item: "biomeswevegone:cut_windswept_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E82314F6"
+					item: "biomeswevegone:cut_windswept_sandstone_slab"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000003328A1B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007C596078"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C909E6D3"
+					type: "xp"
+					xp: 63
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004F82ED46"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FD620C8B"
+					item: "biomeswevegone:red_rock_tile_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A0929BFC"
+					item: "biomeswevegone:red_rock_tile_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009002094F"
+					item: "biomeswevegone:red_rock_tile_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000036E636D9"
+					item: "biomeswevegone:red_rock_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BA89AE63"
+					item: "biomeswevegone:red_rock_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBEFC92E"
+					item: "minecraft:red_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003E751E74"
+					item: "minecraft:red_sandstone_stairs"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000003328A1B"
+				"0000000058D88D1D"
+				"0000000035B1E1CD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000089123A9D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002B01C024"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C4621450"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000AB3F690"
+					item: "minecraft:respawn_anchor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004B3D91E0"
+					item: "biomeswevegone:rocky_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000039373F24"
+					item: "biomeswevegone:rocky_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007A229C34"
+					item: "biomeswevegone:rocky_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000038D04452"
+					item: "biomeswevegone:rose"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000324A637C"
+					item: "biomeswevegone:rose_petal_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000083485D8E"
+					item: "minecraft:sandstone_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000008B0831BC"
+				"000000002A24D254"
+				"000000002F850812"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007E174DA9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AE53EF4D"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D6FC44E9"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B3CF963B"
+					item: "minecraft:end_rod"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CBE5A35D"
+					item: "minecraft:end_stone_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D1BA581"
+					item: "minecraft:end_stone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000048C1D56C"
+					item: "minecraft:end_stone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002486AB85"
+					item: "minecraft:ender_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ABE28219"
+					item: "minecraft:fermented_spider_eye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000093CFD1C1"
+					item: "aether_redux:fieldsproot_bookshelf"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000046CBC6A0"
+				"0000000044F3D8EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007ED1FC52"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000999780FB"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000287E152"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003DAD0650"
+					item: "biomeswevegone:smooth_white_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FDA8EBDB"
+					item: "biomeswevegone:smooth_white_sandstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000023B5EF8B"
+					item: "biomeswevegone:smooth_windswept_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B64A4A47"
+					item: "biomeswevegone:smooth_windswept_sandstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000049AECC53"
+					item: "minecraft:snow"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E3537426"
+					item: "minecraft:soul_lantern"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FE61AEAF"
+					item: "minecraft:spectral_arrow"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000BE0FF24B"
+				"0000000024FB50A3"
+				"000000002A24D254"
+				"000000002F850812"
+				"00000000D447A33A"
+				"00000000974C8D13"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C7969643"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D390945D"
+					type: "xp"
+					xp: 64
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000026090E89"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EB791C41"
+					item: "minecraft:fire_charge"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000094E8E6B6"
+					item: "minecraft:firework_rocket"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FD86DFB8"
+					item: "minecraft:firework_star"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E8C3E1CC"
+					item: "minecraft:fletching_table"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002DF8194E"
+					item: {
+						Count: 1
+						id: "minecraft:flint_and_steel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C245782"
+					item: "minecraft:flower_pot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C5377757"
+					item: "aether_redux:glacia_bookshelf"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000008B0831BC"
+				"0000000006085807"
+				"00000000358E56A7"
+				"000000001912B152"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005A11B9AF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003CC949BB"
+					type: "xp"
+					xp: 63
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C4DD56FF"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A4C235E1"
+					item: "minecraft:sponge"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BB33D618"
+					item: "minecraft:spruce_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000053C8BCC7"
+					item: "minecraft:spruce_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000048D0824F"
+					item: "minecraft:spruce_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D74CDF70"
+					item: "minecraft:spruce_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DB600622"
+					item: "minecraft:spruce_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F3839D83"
+					item: "minecraft:spruce_stairs"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000BE0FF24B"
+				"0000000003328A1B"
+				"000000001912B152"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007E691724"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F67B2347"
+					type: "xp"
+					xp: 54
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000099BCA98A"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B30ED35B"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FF8D700C"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E48116EE"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007A29FBCA"
+					item: "minecraft:diorite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000921EAA91"
+					item: "minecraft:diorite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009456D1A2"
+					item: "minecraft:diorite_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000051BB3982"
+					item: "minecraft:dispenser"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000044198BA1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002837CC38"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F839C89E"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000217B1162"
+					item: "biomeswevegone:smooth_black_sandstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000184C05D0"
+					item: "biomeswevegone:smooth_blue_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B93F3152"
+					item: "biomeswevegone:smooth_blue_sandstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B59D06F"
+					item: "biomeswevegone:smooth_pink_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000091D521B"
+					item: "biomeswevegone:smooth_pink_sandstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BCB1C11C"
+					item: "biomeswevegone:smooth_purple_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C164AE17"
+					item: "biomeswevegone:smooth_purple_sandstone_stairs"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000046CBC6A0"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C77CC4EB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A8307A14"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002B567DB8"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000287457AA"
+					item: "minecraft:smooth_quartz_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006363996A"
+					item: "minecraft:smooth_quartz_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DC3FA3BD"
+					item: "minecraft:smooth_red_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A9278F7C"
+					item: "minecraft:smooth_red_sandstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FC868201"
+					item: "minecraft:smooth_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000012EB4539"
+					item: "minecraft:smooth_sandstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E3224CB1"
+					item: "minecraft:smooth_stone_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000BE0FF24B"
+				"0000000028BCECF5"
+				"0000000006085807"
+				"0000000003328A1B"
+				"0000000049DDE0DB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A214E41C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000040BF5C4E"
+					type: "xp"
+					xp: 55
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000040BE251A"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003898CF97"
+					item: "minecraft:rib_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002A30957E"
+					item: "minecraft:tide_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001140088B"
+					item: "minecraft:spire_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005DB6B64E"
+					item: "minecraft:wild_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000067B1D3EE"
+					item: "minecraft:sentry_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B1419686"
+					item: "minecraft:dune_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000134A4DDD"
+					item: "minecraft:host_armor_trim_smithing_template"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000008B0831BC"
+				"00000000BE0FF24B"
+				"0000000003328A1B"
+				"00000000845BD1B4"
+				"000000002A24D254"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008284D27D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000272ECE11"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000047EB65BE"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E2627734"
+					item: "minecraft:deepslate_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000000E01B5F"
+					item: "minecraft:deepslate_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000061D3CAE4"
+					item: "minecraft:deepslate_tile_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F2DD4BB8"
+					item: "minecraft:deepslate_tile_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E827CCBA"
+					item: "minecraft:deepslate_tile_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D78B3209"
+					item: "minecraft:detector_rail"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000466BB1F9"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000BE0FF24B"
+				"0000000006085807"
+				"00000000E8F94F66"
+				"00000000DA3BBBBA"
+				"000000002793A6C4"
+				"0000000035B1E1CD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000017B83C96"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000045E63E5B"
+					type: "xp"
+					xp: 32
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000097242985"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000010DBE466"
+					item: "minecraft:netherite_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ADB41B64"
+					item: "minecraft:silence_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D0C56931"
+					item: "minecraft:shaper_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007D20A996"
+					item: "minecraft:ward_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000016B05222"
+					item: "minecraft:smoker"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B63E2813"
+					item: "minecraft:smooth_basalt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000037E1DE2A"
+					item: "biomeswevegone:smooth_black_sandstone_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"0000000003328A1B"
+				"0000000058D88D1D"
+				"00000000845BD1B4"
+				"00000000D447A33A"
+				"000000001912B152"
+				"00000000974C8D13"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D76E6783"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E565024E"
+					type: "xp"
+					xp: 44
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D61129AF"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F4670C62"
+					item: "minecraft:sandstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000093D5AB7E"
+					item: "minecraft:sandstone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E93DBFC9"
+					item: "minecraft:scaffolding"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003F3E289D"
+					item: "minecraft:sea_lantern"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000020976CB9"
+					item: {
+						Count: 1
+						id: "minecraft:shears"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000046B73158"
+					item: {
+						Count: 1
+						id: "minecraft:shield"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DD4F0990"
+					item: "minecraft:shulker_box"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000BE0FF24B"
+				"0000000006085807"
+				"00000000D447A33A"
+				"00000000974C8D13"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007D5F548A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DE0785C3"
+					type: "xp"
+					xp: 60
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006304A390"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000003DCA35D"
+					item: "minecraft:smithing_table"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D6705007"
+					item: "minecraft:raiser_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000954D2FEB"
+					item: "minecraft:snout_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002F71A275"
+					item: "minecraft:wayfinder_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A2D6A19"
+					item: "minecraft:coast_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F69DBE3D"
+					item: "minecraft:vex_armor_trim_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006ABFCEB8"
+					item: "minecraft:eye_armor_trim_smithing_template"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000BE0FF24B"
+				"00000000845BD1B4"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ABCAE6EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001EBB8E1F"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BD060980"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AE3CE883"
+					item: "minecraft:cooked_porkchop"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002DAD2ADC"
+					item: "minecraft:cooked_salmon"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000048B6F2"
+					item: "minecraft:cookie"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B60BFE0A"
+					item: "biomeswevegone:cracked_dacite_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006B81B35E"
+					item: "biomeswevegone:cracked_dacite_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058667472"
+					item: "biomeswevegone:cracked_dacite_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F8987552"
+					item: "minecraft:cracked_deepslate_bricks"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000003328A1B"
+				"000000002F850812"
+				"0000000035B1E1CD"
+				"000000001912B152"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CAADFFF6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FCC4836B"
+					type: "xp"
+					xp: 51
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005DAEC414"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009210F22A"
+					item: "biomeswevegone:chiseled_windswept_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008E1544AE"
+					item: "minecraft:clock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A47749C3"
+					item: "aether_redux:cloudcap_bookshelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EAA03A20"
+					item: "minecraft:coarse_dirt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000051C5EBD5"
+					item: "minecraft:cobbled_deepslate_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000087ADCEC0"
+					item: "minecraft:cobbled_deepslate_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000367EC825"
+					item: "minecraft:cobblestone_slab"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000008B0831BC"
+				"0000000001814326"
+				"00000000682DDED3"
+				"0000000058D88D1D"
+				"00000000845BD1B4"
+				"000000002F850812"
+				"00000000B4F154D3"
+				"0000000049DDE0DB"
+				"000000002D671EDD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000659C562"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000064C0F39E"
+					type: "xp"
+					xp: 46
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005B0E578C"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000041B5CE47"
+					item: "minecraft:cobblestone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056266496"
+					item: "minecraft:cobblestone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B50A088A"
+					item: "minecraft:composter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B055AA25"
+					item: "minecraft:conduit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F2E92BF1"
+					item: "minecraft:cooked_chicken"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008FB0D324"
+					item: "minecraft:cooked_cod"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000081798B40"
+					item: "minecraft:cooked_mutton"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000001792A60F"
+				"000000002D671EDD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003AFD85DD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CF86C43E"
+					type: "xp"
+					xp: 44
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000176A818D"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000009590B22"
+					item: "minecraft:chiseled_nether_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000033BE29E7"
+					item: "biomeswevegone:chiseled_pink_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000258C1EA6"
+					item: "minecraft:chiseled_polished_blackstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AD0A594B"
+					item: "biomeswevegone:chiseled_purple_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009A116C7F"
+					item: "biomeswevegone:chiseled_red_rock_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EACA131D"
+					item: "biomeswevegone:chiseled_red_rock_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003FB8E672"
+					item: "biomeswevegone:chiseled_red_rock_brick_wall"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000003328A1B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003F1BEFE0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006C63C627"
+					type: "xp"
+					xp: 69
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009B02230F"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ACB07C45"
+					item: "biomeswevegone:chiseled_red_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008DAB5C48"
+					item: "minecraft:chiseled_red_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BB1D62E2"
+					item: "biomeswevegone:chiseled_white_dacite_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004820C7D6"
+					item: "biomeswevegone:chiseled_white_dacite_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000042E3761A"
+					item: "biomeswevegone:chiseled_white_dacite_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005DCD6A42"
+					item: "biomeswevegone:chiseled_white_dacite_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F62957FC"
+					item: "biomeswevegone:chiseled_white_sandstone"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000358E56A7"
+				"00000000D447A33A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009D208EC5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000981C9FAB"
+					type: "xp"
+					xp: 25
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002F400A99"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000053AD4FBB"
+					item: "minecraft:cherry_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B75A602"
+					item: "minecraft:cherry_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A250BE6"
+					item: "minecraft:cherry_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF5876B2"
+					item: "minecraft:cherry_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B347E8E1"
+					item: "minecraft:cherry_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AFA52F17"
+					item: "minecraft:cherry_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B550385"
+					item: "biomeswevegone:chiseled_black_sandstone"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000008B0831BC"
+				"0000000001814326"
+				"00000000682DDED3"
+				"0000000058D88D1D"
+				"00000000845BD1B4"
+				"000000002F850812"
+				"00000000B4F154D3"
+				"0000000049DDE0DB"
+				"00000000D447A33A"
+				"000000002D671EDD"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009A9AC21C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BAE440DB"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C344F2AC"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009ED4C776"
+					item: "biomeswevegone:chiseled_blue_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D0802C97"
+					item: "minecraft:chiseled_bookshelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000088F80CED"
+					item: "biomeswevegone:chiseled_dacite_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009028F549"
+					item: "biomeswevegone:chiseled_dacite_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000FCE3068"
+					item: "biomeswevegone:chiseled_dacite_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006EEFCA22"
+					item: "biomeswevegone:chiseled_dacite_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000046D714F"
+					item: "minecraft:chiseled_deepslate"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000EA7240E8"
+				"00000000E8F94F66"
+				"00000000DA3BBBBA"
+				"000000002793A6C4"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D447A33A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000081BA5624"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002B9E487D"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000031C72B11"
+					item: "minecraft:acacia_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002653BB94"
+					item: "minecraft:bamboo_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000D70EEB9"
+					item: "minecraft:birch_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F5036593"
+					item: "minecraft:cherry_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000423477EC"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000072CCE739"
+					item: "minecraft:crimson_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004CE211A8"
+					item: "minecraft:dark_oak_planks"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000E8F94F66"
+				"00000000DA3BBBBA"
+				"000000002793A6C4"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000974C8D13"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000007676D1E"
+					type: "xp"
+					xp: 53
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AAA18EE8"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000950FC5B8"
+					item: "minecraft:jungle_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A65975A8"
+					item: "minecraft:mangrove_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000CED38C3"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EDDEAA6F"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008435F2CB"
+					item: "minecraft:spruce_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000093CDB51E"
+					item: "minecraft:stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FAE618A3"
+					item: "minecraft:warped_planks"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000BE0FF24B"
+				"000000001912B152"
+				"000000002075185E"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000C103A4A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000088E9BFA1"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000687A71A1"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009BDF0464"
+					item: "minecraft:magenta_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CBDF3FF6"
+					item: "minecraft:nether_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CBCEBEB7"
+					item: "minecraft:orange_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000074C6B432"
+					item: "minecraft:oxidized_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BECF0D34"
+					item: "minecraft:packed_mud"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C53E74E"
+					item: "minecraft:pink_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002BFA8608"
+					item: "minecraft:polished_blackstone"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000001912B152"
+				"00000000974C8D13"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C440AD86"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000046D5D919"
+					type: "xp"
+					xp: 36
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B9C3DCAC"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000F0A084C"
+					item: {
+						Count: 1
+						id: "minecraft:golden_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009E235BA7"
+					item: "minecraft:granite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7BD6620"
+					item: "minecraft:gray_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000680F9F7D"
+					item: "minecraft:green_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000087E9591A"
+					item: "minecraft:light_blue_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000096D76E16"
+					item: "minecraft:light_gray_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E0376D89"
+					item: "minecraft:lime_dye"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000001912B152"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000006085807"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F2CB18E8"
+					type: "xp"
+					xp: 31
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000039E9D337"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000020D94198"
+					item: "minecraft:stone_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D59CE1C3"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B6B8385F"
+					item: "minecraft:terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BE899A54"
+					item: "minecraft:trapped_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008A174B6E"
+					item: "minecraft:waxed_weathered_copper"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000ADCCB8E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000003328A1B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000506C96EC"
+					type: "xp"
+					xp: 62
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003D69B034"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BDC2AC0F"
+					item: "minecraft:polished_deepslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000707D3279"
+					item: "minecraft:purple_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009511E658"
+					item: "minecraft:purpur_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D2031541"
+					item: "minecraft:red_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D0CAD4E2"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FCE2C36C"
+					item: "minecraft:sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004BF21D8E"
+					item: "minecraft:snowball"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000001912B152"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005FEFDE38"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002EF489DA"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000630DF3AA"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000024AC7C6"
+					item: "minecraft:cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003330BC08"
+					item: "minecraft:cyan_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E27C59B5"
+					item: "minecraft:exposed_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DDF5BF5D"
+					item: "minecraft:glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000093369793"
+					item: {
+						Count: 1
+						id: "minecraft:golden_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000188877C4"
+					item: {
+						Count: 1
+						id: "minecraft:golden_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000330A66F9"
+					item: {
+						Count: 1
+						id: "minecraft:golden_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000001912B152"
+				"00000000D447A33A"
+				"00000000974C8D13"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002F850812"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B9979F07"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008F1A93FC"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000573DBFF8"
+					item: "minecraft:andesite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E2B813B5"
+					item: "minecraft:bamboo_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003F33D766"
+					item: "minecraft:blaze_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000033DD0A2A"
+					item: "minecraft:quartz_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000264D078E"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003A11C277"
+					item: "minecraft:brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000696E4344"
+					item: "minecraft:brown_dye"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000001814326"
+				"0000000006085807"
+				"00000000358E56A7"
+				"0000000024FB50A3"
+				"00000000D447A33A"
+				"000000001912B152"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000075C177AD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003CD9E2BE"
+					type: "xp"
+					xp: 70
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C1AF043B"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BEAC3D68"
+					item: "minecraft:beehive"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000000479FE8"
+					item: "minecraft:beetroot_soup"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003B89F765"
+					item: "minecraft:birch_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005BDF8D68"
+					item: "minecraft:birch_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000435B6217"
+					item: "minecraft:birch_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000009C8E2D1"
+					item: "minecraft:birch_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F8CE1852"
+					item: "minecraft:birch_pressure_plate"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000002F850812"
+				"00000000D447A33A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007CB18F08"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009119C1D1"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DF59A1DC"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B531DA2F"
+					item: "minecraft:crimson_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001155F847"
+					item: "minecraft:crimson_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000907ADDE2"
+					item: "minecraft:crimson_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EEE98198"
+					item: "aether_redux:crystal_bookshelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B21D55CB"
+					item: "biomeswevegone:cut_black_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000628A1CA0"
+					item: "biomeswevegone:cut_black_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000B8350BF"
+					item: "biomeswevegone:cut_blue_sandstone"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000005FEFDE38"
+				"000000001912B152"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008EDFA8EB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007F306D6F"
+					type: "xp"
+					xp: 54
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BA46EEA8"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C06536A8"
+					item: "biomeswevegone:cut_blue_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7E605C6"
+					item: "minecraft:cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000032D52B79"
+					item: "minecraft:cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A4F04D4D"
+					item: "biomeswevegone:cut_pink_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D5774216"
+					item: "biomeswevegone:cut_pink_sandstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AC2246CD"
+					item: "biomeswevegone:cut_purple_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000366A9E9E"
+					item: "biomeswevegone:cut_purple_sandstone_slab"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000046CBC6A0"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DF766603"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000062D19539"
+					type: "xp"
+					xp: 42
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004049AAF4"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F36C5EAB"
+					item: "minecraft:red_nether_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000002D88CFE"
+					item: "biomeswevegone:red_rock_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C39301A0"
+					item: "biomeswevegone:red_rock_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F21E0C6"
+					item: "biomeswevegone:red_rock_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D9F68EE5"
+					item: "biomeswevegone:red_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000064DFCC2C"
+					item: "biomeswevegone:red_rock_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EEE59A64"
+					item: "biomeswevegone:red_rock_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000000C103A4A"
+				"000000001792A60F"
+				"000000002A24D254"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002019742C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BA34AB90"
+					type: "xp"
+					xp: 43
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B3732412"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AC2FD2FE"
+					item: "minecraft:cracked_deepslate_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E1B996C3"
+					item: "minecraft:cracked_nether_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009CAFAF63"
+					item: "minecraft:cracked_polished_blackstone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7C793B9"
+					item: "biomeswevegone:cracked_red_rock_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003608F09D"
+					item: "biomeswevegone:cracked_red_rock_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EC651290"
+					item: "biomeswevegone:cracked_red_rock_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AAADD224"
+					item: "minecraft:cracked_stone_bricks"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000358E56A7"
+				"00000000D447A33A"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A5EE440E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000065C62831"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BDE14B08"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004284CB09"
+					item: "biomeswevegone:cracked_white_dacite_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000017266AF1"
+					item: "biomeswevegone:cracked_white_dacite_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001847DA54"
+					item: "biomeswevegone:cracked_white_dacite_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007B907972"
+					item: "minecraft:crafting_table"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C841AC4C"
+					item: "minecraft:crimson_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C63B7C22"
+					item: "minecraft:crimson_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007BAD9CFC"
+					item: "minecraft:crimson_hanging_sign"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A98660EC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000072651187"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000324837BD"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000663982CA"
+				item: {
+					Count: 1
+					id: "minecraft:iron_leggings"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000001814326"
+				"0000000006085807"
+				"00000000358E56A7"
+				"000000001912B152"
+				"00000000D447A33A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000010F75F1C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007A568DF7"
+					type: "xp"
+					xp: 35
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004B992A18"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006B9E301E"
+					item: "minecraft:acacia_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D36A76F3"
+					item: "minecraft:acacia_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007D1146D0"
+					item: "minecraft:acacia_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003677D03"
+					item: "minecraft:acacia_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003E0A677F"
+					item: "minecraft:acacia_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B2695EB9"
+					item: "minecraft:acacia_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F574A908"
+					item: "minecraft:acacia_trapdoor"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000028BCECF5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000054CCE85E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000073D148BC"
+					type: "xp"
+					xp: 71
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F4D3D6C1"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000018C99413"
+					item: "biomeswevegone:polished_red_rock_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006DAE4ED0"
+					item: "biomeswevegone:polished_red_rock_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E0756836"
+					item: "minecraft:prismarine_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B160B130"
+					item: "minecraft:prismarine_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E3647AFF"
+					item: "minecraft:prismarine_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000251C926B"
+					item: "minecraft:prismarine_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BA9341CB"
+					item: "minecraft:prismarine_wall"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A4D67E2B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E9E95B2D"
+					type: "xp"
+					xp: 26
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000265F87EA"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F620D6EE"
+					item: {
+						Count: 1
+						id: "minecraft:chainmail_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008F16B556"
+					item: {
+						Count: 1
+						id: "minecraft:chainmail_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000076BD7EB1"
+					item: {
+						Count: 1
+						id: "minecraft:chainmail_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000033D6D673"
+					item: {
+						Count: 1
+						id: "minecraft:chainmail_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C10A859"
+					item: {
+						Count: 1
+						id: "minecraft:iron_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBFB0894"
+					item: {
+						Count: 1
+						id: "minecraft:iron_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A3DE910C"
+					item: {
+						Count: 1
+						id: "minecraft:iron_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000001814326"
+				"00000000682DDED3"
+				"000000002F850812"
+				"00000000D447A33A"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000752F03D3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C9F8B191"
+					type: "xp"
+					xp: 28
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E89C6ECF"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003AEFEB71"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EC153446"
+					item: "biomeswevegone:allium_petal_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DFF81922"
+					item: "minecraft:andesite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BE9ECCB1"
+					item: "minecraft:andesite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F713365"
+					item: "minecraft:andesite_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E386E2F"
+					item: "minecraft:anvil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002055E1A9"
+					item: "minecraft:bamboo_button"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000001814326"
+				"00000000358E56A7"
+				"0000000006085807"
+				"00000000D447A33A"
+				"000000001912B152"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000058E6865E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C5993773"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F8BB1A2B"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C549E9C8"
+					item: "minecraft:bamboo_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F697FE1A"
+					item: "minecraft:bamboo_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000025042C7C"
+					item: "minecraft:bamboo_mosaic_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2DC07CB"
+					item: "minecraft:bamboo_mosaic_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007782ECED"
+					item: "minecraft:bamboo_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FF45DFB8"
+					item: "minecraft:bamboo_chest_raft"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A79E3C9C"
+					item: "minecraft:bamboo_stairs"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000000C103A4A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000004825A1A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DC778238"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000924E34EA"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000493CF943"
+					item: "minecraft:polished_blackstone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000074F5D0D9"
+					item: "minecraft:polished_blackstone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F4AD64B7"
+					item: "minecraft:polished_blackstone_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000006474BB2"
+					item: "minecraft:polished_blackstone_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000027B91EE9"
+					item: "minecraft:polished_blackstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A9BFD280"
+					item: "minecraft:polished_blackstone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007034646C"
+					item: "minecraft:polished_deepslate_slab"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000B4F154D3"
+				"0000000049DDE0DB"
+				"00000000D447A33A"
+				"000000002D671EDD"
+				"00000000974C8D13"
+				"00000000ADCCB8E8"
+				"000000008B0831BC"
+				"0000000001814326"
+				"00000000682DDED3"
+				"0000000058D88D1D"
+				"00000000845BD1B4"
+				"000000005FEFDE38"
+				"000000002F850812"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BFB75A72"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001D2CADEF"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EAC66121"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003C34C648"
+					item: "minecraft:bamboo_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B16BDF28"
+					item: "minecraft:skull_banner_pattern"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000080EB8607"
+					item: "minecraft:flower_banner_pattern"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DF7992BC"
+					item: "minecraft:mojang_banner_pattern"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024354CED"
+					item: "minecraft:creeper_banner_pattern"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003E508C3F"
+					item: "minecraft:barrel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AA7BA8E4"
+					item: "minecraft:beacon"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000C440AD86"
+				"0000000028BCECF5"
+				"0000000003328A1B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008D444001"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F96A6069"
+					type: "xp"
+					xp: 39
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A71E433B"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000C649888"
+					item: "minecraft:polished_deepslate_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003CFEF3A1"
+					item: "minecraft:polished_deepslate_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000881B324E"
+					item: "minecraft:polished_diorite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D16B9236"
+					item: "minecraft:polished_diorite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FBC25CE0"
+					item: "minecraft:polished_granite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003ECADCEA"
+					item: "minecraft:polished_granite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089766702"
+					item: "biomeswevegone:polished_red_rock_slab"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000BE0FF24B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EA7240E8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FA3CFBEE"
+					type: "xp"
+					xp: 34
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008A6D0EC7"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E24C5D70"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FCF54268"
+					item: "minecraft:hay_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045A4A6CF"
+					item: "minecraft:raw_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000076C2913B"
+					item: "minecraft:slime_block"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000008B0831BC"
+				"0000000006085807"
+				"0000000035B1E1CD"
+				"00000000B4F154D3"
+				"0000000049DDE0DB"
+				"000000001912B152"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000F1B4933"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004C4953C0"
+					type: "xp"
+					xp: 32
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009FFC40BE"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000CF42689"
+					item: "minecraft:mangrove_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045471175"
+					item: "minecraft:melon"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A5B66F5D"
+					item: "minecraft:melon_seeds"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E1A3AE3"
+					item: "minecraft:chest_minecart"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005B169CFB"
+					item: "minecraft:furnace_minecart"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003DD74625"
+					item: "minecraft:hopper_minecart"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FDBF85C4"
+					item: "minecraft:tnt_minecart"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000049DDE0DB"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002A949BBE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F0A063EA"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B77C9EF3"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003A659FDD"
+					item: "minecraft:moss_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000EA43B8D"
+					item: "minecraft:mossy_cobblestone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009B768A84"
+					item: "minecraft:mossy_cobblestone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B40C7E27"
+					item: "minecraft:mossy_cobblestone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000048ACFC4A"
+					item: "biomeswevegone:mossy_dacite_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056070273"
+					item: "biomeswevegone:mossy_dacite_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000095F5AC00"
+					item: "biomeswevegone:mossy_dacite_brick_wall"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"00000000358E56A7"
+				"0000000049DDE0DB"
+				"000000001912B152"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BE85497D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DB1D93A5"
+					type: "xp"
+					xp: 47
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DDF32D92"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000042DD2C6E"
+					item: "minecraft:magma_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003756FEB6"
+					item: "minecraft:mangrove_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B503582"
+					item: "minecraft:mangrove_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000664DFB1D"
+					item: "minecraft:mangrove_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000991F9508"
+					item: "minecraft:mangrove_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BC72FBDC"
+					item: "minecraft:mangrove_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B920BE6"
+					item: "minecraft:mangrove_stairs"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000C440AD86"
+				"0000000006085807"
+				"000000005FEFDE38"
+				"000000001912B152"
+				"00000000974C8D13"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B4F154D3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000022474FBF"
+					type: "xp"
+					xp: 45
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C41A19E9"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F08F10D4"
+					item: "minecraft:hopper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AB80F9CF"
+					item: "minecraft:jungle_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000005B1C8CF"
+					item: "minecraft:jungle_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000080512FB5"
+					item: "minecraft:light_blue_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008536EA41"
+					item: "minecraft:light_blue_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006F6AE736"
+					item: "minecraft:light_gray_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003F35A109"
+					item: "minecraft:lime_stained_glass"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000000C103A4A"
+				"00000000C440AD86"
+				"00000000BE0FF24B"
+				"0000000006085807"
+				"000000002F850812"
+				"00000000974C8D13"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000049DDE0DB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DD93C8D0"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007B80C5BC"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F645448D"
+					item: "minecraft:lime_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000283F15D5"
+					item: "minecraft:magenta_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000335831CC"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009BACBFA1"
+					item: "minecraft:mangrove_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D9E0922C"
+					item: "minecraft:mangrove_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F0CB10FB"
+					item: "minecraft:minecart"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000477018AB"
+					item: "minecraft:mossy_cobblestone"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000000C103A4A"
+				"0000000006085807"
+				"00000000974C8D13"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002D671EDD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000116525AF"
+					type: "xp"
+					xp: 60
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000967500D5"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000061245E8F"
+					item: "minecraft:mossy_stone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005E2C5696"
+					item: "minecraft:mud_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EC9D9495"
+					item: "minecraft:nether_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000612E1C48"
+					item: "minecraft:oak_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000EE5A143"
+					item: "minecraft:oak_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE7D1081"
+					item: "minecraft:orange_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058095A15"
+					item: "minecraft:oxidized_cut_copper_slab"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"000000005FEFDE38"
+				"000000002075185E"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005E28B406"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C5BC4D26"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000089E6BE23"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F4F6541C"
+					item: "minecraft:waxed_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056FE67A7"
+					item: "minecraft:waxed_oxidized_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EFB0A419"
+					item: "minecraft:waxed_weathered_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000067D6CFE"
+					item: "minecraft:weathered_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D9B6EF91"
+					item: "minecraft:white_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000082757F6B"
+					item: "minecraft:yellow_terracotta"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"00000000358E56A7"
+				"0000000003328A1B"
+				"00000000D447A33A"
+				"000000001912B152"
+				"000000002D671EDD"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000248B24DB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D10D9329"
+					type: "xp"
+					xp: 58
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004FD731DE"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008DA76B58"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C7F7FDD7"
+					item: "minecraft:note_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005B83F998"
+					item: "minecraft:oak_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A90CE468"
+					item: "minecraft:oak_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029880B72"
+					item: "minecraft:oak_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009076AC4A"
+					item: "minecraft:oak_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000098E5495E"
+					item: "minecraft:oak_pressure_plate"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000008B0831BC"
+				"00000000BE0FF24B"
+				"0000000006085807"
+				"0000000024FB50A3"
+				"00000000D447A33A"
+				"000000001912B152"
+				"00000000974C8D13"
+				"00000000ADCCB8E8"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A9E70765"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000032C525EC"
+					type: "xp"
+					xp: 43
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BE216FA7"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003E3147E0"
+					item: "minecraft:bucket"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7F69714"
+					item: "minecraft:cake"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000063374366"
+					item: "minecraft:calibrated_sculk_sensor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CB204B4C"
+					item: {
+						Count: 1
+						id: "minecraft:carrot_on_a_stick"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C3352868"
+					item: "minecraft:cartography_table"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000017FEF3A1"
+					item: "minecraft:cauldron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000124767F8"
+					item: "minecraft:cherry_chest_boat"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000000C103A4A"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000038C7F64E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008682110F"
+					type: "xp"
+					xp: 62
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008D3100D7"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000064A34B27"
+					item: "minecraft:music_disc_5"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029AEAB74"
+					item: "minecraft:nether_brick_fence"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003EF53C31"
+					item: "minecraft:nether_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002F32F31B"
+					item: "minecraft:nether_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000092EA6CA8"
+					item: "minecraft:nether_wart_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000017115AD6"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000034DA1EFE"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003D8E324B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002E23B999"
+					type: "xp"
+					xp: 61
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001D6C2D06"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000054F283EB"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B1626B1"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D7C6130"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002CA1D3CC"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A85CAA37"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A75BA68F"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E62D0CD6"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000002D671EDD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C3B89BBB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A19C67D2"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002D70CA07"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D678390F"
+					item: "minecraft:mossy_stone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007BC77AB6"
+					item: "minecraft:mossy_stone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000365C1BE2"
+					item: "biomeswevegone:mossy_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B28DB648"
+					item: "biomeswevegone:mossy_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001152F1C5"
+					item: "biomeswevegone:mossy_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D4D21F69"
+					item: "biomeswevegone:mossy_white_dacite_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000035FBA335"
+					item: "biomeswevegone:mossy_white_dacite_brick_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000024FB50A3"
+				"000000002D671EDD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000207585BE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000046D074C"
+					type: "xp"
+					xp: 31
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000016D6CC11"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F91744CF"
+					item: "biomeswevegone:mossy_white_dacite_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000022640FF3"
+					item: "biomeswevegone:mossy_white_dacite_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000027381C86"
+					item: "minecraft:mud_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002583D603"
+					item: "minecraft:mud_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000001A0A066"
+					item: "minecraft:mud_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007B4838CF"
+					item: "minecraft:muddy_mangrove_roots"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7CDDC18"
+					item: "minecraft:mushroom_stew"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000002D671EDD"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001B91E389"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000072CA5143"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D595EA3F"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000469AF439"
+					item: "biomeswevegone:mossy_dacite_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000CB873F0"
+					item: "biomeswevegone:mossy_red_rock_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000043F13CCD"
+					item: "biomeswevegone:mossy_red_rock_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EC9DE4CB"
+					item: "biomeswevegone:mossy_red_rock_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000074ED3985"
+					item: "biomeswevegone:mossy_red_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BB6C7E0A"
+					item: "biomeswevegone:mossy_stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ED0F3EF8"
+					item: "minecraft:mossy_stone_brick_slab"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000BE0FF24B"
+				"0000000006085807"
+				"000000002F850812"
+				"00000000B4F154D3"
+				"00000000D447A33A"
+				"000000001912B152"
+				"00000000974C8D13"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002C1643F9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001E7FD527"
+					type: "xp"
+					xp: 24
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000006F9EB3B"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000286DFED9"
+					item: "minecraft:iron_bars"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B0F4FA20"
+					item: "minecraft:iron_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003CA7BECE"
+					item: "minecraft:iron_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A6364E0"
+					item: "minecraft:jack_o_lantern"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000088272116"
+					item: "aether_redux:jellyshroom_bookshelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000899CF999"
+					item: "minecraft:jukebox"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B5B68A3A"
+					item: "minecraft:jungle_chest_boat"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E8F94F66"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D54D9376"
+					type: "xp"
+					xp: 60
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CD936E37"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000593A6AB3"
+					item: "minecraft:mangrove_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E2A9C2F8"
+					item: "minecraft:oak_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D8E0FC3A"
+					item: "minecraft:spruce_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005B968D45"
+					item: "minecraft:stripped_acacia_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBF88A0B"
+					item: "minecraft:stripped_birch_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002CAD8AC2"
+					item: "minecraft:stripped_cherry_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000767694E6"
+					item: "minecraft:stripped_crimson_hyphae"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DA3BBBBA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000069F91ED0"
+					type: "xp"
+					xp: 59
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000C09441C"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000058697077"
+					item: "minecraft:stripped_dark_oak_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000054A55D40"
+					item: "minecraft:stripped_jungle_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007DA4D9D1"
+					item: "minecraft:stripped_mangrove_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009B4B2C55"
+					item: "minecraft:stripped_oak_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E842D09"
+					item: "minecraft:stripped_spruce_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BEF1DD6A"
+					item: "minecraft:stripped_warped_hyphae"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C9033C99"
+					item: "minecraft:warped_hyphae"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000BE0FF24B"
+				"000000001792A60F"
+				"00000000D447A33A"
+				"00000000974C8D13"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C9C1EAC2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002CDB7745"
+					type: "xp"
+					xp: 27
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B158AD06"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008314B3EF"
+					item: "minecraft:spruce_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FB9975A8"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F9659315"
+					item: "minecraft:cooked_beef"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000066E3C9A"
+					item: "minecraft:stick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089519B5B"
+					item: "minecraft:sticky_piston"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007AE8F822"
+					item: "minecraft:stone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000197B73BC"
+					item: "minecraft:stone_brick_wall"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002793A6C4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D29913F2"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000032310DEF"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000770864BD"
+					item: "minecraft:acacia_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000092C1489F"
+					item: "minecraft:birch_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C36B23E"
+					item: "minecraft:bamboo_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000B811FDA"
+					item: "minecraft:cherry_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005CE74227"
+					item: "minecraft:crimson_hyphae"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000055089483"
+					item: "minecraft:dark_oak_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DBC3C3F6"
+					item: "minecraft:jungle_wood"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000D447A33A"
+				"00000000974C8D13"
+				"00000000DFF43821"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001912B152"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F629CECD"
+					type: "xp"
+					xp: 43
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000ACE9F2AB"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000011381B43"
+					item: "minecraft:black_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F5F1CA60"
+					item: "minecraft:copper_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B17E486E"
+					item: "minecraft:blue_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073FBB472"
+					item: "minecraft:chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E5A71E0"
+					item: "minecraft:clay"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D79AB5BB"
+					item: "minecraft:diorite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E8CAD8DF"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002075185E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000091BBB94E"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002225BA26"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "00000000DDBE85E2"
+				item: "minecraft:yellow_dye"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000974C8D13"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ADCCB8E8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ACDC0E82"
+					type: "xp"
+					xp: 29
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DF9DB3F8"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A85BFDFC"
+					item: "minecraft:leather"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000092A83168"
+					item: "minecraft:nether_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE93E6F7"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A0A2A6BC"
+					item: "minecraft:popped_chorus_fruit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000054587015"
+					item: "minecraft:red_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7A0858E"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006C6A3A68"
+					item: "minecraft:white_dye"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000001912B152"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008B0831BC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000145F80A2"
+					type: "xp"
+					xp: 27
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000310B1B7E"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000993A48E7"
+					item: "minecraft:spruce_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009AC71EA4"
+					item: "minecraft:spruce_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003AB902D6"
+					item: "minecraft:stone_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B3938BED"
+					item: "minecraft:sugar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000069C33A87"
+					item: "minecraft:tnt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000009A7FBD2"
+					item: "minecraft:warped_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000046383FC3"
+					item: "minecraft:waxed_copper_block"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000EA7240E8"
+				"0000000003328A1B"
+				"000000005FEFDE38"
+				"00000000974C8D13"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E63FC57F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BFDA0CF4"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000040E9108B"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006637D038"
+					item: "minecraft:stone_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005C945F61"
+					item: "minecraft:stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C621BCA5"
+					item: "minecraft:stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B47FAA61"
+					item: "minecraft:stonecutter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006BA3048F"
+					item: "minecraft:target"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056E5B734"
+					item: "minecraft:tinted_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005E2F23FB"
+					item: {
+						Count: 1
+						id: "minecraft:turtle_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000002F850812"
+				"00000000D447A33A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000001814326"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004B23BAB4"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BA9652A0"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000062AF8D22"
+					item: "minecraft:acacia_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000081E3B7F8"
+					item: "minecraft:acacia_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FE2893CD"
+					item: "minecraft:allium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B73EE6CA"
+					item: "minecraft:baked_potato"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E5FEF9E0"
+					item: "minecraft:bamboo_mosaic"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000133722EF"
+					item: "minecraft:bamboo_raft"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C713B25F"
+					item: "minecraft:birch_boat"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"0000000003328A1B"
+				"000000002F850812"
+				"00000000974C8D13"
+				"00000000ADCCB8E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000046CBC6A0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D1700CA2"
+					type: "xp"
+					xp: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000038E29EA2"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001B0EBD2E"
+					item: "minecraft:red_nether_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000478A28FD"
+					item: "minecraft:red_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009B9C16EF"
+					item: "minecraft:smooth_quartz"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024338197"
+					item: "minecraft:smooth_red_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000E4B6A88"
+					item: "minecraft:smooth_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009A8119C3"
+					item: "minecraft:smooth_stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000047AA9DFF"
+					item: "minecraft:snow_block"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000358E56A7"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D9342FA6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000688DD4DF"
+					type: "xp"
+					xp: 22
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D102D8CA"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E8EDE727"
+					item: "minecraft:warped_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A1527F55"
+					item: "minecraft:warped_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000072EC414"
+					item: {
+						Count: 1
+						id: "minecraft:warped_fungus_on_a_stick"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EC6F144D"
+					item: "minecraft:warped_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7FAFA60"
+					item: "minecraft:warped_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E796E487"
+					item: "minecraft:warped_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007CE8B45A"
+					item: "minecraft:warped_trapdoor"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"000000005FEFDE38"
+				"00000000D447A33A"
+				"000000001912B152"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000682DDED3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000084E95EFA"
+					type: "xp"
+					xp: 48
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000049916DD"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006AC93055"
+					item: "minecraft:birch_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000B6C4E8B"
+					item: "minecraft:black_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008542FD25"
+					item: "minecraft:black_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B3665D18"
+					item: "minecraft:iron_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008CB0E8C8"
+					item: "minecraft:blue_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DB26AB00"
+					item: "minecraft:blue_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008CD56C59"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000C440AD86"
+				"0000000006085807"
+				"0000000003328A1B"
+				"000000002F850812"
+				"000000001912B152"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000028BCECF5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000035CB2445"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000099F7DE9D"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007F4255EE"
+					item: "minecraft:polished_diorite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000047B9C95E"
+					item: "minecraft:polished_granite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002CCEA49D"
+					item: "minecraft:prismarine"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000049EB8CA2"
+					item: "minecraft:prismarine_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000023754494"
+					item: "minecraft:purple_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000035AA4AF2"
+					item: "minecraft:purpur_pillar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CA39E57B"
+					item: "minecraft:quartz_pillar"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"00000000E8F94F66"
+				"00000000DA3BBBBA"
+				"000000002F850812"
+				"000000002793A6C4"
+				"00000000D447A33A"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000024FB50A3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E7817E6E"
+					type: "xp"
+					xp: 28
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E7B62C7F"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003DB4DECA"
+					item: "minecraft:bookshelf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000050092C9F"
+					item: "minecraft:bowl"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009E94367E"
+					item: "minecraft:bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FB130A24"
+					item: "minecraft:brown_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000071B22042"
+					item: "minecraft:candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000096CBC974"
+					item: "minecraft:charcoal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F0C0AB52"
+					item: "minecraft:cherry_boat"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000000C103A4A"
+				"0000000006085807"
+				"0000000003328A1B"
+				"000000005FEFDE38"
+				"000000002F850812"
+				"00000000D447A33A"
+				"00000000974C8D13"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001792A60F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001CEC0C4B"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000404C169F"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BC775956"
+					item: "minecraft:packed_ice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FEC2B03A"
+					item: "minecraft:pink_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000077657182"
+					item: "minecraft:pink_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000007A6E1BB"
+					item: "minecraft:piston"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AF5B1A6E"
+					item: "minecraft:polished_andesite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008870D289"
+					item: "minecraft:polished_blackstone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000728D12E"
+					item: "minecraft:polished_blackstone_slab"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"0000000003328A1B"
+				"000000002F850812"
+				"00000000D447A33A"
+				"00000000D32AEE56"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000058D88D1D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FD7BBCF5"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000068061FF1"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C4AAB9CC"
+					item: "minecraft:cherry_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CC243293"
+					item: "minecraft:chiseled_quartz_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000091CDE493"
+					item: "minecraft:chiseled_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DA2150FD"
+					item: "minecraft:chiseled_stone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029AECE88"
+					item: "minecraft:cobbled_deepslate_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E1F8FAEC"
+					item: "minecraft:compass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000041E13A18"
+					item: "minecraft:cooked_rabbit"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"0000000003328A1B"
+				"000000005FEFDE38"
+				"00000000D447A33A"
+				"000000001912B152"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000845BD1B4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003E6AB518"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007B678FB9"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006C332CA1"
+					item: "minecraft:crimson_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029081213"
+					item: "minecraft:cut_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ADA1F47D"
+					item: "minecraft:cyan_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A0F25CC"
+					item: "minecraft:dark_oak_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001DC401C3"
+					item: "minecraft:dark_oak_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005B66B82B"
+					item: "minecraft:dark_prismarine"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000010072102"
+					item: "minecraft:deepslate_bricks"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000003328A1B"
+				"000000005FEFDE38"
+				"000000002F850812"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002A24D254"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009FF3828A"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DA52613E"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D4A3F13E"
+					item: "minecraft:deepslate_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000097ACE903"
+					item: "minecraft:dried_kelp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E6C12DE1"
+					item: "minecraft:end_stone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F476E369"
+					item: "minecraft:exposed_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000039CAA051"
+					item: "minecraft:exposed_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009E6B42F8"
+					item: "minecraft:ender_eye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007F9D353D"
+					item: "minecraft:flint"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000A98660EC"
+				"00000000A4D67E2B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000044F3D8EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000079401F98"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004420F76D"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000079CA10F3"
+				item: "minecraft:iron_nugget"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000C440AD86"
+				"0000000006085807"
+				"000000005FEFDE38"
+				"000000002F850812"
+				"000000001912B152"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000035B1E1CD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000624D884F"
+					type: "xp"
+					xp: 43
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000652EF84B"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E1D2DECE"
+					item: "minecraft:furnace"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005EE1D7BC"
+					item: "minecraft:glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000601EDF2C"
+					item: "minecraft:glowstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002FE7521A"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000953D9FBA"
+					item: "minecraft:gravel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000030A459E0"
+					item: "minecraft:gray_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D8580629"
+					item: "minecraft:green_terracotta"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000005E28B406"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009A48DB34"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A2EA7A7B"
+					type: "xp"
+					xp: 64
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001208C6D8"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BF4B13FA"
+					item: "biomeswevegone:white_dacite_tile_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000536F096D"
+					item: "biomeswevegone:white_dacite_tile_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000094958137"
+					item: "biomeswevegone:white_dacite_tile_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B46F1BAB"
+					item: "biomeswevegone:white_dacite_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000059A94295"
+					item: "biomeswevegone:white_dacite_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004FCC4D78"
+					item: "minecraft:white_glazed_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000253EA7D7"
+					item: "biomeswevegone:white_sandstone_slab"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000358E56A7"
+				"0000000044F3D8EA"
+				"00000000974C8D13"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000861D9BFB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F7BB1F1D"
+					type: "xp"
+					xp: 59
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EB28B396"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B1771EAB"
+					item: "minecraft:jungle_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004BF51AA1"
+					item: "minecraft:jungle_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C4BC902"
+					item: "minecraft:jungle_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F243F881"
+					item: "minecraft:jungle_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E218DDD3"
+					item: "minecraft:jungle_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007FF3175B"
+					item: "minecraft:jungle_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000004BDED38"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006DB7C8AC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000310CE3F4"
+					type: "xp"
+					xp: 24
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000333DC464"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E52A6C01"
+					item: "biomeswevegone:white_dacite_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000149E90E3"
+					item: "biomeswevegone:white_dacite_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DB6564DF"
+					item: "biomeswevegone:white_dacite_cobblestone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000B7F17DB"
+					item: "biomeswevegone:white_dacite_cobblestone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C06CBACB"
+					item: "biomeswevegone:white_dacite_cobblestone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006693B06C"
+					item: "biomeswevegone:white_dacite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F56A5DBB"
+					item: "biomeswevegone:white_dacite_stairs"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000044F3D8EA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D32AEE56"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007BA47645"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007F3FB181"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "00000000BB47F1DC"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000008B0831BC"
+				"000000005FEFDE38"
+				"000000002A24D254"
+				"000000005E28B406"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000858A05C2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004BEDFD37"
+					type: "xp"
+					xp: 35
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E5D233F2"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CFB32D19"
+					item: "minecraft:waxed_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B8CA06E2"
+					item: "minecraft:waxed_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000938A413A"
+					item: "minecraft:waxed_exposed_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B7148D5"
+					item: "minecraft:waxed_exposed_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000522F33EC"
+					item: "minecraft:waxed_exposed_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000081005123"
+					item: "minecraft:waxed_exposed_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009C39B18C"
+					item: "minecraft:waxed_oxidized_cut_copper"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000BE0FF24B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DFF43821"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000063C87B3C"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002F0A095C"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000060C237D6"
+					item: "minecraft:coal_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A4BC897"
+					item: "minecraft:netherite_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002487E46F"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000006085807"
+				"000000002D671EDD"
+				"000000005E28B406"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000028172D24"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004DC37423"
+					type: "xp"
+					xp: 50
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000060099C59"
+					table_id: 1411139014L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DAF396C7"
+					item: "minecraft:waxed_oxidized_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B1737A97"
+					item: "minecraft:waxed_oxidized_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000F8BF3C7"
+					item: "minecraft:waxed_weathered_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000041431615"
+					item: "minecraft:waxed_weathered_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000B53D706"
+					item: "minecraft:weathered_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C8610B9A"
+					item: "minecraft:weathered_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000850485A3"
+					item: "biomeswevegone:white_allium"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 4.0d
+		}
+	]
+	title: "Minecraft"
+}

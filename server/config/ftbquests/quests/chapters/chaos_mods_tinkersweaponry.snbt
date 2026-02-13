@@ -1,0 +1,309 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_tinkersweaponry"
+	group: "00000000DEB299A3"
+	icon: "tinkersweaponry:spear_head_cast"
+	id: "0000000034593101"
+	order_index: 64
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["00000000D4D1DB29"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000034EC863D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000094A3365D"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B8427667"
+					table_id: 513707254L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "000000008E3CBAA8"
+				item: "tinkersweaponry:spear_head"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000034EC863D"
+				"0000000042C0FCCC"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A51BC234"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000184B5F59"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000D4259EA"
+					table_id: 513707254L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000967B0723"
+				item: "tinkersweaponry:spear_head_sand_cast"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000D0E5DD0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E0AE0BD1"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A83165ED"
+					table_id: 513707254L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000005A36E355"
+				item: "tinkersweaponry:spear_head_red_sand_cast"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000042C0FCCC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D21A3CAD"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001CAC007D"
+					table_id: 513707254L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000006A883ACA"
+				item: "tinkersweaponry:great_blade_sand_cast"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B861F360"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001A963C97"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DCDD7909"
+					table_id: 513707254L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000002BA5D42F"
+				item: {
+					Count: 1
+					id: "tinkersweaponry:pike"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000935B37CA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A4ED947F"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A5C650E7"
+					table_id: 513707254L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000006B1011D6"
+				item: {
+					Count: 1
+					id: "tinkersweaponry:lance"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000003FB1ECB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006ED91018"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000015D313CE"
+					table_id: 513707254L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000009B234237"
+				item: {
+					Count: 1
+					id: "tinkersweaponry:greatsword"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001DC82827"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A572D258"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009145C05A"
+					table_id: 513707254L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000083738069"
+				item: "tinkersweaponry:great_blade_red_sand_cast"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D4D1DB29"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DF6879FC"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C633C08C"
+					table_id: 513707254L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000FF9424AD"
+				item: "tinkersweaponry:spear_head_cast"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+	]
+	title: "Thermal Construct"
+}

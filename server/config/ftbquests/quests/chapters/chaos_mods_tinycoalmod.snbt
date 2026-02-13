@@ -1,0 +1,165 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_tinycoalmod"
+	group: "00000000DEB299A3"
+	icon: "tinycoalmod:tiny_charcoal"
+	id: "000000000C1D78B1"
+	order_index: 114
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["000000007E7D95E6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D8B8A45B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009E57C167"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000077E1186F"
+					table_id: 388566216L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000007EFDDF2D"
+				item: "minecraft:charcoal"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ACE4051E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001A3520E7"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A949BFAD"
+					table_id: 388566216L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000006B1FF811"
+				item: "tinycoalmod:tiny_coal"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D7A27FC8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F52C582C"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006D4DF8C3"
+					table_id: 388566216L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000D0A91618"
+				item: "tinycoalmod:charcoal_block"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007E7D95E6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F293E076"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001D4DF5D4"
+					table_id: 388566216L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000437ADF63"
+				item: "tinycoalmod:tiny_charcoal"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000ACE4051E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003FEB4189"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B0DF2FC6"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000ACED3D69"
+					table_id: 388566216L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000002EA9903A"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+	title: "TinyCoal"
+}

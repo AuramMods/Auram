@@ -1,0 +1,2138 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_extendedcrafting"
+	group: "00000000DEB299A3"
+	icon: "extendedcrafting:luminessence_block"
+	id: "0000000077921D67"
+	order_index: 35
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000FCD8C29B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FC04B85F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DA0EC0FB"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F7ABE342"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "000000008870BDD6"
+				item: "extendedcrafting:elite_component"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000007BB036E3"
+				"000000004456C07C"
+				"00000000FC04B85F"
+				"000000004150E2AE"
+				"000000007EE3C5AE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F868BB27"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B17089DC"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C021C73F"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "00000000FD660872"
+				item: "extendedcrafting:elite_table"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000FCD8C29B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009198302D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A0CDA243"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000040E0133C"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "0000000094D88EA5"
+				item: "extendedcrafting:ultimate_component"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000FCD8C29B"
+				"00000000D828838A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000064B928E1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000131DBF23"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CB87380E"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "000000004824B345"
+				item: "extendedcrafting:crystaltine_component"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000AB1060E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D01873E0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D3B4D59E"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000FB12D70"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000002A10A087"
+				item: "extendedcrafting:flux_alternator"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"000000008254E3B2"
+				"000000006D665388"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CA42555B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FF56918A"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C8C1C10E"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "0000000027A18BB3"
+				item: "extendedcrafting:basic_table"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000F868BB27"
+				"000000009198302D"
+				"0000000011083164"
+				"00000000AE15BF39"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000007A3183F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001E71E9AB"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FA4ED1DC"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000007EC9BFB5"
+				item: "extendedcrafting:ultimate_table"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000405BBF3C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CA33351B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B3A63A59"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008E8C71DD"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000CAD235D7"
+				item: "extendedcrafting:enhanced_redstone_nugget"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000FCD8C29B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F95D95FE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007DF15639"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001B6FBAD1"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "00000000B41F400C"
+				item: "extendedcrafting:advanced_component"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005CB717CE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D5706F62"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F4131F72"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000D7CC6B8B"
+				item: "patchouli:guide_book"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005FA022F5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D23AF7AE"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A932E1E2"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000001664A6B5"
+				item: "extendedcrafting:singularity"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000FCD8C29B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001C7117DE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AC99553E"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000052AA1C25"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000009557C18B"
+				item: "extendedcrafting:luminessence_block"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000FB0F355C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009317CB7B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B4ADA6F4"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006B5858A3"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000FC6F7E33"
+				item: "extendedcrafting:enhanced_ender_ingot_block"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000023813C2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004DF1BAA7"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006A21642B"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000F9A63177"
+				item: "extendedcrafting:black_iron_block"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000004150E2AE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004000F345"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000192B7A34"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000684F5F30"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000007DA44934"
+				item: "extendedcrafting:frame"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000006C88DFEE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000024DF3BD8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C14C19DD"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000054F2E4ED"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000008A785BE8"
+				item: "extendedcrafting:enhanced_redstone_catalyst"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000FCD8C29B"
+				"00000000BFC0B717"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000088915FD6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C873C76A"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BAFECC32"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000F664E0D0"
+				item: "extendedcrafting:ender_component"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000FCD8C29B"
+				"00000000AB1060E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B20AECEB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AE07824E"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006AA7F83B"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "00000000BDF73A47"
+				item: "extendedcrafting:redstone_component"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000BFC0B717"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000038D7E047"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000021876847"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000025B5FB68"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000701BF00A"
+				item: "extendedcrafting:ender_crafter"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000049D9FD69"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BBE7EBFD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B96B891F"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000012B13F4C"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000005DB780E5"
+				item: "extendedcrafting:enhanced_ender_catalyst"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000FB0F355C"
+				"000000004150E2AE"
+				"00000000FCD8C29B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000049D9FD69"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DE38B6E5"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A874835A"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000038AAEB4C"
+				item: "extendedcrafting:enhanced_ender_component"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000FB0F355C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009FED246D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000048950A6E"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E1C4356A"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000555E7DD5"
+				item: "extendedcrafting:enhanced_ender_nugget"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000405BBF3C"
+				"00000000FCD8C29B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006C88DFEE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A6B877CF"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002E485A38"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000F7A637B9"
+				item: "extendedcrafting:enhanced_redstone_component"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000AB1060E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000E956E1C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BB802B77"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001E5E07A3"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000006714015E"
+				item: "extendedcrafting:flux_crafter"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F4490FC6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000005B4840"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000069690919"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000002BDE9E3B"
+				item: "extendedcrafting:nether_star_block"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000FCD8C29B"
+				"00000000E7475A1C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003EF35901"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007CFE8891"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008A1DF918"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000005B14338A"
+				item: "extendedcrafting:the_ultimate_component"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000ADFDE089"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000405BBF3C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F1E57EEF"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002F1346EF"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000033062F57"
+				item: "extendedcrafting:enhanced_redstone_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000E7475A1C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003E3CE856"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A9DF4286"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E6C7F41F"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000280CAA7F"
+				item: "extendedcrafting:the_ultimate_nugget"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000061A67C38"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AB1060E8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000071829498"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008E8CF65B"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000027366B3"
+				item: "extendedcrafting:redstone_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000C561F65A"
+				"0000000020684822"
+				"00000000CA42555B"
+				"00000000F95D95FE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007EE3C5AE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E29AC5E0"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001F7E2AF9"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "000000005729E543"
+				item: "extendedcrafting:advanced_table"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000005D3F94D2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D828838A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C09C204B"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000026B5A82B"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000074C03357"
+				item: "extendedcrafting:crystaltine_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004150E2AE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000000EB6B90"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D0A5681E"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000438C06E9"
+				item: "extendedcrafting:black_iron_slate"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000005FA022F5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B7D9B2F8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B5F6656B"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000E830307"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000003DBDED9B"
+				item: "extendedcrafting:ultimate_singularity"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000003EF35901"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007A99E059"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000068CC8149"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A0FA2616"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000001B147B66"
+				item: "extendedcrafting:the_ultimate_catalyst"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000064B928E1"
+				"0000000007A3183F"
+				"00000000B20AECEB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000403F897F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000015701029"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000084FD567"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000491E03C0"
+				item: "extendedcrafting:ultimate_auto_table"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000BFC0B717"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006713EBFA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D1E43B75"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003C424B90"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000003C393D73"
+				item: "extendedcrafting:ender_alternator"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000AB1060E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003151AD6A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000085164DC0"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A2BADE29"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000CFD862D5"
+				item: "extendedcrafting:redstone_nugget"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000088915FD6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009890DA75"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007D11E4E3"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009C034344"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000002C4316E2"
+				item: "extendedcrafting:ender_catalyst"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000E7475A1C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006D569678"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B22FE805"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B4BBF514"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000008D653200"
+				item: "extendedcrafting:the_ultimate_block"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000BFC0B717"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AF8DA45E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000008FF7567"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C7B0B4E2"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000D29A1AE2"
+				item: "extendedcrafting:ender_ingot_block"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000004456C07C"
+				"00000000FC04B85F"
+				"000000004150E2AE"
+				"000000004000F345"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000C91C138"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000072BD121"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000577DFAB"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000091CC107D"
+				item: "extendedcrafting:compressor"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000BFC0B717"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005FFAE4ED"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001264B66B"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000060617B1C"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000452AC7DC"
+				item: "extendedcrafting:ender_nugget"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000B20AECEB"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BCA03129"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F5BB6282"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C0500887"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000000EFBF71"
+				item: "extendedcrafting:redstone_catalyst"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000054C1E5DB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000064275129"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006A86D563"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000000020878E"
+				item: "extendedcrafting:black_iron_nugget"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000F4490FC6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004CCD65B5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FB360923"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A9C1DBC9"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000006F219AED"
+				item: "minecraft:nether_star"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000004456C07C"
+				"00000000FC04B85F"
+				"000000004150E2AE"
+				"000000004000F345"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CBED4AB0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DA37F8BA"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000403932F9"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000879BC729"
+				item: "extendedcrafting:crafting_core"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000023813C2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000011D78A85"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005A7C623B"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FF720FD3"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000003F762542"
+				item: "extendedcrafting:pedestal"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000064B928E1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000158BAB34"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B56E5878"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BBFF555F"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000082E6A21D"
+				item: "extendedcrafting:crystaltine_catalyst"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000D828838A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000034F30781"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006DA4CB44"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B593B545"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000002FDB1702"
+				item: "extendedcrafting:crystaltine_nugget"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000064B928E1"
+				"00000000B20AECEB"
+				"0000000038D7E047"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C9952372"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002037A3FA"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000076076055"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000CF3CF21C"
+				item: "extendedcrafting:auto_ender_crafter"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000000E956E1C"
+				"0000000064B928E1"
+				"00000000B20AECEB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000AD210D3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FBEBF1F7"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001C334701"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000056D16EFD"
+				item: "extendedcrafting:auto_flux_crafter"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000004150E2AE"
+				"00000000FCD8C29B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008254E3B2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007C09271C"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000001C3E9DE"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000014B85F17"
+				item: "extendedcrafting:basic_component"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000064B928E1"
+				"000000007EE3C5AE"
+				"00000000B20AECEB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007BB036E3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002CE9644D"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AD65BA27"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000043CB8244"
+				item: "extendedcrafting:advanced_auto_table"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000FC04B85F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004456C07C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003096D5F4"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000CED0A3A"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000AE606F3E"
+				item: "extendedcrafting:elite_catalyst"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000F95D95FE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C561F65A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F208207E"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000055B8E18"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000332F0C28"
+				item: "extendedcrafting:advanced_catalyst"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FCD8C29B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F5CDDCDD"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000080E56BE9"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "00000000F65E9703"
+				item: "extendedcrafting:luminessence"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000064B928E1"
+				"00000000CA42555B"
+				"00000000B20AECEB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000020684822"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FF432504"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004557DC76"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000086FB3E3A"
+				item: "extendedcrafting:basic_auto_table"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BFC0B717"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D193306E"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000007835BAE"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "0000000047564917"
+				item: "extendedcrafting:ender_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000F868BB27"
+				"0000000064B928E1"
+				"00000000B20AECEB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000011083164"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AC260098"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000628B6921"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000F512D04B"
+				item: "extendedcrafting:elite_auto_table"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000009198302D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AE15BF39"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000042461D83"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000943DD888"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "0000000043E1066A"
+				item: "extendedcrafting:ultimate_catalyst"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000008254E3B2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006D665388"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000056116233"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000021D3B23B"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "000000001C2A106C"
+				item: "extendedcrafting:basic_catalyst"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ADFDE089"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004F06D932"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D2BDA3B9"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000352E6E2E"
+				item: "extendedcrafting:enhanced_redstone_ingot_block"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000061A67C38"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001CC3A90D"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C15E0024"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "000000007058F2EF"
+				item: "extendedcrafting:redstone_ingot_block"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005D3F94D2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000076C110D6"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009BD250C2"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000091C84DD3"
+				item: "extendedcrafting:crystaltine_block"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FB0F355C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000122574A0"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000912E757D"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000B0512263"
+				item: "extendedcrafting:enhanced_ender_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E7475A1C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B6FA7A07"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D1CB5564"
+					table_id: 260979904L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000FD7AB10B"
+				item: "extendedcrafting:the_ultimate_ingot"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.0d
+		}
+	]
+	title: "Extended Crafting"
+}

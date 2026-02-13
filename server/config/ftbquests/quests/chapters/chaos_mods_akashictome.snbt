@@ -1,0 +1,39 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_akashictome"
+	group: "00000000DEB299A3"
+	id: "000000001643DFA2"
+	order_index: 104
+	quest_links: [ ]
+	quests: [{
+		hide_dependency_lines: true
+		hide_details_until_startable: true
+		hide_until_deps_complete: true
+		id: "00000000ACA9AA3F"
+		invisible: true
+		invisible_until_tasks: 1
+		rewards: [
+			{
+				id: "000000003FB88BD0"
+				type: "xp"
+				xp: 7
+			}
+			{
+				exclude_from_claim_all: true
+				id: "00000000F27525D1"
+				table_id: 594319388L
+				type: "random"
+			}
+		]
+		shape: "circle"
+		tasks: [{
+			consume_items: false
+			id: "000000001E5E7E45"
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Akashic Tome"
+}

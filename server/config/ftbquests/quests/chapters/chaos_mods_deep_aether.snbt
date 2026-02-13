@@ -1,0 +1,4756 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_deep_aether"
+	group: "00000000DEB299A3"
+	icon: "deep_aether:skyjade_block"
+	id: "000000007A6CFC60"
+	order_index: 82
+	quest_links: [ ]
+	quests: [
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AF67D469"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000975FC7A6"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AE328BC8"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D52399B0"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C9CB7DD1"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F23A1F97"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007836B7B0"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F4AE1F08"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000006DCB2D4"
+					item: "deep_aether:roseroot_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000604E64BA"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000003C0E9F60"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BDC29472"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B7020F5E"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000076A660C5"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000850B3EFF"
+					item: "deep_aether:roseroot_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B02B9A3"
+					item: "deep_aether:roseroot_trapdoor"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000003C0E9F60"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000018957B87"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000081EEAAAA"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005A27A7D9"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000325EE86D"
+					item: "deep_aether:roseroot_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000060E7E31E"
+					item: "deep_aether:roseroot_slab"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000003C0E9F60"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000070291D1A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000070949544"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E5A5D403"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B0D18263"
+					item: "deep_aether:roseroot_fence_gate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001316243A"
+					item: "deep_aether:roseroot_hanging_sign"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000003C0E9F60"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DD0E42AD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006E75DD69"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DA02245C"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FC94C54A"
+					item: "deep_aether:roseroot_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000064471A74"
+					item: "deep_aether:roseroot_fence"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000003C0E9F60"
+				"0000000088560BDD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000699E6C1F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000676BE894"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000092A7AF60"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000034400A9A"
+					item: "deep_aether:roseroot_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000671BC3B4"
+					item: "deep_aether:roseroot_button"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000003CFD2150"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004BBFC1EB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005A77069B"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C9E4C221"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003F036BED"
+					item: "deep_aether:raw_clorite_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000071CAE5BB"
+					item: "minecraft:red_dye"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000003CFD2150"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BAAD4643"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005ED15EF8"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D0DF0E87"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000015FAEBFD"
+					item: "deep_aether:raw_clorite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000900282BE"
+					item: "deep_aether:raw_clorite_stairs"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000071B839C8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C7FC1CAF"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004FFD8050"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004C1C169E"
+					item: "minecraft:purple_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A22A7AB2"
+					item: "deep_aether:purple_squash_slice"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000002E6F73"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007D3D8537"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000B14CBD2"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AF015294"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000718C5D5A"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000030298398"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002255246B"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F265429C"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009B6D2466"
+					item: {
+						Count: 1
+						id: "deep_aether:storm_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004450169A"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009783F35D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CA679ADE"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000E8A62F2"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004F84669D"
+					item: "deep_aether:squash_seeds"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000004D30B00"
+					item: {
+						Count: 1
+						id: "deep_aether:storm_bow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000DEF9FFA1"
+				"0000000051935019"
+				"00000000DF3251E8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000020DD1CA3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DFEC9B8C"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000028F16112"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E141323A"
+					item: "deep_aether:stratus_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004BE3CB3C"
+					item: "deep_aether:squall_plate"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000036253F4E"
+				"0000000051935019"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009AB12FE0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000084307ECB"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006B5E6409"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005AEADBBA"
+					item: "deep_aether:skyjade_chain"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000039716BCF"
+					item: "deep_aether:stormforged_smithing_template"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000036253F4E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002BE022B6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000973D3770"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A82D8489"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C8D3D614"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B873E4E"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000036253F4E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000221A12FC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004559A9D4"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DA41830A"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B6451A87"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_ring"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CC205898"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_shield"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000068B135F"
+				"0000000057B70FD8"
+				"000000003A7FC24F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006E27D2E9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000087DE4727"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005CC5F7E9"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005741B825"
+					item: "deep_aether:sunroot_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000005AC3F8"
+					item: "deep_aether:yagroot_planks"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001F732963"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000081E5691F"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F20E877F"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "0000000011CD619F"
+				item: "deep_aether:chromatic_aercloud"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CB9292BF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007B6F99A8"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006423AE4B"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006D815331"
+					item: "deep_aether:holystone_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000061639422"
+					item: "deep_aether:metal_mixture"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000068B135F"
+				"000000003CFD2150"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003C0E9F60"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F9315A3E"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E164879D"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000061225D44"
+					item: "deep_aether:packed_aether_mud"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003761CE6"
+					item: "deep_aether:roseroot_planks"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000003D782234"
+				"0000000053754BB9"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000547E1BFD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CF849CA0"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000014EE52A9"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000019F8A2BE"
+					item: "deep_aether:cruderoot_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000017D87972"
+					item: "deep_aether:frozen_goldenleaf_berries"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000451F3C39"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F402A708"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D3DA6664"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000251E63E5"
+					item: "deep_aether:gilded_holystone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058DBE2E4"
+					item: "deep_aether:holystone_pillar"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"000000003D782234"
+				"0000000053754BB9"
+				"000000003CFD2150"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000005F4E738"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008A9B06D0"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D68DD733"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F1EC0728"
+					item: "deep_aether:clorite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F5D66ABF"
+					item: "deep_aether:conberry_planks"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000036253F4E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D636A2EF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D5602E3F"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D09C9101"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000563CB3D6"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002B5D7812"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000051935019"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000021270539"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FBA351E8"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000075088737"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002A59A644"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001080BDEA"
+					item: "deep_aether:skyjade_lantern"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000036253F4E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F8EA3B82"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005C37D006"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000307CDC6E"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D6306F67"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_gloves"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AA528074"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000063C2140B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008F9D74AD"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D039C5D1"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004E9B5637"
+					item: "deep_aether:sunroot_fence_gate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000008913C3C"
+					item: "deep_aether:sunroot_hanging_sign"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001E7C400A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BA47D7D7"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006D528286"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A2DBD757"
+					item: "deep_aether:sunroot_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002B6E9368"
+					item: "deep_aether:sunroot_fence"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000D6EC5FD2"
+				"000000006E27D2E9"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CDB2D437"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002B0BEE8C"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000071F5959F"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007020D7CC"
+					item: "deep_aether:sunroot_chest_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D38156DF"
+					item: "deep_aether:sunroot_button"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008B3B6D8A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000690046B7"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A2C79957"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FCF819CF"
+					item: "deep_aether:stripped_sunroot_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BF2AA5BE"
+					item: "deep_aether:stripped_yagroot_wall"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004B946231"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CCB1556D"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F4D20CB4"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000081CCEF03"
+					item: "deep_aether:stripped_cruderoot_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F2F038D"
+					item: "deep_aether:stripped_roseroot_wall"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000692B1B07"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001E3D78B8"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CED5A812"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000576D918F"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000011EEFE09"
+					item: "deep_aether:stripped_conberry_wall"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007DA2EAD9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000091599559"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000959FEA5"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B72FDB88"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_shield"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C24B7CC"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000064A6333B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002C8CFDF3"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DDC64472"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000025488551"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073BA5F9C"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_ring"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B2898441"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CC1E4C7C"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FDBCAAB2"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000052494485"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000086C045DC"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002E041FE4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003E1B1859"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DDB25FE9"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000036659010"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_gloves"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000070A45837"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007D05F7E3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000947FBE1A"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A0767A9F"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001EDDF622"
+					item: "deep_aether:yagroot_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009669557D"
+					item: "deep_aether:yagroot_wall"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000280617D2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C7601088"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004E1E88D9"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000058B4990A"
+					item: "deep_aether:yagroot_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000034D2BFC1"
+					item: "deep_aether:yagroot_stairs"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001F7E57EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F75E69CA"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C5BC8081"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E0A0DCE5"
+					item: "deep_aether:yagroot_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058FD3734"
+					item: "deep_aether:yagroot_pressure_plate"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000635EDF10"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002D79AD10"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CBF88BCF"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000055FFF324"
+					item: "deep_aether:yagroot_fence"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BEC27FA0"
+					item: "deep_aether:yagroot_fence_gate"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000547E1BFD"
+				"00000000451F3C39"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000623FCE79"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000512FE251"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000007E39B0E"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AACAA133"
+					item: "deep_aether:cruderoot_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075563F08"
+					item: "deep_aether:gilded_holystone_tiles"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000451F3C39"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000019D2A74C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003D9E2146"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C10D0B55"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000061DA7666"
+					item: "deep_aether:holystone_pillar_up"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBF333C3"
+					item: "deep_aether:mossy_holystone_bricks"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D69536A3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000002B05C9A"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008116BA8E"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003A8DE1D4"
+					item: "deep_aether:blightmoss_holystone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B6E5A75"
+					item: "deep_aether:blightmoss_holystone_tiles"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000005F4E738"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D6A718D5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F4B2E1ED"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C50039B5"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F20792F3"
+					item: "deep_aether:clorite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D1228545"
+					item: "deep_aether:conberry_boat"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000036253F4E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000051935019"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006671FAE4"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000032703947"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000076AB09D0"
+					item: "deep_aether:skyjade_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000897FD790"
+					item: {
+						Count: 1
+						id: "deep_aether:stormforged_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DF3251E8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000088D3C46C"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A33FE688"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B148E4B9"
+					item: {
+						Count: 1
+						id: "deep_aether:stormforged_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000478B35C2"
+					item: {
+						Count: 1
+						id: "deep_aether:stormforged_gloves"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000EEF0FB46"
+				"00000000CB9292BF"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000355F4DD9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004175D2FE"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000464C9109"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E7AA864F"
+					item: "deep_aether:mossy_holystone_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C0006823"
+					item: "deep_aether:polished_aseterite"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000005F4E738"
+				"000000003C0E9F60"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000088560BDD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DD21D22A"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B6F0A467"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002D99AB2F"
+					item: "deep_aether:polished_clorite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000286DCEAC"
+					item: "deep_aether:roseroot_boat"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000003C0E9F60"
+				"00000000547E1BFD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006C8B0D42"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000025972AE2"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000608EC4DB"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F4E8A6C9"
+					item: "deep_aether:aether_mud_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003174AB4E"
+					item: "deep_aether:antidote"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000EEF0FB46"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A9D93661"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000206DECB9"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003092E2B0"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007FE2FD0B"
+					item: "deep_aether:aseterite_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D078515"
+					item: "deep_aether:big_holystone_bricks"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000046419BE1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C3211135"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000037602035"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001065DCCE"
+					item: "deep_aether:yagroot_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000770BAD3F"
+					item: "deep_aether:yagroot_door"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000005C1317DD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003ED79C5E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000085FFFECF"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C9D17B1A"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000069D3CCF1"
+					item: "minecraft:white_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000091456C34"
+					item: "deep_aether:yagroot_chest_boat"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009B3AD0FB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009D6A99DC"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C3F1ADAA"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000584A3733"
+					item: "deep_aether:sunroot_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001166315A"
+					item: "minecraft:wheat_seeds"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004E1AB37D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006FAF06F0"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009C5394A2"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000076496EE7"
+					item: "deep_aether:sunroot_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002046AF81"
+					item: "deep_aether:sunroot_trapdoor"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000036253F4E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DD1EF46A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000024B000E4"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CC3D84F5"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "0000000000E94569"
+				item: "deep_aether:skyjade_block"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BD07DD3C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F0E3BA0C"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B0E10B97"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009E8403FA"
+					item: "deep_aether:sunroot_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F52A040"
+					item: "deep_aether:sunroot_slab"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000005F4E738"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003B920F1D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EA37A11D"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E0D272BF"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D56BBAE2"
+					item: "deep_aether:clorite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000010B89944"
+					item: "deep_aether:clorite_wall"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000D6A718D5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000873A784B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000057739F52"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003E1B6223"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004C7A6C3B"
+					item: "deep_aether:chiseled_holystone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C4240752"
+					item: "deep_aether:clorite_pillar"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000854A2554"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BB5D04B3"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D0263436"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000764D881D"
+					item: "minecraft:brewing_stand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E981F649"
+					item: "minecraft:cake"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EE98764B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D93B6A4D"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006640E60C"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A7EB669F"
+					item: "minecraft:blue_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003D81F69"
+					item: "deep_aether:blue_squash_slice"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000D6EC5FD2"
+				"00000000D69536A3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CDAA1951"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005D63F574"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000077E82DDF"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000672D6558"
+					item: "deep_aether:blightmoss_holystone_tile_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075BDEF48"
+					item: "deep_aether:stratus_block"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000D69536A3"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001BCACDB5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000532E86CF"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CB1A745B"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000073C4599"
+					item: "deep_aether:blightmoss_holystone_tile_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004639A4FB"
+					item: "deep_aether:blightmoss_holystone_tile_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000005F4E738"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FF9E5EF8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B37D0A48"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C942C0E1"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004F813FFE"
+					item: "deep_aether:conberry_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000DF0A62A"
+					item: "deep_aether:conberry_door"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000036253F4E"
+				"00000000D6A718D5"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006BE2553C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000092EBB911"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EA443F59"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000590799FE"
+					item: "deep_aether:combiner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000057F1D61E"
+					item: "deep_aether:conberry_chest_boat"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FEEDF8DA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B15E3D5E"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000022CEEE55"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000F8E44A3"
+					item: "deep_aether:cobbled_aseterite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000036EA20C"
+					item: "deep_aether:cobbled_aseterite_wall"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000029270941"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000008BA5787"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C1CCCE86"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A557379A"
+					item: "deep_aether:cloudbloom_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000077021B37"
+					item: "deep_aether:cobbled_aseterite_slab"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EEF0FB46"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E08FEF8D"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DEFE76A5"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000019E36A34"
+				item: "deep_aether:aseterite"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000D69536A3"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002768A8DE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D7B2EBF4"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000DF7BAF6"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009ADD4988"
+					item: "deep_aether:big_holystone_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ED738C0A"
+					item: "deep_aether:blightmoss_holystone_brick_slab"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000547E1BFD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000010F8BECD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000144BFF65"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000059B59E7E"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000BDC69A1"
+					item: "deep_aether:cruderoot_button"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000999C816C"
+					item: "deep_aether:cruderoot_door"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000A9D93661"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000891887C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003558047C"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000732518C8"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E247E32C"
+					item: "deep_aether:big_holystone_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000319D3BC5"
+					item: "deep_aether:big_holystone_bricks_stairs"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000005F4E738"
+				"00000000623FCE79"
+				"000000006E27D2E9"
+				"000000003C0E9F60"
+				"00000000547E1BFD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000015F896F6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000096C0F736"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F8650CB1"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D022E1F7"
+					item: "minecraft:crafting_table"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F53C5C8A"
+					item: "deep_aether:cruderoot_chest_boat"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001ADBD49D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002DB43EE5"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FDDA3B9F"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E073FAD1"
+					item: "deep_aether:cooked_aerglow_fish"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000C56397C"
+					item: "deep_aether:cooked_quail"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000D69536A3"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F92C445D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007F8568A7"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DBA2679D"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E981CAD2"
+					item: "deep_aether:blightmoss_holystone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000145EE342"
+					item: "deep_aether:blightmoss_holystone_brick_wall"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000005F4E738"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E7B81876"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000005A5A4E7"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FF89CE28"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003AD62B19"
+					item: "deep_aether:conberry_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B583CBA4"
+					item: "deep_aether:conberry_wall"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000A9D93661"
+				"00000000355F4DD9"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006E1213E1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DC13A2AE"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000206947B4"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007C3EF74B"
+					item: "deep_aether:aseterite_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F3EA26F1"
+					item: "deep_aether:aseterite_bricks_stairs"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000005F4E738"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004433B591"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B2548DCF"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BC802C32"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000028AE6B59"
+					item: "deep_aether:conberry_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003AEB3451"
+					item: "deep_aether:conberry_stairs"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005D753B1F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DE62112E"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D7D63326"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C51AF55F"
+					item: {
+						Count: 1
+						id: "deep_aether:afterburner"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F8FFCB15"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000005F4E738"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002DFF28A7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000017A6DCB6"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006D15EE00"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000038CA928D"
+					item: "deep_aether:conberry_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E196EF46"
+					item: "deep_aether:conberry_pressure_plate"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000EEF0FB46"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AC1A45E0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B8145EC2"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000991FC5DC"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EDD07A83"
+					item: "deep_aether:aseterite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DAFE55FD"
+					item: "deep_aether:aseterite_wall"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000005F4E738"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F1AEF4B0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EB72B2F3"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E3F3A1DB"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C2D58A89"
+					item: "deep_aether:conberry_fence"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007AD2BA4B"
+					item: "deep_aether:conberry_fence_gate"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000A9D93661"
+				"00000000EEF0FB46"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B945FBCF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D7DD4CD8"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000098A919A8"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EAE1A27B"
+					item: "deep_aether:aseterite_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000040A43DBC"
+					item: "deep_aether:aseterite_slab"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000547E1BFD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FCDA6838"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000791A2ACF"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000071BC67EB"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000592B8771"
+					item: "deep_aether:cruderoot_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B9E0DBBE"
+					item: "deep_aether:cruderoot_stairs"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000547E1BFD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E94D9270"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006AE97602"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D7E2C2BB"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003E2FF468"
+					item: "deep_aether:cruderoot_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000781CC564"
+					item: "deep_aether:cruderoot_pressure_plate"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000547E1BFD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000086BFB0F4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000131BEE78"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004AC16448"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C469D76C"
+					item: "deep_aether:cruderoot_fence"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073935B6C"
+					item: "deep_aether:cruderoot_fence_gate"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000036253F4E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D5BF6E88"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C1FDF457"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000036AC6220"
+					item: "deep_aether:nimbus_stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045A8FE71"
+					item: "deep_aether:skyjade"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000028ACF196"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A3FABF37"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000044C03B4C"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E0E31E94"
+					item: "deep_aether:aerglow_blossom_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000008D021A1"
+					item: "deep_aether:aether_coarse_dirt"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000006C8B0D42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000022DC7E74"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009D29F742"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F977A1C6"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A490B5C2"
+					item: "deep_aether:aether_mud_bricks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000034F58282"
+					item: "deep_aether:aether_mud_bricks_wall"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000006C8B0D42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000086DA4DDD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E5E840E5"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000033630C2B"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FC071331"
+					item: "deep_aether:aether_moss_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E6F7307E"
+					item: "deep_aether:aether_mud_bricks_slab"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000CB9292BF"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B365A11E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F2BD36A5"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A677AF8B"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000594C2189"
+					item: "deep_aether:holystone_tile_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004E3FB94F"
+					item: "deep_aether:holystone_tile_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000019D2A74C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000030E120F1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000051D9D9C"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E8809DC5"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FCE70E26"
+					item: "deep_aether:green_squash_slice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000F666B8C"
+					item: "deep_aether:holystone_pillar_down"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E82878B0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BF982C1C"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BE2A88D8"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003CD8E5E1"
+					item: "aether_redux:golden_swet_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008673BED8"
+					item: {
+						Count: 1
+						id: "deep_aether:gravitite_ring"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000623FCE79"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000000D0D1ED"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001BFED5AA"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000B37B1BB"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FB8F03AC"
+					item: "deep_aether:gilded_holystone_tile_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000782EA18E"
+					item: "deep_aether:gilded_holystone_tile_wall"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000451F3C39"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000040F631E8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C567D199"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000053D9AD40"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004DD141B9"
+					item: "deep_aether:gilded_holystone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C8A63DDA"
+					item: "deep_aether:gilded_holystone_tile_slab"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000451F3C39"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000749FABD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002E4BCFCC"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AD30B1C1"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C72CB83E"
+					item: "deep_aether:gilded_holystone_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000005B9CC9B"
+					item: "deep_aether:gilded_holystone_brick_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000006C8B0D42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000953EB450"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DFA99F6C"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000075DA0AAD"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C08E2118"
+					item: "minecraft:cyan_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073FBD288"
+					item: "deep_aether:enchanted_antidote"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000547E1BFD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C444D52B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000039FC7D98"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000009D52B33"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E73545D5"
+					item: "deep_aether:cruderoot_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FDE2BC6C"
+					item: "deep_aether:cruderoot_wall"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000547E1BFD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000142619F6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E7F76653"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009EAD3794"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000052223DF3"
+					item: "deep_aether:moa_fodder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009371C977"
+					item: "aether:mossy_holystone"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003D782234"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002533A83B"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EE64CCEB"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A0234555"
+					item: "deep_aether:stripped_conberry_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000083129EF3"
+					item: "deep_aether:stripped_cruderoot_wood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000068B135F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008606B3D2"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AE2CE167"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002860A73D"
+					item: "deep_aether:stripped_roseroot_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B9524EDA"
+					item: "deep_aether:stripped_sunroot_wood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DEF9FFA1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D9363964"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005DBBDB51"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000085463047"
+					item: {
+						Count: 1
+						id: "deep_aether:stormforged_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AFA11B2D"
+					item: {
+						Count: 1
+						id: "deep_aether:stormforged_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000053754BB9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C13A34C5"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005386034C"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000968DE23F"
+					item: "deep_aether:conberry_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000026A861F0"
+					item: "deep_aether:cruderoot_wood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000036253F4E"
+				"000000006E27D2E9"
+				"000000001F732963"
+				"00000000CB9292BF"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D6EC5FD2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A6CB1480"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007D9F4EB4"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CEADCEC9"
+					item: "deep_aether:stratus_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D12FF239"
+					item: "deep_aether:sunroot_boat"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000EEF0FB46"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003CFD2150"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006C6BCA34"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000076BB90D"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000611F1A2A"
+					item: "deep_aether:raw_clorite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F40620BB"
+					item: "deep_aether:roseroot_wood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000006E27D2E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005C1317DD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007F4B5AA9"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002111D429"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000080C2C5C2"
+				item: "deep_aether:yagroot_boat"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000057B70FD8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000014A23FF2"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001F324467"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000014CC4644"
+					item: "deep_aether:stripped_yagroot_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A04311EB"
+					item: "deep_aether:sunroot_wood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003A7FC24F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000002D7995B"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000827C8A18"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "000000008F51B7D8"
+				item: "deep_aether:yagroot_wood"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000005F4E738"
+				"00000000355F4DD9"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000044FCFFD9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DB1CCC3F"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E377C338"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000844706D1"
+					item: "deep_aether:polished_aseterite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C191D79"
+					item: "deep_aether:polished_clorite_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000355F4DD9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F895F83A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EF2BB7AA"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D77420FD"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004EB90A07"
+					item: "minecraft:pink_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002383A173"
+					item: "deep_aether:polished_aseterite_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000036253F4E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ED6E8DE3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000AD81E08"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000023ED498E"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003273F00F"
+					item: "deep_aether:nimbus_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008FB4E7CF"
+					item: "minecraft:orange_dye"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000036253F4E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A82BA2B2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000029BC5FB0"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005F3E6CBF"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C7CEC629"
+					item: "deep_aether:nimbus_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DC2910CA"
+					item: "deep_aether:nimbus_stairs"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FABBC5A3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BF549EDE"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000000D78207"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E7B12BBA"
+					item: "deep_aether:muddy_yagroot_roots"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045AF1593"
+					item: "deep_aether:music_disc_nabooru"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000072254ED0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F0157886"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C7D3B40A"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DEA103A3"
+					item: "deep_aether:mossy_holystone_tile_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024400B79"
+					item: "deep_aether:mossy_holystone_tile_wall"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000019D2A74C"
+				"00000000355F4DD9"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000857D5F4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ED4BABE9"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000035AC9CBC"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A818FB40"
+					item: "deep_aether:mossy_holystone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D36E5035"
+					item: "deep_aether:mossy_holystone_tile_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000088560BDD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000035531A6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FB5EACD4"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E20B0161"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002A7DB28A"
+					item: "deep_aether:polished_clorite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000519069F1"
+					item: "minecraft:pumpkin_pie"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000036253F4E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000030D2B3E3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001932103B"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000001D270EE"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "000000006228E12C"
+				item: "deep_aether:light_nimbus_stone"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000019D2A74C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009AB4CBFF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A7F66F0A"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AB5F5E82"
+					table_id: 2024001725L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D99EB0A8"
+					item: "deep_aether:mossy_holystone_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000513B8693"
+					item: "deep_aether:mossy_holystone_brick_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+	]
+	title: "Deep Aether"
+}

@@ -1,0 +1,32 @@
+{
+	icon: "itemfilters:mod"
+	id: "00000000D2EB8968"
+	loot_crate: {
+		color: 16777215
+		drops: {
+			boss: 1
+			monster: 0
+			passive: 0
+		}
+		item_name: "Box of Item Filters"
+		string_id: "chaos_box_itemfilters"
+	}
+	loot_size: 1
+	order_index: 115
+	rewards: [
+		{ item: "itemfilters:mod", weight: 4.0f }
+		{ item: "itemfilters:always_true", weight: 5.0f }
+		{ item: "itemfilters:not", weight: 6.0f }
+		{ item: "itemfilters:always_false", weight: 7.0f }
+		{ item: "itemfilters:and", weight: 8.0f }
+		{ item: "itemfilters:damage", weight: 9.0f }
+		{ item: "itemfilters:custom", weight: 10.0f }
+		{ item: "itemfilters:block", weight: 11.0f }
+		{ item: "itemfilters:id_regex", weight: 12.0f }
+		{ item: "itemfilters:tag", weight: 13.0f }
+		{ item: "itemfilters:xor", weight: 14.0f }
+		{ item: "itemfilters:or", weight: 15.0f }
+		{ item: "itemfilters:max_count", weight: 16.0f }
+	]
+	title: "Item Filters Rewards"
+}

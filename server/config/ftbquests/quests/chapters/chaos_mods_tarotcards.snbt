@@ -1,0 +1,41 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_tarotcards"
+	group: "00000000DEB299A3"
+	icon: "tarotcards:tarot_deck"
+	id: "00000000DF25D4E5"
+	order_index: 73
+	quest_links: [ ]
+	quests: [{
+		hide_dependency_lines: true
+		hide_details_until_startable: true
+		hide_until_deps_complete: true
+		id: "00000000E526D1C1"
+		invisible: true
+		invisible_until_tasks: 1
+		rewards: [
+			{
+				id: "00000000FCEDE8EC"
+				type: "xp"
+				xp: 6
+			}
+			{
+				exclude_from_claim_all: true
+				id: "00000000500421DA"
+				table_id: 1560289734L
+				type: "random"
+			}
+		]
+		shape: "circle"
+		tasks: [{
+			consume_items: false
+			id: "00000000B5724731"
+			item: "tarotcards:tarot_deck"
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Tarot Cards"
+}

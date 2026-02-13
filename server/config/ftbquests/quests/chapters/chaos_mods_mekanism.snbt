@@ -1,0 +1,7821 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_mekanism"
+	group: "00000000DEB299A3"
+	icon: "mekanism:nugget_refined_glowstone"
+	id: "000000007437F53A"
+	order_index: 72
+	quest_links: [ ]
+	quests: [
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FB45E646"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BEC82F93"
+					type: "xp"
+					xp: 75
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000041E49016"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A45B8CC3"
+					item: "minecraft:glow_ink_sac"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D9087805"
+					item: "minecraft:glow_item_frame"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F94BB5BD"
+					item: "minecraft:glowstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE6829ED"
+					item: "minecraft:glowstone_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007F287789"
+					item: "mekanism:clump_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000108B5D4B"
+					item: "mekanism:crystal_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003E324B37"
+					item: "thermal:gold_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009B0FCF70"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000250E7D42"
+					item: "minecraft:gold_ore"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D622AEF5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F2F7AD80"
+					type: "xp"
+					xp: 72
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D48A52B3"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BF90C2D2"
+					item: "deeperdarker:gloomslate_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000091A5EF46"
+					item: "deeperdarker:gloomslate_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BBB1C04E"
+					item: "deeperdarker:gloomslate_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BDE3F347"
+					item: "deeperdarker:gloomslate_tile_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008233BA5F"
+					item: "deeperdarker:gloomslate_tile_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002818F5B0"
+					item: "deeperdarker:gloomslate_tile_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006C5B7559"
+					item: "deeperdarker:gloomslate_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A9A64A53"
+					item: "deeperdarker:gloomslate_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000207807D5"
+					item: "minecraft:glow_berries"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"000000004F976275"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+				"000000004F424742"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003E63A5AB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004B940F99"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BDF5BC3F"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005D9D7562"
+					item: "mekanism:fuelwood_heater"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000797DDB4C"
+					item: "mekanism:upgrade_gas"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009F7BC25E"
+					item: "mekanism:gauge_dropper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A95C8B06"
+					item: "mekanism:module_geiger_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000811FF7FA"
+					item: "minecraft:gilded_blackstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B2C0760B"
+					item: "deeperdarker:gloomslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000009FAC15F"
+					item: "deeperdarker:gloomslate_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004420F4BE"
+					item: "deeperdarker:gloomslate_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002720C3D4"
+					item: "deeperdarker:gloomslate_brick_wall"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"0000000031F6E19F"
+				"000000004F976275"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002FA4C250"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000091F2ED94"
+					type: "xp"
+					xp: 62
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BE7330AF"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D82D70EB"
+					item: "mekanism:flamethrower"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005EA7CD36"
+					item: "minecraft:flint"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000093437B8A"
+					item: "mekanism:fluidic_plenisher"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C641B8E0"
+					item: "ae2:fluix_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000010172F7E"
+					item: "mekanism:block_fluorite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005AD6F007"
+					item: "mekanism:dust_fluorite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000066692053"
+					item: "mekanism:fluorite_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001EC913B2"
+					item: "mekanism:formulaic_assemblicator"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DFCC0C90"
+					item: "mekanism:module_frost_walker_unit"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003D06A4B2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000015BB724D"
+					type: "xp"
+					xp: 31
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005B03D5BE"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000022644668"
+					item: "minecraft:brown_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000030881848"
+					item: "minecraft:brown_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004B33B435"
+					item: "minecraft:brown_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F65784ED"
+					item: "minecraft:brown_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000051D5B112"
+					item: "minecraft:brown_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002D5ED7F5"
+					item: "minecraft:bubble_coral"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D776085"
+					item: "minecraft:bubble_coral_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003365516"
+					item: "minecraft:bubble_coral_fan"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000063FF2ADD"
+					item: "mekanism:cardboard_box"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000030DF0E02"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000257C4D44"
+					type: "xp"
+					xp: 82
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BE4CA06A"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BCFE20DC"
+					item: "minecraft:exposed_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000799E636A"
+					item: "minecraft:exposed_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D870EB05"
+					item: "minecraft:exposed_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000286C612C"
+					item: "minecraft:exposed_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000030002365"
+					item: "mekanism:module_farming_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000021874647"
+					item: "mekanism:upgrade_filter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000732F0B05"
+					item: "minecraft:fire_coral"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CB10A932"
+					item: "minecraft:fire_coral_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C028A94"
+					item: "minecraft:fire_coral_fan"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B54C6A56"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EA69B41B"
+					type: "xp"
+					xp: 22
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D593F276"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002E322AC9"
+					item: "thermal:bronze_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073584AA6"
+					item: "thermal:bronze_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000094CC9265"
+					item: "thermal:bronze_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000154462FD"
+					item: "minecraft:brown_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000097DD1926"
+					item: "minecraft:brown_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000050A14914"
+					item: "minecraft:brown_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EC9FD12B"
+					item: "minecraft:brown_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A2992C33"
+					item: "minecraft:brown_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000092288012"
+					item: "minecraft:brown_concrete_powder"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000030626A26"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000038D9741B"
+					type: "xp"
+					xp: 62
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003C53C7E8"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009DFC83B8"
+					item: "mekanism:upgrade_energy"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000013FE10AB"
+					item: "mekanism:enriched_carbon"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7C8DE02"
+					item: "mekanism:enriched_diamond"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000042F8CA7"
+					item: "mekanism:enriched_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008AD83689"
+					item: "mekanism:enriched_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EB614599"
+					item: "mekanism:enriched_refined_obsidian"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000857F8A11"
+					item: "mekanism:enriched_redstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7301FAC"
+					item: "mekanism:enriched_tin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B37F9DB6"
+					item: "mekanism:module_excavation_escalation_unit"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000726DD01C"
+				"0000000031F6E19F"
+				"00000000745CA94A"
+				"000000004F976275"
+				"000000005EF9BE98"
+				"00000000BA7EAD05"
+				"000000006BD605C8"
+				"000000009C90E447"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000028E5ABD0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000855313AE"
+					type: "xp"
+					xp: 89
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F126748A"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000BB5C5B6"
+					item: "minecraft:charcoal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000050F604F"
+					item: "mekanism:dust_charcoal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000042332050"
+					item: "mekanism:module_charge_distribution_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000550126D2"
+					item: "mekanism:chargepad"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE74E6C6"
+					item: "mekanism:chemical_crystallizer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000F8269B4"
+					item: "mekanism:chemical_dissolution_chamber"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000002A2C015"
+					item: "mekanism:chemical_infuser"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B04DF412"
+					item: "mekanism:chemical_oxidizer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058569964"
+					item: "mekanism:chemical_washer"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000726DD01C"
+				"0000000031F6E19F"
+				"00000000D355A923"
+				"000000004F976275"
+				"000000005EF9BE98"
+				"00000000BA7EAD05"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CACC7517"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000644A03E4"
+					type: "xp"
+					xp: 73
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008F13F16C"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003E1E1AD4"
+					item: "mekanism:elite_tier_installer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000096A61E06"
+					item: "mekanism:module_elytra_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DDDAB804"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D75E2A0B"
+					item: "thermal:emerald_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FB96A19B"
+					item: "minecraft:emerald_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004F222D68"
+					item: "minecraft:enchanted_golden_apple"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D993CE5B"
+					item: "minecraft:end_crystal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000023A5623D"
+					item: "minecraft:ender_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006B37C206"
+					item: "mekanism:module_energy_unit"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007CFA7C9E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C8D7E1F1"
+					type: "xp"
+					xp: 46
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DE85BA5E"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001341E2A4"
+					item: "ae2:quartz_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000082B5496E"
+					item: "ae2:certus_quartz_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000572A8D99"
+					item: "ae2:quartz_pillar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005998B845"
+					item: "ae2:quartz_pillar_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F944C0C8"
+					item: "ae2:quartz_pillar_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000169E45E"
+					item: "ae2:quartz_pillar_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075CE8E47"
+					item: "ae2:quartz_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009F6494EB"
+					item: "ae2:quartz_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019420508"
+					item: "ae2:quartz_wall"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"0000000006BBBE5F"
+				"0000000031F6E19F"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EBEDC370"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009D0CC8AB"
+					type: "xp"
+					xp: 80
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000001673B79"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000031DDE7C1"
+					item: "mekanism:dirty_dust_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A939EEC6"
+					item: "minecraft:disc_fragment_5"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000096AB20CD"
+					item: "mekanism:diversion_transporter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000538EA654"
+					item: "mekanism:module_dosimeter_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000934FE590"
+					item: "minecraft:dragon_egg"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000525C5F61"
+					item: "mekanism:dynamic_valve"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C669504"
+					item: "mekanism:electric_bow"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7CB623E"
+					item: "mekanism:module_electrolytic_breathing_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E30583DA"
+					item: "mekanism:electrolytic_separator"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000D355A923"
+				"000000005EF9BE98"
+				"000000006BD605C8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000077527E79"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004CABB20E"
+					type: "xp"
+					xp: 75
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004638CE95"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000052292545"
+					item: "minecraft:blackstone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DCB42870"
+					item: "minecraft:blackstone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B8B32624"
+					item: "minecraft:blackstone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024411572"
+					item: "mekanism:module_blasting_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000997EEE3D"
+					item: "thermal:bronze_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007DDD9DE0"
+					item: "thermal:charcoal_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF1E0102"
+					item: "minecraft:copper_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009F8C953B"
+					item: "minecraft:lapis_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002949B970"
+					item: "minecraft:quartz_block"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000092B4100B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007168E8BA"
+					type: "xp"
+					xp: 88
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CE1B48D1"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000602A1C52"
+					item: "minecraft:diorite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005C7E3074"
+					item: "minecraft:dirt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000031CCB462"
+					item: "mekanism:dirty_dust_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000031B1CBC"
+					item: "mekanism:dirty_dust_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000048297B9A"
+					item: "mekanism:dirty_dust_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B04A8F6D"
+					item: "mekanism:dirty_dust_lead"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A832D772"
+					item: "mekanism:dirty_netherite_scrap"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C4B0474C"
+					item: "mekanism:dirty_dust_osmium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004D632FC3"
+					item: "mekanism:dirty_dust_tin"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000063C1115C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FE008971"
+					type: "xp"
+					xp: 50
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AA1A1811"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009DFDB98C"
+					item: "minecraft:black_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B8D781FE"
+					item: "minecraft:black_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056950213"
+					item: "minecraft:black_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000881D82B4"
+					item: "biomesoplenty:black_sand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000067660678"
+					item: "minecraft:black_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AD36E542"
+					item: "minecraft:black_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D868F1CA"
+					item: "minecraft:black_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000035ED49BD"
+					item: "minecraft:black_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F0FEC54F"
+					item: "minecraft:blackstone"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"00000000745CA94A"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+				"000000006BD605C8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BAD86C05"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000BBB149C"
+					type: "xp"
+					xp: 75
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E439F079"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A8B5CA9B"
+					item: "thermal:deepslate_tin_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000092BA0ADD"
+					item: "immersiveengineering:deepslate_ore_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE1CB304"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000886586BF"
+					item: "thermal:diamond_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009231852C"
+					item: "minecraft:diamond_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009B26F3B8"
+					item: "mekanism:digital_miner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000059167B45"
+					item: "mekanism:dimensional_stabilizer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B6AF9F40"
+					item: "minecraft:diorite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002D888295"
+					item: "minecraft:diorite_slab"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"0000000031F6E19F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006CD58383"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CC360FC5"
+					type: "xp"
+					xp: 35
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000111209F5"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D6B503AC"
+					item: "minecraft:blue_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F7CF6D04"
+					item: "minecraft:blue_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000E0EB5C9"
+					item: "minecraft:blue_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F6C4BAA6"
+					item: "minecraft:blue_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D336A10E"
+					item: "minecraft:blue_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000295BA3D0"
+					item: "mekanism:boiler_valve"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008438FE62"
+					item: "minecraft:brain_coral"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E242056B"
+					item: "minecraft:brain_coral_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BF93FF98"
+					item: "minecraft:brain_coral_fan"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000017516EB8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001786B71D"
+					type: "xp"
+					xp: 37
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000086F5EDB3"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D2AE94EF"
+					item: "thermal:raw_tin_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000011C500B"
+					item: "minecraft:redstone_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007023B137"
+					item: "thermal:tin_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000825FEC17"
+					item: "minecraft:blue_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000791A7BF9"
+					item: "minecraft:blue_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B30674AD"
+					item: "minecraft:blue_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003CD90262"
+					item: "minecraft:blue_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000090D08E37"
+					item: "minecraft:blue_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001EEC5962"
+					item: "minecraft:blue_concrete_powder"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"000000004F976275"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000072CF4169"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009D0CBEF5"
+					type: "xp"
+					xp: 73
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002FF5D3A5"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009AAF5019"
+					item: "mekanism:jetpack_armored"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D937C2AD"
+					item: "mekanism:module_attack_amplification_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B8A801EA"
+					item: "minecraft:basalt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CF8B1E24"
+					item: "mekanism:basic_tier_installer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000907505D0"
+					item: "mekanism:bio_fuel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000097B8D16"
+					item: "minecraft:black_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000624238CD"
+					item: "minecraft:black_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005B3A4981"
+					item: "minecraft:black_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005031B77F"
+					item: "minecraft:black_carpet"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"0000000031F6E19F"
+				"00000000D355A923"
+				"000000004F976275"
+				"00000000BA7EAD05"
+				"000000006BD605C8"
+				"000000004F424742"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000888965BF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E38B2546"
+					type: "xp"
+					xp: 23
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001C3B9001"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000026D65DE1"
+					item: "mekanism:advanced_tier_installer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006524AC49"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C61A47BE"
+					item: "mekanism:upgrade_anchor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000615892C0"
+					item: "minecraft:ancient_debris"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D5DAE1F5"
+					item: "minecraft:andesite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002D37DCF7"
+					item: "minecraft:andesite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000080D63AEC"
+					item: "minecraft:andesite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006CE7FE8B"
+					item: "mekanism:antiprotonic_nucleosynthesizer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E92A617E"
+					item: "mekanism:free_runners_armored"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000D355A923"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006BD605C8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000079234E63"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001A288358"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000EFA38384"
+				item: "mekanism:ultimate_control_circuit"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+				"000000004F424742"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009C90E447"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C910D623"
+					type: "xp"
+					xp: 84
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BC91C39C"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002E9EDCD1"
+					item: "mekanism:advanced_energy_cube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073D14EDE"
+					item: "mekanism:basic_induction_provider"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000537FD74D"
+					item: "mekanism:chemical_injection_chamber"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002D1DF579"
+					item: "mekanism:combiner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000452D6475"
+					item: "mekanism:crusher"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000035D132C"
+					item: "mekanism:energized_smelter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000828A10C3"
+					item: "mekanism:metallurgic_infuser"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000795884F5"
+					item: "mekanism:osmium_compressor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005800F843"
+					item: "mekanism:precision_sawmill"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B70A2EF5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A22AFDD3"
+					type: "xp"
+					xp: 42
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A0B26337"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CB30F151"
+					item: "minecraft:light_gray_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000067270980"
+					item: "minecraft:light_gray_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C10CEF44"
+					item: "minecraft:lime_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BB7ED0D6"
+					item: "minecraft:lime_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000434CC87C"
+					item: "minecraft:lime_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005BDCCE64"
+					item: "minecraft:lime_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BCE56B27"
+					item: "minecraft:lime_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009876099C"
+					item: "minecraft:lime_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A36ECAE2"
+					item: "minecraft:lime_dye"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E8944A6B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F24DBE63"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000096C0D614"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000240DE66"
+					item: "minecraft:light_gray_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001067C134"
+					item: "minecraft:light_gray_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000070F4E467"
+					item: "minecraft:light_gray_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C5B5770F"
+					item: "minecraft:light_gray_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C25562F"
+					item: "minecraft:light_gray_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007352BAD4"
+					item: "minecraft:light_gray_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000007A97932"
+					item: "minecraft:light_gray_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008DC31675"
+					item: "minecraft:light_gray_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009CF5D729"
+					item: "minecraft:light_gray_stained_glass_pane"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CCF01330"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002F0110E6"
+					type: "xp"
+					xp: 69
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002A0106E8"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B80A4C82"
+					item: "minecraft:light_blue_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005FC41975"
+					item: "minecraft:light_blue_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DB519610"
+					item: "minecraft:light_blue_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DE7C0BF5"
+					item: "minecraft:light_blue_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E979EC2E"
+					item: "minecraft:light_blue_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B7026C02"
+					item: "minecraft:light_blue_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000059950729"
+					item: "minecraft:light_blue_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001760341F"
+					item: "minecraft:light_blue_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000067C84B64"
+					item: "minecraft:light_blue_wool"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"000000004F976275"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009887C42B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000054ECC014"
+					type: "xp"
+					xp: 71
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007D7444A9"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C1708320"
+					item: "mekanism:laser_tractor_beam"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F7E31662"
+					item: "mekanism:clump_lead"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D810EEDC"
+					item: "mekanism:crystal_lead"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003875FA3D"
+					item: "thermal:lead_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005E00649F"
+					item: "thermal:lead_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF2BC699"
+					item: "thermal:lead_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000938F9116"
+					item: "mekanism:shard_lead"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004E7BAA9A"
+					item: "minecraft:light_blue_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001EB5BDE5"
+					item: "minecraft:light_blue_bed"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000726DD01C"
+				"000000004F976275"
+				"000000005EF9BE98"
+				"00000000BA7EAD05"
+				"000000006BD605C8"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008BDE602C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000768849C8"
+					type: "xp"
+					xp: 86
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000040CBC011"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000026CFAE3A"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D26E9E3E"
+					item: "minecraft:iron_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029A50230"
+					item: "mekanism:shard_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000079930D01"
+					item: "mekanism:isotopic_centrifuge"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E8060AA8"
+					item: "mekanism:module_jetpack_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F11631E9"
+					item: "thermal:lapis_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000872F9048"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A36E4ACC"
+					item: "minecraft:lapis_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBD8D27F"
+					item: "mekanism:module_laser_dissipation_unit"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"000000004F976275"
+				"00000000D355A923"
+				"000000005EF9BE98"
+				"00000000BA7EAD05"
+				"00000000374E4493"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F3EC2B63"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000271CD081"
+					type: "xp"
+					xp: 67
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000037A3991E"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000076A9B3D2"
+					item: "minecraft:horn_coral_fan"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F94E0AF3"
+					item: "mekanism:module_hydraulic_propulsion_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004FB8B9B1"
+					item: "mekanism:module_hydrostatic_repulsor_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045F1993F"
+					item: "mekanism:induction_port"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000DD19FF8"
+					item: "mekanism:industrial_alarm"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000677BD966"
+					item: "mekanism:module_inhalation_purification_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EB4758D1"
+					item: "mekanism:clump_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BC2947FF"
+					item: "mekanism:crystal_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001E24700B"
+					item: "thermal:iron_dust"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FFDE34E5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007D6F1CE3"
+					type: "xp"
+					xp: 46
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000854C7C93"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007C94996C"
+					item: "minecraft:green_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE64CB89"
+					item: "minecraft:gunpowder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000016AF12C9"
+					item: "mekanism:module_gyroscopic_stabilization_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002375B757"
+					item: "mekanism:hazmat_boots"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003EE8F23D"
+					item: "mekanism:hazmat_gown"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006FEAFE26"
+					item: "mekanism:hazmat_pants"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045FE8708"
+					item: "minecraft:heart_of_the_sea"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000086EB215F"
+					item: "minecraft:horn_coral"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000076B685E5"
+					item: "minecraft:horn_coral_block"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C6EEF02C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006FA7AF36"
+					type: "xp"
+					xp: 45
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FFA9D175"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AD107990"
+					item: "minecraft:green_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000051EB15B2"
+					item: "minecraft:green_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D8F2EC27"
+					item: "minecraft:green_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000718B8C8F"
+					item: "minecraft:green_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000099A000AD"
+					item: "minecraft:green_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000049F35865"
+					item: "minecraft:green_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C3DFD06"
+					item: "minecraft:green_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F5719B7F"
+					item: "minecraft:green_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007416616E"
+					item: "minecraft:green_terracotta"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000034DDE95"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E84EE0E4"
+					type: "xp"
+					xp: 51
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000033EA7691"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006B2B094B"
+					item: "minecraft:gray_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E5B6A740"
+					item: "minecraft:gray_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003F5D633D"
+					item: "minecraft:gray_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000062CAA491"
+					item: "minecraft:gray_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004097B17F"
+					item: "minecraft:gray_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006B358903"
+					item: "minecraft:gray_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005674702C"
+					item: "minecraft:gray_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000F1EC9D3"
+					item: "minecraft:gray_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C5C4938A"
+					item: "minecraft:green_banner"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000031F6E19F"
+				"00000000D355A923"
+				"000000005EF9BE98"
+				"00000000374E4493"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000494C48E2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002A7315FD"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000088220FF3"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F916ADAD"
+					item: "mekanism:shard_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000320997AA"
+					item: "minecraft:granite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E38C1C2"
+					item: "minecraft:granite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000030705AE9"
+					item: "minecraft:granite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D0121771"
+					item: "minecraft:gravel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F9AA9B02"
+					item: "mekanism:module_gravitational_modulating_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2F98699"
+					item: "minecraft:gray_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005AC72835"
+					item: "minecraft:gray_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004EC26620"
+					item: "minecraft:gray_candle"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DC4508B8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000094A5FB30"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000021E75489"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000691B214A"
+					item: "mekanism:ingot_refined_glowstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CEBD398D"
+					item: "mekanism:nugget_refined_obsidian"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000000AA2C4D8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004F424742"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EE9584B6"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000B1EC462"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "00000000F3B9950B"
+				item: "mekanism:ingot_osmium"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000745CA94A"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+				"000000004F424742"
+				"000000000AA2C4D8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000031F6E19F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000033F38AAD"
+					type: "xp"
+					xp: 39
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DAFB777C"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E94EFEB4"
+					item: "mekanism:pellet_antimatter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FD08E46E"
+					item: "mekanism:atomic_disassembler"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B4F56221"
+					item: "mekanism:boiler_casing"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004085A9BB"
+					item: "mekanism:canteen"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A9DF0C27"
+					item: "mekanism:dictionary"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F46ABA45"
+					item: "mekanism:dosimeter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007CD20947"
+					item: "mekanism:dynamic_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009DFDBD37"
+					item: "mekanism:electric_pump"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002BF11AE9"
+					item: "mekanism:electrolytic_core"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000726DD01C"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004F976275"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E30461EB"
+					type: "xp"
+					xp: 49
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000020E22F88"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DE05E8E1"
+					item: "mekanism:fluorite_gem"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000083684B19"
+					item: "mekanism:free_runners"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D73CED09"
+					item: "mekanism:geiger_counter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B27EDD1D"
+					item: {
+						Count: 1
+						id: "mekanism:hdpe_elytra"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009315BCDC"
+					item: "mekanism:hazmat_mask"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000306DFE84"
+					item: "mekanism:induction_casing"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000044E5D5C"
+					item: "mekanism:jetpack"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DB755299"
+					item: "mekanism:laser"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B47B1F0A"
+					item: "mekanism:laser_amplifier"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"0000000006BBBE5F"
+				"00000000745CA94A"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+				"00000000DC4508B8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005EF9BE98"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B997DAA3"
+					type: "xp"
+					xp: 78
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000539548EF"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A44C217F"
+					item: "mekanism:logistical_sorter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A0F9A8CE"
+					item: "mekanism:module_base"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B77A8EC2"
+					item: "mekanism:painting_machine"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000064EBF78F"
+					item: "mekanism:pigment_mixer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D96438B3"
+					item: "mekanism:qio_dashboard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E06949B3"
+					item: "mekanism:block_refined_glowstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058684AE5"
+					item: "mekanism:robit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000096DBC333"
+					item: "mekanism:sps_casing"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000064A0A402"
+					item: "mekanism:salt"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000596897C1"
+				"00000000D355A923"
+				"000000004F424742"
+				"00000000090EFABB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006C75FB00"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000096B2B94C"
+					type: "xp"
+					xp: 87
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000399F7FF"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003D11662D"
+					item: "mekanism:elite_bin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000040BDFDAC"
+					item: "mekanism:elite_chemical_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029FC8382"
+					item: "mekanism:elite_combining_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000095C1C0B5"
+					item: "mekanism:elite_compressing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E720CDD8"
+					item: "mekanism:elite_crushing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D0945D5D"
+					item: "mekanism:elite_enriching_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000048F19B64"
+					item: "mekanism:elite_fluid_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C71FC2D6"
+					item: "mekanism:elite_induction_cell"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C8F38E0A"
+					item: "mekanism:elite_infusing_factory"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000B01FC961"
+				"00000000D355A923"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F73D9129"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005A673421"
+					type: "xp"
+					xp: 38
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002FEAC269"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C48366AF"
+					item: "mekanism:elite_injecting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003140294"
+					item: "mekanism:elite_logistical_transporter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000293977E1"
+					item: "mekanism:elite_mechanical_pipe"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000336F0139"
+					item: "mekanism:elite_pressurized_tube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E365D19"
+					item: "mekanism:elite_purifying_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D451884F"
+					item: "mekanism:elite_sawing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000934B13D"
+					item: "mekanism:elite_smelting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B1FA2D6"
+					item: "mekanism:elite_thermodynamic_conductor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000CF4847B"
+					item: "mekanism:elite_universal_cable"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"00000000BA7EAD05"
+				"000000006BD605C8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000374E4493"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000085059B6B"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002B20841D"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AEFE566D"
+					item: "mekanism:scuba_mask"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003212D6AD"
+					item: "mekanism:thermal_evaporation_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A9C8B25E"
+					item: "mekanism:qio_drive_time_dilating"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000F448847"
+					item: "mekanism:ultimate_induction_provider"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002438613B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003A7C6365"
+					type: "xp"
+					xp: 82
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000575DE29C"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008FFC878D"
+					item: "minecraft:deepslate_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000434AE356"
+					item: "minecraft:deepslate_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004436009E"
+					item: "minecraft:deepslate_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D64D08C3"
+					item: "minecraft:deepslate_coal_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000037E68844"
+					item: "minecraft:deepslate_copper_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003EC18DF1"
+					item: "minecraft:deepslate_diamond_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A6EF3CE1"
+					item: "minecraft:deepslate_emerald_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B54F4CDA"
+					item: "mekanism:deepslate_fluorite_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BD00C10F"
+					item: "minecraft:deepslate_gold_ore"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001B8ADC0B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000263916C1"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008E950B67"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AF732DD5"
+					item: "minecraft:cyan_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DFE4BCBD"
+					item: "minecraft:cyan_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DA3DF107"
+					item: "minecraft:cyan_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B1FFA005"
+					item: "minecraft:cyan_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006F217442"
+					item: "minecraft:cyan_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DA7E3C6B"
+					item: "minecraft:cyan_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006D716960"
+					item: "minecraft:cyan_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001FD87E19"
+					item: "minecraft:deepslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F6E4D845"
+					item: "minecraft:deepslate_brick_slab"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BCC9A7BE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002FD00FE1"
+					type: "xp"
+					xp: 41
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008B6AC95D"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E4604090"
+					item: "deeperdarker:cut_gloomslate_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003D94EA79"
+					item: "deeperdarker:cut_sculk_stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073C021E2"
+					item: "deeperdarker:cut_sculk_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045B87B0E"
+					item: "deeperdarker:cut_sculk_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004FA04B1B"
+					item: "deeperdarker:cut_sculk_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007B16292E"
+					item: "minecraft:cyan_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CAC15F1A"
+					item: "minecraft:cyan_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D4EF346"
+					item: "minecraft:cyan_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000079F971A2"
+					item: "minecraft:cyan_carpet"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000DC4508B8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000745CA94A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E9BEB77A"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009027641E"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000017D63E22"
+					item: "mekanism:nugget_refined_glowstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7052F74"
+					item: "mekanism:ingot_refined_obsidian"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FD678F60"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B0BC2B5C"
+					type: "xp"
+					xp: 69
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002473C65B"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008D208532"
+					item: "minecraft:crimson_nylium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007D0FDD48"
+					item: {
+						Count: 1
+						id: "minecraft:crossbow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000470D396E"
+					item: "minecraft:crying_obsidian"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004268ED62"
+					item: "minecraft:cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F6892345"
+					item: "minecraft:cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008166681F"
+					item: "minecraft:cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000361A3E07"
+					item: "deeperdarker:cut_gloomslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000856AEDF3"
+					item: "deeperdarker:cut_gloomslate_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009112693F"
+					item: "deeperdarker:cut_gloomslate_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000BA7EAD05"
+				"000000004F424742"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D355A923"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000431F6194"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FECA6534"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000610ACC92"
+					item: "mekanism:alloy_atomic"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000091E1DCE2"
+					item: "mekanism:basic_energy_cube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003BB3702"
+					item: "mekanism:elite_control_circuit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DC153DC5"
+					item: "mekanism:dust_lithium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C92B3118"
+					item: "mekanism:purification_chamber"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000BA7EAD05"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000089A265F0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000053959B67"
+					type: "xp"
+					xp: 71
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000073BEF971"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000082E8D18B"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B6E129DC"
+					item: "minecraft:copper_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D26B874F"
+					item: "mekanism:shard_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2D91B7F"
+					item: "minecraft:cracked_deepslate_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009AEBB80E"
+					item: "minecraft:cracked_deepslate_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000011049E27"
+					item: "minecraft:cracked_nether_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BDEEB557"
+					item: "minecraft:cracked_polished_blackstone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001FCF4C91"
+					item: "minecraft:cracked_stone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007BABC6A2"
+					item: "mekanism:crafting_formula"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"000000004F976275"
+				"000000005EF9BE98"
+				"00000000BA7EAD05"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000999DA009"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009BBA3485"
+					type: "xp"
+					xp: 49
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BFF6FA44"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008E764FB2"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D20EFF90"
+					item: "minecraft:cobblestone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009458F067"
+					item: "minecraft:cobblestone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CBCC4A0F"
+					item: "minecraft:cobblestone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000015E3E88"
+					item: "mekanism:module_color_modulation_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F270461B"
+					item: "mekanism:configuration_card"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006844FA27"
+					item: "mekanism:clump_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000031D5F08D"
+					item: "mekanism:crystal_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CED8CFD5"
+					item: "thermal:copper_dust"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E7729FB2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D56EE2A2"
+					type: "xp"
+					xp: 69
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008082E597"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003A08DA2D"
+					item: "minecraft:cobbled_deepslate_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000051A496D1"
+					item: "deeperdarker:cobbled_gloomslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001AB5A873"
+					item: "deeperdarker:cobbled_gloomslate_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D69CCE73"
+					item: "deeperdarker:cobbled_gloomslate_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000090FAA688"
+					item: "deeperdarker:cobbled_gloomslate_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000659F0C02"
+					item: "deeperdarker:cobbled_sculk_stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000077EB7110"
+					item: "deeperdarker:cobbled_sculk_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EA827305"
+					item: "deeperdarker:cobbled_sculk_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C5258C3"
+					item: "deeperdarker:cobbled_sculk_stone_wall"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D2D42764"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006D81DFB4"
+					type: "xp"
+					xp: 52
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005C202136"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000522EE81D"
+					item: "minecraft:chorus_flower"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000067FC053F"
+					item: "minecraft:clay"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000830BD2A"
+					item: "minecraft:clay_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F245DD0"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D843A7BA"
+					item: "mekanism:dust_coal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000591EF6E8"
+					item: "minecraft:coal_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000040CD6512"
+					item: "minecraft:cobbled_deepslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FE48A54B"
+					item: "minecraft:cobbled_deepslate_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F6A5F24"
+					item: "minecraft:cobbled_deepslate_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B9EEFE1C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A66C6774"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C4417453"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000492FF2C4"
+					item: "ae2:chiseled_quartz_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000097E6A93B"
+					item: "ae2:chiseled_quartz_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2BDBCA5"
+					item: "ae2:chiseled_quartz_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001AD93E4E"
+					item: "ae2:chiseled_quartz_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000561D9C6D"
+					item: "minecraft:chiseled_deepslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000071642B1B"
+					item: "minecraft:chiseled_nether_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000078DCCA13"
+					item: "minecraft:chiseled_polished_blackstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003E708632"
+					item: "minecraft:chiseled_quartz_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000031C0B3D2"
+					item: "minecraft:chiseled_stone_bricks"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000AA2C4D8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000022ADD76C"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A8A2DEE2"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000008FB3070B"
+				item: "mekanism:dust_osmium"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000593C4C9A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009B5E183D"
+					type: "xp"
+					xp: 35
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007ABC3F41"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E325C315"
+					item: "minecraft:deepslate_iron_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003621C7AD"
+					item: "minecraft:deepslate_lapis_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005A2C165C"
+					item: "thermal:deepslate_lead_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000282F7792"
+					item: "mekanism:deepslate_osmium_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A8B0EC4E"
+					item: "minecraft:deepslate_redstone_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000025D9C4E2"
+					item: "minecraft:deepslate_tile_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000057FA9104"
+					item: "minecraft:deepslate_tile_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000987C5C1F"
+					item: "minecraft:deepslate_tile_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B06966FD"
+					item: "minecraft:deepslate_tiles"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000726DD01C"
+				"00000000D355A923"
+				"000000006C75FB00"
+				"00000000F73D9129"
+				"000000006BD605C8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000049AA9164"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004462F55C"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E76A2608"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000147F8FC8"
+					item: "mekanism:ultimate_crushing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002DAF53F4"
+					item: "mekanism:ultimate_enriching_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E5CF2C1B"
+					item: "mekanism:ultimate_fluid_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AC0703C9"
+					item: "mekanism:ultimate_induction_cell"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000EE8643B"
+					item: "mekanism:ultimate_infusing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CF3CEFBF"
+					item: "mekanism:ultimate_injecting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007384ADC2"
+					item: "mekanism:ultimate_logistical_transporter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003817D978"
+					item: "mekanism:ultimate_mechanical_pipe"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EED33B48"
+					item: "mekanism:ultimate_pressurized_tube"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000D355A923"
+				"000000006C75FB00"
+				"000000006BD605C8"
+				"000000004F424742"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000015F866E1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B4B9573B"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000053E061E0"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000004EE0DC2"
+					item: "mekanism:shard_tin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E640BD0C"
+					item: {
+						Count: 1
+						id: "minecraft:trident"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBB952E2"
+					item: "minecraft:tube_coral"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A38F3336"
+					item: "minecraft:tube_coral_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007BBA4EE0"
+					item: "minecraft:tube_coral_fan"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DDFABA13"
+					item: "mekanism:ultimate_bin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A1522EEA"
+					item: "mekanism:ultimate_chemical_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000074D00CF0"
+					item: "mekanism:ultimate_combining_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B77454C1"
+					item: "mekanism:ultimate_compressing_factory"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000745CA94A"
+				"00000000374E4493"
+				"00000000DC4508B8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DD7C2E48"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000723E7291"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004BCCB157"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000074F50E2"
+					item: "mekanism:teleporter_frame"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008CF6E352"
+					item: "mekanism:thermal_evaporation_controller"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B60E4124"
+					item: "mekanism:thermal_evaporation_valve"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D01271BF"
+					item: "mekanism:clump_tin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002807D8A9"
+					item: "mekanism:crystal_tin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000099EE8DA7"
+					item: "thermal:tin_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E3E7603E"
+					item: "thermal:tin_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E1E19696"
+					item: "thermal:tin_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000560EFDDE"
+					item: "thermal:tin_ore"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"0000000031F6E19F"
+				"000000004F976275"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+				"000000006BD605C8"
+				"00000000374E4493"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000906E9557"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B6E145D8"
+					type: "xp"
+					xp: 71
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000618A3C5E"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000073CFF72C"
+					item: "mekanism:upgrade_stone_generator"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AB0EB7E8"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000889C35BD"
+					item: "mekanism:structural_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000078A1044A"
+					item: "thermal:sulfur_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000016D258A5"
+					item: "mekanism:supercharged_coil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C14FB98A"
+					item: "mekanism:superheating_element"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029EE3E63"
+					item: "mekanism:qio_drive_supermassive"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000C678C01"
+					item: "mekanism:module_teleportation_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024BADC3B"
+					item: "mekanism:teleporter"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000BA7EAD05"
+				"000000000AA2C4D8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000077C66BCD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000076BCA6CD"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C3581DCB"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000076CBA48"
+					item: "minecraft:soul_soil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F1B4EA36"
+					item: "mekanism:upgrade_speed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008F752169"
+					item: "thermal:steel_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D2820E46"
+					item: "thermal:steel_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000065CD9207"
+					item: "minecraft:stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DB3D4F8E"
+					item: "minecraft:stone_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B03B5062"
+					item: "minecraft:stone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006FD7ADC6"
+					item: "minecraft:stone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BCEDE218"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000726DD01C"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000019F608EE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F55FDFF5"
+					type: "xp"
+					xp: 35
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005C48FCD6"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002B981100"
+					item: "minecraft:smooth_quartz"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A5442565"
+					item: "minecraft:smooth_quartz_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000059DCE04A"
+					item: "minecraft:smooth_quartz_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004B282721"
+					item: "deeperdarker:smooth_sculk_stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000408805A7"
+					item: "deeperdarker:smooth_sculk_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000167691CA"
+					item: "deeperdarker:smooth_sculk_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009FB99129"
+					item: "deeperdarker:smooth_sculk_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000002E42D04"
+					item: "mekanism:solar_neutron_activator"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A1CD4FD8"
+					item: "minecraft:soul_sand"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A9304105"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C8CBDE15"
+					type: "xp"
+					xp: 73
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000001E1B69E"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F219E0C4"
+					item: "ae2:sky_stone_small_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000038F3DDE4"
+					item: "ae2:sky_stone_small_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000099028364"
+					item: "ae2:sky_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008F0F7FD0"
+					item: "ae2:sky_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006EFF537F"
+					item: "minecraft:slime_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002005F018"
+					item: "deeperdarker:smooth_gloomslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7736909"
+					item: "deeperdarker:smooth_gloomslate_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FEE900DB"
+					item: "deeperdarker:smooth_gloomslate_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000615CC582"
+					item: "deeperdarker:smooth_gloomslate_wall"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007C1AEADB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000010EAEDB7"
+					type: "xp"
+					xp: 45
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F19D17A3"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009F7F3F27"
+					item: "ae2:sky_stone_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000043DAEE5"
+					item: "ae2:sky_stone_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008C3AAA22"
+					item: "ae2:sky_stone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C52B984D"
+					item: "ae2:sky_stone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000EB6AC30"
+					item: "ae2:sky_stone_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007DE49596"
+					item: "ae2:sky_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008D2EB737"
+					item: "ae2:sky_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000684ACBEF"
+					item: "ae2:sky_stone_small_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000048616441"
+					item: "ae2:sky_stone_small_brick_slab"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"0000000006BBBE5F"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003E14F543"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EA8908AA"
+					type: "xp"
+					xp: 37
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BBCAA54C"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000044B04361"
+					item: "mekanism:seismic_vibrator"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AB7F47DF"
+					item: "mekanism:module_shearing_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004EB0EBD1"
+					item: "mekanism:module_silk_touch_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EACA8513"
+					item: "ae2:sky_stone_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000033A5527D"
+					item: "ae2:smooth_sky_stone_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000071DC8626"
+					item: "ae2:smooth_sky_stone_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004151EB4E"
+					item: "ae2:smooth_sky_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009A6D51E7"
+					item: "ae2:smooth_sky_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007B0EFFE5"
+					item: "ae2:smooth_sky_stone_wall"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"0000000006BBBE5F"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000088760C91"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BD12B381"
+					type: "xp"
+					xp: 71
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AB7E7761"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002681E7CD"
+					item: "deeperdarker:sculk_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DD9EEA0C"
+					item: "deeperdarker:sculk_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001CC65122"
+					item: "deeperdarker:sculk_stone_tile_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008813C4A2"
+					item: "deeperdarker:sculk_stone_tile_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F4932CCE"
+					item: "deeperdarker:sculk_stone_tile_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000392F4BF0"
+					item: "deeperdarker:sculk_stone_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006D082EC9"
+					item: "deeperdarker:sculk_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AE277CF2"
+					item: "mekanism:security_desk"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000092D56062"
+					item: "mekanism:seismic_reader"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+				"00000000090EFABB"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000726DD01C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F2A06B10"
+					type: "xp"
+					xp: 42
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C588218F"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008859FB6B"
+					item: "mekanism:dye_base"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000068B875EA"
+					item: "mekanism:elite_induction_provider"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A192DDAA"
+					item: "mekanism:hdpe_rod"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001988A4FF"
+					item: "mekanism:hdpe_sheet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C4B966AC"
+					item: "mekanism:qio_drive_hyper_dense"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A5C734DE"
+					item: "mekanism:personal_barrel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000053DA9E8B"
+					item: "mekanism:personal_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FDDAF33E"
+					item: "mekanism:teleportation_core"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C7E3934E"
+					item: "mekanism:ultimate_energy_cube"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000BA7EAD05"
+				"000000009C90E447"
+				"000000004F424742"
+				"000000007089425B"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000596897C1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F214A1F4"
+					type: "xp"
+					xp: 67
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009AA6ACE9"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DD3B235D"
+					item: "mekanism:advanced_bin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000601908BC"
+					item: "mekanism:advanced_chemical_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006F402963"
+					item: "mekanism:advanced_combining_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000872C3932"
+					item: "mekanism:advanced_compressing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F2BD2249"
+					item: "mekanism:advanced_crushing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008DF9201D"
+					item: "mekanism:advanced_enriching_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007C34945A"
+					item: "mekanism:advanced_fluid_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004E953C81"
+					item: "mekanism:advanced_induction_cell"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002B374D66"
+					item: "mekanism:advanced_infusing_factory"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000BA7EAD05"
+				"000000004F424742"
+				"000000007089425B"
+				"00000000090EFABB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B01FC961"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D3524E0B"
+					type: "xp"
+					xp: 77
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000636FA163"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000068CEEC6C"
+					item: "mekanism:advanced_injecting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001E0F2A08"
+					item: "mekanism:advanced_logistical_transporter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF330A2B"
+					item: "mekanism:advanced_mechanical_pipe"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D638DEC8"
+					item: "mekanism:advanced_pressurized_tube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B35A39F7"
+					item: "mekanism:advanced_purifying_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000681CDBA0"
+					item: "mekanism:advanced_sawing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008489005D"
+					item: "mekanism:advanced_smelting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000041E07773"
+					item: "mekanism:advanced_thermodynamic_conductor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008C4E5C08"
+					item: "mekanism:advanced_universal_cable"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000BA7EAD05"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000006BBBE5F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000445411AE"
+					type: "xp"
+					xp: 25
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009782119E"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F843EC82"
+					item: "mekanism:advanced_control_circuit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000054558918"
+					item: "mekanism:energy_tablet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000593A4D42"
+					item: "mekanism:enrichment_chamber"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE895351"
+					item: "mekanism:alloy_reinforced"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000550ED2A4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001E1E4A7C"
+					type: "xp"
+					xp: 53
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009B3880CE"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A8299F4F"
+					item: "minecraft:yellow_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000053D026B7"
+					item: "minecraft:yellow_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003DD205F6"
+					item: "minecraft:yellow_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E9F1F57"
+					item: "minecraft:yellow_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BAAD3925"
+					item: "minecraft:yellow_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009115F42F"
+					item: "minecraft:yellow_wool"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D11B59E2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001F04E584"
+					type: "xp"
+					xp: 60
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008CFECD58"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000072827889"
+					item: "minecraft:white_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007887C611"
+					item: "minecraft:white_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000104A749E"
+					item: "minecraft:wither_skeleton_skull"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000017E26158"
+					item: "minecraft:yellow_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E2C5409C"
+					item: "minecraft:yellow_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000321BAE9C"
+					item: "mekanism:yellow_cake_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000054C70902"
+					item: "minecraft:yellow_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D1246A9F"
+					item: "minecraft:yellow_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2165026"
+					item: "minecraft:yellow_concrete"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F951F092"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002A6C91C8"
+					type: "xp"
+					xp: 47
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000564EDF4F"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000024109A47"
+					item: "minecraft:white_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019DC6437"
+					item: "minecraft:white_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009EDA52A2"
+					item: "minecraft:white_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D1C48250"
+					item: "minecraft:white_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E4330A02"
+					item: "minecraft:white_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000026EAB8A7"
+					item: "minecraft:white_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E6933C06"
+					item: "biomesoplenty:white_sand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006B4B87BD"
+					item: "minecraft:white_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A94A1ABF"
+					item: "minecraft:white_stained_glass_pane"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D6DD15FE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B71144A2"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008F39E082"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000764400CC"
+					item: "minecraft:waxed_weathered_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C92C5C14"
+					item: "minecraft:waxed_weathered_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000453C7569"
+					item: "minecraft:waxed_weathered_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000076DCD401"
+					item: "minecraft:waxed_weathered_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000753161D7"
+					item: "minecraft:weathered_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E302EE07"
+					item: "minecraft:weathered_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006518DAE8"
+					item: "minecraft:weathered_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000007AAEEF3"
+					item: "minecraft:weathered_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BF749D76"
+					item: "minecraft:white_banner"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005A6D1EC7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000082D13EB1"
+					type: "xp"
+					xp: 68
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005D5281A8"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008461A59F"
+					item: "minecraft:waxed_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029C54FEC"
+					item: "minecraft:waxed_exposed_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005C832B90"
+					item: "minecraft:waxed_exposed_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006943BAB6"
+					item: "minecraft:waxed_exposed_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000015D06730"
+					item: "minecraft:waxed_exposed_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D4FBCF6C"
+					item: "minecraft:waxed_oxidized_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C5E6A692"
+					item: "minecraft:waxed_oxidized_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000605CDDB9"
+					item: "minecraft:waxed_oxidized_cut_copper_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001063C268"
+					item: "minecraft:waxed_oxidized_cut_copper_stairs"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000073979B11"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000042F52956"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A26813DA"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000B87136C"
+					item: "immersiveengineering:ingot_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073F3D1CA"
+					item: "immersiveengineering:ore_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000092EC319"
+					item: "mekanism:shard_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DCA942C0"
+					item: "mekanism:module_vein_mining_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FB644AC3"
+					item: "mekanism:module_vision_enhancement_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005A8881CE"
+					item: "minecraft:warped_nylium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008ECC67D0"
+					item: "minecraft:waxed_copper_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029F6B60D"
+					item: "minecraft:waxed_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B55495DA"
+					item: "minecraft:waxed_cut_copper_slab"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000D355A923"
+				"00000000F73D9129"
+				"000000006BD605C8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001A93CC04"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000D7CC438"
+					type: "xp"
+					xp: 86
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003BC0B215"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D58D9782"
+					item: "mekanism:ultimate_purifying_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BC21B0FE"
+					item: "mekanism:ultimate_sawing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A5A252E9"
+					item: "mekanism:ultimate_smelting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A01AC5F4"
+					item: "mekanism:ultimate_thermodynamic_conductor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009B0D306D"
+					item: "mekanism:ultimate_tier_installer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000071024BE7"
+					item: "mekanism:ultimate_universal_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B78F68D4"
+					item: "mekanism:clump_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000434DD3EF"
+					item: "mekanism:crystal_uranium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002D05D7B4"
+					item: "immersiveengineering:dust_uranium"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000726DD01C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000014B4A94D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000503622C2"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000053087ABA"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000234D8354"
+					item: "minecraft:pink_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B8FAD798"
+					item: "minecraft:pink_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000087E99449"
+					item: "minecraft:pink_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000086A82129"
+					item: "minecraft:pink_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000199120AC"
+					item: "minecraft:pink_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A93BA3B6"
+					item: "minecraft:pink_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FA01FEB4"
+					item: "minecraft:pink_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A7DF2E2"
+					item: "mekanism:hdpe_stick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B4E9D00"
+					item: "minecraft:podzol"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000BA7EAD05"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000EC6769C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AAA579A1"
+					type: "xp"
+					xp: 29
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DC6BD910"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000034D77DF9"
+					item: "minecraft:oxidized_cut_copper_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000701EB7F1"
+					item: "minecraft:packed_mud"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D4C5CC67"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000008CE79BD"
+					item: "minecraft:phantom_membrane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BBDE0A23"
+					item: "mekanism:pigment_extractor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F0E1CBFC"
+					item: "minecraft:pink_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004B3422E8"
+					item: "minecraft:pink_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000087D72370"
+					item: "minecraft:pink_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000704F016E"
+					item: "minecraft:pink_carpet"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000004F424742"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ECB5E925"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D8037C49"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008F92DEBF"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008C79E5AE"
+					item: "mekanism:block_osmium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000079244A21"
+					item: "mekanism:clump_osmium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003437C5D4"
+					item: "mekanism:crystal_osmium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000044CE930F"
+					item: "mekanism:nugget_osmium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000079C9D31B"
+					item: "mekanism:osmium_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D3F301C1"
+					item: "mekanism:shard_osmium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000062B31CCF"
+					item: "minecraft:oxidized_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F39950A4"
+					item: "minecraft:oxidized_cut_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004590E8D2"
+					item: "minecraft:oxidized_cut_copper_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"0000000031F6E19F"
+				"000000005EF9BE98"
+				"00000000BA7EAD05"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004A26DD21"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000006D84A6F"
+					type: "xp"
+					xp: 65
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F373AD55"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009FA84151"
+					item: "minecraft:orange_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000026F69988"
+					item: "minecraft:orange_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075FCDA06"
+					item: "biomesoplenty:orange_sand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E854B404"
+					item: "minecraft:orange_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000072E67AFF"
+					item: "minecraft:orange_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000410F39CD"
+					item: "minecraft:orange_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000770E3B2A"
+					item: "minecraft:orange_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C7A35590"
+					item: "mekanism:module_fortune_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000065AED0A2"
+					item: "mekanism:oredictionificator"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"0000000031F6E19F"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001BE09B4C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000083F8ED8F"
+					type: "xp"
+					xp: 37
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007731EFC3"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000571AC1E6"
+					item: "mekanism:network_reader"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DFCFE247"
+					item: "mekanism:module_nutritional_injection_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000086B50AD5"
+					item: "mekanism:nutritional_liquifier"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CA181C84"
+					item: "minecraft:obsidian"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003B804BDD"
+					item: "minecraft:orange_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009BA96E31"
+					item: "minecraft:orange_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B1169D9D"
+					item: "minecraft:orange_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000127BA2C7"
+					item: "minecraft:orange_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009156B17A"
+					item: "minecraft:orange_concrete"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002E35AE67"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007EED6666"
+					type: "xp"
+					xp: 87
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000C8163DE"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000005BBD415"
+					item: "minecraft:mycelium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C593EC5"
+					item: "minecraft:nautilus_shell"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000080A82C00"
+					item: "minecraft:nether_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000E580AFC"
+					item: "minecraft:nether_gold_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C61C1BEA"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FF5F7BBE"
+					item: "minecraft:nether_quartz_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000049900E33"
+					item: "thermal:netherite_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001D5873E1"
+					item: "minecraft:netherite_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006ABEF099"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000D355A923"
+				"000000005EF9BE98"
+				"00000000BA7EAD05"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E0CD48B6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E6054A76"
+					type: "xp"
+					xp: 35
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004A4173E0"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005C39C1A8"
+					item: "minecraft:mossy_stone_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002EB4E52D"
+					item: "minecraft:mossy_stone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000025601CA7"
+					item: "minecraft:mossy_stone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009D5C51DC"
+					item: "minecraft:mossy_stone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000140B9EFC"
+					item: "mekanism:module_motorized_servo_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000007FE8F8A"
+					item: "minecraft:mud"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CF48EAD9"
+					item: "minecraft:mud_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AB0D94FC"
+					item: "minecraft:muddy_mangrove_roots"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009EE36164"
+					item: "mekanism:upgrade_muffling"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"00000000BA7EAD05"
+				"000000006BD605C8"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FC743981"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E8A0F186"
+					type: "xp"
+					xp: 79
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C847DFE7"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005552630E"
+					item: "mekanism:mekasuit_bodyarmor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007278F4ED"
+					item: "mekanism:mekasuit_boots"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A78E10D0"
+					item: "mekanism:mekasuit_helmet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000775F7D19"
+					item: "mekanism:mekasuit_pants"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D5EDC810"
+					item: "mekanism:modification_station"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000039FA2471"
+					item: "minecraft:mossy_cobblestone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B5CF1EDF"
+					item: "minecraft:mossy_cobblestone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002205B837"
+					item: "minecraft:mossy_cobblestone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EA2056E0"
+					item: "minecraft:mossy_cobblestone_wall"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000726DD01C"
+				"0000000031F6E19F"
+				"00000000D355A923"
+				"000000005EF9BE98"
+				"000000006BD605C8"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D3DB7294"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000096753321"
+					type: "xp"
+					xp: 60
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000027907773"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000252EE0DC"
+					item: "minecraft:magenta_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DEE0D437"
+					item: "minecraft:magenta_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005EF0EAE5"
+					item: "minecraft:magenta_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000D8887AA"
+					item: "minecraft:magenta_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BB313AC4"
+					item: "minecraft:magenta_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000475B9090"
+					item: "minecraft:magenta_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000007382C7D"
+					item: "minecraft:magenta_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7AD5B38"
+					item: "mekanism:module_magnetic_attraction_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004401C53B"
+					item: "mekanism:meka_tool"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000C6A1DC1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000052CFB415"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001447E2EA"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DC658549"
+					item: "minecraft:lime_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E4BB1D82"
+					item: "minecraft:lime_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CA32A533"
+					item: "minecraft:lime_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003BDA210C"
+					item: "minecraft:lime_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005DEECCDB"
+					item: "mekanism:module_locomotive_boosting_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E57022C9"
+					item: "minecraft:magenta_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E5B2464A"
+					item: "minecraft:magenta_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006FF53CA5"
+					item: "minecraft:magenta_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000345C7342"
+					item: "minecraft:magenta_carpet"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000D355A923"
+				"00000000BA7EAD05"
+				"000000009C90E447"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007089425B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006B21C3F4"
+					type: "xp"
+					xp: 87
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000081677D16"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AD779DB0"
+					item: "mekanism:basic_infusing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089DA1D07"
+					item: "mekanism:basic_injecting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024F2CB6A"
+					item: "mekanism:basic_logistical_transporter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CC3D82C0"
+					item: "mekanism:basic_mechanical_pipe"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007EB217BE"
+					item: "mekanism:basic_pressurized_tube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B7BBD044"
+					item: "mekanism:basic_purifying_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073D478C4"
+					item: "mekanism:basic_sawing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7D261AC"
+					item: "mekanism:basic_smelting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A2073BE9"
+					item: "mekanism:basic_thermodynamic_conductor"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"000000006BD605C8"
+				"000000009C90E447"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000090EFABB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008F0ED5CA"
+					type: "xp"
+					xp: 23
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A20619F8"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000099E16C10"
+					item: "mekanism:basic_universal_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000940CDE46"
+					item: "mekanism:elite_energy_cube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D2740421"
+					item: "mekanism:qio_drive_base"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000D355A923"
+				"00000000BA7EAD05"
+				"000000009C90E447"
+				"000000004F424742"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FCF671EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000011D12832"
+					type: "xp"
+					xp: 66
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000017DBE8B7"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BCE3E3CD"
+					item: "mekanism:advanced_induction_provider"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CDE1AB7E"
+					item: "mekanism:basic_bin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000051CA5FC8"
+					item: "mekanism:basic_chemical_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001057CA95"
+					item: "mekanism:basic_combining_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000067D83CA3"
+					item: "mekanism:basic_compressing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006FAF39BD"
+					item: "mekanism:basic_crushing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BA12288D"
+					item: "mekanism:basic_enriching_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004DE6C981"
+					item: "mekanism:basic_fluid_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EFA2AA51"
+					item: "mekanism:basic_induction_cell"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000005EF9BE98"
+				"00000000BA7EAD05"
+				"000000006BD605C8"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002B1991EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D0EFF285"
+					type: "xp"
+					xp: 25
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000003217150"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005084042A"
+					item: "mekanism:sps_port"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003094FCCD"
+					item: "mekanism:block_salt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CA5AE69A"
+					item: "minecraft:sand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003AC34592"
+					item: "mekanism:scuba_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007552ADA3"
+					item: "deeperdarker:sculk_stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D8982041"
+					item: "deeperdarker:sculk_stone_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000059E212EF"
+					item: "deeperdarker:sculk_stone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005FDBD13D"
+					item: "deeperdarker:sculk_stone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000896A76D8"
+					item: "deeperdarker:sculk_stone_bricks"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"00000000745CA94A"
+				"00000000BA7EAD05"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007FC4C936"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006DB42D53"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001E1E4ABA"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000077880D04"
+					item: "minecraft:redstone_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000658FEF54"
+					item: "mekanism:block_refined_obsidian"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000687810BF"
+					item: "mekanism:dust_refined_obsidian"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A09D55C9"
+					item: "mekanism:reprocessed_fissile_fragment"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005171FB0C"
+					item: "mekanism:resistive_heater"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B59FE2AC"
+					item: "minecraft:respawn_anchor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C15C941F"
+					item: "mekanism:restrictive_transporter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A0772FC7"
+					item: "minecraft:rooted_dirt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000369139F5"
+					item: "mekanism:rotary_condensentrator"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000004F424742"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BA7EAD05"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DF67DCDC"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000071B00837"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000031DB516A"
+					item: "mekanism:basic_control_circuit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000221A194D"
+					item: "mekanism:alloy_infused"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C80D8B9"
+					item: "mekanism:steel_casing"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000011AA3E67"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000048B32AB3"
+					type: "xp"
+					xp: 48
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DF409A61"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B7F46FAF"
+					item: "minecraft:red_concrete"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007EB2B4AB"
+					item: "minecraft:red_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E8CA4D0"
+					item: "minecraft:red_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F5D2F6B0"
+					item: "minecraft:red_sand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B66C970F"
+					item: "minecraft:red_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BE984C50"
+					item: "minecraft:red_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008FB6BDCB"
+					item: "minecraft:red_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A8CCE2FA"
+					item: "minecraft:red_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000911784B1"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"00000000BA7EAD05"
+				"000000005EF9BE98"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D72B7F5E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006B0E3AF7"
+					type: "xp"
+					xp: 47
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D401922C"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009E780551"
+					item: "mekanism:module_radiation_shielding_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C1B4A23C"
+					item: "mekanism:radioactive_waste_barrel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000690922F2"
+					item: "mekanism:raw_osmium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A63BC7B5"
+					item: "mekanism:block_raw_osmium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B1A3F510"
+					item: "thermal:raw_tin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BAB93D58"
+					item: "minecraft:red_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007299617E"
+					item: "minecraft:red_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000034E2EC1F"
+					item: "minecraft:red_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058A947F1"
+					item: "minecraft:red_carpet"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"00000000745CA94A"
+				"00000000D355A923"
+				"000000006BD605C8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000020EF1580"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000070278298"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000ADF6351D"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000625BA25D"
+					item: "mekanism:qio_exporter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C97A1B11"
+					item: "mekanism:qio_importer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DC17C3C6"
+					item: "mekanism:qio_redstone_adapter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C70C39FE"
+					item: "mekanism:quantum_entangloporter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005A0C81A0"
+					item: "minecraft:quartz_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AC5A3B1C"
+					item: "mekanism:dust_quartz"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000054BA083B"
+					item: "minecraft:quartz_pillar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C7CF0185"
+					item: "minecraft:quartz_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000035EFF469"
+					item: "minecraft:quartz_stairs"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"000000006BD605C8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007887BA43"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C1644D46"
+					type: "xp"
+					xp: 70
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006B03871D"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008B2FE34E"
+					item: "minecraft:purple_concrete_powder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000044341F84"
+					item: "minecraft:purple_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000091393421"
+					item: "minecraft:purple_stained_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004ACF5D2C"
+					item: "minecraft:purple_stained_glass_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000038EFE946"
+					item: "minecraft:purple_terracotta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A5B452E5"
+					item: "minecraft:purple_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005FE7E3A1"
+					item: "minecraft:purpur_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E200A277"
+					item: "minecraft:purpur_pillar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A1C3BC2D"
+					item: "mekanism:qio_drive_array"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000006BBBE5F"
+				"0000000031F6E19F"
+				"00000000BA7EAD05"
+				"00000000FCF671EA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000820F261E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001474AAF9"
+					type: "xp"
+					xp: 62
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A8E3B3FA"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000395A2543"
+					item: "create:powdered_obsidian"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006C5D1B33"
+					item: "mekanism:pressure_disperser"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003BBC7B5"
+					item: "mekanism:pressurized_reaction_chamber"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BF6E9C62"
+					item: "minecraft:prismarine_shard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000625E89AD"
+					item: "minecraft:purple_banner"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024EAA1BD"
+					item: "minecraft:purple_bed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DF1044B1"
+					item: "minecraft:purple_candle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DBFC1646"
+					item: "minecraft:purple_carpet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056D302F3"
+					item: "minecraft:purple_concrete"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000726DD01C"
+				"0000000006BBBE5F"
+				"000000005EF9BE98"
+				"00000000BA7EAD05"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000091B560F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000009A9ED6B"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000078688E5"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001B650780"
+					item: "minecraft:polished_granite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005BCD0281"
+					item: "minecraft:polished_granite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000D22929E"
+					item: "minecraft:polished_granite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DB7A33CA"
+					item: "deeperdarker:polished_sculk_stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C7EA326"
+					item: "deeperdarker:polished_sculk_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000B74A1F1"
+					item: "deeperdarker:polished_sculk_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EFDF654F"
+					item: "deeperdarker:polished_sculk_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000992C11C6"
+					item: "mekanism:portable_qio_dashboard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EA163F97"
+					item: "mekanism:portable_teleporter"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AF0F6115"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E615B59A"
+					type: "xp"
+					xp: 43
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C654FDF3"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000257EFCED"
+					item: "minecraft:polished_deepslate_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D0520014"
+					item: "minecraft:polished_deepslate_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008E8B92D8"
+					item: "minecraft:polished_diorite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000086AF3610"
+					item: "minecraft:polished_diorite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009ABB9A23"
+					item: "minecraft:polished_diorite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D0F0894"
+					item: "deeperdarker:polished_gloomslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C3241C6"
+					item: "deeperdarker:polished_gloomslate_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002A12ECD0"
+					item: "deeperdarker:polished_gloomslate_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004D15ED99"
+					item: "deeperdarker:polished_gloomslate_wall"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009F2DDDB6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ABB79149"
+					type: "xp"
+					xp: 31
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000870DCF9E"
+					table_id: 2162608961L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000034FCED94"
+					item: "minecraft:pointed_dripstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E693B256"
+					item: "minecraft:polished_andesite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000084AE9C4"
+					item: "minecraft:polished_andesite_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A8E121E3"
+					item: "minecraft:polished_andesite_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002B6B48BB"
+					item: "minecraft:polished_basalt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DDB932FD"
+					item: "minecraft:polished_blackstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000D4F8243"
+					item: "minecraft:polished_blackstone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7C167C0"
+					item: "minecraft:polished_deepslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000085588E9B"
+					item: "minecraft:polished_deepslate_slab"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+	]
+	title: "Mekanism"
+}

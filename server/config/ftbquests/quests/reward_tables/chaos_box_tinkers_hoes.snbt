@@ -1,0 +1,34 @@
+{
+	icon: "tinkers_hoes:slender_blade_red_sand_cast"
+	id: "00000000517B5134"
+	loot_crate: {
+		color: 16777215
+		drops: {
+			boss: 1
+			monster: 0
+			passive: 0
+		}
+		item_name: "Box of Tinkers' Hoes"
+		string_id: "chaos_box_tinkers_hoes"
+	}
+	loot_size: 1
+	order_index: 5
+	rewards: [
+		{ item: "tinkers_hoes:slender_blade_gold_cast", weight: 8.0f }
+		{ item: "tinkers_hoes:slender_blade_red_sand_cast", weight: 4.0f }
+		{ item: "tinkers_hoes:slender_blade", weight: 5.0f }
+		{ item: "tinkers_hoes:slender_blade_sand_cast", weight: 6.0f }
+		{
+			item: {
+				Count: 1
+				id: "tinkers_hoes:hoe"
+				tag: {
+					Damage: 0
+					tic_broken: 0b
+				}
+			}
+			weight: 7.0f
+		}
+	]
+	title: "Tinkers' Hoes Rewards"
+}

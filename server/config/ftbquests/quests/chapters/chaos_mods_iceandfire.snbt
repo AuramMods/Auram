@@ -1,0 +1,8173 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_iceandfire"
+	group: "00000000DEB299A3"
+	icon: "iceandfire:dragonsteel_ice_block"
+	id: "000000000DDBE2DB"
+	order_index: 19
+	quest_links: [ ]
+	quests: [
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000012834CBB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CB0D215D"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EC653B77"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000A16D1995"
+				item: "iceandfire:myrmex_resin_jungle"
+				type: "item"
+			}]
+			x: -17.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000021998908"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E54FE80E"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E0D51BE3"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000994199FB"
+					item: "iceandfire:myrmex_resin_desert"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001FBE8142"
+					item: "iceandfire:dread_stone"
+					type: "item"
+				}
+			]
+			x: -15.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000048AB55E0"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D24479A7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BBD927C1"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000080E382B4"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007AF1081E"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_copper_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000909B9E73"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_sapphire_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000088BF1CBD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000389DB4BB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000045BDDAA3"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000980DE9E6"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005748BA66"
+					item: {
+						Count: 1
+						id: "iceandfire:ghost_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DD2CBADF"
+					item: "iceandfire:copper_pile"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000072197972"
+				"00000000F7395386"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000053B8C547"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000049A6AF1"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004DE1069E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000697B03BA"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_white_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AD068AD7"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_blue_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000019F59597"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000080EA494"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000920ABCFC"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000077F9919"
+					item: "iceandfire:gold_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000139D6830"
+					item: "iceandfire:silver_pile"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000486E7850"
+				"0000000048AB55E0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000618FB014"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000060E1E435"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AB3457DA"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E4E99B7C"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_gray_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000026DE5477"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_red_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002B5874B3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F9D2BE5D"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000083415635"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F1499B3A"
+					item: {
+						Count: 1
+						id: "iceandfire:pixie_wand"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007B5007D0"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_red_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000486E7850"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001FEB9DF2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E4EBE169"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F4DF825A"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001F363B21"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_amythest_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002B290FF7"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_electric_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007D7C3CBF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DFDA5F50"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003C191B05"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000016E25FE3"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_red_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F14F5336"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_red_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000008AD96B74"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EA8F20C1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DDDBE892"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000042042D16"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008FB0F08A"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_black_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000462BD56"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_bronze_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000072197972"
+				"000000005DF186AA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D2F382D7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000C625FC9"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000065A9E491"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001247A712"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_silver_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000061E680C9"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_green_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000002B949CE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CC3E9DB1"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000076A525F8"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F90C5C52"
+					item: {
+						Count: 1
+						id: "iceandfire:mountain_troll_leather_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005448BCA7"
+					item: "iceandfire:podium_oak"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000083877597"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A537CFA3"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A5B53D48"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008FF328E1"
+					item: "iceandfire:dragonarmor_silver_body"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A4C29035"
+					item: "iceandfire:dragonarmor_silver_tail"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000072197972"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003447B389"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A6CD9ED7"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E4146E18"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AC34B49D"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_blue_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003A63F05"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_sapphire_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B954E670"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BAFFD4EB"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000D53C0B5"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000011A0B0F7"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_red_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F8C614FD"
+					item: "thermal:sapphire"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000008AD96B74"
+				"00000000F7395386"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000000111778"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000052F18A7B"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003A071A2A"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003CD2CE33"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_white_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E1EDC7C1"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_black_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D437E13A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000031F3A6D4"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000915C9194"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D0DB123F"
+					item: {
+						Count: 1
+						id: "iceandfire:sheep_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000064DE3351"
+					item: {
+						Count: 1
+						id: "iceandfire:sheep_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000486E7850"
+				"000000005DF186AA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006071846C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E952A408"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000013D69B35"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007C6C5FCE"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_amythest_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000379611DE"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_green_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B9E9860A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D176B8EA"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000102D1A23"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000853CC6D8"
+					item: {
+						Count: 1
+						id: "iceandfire:sheep_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001A43C322"
+					item: {
+						Count: 1
+						id: "iceandfire:sheep_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000486E7850"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000253B88F3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007D30CABA"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CAB94386"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001776F3B0"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_gray_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000097CEEDBF"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_electric_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000004624A661"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AFE01946"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003B376A8A"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000506B8ABB"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009977504C"
+					item: "iceandfire:sickly_dragon_meal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000021C3CD73"
+					item: "iceandfire:dragonarmor_silver_head"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000005DF186AA"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000091EFE60E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F777B6AA"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000012F21BE4"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003AAB3B78"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_green_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007074EB1F"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_electric_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000088BF1CBD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000035C17DF7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000048CE92"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001DE6CA9F"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002C8EAC05"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonbone_sword_lightning"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006B2ED7F2"
+					item: "iceandfire:summoning_crystal_lightning"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000072197972"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000547F9E24"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000060D4B027"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000007625D04"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000088B2BA37"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_silver_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006E70E341"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_blue_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000D9EE5D42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008E4C8E5E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000013165F55"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009712CF15"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009E846FFD"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_lightning_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008226B2C8"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_lightning_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000486E7850"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E0327436"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001AB73548"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B8C52140"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A729F8BE"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_amythest_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000192AB769"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_sapphire_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000D9EE5D42"
+				"00000000834E6151"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000074606CA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CC78B2D3"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000035108CB3"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000713063B5"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_lightning_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000286EBCAD"
+					item: "iceandfire:dragonarmor_dragonsteel_lightning_tail"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000048AB55E0"
+				"00000000F7395386"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000097D62F54"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E45E41C0"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C4702284"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004025B83A"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_white_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ADA4D78B"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_red_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000834E6151"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002171F6A9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000010CC8326"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A3F4F6FB"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E37AA968"
+					item: "iceandfire:dragonarmor_dragonsteel_lightning_neck"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000049E2D140"
+					item: "iceandfire:dragonarmor_dragonsteel_lightning_head"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000072197972"
+				"0000000048AB55E0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000030593650"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B1202CF2"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005DFA9888"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007131D702"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_silver_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000079786542"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_red_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000008AD96B74"
+				"0000000048AB55E0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EE32EBDD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009BFB9F3F"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001F5AC229"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DED5CB81"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_bronze_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C38D5595"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_copper_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000486E7850"
+				"000000008AD96B74"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000019A557B1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CE3B5244"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000027E58B45"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E45CDBB0"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_bronze_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CB800704"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_gray_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000179588B9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FB4C4C51"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000712997D2"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006A76DB4C"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E8F5424A"
+					item: "iceandfire:dread_stone_bricks_mossy"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005C3D170F"
+					item: {
+						Count: 1
+						id: "iceandfire:mountain_troll_leather_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002335D1EB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005AF1F7B8"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000158F2DA2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D1935A6F"
+					item: {
+						Count: 1
+						id: "iceandfire:mountain_troll_leather_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000023C9BF94"
+					item: {
+						Count: 1
+						id: "iceandfire:mountain_troll_leather_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000008AD96B74"
+				"0000000048AB55E0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000014BD91CC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000086C3C8F"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004927CA94"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B68F45E7"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_copper_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D3B7F070"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_black_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000D9EE5D42"
+				"00000000834E6151"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ACBDEFCD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D3BC26B9"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D49D146F"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B092A893"
+					item: "iceandfire:dragonarmor_dragonsteel_lightning_body"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000012A65DB7"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_lightning_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000F7395386"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D2F85C05"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005AE23D94"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000730C73EC"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000073BF0082"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_white_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CC77692F"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_electric_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000D9EE5D42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008583CD3B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004B366B33"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000031DF5D94"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B452926F"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_lightning_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000379F582B"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_lightning_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000048AB55E0"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001F138CF7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EFD8851F"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A0D6E9C8"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AB9674C7"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_copper_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007500C30A"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_red_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000D9EE5D42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BF15181E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B764ACE7"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F5B91B8A"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000032320764"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_lightning_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E90229D6"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_lightning_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000D9EE5D42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008951E377"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B4C11D88"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000910C4640"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000EDDAC94"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_lightning_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000097A229DC"
+					item: "iceandfire:lightning_stew"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000095F1E199"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002BCA823B"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000822496FD"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000BFB2F036"
+				item: "iceandfire:wither_shard"
+				type: "item"
+			}]
+			x: -15.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000082989909"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002BEAF9B0"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B1C4B76E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EE9AC804"
+					item: "iceandfire:dragonarmor_gold_head"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EA1F03E9"
+					item: "iceandfire:dragonarmor_gold_tail"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000034487EB5"
+				"000000000944E9E3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AA72BE5D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000E42DE32"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CE8341DA"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ACF3D37D"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_deepblue_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003365A3A3"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_teal_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005D3C4904"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B2D54F17"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A5F22430"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000099A03FDF"
+					item: {
+						Count: 1
+						id: "iceandfire:frost_troll_leather_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007136A426"
+					item: "iceandfire:dragonarmor_gold_neck"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0000000034487EB5"
+				"000000000944E9E3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000061D363B3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000005F55CD8"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D4561333"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000002D65DFE"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_purple_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005F0CAD35"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_blue_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CEA776D3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C78B55B6"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A4BD589F"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E29D3A5B"
+					item: {
+						Count: 1
+						id: "iceandfire:frost_troll_leather_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2E58376"
+					item: {
+						Count: 1
+						id: "iceandfire:frost_troll_leather_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000732D2FCC"
+				"00000000834E6151"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005CAD4830"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004FBCE4C4"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000076370863"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AC96B1A7"
+					item: "iceandfire:sea_serpent_scales_bronze"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008C3DDA58"
+					item: "iceandfire:sea_serpent_scales_green"
+					type: "item"
+				}
+			]
+			x: -22.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000005CAD4830"
+				"00000000D9EE5D42"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000033040AAF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000113B0924"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EAE1CBF2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000971BAC76"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_red_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009DA67C86"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_green_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C543F834"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003F30ED7C"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002618DEFA"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B7A8998C"
+					item: "iceandfire:frost_stew"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B815C1A8"
+					item: {
+						Count: 1
+						id: "iceandfire:frost_troll_leather_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000005CAD4830"
+				"00000000D9EE5D42"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CB7CF663"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000088C75BF3"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000171246FB"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E84A2EA8"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_bronze_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B876527A"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_red_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000005CAD4830"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AC537EE2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FD848128"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000184FCF97"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F47789BF"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_bronze_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A837388D"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_green_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000000944E9E3"
+				"00000000D9EE5D42"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000239F1E40"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002595F90B"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A36A7798"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B45510FB"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_blue_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EAA5B522"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_red_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000034487EB5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000023E868B6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000017834A85"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002E67CEF8"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000070997605"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_teal_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019886B09"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_purple_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000D8ADB4B4"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003944D252"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000097D133F"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001B94DC6C"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001C37195D"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_fire_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000035669969"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_fire_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000D8ADB4B4"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E3A27857"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E2DDC31C"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000060B1894E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000050BB44CA"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_fire_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A2B89D0"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_fire_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000098BA2BD2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002B2CF71B"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E149DCCF"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000015CA6032"
+					item: {
+						Count: 1
+						id: "iceandfire:forest_troll_leather_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001CD47A0E"
+					item: {
+						Count: 1
+						id: "iceandfire:forest_troll_leather_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000034487EB5"
+				"000000000944E9E3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000634501AF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C4AFD5B4"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000069538BD6"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000090E4F252"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_blue_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000251429A"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_teal_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D9E6E2DC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FA9D52FB"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F9732103"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000017C9FF2D"
+					item: {
+						Count: 1
+						id: "iceandfire:forest_troll_leather_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E4F95497"
+					item: {
+						Count: 1
+						id: "iceandfire:forest_troll_leather_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000005CAD4830"
+				"000000000944E9E3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000003281F38"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A25B8906"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002C2550A6"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000167DB831"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_green_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FCF776B6"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_deepblue_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000088BF1CBD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000471C7061"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000032466962"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000008187EA9"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DD318660"
+					item: "iceandfire:fire_stew"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000066077682"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonbone_sword_fire"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000005CAD4830"
+				"0000000034487EB5"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DD223599"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BAB386AF"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009DE620C5"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E6B6CCFD"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_bronze_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058AEE3DF"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_purple_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000D8ADB4B4"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AEED905F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D482A18A"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000548A0D73"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000045376B91"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_fire_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000081EA6EBE"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_fire_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000072197972"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001C47926B"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000089C2007E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000045F59042"
+					item: "iceandfire:dragonscales_blue"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EB5EB353"
+					item: "iceandfire:dragonscales_silver"
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000486E7850"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000849D2A37"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000023D381B"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006F43E7D0"
+					item: "iceandfire:dragonscales_gray"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000068AFB759"
+					item: "iceandfire:dragonscales_amythest"
+					type: "item"
+				}
+			]
+			x: -20.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008AD96B74"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000046AF4580"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007FCB19F6"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DDBC36B7"
+					item: "iceandfire:dragonscales_bronze"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C8ED2321"
+					item: "iceandfire:dragonscales_black"
+					type: "item"
+				}
+			]
+			x: -22.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000048AB55E0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000010EA2D0"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000009C8DD94"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BCFDF747"
+					item: "iceandfire:dragonscales_red"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F159EB7B"
+					item: "iceandfire:dragonscales_copper"
+					type: "item"
+				}
+			]
+			x: -24.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000034487EB5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F42DA278"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E05659FB"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B6AA4AB0"
+					item: "iceandfire:sea_serpent_scales_teal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008DF8BDC3"
+					item: "iceandfire:sea_serpent_scales_purple"
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000944E9E3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007678FEB1"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006896D680"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000072146F51"
+					item: "iceandfire:sea_serpent_scales_deepblue"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000055B79D94"
+					item: "iceandfire:sea_serpent_scales_blue"
+					type: "item"
+				}
+			]
+			x: -20.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D9EE5D42"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D73A5514"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000081463320"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001FBC94D3"
+					item: "iceandfire:dragonsteel_lightning_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008BA5D3ED"
+					item: "iceandfire:sea_serpent_scales_red"
+					type: "item"
+				}
+			]
+			x: -16.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F7395386"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DB5816BA"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000497F72E2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000040095ECE"
+					item: "iceandfire:dragonscales_white"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AA1121D1"
+					item: "iceandfire:dragonsteel_ice_ingot"
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B4237EF5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000060A3B27D"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E97EBB07"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005B36410E"
+					item: "iceandfire:banner_pattern_ice_head"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003A302CA5"
+					item: "iceandfire:banner_pattern_gorgon"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000F7395386"
+				"000000001DD0CC45"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008E295FC5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000021549D2C"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FCD5C414"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000663A2CB6"
+					item: "iceandfire:dragonsteel_ice_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D92EE0D5"
+					item: "iceandfire:dragonbone"
+					type: "item"
+				}
+			]
+			x: -17.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000001DD0CC45"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004B7F0689"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009756CDBD"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DE4295FD"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C8D353C9"
+					item: "iceandfire:dragonarmor_dragonsteel_fire_head"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003B11F93"
+					item: "iceandfire:dragonarmor_dragonsteel_fire_neck"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000003EC1BECA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005C28F11E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001CF367B6"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AFB1C6FB"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D9E728EC"
+					item: "minecraft:stick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BA9C06A5"
+					item: "iceandfire:chain_sticky"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EF6818EC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002EA9346D"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BC5064CD"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000044EC358"
+					item: "iceandfire:banner_pattern_fire_head"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000219E8D9A"
+					item: "iceandfire:banner_pattern_sea_serpent"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000D8ADB4B4"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F49B5383"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D53B43CB"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000040BFC279"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000089598354"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_fire_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D05FA1E4"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_fire_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000145422D5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000738227B0"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004584A8CD"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002324C9B4"
+					item: "minecraft:stone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BC2F6BA8"
+					item: "iceandfire:stymphalian_feather_bundle"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000032029095"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F51FC936"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F8CA6E24"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000096B6DD28"
+					item: "iceandfire:banner_pattern_fae"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003AF08741"
+					item: "iceandfire:banner_pattern_amphithere"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000D8ADB4B4"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007D73C096"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000048376560"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000091C4523E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008D0C426B"
+					item: "iceandfire:summoning_crystal_fire"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003D4ED3CA"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_fire_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009F431810"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004647DEF0"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000086D7B536"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E4D5E888"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_yellow_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B2268D2D"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_yellow_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006F9C3C33"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003A9BD587"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000049486CD3"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000542828D4"
+					item: "iceandfire:banner_pattern_lightning"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004F56D084"
+					item: "iceandfire:banner_pattern_mermaid"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001CEB5081"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001262E632"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000774629C4"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000080BFCA50"
+					item: "iceandfire:dreadwood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000989DF3D1"
+					item: {
+						Count: 1
+						id: "iceandfire:earplugs"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000765BD5B4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001BDCB011"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000454B9E8E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000004AC8A87"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_yellow_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F4B0565F"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_yellow_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002ED0E43F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009BEFBFC6"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000093237C32"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000007B6322F"
+					item: "iceandfire:banner_pattern_lightning_head"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000028A80D40"
+					item: "iceandfire:banner_pattern_hippogryph_head"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000A8F1E2FE"
+				"0000000095C9BD14"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003A9B49B7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004E9BEEC0"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000ECD66CD3"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000083E0820D"
+					item: "iceandfire:dragonarmor_silver_neck"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A6EE1FC4"
+					item: "thermal:silver_nugget"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000001DD0CC45"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FE0BDE99"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005B5D1FA3"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009D328AE7"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C9D65CF4"
+					item: "iceandfire:dragonarmor_dragonsteel_fire_tail"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F6BE79E9"
+					item: "iceandfire:dragonarmor_dragonsteel_fire_body"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000088BF1CBD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BA374A49"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F97D1F60"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D4377BB8"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003C490DD4"
+					item: {
+						Count: 1
+						id: "iceandfire:siren_flute"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C445F08"
+					item: "iceandfire:podium_spruce"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000D15F4AC2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004341ED4C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009002E2B8"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C509DE3E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EF05752B"
+					item: "iceandfire:dragonforge_fire_input"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000099BC8D4F"
+					item: "iceandfire:dragonforge_fire_core_disabled"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BBD8DDF7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004353EA3C"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000038D93B9A"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CC9ED766"
+					item: "iceandfire:podium_acacia"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D79F7AC9"
+					item: "iceandfire:ambrosia"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000091925A38"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EFE05B08"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C299A4BC"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009CFB05E9"
+					item: "iceandfire:banner_pattern_troll"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CD24AEFD"
+					item: "iceandfire:banner_pattern_eye"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007843D920"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D691E0D1"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000046DEB8F6"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000193B3EDA"
+					item: "iceandfire:dragonscales_sapphire"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008C504878"
+					item: "iceandfire:dragonscales_electric"
+					type: "item"
+				}
+			]
+			x: -20.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000179588B9"
+				"0000000021998908"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000003859153"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BB8BC5F8"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CD828388"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000C3A73E5"
+					item: "iceandfire:dread_stone_face"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000041ADCBB4"
+					item: "iceandfire:dread_stone_tile"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000034487EB5"
+				"00000000D9EE5D42"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002C96E58E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DBB368C1"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BC7D8276"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B0273E8B"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_red_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000908C7937"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_purple_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000156946DE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004F9360E4"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D034CF18"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000094DCB0C8"
+					item: "iceandfire:banner_pattern_hippocampus"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000C7F2AE7"
+					item: "iceandfire:banner_pattern_bird"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001DD0CC45"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F281D70A"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007EAAD94A"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002F28FB08"
+					item: "iceandfire:dragon_bone_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DC1E2CE5"
+					item: "iceandfire:dragonsteel_fire_block"
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000179588B9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000093BC91D7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000007F8CFF9"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000027120029"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002D6F9CC5"
+					item: "iceandfire:dread_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000121F3C69"
+					item: "iceandfire:dread_stone_stairs"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000005CAD4830"
+				"000000000944E9E3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B79AF59A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000104B0F79"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000045A69FB9"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E553134B"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_blue_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B8CDDF76"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_green_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000054FD8EAE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002FABCB3E"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009C0078F2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003C28CA6C"
+					item: "iceandfire:banner_pattern_weezer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004F6C3264"
+					item: "iceandfire:banner_pattern_feather"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000179588B9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000005195387"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000081ED3C59"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005C76B9F8"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006EF3052E"
+					item: "iceandfire:dragonforge_lightning_input"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000042962489"
+					item: "iceandfire:dragonforge_lightning_core_disabled"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000005CAD4830"
+				"0000000034487EB5"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F48C5E3C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FB3945F4"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DF4BEE98"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000477598BC"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_bronze_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BD3B7B8E"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_teal_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000024942A3E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002C077271"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E6C1D53A"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000F8A3A1B"
+					item: "iceandfire:banner_pattern_ice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005CC8E535"
+					item: "iceandfire:banner_pattern_fire"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000D15F4AC2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BCAD94F1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009D888421"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000938B0AE4"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004CD2D777"
+					item: "iceandfire:dragonforge_ice_input"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000AB77197"
+					item: "iceandfire:dragonforge_ice_core_disabled"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000000944E9E3"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000054786AFC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DE06552D"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000092E8C909"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000029FF9003"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_deepblue_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D93A1424"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_deepblue_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000179588B9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000040406E4D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003DB7D267"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C3D51A34"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C60A69BB"
+					item: "iceandfire:dread_stone_bricks_cracked"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003380CFE6"
+					item: "iceandfire:podium_dark_oak"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000009A3B7ACE"
+				"0000000004309A7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000053A79520"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000965E0F1A"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000950206D5"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000057AD7291"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007D840BE3"
+					item: "create:copper_nugget"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000004624A661"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000005BB5892"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008836D41A"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C618D9B0"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009BBD9ACE"
+					item: "minecraft:blue_ice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000413BC685"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007EA0517D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B3513298"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000040B2CBCA"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000439AD8A0"
+					item: {
+						Count: 1
+						id: "iceandfire:blindfold"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2CE0B77"
+					item: "thermal:sapphire_block"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DCB3ACB7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000495C9B91"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AF1FB9BF"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000012BF1939"
+					item: "iceandfire:lectern"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000060C6BD5A"
+					item: "iceandfire:podium_birch"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000000ED3BEC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000946656CB"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000460E08E6"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EC4BB9EA"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_sword_venom"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AC658534"
+					item: "iceandfire:podium_jungle"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A1DBA6A0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AF2C00BC"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007EF728B9"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BE6FCC18"
+					item: "iceandfire:banner_pattern_dread"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FA231B98"
+					item: "iceandfire:bestiary"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BCBF8F26"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000516484D3"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001EE1354B"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002C67D102"
+					item: "iceandfire:myrmex_jungle_resin_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A33733CB"
+					item: "iceandfire:myrmex_jungle_staff"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000033BF18D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A900E9F8"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000835BB9DD"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007755F6B0"
+					item: "iceandfire:dragonarmor_copper_body"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002356A775"
+					item: "iceandfire:dragonarmor_copper_head"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000003E7A6D0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002498C93E"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000786B7ED1"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000253CBD85"
+					item: "iceandfire:dragonarmor_copper_tail"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009E0529A2"
+					item: "iceandfire:dragonarmor_copper_neck"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000095F1E199"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004BBC5CD0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000040BD7B1F"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000066983C85"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000080BE5E43"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009A7E521D"
+					item: {
+						Count: 1
+						id: "iceandfire:cockatrice_scepter"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000021998908"
+				"000000003EC1BECA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ABBD8BD7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008B857DBA"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A7A40CE0"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002E1ADA8C"
+					item: "minecraft:charcoal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EA5B4E68"
+					item: "iceandfire:dread_stone_bricks_chiseled"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F2118CC2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008FFE5EE3"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005C551799"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005CA36620"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004E3183E6"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000633FFEFE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001B2E1F0E"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007E30497D"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000064FA5D65"
+					item: "iceandfire:iron_hippogryph_armor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000006FBFEE9"
+					item: "iceandfire:pixie_jar_empty"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000081BBBF8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000027219E5C"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008F527D42"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000309655FF"
+					item: "iceandfire:dragonarmor_iron_head"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004D6F3CC5"
+					item: "iceandfire:dragonarmor_iron_tail"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EDF8B5B6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009038C34C"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001A3B64A3"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009FF89083"
+					item: "iceandfire:dragonarmor_iron_body"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000400AC31F"
+					item: "iceandfire:dragonarmor_iron_neck"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000CC45AB4D"
+				"0000000012834CBB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000034ECE0B2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D9C3BAE0"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A33A4AE0"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002B3B3E8B"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000005DC9D01"
+					item: "iceandfire:jungle_myrmex_cocoon"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002150BD2E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CF588440"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B5C485D4"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D8533EB3"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000025DB4E89"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000714ACA94"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001F02FE13"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E8DCA93E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009E503040"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D85EAA27"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000533037AA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BC22722C"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A8F15FF0"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D6D2A290"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C33F3EC0"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_jungle_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000072197972"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B4D40C99"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B199343F"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F984C104"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BF74B878"
+					item: "iceandfire:dragonscale_electric"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ED4F643E"
+					item: "iceandfire:dragonscale_silver"
+					type: "item"
+				}
+			]
+			x: -17.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000486E7850"
+				"00000000F7395386"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009A48E819"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FBD0E2B7"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000018BF1B45"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E3506E39"
+					item: "iceandfire:dragonscale_white"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000055B54C48"
+					item: "iceandfire:dragonscale_amythest"
+					type: "item"
+				}
+			]
+			x: -19.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000048AB55E0"
+				"000000005DF186AA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005D34C745"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000036F044E6"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000053E1176D"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007036D8C1"
+					item: "iceandfire:dragonscale_copper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000092F87F3C"
+					item: "iceandfire:dragonscale_green"
+					type: "item"
+				}
+			]
+			x: -25.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000F7395386"
+				"0000000088BF1CBD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000090833FE1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B2CF3022"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006E4BC9E8"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000057CBF42"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_ice_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009B38E1A4"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonbone_sword_ice"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000F7395386"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A952A71A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003AFE5D95"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000627D673A"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000768EEC71"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_ice_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000066DC54B9"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_ice_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A8F1E2FE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EF723CBE"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002D26DA43"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000606812E8"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_silver_metal_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E4E14CAE"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_silver_metal_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -16.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000012834CBB"
+				"0000000021998908"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CC45AB4D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004332A2FB"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F54209E7"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000102C307C"
+					item: "iceandfire:myrmex_resin_sticky_desert"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BCE7E1E2"
+					item: "iceandfire:myrmex_resin_sticky_jungle"
+					type: "item"
+				}
+			]
+			x: -15.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000F7395386"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000002AFD64C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F6404E9B"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FEDF3BEF"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CCF38E89"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_ice_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008D43FE25"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_ice_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000B4D40C99"
+				"000000009A48E819"
+				"000000005D34C745"
+				"0000000021998908"
+				"00000000611ED9C7"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000179588B9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000934B9C3A"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AD17451D"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000056FFE184"
+					item: "iceandfire:dragonforge_lightning_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A32EE5B0"
+					item: "iceandfire:dread_stone_bricks"
+					type: "item"
+				}
+			]
+			x: -15.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000008E295FC5"
+				"000000005CAD4830"
+				"0000000034487EB5"
+				"000000000944E9E3"
+				"00000000D9EE5D42"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008B61CC20"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CCDD1782"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000071A22AC4"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D5573053"
+					item: {
+						Count: 1
+						id: "iceandfire:tide_trident"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000033E58B87"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_white_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -14.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000095C9BD14"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000025D4CC7D"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000076E91067"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000A952433"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_silver_metal_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000158D735A"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_silver_metal_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -16.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004CFB431E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CC54FD25"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008D6DD42E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EDAFBC3C"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_white_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E6316721"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_white_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -14.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000008E295FC5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004624A661"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006D812ECC"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E21A2729"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BA382BC6"
+					item: "iceandfire:dragon_ice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056B88D08"
+					item: "iceandfire:dragon_meal"
+					type: "item"
+				}
+			]
+			x: -15.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AD246B46"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D0B08265"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000625CF594"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000673C7932"
+				item: {
+					Count: 1
+					id: "iceandfire:deathworm_white_leggings"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -14.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000B4D40C99"
+				"000000009A48E819"
+				"000000005D34C745"
+				"000000008988290C"
+				"0000000069FD49F7"
+				"00000000611ED9C7"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D15F4AC2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006C299ACA"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000086E4881C"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000074A032A6"
+					item: "iceandfire:dragonforge_fire_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002DF752EA"
+					item: "iceandfire:dragonforge_ice_brick"
+					type: "item"
+				}
+			]
+			x: -15.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009A3B7ACE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000ACB4E7B"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007F6A8BF4"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E76E0550"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_copper_metal_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000065DF1294"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_copper_metal_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -15.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009F3B7C11"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B426D1C8"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000596DC3AA"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006E34FBE0"
+					item: "iceandfire:graveyard_soil"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002A651ACB"
+					item: "iceandfire:summoning_crystal_ice"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000034487EB5"
+				"00000000D9EE5D42"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000064D75940"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DA8BCF1B"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001589E16B"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000010A4B03A"
+					item: "iceandfire:sea_serpent_scale_block_purple"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A5CE31E0"
+					item: "iceandfire:sea_serpent_scale_block_red"
+					type: "item"
+				}
+			]
+			x: -17.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000008E295FC5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000088BF1CBD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D934DFBB"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BD38CD89"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ED5AE433"
+					item: "iceandfire:dragon_flute"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001AF2446A"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonbone_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -15.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DE8DDB9E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006ED0B39A"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EDCDBE5F"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D74D5920"
+					item: "minecraft:grass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004A7DA4AE"
+					item: "minecraft:gravel"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003EC1BECA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B8BC6E9D"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007F969F79"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FDCC8666"
+					item: "iceandfire:ash"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DAFB782F"
+					item: "iceandfire:chain"
+					type: "item"
+				}
+			]
+			x: -15.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000086E27129"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007B72AA42"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000786007E1"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000DE0C14B"
+					item: "iceandfire:dragonarmor_gold_body"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003BC522DD"
+					item: "iceandfire:gold_hippogryph_armor"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000034487EB5"
+				"000000000944E9E3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000280C8636"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000073E0549C"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000344673FB"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000005250E8E"
+					item: "iceandfire:sea_serpent_scale_block_teal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C7E2FBF"
+					item: "iceandfire:sea_serpent_scale_block_deepblue"
+					type: "item"
+				}
+			]
+			x: -19.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000004309A7F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000864161E8"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E9D72D63"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DCFC4E8D"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_copper_metal_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D389090D"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_copper_metal_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -15.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000000944E9E3"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000732D2FCC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EDA78454"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003B8B53A2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F0324F09"
+					item: "iceandfire:sea_serpent_scale_block_bronze"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003F14D610"
+					item: "iceandfire:sea_serpent_scale_block_blue"
+					type: "item"
+				}
+			]
+			x: -21.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000486E7850"
+				"000000008AD96B74"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008988290C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ABB5EDB8"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005FC762B2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000080B299CC"
+					item: "iceandfire:dragonscale_gray"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000030D69B4D"
+					item: "iceandfire:dragonscale_bronze"
+					type: "item"
+				}
+			]
+			x: -21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000008E295FC5"
+				"00000000F7395386"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000DCA5E35"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A0F8113E"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008FCD70AC"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E70B25AF"
+					item: "iceandfire:dragonarmor_dragonsteel_ice_body"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000509A51BB"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_ice_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000008E295FC5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E2EF96BD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000081047F53"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000022CCBA20"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005AAE6FDC"
+					item: "iceandfire:dragonarmor_dragonsteel_ice_head"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000065C7A416"
+					item: "iceandfire:dragonarmor_dragonsteel_ice_tail"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000D9EE5D42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000834E6151"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007FAEDC63"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000868F04D2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001C648544"
+					item: "iceandfire:dragonsteel_lightning_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C4E96D92"
+					item: "iceandfire:sea_serpent_scale_block_green"
+					type: "item"
+				}
+			]
+			x: -23.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000072197972"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000069FD49F7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C517AB1C"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BDC57300"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004D373892"
+					item: "iceandfire:dragonscale_blue"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AFD78377"
+					item: "iceandfire:dragonscale_sapphire"
+					type: "item"
+				}
+			]
+			x: -19.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000008E295FC5"
+				"00000000F7395386"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C661EBC5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008AA1BD56"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002A68A55C"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000637DB731"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_ice_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C1D4D372"
+					item: "iceandfire:dragonarmor_dragonsteel_ice_neck"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000008AD96B74"
+				"0000000048AB55E0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000611ED9C7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004533AACF"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002CE21057"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001795F817"
+					item: "iceandfire:dragonscale_black"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DEDE0292"
+					item: "iceandfire:dragonscale_red"
+					type: "item"
+				}
+			]
+			x: -23.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000F7395386"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000032E86AD5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F4D03B61"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000094C14179"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DB8EA973"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_ice_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A9F08D59"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonsteel_ice_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000008E295FC5"
+				"000000004624A661"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005F7FA65C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A2C85254"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000013D30BD1"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000551E5E7A"
+					item: "iceandfire:dragon_ice_spikes"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000031E27F47"
+					item: "iceandfire:nest"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000008E295FC5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003B3BF473"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EAB12AFE"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000504A3ECD"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AC295CD4"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonbone_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000125640BC"
+					item: "iceandfire:dragon_bone_wall"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000008E295FC5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000568E59B2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002894AAD3"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C4F238F2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CB779989"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonbone_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000AAC4430"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonbone_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000008E295FC5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B986FF98"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D5A9C389"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005F30684B"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000013B9C759"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonbone_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002F719813"
+					item: {
+						Count: 1
+						id: "iceandfire:dragonbone_bow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000072197972"
+				"000000008AD96B74"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A4E32490"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002BEF6807"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000C102C8F"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000094ECDCE0"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_bronze_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000859B20CD"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_silver_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000486E7850"
+				"000000005DF186AA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007F8E5AD3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000138D0133"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C3AEA346"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CC7DBEFC"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_amythest_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000815A8EB5"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_green_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000008AD96B74"
+				"000000007843D920"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CCFECBB5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005E0BABD7"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009ACC3C7C"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000ECDD443"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_black_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F32D9600"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_sapphire_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000072197972"
+				"00000000486E7850"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AA461520"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000056C8673A"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000157F9EC2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008530C09B"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_gray_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000338F92EC"
+					item: {
+						Count: 1
+						id: "iceandfire:armor_blue_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000008E295FC5"
+				"0000000095F1E199"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000144D94D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002EA9CC24"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AA4FEB87"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000247B7429"
+					item: "minecraft:dirt_path"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000067E82ABC"
+					item: "iceandfire:dragonbone_arrow"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000055684CFB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000DDD7658"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000ACCFF110"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000257DA72F"
+					item: "iceandfire:diamond_hippogryph_armor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E441B240"
+					item: "minecraft:dirt"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005DF186AA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AE53BCF9"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E8100EDD"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000E3E5DC99"
+				item: "iceandfire:dragonscales_green"
+				type: "item"
+			}]
+			x: -26.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C32CD5A5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000057194417"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006C356B7A"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000643519B5"
+					item: "iceandfire:dragonarmor_diamond_tail"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003352A742"
+					item: "iceandfire:dragonarmor_diamond_neck"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009A0A579B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000049BEE2EB"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000061A79059"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000085DE3232"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000423C423A"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009036706A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000064A1C680"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B37F1AB2"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000039C70305"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A1B2229B"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000013640CFC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006798B074"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000256DC7E5"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000063ED7593"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008DA011A6"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000003EC1BECA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000070BF33BF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000064A7E14C"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B7DCFA6F"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EB3FBAE3"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_gauntlet_white"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E3CD283C"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003BAF6954"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006CD974D7"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003AD35E9C"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002132303E"
+					item: "iceandfire:dragonarmor_diamond_head"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006510C0FF"
+					item: "iceandfire:dragonarmor_diamond_body"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000001E2FED0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007504C35E"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EA73B2EB"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E2BD0D91"
+					item: "iceandfire:myrmex_desert_staff"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006C5AB48F"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_sword_venom"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000CC45AB4D"
+				"0000000021998908"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000063EF40DB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A54044AE"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B9DD4C77"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000053931A13"
+					item: "iceandfire:desert_myrmex_cocoon"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D0BE03C4"
+					item: "iceandfire:myrmex_desert_resin_glass"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B9BECD43"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A1D64E44"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000071A7C5E5"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000039C63BFB"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F97905DB"
+					item: {
+						Count: 1
+						id: "iceandfire:myrmex_desert_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000001DD0CC45"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D8ADB4B4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008CBA54E5"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B772641E"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000FA0EB258"
+				item: "iceandfire:dragonsteel_fire_ingot"
+				type: "item"
+			}]
+			x: -19.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000003EC1BECA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000009AD6FA5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B53498FD"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D63BC406"
+					table_id: 4107086244L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B2E010B0"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_gauntlet_yellow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009EF63441"
+					item: {
+						Count: 1
+						id: "iceandfire:deathworm_gauntlet_red"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+	]
+	title: "Ice and Fire"
+}

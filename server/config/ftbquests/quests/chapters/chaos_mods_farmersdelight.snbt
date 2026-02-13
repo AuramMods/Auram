@@ -1,0 +1,3489 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_farmersdelight"
+	group: "00000000DEB299A3"
+	icon: "farmersdelight:rice"
+	id: "00000000E96C8637"
+	order_index: 108
+	quest_links: [ ]
+	quests: [
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F98F8EEC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007EAB845B"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000066EC1977"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008F33588E"
+					item: "farmersdelight:acacia_cabinet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AB7FF9E2"
+					item: "minecraft:acacia_planks"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000463C5446"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000041109CDA"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000248627D8"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009705D3DF"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000098D8B2B2"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000033EEB435"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005D35185D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009B864C4D"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EBE2C759"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009304F70F"
+					item: "minecraft:painting"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007619C371"
+					item: "minecraft:paper"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000F018205E"
+				"000000003A0F666A"
+				"000000006F87493F"
+				"0000000033EEB435"
+				"00000000189160AD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F9593DED"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000C1D5677"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EEA81C0B"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005CB95AFA"
+					item: "farmersdelight:bacon_sandwich"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006ABFA6B2"
+					item: "farmersdelight:bacon_and_eggs"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000007C42E144"
+				"0000000001E3E6CD"
+				"0000000094570E8F"
+				"00000000EF4F2BF6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A149DD1B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EEF912EC"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000319A87DC"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D01A8498"
+					item: "farmersdelight:pasta_with_meatballs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005620417C"
+					item: "farmersdelight:pasta_with_mutton_chop"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"00000000CE1A310B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000678FA894"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006FF60629"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008B7866C0"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004CF92AD2"
+					item: "farmersdelight:baked_cod_stew"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C987E558"
+					item: "farmersdelight:bamboo_cabinet"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000F018205E"
+				"000000003A0F666A"
+				"00000000696EDE17"
+				"000000006F87493F"
+				"0000000039D74DC6"
+				"0000000045EC4FBE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B0808C07"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001F15D139"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008687F64E"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000026A9FBD9"
+					item: "minecraft:bamboo_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C425A851"
+					item: "farmersdelight:barbecue_stick"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004A4BD93F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D65FE2FC"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000067F89F1D"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F7732C8A"
+					item: "minecraft:cobbled_deepslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008D20F49F"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000033EEB435"
+				"000000007C42E144"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A6EB176A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C99DA249"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007D619C6F"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006C762498"
+					item: "farmersdelight:basket"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009417140C"
+					item: "farmersdelight:beef_stew"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AD2D584C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D4FC1679"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000068B196EA"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C315849C"
+					item: "farmersdelight:cherry_cabinet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003E7C0F60"
+					item: "minecraft:cherry_planks"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000045EC4FBE"
+				"00000000EF4F2BF6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000069F4E96E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006FA97422"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008BB8C168"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C3FA9F3F"
+					item: "minecraft:potato"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D641104B"
+					item: "minecraft:pumpkin"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000039D74DC6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001E495B8B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FCC7F614"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002309732A"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000028F0DD0D"
+					item: "minecraft:beetroot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000078C29CAA"
+					item: "minecraft:beetroot_seeds"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000F018205E"
+				"000000003A0F666A"
+				"0000000033EEB435"
+				"00000000189160AD"
+				"00000000CE1A310B"
+				"0000000045EC4FBE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D128C0CC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CC6B1EC8"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E192A8F9"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000063B272BA"
+					item: "farmersdelight:chicken_sandwich"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000944A0C21"
+					item: "farmersdelight:chicken_soup"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000033EEB435"
+				"000000007C42E144"
+				"00000000189160AD"
+				"000000003EBC7187"
+				"00000000EF4F2BF6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005BFDBA8F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000041A374E6"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C75956EB"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ECC9E3E0"
+					item: "minecraft:pumpkin_seeds"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C7739554"
+					item: "farmersdelight:pumpkin_soup"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A14009C7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D3B61593"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B5E696F2"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000145D1080"
+					item: "minecraft:beetroot_soup"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E529CE4D"
+					item: "farmersdelight:birch_cabinet"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007C42E144"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A678A19D"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000138B945B"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000078AF91C8"
+					item: "farmersdelight:minced_beef"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029498BD0"
+					item: "farmersdelight:bacon"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000009CCAB0C6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B46FC759"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BCC326C4"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003DE32AE4"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BD2602EF"
+					item: "minecraft:cooked_porkchop"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000065BF3DAB"
+					item: "farmersdelight:cooking_pot"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"0000000045EC4FBE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000013374C1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003E2544B0"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B69B981B"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000748E0D22"
+					item: "farmersdelight:ratatouille"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A3D74A42"
+					item: "minecraft:porkchop"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000A15B1119"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000189160AD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000077FAFD57"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A58FE818"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F5E7B9DD"
+					item: "farmersdelight:cabbage"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000099B411EB"
+					item: "farmersdelight:kelp_roll"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AE1C9E5F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BE01F2D8"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002C3502D8"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000044C3D23"
+					item: "farmersdelight:crimson_cabinet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A8E93AD2"
+					item: "minecraft:crimson_planks"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000001E3E6CD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006DBF591B"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004405FDC1"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D8AA296C"
+					item: "farmersdelight:mutton_chops"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006A204081"
+					item: "farmersdelight:salmon_slice"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CE1A310B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B91027BC"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006327A518"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E6CC614D"
+					item: "farmersdelight:chicken_cuts"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002F2E0E3E"
+					item: "farmersdelight:cod_slice"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000017F4A69C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000E6B3100"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009C55A36E"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EE3A2F1E"
+					item: "minecraft:dark_oak_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000111539DC"
+					item: {
+						Count: 1
+						id: "farmersdelight:diamond_knife"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000072664128"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004BB25152"
+					type: "xp"
+					xp: 19
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000096041B06"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000079B154B4"
+					item: "farmersdelight:rice_panicle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009ABB3CEB"
+					item: "farmersdelight:wheat_dough"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000033EEB435"
+				"000000007C42E144"
+				"00000000189160AD"
+				"0000000001E3E6CD"
+				"00000000C2150B2E"
+				"00000000CE1A310B"
+				"0000000045EC4FBE"
+				"0000000072664128"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CC86F129"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000621AE4D9"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002863C82F"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000083234ADC"
+					item: "farmersdelight:dog_food"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008A7B9DC3"
+					item: "farmersdelight:dumplings"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["000000008D0A0435"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007F8EFCDF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007A06B841"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C9369376"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000E9EE510F"
+				item: "farmersdelight:tatami"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000003A0F666A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BA96AC0D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000013D05A61"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D9CCBF68"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "000000006649B67E"
+				item: "farmersdelight:tomato_crate"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"000000008D0A0435"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C2150B2E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A14B735F"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000581CC379"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002CEF2208"
+					item: "farmersdelight:rice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008D36ED3F"
+					item: "farmersdelight:straw_bale"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000696EDE17"
+				"0000000033EEB435"
+				"000000003EBC7187"
+				"0000000045EC4FBE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C94E2289"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CA0681E9"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DC337A42"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CB9CA264"
+					item: "minecraft:scaffolding"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000008D45BD9"
+					item: "farmersdelight:shepherds_pie_block"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000006F87493F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B11FA75D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000033CEA756"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005E34223B"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004BFBAAF8"
+					item: "deeperdarker:echo_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001CDC2BBE"
+					item: "farmersdelight:egg_sandwich"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000001BBB4616"
+				"000000003EBC7187"
+				"0000000045EC4FBE"
+				"000000009CCAB0C6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000094CDA902"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000048D13E14"
+					type: "xp"
+					xp: 18
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EFC5D4E1"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000734622F9"
+					item: "farmersdelight:rice_roll_medley_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008EAFFC4E"
+					item: "farmersdelight:roast_chicken_block"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"00000000696EDE17"
+				"00000000A15B1119"
+				"00000000CE786CF0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F52C9AE3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006E5994A3"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000957EFC86"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009A414896"
+					item: "farmersdelight:roasted_mutton_chops"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000082834780"
+					item: "farmersdelight:safety_net"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000B34C3475"
+				"000000003EBC7187"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008B7B10FD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006ED35B32"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000006D85839"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009EF4D91C"
+					item: "farmersdelight:glow_berry_custard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C0F875FB"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"0000000001E3E6CD"
+				"00000000CE1A310B"
+				"00000000EF4F2BF6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008CC1180A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EACAF761"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000005AA1006F"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000BA3FEBE"
+					item: "minecraft:spruce_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000013CFF8FA"
+					item: "farmersdelight:squid_ink_pasta"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000045EC4FBE"
+				"00000000A15B1119"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003A810D68"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005345C1F4"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A604C995"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001C90DB35"
+					item: "farmersdelight:steak_and_potatoes"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F6328671"
+					item: "farmersdelight:stove"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000001E3E6CD"
+				"0000000094570E8F"
+				"0000000045EC4FBE"
+				"00000000CE1A310B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006E7B6EFD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000689F2488"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000038323DB3"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003297D4C9"
+					item: "farmersdelight:fish_stew"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000012722C46"
+					item: {
+						Count: 1
+						id: "farmersdelight:flint_knife"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000C2150B2E"
+				"0000000045EC4FBE"
+				"00000000EF4F2BF6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000802EF1AE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005F9AB179"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009FE1C4C8"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000036252B97"
+					item: "farmersdelight:fried_rice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006204E9A7"
+					item: "farmersdelight:fruit_salad"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"0000000039D74DC6"
+				"000000008D0A0435"
+				"0000000033EEB435"
+				"00000000189160AD"
+				"0000000045EC4FBE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000016E7551A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009DE536A2"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000828D838A"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000867B5EFC"
+					item: "farmersdelight:half_tatami_mat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C26E9B6"
+					item: "farmersdelight:hamburger"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C2C775B6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CD0283A4"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006FA28AA6"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004BD59F96"
+					item: "minecraft:stripped_acacia_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008D9AE92E"
+					item: "minecraft:stripped_acacia_wood"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000009CCAB0C6"
+				"00000000A15B1119"
+				"00000000CE786CF0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ED9A1A88"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000009D6B6C3"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000901E34BE"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001DC1803E"
+					item: "farmersdelight:honey_glazed_ham_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AAE9D0A8"
+					item: "farmersdelight:horse_feed"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AA357A0C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000050106FB0"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000016C497B3"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000322D60DC"
+					item: "minecraft:stripped_birch_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A664AFA6"
+					item: "minecraft:stripped_birch_wood"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000CC88209"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ECD5D5B3"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006261C5FC"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006455380E"
+					item: "minecraft:stripped_cherry_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F5701899"
+					item: "minecraft:stripped_cherry_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000007C42E144"
+				"00000000CE1A310B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F018205E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003D85FF06"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000692D71A"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BB897CF8"
+					item: "farmersdelight:cooked_bacon"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBE7F471"
+					item: "farmersdelight:cooked_chicken_cuts"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000B34C3475"
+				"000000003EBC7187"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D3942F11"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C840896E"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EE255A6A"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007B2890B4"
+					item: "farmersdelight:hot_cocoa"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000039964C7D"
+					item: "minecraft:iron_nugget"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000030A5CC2A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ABE8284E"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F0DC85E1"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000016BB3739"
+					item: "deeperdarker:stripped_echo_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009705D3A7"
+					item: "deeperdarker:stripped_echo_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000001E3E6CD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000696EDE17"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FFA522CE"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000FB70327A"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002B9A01B7"
+					item: "farmersdelight:cooked_cod_slice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B24E344D"
+					item: "farmersdelight:cooked_mutton_chops"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000089A7DFB5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009C3144C5"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007C081A5B"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000452A10BA"
+					item: "farmersdelight:jungle_cabinet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B9C0E649"
+					item: "minecraft:jungle_planks"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B265DB2C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004CB72F86"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009147E0FD"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009489DA8F"
+					item: "minecraft:stripped_jungle_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000F12A0E2"
+					item: "minecraft:stripped_jungle_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006F87493F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D2F753CE"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000039E8C3DE"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007DFDBABE"
+					item: "farmersdelight:cooked_salmon_slice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E68EEBA"
+					item: "farmersdelight:fried_egg"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000057306ACA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006C29BC53"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C54B7A7C"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000067DB899C"
+					item: "minecraft:stripped_crimson_hyphae"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E6330E01"
+					item: "minecraft:stripped_crimson_stem"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B34C3475"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000000F640CC"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EEAF56B6"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BC6C673E"
+					item: {
+						Count: 1
+						id: "farmersdelight:golden_knife"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DC5FAD6B"
+					item: {
+						Count: 1
+						id: "farmersdelight:iron_knife"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000052B818EF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008B8E4B6E"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007D4732C3"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000001F4D356"
+					item: "minecraft:stripped_dark_oak_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000093A94EB7"
+					item: "minecraft:stripped_dark_oak_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D3D17428"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000A35B859"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C7C2226A"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E7ACB1D6"
+					item: "minecraft:stripped_spruce_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000185A1F2E"
+					item: "minecraft:stripped_spruce_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["000000007C42E144"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000039D74DC6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000979A1CBF"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000887E783D"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006DDFB7E8"
+					item: "farmersdelight:beef_patty"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B3C61346"
+					item: "farmersdelight:beetroot_crate"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000093326A6A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000021FE1FDC"
+					type: "xp"
+					xp: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BEA56C74"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BB8C3BAD"
+					item: "minecraft:stripped_warped_hyphae"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019A590CC"
+					item: "minecraft:stripped_warped_stem"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"00000000189160AD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000033EEB435"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F8E0E3E4"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001A547557"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003F167D22"
+					item: "farmersdelight:cabbage_leaf"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000018D4008A"
+					item: "farmersdelight:canvas"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000003A0F666A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000059E4CA72"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000973333B7"
+					type: "xp"
+					xp: 12
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000089FEFDCD"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000052D0BE83"
+					item: "minecraft:lead"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000BE0E723"
+					item: "minecraft:leather"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005AB9180C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EED2AC7B"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E4F5B00B"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008C82E88C"
+					item: "minecraft:stripped_mangrove_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000640CA565"
+					item: "minecraft:stripped_mangrove_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000CE1A310B"
+				"00000000A15B1119"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001BBB4616"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002B490E66"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006FEE8405"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002DA11A71"
+					item: "farmersdelight:carrot_crate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BE4AF93E"
+					item: "farmersdelight:cod_roll"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A111B12A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000045A8DEC9"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AD6FF8EB"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C2C559B6"
+					item: "minecraft:stripped_oak_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FC82844F"
+					item: "minecraft:stripped_oak_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C1DFE3A7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A95B7E46"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EFC50E9E"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005F1F134E"
+					item: "minecraft:mangrove_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089B5CD48"
+					item: "farmersdelight:melon_juice"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000189160AD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003EBC7187"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009EC172A2"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000686E5C80"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CD1E57D0"
+					item: "farmersdelight:kelp_roll_slice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F24343B"
+					item: "farmersdelight:milk_bottle"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000045EC4FBE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E1F00E31"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D83B2B74"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009EE9B741"
+					item: "farmersdelight:onion"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004AF75E64"
+					item: "farmersdelight:potato_crate"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000003A0F666A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000094570E8F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003A796AA2"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A9E4BB93"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000003CDC2964"
+				item: "farmersdelight:tomato_sauce"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000C2150B2E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A15B1119"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005F9AE421"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000F3CC3AFA"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "0000000072D4DAC3"
+				item: "farmersdelight:cooked_rice"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000001E3E6CD"
+				"00000000A15B1119"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009CCAB0C6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000053D711CD"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000C8CEFDD"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FC8E4B73"
+					item: "farmersdelight:salmon_roll"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006254B2CB"
+					item: "farmersdelight:smoked_ham"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000072664128"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EF4F2BF6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F739BC1D"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000434FEB07"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000971CF442"
+					item: "farmersdelight:pumpkin_slice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FC0D5ECC"
+					item: "farmersdelight:raw_pasta"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"0000000072664128"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CE786CF0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DDAE46C6"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000D935940"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000347BCC55"
+					item: "farmersdelight:rice_bale"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007A76A361"
+					item: "farmersdelight:rope"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003A0F666A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FB4EEA24"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002FFAAB30"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D541A7C8"
+					item: "farmersdelight:straw"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002EDA5537"
+					item: "farmersdelight:tomato"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008D0A0435"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E57C2B73"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000007E6D00D0"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000116C1CC4"
+					item: "farmersdelight:rice_bag"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CDD1D192"
+					item: "farmersdelight:full_tatami_mat"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"0000000033EEB435"
+				"00000000189160AD"
+				"0000000045EC4FBE"
+				"00000000EF4F2BF6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B7E3BCB7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008408D783"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000061625C1"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007FEDDF02"
+					item: "farmersdelight:tomato_seeds"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000064A8BB21"
+					item: "farmersdelight:vegetable_noodles"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"0000000039D74DC6"
+				"000000003EBC7187"
+				"00000000C2150B2E"
+				"0000000045EC4FBE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EDECABF2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C9486276"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000019955862"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000711B31CB"
+					item: "farmersdelight:stuffed_potato"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007A17A87D"
+					item: "farmersdelight:stuffed_pumpkin_block"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000003A0F666A"
+				"0000000033EEB435"
+				"00000000189160AD"
+				"000000003EBC7187"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000057ABBB27"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003D7D5759"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B290B790"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C9C47EB3"
+					item: "minecraft:milk_bucket"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E03B6FCE"
+					item: "farmersdelight:mixed_salad"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000C2150B2E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000536C645A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000F8B2C84"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000833D876E"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008AAAA5A6"
+					item: "farmersdelight:mushroom_rice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000087F64B5E"
+					item: "minecraft:mushroom_stew"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000033EEB435"
+				"00000000189160AD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C5FEAF3D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000097E66E2F"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D33713B7"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004E2AF2FF"
+					item: "farmersdelight:vegetable_soup"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B800C525"
+					item: "farmersdelight:warped_cabinet"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000483D254D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C04C4E9E"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000EF76DE5E"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000352562B9"
+					item: "farmersdelight:melon_popsicle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7473B9F"
+					item: "minecraft:melon_slice"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000006F87493F"
+				"000000007C42E144"
+				"00000000EF4F2BF6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008C963D2A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000067E05BCA"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009C089387"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B9570405"
+					item: {
+						Count: 1
+						id: "farmersdelight:netherite_knife"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000158C785C"
+					item: "farmersdelight:noodle_soup"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000065AF316C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006CEDEC81"
+					type: "xp"
+					xp: 13
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BC6EF824"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000095B47EC1"
+					item: "farmersdelight:oak_cabinet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000076CD492F"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000696EDE17"
+				"0000000033EEB435"
+				"00000000189160AD"
+				"0000000045EC4FBE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000055C7ED83"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E768DB40"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004FE946B9"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E832FCAE"
+					item: "farmersdelight:mutton_wrap"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D32FE6EF"
+					item: "minecraft:nether_brick"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006CD9C36B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FAB4EB60"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006BBB3E10"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002C659A4A"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DCCC4117"
+					item: "farmersdelight:nether_salad"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000003A0F666A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009F248732"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000791FCD4A"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CC4F17E7"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B0BD17C4"
+					item: "farmersdelight:organic_compost"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005CE093D7"
+					item: "minecraft:packed_mud"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000189160AD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008F8B89A6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007E82B0D0"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002E7DC1E0"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008B215862"
+					item: "minecraft:brown_mushroom"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000264D0E4B"
+					item: "farmersdelight:cabbage_crate"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000033EEB435"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007C9A49AA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008D5DC0DA"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A855993A"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A4D76747"
+					item: "farmersdelight:bone_broth"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000860750F8"
+					item: "minecraft:book"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000072664128"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000048E8A3F7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EC8A5204"
+					type: "xp"
+					xp: 16
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004E0DA219"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000099E2C28C"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000373D40BE"
+					item: "minecraft:brick"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000033EEB435"
+				"000000007C42E144"
+				"00000000189160AD"
+				"0000000001E3E6CD"
+				"00000000CE1A310B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C8F15B5E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000625D0DED"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000C0264D65"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CD21A9FC"
+					item: "farmersdelight:cabbage_rolls"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D6B0A0DB"
+					item: "farmersdelight:cabbage_seeds"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000033EEB435"
+				"000000003EBC7187"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000898A17C6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ED55873B"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000098016C95"
+					table_id: 977112052L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000081A6ACF7"
+					item: "minecraft:cake"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000064092EB9"
+					item: "farmersdelight:canvas_rug"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+	]
+	title: "Farmer's Delight"
+}

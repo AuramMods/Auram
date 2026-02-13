@@ -1,0 +1,2461 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "chaos_mods_bloodmagic"
+	group: "00000000DEB299A3"
+	icon: "bloodmagic:dungeon_polished_d"
+	id: "00000000A22CF4CD"
+	order_index: 92
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["000000005659169C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F6D5F34C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009816539E"
+					type: "xp"
+					xp: 8
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000187F0CE0"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000693C0D25"
+					item: "bloodmagic:dungeon_brick2_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F3104EE0"
+					item: "bloodmagic:dungeon_polished_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DC8F7F07"
+					item: "bloodmagic:dungeon_smallbrick_c"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000F6D5F34C"
+				"000000004837D555"
+				"000000005659169C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D86D4072"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A70BCE30"
+					type: "xp"
+					xp: 40
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000071F1A788"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000290403D"
+					item: "bloodmagic:dungeon_tile_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000517FA049"
+					item: "bloodmagic:dungeon_stone_wall_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003A64D14B"
+					item: "bloodmagic:dungeon_tile_wall_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FEF121D2"
+					item: "bloodmagic:dungeon_brick3_c"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000F6D5F34C"
+				"00000000D86D4072"
+				"000000002307C3D2"
+				"00000000C1E49ECB"
+				"000000005659169C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000383354B8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000090897A7F"
+					type: "xp"
+					xp: 38
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003FC8C001"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ED62D3F0"
+					item: "bloodmagic:dungeon_pillar_special_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005289C234"
+					item: "bloodmagic:dungeon_tilespecial_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EB13961F"
+					item: "bloodmagic:dungeon_brick1_gate_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004A277D9E"
+					item: "bloodmagic:dungeon_brick1_wall_c"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000F6D5F34C"
+				"00000000D86D4072"
+				"000000005659169C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002307C3D2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A519C961"
+					type: "xp"
+					xp: 38
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000016CA0C8F"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003030FF17"
+					item: "bloodmagic:dungeon_polished_gate_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000087009075"
+					item: "bloodmagic:dungeon_pillar_center_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006E87DE33"
+					item: "bloodmagic:dungeon_pillar_cap_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B71C8FE9"
+					item: "bloodmagic:dungeon_stone_stairs_c"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000F6D5F34C"
+				"00000000D86D4072"
+				"000000002307C3D2"
+				"000000005659169C"
+				"00000000A471DE78"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C1E49ECB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C89E40FF"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001221BE13"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CC0C4DB2"
+					item: "bloodmagic:dungeon_brick1_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000077FB0A5D"
+					item: "bloodmagic:dungeon_polished_stairs_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000605095CB"
+					item: "bloodmagic:dungeon_polished_wall_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B24F77AC"
+					item: "bloodmagic:dungeon_stone_c"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000066CBC7EB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005FBAAAA4"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000011C4CF2C"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "000000005958EB1F"
+				item: "bloodmagic:dungeon_stone_slab_d"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000825DFEA6"
+				"000000007F23BAA5"
+				"00000000525303A1"
+				"0000000078D31C19"
+				"0000000001AA022E"
+				"0000000050785E49"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D23887F9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009F43E4FA"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000008C2EC777"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "0000000063D9304F"
+				item: "bloodmagic:dungeon_tile_slab"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000E73368A2"
+				"000000005926B25E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E35768BD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EE631F49"
+					type: "xp"
+					xp: 23
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DCBD780F"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C5346BCE"
+					item: "bloodmagic:dungeon_brick2_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005146905F"
+					item: "bloodmagic:dungeon_polished_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007C3D1064"
+					item: "bloodmagic:dungeon_smallbrick_s"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000E73368A2"
+				"00000000E35768BD"
+				"0000000026C49D1A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005D52CFB4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ED3D0B27"
+					type: "xp"
+					xp: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000067ADB844"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DC56C38C"
+					item: "bloodmagic:dungeon_stone_stairs_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D571076E"
+					item: "bloodmagic:dungeon_stone_wall_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C793DE9"
+					item: "bloodmagic:dungeon_tile_wall_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000001094DD"
+					item: "bloodmagic:dungeon_brick3_s"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000E73368A2"
+				"00000000E35768BD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000026C49D1A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B99EBE57"
+					type: "xp"
+					xp: 22
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000D65B86D5"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009F60FD45"
+					item: "bloodmagic:dungeon_stone_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000035571294"
+					item: "bloodmagic:dungeon_polished_gate_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003EE7A8A6"
+					item: "bloodmagic:dungeon_pillar_center_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C69EE4C2"
+					item: "bloodmagic:dungeon_pillar_cap_s"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000E73368A2"
+				"00000000E35768BD"
+				"000000005D52CFB4"
+				"0000000026C49D1A"
+				"00000000F463E50F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B119E3B3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D8B859E8"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000006AD91346"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001C9ADBE4"
+					item: "bloodmagic:dungeon_brick1_wall_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EECFA206"
+					item: "bloodmagic:dungeon_brick1_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F179A710"
+					item: "bloodmagic:dungeon_polished_stairs_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AFE8CD4F"
+					item: "bloodmagic:dungeon_polished_wall_s"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000E73368A2"
+				"00000000E35768BD"
+				"000000005D52CFB4"
+				"0000000026C49D1A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F463E50F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E8980291"
+					type: "xp"
+					xp: 23
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000483E1D2E"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FC42F6A0"
+					item: "bloodmagic:dungeon_pillar_special_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005FA86F1C"
+					item: "bloodmagic:dungeon_tilespecial_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000809BA90"
+					item: "bloodmagic:dungeon_brick1_gate_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D3DE15C1"
+					item: "bloodmagic:dungeon_brick1_stairs_s"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000004706E2E8"
+				"00000000F80F9411"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000598A2A62"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000000579A52"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B40D9FB3"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "000000006AB131B7"
+				item: "bloodmagic:dungeon_brick1_slab_d"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000005DC72B48"
+				"000000004706E2E8"
+				"0000000022F5852E"
+				"00000000F80F9411"
+				"00000000A6B57157"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006D869BBD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004FAA71D5"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A47C44A4"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "000000006E26A5A7"
+				item: "bloodmagic:dungeon_polished_d"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000825DFEA6"
+				"00000000525303A1"
+				"0000000078D31C19"
+				"0000000001AA022E"
+				"0000000050785E49"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007F23BAA5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B2975C53"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000093C2D4DC"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000AB6D32ED"
+				item: "bloodmagic:dungeon_polished_wall"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000005DC72B48"
+				"000000006D869BBD"
+				"000000004706E2E8"
+				"0000000022F5852E"
+				"00000000F80F9411"
+				"00000000A6B57157"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000009082A5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000870670C6"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000047A48C9B"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "000000008B896005"
+				item: "bloodmagic:dungeon_brick1_wall_d"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000004706E2E8"
+				"0000000022F5852E"
+				"00000000F80F9411"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005DC72B48"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000009DCA406"
+					type: "xp"
+					xp: 2
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000098CF24A1"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002DB37912"
+					item: "bloodmagic:dungeon_brick2_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000059543E6C"
+					item: "bloodmagic:dungeon_smallbrick_d"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C245205B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A27846A7"
+					type: "xp"
+					xp: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000026F3E0E2"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A767114A"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000308467A4"
+					item: "bloodmagic:alchemicalreactionchamber"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000689223C4"
+					item: {
+						Count: 1
+						id: "bloodmagic:alchemy_flask"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000032986EC8"
+					item: "bloodmagic:alchemytable"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000F6D5F34C"
+				"00000000C1E49ECB"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D3963F4A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001A1468EF"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A68F0F4B"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008C7AA469"
+					item: "bloodmagic:dungeon_eye_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EC03B18C"
+					item: "bloodmagic:dungeon_polished_slab_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F5DF0E91"
+					item: "bloodmagic:dungeon_stone_slab_c"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000582F1BD2"
+					item: "bloodmagic:corrupted_dust"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000001AA022E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009FB1AD63"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000004A9EB6A"
+					type: "xp"
+					xp: 21
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000008D2B6A9"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000093F8287A"
+					item: "bloodmagic:dungeon_alternator"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089699C31"
+					item: "bloodmagic:dungeon_brick1_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D73B8BF5"
+					item: "bloodmagic:dungeon_emitter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000846B9071"
+					item: "bloodmagic:dungeon_eye"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000005DC72B48"
+				"00000000009082A5"
+				"000000006D869BBD"
+				"000000004706E2E8"
+				"0000000022F5852E"
+				"0000000001AA022E"
+				"00000000F80F9411"
+				"00000000A6B57157"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000015356E2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009876E297"
+					type: "xp"
+					xp: 11
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009D885AC6"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000667F89B8"
+					item: "bloodmagic:dungeon_spike_trap"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EC9C5E49"
+					item: "bloodmagic:dungeon_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C811B9F5"
+					item: "bloodmagic:dungeon_eye_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001945472D"
+					item: "bloodmagic:dungeon_polished_slab_d"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000005DC72B48"
+				"00000000009082A5"
+				"000000006D869BBD"
+				"000000004706E2E8"
+				"0000000022F5852E"
+				"00000000F80F9411"
+				"0000000001AA022E"
+				"00000000A6B57157"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DFE4B156"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C1E2861E"
+					type: "xp"
+					xp: 26
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002429F092"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000068C09036"
+					item: "bloodmagic:dungeon_tile_slab_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000515B6452"
+					item: "bloodmagic:itemrouterfilterenchant"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006C5A1710"
+					item: "bloodmagic:ethereal_mimic"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C37C234"
+					item: "bloodmagic:soulforge"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005926B25E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006BA8724E"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000001CCFA9E3"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000C758CC98"
+				item: "bloodmagic:dungeon_polished_slab_s"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000A273B142"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000696D169"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CCB5A64E"
+					type: "xp"
+					xp: 37
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000040CC8874"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BECE9BB0"
+					item: {
+						Count: 1
+						id: "bloodmagic:alchemy_flask_lingering"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000861777F0"
+					item: "bloodmagic:masterritualstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001373AC35"
+					item: "bloodmagic:itemrouterfiltermoditems"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F4584AED"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000BC168E27"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005D0F555C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001E971D90"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009B4C1D6A"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001068E42C"
+					item: "bloodmagic:altarcapacityrune"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003AC45F6A"
+					item: "bloodmagic:speedrune"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000022E6680D"
+					item: "bloodmagic:stonebrickpath"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005659169C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002E35FFEE"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000B7E0E72"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000CF7BC232"
+				item: "bloodmagic:dungeon_brick1_stairs_c"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E73368A2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009C5D72F4"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000014B5530F"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000260F4E1D"
+				item: "bloodmagic:dungeon_tile_s"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000A273B142"
+				"00000000F2A4E1B6"
+				"000000005D0F555C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006CBB3FE0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A5D35E0A"
+					type: "xp"
+					xp: 37
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000084EC10F3"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005AB4034F"
+					item: "bloodmagic:chargingrune2"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B4ABF109"
+					item: "bloodmagic:dislocationrune2"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000037C60794"
+					item: "bloodmagic:bettercapacityrune2"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AFF764DB"
+					item: "bloodmagic:altarcapacityrune2"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000F6D5F34C"
+				"000000005659169C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004837D555"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000077C7B3D6"
+					type: "xp"
+					xp: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000BEAE2E5E"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "000000001A959EBD"
+				item: "bloodmagic:dungeon_tile_slab_c"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000024E10F2C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000064EE1A14"
+					type: "xp"
+					xp: 14
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000003987500E"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002DA663D5"
+					item: "bloodmagic:saltpeter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B0BC97FC"
+					item: "patchouli:guide_book"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000163EA25C"
+					item: {
+						Count: 1
+						id: "bloodmagic:alchemy_flask_throwable"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007918DDF5"
+					item: "bloodmagic:itemrouterfilterexact"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000E73368A2"
+				"00000000E35768BD"
+				"000000005D52CFB4"
+				"0000000026C49D1A"
+				"00000000B119E3B3"
+				"00000000F463E50F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000017FA8BE0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CE3386E7"
+					type: "xp"
+					xp: 37
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009C061304"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BC527D12"
+					item: "bloodmagic:dungeon_brick1_slab_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CDEDE790"
+					item: "bloodmagic:dungeon_eye_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E69585D"
+					item: "bloodmagic:dungeon_stone_slab_s"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CB452842"
+					item: "bloodmagic:dungeon_tile_slab_s"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000EEE8EEC7"
+				"00000000A273B142"
+				"00000000F2A4E1B6"
+				"000000005D0F555C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B8EEF881"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000096A609F4"
+					type: "xp"
+					xp: 17
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000000315A65"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000609FBBBE"
+					item: "bloodmagic:sacrificerune2"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007D77515F"
+					item: "bloodmagic:selfsacrificerune2"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000D53F44E"
+					item: "bloodmagic:orbcapacityrune2"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AA5BE7D6"
+					item: "bloodmagic:speedrune2"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000062D74F0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000001CE0B4E"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000092242505"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000645801F9"
+					item: "bloodmagic:reinforcedteleposerfocus"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000077F15E6A"
+					item: "bloodmagic:ritualdivinerdusk"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E440C46C"
+					item: "bloodmagic:ritualtinkerer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E35C2091"
+					item: "bloodmagic:sacrificialdagger"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004706E2E8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C210A518"
+					type: "xp"
+					xp: 23
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000AD8893F1"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002579C579"
+					item: "bloodmagic:dungeon_pillar_special_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BE2E857D"
+					item: "bloodmagic:dungeon_tilespecial_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CCA01294"
+					item: "bloodmagic:dungeon_brick1_gate_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000033B2D6D3"
+					item: "bloodmagic:dungeon_brick1_stairs_d"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000525303A1"
+				"0000000001AA022E"
+				"0000000050785E49"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000093A8DD45"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001961347F"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000742AF058"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "00000000DFB43B29"
+				item: "bloodmagic:dungeon_polished_slab"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000598A2A62"
+				"0000000066CBC7EB"
+				"000000004706E2E8"
+				"00000000F80F9411"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000022F5852E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C3499E20"
+					type: "xp"
+					xp: 40
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000DD39AC23"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001D26E16C"
+					item: "bloodmagic:dungeon_brick1_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C9EF6CE5"
+					item: "bloodmagic:dungeon_polished_stairs_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C0BEEF26"
+					item: "bloodmagic:dungeon_polished_wall_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058F22CC5"
+					item: "bloodmagic:dungeon_stone_d"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000004706E2E8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F80F9411"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003AE4B3D7"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000682FF707"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A2348168"
+					item: "bloodmagic:dungeon_polished_gate_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FD522550"
+					item: "bloodmagic:dungeon_pillar_center_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000133B2539"
+					item: "bloodmagic:dungeon_pillar_cap_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075EEB696"
+					item: "bloodmagic:dungeon_stone_stairs_d"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000A273B142"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000649BE0C7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A2C3402B"
+					type: "xp"
+					xp: 23
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009981C90A"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000002EA3673"
+					item: "bloodmagic:syntheticpoint"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003A1D00B5"
+					item: "bloodmagic:itemrouterfilteroredict"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A8105BD8"
+					item: "bloodmagic:teleposer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002DB04D94"
+					item: "bloodmagic:obsidiantilepath"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000005DC72B48"
+				"000000004706E2E8"
+				"0000000022F5852E"
+				"00000000F80F9411"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A6B57157"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000379E47B9"
+					type: "xp"
+					xp: 9
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002BFD2E0D"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D6AA610B"
+					item: "bloodmagic:dungeon_tile_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ABD9A185"
+					item: "bloodmagic:dungeon_stone_wall_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B1943AC3"
+					item: "bloodmagic:dungeon_tile_wall_d"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FBF2469E"
+					item: "bloodmagic:dungeon_brick3_d"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000EEE8EEC7"
+				"00000000C4AD49AD"
+				"000000005D0F555C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000071818931"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B6903F7A"
+					type: "xp"
+					xp: 29
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002D6467A8"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000019DE08C9"
+					item: "bloodmagic:stonetilepath"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000693CA5D1"
+					item: "bloodmagic:woodtilepath"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FB573392"
+					item: "bloodmagic:wornstonetilepath"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF70B586"
+					item: "bloodmagic:experiencebook"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000525303A1"
+				"0000000078D31C19"
+				"0000000001AA022E"
+				"0000000050785E49"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000825DFEA6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004E6A552D"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000042A0C885"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CC90E75B"
+					item: "bloodmagic:dungeon_tile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000095781956"
+					item: "bloodmagic:dungeon_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009CEE2239"
+					item: "bloodmagic:dungeon_tile_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024046F22"
+					item: "bloodmagic:dungeon_brick3"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000525303A1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C9FC8AFD"
+					type: "xp"
+					xp: 23
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000000D2E6C2A"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000071979C9F"
+					item: "bloodmagic:dungeon_polished_gate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FD33BCDB"
+					item: "bloodmagic:dungeon_pillar_center"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008A74EF36"
+					item: "bloodmagic:dungeon_pillar_cap"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DB1153A4"
+					item: "bloodmagic:dungeon_stone_stairs"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000525303A1"
+				"0000000093A8DD45"
+				"0000000001AA022E"
+				"0000000050785E49"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000078D31C19"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000728556E3"
+					type: "xp"
+					xp: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000B686D1B3"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D3F08427"
+					item: "bloodmagic:dungeon_brick2"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CA3FEEE0"
+					item: "bloodmagic:dungeon_polished"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D74AD941"
+					item: "bloodmagic:dungeon_smallbrick"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000525303A1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000001AA022E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000563E125E"
+					type: "xp"
+					xp: 28
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000009BFA2D16"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002B97CB2D"
+					item: "bloodmagic:dungeon_brick1_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008C6DBCCD"
+					item: "bloodmagic:dungeon_brick1"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000008A273F9"
+					item: "bloodmagic:dungeon_polished_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AFC86892"
+					item: "bloodmagic:dungeon_stone"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000525303A1"
+				"0000000001AA022E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000050785E49"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009379991F"
+					type: "xp"
+					xp: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0000000061CA5444"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EF2023FC"
+					item: "bloodmagic:dungeon_pillar_special"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000460AD128"
+					item: "bloodmagic:dungeon_tilespecial"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009CB1057C"
+					item: "bloodmagic:dungeon_brick1_gate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EABA9019"
+					item: "bloodmagic:dungeon_brick_stairs"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000BC168E27"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EEE8EEC7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B0E7D7C8"
+					type: "xp"
+					xp: 23
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000002572BC30"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A1F7F584"
+					item: "bloodmagic:selfsacrificerune"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002EF8A3F2"
+					item: "bloodmagic:orbcapacityrune"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003FF57B4C"
+					item: "bloodmagic:dungeon_stone_v"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A3FDB93F"
+					item: "bloodmagic:woodbrickpath"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000BC168E27"
+				"000000005D0F555C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A273B142"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BDBF936D"
+					type: "xp"
+					xp: 22
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000A50B9C87"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000084944930"
+					item: "bloodmagic:obsidianbrickpath"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AB82DDC7"
+					item: "bloodmagic:ritualstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000071B529D8"
+					item: "bloodmagic:bettercapacityrune"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CE737509"
+					item: "bloodmagic:sacrificerune"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000005D0F555C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C4AD49AD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002A18A9CA"
+					type: "xp"
+					xp: 4
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000CB68B7B2"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000969B71EB"
+				item: "bloodmagic:wornstonebrickpath"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000BC168E27"
+				"000000005D0F555C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F2A4E1B6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000593A250E"
+					type: "xp"
+					xp: 20
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000275CCE4E"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000034162811"
+					item: "bloodmagic:accelerationrune"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FC1BD7A1"
+					item: "bloodmagic:chargingrune"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009A729217"
+					item: "bloodmagic:dislocationrune"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000370485BF"
+					item: "bloodmagic:largebloodstonebrick"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BC168E27"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BED0CC55"
+					type: "xp"
+					xp: 6
+				}
+				{
+					exclude_from_claim_all: true
+					id: "000000004663E1B3"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "00000000B34E0BD7"
+				item: "bloodmagic:blankrune"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000F6D5F34C"
+				"00000000D86D4072"
+				"000000002307C3D2"
+				"000000005659169C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A471DE78"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CB3DAFBE"
+					type: "xp"
+					xp: 7
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00000000E34654B5"
+					table_id: 1871456668L
+					type: "random"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000B24110D0"
+				item: "bloodmagic:dungeon_brick1_slab_c"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+	]
+	title: "Blood Magic"
+}
