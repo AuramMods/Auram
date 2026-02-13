@@ -61,5 +61,10 @@ ServerEvents.recipes((event) => {
     100000,
     "twilightforest:fiery_block",
   );
-  //event.recipes.botania.mana_infusion("mystcraft:booster", "minecraft:book", 100000, "midnight:dark_pearl_block");
+  event.recipes.botania.mana_infusion(
+    "mystcraft:booster",
+    "minecraft:book",
+    100000,
+    "midnight:dark_pearl_block",
+  );
 });
