@@ -39,6 +39,18 @@
 	#If true, reading a linkbook drops it into the world.
 	#If false, the book stays in your inventory.
 	dropBooksOnRead = false
+	#If true, booster packs (sealed notebooks) have a chance to contain link panels.
+	#If false, booster packs will only contain symbol pages.
+	linkPanelInBoosterPacks = true
+	#If true, booster packs can be found in dungeon chests and as mob drops.
+	#Set to false to disable booster pack loot generation.
+	enableBoosterLoot = true
+	#If true, symbol pages can be found in dungeon chests.
+	#Set to false to disable page loot generation.
+	enablePageLoot = true
+	#List of item IDs that can be used as book covers in the Book Binder.
+	#Default: leather and empty folders.
+	bookBinderCoverItems = ["minecraft:leather", "mystcraft:folder"]
 
 #Instability Settings
 #The instability system is core to Mystcraft's balance.
@@ -124,7 +136,7 @@
 	#Half the inner void space vertically (Y axis) in blocks.
 	#Default: 24 (48 block height).
 	#Min: 2 (4 block height). Max: 4096 (8192 block height).
-	#Note: Minecraft 1.20.1 dimension height is 4064, so ~4048 is the practical max.
+	#Note: Minecraft 1.20.2 dimension height is 4064, so ~4048 is the practical max.
 	#Range: 2 ~ 4096
 	innerHalfSizeY = 32
 	#Thickness of the inner shell surrounding the void.
