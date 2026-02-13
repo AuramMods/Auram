@@ -20,7 +20,15 @@ Replacer.create()
 craftingTable.remove(<item:auram:bundled_sticks>);
 var d = <item:minecraft:stick>;
 var r = <item:minecraft:string>;
+
+craftingTable.remove(<item:waystones:warp_stone>);
+craftingTable.addShapeless("warper", <item:waystones:warp_stone> * 8, [<tag:items:forge:gems/amethyst>, <tag:items:c:ender_pearls>]);
+
 craftingTable.addShaped("bundlesticksfix", <item:auram:bundled_sticks> * 6, [
     [d, r, d],
     [d, r, d],
     [d, r, d]]);
+
+mods.extendedcrafting.CombinationCrafting.addRecipe("10cfe9d1-f944-4f33-b64a-4aa78a19a428", <item:auram:rock_catalyst>, 100000, [
+	<item:crystalcraft_unlimited_java:shadow_diamond_block>, <item:minecraft:chest>, <item:thermal:magenta_rockwool>
+]);
