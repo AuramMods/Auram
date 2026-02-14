@@ -2,128 +2,112 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_appliede"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "appliede:transmutation_terminal"
-	id: "000000002FCFAD13"
+	id: "0000000098FE0A04"
 	order_index: 30
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["00000000EB1045AD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C28D18E1"
+			id: "00000000AEEB8FA2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003570EDEC"
+					id: "0000000034EF4058"
 					type: "xp"
-					xp: 3
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B90C0FF8"
-					table_id: 3968740070L
-					type: "random"
+					id: "000000002EBD2AE7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appliede"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000091CC4BE8"
-				item: "appliede:emc_module"
+				id: "000000003168765D"
+				item: "ae2wtlib:wireless_universal_terminal"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000FCAD49B3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E51D0533"
+			id: "00000000E13B1422"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F126D2D3"
+					id: "000000002692023D"
 					type: "xp"
-					xp: 9
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C0B81FC3"
-					table_id: 3968740070L
-					type: "random"
+					id: "00000000C281FDD8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appliede"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005A52E608"
-				item: "appliede:cable_emc_interface"
+				id: "000000009593EC2C"
+				item: "appliede:emc_module"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000750324AB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000392D0FD0"
+			id: "000000005A830EC9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007EF7BC14"
+					id: "00000000BD950EA9"
 					type: "xp"
-					xp: 1
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000195EDD29"
-					table_id: 3968740070L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000AA693AF4"
-				item: "ae2wtlib:wireless_universal_terminal"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C007BCB6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000438B9A80"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F4363930"
-					table_id: 3968740070L
-					type: "random"
+					id: "000000003E45FE1D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appliede"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000D4F36593"
+				id: "00000000FA26C2E5"
 				item: "appliede:transmutation_terminal"
 				type: "item"
 			}]
@@ -131,61 +115,36 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000C007BCB6"]
+			dependencies: ["000000005A830EC9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000750324AB"
+			id: "00000000EB1045AD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003833FBEC"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CDA7B382"
-					table_id: 3968740070L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000C8E52D2B"
-				item: "appliede:wireless_transmutation_terminal"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000FCAD49B3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000063927B1"
+					id: "00000000014142F3"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000530E0AEE"
-					table_id: 3968740070L
-					type: "random"
+					id: "000000006F1D661A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appliede"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000055BDADE9"
-				item: "appliede:emc_interface"
+				id: "00000000A52716DD"
+				item: "appliede:wireless_transmutation_terminal"
 				type: "item"
 			}]
 			x: -1.0d
@@ -195,26 +154,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000787E7B9B"
+			id: "000000007AE29F8A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000EFE4B2E"
+					id: "00000000DD118357"
 					type: "xp"
-					xp: 9
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D3487DE5"
-					table_id: 3968740070L
-					type: "random"
+					id: "0000000094662BBA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appliede"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A79F915D"
+				id: "0000000021D9CFA9"
 				item: "appliede:learning_card"
 				type: "item"
 			}]
@@ -225,26 +189,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A3C3CC72"
+			id: "00000000D50B143C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DECEB641"
+					id: "00000000542F3376"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000009459AFD"
-					table_id: 3968740070L
-					type: "random"
+					id: "000000008A8A6CE9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appliede"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000FC07D6FB"
+				id: "0000000085AF44A5"
 				item: "appliede:emc_import_bus"
 				type: "item"
 			}]
@@ -255,26 +224,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000082B3950A"
+			id: "0000000079A72D46"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B06627D2"
+					id: "000000005DD53ED3"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000011E7A172"
-					table_id: 3968740070L
-					type: "random"
+					id: "000000003DF3EC17"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appliede"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EE652C9B"
+				id: "00000000936FF170"
 				item: "appliede:emc_export_bus"
 				type: "item"
 			}]

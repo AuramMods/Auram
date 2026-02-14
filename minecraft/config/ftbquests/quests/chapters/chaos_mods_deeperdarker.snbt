@@ -2,44 +2,48 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_deeperdarker"
-	group: "00000000DEB299A3"
-	icon: "deeperdarker:gloomslate"
-	id: "00000000C3461CD9"
-	order_index: 120
+	group: "000000008CDEF944"
+	icon: "deeperdarker:polished_gloomslate"
+	id: "00000000C013F57D"
+	order_index: 119
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["00000000584F2314"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000807433FB"
+			id: "000000006E5FF7A7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EA00E40C"
+					id: "00000000CDB41D7B"
 					type: "xp"
-					xp: 14
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000072997C07"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000092FC251C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007C2EBDF5"
+					id: "000000006C6A2D9E"
 					item: "minecraft:emerald"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F4E441A3"
+					id: "000000002B8BA959"
 					item: "deeperdarker:gloomslate_brick_slab"
 					type: "item"
 				}
@@ -48,37 +52,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000003EF53788"]
+			dependencies: ["000000002FAFC9C5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000684B8CD5"
+			id: "000000006A61B341"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DB76540B"
+					id: "00000000685315E8"
 					type: "xp"
-					xp: 21
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000038A771A3"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000587317C3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B520DB53"
+					id: "000000006648A0D5"
 					item: "deeperdarker:gloomslate_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D257B939"
+					id: "00000000C6FC7439"
 					item: "deeperdarker:gloomslate_stairs"
 					type: "item"
 				}
@@ -87,37 +96,45 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000584F2314"]
+			dependencies: [
+				"00000000F10ECCC3"
+				"000000000EB9162F"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E1DD1A76"
+			id: "00000000284C10FE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009A36522E"
+					id: "00000000A2B02D36"
 					type: "xp"
-					xp: 10
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C2485841"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000FC65D882"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E2CB520A"
+					id: "00000000A84766C2"
 					item: "deeperdarker:gloomslate_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000B6E3839"
+					id: "00000000B8BD3A07"
 					item: "deeperdarker:gloomslate_brick_wall"
 					type: "item"
 				}
@@ -126,37 +143,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000F10EB03A"]
+			dependencies: ["000000000EB9162F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000414F4E21"
+			id: "0000000023B62229"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000304D144D"
+					id: "00000000D6E010D5"
 					type: "xp"
-					xp: 18
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004799F422"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000CE5795E8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003E95ECE6"
+					id: "00000000EDA4D7FB"
 					item: "deeperdarker:chiseled_gloomslate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002FF41308"
+					id: "00000000E75CE9CF"
 					item: "deeperdarker:chiseled_sculk_stone"
 					type: "item"
 				}
@@ -165,37 +187,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F7DEDF0D"
+			id: "000000000310D949"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000080C88E38"
+					id: "00000000300CA6FA"
 					type: "xp"
-					xp: 7
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000251E14CB"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000A4DCB901"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D9742C09"
+					id: "00000000F6DA4869"
 					item: "deeperdarker:bloom_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D541DD14"
+					id: "00000000699A22AE"
 					item: "deeperdarker:bloom_trapdoor"
 					type: "item"
 				}
@@ -204,37 +231,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EF1F4CCD"
+			id: "0000000043C1EA88"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000055D0ADE4"
+					id: "00000000ACDCED22"
 					type: "xp"
-					xp: 4
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000095D11131"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000003332843D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F79EC878"
+					id: "0000000097FA3340"
 					item: "deeperdarker:bloom_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004F82D68E"
+					id: "0000000052D0213B"
 					item: "deeperdarker:bloom_slab"
 					type: "item"
 				}
@@ -243,37 +275,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009FB97C3D"
+			id: "000000003D42643D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000FC7C5D9"
+					id: "00000000B26B7D5A"
 					type: "xp"
-					xp: 18
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D7C9C68A"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000F78F43F5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000876F73D7"
+					id: "00000000758B6CDC"
 					item: "deeperdarker:bloom_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E8BFF43D"
+					id: "00000000AF139BFF"
 					item: "deeperdarker:bloom_pressure_plate"
 					type: "item"
 				}
@@ -282,37 +319,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000D0B85C7"
+			id: "00000000BAB5AE4E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000051B8C66C"
+					id: "000000007D0CF95D"
 					type: "xp"
-					xp: 16
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001F374198"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000DC7ECF1F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B6E6FC60"
+					id: "0000000090F0A9E7"
 					item: "deeperdarker:bloom_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FD183CAD"
+					id: "000000007CB03982"
 					item: "deeperdarker:bloom_fence_gate"
 					type: "item"
 				}
@@ -321,37 +363,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006C3BD5FB"
+			id: "0000000013066F64"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000046099E86"
+					id: "00000000A48DD082"
 					type: "xp"
-					xp: 5
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000713E4C61"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000222C5F46"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D217B158"
+					id: "000000004C287907"
 					item: "deeperdarker:bloom_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CB7CA454"
+					id: "000000002A188691"
 					item: "deeperdarker:bloom_door"
 					type: "item"
 				}
@@ -360,36 +407,41 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000D53A557A"]
+			dependencies: ["000000002390385A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000666DBDC8"
+			id: "000000005FDA6A1B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000026E3707"
+					id: "0000000053468B20"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000063C05EB1"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000BBAD0158"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002102DA94"
+					id: "000000001014E833"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000002BD1253"
+					id: "0000000019469BCC"
 					item: "deeperdarker:bloom_chest_boat"
 					type: "item"
 				}
@@ -401,33 +453,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000018EB0DE5"
+			id: "000000007DD661E8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000872C080A"
+					id: "00000000282CE239"
 					type: "xp"
-					xp: 14
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009F9475E3"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000C87ADAD9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000044C75DC4"
+					id: "0000000052C962F8"
 					item: "deeperdarker:cobbled_sculk_stone_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D50B5A08"
+					id: "0000000069C937C8"
 					item: "deeperdarker:cobbled_sculk_stone_stairs"
 					type: "item"
 				}
@@ -439,33 +496,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000586E6921"
+			id: "00000000FF4D9124"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000523FD58F"
+					id: "000000006F414A33"
 					type: "xp"
-					xp: 15
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007B6C30B9"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000030BA4B12"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000072C0D6A2"
+					id: "000000005E6A81DB"
 					item: "deeperdarker:cobbled_gloomslate_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001CF9C98E"
+					id: "0000000091D5D79F"
 					item: "deeperdarker:cobbled_gloomslate_wall"
 					type: "item"
 				}
@@ -477,33 +539,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000481E2BB7"
+			id: "00000000D7B41236"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008473C15C"
+					id: "00000000A79E7FA8"
 					type: "xp"
-					xp: 15
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003BFFC64D"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000CA66E27E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DA45833B"
+					id: "00000000DDE2DC4C"
 					item: "minecraft:coal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F24803CD"
+					id: "00000000B53233A7"
 					item: "deeperdarker:cobbled_gloomslate_slab"
 					type: "item"
 				}
@@ -512,37 +579,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000003EF53788"]
+			dependencies: ["000000002FAFC9C5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003C8629D7"
+			id: "0000000048E6B36B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008849220E"
+					id: "0000000003E31199"
 					type: "xp"
-					xp: 17
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E32A1B66"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000E9AF1106"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000096B303E4"
+					id: "0000000093AB33EB"
 					item: "deeperdarker:gloomslate_tile_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000012A944DF"
+					id: "0000000071EA8870"
 					item: "deeperdarker:gloomslate_wall"
 					type: "item"
 				}
@@ -551,37 +623,45 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000584F2314"]
+			dependencies: [
+				"000000008359B8F8"
+				"00000000F10ECCC3"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000389DAE01"
+			id: "00000000791F9D36"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EBB983B5"
+					id: "000000000134528F"
 					type: "xp"
-					xp: 17
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008543E7B3"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000009FA023C8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008A5F1E9C"
+					id: "000000005E0D5A18"
 					item: "deeperdarker:gloomslate_tile_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000769279C9"
+					id: "00000000B505C833"
 					item: "deeperdarker:gloomslate_tile_stairs"
 					type: "item"
 				}
@@ -590,37 +670,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000AF78CA48"]
+			dependencies: ["00000000F10ECCC3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BCAA17EF"
+			id: "00000000755744F3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B6A76C70"
+					id: "00000000E6FB9A60"
 					type: "xp"
-					xp: 21
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000779E9CBA"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000006AC44577"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000095AC07EF"
+					id: "00000000B02F2D3A"
 					item: "minecraft:lapis_lazuli"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003530D0D3"
+					id: "000000005697C758"
 					item: "deeperdarker:polished_gloomslate_slab"
 					type: "item"
 				}
@@ -630,39 +715,44 @@
 		}
 		{
 			dependencies: [
-				"00000000277FB445"
-				"000000003EF53788"
+				"000000002FAFC9C5"
+				"00000000E22AC98F"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F718D717"
+			id: "00000000F1626A63"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000654907E2"
+					id: "00000000AD8FE4BD"
 					type: "xp"
-					xp: 5
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000005E3227A"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000033B1C0A3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000093853792"
+					id: "00000000FC72891A"
 					item: "deeperdarker:bloom_planks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009217260F"
+					id: "00000000068ABEC4"
 					item: "deeperdarker:echo_planks"
 					type: "item"
 				}
@@ -674,33 +764,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006885480A"
+			id: "0000000082F6E472"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000926C4677"
+					id: "00000000CB68ACB6"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CB879217"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000C8A6515F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009219154D"
+					id: "000000009AF9163D"
 					item: "minecraft:gold_ingot"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008FB2FFCF"
+					id: "000000009934A905"
 					item: "minecraft:iron_ingot"
 					type: "item"
 				}
@@ -709,74 +804,86 @@
 			y: 5.0d
 		}
 		{
+			dependencies: ["00000000F10ECCC3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AF78CA48"
+			id: "000000000EB9162F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000659959D6"
+					id: "00000000EA58AF15"
 					type: "xp"
-					xp: 13
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000337C6D06"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000063FC0B3C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009887E2F0"
-					item: "deeperdarker:grime_brick"
+					id: "00000000B8A61B9B"
+					item: "deeperdarker:gloomslate_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C11A4110"
-					item: "deeperdarker:polished_gloomslate"
+					id: "000000008B2FF426"
+					item: "deeperdarker:grime_brick"
 					type: "item"
 				}
 			]
-			x: -7.0d
-			y: 2.0d
+			x: -6.0d
+			y: 1.0d
 		}
 		{
+			dependencies: ["000000001B4E5DAA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000332A4435"
+			id: "000000004373E1E9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007B8255EF"
+					id: "00000000C7CB9FB4"
 					type: "xp"
-					xp: 11
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B84C7793"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000B8CE20F0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A404C26C"
+					id: "00000000F5CF122C"
 					item: "deeperdarker:polished_sculk_stone_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006C1F5C2C"
+					id: "000000002C1E5F04"
 					item: "deeperdarker:polished_sculk_stone_stairs"
 					type: "item"
 				}
@@ -785,37 +892,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000003EF53788"]
+			dependencies: ["000000002FAFC9C5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006A03CD53"
+			id: "000000001B4E5DAA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BA5E2E84"
+					id: "0000000029A8BACC"
 					type: "xp"
-					xp: 17
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000037C1E7B5"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000004C608C9F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B01AA33F"
+					id: "0000000020C09F99"
 					item: "deeperdarker:polished_sculk_stone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009C89364F"
+					id: "00000000AE3237EB"
 					item: "deeperdarker:smooth_gloomslate"
 					type: "item"
 				}
@@ -824,37 +936,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000AF78CA48"]
+			dependencies: ["00000000F10ECCC3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008C836AFA"
+			id: "0000000067352E1F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F1B3DB23"
+					id: "000000000CCD00DE"
 					type: "xp"
-					xp: 13
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009A6C158E"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000F7C1696F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006364D0D6"
+					id: "00000000E3FD9CC1"
 					item: "deeperdarker:polished_gloomslate_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005A612484"
+					id: "000000003F2FDF11"
 					item: "deeperdarker:polished_gloomslate_wall"
 					type: "item"
 				}
@@ -863,30 +980,35 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000277FB445"]
+			dependencies: ["00000000F10ECCC3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000044A14217"
+			id: "000000007AE2261C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000078180554"
+					id: "00000000736D177D"
 					type: "xp"
-					xp: 9
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000075DE2FEC"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000DA5B6745"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000BCF6DB95"
+				id: "0000000058368DF9"
 				item: "deeperdarker:smooth_sculk_stone"
 				type: "item"
 			}]
@@ -894,36 +1016,42 @@
 			y: 3.0d
 		}
 		{
+			dependencies: ["000000001B4E5DAA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006D56D90C"
+			id: "00000000C0B41765"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008AA3864B"
+					id: "00000000E94C6CC2"
 					type: "xp"
-					xp: 17
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004C707F90"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000009CC00C09"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000067B968BC"
+					id: "00000000DD5A88E4"
 					item: "deeperdarker:polished_sculk_stone_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000185F38A2"
+					id: "00000000444ECD59"
 					item: "minecraft:redstone"
 					type: "item"
 				}
@@ -935,30 +1063,76 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007F315081"
+			id: "00000000AE85D2D2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000041A762BA"
+					id: "00000000BB79F6EA"
 					type: "xp"
-					xp: 1
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000081772A4A"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000B21473F9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000019D7738F"
+				item: {
+					Count: 1
+					id: "deeperdarker:warden_sword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D6D87404"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000027C825DF"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000000FC1C7BD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000041A12C8A"
+					id: "00000000EDCE202A"
 					item: {
 						Count: 1
-						id: "deeperdarker:warden_shovel"
+						id: "deeperdarker:warden_pickaxe"
 						tag: {
 							Damage: 0
 						}
@@ -967,10 +1141,10 @@
 				}
 				{
 					consume_items: false
-					id: "00000000E415CE58"
+					id: "000000002EFF9AF7"
 					item: {
 						Count: 1
-						id: "deeperdarker:warden_sword"
+						id: "deeperdarker:warden_shovel"
 						tag: {
 							Damage: 0
 						}
@@ -982,37 +1156,45 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000D53A557A"]
+			dependencies: [
+				"000000002390385A"
+				"000000001B4E5DAA"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E732688D"
+			id: "0000000038B9DF16"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AF8455FA"
+					id: "00000000EF494C65"
 					type: "xp"
-					xp: 15
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000968DB2BC"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000DBDD293A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005B32FBE6"
+					id: "0000000009B2CBE6"
 					item: "deeperdarker:cut_gloomslate_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000035746C22"
+					id: "00000000AD90B20A"
 					item: "deeperdarker:cut_gloomslate_stairs"
 					type: "item"
 				}
@@ -1024,33 +1206,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001561B375"
+			id: "00000000A568A24A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E80A8E0C"
+					id: "00000000C7B7DD96"
 					type: "xp"
-					xp: 2
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A95B9FD3"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000001035A0D8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E4A57957"
+					id: "0000000088A707B4"
 					item: "deeperdarker:cobbled_sculk_stone_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003722712A"
+					id: "0000000042A7D2B0"
 					item: "minecraft:copper_ingot"
 					type: "item"
 				}
@@ -1060,39 +1247,44 @@
 		}
 		{
 			dependencies: [
-				"00000000C6A2B60E"
-				"0000000044A14217"
+				"00000000F8B69461"
+				"000000007AE2261C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A9799BBA"
+			id: "000000005F5BE0D1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ECAACC4F"
+					id: "00000000DA205EEB"
 					type: "xp"
-					xp: 14
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C6ECA2D3"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000A698D698"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000016297257"
+					id: "0000000015E91E96"
 					item: "deeperdarker:cut_sculk_stone_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003B0A0BE2"
+					id: "0000000056510E30"
 					item: "deeperdarker:cut_sculk_stone_wall"
 					type: "item"
 				}
@@ -1102,39 +1294,44 @@
 		}
 		{
 			dependencies: [
-				"00000000C6A2B60E"
-				"000000006A03CD53"
+				"000000002390385A"
+				"00000000F8B69461"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BCC8B4C6"
+			id: "00000000B4052EF3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000919B3CCB"
+					id: "00000000E87B8604"
 					type: "xp"
-					xp: 19
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EC5D4CFD"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000005BEF3608"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D8353A06"
+					id: "000000005060DC91"
 					item: "deeperdarker:cut_gloomslate_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000028BBB140"
+					id: "0000000085E9F901"
 					item: "deeperdarker:cut_sculk_stone_slab"
 					type: "item"
 				}
@@ -1143,37 +1340,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000066B2CB24"
+			id: "00000000F6296646"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000460E6D48"
+					id: "000000004E5B21F8"
 					type: "xp"
-					xp: 16
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000036394F4B"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000008CD0C160"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007674507E"
+					id: "000000005344113C"
 					item: "deeperdarker:echo_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000097DAA6F0"
+					id: "000000000080C454"
 					item: "deeperdarker:echo_door"
 					type: "item"
 				}
@@ -1182,37 +1384,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000C6A2B60E"]
+			dependencies: ["00000000F8B69461"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000005E261E7"
+			id: "000000006C965FE1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C6FFFC71"
+					id: "00000000794E08F4"
 					type: "xp"
-					xp: 1
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000077D28FDB"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000E4B5D3DC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000085E5EE34"
+					id: "00000000C931E38C"
 					item: "minecraft:diamond"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D5E1DA35"
+					id: "000000007E7BB54C"
 					item: "deeperdarker:echo_chest_boat"
 					type: "item"
 				}
@@ -1221,37 +1428,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007D42BFAF"
+			id: "00000000838606F2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009762C3C1"
+					id: "000000005B2F433B"
 					type: "xp"
-					xp: 9
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000098BFC919"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000054698791"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000B3A6F18"
+					id: "00000000763B2F6F"
 					item: "deeperdarker:echo_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000056D006EC"
+					id: "00000000423B799C"
 					item: "deeperdarker:echo_pressure_plate"
 					type: "item"
 				}
@@ -1260,37 +1472,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FBF2B288"
+			id: "00000000CCB08533"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000060AEA951"
+					id: "00000000911D68B9"
 					type: "xp"
-					xp: 13
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000083857AE0"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000E3D3294B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000020B889FA"
+					id: "00000000EA1F9DF5"
 					item: "deeperdarker:echo_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B1E18280"
+					id: "000000009007ABAF"
 					item: "deeperdarker:echo_fence_gate"
 					type: "item"
 				}
@@ -1299,37 +1516,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006B27003A"
+			id: "00000000F3FF8B1F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CBF6A2BF"
+					id: "0000000080AF64CF"
 					type: "xp"
-					xp: 16
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000076664C31"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000000C4C2D40"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000838C5906"
+					id: "00000000AA14030E"
 					item: "deeperdarker:echo_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000053B70D8"
+					id: "000000003760DC7D"
 					item: "deeperdarker:echo_trapdoor"
 					type: "item"
 				}
@@ -1338,37 +1560,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000F718D717"]
+			dependencies: ["00000000F1626A63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002FFF58C5"
+			id: "00000000754A97D3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DBC650C7"
+					id: "00000000C07CA401"
 					type: "xp"
-					xp: 18
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000567A431"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000068B0019C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004F03B256"
+					id: "00000000DA96D833"
 					item: "deeperdarker:echo_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000126DCD88"
+					id: "00000000379D3FBB"
 					item: "deeperdarker:echo_slab"
 					type: "item"
 				}
@@ -1377,38 +1604,43 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000AF78CA48"]
+			dependencies: ["000000000EB9162F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000584F2314"
+			id: "000000008359B8F8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D9CB0B43"
+					id: "00000000D5C1A1AB"
 					type: "xp"
-					xp: 13
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004B8BCB81"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000007B2EF82A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000005B53BE3"
-					item: "deeperdarker:gloomslate_bricks"
+					id: "00000000943BF96F"
+					item: "deeperdarker:gloomslate_tiles"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F3EE19C7"
-					item: "deeperdarker:gloomslate_tiles"
+					id: "00000000E7E7AF0F"
+					item: "deeperdarker:sculk_grime_bricks"
 					type: "item"
 				}
 			]
@@ -1416,79 +1648,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"00000000AF78CA48"
-				"000000006A03CD53"
-			]
+			dependencies: ["000000001B4E5DAA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F10EB03A"
+			id: "000000005B341130"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000095EFC7AE"
+					id: "00000000C24CEFEC"
 					type: "xp"
-					xp: 9
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000210633D"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000004201DEA6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000691A9462"
-					item: "deeperdarker:sculk_grime_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A9F6B7F9"
-					item: "deeperdarker:sculk_stone_brick_slab"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000006A03CD53"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000304BD7AC"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005C7C085E"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C2A2FD1E"
-					table_id: 1800811440L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C1E6EAD4"
+					id: "0000000060AE2A9B"
 					item: "deeperdarker:sculk_stone_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000376297D1"
+					id: "000000003D7FB367"
 					item: "deeperdarker:sculk_stone_tiles"
 					type: "item"
 				}
@@ -1497,38 +1692,46 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000304BD7AC"]
+			dependencies: [
+				"000000005B341130"
+				"000000001B4E5DAA"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001EB9C758"
+			id: "000000008BC89BDB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000096728913"
+					id: "00000000FF4ABA5C"
 					type: "xp"
-					xp: 4
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EA7F308F"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000008389CD87"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001B1000C6"
-					item: "deeperdarker:sculk_stone_tile_stairs"
+					id: "000000006978ECD8"
+					item: "deeperdarker:sculk_stone_tile_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005B41E256"
-					item: "deeperdarker:sculk_stone_tile_wall"
+					id: "00000000F9A4AFA5"
+					item: "deeperdarker:sculk_stone_tile_stairs"
 					type: "item"
 				}
 			]
@@ -1536,38 +1739,43 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000006A03CD53"]
+			dependencies: ["000000001B4E5DAA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AE467C89"
+			id: "000000009179AF2E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EA77B587"
+					id: "0000000060287C5C"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003D833ABD"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000088C0C73A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005221E79E"
-					item: "deeperdarker:smooth_gloomslate_slab"
+					id: "00000000DFA1E081"
+					item: "deeperdarker:warden_upgrade_smithing_template"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000085C3634B"
-					item: "deeperdarker:smooth_gloomslate_stairs"
+					id: "00000000A47EB644"
+					item: "deeperdarker:smooth_gloomslate_slab"
 					type: "item"
 				}
 			]
@@ -1575,38 +1783,46 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000277FB445"]
+			dependencies: [
+				"000000005B341130"
+				"00000000F10ECCC3"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005F9CF6F7"
+			id: "000000001A52B9EE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F9CDB128"
+					id: "00000000A7DBBDF2"
 					type: "xp"
-					xp: 14
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000063281BE3"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000EDEA0621"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000006505F6A"
-					item: "deeperdarker:sculk_stone_wall"
+					id: "00000000C7C8E630"
+					item: "deeperdarker:sculk_stone_tile_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000078948DCF"
-					item: "deeperdarker:warden_upgrade_smithing_template"
+					id: "00000000FE22139D"
+					item: "deeperdarker:sculk_stone_wall"
 					type: "item"
 				}
 			]
@@ -1615,39 +1831,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F718D717"
-				"000000006A03CD53"
+				"00000000F1626A63"
+				"000000001B4E5DAA"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D53A557A"
+			id: "000000002390385A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F7D3E329"
+					id: "00000000AACD368F"
 					type: "xp"
-					xp: 17
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FEF6CA65"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000F70ADDDD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000294AA5FE"
+					id: "00000000A288798D"
 					item: "deeperdarker:bloom_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EAC4BC34"
+					id: "00000000EA8CB8F2"
 					item: "deeperdarker:cut_gloomslate"
 					type: "item"
 				}
@@ -1656,38 +1877,43 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000044A14217"]
+			dependencies: ["000000007AE2261C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008F0ABC2C"
+			id: "00000000898CEBF6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FA3B287C"
+					id: "00000000A1A64339"
 					type: "xp"
-					xp: 3
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A4F08C77"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000E3D9ECA5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007BFF4F70"
-					item: "deeperdarker:smooth_sculk_stone_stairs"
+					id: "00000000835BEAF6"
+					item: "deeperdarker:smooth_sculk_stone_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000067D9BF55"
-					item: "deeperdarker:smooth_sculk_stone_wall"
+					id: "0000000012A08874"
+					item: "deeperdarker:smooth_sculk_stone_stairs"
 					type: "item"
 				}
 			]
@@ -1696,39 +1922,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F718D717"
-				"0000000044A14217"
+				"00000000F1626A63"
+				"000000007AE2261C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C6A2B60E"
+			id: "00000000F8B69461"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004A7B0D80"
+					id: "00000000078E3DEB"
 					type: "xp"
-					xp: 14
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000032506362"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000B9BD93BA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E9C17D35"
+					id: "00000000B003394F"
 					item: "deeperdarker:cut_sculk_stone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E2E687F3"
+					id: "00000000A94598D3"
 					item: "deeperdarker:echo_boat"
 					type: "item"
 				}
@@ -1737,41 +1968,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000006A03CD53"
-				"0000000044A14217"
-			]
+			dependencies: ["000000001B4E5DAA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001C10C85D"
+			id: "0000000020EDCB64"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008ACD5369"
+					id: "00000000FB258629"
 					type: "xp"
-					xp: 3
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A0B6BFA4"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000009FE45A39"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C02C0762"
-					item: "deeperdarker:smooth_gloomslate_wall"
+					id: "000000009998EB72"
+					item: "deeperdarker:smooth_gloomslate_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E25FBCEB"
-					item: "deeperdarker:smooth_sculk_stone_slab"
+					id: "00000000A1EAEF1E"
+					item: "deeperdarker:smooth_gloomslate_wall"
 					type: "item"
 				}
 			]
@@ -1782,159 +2015,75 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000277FB445"
+			id: "00000000F10ECCC3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EDA599A5"
+					id: "00000000AC6EFF19"
 					type: "xp"
-					xp: 7
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007C08037D"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000009E228BD7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000096CAFBE3"
+					id: "0000000087067916"
+					item: "deeperdarker:polished_gloomslate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000096CA77FE"
 					item: "deeperdarker:sculk_stone"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "000000003204FB3F"
-					item: "deeperdarker:stripped_echo_wood"
-					type: "item"
-				}
 			]
-			x: -8.0d
-			y: 0.0d
+			x: -7.0d
+			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FD9F7B93"
+			id: "000000005516EAB0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008095D9CE"
+					id: "000000006608FDA0"
 					type: "xp"
-					xp: 15
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D786B9AE"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000008125254E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A849C9A8"
-					item: "deeperdarker:soundproof_glass"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E44C593F"
-					item: {
-						Count: 1
-						id: "deeperdarker:warden_axe"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003EF53788"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006CE48CE7"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006BC9686B"
-					table_id: 1800811440L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000085E29216"
-					item: "deeperdarker:echo_wood"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F065245F"
-					item: "deeperdarker:gloomslate"
-					type: "item"
-				}
-			]
-			x: -8.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000026B83D0F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DDB65AFE"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D6FB9CD8"
-					table_id: 1800811440L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005928013D"
-					item: {
-						Count: 1
-						id: "deeperdarker:sonorous_staff"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009BFFC17A"
+					id: "000000009AD9252B"
 					item: {
 						Count: 1
 						id: "deeperdarker:soul_elytra"
@@ -1944,6 +2093,105 @@
 					}
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "000000008F8A4594"
+					item: "deeperdarker:soundproof_glass"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002FAFC9C5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008B3B2956"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000007DD88287"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009D01AFFD"
+					item: "deeperdarker:echo_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBFDD577"
+					item: "deeperdarker:gloomslate"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000007AE2261C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007EE64BEB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000047BF3D4E"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "000000008C9356B8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F6B38D99"
+					item: "deeperdarker:smooth_sculk_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000085F72AF"
+					item: {
+						Count: 1
+						id: "deeperdarker:sonorous_staff"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
 			]
 			x: -4.0d
 			y: 5.0d
@@ -1952,30 +2200,35 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007F1E77D7"
+			id: "00000000FFA7DFA5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000053A7325D"
+					id: "000000002AF2F205"
 					type: "xp"
-					xp: 11
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002A3CC183"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000000E5ECD20"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000003F1C5A2"
+					id: "00000000E8EF6547"
 					item: {
 						Count: 1
-						id: "deeperdarker:warden_helmet"
+						id: "deeperdarker:warden_chestplate"
 						tag: {
 							Damage: 0
 						}
@@ -1984,10 +2237,10 @@
 				}
 				{
 					consume_items: false
-					id: "0000000025E4A993"
+					id: "00000000FD05399E"
 					item: {
 						Count: 1
-						id: "deeperdarker:warden_hoe"
+						id: "deeperdarker:warden_helmet"
 						tag: {
 							Damage: 0
 						}
@@ -2002,30 +2255,70 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D82F6620"
+			id: "00000000E22AC98F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000059A221F8"
+					id: "0000000077F4E834"
 					type: "xp"
-					xp: 14
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D0BC9ABB"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000005FC637F1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "000000002794191B"
+				item: "deeperdarker:stripped_echo_wood"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002A0258FD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000060440AE5"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "00000000C47B5A89"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008227DAA2"
+					id: "0000000034D28011"
 					item: {
 						Count: 1
-						id: "deeperdarker:warden_boots"
+						id: "deeperdarker:warden_axe"
 						tag: {
 							Damage: 0
 						}
@@ -2034,10 +2327,10 @@
 				}
 				{
 					consume_items: false
-					id: "00000000B689C154"
+					id: "000000000F6980ED"
 					item: {
 						Count: 1
-						id: "deeperdarker:warden_chestplate"
+						id: "deeperdarker:warden_boots"
 						tag: {
 							Damage: 0
 						}
@@ -2052,30 +2345,35 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000183A4142"
+			id: "00000000C79C45EE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005B5D62BA"
+					id: "000000007A3A4F30"
 					type: "xp"
-					xp: 5
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BB646DB4"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000F1E035C2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000489A64B3"
+					id: "000000008BB26599"
 					item: {
 						Count: 1
-						id: "deeperdarker:warden_leggings"
+						id: "deeperdarker:warden_hoe"
 						tag: {
 							Damage: 0
 						}
@@ -2084,10 +2382,10 @@
 				}
 				{
 					consume_items: false
-					id: "0000000080E24FD2"
+					id: "000000000D30F22C"
 					item: {
 						Count: 1
-						id: "deeperdarker:warden_pickaxe"
+						id: "deeperdarker:warden_leggings"
 						tag: {
 							Damage: 0
 						}
@@ -2102,27 +2400,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004E0AB334"
+			id: "0000000080FB95EA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000028722DD9"
+					id: "00000000EF055EC6"
 					type: "xp"
-					xp: 14
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005FC8F3D8"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000015EE6C51"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A0E36D12"
+					id: "00000000E8C1A3DA"
 					item: {
 						Count: 1
 						id: "deeperdarker:resonarium_boots"
@@ -2134,7 +2437,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000AA55B16C"
+					id: "000000003006AE75"
 					item: {
 						Count: 1
 						id: "deeperdarker:resonarium_chestplate"
@@ -2152,33 +2455,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C4528F9B"
+			id: "0000000049A0B867"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EA646261"
+					id: "000000000910B287"
 					type: "xp"
-					xp: 17
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A5F0D9B6"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000F5BB132F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007D8A6AA0"
+					id: "00000000BF59B2DB"
 					item: "deeperdarker:reinforced_echo_shard"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007E171DB6"
+					id: "000000003A79F4D2"
 					item: {
 						Count: 1
 						id: "deeperdarker:resonarium_axe"
@@ -2196,27 +2504,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008B156F2D"
+			id: "00000000A04A366C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000D3B228F"
+					id: "00000000A600DAF3"
 					type: "xp"
-					xp: 10
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003C9EB96C"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000AD679F35"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009A24C7F7"
+					id: "00000000280DC0E4"
 					item: {
 						Count: 1
 						id: "deeperdarker:resonarium_leggings"
@@ -2228,7 +2541,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000B68583D6"
+					id: "00000000E641C605"
 					item: {
 						Count: 1
 						id: "deeperdarker:resonarium_pickaxe"
@@ -2246,27 +2559,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EE34566A"
+			id: "0000000075FA21A0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000F0C89B8"
+					id: "000000000A55DBC7"
 					type: "xp"
-					xp: 5
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000050A5D280"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000AAB99BCB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F36C8B03"
+					id: "000000006C07CC8B"
 					item: {
 						Count: 1
 						id: "deeperdarker:resonarium_helmet"
@@ -2278,7 +2596,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000BC2E2EB5"
+					id: "00000000471D0257"
 					item: {
 						Count: 1
 						id: "deeperdarker:resonarium_hoe"
@@ -2296,27 +2614,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001827CCF6"
+			id: "00000000A49EF89D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004916F5CF"
+					id: "000000007310FACF"
 					type: "xp"
-					xp: 8
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000014744583"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000002FCDE01"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009F29789E"
+					id: "0000000089656062"
 					item: {
 						Count: 1
 						id: "deeperdarker:resonarium_sword"
@@ -2328,7 +2651,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000425CA2F5"
+					id: "00000000BE3C6FB8"
 					item: "deeperdarker:sculk_grime"
 					type: "item"
 				}
@@ -2340,33 +2663,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004E328921"
+			id: "0000000098855900"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B67A2BC1"
+					id: "00000000E839D642"
 					type: "xp"
 					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D51ADFFA"
-					table_id: 1800811440L
-					type: "random"
+					id: "00000000A1A51583"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AFB89707"
+					id: "00000000E35A9020"
 					item: "deeperdarker:resonarium_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000059B38A92"
+					id: "000000009EEC013B"
 					item: {
 						Count: 1
 						id: "deeperdarker:resonarium_shovel"
@@ -2382,40 +2710,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F10EB03A"
-				"00000000304BD7AC"
+				"000000008359B8F8"
+				"000000005B341130"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008C172356"
+			id: "000000006552501C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000264A6C49"
+					id: "00000000250F4D1E"
 					type: "xp"
-					xp: 16
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000095FC9D50"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000027FCDD4F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D1015C27"
+					id: "00000000CDEFA940"
 					item: "deeperdarker:sculk_grime_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DED7968B"
-					item: "deeperdarker:sculk_stone_brick_stairs"
+					id: "0000000052127530"
+					item: "deeperdarker:sculk_stone_brick_slab"
 					type: "item"
 				}
 			]
@@ -2423,37 +2756,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000F10EB03A"]
+			dependencies: ["000000008359B8F8"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C209B790"
+			id: "0000000056E3F535"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AD2C6EE7"
+					id: "0000000018D9CC5C"
 					type: "xp"
-					xp: 1
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DB027BF3"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000077575013"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000018AB3101"
+					id: "0000000017730D5E"
 					item: "deeperdarker:sculk_grime_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000092309513"
+					id: "00000000EE979D69"
 					item: "deeperdarker:sculk_grime_brick_stairs"
 					type: "item"
 				}
@@ -2462,38 +2800,43 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000277FB445"]
+			dependencies: ["00000000F10ECCC3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006F90FF04"
+			id: "00000000043F44A3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F4D8BB1A"
+					id: "00000000631D7DF9"
 					type: "xp"
-					xp: 11
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E9C331BD"
-					table_id: 1800811440L
-					type: "random"
+					id: "0000000059C7B89A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001B9DD1C0"
-					item: "deeperdarker:sculk_stone_stairs"
+					id: "00000000F64372E0"
+					item: "deeperdarker:sculk_stone_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001B5DA30F"
-					item: "deeperdarker:sculk_stone_tile_slab"
+					id: "000000001D6B756D"
+					item: "deeperdarker:sculk_stone_stairs"
 					type: "item"
 				}
 			]
@@ -2501,41 +2844,43 @@
 			y: 9.0d
 		}
 		{
-			dependencies: [
-				"00000000304BD7AC"
-				"00000000277FB445"
-			]
+			dependencies: ["000000001B4E5DAA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008787D29B"
+			id: "0000000058F78164"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E0D10C16"
+					id: "00000000B59FB321"
 					type: "xp"
-					xp: 2
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000094FA3955"
-					table_id: 1800811440L
-					type: "random"
+					id: "000000000F2BCCB8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deeperdarker"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E5448242"
-					item: "deeperdarker:sculk_stone_brick_wall"
+					id: "00000000091260AF"
+					item: "deeperdarker:sculk_stone_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000603EE9F4"
-					item: "deeperdarker:sculk_stone_slab"
+					id: "000000005D8C1CA9"
+					item: "deeperdarker:sculk_stone_brick_wall"
 					type: "item"
 				}
 			]

@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_rftoolsbase"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "rftoolsbase:machine_base"
-	id: "00000000AED84BEA"
+	id: "00000000208A57F5"
 	order_index: 63
 	quest_links: [ ]
 	quests: [
@@ -12,26 +12,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000021355B31"
+			id: "00000000040DDE57"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000762B1948"
+					id: "00000000F78E2404"
 					type: "xp"
-					xp: 10
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000036C5AE07"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000428850BF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000BD59FBF8"
+				id: "00000000847E85C5"
 				item: "rftoolsbase:manual"
 				type: "item"
 			}]
@@ -42,26 +47,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000476465A8"
+			id: "000000000544F841"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005A5CC115"
+					id: "00000000E7ADEF5D"
 					type: "xp"
-					xp: 6
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000090AC76BD"
-					table_id: 104237786L
-					type: "random"
+					id: "0000000068D0EC9C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B18A7B7C"
+				id: "00000000F8E25594"
 				item: "rftoolsbase:tablet"
 				type: "item"
 			}]
@@ -69,30 +79,35 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000A3D5A18D"]
+			dependencies: ["0000000068AF49F8"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D1DB6BAF"
+			id: "00000000B0EA3EB4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000A5B36C9"
+					id: "00000000B86AD578"
 					type: "xp"
 					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000076426596"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000EB517DE5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002D2B65C4"
+				id: "0000000091EA205C"
 				item: "rftoolsbase:infused_enderpearl"
 				type: "item"
 			}]
@@ -100,30 +115,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000A3D5A18D"]
+			dependencies: ["0000000068AF49F8"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000635C9C85"
+			id: "00000000E01CBDB4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009194904C"
+					id: "000000002D0C098E"
 					type: "xp"
-					xp: 1
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000027BF73BA"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000A16A2D75"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000001435C5D"
+				id: "00000000B036077A"
 				item: "rftoolsbase:infused_diamond"
 				type: "item"
 			}]
@@ -134,26 +154,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003818DBCA"
+			id: "00000000C3F1D0CC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002F094154"
+					id: "000000004E660298"
 					type: "xp"
-					xp: 1
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000C820EAE"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000A791978C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000002FE88297"
+				id: "000000000907F16A"
 				item: "rftoolsbase:machine_base"
 				type: "item"
 			}]
@@ -164,26 +189,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CF66814B"
+			id: "0000000059B60F87"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E0A46456"
+					id: "0000000060EDAFD7"
 					type: "xp"
-					xp: 5
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008D9ECC0A"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000BD42544F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000773FDDD5"
+				id: "000000008E218A4F"
 				item: "rftoolsbase:smartwrench"
 				type: "item"
 			}]
@@ -194,26 +224,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A3D5A18D"
+			id: "0000000068AF49F8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004439B79C"
+					id: "00000000A14DBD4D"
 					type: "xp"
-					xp: 8
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009E78BD6E"
-					table_id: 104237786L
-					type: "random"
+					id: "0000000022E11045"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000B129A83E"
+				id: "00000000C631D46F"
 				item: "rftoolsbase:dimensionalshard"
 				type: "item"
 			}]
@@ -222,32 +257,37 @@
 		}
 		{
 			dependencies: [
-				"00000000A3D5A18D"
-				"0000000027349C68"
+				"0000000068AF49F8"
+				"0000000046FCC670"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D9A10A56"
+			id: "00000000B2719533"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000110E4305"
+					id: "00000000AFAFE841"
 					type: "xp"
-					xp: 5
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008EE9383C"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000281D34DB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000018ACE27E"
+				id: "00000000A23448B5"
 				item: "rftoolsbase:machine_infuser"
 				type: "item"
 			}]
@@ -258,26 +298,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B55B5C48"
+			id: "000000004F1967D1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002A71F730"
+					id: "00000000A62C63BF"
 					type: "xp"
-					xp: 7
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C57C657B"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000698E20E1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000821D5628"
+				id: "000000004663872E"
 				item: "rftoolsbase:crafting_card"
 				type: "item"
 			}]
@@ -288,26 +333,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000027349C68"
+			id: "0000000046FCC670"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000870CA9A4"
+					id: "0000000033114D16"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000986DD428"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000128EF10B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000005FB4406B"
+				id: "00000000AFA1978C"
 				item: "rftoolsbase:machine_frame"
 				type: "item"
 			}]
@@ -315,30 +365,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000003818DBCA"]
+			dependencies: ["00000000C3F1D0CC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AD35FC64"
+			id: "000000005BA58031"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BE89373D"
+					id: "00000000B3F43058"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DD12D72F"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000569AD872"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000368AAB54"
+				id: "000000009877B9A6"
 				item: "rftoolsbase:information_screen"
 				type: "item"
 			}]
@@ -349,26 +404,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E902787C"
+			id: "000000009A267B38"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000889EBD48"
+					id: "000000003ABF9CDD"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F1DA9D96"
-					table_id: 104237786L
-					type: "random"
+					id: "00000000BBAC0910"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_rftoolsbase"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000BE1D37AB"
+				id: "00000000830FC5F6"
 				item: "rftoolsbase:filter_module"
 				type: "item"
 			}]

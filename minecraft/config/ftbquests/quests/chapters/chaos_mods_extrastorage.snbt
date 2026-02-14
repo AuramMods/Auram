@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_extrastorage"
-	group: "00000000DEB299A3"
-	icon: "extrastorage:storagepart_16384k_fluid"
-	id: "0000000012A57CED"
+	group: "000000008CDEF944"
+	icon: "extrastorage:raw_neural_processor"
+	id: "0000000096EE982B"
 	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["00000000DB273E6E"]
+			dependencies: ["00000000D3F9F769"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007E166EB2"
+			id: "00000000F2298679"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EA338D15"
+					id: "00000000199F6498"
 					type: "xp"
-					xp: 10
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000E828970"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000E3906EAE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000008A6B2BAD"
+				id: "0000000078EBECCE"
 				item: "extrastorage:disk_16384k"
 				type: "item"
 			}]
@@ -40,30 +45,35 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000DB273E6E"]
+			dependencies: ["00000000D3F9F769"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005A91DF3A"
+			id: "00000000A0C481C8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F58318D1"
+					id: "000000001462A391"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000649A4235"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000B4A79179"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002AC885BA"
+				id: "00000000816B534D"
 				item: "extrastorage:block_16384k"
 				type: "item"
 			}]
@@ -74,26 +84,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BC1C2CBE"
+			id: "00000000C0646016"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A33FE5FC"
+					id: "00000000C91A6F92"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000871F8A7A"
-					table_id: 1906155424L
-					type: "random"
+					id: "000000002AFB5B43"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A3B9C2A9"
+				id: "000000000C3A02D0"
 				item: "extrastorage:disk_256k"
 				type: "item"
 			}]
@@ -104,26 +119,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006F3FAABE"
+			id: "00000000D76042F9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003822CDD6"
+					id: "000000004EAA0A82"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006CEBFECB"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000E059DB3E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003F0A0E74"
+				id: "000000008EFA121A"
 				item: "extrastorage:block_256k"
 				type: "item"
 			}]
@@ -131,30 +151,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000A74B8290"]
+			dependencies: ["00000000509E80FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000022C7125A"
+			id: "000000005FBBDA28"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000099134584"
+					id: "00000000F870DE2A"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000578E1439"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000C0674EDA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "000000000466AD5C"
+				id: "000000006053D063"
 				item: "extrastorage:neural_processor"
 				type: "item"
 			}]
@@ -162,30 +187,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000B0F4840E"]
+			dependencies: ["00000000A0874FF1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003B9F12DA"
+			id: "000000007C849F8B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000067C1768E"
+					id: "00000000FF905893"
 					type: "xp"
-					xp: 4
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C37224D9"
-					table_id: 1906155424L
-					type: "random"
+					id: "000000001F8631C9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A0884064"
+				id: "000000001775CD25"
 				item: "extrastorage:block_262144k_fluid"
 				type: "item"
 			}]
@@ -194,32 +224,37 @@
 		}
 		{
 			dependencies: [
-				"0000000022C7125A"
-				"00000000B6FFFE5D"
+				"000000005FBBDA28"
+				"000000007AB77020"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A0297227"
+			id: "00000000CCAE594C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000723AE760"
+					id: "0000000064757C05"
 					type: "xp"
-					xp: 4
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002A708C45"
-					table_id: 1906155424L
-					type: "random"
+					id: "0000000057EEC631"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000399019D1"
+				id: "00000000D7256819"
 				item: "extrastorage:netherite_crafter"
 				type: "item"
 			}]
@@ -230,26 +265,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C1A3BD4F"
+			id: "00000000BE3EA9D3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000443BB3C9"
+					id: "0000000085E66F0B"
 					type: "xp"
-					xp: 2
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FA52D419"
-					table_id: 1906155424L
-					type: "random"
+					id: "0000000099A5CBA4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000007D0BA1B0"
+				id: "00000000BE136138"
 				item: "extrastorage:advanced_importer"
 				type: "item"
 			}]
@@ -260,26 +300,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009C838904"
+			id: "000000004A265FD7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FF3E557E"
+					id: "00000000437C9FCA"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000121F077"
-					table_id: 1906155424L
-					type: "random"
+					id: "000000005AB81448"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000904FCA50"
+				id: "00000000E3D7A466"
 				item: "extrastorage:advanced_exporter"
 				type: "item"
 			}]
@@ -287,30 +332,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["0000000057175BB0"]
+			dependencies: ["00000000774E33DE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E2EA421E"
+			id: "00000000557468BB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007C8BFC98"
+					id: "00000000D6940C6D"
 					type: "xp"
-					xp: 5
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000394F8C84"
-					table_id: 1906155424L
-					type: "random"
+					id: "000000006B434131"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000301E94C4"
+				id: "000000002215BAA1"
 				item: "extrastorage:disk_65536k_fluid"
 				type: "item"
 			}]
@@ -318,30 +368,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000057175BB0"]
+			dependencies: ["00000000774E33DE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000006928E15"
+			id: "000000009C4A1F14"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000022CF7812"
+					id: "0000000073244619"
 					type: "xp"
-					xp: 8
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000500C66E8"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000E7293906"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000038C8A562"
+				id: "000000005E86F440"
 				item: "extrastorage:block_65536k_fluid"
 				type: "item"
 			}]
@@ -349,30 +404,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000009EF73150"]
+			dependencies: ["000000001634C2FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000061D93B87"
+			id: "0000000016DDAF1A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C6ECAE4C"
+					id: "000000005A2F7334"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000785DBE52"
-					table_id: 1906155424L
-					type: "random"
+					id: "0000000076F7C354"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000043CE846"
+				id: "000000007389864D"
 				item: "extrastorage:disk_4096k"
 				type: "item"
 			}]
@@ -380,30 +440,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000009EF73150"]
+			dependencies: ["000000001634C2FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000051C3C2B8"
+			id: "00000000CC2D6A84"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000661EA58B"
+					id: "00000000DC9E33E9"
 					type: "xp"
-					xp: 3
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001DC3CDF2"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000C306410B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000087B845D0"
+				id: "00000000FE8A30F6"
 				item: "extrastorage:block_4096k"
 				type: "item"
 			}]
@@ -411,30 +476,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000B0F4840E"]
+			dependencies: ["00000000A0874FF1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AD26560D"
+			id: "000000006265750F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000859E1C76"
+					id: "00000000D30396A9"
 					type: "xp"
-					xp: 5
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D18359FD"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000EA61F500"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DF076721"
+				id: "000000004275000E"
 				item: "extrastorage:disk_262144k_fluid"
 				type: "item"
 			}]
@@ -445,26 +515,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A74B8290"
+			id: "00000000509E80FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008A52B29A"
+					id: "00000000993B1CA5"
 					type: "xp"
-					xp: 8
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005DE44C2D"
-					table_id: 1906155424L
-					type: "random"
+					id: "0000000092CADC69"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000FF8C8AA3"
+				id: "00000000B24D9B8B"
 				item: "extrastorage:raw_neural_processor"
 				type: "item"
 			}]
@@ -475,26 +550,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D6BF6070"
+			id: "000000007E079B93"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006950A0E8"
+					id: "00000000C912CE55"
 					type: "xp"
-					xp: 3
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000042F7603E"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000CD431764"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000A17B687E"
+				id: "000000008B512806"
 				item: "extrastorage:storagepart_16384k_fluid"
 				type: "item"
 			}]
@@ -505,26 +585,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CB20537D"
+			id: "00000000CACD0999"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A8250232"
+					id: "0000000063735FF4"
 					type: "xp"
-					xp: 1
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000000B4E072"
-					table_id: 1906155424L
-					type: "random"
+					id: "0000000038F2E170"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "0000000009FD2723"
+				id: "00000000B043B73E"
 				item: "extrastorage:iron_crafter"
 				type: "item"
 			}]
@@ -532,30 +617,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000D6BF6070"]
+			dependencies: ["000000007E079B93"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000057175BB0"
+			id: "00000000774E33DE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C232ABB1"
+					id: "00000000D3B86601"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007A86720E"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000846319F1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "00000000452E5FC5"
+				id: "00000000C9CB4895"
 				item: "extrastorage:storagepart_65536k_fluid"
 				type: "item"
 			}]
@@ -566,26 +656,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000075D9F5A1"
+			id: "000000009E74A3B2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AEA19582"
+					id: "000000003D2A99BF"
 					type: "xp"
-					xp: 10
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000708DF1DB"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000AB505CB0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "000000008B2932DB"
+				id: "0000000089FA5991"
 				item: "extrastorage:storagepart_1024k"
 				type: "item"
 			}]
@@ -594,32 +689,37 @@
 		}
 		{
 			dependencies: [
-				"0000000022C7125A"
-				"00000000CB20537D"
+				"000000005FBBDA28"
+				"00000000CACD0999"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007DD78B0F"
+			id: "00000000003E0F6A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000070A2D324"
+					id: "00000000CECE2DB5"
 					type: "xp"
-					xp: 9
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000833B60A6"
-					table_id: 1906155424L
-					type: "random"
+					id: "000000001598AA59"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000FF8D6CA0"
+				id: "00000000D36C065D"
 				item: "extrastorage:gold_crafter"
 				type: "item"
 			}]
@@ -627,30 +727,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000B0F4840E"]
+			dependencies: ["00000000A0874FF1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002474735C"
+			id: "0000000029CB76E0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000520B1BFB"
+					id: "000000006DF73230"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007603DFC0"
-					table_id: 1906155424L
-					type: "random"
+					id: "000000000A05A0FC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000B738B993"
+				id: "000000006E93BA45"
 				item: "extrastorage:storagepart_1048576k_fluid"
 				type: "item"
 			}]
@@ -658,30 +763,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000057175BB0"]
+			dependencies: ["00000000774E33DE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B0F4840E"
+			id: "00000000A0874FF1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A685E3D1"
+					id: "00000000E45609BC"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006E4BBD7E"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000BDF5448D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000F420EAF7"
+				id: "00000000EA22703D"
 				item: "extrastorage:storagepart_262144k_fluid"
 				type: "item"
 			}]
@@ -689,30 +799,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000075D9F5A1"]
+			dependencies: ["000000009E74A3B2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009EF73150"
+			id: "000000001634C2FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BBE30350"
+					id: "00000000E26DEDAF"
 					type: "xp"
-					xp: 2
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BBD591BA"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000A9235764"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000D3824B54"
+				id: "000000003DA3835B"
 				item: "extrastorage:storagepart_4096k"
 				type: "item"
 			}]
@@ -720,30 +835,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000009EF73150"]
+			dependencies: ["000000001634C2FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DB273E6E"
+			id: "00000000D3F9F769"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EA40F089"
+					id: "0000000093A7829E"
 					type: "xp"
-					xp: 8
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000050486A50"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000AB1542BE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000003ED402F4"
+				id: "00000000C7B30F59"
 				item: "extrastorage:storagepart_16384k"
 				type: "item"
 			}]
@@ -752,32 +872,37 @@
 		}
 		{
 			dependencies: [
-				"000000007DD78B0F"
-				"0000000022C7125A"
+				"00000000003E0F6A"
+				"000000005FBBDA28"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B6FFFE5D"
+			id: "000000007AB77020"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008D15876F"
+					id: "0000000035717CE6"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006B9F07A2"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000FDEA8F3A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000CC348C67"
+				id: "000000004B6FE114"
 				item: "extrastorage:diamond_crafter"
 				type: "item"
 			}]
@@ -785,30 +910,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000002474735C"]
+			dependencies: ["0000000029CB76E0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AACA2430"
+			id: "00000000EF3E780E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000C57625D"
+					id: "000000001F215524"
 					type: "xp"
-					xp: 5
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002B922915"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000E893ED5C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005F403900"
+				id: "00000000A30AF70F"
 				item: "extrastorage:disk_1048576k_fluid"
 				type: "item"
 			}]
@@ -816,30 +946,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000002474735C"]
+			dependencies: ["0000000029CB76E0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FF3223A4"
+			id: "00000000C9389EA4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000349C28C"
+					id: "00000000EC860CBD"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009C4FE992"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000A0B2CE0D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C783C555"
+				id: "00000000F79691F1"
 				item: "extrastorage:block_1048576k_fluid"
 				type: "item"
 			}]
@@ -847,30 +982,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000D6BF6070"]
+			dependencies: ["000000007E079B93"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000821A2195"
+			id: "00000000E3D24457"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000000AD089E"
+					id: "00000000095F0257"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A1122C06"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000D2A38B19"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004DFCFDC2"
+				id: "000000007076D502"
 				item: "extrastorage:disk_16384k_fluid"
 				type: "item"
 			}]
@@ -878,30 +1018,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000D6BF6070"]
+			dependencies: ["000000007E079B93"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007C897487"
+			id: "00000000BF7A3721"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005255BD16"
+					id: "00000000B028D65E"
 					type: "xp"
-					xp: 7
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008B6617E2"
-					table_id: 1906155424L
-					type: "random"
+					id: "00000000D4741FAF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001F5B72E7"
+				id: "000000007715F6B2"
 				item: "extrastorage:block_16384k_fluid"
 				type: "item"
 			}]
@@ -909,30 +1054,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000075D9F5A1"]
+			dependencies: ["000000009E74A3B2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000039DBB51E"
+			id: "000000003C485EFF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CC6C28DD"
+					id: "000000008AF25F80"
 					type: "xp"
-					xp: 7
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008036A59B"
-					table_id: 1906155424L
-					type: "random"
+					id: "000000009EC970E5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C4F33E26"
+				id: "00000000DDBE0113"
 				item: "extrastorage:disk_1024k"
 				type: "item"
 			}]
@@ -940,30 +1090,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000075D9F5A1"]
+			dependencies: ["000000009E74A3B2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000092915EA6"
+			id: "00000000D4DD7A71"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000082D67DBF"
+					id: "00000000892BAF31"
 					type: "xp"
-					xp: 11
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D9EC3B2B"
-					table_id: 1906155424L
-					type: "random"
+					id: "0000000044F52632"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrastorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006A93D626"
+				id: "0000000072BA225A"
 				item: "extrastorage:block_1024k"
 				type: "item"
 			}]

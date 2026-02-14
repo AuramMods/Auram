@@ -2,35 +2,40 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_naturescompass"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "naturescompass:naturescompass"
-	id: "00000000F26E4C89"
+	id: "00000000D2BF1983"
 	order_index: 1
 	quest_links: [ ]
 	quests: [{
 		hide_dependency_lines: true
 		hide_details_until_startable: true
 		hide_until_deps_complete: true
-		id: "000000008E823325"
+		id: "000000000AC222B0"
 		invisible: true
 		invisible_until_tasks: 1
 		rewards: [
 			{
-				id: "000000001775105C"
+				id: "000000009C4698F3"
 				type: "xp"
-				xp: 3
+				xp: 4
 			}
 			{
-				exclude_from_claim_all: true
-				id: "0000000041E1E7B9"
-				table_id: 1768839851L
-				type: "random"
+				id: "0000000078DD8882"
+				item: {
+					Count: 1
+					id: "ftbquests:lootcrate"
+					tag: {
+						type: "chaos_box_naturescompass"
+					}
+				}
+				type: "item"
 			}
 		]
 		shape: "circle"
 		tasks: [{
 			consume_items: false
-			id: "000000008B1399BD"
+			id: "00000000F6C7C9A7"
 			item: "naturescompass:naturescompass"
 			type: "item"
 		}]

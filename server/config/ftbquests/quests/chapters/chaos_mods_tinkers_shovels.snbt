@@ -2,7 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_tinkers_shovels"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: {
 		Count: 1
 		id: "tinkers_shovels:shovel"
@@ -11,33 +11,38 @@
 			tic_broken: 0b
 		}
 	}
-	id: "00000000F44ED2A7"
-	order_index: 113
+	id: "00000000AD612B67"
+	order_index: 112
 	quest_links: [ ]
 	quests: [{
 		hide_dependency_lines: true
 		hide_details_until_startable: true
 		hide_until_deps_complete: true
-		id: "00000000299A4C85"
+		id: "0000000003C8445B"
 		invisible: true
 		invisible_until_tasks: 1
 		rewards: [
 			{
-				id: "000000002992742A"
+				id: "00000000D31F899D"
 				type: "xp"
-				xp: 6
+				xp: 2
 			}
 			{
-				exclude_from_claim_all: true
-				id: "00000000DE9925EB"
-				table_id: 798905586L
-				type: "random"
+				id: "00000000DE621078"
+				item: {
+					Count: 1
+					id: "ftbquests:lootcrate"
+					tag: {
+						type: "chaos_box_tinkers_shovels"
+					}
+				}
+				type: "item"
 			}
 		]
 		shape: "circle"
 		tasks: [{
 			consume_items: false
-			id: "00000000764123FE"
+			id: "00000000686CD224"
 			item: {
 				Count: 1
 				id: "tinkers_shovels:shovel"

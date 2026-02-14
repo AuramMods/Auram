@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_crafting_on_a_stick"
-	group: "00000000DEB299A3"
-	icon: "crafting_on_a_stick:anvil"
-	id: "00000000D46D48A8"
+	group: "000000008CDEF944"
+	icon: "crafting_on_a_stick:damaged_anvil"
+	id: "0000000031D99497"
 	order_index: 55
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["00000000AFC4ED27"]
+			dependencies: ["000000003586F09C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D0EEEB09"
+			id: "0000000024C4EEDD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000003B2BEE0"
+					id: "000000009EE7098F"
 					type: "xp"
-					xp: 5
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005C683583"
-					table_id: 2586227428L
-					type: "random"
+					id: "00000000782C56A4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DA678D33"
+				id: "0000000005E84105"
 				item: "minecraft:anvil"
 				type: "item"
 			}]
@@ -43,26 +48,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005C004A3F"
+			id: "00000000354B6BB5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000085F8641D"
+					id: "000000003CFE781B"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007C14A659"
-					table_id: 2586227428L
-					type: "random"
+					id: "00000000A278D227"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000008848CB3D"
+				id: "00000000C48BDB56"
 				item: "crafting_on_a_stick:crafting_table"
 				type: "item"
 			}]
@@ -70,30 +80,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000FB941740"]
+			dependencies: ["00000000C40EA563"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB5B68C9"
+			id: "000000002CFF5353"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000928F910B"
+					id: "000000001ACED3B5"
 					type: "xp"
-					xp: 1
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002D03FCC9"
-					table_id: 2586227428L
-					type: "random"
+					id: "00000000B7EB6FE4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004CD22DB3"
+				id: "00000000D820621D"
 				item: "minecraft:cartography_table"
 				type: "item"
 			}]
@@ -104,26 +119,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CE931788"
+			id: "0000000027AEEDA7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F320D06A"
+					id: "0000000082B6201D"
 					type: "xp"
-					xp: 7
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000420EB7B2"
-					table_id: 2586227428L
-					type: "random"
+					id: "0000000018254552"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000081F021C3"
+				id: "00000000D33CADAC"
 				item: "crafting_on_a_stick:damaged_anvil"
 				type: "item"
 			}]
@@ -134,26 +154,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FB941740"
+			id: "00000000C40EA563"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F4833722"
+					id: "00000000ECF16C1A"
 					type: "xp"
-					xp: 3
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004B0966B8"
-					table_id: 2586227428L
-					type: "random"
+					id: "000000009B31148A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000006551611C"
+				id: "00000000CFB780BD"
 				item: "crafting_on_a_stick:cartography_table"
 				type: "item"
 			}]
@@ -164,26 +189,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001DD5B118"
+			id: "0000000032691C7F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000078E04BB"
+					id: "0000000056E9ADF3"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EB047EC1"
-					table_id: 2586227428L
-					type: "random"
+					id: "0000000010A6BCCC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000494A7E75"
+				id: "0000000005ACF0EB"
 				item: "crafting_on_a_stick:chipped_anvil"
 				type: "item"
 			}]
@@ -194,26 +224,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000014D4DF1D"
+			id: "00000000EC8D50B6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000614DD3E5"
+					id: "000000009F8FAFF6"
 					type: "xp"
-					xp: 8
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D2023E78"
-					table_id: 2586227428L
-					type: "random"
+					id: "00000000689C3AF8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000004EE8207"
+				id: "0000000039985F37"
 				item: "crafting_on_a_stick:smithing_table"
 				type: "item"
 			}]
@@ -224,26 +259,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FA9C04BE"
+			id: "000000001AACD008"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002D7F5AF2"
+					id: "0000000035990CF4"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006CD4A2CD"
-					table_id: 2586227428L
-					type: "random"
+					id: "000000003C863A16"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000CEEE960D"
+				id: "0000000079850083"
 				item: "crafting_on_a_stick:stonecutter"
 				type: "item"
 			}]
@@ -254,26 +294,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A1593751"
+			id: "00000000AD1BFD37"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A071BC57"
+					id: "000000006CB03CC3"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000042156B72"
-					table_id: 2586227428L
-					type: "random"
+					id: "00000000506A33CE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000CF12C34B"
+				id: "00000000DF96F61A"
 				item: "crafting_on_a_stick:grindstone"
 				type: "item"
 			}]
@@ -284,26 +329,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001545168D"
+			id: "000000007F26644A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F7B2672F"
+					id: "000000009EE9B0BB"
 					type: "xp"
-					xp: 7
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001F6A2F60"
-					table_id: 2586227428L
-					type: "random"
+					id: "000000008F0420F0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000009A5DBD84"
+				id: "00000000D66EF626"
 				item: "crafting_on_a_stick:loom"
 				type: "item"
 			}]
@@ -311,30 +361,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000FA9C04BE"]
+			dependencies: ["000000001AACD008"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000865C350E"
+			id: "000000006B691F0C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000432487B8"
+					id: "00000000D810003A"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AE868150"
-					table_id: 2586227428L
-					type: "random"
+					id: "00000000F5C1B9EE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000007E2DC003"
+				id: "00000000AA2A8439"
 				item: "minecraft:stonecutter"
 				type: "item"
 			}]
@@ -342,30 +397,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000001545168D"]
+			dependencies: ["000000007F26644A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002BAD10D5"
+			id: "000000001665498D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A26607D3"
+					id: "0000000028992520"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C59E2443"
-					table_id: 2586227428L
-					type: "random"
+					id: "00000000DFB5475D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F6EC7A13"
+				id: "000000000702B9C5"
 				item: "minecraft:loom"
 				type: "item"
 			}]
@@ -373,30 +433,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["0000000014D4DF1D"]
+			dependencies: ["00000000EC8D50B6"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000683C9BC5"
+			id: "00000000583C86A0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007CA41F88"
+					id: "00000000E656C853"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CB394FFB"
-					table_id: 2586227428L
-					type: "random"
+					id: "0000000020E20278"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EF200B87"
+				id: "0000000064CB9EA4"
 				item: "minecraft:smithing_table"
 				type: "item"
 			}]
@@ -404,30 +469,35 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000CE931788"]
+			dependencies: ["0000000027AEEDA7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B7C35427"
+			id: "000000009AC9945C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001B417580"
+					id: "0000000011339E3C"
 					type: "xp"
-					xp: 5
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D19D057F"
-					table_id: 2586227428L
-					type: "random"
+					id: "000000006D84059D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006BEF1133"
+				id: "0000000044D61190"
 				item: "minecraft:damaged_anvil"
 				type: "item"
 			}]
@@ -438,26 +508,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AFC4ED27"
+			id: "000000003586F09C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F9EFCF89"
+					id: "00000000CA8FD349"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A239739B"
-					table_id: 2586227428L
-					type: "random"
+					id: "000000009B35CCCD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000001C69C170"
+				id: "0000000095F640AC"
 				item: "crafting_on_a_stick:anvil"
 				type: "item"
 			}]
@@ -465,30 +540,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000A1593751"]
+			dependencies: ["00000000AD1BFD37"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AFC48754"
+			id: "00000000CCF58D7F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000111F5316"
+					id: "000000004E0E8869"
 					type: "xp"
-					xp: 4
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CDD06B5D"
-					table_id: 2586227428L
-					type: "random"
+					id: "0000000064154630"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D92A189C"
+				id: "0000000088B0B1F9"
 				item: "minecraft:grindstone"
 				type: "item"
 			}]
@@ -496,30 +576,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000001DD5B118"]
+			dependencies: ["0000000032691C7F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B1977924"
+			id: "00000000FF7595E8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000059E555BC"
+					id: "0000000022E65F93"
 					type: "xp"
-					xp: 7
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FA45E49A"
-					table_id: 2586227428L
-					type: "random"
+					id: "00000000764A728F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000821D1598"
+				id: "000000009BCFDBE2"
 				item: "minecraft:chipped_anvil"
 				type: "item"
 			}]
@@ -527,30 +612,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000005C004A3F"]
+			dependencies: ["00000000354B6BB5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000918A76E"
+			id: "0000000035C341FE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CCBCBDB7"
+					id: "000000004D07183F"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000134C9267"
-					table_id: 2586227428L
-					type: "random"
+					id: "00000000C49195D9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_crafting_on_a_stick"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D0870648"
+				id: "00000000AFE44DB1"
 				item: "minecraft:crafting_table"
 				type: "item"
 			}]

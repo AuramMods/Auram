@@ -2,35 +2,40 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_refinedstorageaddons"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "refinedstorageaddons:wireless_crafting_grid"
-	id: "0000000068D6FE42"
+	id: "00000000A6233402"
 	order_index: 59
 	quest_links: [ ]
 	quests: [{
 		hide_dependency_lines: true
 		hide_details_until_startable: true
 		hide_until_deps_complete: true
-		id: "00000000144D54C2"
+		id: "000000009568074A"
 		invisible: true
 		invisible_until_tasks: 1
 		rewards: [
 			{
-				id: "0000000032FAE9FE"
+				id: "00000000DF46BB89"
 				type: "xp"
-				xp: 7
+				xp: 5
 			}
 			{
-				exclude_from_claim_all: true
-				id: "0000000071A922DC"
-				table_id: 1381014387L
-				type: "random"
+				id: "00000000B203C26B"
+				item: {
+					Count: 1
+					id: "ftbquests:lootcrate"
+					tag: {
+						type: "chaos_box_refinedstorageaddons"
+					}
+				}
+				type: "item"
 			}
 		]
 		shape: "circle"
 		tasks: [{
 			consume_items: false
-			id: "00000000E912EB2E"
+			id: "000000001DFB0982"
 			item: "refinedstorageaddons:wireless_crafting_grid"
 			type: "item"
 		}]

@@ -2,252 +2,256 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_mekanism_lasers"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "mekanism_lasers:basic_laser"
-	id: "00000000E678D1FD"
+	id: "0000000048CD0A07"
 	order_index: 71
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["00000000E408A25D"]
+			dependencies: ["00000000EBC8EB3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AEC1D819"
+			id: "00000000B3705EC9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F8338AF4"
+					id: "0000000049607974"
 					type: "xp"
-					xp: 3
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000039BCE17E"
-					table_id: 2293024147L
-					type: "random"
+					id: "00000000B8953C3D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "00000000E9AE5F47"
+				id: "0000000005264A29"
 				item: "mekanism_lasers:advanced_laser"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 0.0d
+			x: -2.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["00000000A9B1C343"]
+			dependencies: ["00000000E49F35F4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D0021412"
+			id: "000000006637F6C8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009E98E2B3"
+					id: "00000000C4E1E9B6"
 					type: "xp"
-					xp: 4
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001E545164"
-					table_id: 2293024147L
-					type: "random"
+					id: "00000000E8FDC316"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D12DFB87"
-				item: "mekanism_lasers:ultimate_laser"
+				id: "000000001099DA15"
+				item: "mekanism_lasers:ultimate_toggleable_laser"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000004E77D8CF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009C0AE358"
+			id: "00000000CE88261F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000016D02B86"
+					id: "000000003BD4F3E2"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008376C553"
-					table_id: 2293024147L
-					type: "random"
+					id: "0000000043D3F235"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006B3168F4"
-				item: "mekanism_lasers:ultimate_toggleable_laser"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["00000000E408A25D"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002ACC1DC9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003CC349FB"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000172C9341"
-					table_id: 2293024147L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "0000000054F2D481"
-				item: "mekanism_lasers:ore_generator"
+				id: "0000000021694555"
+				item: "mekanism_lasers:remote_control"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 3.0d
 		}
 		{
+			dependencies: ["000000009DEDF7DA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000013188DC6"
+			id: "00000000CC6E6E15"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009C1D3966"
+					id: "000000003A321291"
 					type: "xp"
-					xp: 5
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000082140F84"
-					table_id: 2293024147L
-					type: "random"
+					id: "000000008AB80DA7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D5BB0B43"
-				item: "mekanism_lasers:remote_control"
+				id: "0000000021575954"
+				item: "mekanism_lasers:ultimate_laser"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000E408A25D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000044B83CB3"
+			id: "00000000811B45B3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005BE4A05E"
+					id: "00000000F227CE61"
 					type: "xp"
-					xp: 6
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C395755A"
-					table_id: 2293024147L
-					type: "random"
+					id: "00000000D982411E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B75FDAF5"
-				item: "mekanism_lasers:basic_toggleable_laser"
+				id: "00000000089758E3"
+				item: "mekanism_lasers:laser_stopper"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 1.0d
 		}
 		{
+			dependencies: ["00000000EBC8EB3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000010C7CF7A"
+			id: "000000006B398E4B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009624753E"
+					id: "000000001824FA73"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006C7B5F63"
-					table_id: 2293024147L
-					type: "random"
+					id: "00000000FCD27071"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001EFE0275"
-				item: "mekanism_lasers:laser_stopper"
+				id: "000000009838C4B6"
+				item: "mekanism_lasers:ore_generator"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000AEC1D819"]
+			dependencies: ["00000000362C6378"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000056F6F309"
+			id: "00000000B61017EE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A954B2A5"
+					id: "00000000DA3E00EB"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9F1D021"
-					table_id: 2293024147L
-					type: "random"
+					id: "000000008F99981A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003BD0B245"
+				id: "00000000CE13B3E5"
 				item: "mekanism_lasers:advanced_toggleable_laser"
 				type: "item"
 			}]
@@ -255,30 +259,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000A9B1C343"]
+			dependencies: ["000000009DEDF7DA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004E77D8CF"
+			id: "00000000E49F35F4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000055751BF7"
+					id: "000000003D3F3F74"
 					type: "xp"
-					xp: 3
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000912DCA7F"
-					table_id: 2293024147L
-					type: "random"
+					id: "000000008F3EBDB6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000BC489D0B"
+				id: "00000000EBB7BC6D"
 				item: "mekanism_lasers:elite_toggleable_laser"
 				type: "item"
 			}]
@@ -286,30 +295,71 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000AEC1D819"]
+			dependencies: ["00000000EBC8EB3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A9B1C343"
+			id: "00000000362C6378"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000030C11D9"
+					id: "0000000061FE73B9"
 					type: "xp"
-					xp: 8
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A23F7A47"
-					table_id: 2293024147L
-					type: "random"
+					id: "00000000A8417089"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000D81F6BAD"
+				item: "mekanism_lasers:basic_toggleable_laser"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000B3705EC9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009DEDF7DA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000035BD37ED"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000177BD9F8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "000000001BC49811"
+				id: "000000001A2A4EE9"
 				item: "mekanism_lasers:elite_laser"
 				type: "item"
 			}]
@@ -320,26 +370,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E408A25D"
+			id: "00000000EBC8EB3B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000667B76B8"
+					id: "00000000D8AE8F44"
 					type: "xp"
-					xp: 2
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000006D0ECAB"
-					table_id: 2293024147L
-					type: "random"
+					id: "000000009E665E0C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanism_lasers"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000058DCBC5"
+				id: "00000000A81F8BCB"
 				item: "mekanism_lasers:basic_laser"
 				type: "item"
 			}]

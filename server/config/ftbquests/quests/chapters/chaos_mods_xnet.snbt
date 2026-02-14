@@ -2,96 +2,41 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_xnet"
-	group: "00000000DEB299A3"
-	icon: "xnet:netcable_yellow"
-	id: "00000000D37ACD5B"
-	order_index: 102
+	group: "000000008CDEF944"
+	icon: "xnet:redstone_proxy"
+	id: "0000000088B825D6"
+	order_index: 101
 	quest_links: [ ]
 	quests: [
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008C022AB1"
+			id: "000000009A2EC9C0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FC0FA8D7"
+					id: "00000000BCF77BC4"
 					type: "xp"
-					xp: 1
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000007452367"
-					table_id: 2313666292L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000FEF7DA2D"
-				item: "xnet:netcable_routing"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003A5A7F1A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C5C8F46C"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F61E9884"
-					table_id: 2313666292L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000069A001AB"
-				item: "xnet:netcable_yellow"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003AAC8862"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FE6B36CE"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000481AA96D"
-					table_id: 2313666292L
-					type: "random"
+					id: "000000009A4B2D53"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003E5F72E5"
+				id: "00000000BD5F2C47"
 				item: "xnet:antenna"
 				type: "item"
 			}]
@@ -102,56 +47,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005206D1AD"
+			id: "0000000013694A60"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000036A59543"
+					id: "000000007D3D5127"
 					type: "xp"
-					xp: 8
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000075505D26"
-					table_id: 2313666292L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000075A8A8EC"
-				item: "xnet:netcable_green"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007BCD5A84"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CE350BB6"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003A662BF5"
-					table_id: 2313666292L
-					type: "random"
+					id: "00000000D1377908"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009D06C3D6"
+				id: "00000000C6DD6B5B"
 				item: "xnet:facade"
 				type: "item"
 			}]
@@ -162,86 +82,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B6263F53"
+			id: "0000000002B0D2E1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004FA31D33"
+					id: "000000002E0F108D"
 					type: "xp"
-					xp: 5
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DCAD63E6"
-					table_id: 2313666292L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000001E43A53B"
-				item: "xnet:redstone_proxy"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B322F1EA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B5FA146F"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FB959D47"
-					table_id: 2313666292L
-					type: "random"
+					id: "000000005EDD4144"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B5851CB9"
-				item: "xnet:antenna_dish"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000F3A801FD"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002F90D43D"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009C6A3F2C"
-					table_id: 2313666292L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000B8332471"
+				id: "000000007FCF07F3"
 				item: "xnet:controller"
 				type: "item"
 			}]
@@ -252,86 +117,66 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AF5575A4"
+			id: "00000000F5530CA9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007350381A"
+					id: "00000000710BBEB0"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000098C13EC"
-					table_id: 2313666292L
-					type: "random"
+					id: "00000000B390B134"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000076B92D87"
-				item: "xnet:antenna_base"
+				id: "00000000EED8849C"
+				item: "xnet:antenna_dish"
 				type: "item"
 			}]
 			x: 0.0d
-			y: 1.0d
+			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000052F1B1DC"
+			id: "00000000E7517AE3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000481404A2"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005298EDA2"
-					table_id: 2313666292L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000073747CA5"
-				item: "xnet:netcable_blue"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000061619678"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B7335AAD"
+					id: "000000008943924C"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000057335560"
-					table_id: 2313666292L
-					type: "random"
+					id: "0000000074879FAB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000070096818"
+				id: "0000000002645D46"
 				item: "xnet:connector_upgrade"
 				type: "item"
 			}]
@@ -342,128 +187,177 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD5ABC32"
+			id: "0000000003716EFF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000A5C6A30"
+					id: "000000008E02B0A3"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000066F36D99"
-					table_id: 2313666292L
-					type: "random"
+					id: "00000000EC5DDF9E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C42D0AE3"
-				item: "xnet:router"
+				id: "00000000A6BB4FC5"
+				item: "xnet:wireless_router"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000B6263F53"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009CF97807"
+			id: "0000000024A60D30"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000028918092"
+					id: "00000000A086F9F9"
 					type: "xp"
-					xp: 7
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FADF713A"
-					table_id: 2313666292L
-					type: "random"
+					id: "00000000DCA320A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EE4AB00B"
-				item: "xnet:redstone_proxy_upd"
+				id: "00000000AEAD3451"
+				item: "xnet:antenna_base"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000840660EC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D0F2E619"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0000000092145F87"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000007A4C6606"
+				item: "xnet:redstone_proxy"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000072C18170"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D70F70CE"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000EF62E69D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000757DBB65"
+				item: "xnet:router"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 7.0d
 		}
 		{
-			dependencies: [
-				"000000008C022AB1"
-				"000000003A5A7F1A"
-				"000000005206D1AD"
-				"0000000052F1B1DC"
-			]
+			dependencies: ["00000000840660EC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DA2065C0"
+			id: "00000000BBC2C63A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A88745D3"
+					id: "0000000003AF166B"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BF6268E6"
-					table_id: 2313666292L
-					type: "random"
+					id: "00000000FCAADE70"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_xnet"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000082A6EF35"
-				item: "xnet:netcable_red"
+				id: "000000003E5F0ED1"
+				item: "xnet:redstone_proxy_upd"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003A47185D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A9C3C63B"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007CD4067A"
-					table_id: 2313666292L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000002D0A23F8"
-				item: "xnet:wireless_router"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 9.0d
 		}
 	]
 	title: "XNet"

@@ -2,44 +2,49 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_bewitchment"
-	group: "00000000DEB299A3"
-	icon: "bewitchment:aqua_cerate"
-	id: "0000000018D27A54"
+	group: "000000008CDEF944"
+	icon: "bewitchment:cleansing_balm"
+	id: "00000000423DA4D1"
 	order_index: 51
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["00000000FCFA0C5A"]
+			dependencies: ["000000007F1755CE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B20BE83A"
+			id: "000000001A3124DD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001C841161"
+					id: "0000000016913F3C"
 					type: "xp"
-					xp: 12
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D887B5FD"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D07CCC6E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007449F2CE"
+					id: "00000000D852643C"
 					item: "bewitchment:zephyr_harness"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B1B9EB89"
+					id: "0000000018966F23"
 					item: "minecraft:zombie_head"
 					type: "item"
 				}
@@ -48,37 +53,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000FEBB85BF"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000720F66D6"
+			id: "0000000027303534"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002A366E84"
+					id: "000000006B6314E4"
 					type: "xp"
-					xp: 12
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000048E520EF"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000009C855430"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001CACB41C"
+					id: "000000005F6EB6CD"
 					item: "minecraft:wither_skeleton_skull"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DBDE2FB3"
+					id: "0000000083B95F70"
 					item: "bewitchment:yellow_coffin"
 					type: "item"
 				}
@@ -88,35 +98,131 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000003F492E7F"
+				"000000007F1755CE"
+				"0000000097371437"
+				"000000008136727D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000EC24B2E"
+			id: "0000000015BB8337"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000060CFA239"
+					id: "00000000BF208E8D"
 					type: "xp"
-					xp: 7
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F8AAD35A"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000CC20BD3E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BB63DB89"
+					item: "bewitchment:alchemist_wool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AF076DA8"
+					item: "bewitchment:besmirched_wool"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DC8FC4A9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B5EB2200"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "00000000BF45E3D4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004B3F1E27"
+					item: "bewitchment:cleansing_balm"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000085B2734E"
+					item: "bewitchment:earth_ichor"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007B8AC252"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004EFA5271"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000001912D71F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002A5854D9"
+					id: "0000000062FE639A"
 					item: {
 						Count: 1
 						id: "bewitchment:waystone"
@@ -128,7 +234,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000633B9EF6"
+					id: "00000000C3D5075F"
 					item: "bewitchment:witch_cauldron"
 					type: "item"
 				}
@@ -140,33 +246,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002E36C1B4"
+			id: "0000000033ED333A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001FE4BB7F"
+					id: "0000000095F95706"
 					type: "xp"
 					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CED5A707"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000003423591C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CAAAA482"
+					id: "0000000033EF3085"
 					item: "bewitchment:witchberry_cookie"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004DCFE574"
+					id: "000000005958A2CD"
 					item: "bewitchment:witchberry_pie"
 					type: "item"
 				}
@@ -178,27 +289,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000F4728D7"
+			id: "00000000F11FB25B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FD99BDFC"
+					id: "000000004FFCAFD2"
 					type: "xp"
-					xp: 2
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C828AEAC"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000038E8E810"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008FB36F88"
+					id: "000000005E3C9898"
 					item: {
 						Count: 1
 						id: "bewitchment:vampiric_poppet"
@@ -210,7 +326,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000009BB88341"
+					id: "0000000031926684"
 					item: {
 						Count: 1
 						id: "bewitchment:voodoo_poppet"
@@ -226,33 +342,38 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"000000003F492E7F"
+				"00000000CD76C179"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000068A5EFFD"
+			id: "0000000003D97165"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006C932E39"
+					id: "00000000626A7798"
 					type: "xp"
-					xp: 2
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AB267183"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000007051BD2E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000037388F85"
+					id: "000000005556109B"
 					item: {
 						Count: 1
 						id: "bewitchment:voodoo_protection_poppet"
@@ -264,7 +385,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000162B709C"
+					id: "00000000650FC614"
 					item: "bewitchment:warped_poppet_shelf"
 					type: "item"
 				}
@@ -274,39 +395,44 @@
 		}
 		{
 			dependencies: [
-				"00000000D745B8A1"
-				"000000007911C8BB"
+				"00000000BD7347E9"
+				"000000001E7929FC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AEB70EF9"
+			id: "00000000729D1350"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000012421A6C"
+					id: "00000000F041C6CF"
 					type: "xp"
-					xp: 11
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005B63EE8A"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000E97ABC2C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005EBE925A"
+					id: "00000000449ABF39"
 					item: "bewitchment:trapped_cypress_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EE96C1BC"
+					id: "000000004DCE662A"
 					item: "bewitchment:trapped_dragons_blood_chest"
 					type: "item"
 				}
@@ -315,70 +441,45 @@
 			y: 4.0d
 		}
 		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004768A889"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000071367D2D"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004404DDEB"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [{
-				consume_items: false
-				id: "00000000444861F6"
-				item: "bewitchment:earth_ichor"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 0.0d
-		}
-		{
 			dependencies: [
-				"00000000FC00BDED"
-				"00000000B8255464"
+				"00000000C817534D"
+				"00000000091FDB6C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000025C7C2E1"
+			id: "00000000957BC3C2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B5F96415"
+					id: "000000007945D4BC"
 					type: "xp"
-					xp: 6
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D07BE3FE"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000059701D0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000013A5B2AB"
+					id: "00000000F7943CC1"
 					item: "bewitchment:trapped_elder_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C9DD78E1"
+					id: "00000000FFFE8C86"
 					item: "bewitchment:trapped_juniper_chest"
 					type: "item"
 				}
@@ -388,41 +489,46 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000003F492E7F"
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006575DF26"
+			id: "00000000E76C3C9D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AC34F9E1"
+					id: "0000000094CC3DA9"
 					type: "xp"
-					xp: 11
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BBB986B2"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000B694A3BF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002384A9C5"
+					id: "00000000038B487A"
 					item: "bewitchment:spruce_poppet_shelf"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FDFD03C1"
+					id: "000000007BA29F12"
 					item: "bewitchment:stone_witch_altar"
 					type: "item"
 				}
@@ -431,37 +537,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000004768A889"]
+			dependencies: ["00000000DC8FC4A9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CE1269BD"
+			id: "00000000B7878931"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000287BB922"
+					id: "00000000B5EB0170"
 					type: "xp"
-					xp: 4
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000979A60CE"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000AB97DA17"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000094596FF0"
+					id: "00000000B31FE241"
 					item: "bewitchment:taglock"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007257666D"
+					id: "0000000025DDF237"
 					item: "bewitchment:thick_bramble"
 					type: "item"
 				}
@@ -470,37 +581,45 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000E98E0265"]
+			dependencies: [
+				"00000000E9248E8C"
+				"00000000A1B89743"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000147AD064"
+			id: "00000000C6B906E4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005CC3A5A2"
+					id: "00000000E50AFBFE"
 					type: "xp"
-					xp: 19
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A4181624"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000009BCF4398"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000377917EB"
+					id: "00000000EBEC0188"
 					item: "thermal:silver_ingot"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000A16034A"
+					id: "00000000D0239ABA"
 					item: "thermal:silver_nugget"
 					type: "item"
 				}
@@ -509,37 +628,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000A34292EE"]
+			dependencies: ["0000000097371437"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FE393187"
+			id: "00000000BD63F54F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000002615FFC"
+					id: "00000000A06BD97D"
 					type: "xp"
-					xp: 1
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000713443D0"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000CF88CF62"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E2398B83"
+					id: "0000000020D8DEED"
 					item: "minecraft:skeleton_skull"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000046A26E07"
+					id: "000000001EBDAD99"
 					item: "bewitchment:specter_bangle"
 					type: "item"
 				}
@@ -548,37 +672,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000FEBB85BF"]
+			dependencies: ["00000000491C3B1C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000554F3E2B"
+			id: "000000005D64EC1C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003517153C"
+					id: "00000000DFF46A3A"
 					type: "xp"
-					xp: 3
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C0010A23"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000018B7239E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FAE74F70"
+					id: "00000000F97F03FF"
 					item: "bewitchment:salt_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000053E66EFA"
+					id: "00000000BFDD60B9"
 					item: "thermal:silver_block"
 					type: "item"
 				}
@@ -590,33 +719,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FD860F72"
+			id: "00000000D677532E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F8FE2D4F"
+					id: "000000001F97CE8D"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000085360448"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000000353A686"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E4272AF2"
+					id: "000000002C0224F5"
 					item: "bewitchment:silver_arrow"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A211FAA1"
+					id: "000000005BB46976"
 					item: "bewitchment:silver_candelabra"
 					type: "item"
 				}
@@ -625,37 +759,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000FEBB85BF"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000820036FB"
+			id: "000000005DD191DE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000E6E0550"
+					id: "000000005637C94A"
 					type: "xp"
-					xp: 8
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D06595F0"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000AFF6AFA5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009A2EBFBD"
+					id: "00000000A5E4BA58"
 					item: "bewitchment:birch_poppet_shelf"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C54C911A"
+					id: "00000000A70BD24A"
 					item: "bewitchment:black_coffin"
 					type: "item"
 				}
@@ -665,41 +804,45 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"000000002DDD9B36"
-				"00000000A57BE51F"
+				"00000000304ED4C5"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A04B1FB0"
+			id: "0000000039E9A446"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E11D5EF1"
+					id: "00000000BE8DAF80"
 					type: "xp"
-					xp: 20
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000049B9CD7D"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000007AB694A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003DB936EF"
-					item: "bewitchment:ruin_sigil"
+					id: "00000000CACA74F7"
+					item: "bewitchment:cleansing_sigil"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000ABDEB8C"
-					item: "bewitchment:mending_sigil"
+					id: "0000000055B8DF23"
+					item: "bewitchment:ruin_sigil"
 					type: "item"
 				}
 			]
@@ -707,31 +850,36 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000007E0F79D3"]
+			dependencies: ["0000000015BB8337"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E439B4C1"
+			id: "00000000E5F731FB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A2CC0C8C"
+					id: "0000000012757693"
 					type: "xp"
-					xp: 15
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007050C184"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000A4919E82"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000024A7A222"
+					id: "000000008F628C9C"
 					item: {
 						Count: 1
 						id: "bewitchment:besmirched_pants"
@@ -743,7 +891,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000B36C81DF"
+					id: "0000000047568826"
 					item: {
 						Count: 1
 						id: "bewitchment:besmirched_robes"
@@ -759,40 +907,45 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"000000002DDD9B36"
+				"0000000077FCD5F3"
+				"00000000304ED4C5"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B259C6DD"
+			id: "00000000CD88AFA7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000069C7D1B1"
+					id: "00000000484D5DFB"
 					type: "xp"
-					xp: 12
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001BEDDAA9"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000007367A816"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BCE79BE3"
-					item: "bewitchment:smelly_sigil"
+					id: "000000009DEEA257"
+					item: "bewitchment:extending_sigil"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000024C5D92B"
-					item: "bewitchment:heavy_sigil"
+					id: "000000000D5B24F2"
+					item: "bewitchment:shadows_sigil"
 					type: "item"
 				}
 			]
@@ -800,37 +953,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000972F116F"]
+			dependencies: ["00000000A1B89743"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000076D9DBE7"
+			id: "00000000E7E39552"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002C0C021A"
+					id: "0000000064D53023"
 					type: "xp"
-					xp: 7
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000006F3F71B"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000003CB0F35D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000069FEA108"
+					id: "000000006A44095E"
 					item: "minecraft:blaze_powder"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000814FC3C6"
+					id: "000000007FC42698"
 					item: "thermal:raw_silver_block"
 					type: "item"
 				}
@@ -840,41 +998,46 @@
 		}
 		{
 			dependencies: [
-				"000000002DDD9B36"
-				"000000003F492E7F"
-				"00000000FEBB85BF"
+				"00000000CD76C179"
+				"0000000060A587DF"
+				"00000000304ED4C5"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E3308BB9"
+			id: "000000001301D570"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007E352D72"
+					id: "0000000075FB2641"
 					type: "xp"
-					xp: 20
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006F385334"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000CE11C7E8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000036DA9CC4"
-					item: "bewitchment:judgment_sigil"
+					id: "000000005B33D5D1"
+					item: "bewitchment:mending_sigil"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007C1655E6"
-					item: "bewitchment:decay_sigil"
+					id: "000000008503C4E8"
+					item: "bewitchment:heavy_sigil"
 					type: "item"
 				}
 			]
@@ -883,41 +1046,46 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000003F492E7F"
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C5C054AF"
+			id: "000000005E3A94E1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DCC7AC57"
+					id: "0000000022EBAD26"
 					type: "xp"
-					xp: 6
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007F00B312"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000006A430D47"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006F3DC366"
+					id: "00000000061A9EE8"
 					item: "minecraft:black_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D5405E22"
+					id: "00000000F4995BCB"
 					item: "bewitchment:blackstone_witch_altar"
 					type: "item"
 				}
@@ -926,38 +1094,46 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000002DDD9B36"]
+			dependencies: [
+				"00000000304ED4C5"
+				"00000000491C3B1C"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007A227D1A"
+			id: "0000000079A43A85"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B2343B78"
+					id: "000000004192AD47"
 					type: "xp"
-					xp: 14
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C6E1FB22"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D0157087"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C18F2C28"
-					item: "bewitchment:sentinel_sigil"
+					id: "00000000DF40824D"
+					item: "bewitchment:judgment_sigil"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000BCC3F61"
-					item: "bewitchment:extending_sigil"
+					id: "000000006C006FB1"
+					item: "bewitchment:sentinel_sigil"
 					type: "item"
 				}
 			]
@@ -965,31 +1141,36 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000005BF8F57E"]
+			dependencies: ["0000000015BB8337"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB3532C2"
+			id: "0000000067E1551A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009FB48BC5"
+					id: "000000003BEF1E9B"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000F2549F3"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000750B790D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009A8D3077"
+					id: "00000000A6CA38B4"
 					item: {
 						Count: 1
 						id: "bewitchment:alchemist_hood"
@@ -1001,7 +1182,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000005FE29F4"
+					id: "00000000AF2BFC67"
 					item: {
 						Count: 1
 						id: "bewitchment:alchemist_pants"
@@ -1017,40 +1198,45 @@
 		}
 		{
 			dependencies: [
-				"000000002DDD9B36"
-				"000000003F492E7F"
+				"00000000E132428C"
+				"00000000304ED4C5"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C8C13820"
+			id: "000000007C90207C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A62ADB02"
+					id: "00000000A4E7A903"
 					type: "xp"
-					xp: 16
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000811F4BCA"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000F0BF6EFB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A9117F9A"
+					id: "00000000F3F6FFF2"
 					item: "bewitchment:shrieking_sigil"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006C7C73EE"
-					item: "bewitchment:cleansing_sigil"
+					id: "000000003B3C5FD1"
+					item: "bewitchment:slippery_sigil"
 					type: "item"
 				}
 			]
@@ -1058,37 +1244,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000005BF8F57E"]
+			dependencies: ["0000000015BB8337"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000151B1F03"
+			id: "00000000F5E1AF78"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000482BD643"
+					id: "000000001BFC6C48"
 					type: "xp"
-					xp: 3
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003522F8CD"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D1EA794C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000079E89FAA"
+					id: "00000000E06F551E"
 					item: "bewitchment:alchemist_carpet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003D0944FB"
+					id: "00000000FF9AF25C"
 					item: {
 						Count: 1
 						id: "bewitchment:alchemist_hat"
@@ -1104,41 +1295,46 @@
 		}
 		{
 			dependencies: [
-				"000000008C592DBE"
-				"00000000845871D4"
-				"000000002DDD9B36"
+				"00000000CD76C179"
+				"00000000304ED4C5"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000330CE2AB"
+			id: "00000000D1DE7DD8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A1364819"
+					id: "00000000DE46D705"
 					type: "xp"
-					xp: 18
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F091C8C8"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000005D64A03D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002673512C"
-					item: "bewitchment:slippery_sigil"
+					id: "00000000D725017E"
+					item: "bewitchment:smelly_sigil"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000025448040"
-					item: "bewitchment:shadows_sigil"
+					id: "000000005D4CC11D"
+					item: "bewitchment:decay_sigil"
 					type: "item"
 				}
 			]
@@ -1146,31 +1342,36 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000007E0F79D3"]
+			dependencies: ["0000000015BB8337"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000053CCB7A9"
+			id: "00000000430B7E52"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000002DDF67B"
+					id: "000000006BE541EC"
 					type: "xp"
-					xp: 19
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004DE7B3CA"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000005E6478C5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000792C88D9"
+					id: "0000000074FD6758"
 					item: {
 						Count: 1
 						id: "bewitchment:besmirched_hat"
@@ -1182,7 +1383,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000496CDF0C"
+					id: "00000000DE17F1FD"
 					item: {
 						Count: 1
 						id: "bewitchment:besmirched_hood"
@@ -1198,42 +1399,47 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000286688E8"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000003F492E7F"
+				"00000000CD76C179"
+				"00000000A66E536C"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001B9BAE0B"
+			id: "000000000F262A7A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FB30A8A8"
+					id: "00000000EF11E549"
 					type: "xp"
-					xp: 17
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000791A535"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000005DECB82B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005A9B834E"
+					id: "00000000245F57D5"
 					item: "bewitchment:purpur_witch_altar"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000026DB1961"
+					id: "0000000016B7B069"
 					item: "bewitchment:red_coffin"
 					type: "item"
 				}
@@ -1242,34 +1448,36 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"000000005BF8F57E"
-				"000000007E0F79D3"
-			]
+			dependencies: ["0000000015BB8337"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005F455A8E"
+			id: "00000000A825BEEF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005470239B"
+					id: "0000000085E940B4"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009F9E66FB"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000009805DAF3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000273868BE"
+					id: "000000001F3A999E"
 					item: {
 						Count: 1
 						id: "bewitchment:alchemist_robes"
@@ -1281,7 +1489,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000008CF9D5A3"
+					id: "0000000065402951"
 					item: "bewitchment:besmirched_carpet"
 					type: "item"
 				}
@@ -1291,39 +1499,44 @@
 		}
 		{
 			dependencies: [
-				"000000002DDD9B36"
-				"00000000A34292EE"
+				"00000000304ED4C5"
+				"0000000097371437"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000064CB5F6"
+			id: "000000008F123455"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008BB113CC"
+					id: "00000000CF8D414B"
 					type: "xp"
-					xp: 8
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AEFA0D15"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000055D2F8BF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B1D91ADE"
+					id: "000000003279B7D8"
 					item: "minecraft:red_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000381D76E6"
+					id: "00000000C94EA783"
 					item: "bewitchment:scorched_bramble"
 					type: "item"
 				}
@@ -1333,33 +1546,38 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000286688E8"
+				"00000000CD76C179"
+				"00000000A66E536C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003749CDC1"
+			id: "000000004FE1BDDB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D534E548"
+					id: "00000000CF1AE8F0"
 					type: "xp"
-					xp: 17
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000099049D77"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000006B67DEDA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000054B1ADA2"
+					id: "0000000090B843AB"
 					item: {
 						Count: 1
 						id: "bewitchment:protection_poppet"
@@ -1371,7 +1589,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000008AF8D1BA"
+					id: "00000000AD255DA6"
 					item: "bewitchment:purple_coffin"
 					type: "item"
 				}
@@ -1383,33 +1601,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A2704FBF"
+			id: "00000000AABF3061"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000098BF876E"
+					id: "000000009C07015B"
 					type: "xp"
 					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DD10A711"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000005DB92D80"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E503C381"
+					id: "000000002B767678"
 					item: "bewitchment:acacia_poppet_shelf"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006110E162"
+					id: "00000000BA5B6960"
 					type: "item"
 				}
 			]
@@ -1420,33 +1643,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000096ED7A63"
+			id: "00000000CD76C179"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000799697D0"
+					id: "00000000E0978822"
 					type: "xp"
-					xp: 10
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D1C4C2A4"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000EC8B9BD2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000079752058"
+					id: "0000000053D5A96B"
 					item: "bewitchment:oak_bark"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DD47DBD9"
+					id: "0000000031431006"
 					item: "bewitchment:spruce_bark"
 					type: "item"
 				}
@@ -1458,101 +1686,81 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000005DA1DC5"
+			id: "000000000B4A6F0B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008E2E800F"
+					id: "0000000095277F38"
 					type: "xp"
-					xp: 20
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000048B32267"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000001614E6D9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C4285231"
+					id: "00000000A778C295"
 					item: "bewitchment:stripped_cypress_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D03E0919"
+					id: "00000000D4C25C33"
 					item: "bewitchment:stripped_dragons_blood_wood"
 					type: "item"
 				}
 			]
-			x: -12.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000054D2DB0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000019D79A6F"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000066544A0"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [{
-				consume_items: false
-				id: "00000000543ADD6A"
-				item: "bewitchment:dragons_blood_resin_block"
-				type: "item"
-			}]
 			x: -11.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000845871D4"
+			id: "0000000077FCD5F3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000086EDF8F6"
+					id: "0000000030AFC264"
 					type: "xp"
-					xp: 7
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AF9826E2"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000004131A18A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000694F7B2A"
+					id: "00000000EE185C30"
 					item: "bewitchment:elder_bark"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C387FA17"
+					id: "000000002E1BF6A6"
 					item: "bewitchment:elder_wood"
 					type: "item"
 				}
@@ -1564,33 +1772,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A57BE51F"
+			id: "0000000060A587DF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000018D0AE61"
+					id: "000000000E45F3E8"
 					type: "xp"
-					xp: 13
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000134762F6"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000FA7A24CB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D2E8945B"
+					id: "00000000757EB208"
 					item: "bewitchment:juniper_bark"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A29B3293"
+					id: "0000000029EB62C7"
 					item: "bewitchment:juniper_wood"
 					type: "item"
 				}
@@ -1602,71 +1815,81 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C94E8815"
+			id: "00000000795FA6AE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005766B9BE"
+					id: "00000000DCDC32C4"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000811D4A21"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000B158890C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F47713C5"
+					id: "00000000BA74871F"
 					item: "bewitchment:stripped_elder_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000884D279B"
+					id: "0000000082F75340"
 					item: "bewitchment:stripped_juniper_wood"
 					type: "item"
 				}
 			]
 			x: -12.0d
-			y: 4.0d
+			y: 1.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003F492E7F"
+			id: "00000000F82BCDE8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002191E1E0"
+					id: "000000001124A935"
 					type: "xp"
-					xp: 8
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000C4F54D7"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000056C55AD9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A6E7E41F"
+					id: "000000006982F05D"
 					item: "bewitchment:birch_bark"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000072C0F46D"
+					id: "00000000B282AEFA"
 					item: "bewitchment:cypress_bark"
 					type: "item"
 				}
@@ -1678,72 +1901,82 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007FFCEC42"
+			id: "00000000750E6F6D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008D0FF986"
+					id: "000000000850CA32"
 					type: "xp"
-					xp: 5
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000088789399"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000042D398F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003814BC5A"
+					id: "000000007790E4B4"
 					item: "bewitchment:cypress_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000050935B9"
+					id: "00000000CFF26BC1"
 					item: "bewitchment:dragons_blood_wood"
 					type: "item"
 				}
 			]
-			x: -12.0d
-			y: 3.0d
+			x: -11.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000072C041C1"
+			id: "00000000E46BF8DB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008C741D80"
+					id: "00000000552204A1"
 					type: "xp"
-					xp: 19
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002A6DB442"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000033B73B32"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A0136794"
+					id: "0000000024F304DE"
 					item: "bewitchment:pink_coffin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D3E8206B"
+					id: "00000000E77245B5"
 					item: "minecraft:player_head"
 					type: "item"
 				}
@@ -1753,42 +1986,47 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000003F492E7F"
-				"000000007E0F79D3"
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"000000007F1755CE"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002FE6415D"
+			id: "000000004E4BD53D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000065A64B63"
+					id: "00000000BA4363E2"
 					type: "xp"
-					xp: 18
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007700B187"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000008255F694"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008936DF08"
+					id: "00000000B4316149"
 					item: "bewitchment:prickly_belt"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E1127196"
+					id: "00000000BB9B7749"
 					item: "bewitchment:prismarine_witch_altar"
 					type: "item"
 				}
@@ -1800,33 +2038,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005D486D03"
+			id: "000000003286BB76"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000017115786"
+					id: "000000004F92D81B"
 					type: "xp"
-					xp: 12
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009962C4A7"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000C3CD2DEC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007C8EE03F"
+					id: "00000000E10FFD6B"
 					item: "bewitchment:netherite_candelabra"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004B8DDF09"
+					id: "000000009305BBF6"
 					item: "bewitchment:oak_poppet_shelf"
 					type: "item"
 				}
@@ -1836,42 +2079,47 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000286688E8"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000003F492E7F"
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
+				"00000000491C3B1C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000022AFF721"
+			id: "00000000500FACB4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005C95D360"
+					id: "00000000FDF88DFC"
 					type: "xp"
-					xp: 12
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A81065A7"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000CD3E3913"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008B491003"
+					id: "00000000A69BD5E0"
 					item: "bewitchment:obsidian_witch_altar"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000027722054"
+					id: "0000000006E7EB10"
 					item: "bewitchment:orange_coffin"
 					type: "item"
 				}
@@ -1881,35 +2129,40 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000003F492E7F"
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007DD0007F"
+			id: "000000009D5DD5F2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006AEFF181"
+					id: "00000000E4E6F93A"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008D2F9C93"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000069414AE6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007FCAF2ED"
+					id: "00000000EBF35F33"
 					item: {
 						Count: 1
 						id: "bewitchment:mending_poppet"
@@ -1921,7 +2174,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000043313A43"
+					id: "000000007DB3FD1D"
 					item: "bewitchment:mossy_cobblestone_witch_altar"
 					type: "item"
 				}
@@ -1931,42 +2184,47 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000005BF8F57E"
-				"000000003F492E7F"
+				"00000000CD76C179"
+				"00000000DC8FC4A9"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CEAD6CD2"
+			id: "00000000CF8BEF4A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000A7B72B5"
+					id: "00000000BB0E9657"
 					type: "xp"
-					xp: 4
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FC3BAE8A"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000068BDBD9E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000072019E83"
+					id: "00000000F2C9C969"
 					item: "bewitchment:nazar"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000847E7B22"
+					id: "00000000405CFB21"
 					item: "bewitchment:nether_brick_witch_altar"
 					type: "item"
 				}
@@ -1976,39 +2234,44 @@
 		}
 		{
 			dependencies: [
-				"00000000286688E8"
-				"00000000FEBB85BF"
+				"00000000A66E536C"
+				"00000000491C3B1C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000040B789FD"
+			id: "000000003076DE1D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000892C381D"
+					id: "0000000038D6407C"
 					type: "xp"
-					xp: 9
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000919DBAD"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000DD8BC41D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E1D31241"
+					id: "00000000CA992884"
 					item: "bewitchment:light_blue_coffin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C1F21C43"
+					id: "00000000E4AAE545"
 					item: "bewitchment:light_gray_coffin"
 					type: "item"
 				}
@@ -2017,40 +2280,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"00000000286688E8"
-				"00000000FEBB85BF"
-			]
+			dependencies: ["00000000491C3B1C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000068011A58"
+			id: "0000000067C87B60"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F2E5C837"
+					id: "000000003A7D326D"
 					type: "xp"
-					xp: 4
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000082FD7F28"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000007BC427A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004B1635FD"
+					id: "000000006078B895"
 					item: "bewitchment:lime_coffin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000092BCD597"
+					id: "0000000007513EB6"
 					item: "bewitchment:magenta_coffin"
 					type: "item"
 				}
@@ -2059,37 +2324,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000047F96448"]
+			dependencies: ["00000000C1F5CC58"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000048BDE886"
+			id: "000000007410FD8F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000345F933"
+					id: "00000000276E75D8"
 					type: "xp"
-					xp: 7
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008B5B00E6"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000002AD6B65E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E4669B8B"
+					id: "000000000AB8DC1F"
 					item: "bewitchment:juniper_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EE7E6A5F"
+					id: "0000000055C62EB9"
 					item: "bewitchment:juniper_sign"
 					type: "item"
 				}
@@ -2098,37 +2368,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000047F96448"]
+			dependencies: ["00000000C1F5CC58"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000864F38D"
+			id: "00000000A3CAB613"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004DFD990B"
+					id: "0000000033273294"
 					type: "xp"
-					xp: 19
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009861B8B7"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000028740FEC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000072CDE391"
+					id: "00000000F13DBDCE"
 					item: "bewitchment:juniper_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FA7C6241"
+					id: "000000006A0C1B45"
 					item: "bewitchment:juniper_trapdoor"
 					type: "item"
 				}
@@ -2137,118 +2412,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"000000004768A889"
-				"000000007E0F79D3"
-			]
+			dependencies: ["00000000A1B89743"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FCFA0C5A"
+			id: "000000004D42241E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000027D86425"
+					id: "000000009C770F8E"
 					type: "xp"
-					xp: 19
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C2CEB4EC"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "octagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005B6819DC"
-					item: "bewitchment:heaven_extract"
+					id: "0000000008DBB641"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000094D35043"
-					item: "bewitchment:hedgewitch_wool"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000A34292EE"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007E0F79D3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000082FF759E"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004CDB5ABB"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "octagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000000A2513C3"
-					item: "bewitchment:aqua_cerate"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000002024979"
-					item: "bewitchment:besmirched_wool"
-					type: "item"
-				}
-			]
-			x: -12.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["00000000972F116F"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000095157723"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CBF6A869"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004BA19CE0"
-					table_id: 2258745687L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009D5DE357"
+					id: "00000000CE37BAD1"
 					item: "bewitchment:juniper_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E0A30F6A"
+					id: "00000000FF28D7A3"
 					item: "bewitchment:juniper_poppet_shelf"
 					type: "item"
 				}
@@ -2257,37 +2456,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000047F96448"]
+			dependencies: ["00000000C1F5CC58"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000017232FEA"
+			id: "000000002875E34F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004FA6AED9"
+					id: "000000004839396E"
 					type: "xp"
-					xp: 13
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000041371D5E"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000F7F5BED6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000418A5C6E"
+					id: "00000000E87A7964"
 					item: "bewitchment:juniper_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E05C0679"
+					id: "000000005DCB09DC"
 					item: "bewitchment:juniper_door"
 					type: "item"
 				}
@@ -2296,37 +2500,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["0000000047F96448"]
+			dependencies: ["00000000C1F5CC58"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B954D06B"
+			id: "00000000FC454294"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CD700663"
+					id: "000000005F27B741"
 					type: "xp"
-					xp: 17
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000025648949"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000083732D52"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B84384CB"
+					id: "00000000BB09DF40"
 					item: "bewitchment:juniper_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009CEDE6D3"
+					id: "000000005D27D406"
 					item: "bewitchment:juniper_fence_gate"
 					type: "item"
 				}
@@ -2335,31 +2544,36 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000FEBB85BF"]
+			dependencies: ["00000000491C3B1C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FAE26400"
+			id: "00000000227C6827"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004013EF91"
+					id: "00000000510C0BA3"
 					type: "xp"
-					xp: 20
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F1AEEA01"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000003D0561A0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CC8126F5"
+					id: "000000003F688E0A"
 					item: {
 						Count: 1
 						id: "bewitchment:judgment_poppet"
@@ -2371,7 +2585,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000E93D3EB1"
+					id: "0000000005D42AAF"
 					item: "bewitchment:jungle_poppet_shelf"
 					type: "item"
 				}
@@ -2381,39 +2595,44 @@
 		}
 		{
 			dependencies: [
-				"00000000B8255464"
-				"00000000FCFA0C5A"
+				"000000007F1755CE"
+				"00000000091FDB6C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000057CA224C"
+			id: "00000000EEA43003"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000319A4679"
+					id: "000000003555DAEF"
 					type: "xp"
-					xp: 15
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F43E1548"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000086D9F2BF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002D03AF7E"
+					id: "000000006CFEC947"
 					item: "bewitchment:juniper_chest_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001BCEE6F1"
+					id: "00000000D64E6B64"
 					item: "bewitchment:juniper_broom"
 					type: "item"
 				}
@@ -2422,31 +2641,36 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000FCFA0C5A"]
+			dependencies: ["000000008136727D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001AC18409"
+			id: "0000000085A485E7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000036980E3D"
+					id: "00000000E73F40DD"
 					type: "xp"
-					xp: 17
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000087CAE613"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000004A306F2A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000028F18EBC"
+					id: "00000000177F111E"
 					item: {
 						Count: 1
 						id: "bewitchment:hedgewitch_pants"
@@ -2458,7 +2682,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000E6F28756"
+					id: "00000000B7793192"
 					item: {
 						Count: 1
 						id: "bewitchment:hedgewitch_robes"
@@ -2473,37 +2697,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000A34292EE"]
+			dependencies: ["0000000097371437"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A38E9268"
+			id: "000000004CE9ADAC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000035B1CA61"
+					id: "00000000ED77BCCE"
 					type: "xp"
-					xp: 11
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000087F0A0E"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000F3AAFBE4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CADE9D4C"
+					id: "000000009CF18806"
 					item: "bewitchment:hellish_bauble"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CAE3C5E4"
+					id: "0000000035BE021E"
 					item: "bewitchment:iron_candelabra"
 					type: "item"
 				}
@@ -2512,37 +2741,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000FCFA0C5A"]
+			dependencies: ["000000008136727D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F5A67051"
+			id: "0000000071CE6740"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FB5DEAED"
+					id: "0000000065CBC02C"
 					type: "xp"
-					xp: 18
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000035390422"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000004AA96582"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000034DB07D7"
+					id: "0000000064DDE241"
 					item: "bewitchment:grotesque_stew"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008EAACD3C"
+					id: "00000000246B4D9D"
 					item: "bewitchment:hedgewitch_carpet"
 					type: "item"
 				}
@@ -2551,31 +2785,36 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000FCFA0C5A"]
+			dependencies: ["000000008136727D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003A57AB18"
+			id: "000000003DA7999F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004BA2ACBD"
+					id: "00000000850AD574"
 					type: "xp"
-					xp: 2
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CFDC1A8B"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000006F275EDD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F2011EF0"
+					id: "00000000134CF7E0"
 					item: {
 						Count: 1
 						id: "bewitchment:hedgewitch_hat"
@@ -2587,7 +2826,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000D95107E6"
+					id: "0000000032CEE422"
 					item: {
 						Count: 1
 						id: "bewitchment:hedgewitch_hood"
@@ -2602,37 +2841,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000491C3B1C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003D6B8050"
+			id: "000000008D1FC6D3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009D746D77"
+					id: "00000000703A1BFD"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000048544F30"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000166DAC19"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000EC1A201"
+					id: "00000000AFEA4153"
 					item: "bewitchment:gray_coffin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007D6552E5"
+					id: "00000000A903D4A2"
 					item: "bewitchment:green_coffin"
 					type: "item"
 				}
@@ -2642,40 +2886,213 @@
 		}
 		{
 			dependencies: [
-				"0000000005DA1DC5"
-				"000000007FFCEC42"
+				"000000000B4A6F0B"
+				"00000000750E6F6D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000286688E8"
+			id: "00000000A66E536C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D666A2EA"
+					id: "000000001F71256A"
 					type: "xp"
-					xp: 3
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008241CB67"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000DB9ED43D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000023E4C8A2"
+					id: "00000000D33DF6DF"
 					item: "bewitchment:cypress_planks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F8721009"
+					id: "0000000060FAB253"
 					item: "bewitchment:dragons_blood_planks"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E132428C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000092BBCB2F"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "0000000031B13C73"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000ECE8AD6A"
+				item: "bewitchment:wood_ash"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000795FA6AE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C1F5CC58"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000015938ECD"
+					type: "xp"
+					xp: 14
+				}
+				{
+					id: "00000000FAE932FB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000031898FC0"
+					item: "bewitchment:elder_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F16CDF60"
+					item: "bewitchment:juniper_planks"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000B0B2FD32"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000304ED4C5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D7861169"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000000A32513F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000107EA076"
+				item: "bewitchment:dragons_blood_resin"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000097371437"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003F86E5F1"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "00000000F8AD9377"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D516B8AA"
+					item: "bewitchment:fiery_serum"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000554DE5C7"
+					item: "bewitchment:grim_elixir"
 					type: "item"
 				}
 			]
@@ -2683,147 +3100,78 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000003F492E7F"
-			]
+			dependencies: ["00000000DC8FC4A9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008C592DBE"
+			id: "000000008136727D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001EF278DA"
+					id: "00000000BD5B9063"
 					type: "xp"
-					xp: 10
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006973F7F2"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000CDACD60D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
+			shape: "hexagon"
 			tasks: [{
 				consume_items: false
-				id: "000000007CC3FBD0"
-				item: "bewitchment:wood_ash"
+				id: "000000000087914A"
+				item: "bewitchment:hedgewitch_wool"
 				type: "item"
 			}]
-			x: -11.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"00000000C94E8815"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000047F96448"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008006ED1F"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000364F9515"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000046ED8042"
-					item: "bewitchment:elder_planks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000066F9F0E2"
-					item: "bewitchment:juniper_planks"
-					type: "item"
-				}
-			]
 			x: -11.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000054D2DB0"]
+			dependencies: ["00000000DC8FC4A9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002DDD9B36"
+			id: "000000001D8CFD30"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000034123A27"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FEE9C43A"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "octagon"
-			tasks: [{
-				consume_items: false
-				id: "0000000053F999E7"
-				item: "bewitchment:dragons_blood_resin"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["000000005BF8F57E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004228E168"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000063D87593"
+					id: "000000009672BE22"
 					type: "xp"
 					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004667F6F9"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000001C9DC14D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008DBDCE51"
+					id: "000000002C9215BB"
 					item: "bewitchment:glowing_bramble"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000025DB0F6A"
+					id: "00000000CD45DCE9"
 					item: "bewitchment:golden_candelabra"
 					type: "item"
 				}
@@ -2833,38 +3181,42 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"00000000E98E0265"
-				"000000005BF8F57E"
-				"000000004768A889"
-				"000000003F492E7F"
+				"00000000CD76C179"
+				"00000000DC8FC4A9"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000E9248E8C"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FDD7208F"
+			id: "00000000289499C5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CABC97EC"
+					id: "00000000E7ACC51C"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007B7FD791"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000F860A17A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006AD1BEE8"
+					id: "00000000F4E3615C"
 					item: {
 						Count: 1
 						id: "bewitchment:golden_chalk"
@@ -2876,7 +3228,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000D2AD6140"
+					id: "0000000024683D04"
 					item: "bewitchment:golden_witch_altar"
 					type: "item"
 				}
@@ -2886,34 +3238,39 @@
 		}
 		{
 			dependencies: [
-				"00000000E98E0265"
-				"00000000FCFA0C5A"
-				"00000000A34292EE"
+				"00000000E9248E8C"
+				"000000007F1755CE"
+				"0000000097371437"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B58ECCC8"
+			id: "00000000D0D7E99A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FB047B4C"
+					id: "000000005532D6CC"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008D318FD5"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000001BB4B403"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DDEC3823"
+					id: "000000000A1E93A6"
 					item: {
 						Count: 1
 						id: "bewitchment:fiery_chalk"
@@ -2925,7 +3282,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000013BF30AA"
+					id: "00000000E223212E"
 					item: "bewitchment:fleeting_bramble"
 					type: "item"
 				}
@@ -2935,39 +3292,44 @@
 		}
 		{
 			dependencies: [
-				"000000000DA0E24C"
-				"000000007E0F79D3"
+				"000000007F1755CE"
+				"000000007E67F2B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D51F7863"
+			id: "000000002884231D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E8C261FB"
+					id: "000000006EDABDFE"
 					type: "xp"
-					xp: 4
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000860351EB"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000001B16CAAB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FB57067F"
+					id: "00000000945D84D6"
 					item: "bewitchment:fruiting_bramble"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006801713A"
+					id: "00000000FD946215"
 					item: "bewitchment:garlic_bread"
 					type: "item"
 				}
@@ -2977,38 +3339,43 @@
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"00000000E98E0265"
-				"000000003F492E7F"
-				"000000007E0F79D3"
-				"00000000A34292EE"
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"0000000060A587DF"
+				"00000000E9248E8C"
+				"000000007F1755CE"
+				"0000000097371437"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000883EF01A"
+			id: "0000000041DED290"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004D789AEB"
+					id: "00000000292496DD"
 					type: "xp"
-					xp: 7
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000F389E11"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000033907C4D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002A07A8D7"
+					id: "000000000BF9E499"
 					item: {
 						Count: 1
 						id: "bewitchment:eldritch_chalk"
@@ -3020,7 +3387,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000B57A60CF"
+					id: "00000000ACE09D08"
 					item: "bewitchment:end_stone_witch_altar"
 					type: "item"
 				}
@@ -3029,37 +3396,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000A34292EE"]
+			dependencies: ["0000000097371437"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F37A5825"
+			id: "0000000080800581"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004F30735B"
+					id: "00000000A50AF563"
 					type: "xp"
-					xp: 6
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E2B7C829"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000021DC4702"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000912BE05"
+					id: "00000000D5C87701"
 					item: "bewitchment:ender_bramble"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000331D456"
+					id: "00000000BA24EA9B"
 					item: {
 						Count: 1
 						id: "bewitchment:fatigue_poppet"
@@ -3074,37 +3446,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000047F96448"]
+			dependencies: ["00000000C1F5CC58"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000037D9FF7"
+			id: "0000000083F913D4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002DDF316C"
+					id: "000000003E7355FD"
 					type: "xp"
-					xp: 20
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ADAA9225"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D81E56B7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F74C3E63"
+					id: "00000000419F71DA"
 					item: "bewitchment:elder_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001FD3EDD4"
+					id: "000000007E3D5049"
 					item: "bewitchment:elder_sign"
 					type: "item"
 				}
@@ -3113,37 +3490,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000047F96448"]
+			dependencies: ["00000000C1F5CC58"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002D46FD0D"
+			id: "00000000B2CDB979"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000753885AF"
+					id: "00000000A30AF9F0"
 					type: "xp"
-					xp: 8
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003C0A4C93"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000B5219D23"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F85C9EBC"
+					id: "00000000BA82D0D4"
 					item: "bewitchment:elder_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000089C5A87A"
+					id: "00000000180F25DE"
 					item: "bewitchment:elder_trapdoor"
 					type: "item"
 				}
@@ -3152,37 +3534,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000047F96448"]
+			dependencies: ["00000000C1F5CC58"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CA91B338"
+			id: "000000000E2166C5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BEF0C5F8"
+					id: "000000007699B021"
 					type: "xp"
-					xp: 1
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006C420CD0"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000B50036A9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003CEC1A66"
+					id: "0000000094AEECBD"
 					item: "bewitchment:elder_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003F3761DD"
+					id: "0000000009094839"
 					item: "bewitchment:elder_fence_gate"
 					type: "item"
 				}
@@ -3191,37 +3578,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000000DA0E24C"]
+			dependencies: ["000000007E67F2B0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000057885944"
+			id: "0000000048460039"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000FB8E9F0"
+					id: "000000007B8B654A"
 					type: "xp"
 					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D9F338AE"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000057AEEE6C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006E5B2498"
+					id: "00000000B542CC6F"
 					item: "bewitchment:elder_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001004B384"
+					id: "0000000060BA1DF5"
 					item: "bewitchment:elder_poppet_shelf"
 					type: "item"
 				}
@@ -3230,117 +3622,42 @@
 			y: 1.0d
 		}
 		{
+			dependencies: ["00000000C1F5CC58"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A34292EE"
+			id: "0000000030206E33"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AB0DBA40"
+					id: "000000006E3927F7"
 					type: "xp"
-					xp: 13
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006FB37991"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000017E37541"
-					item: "bewitchment:fiery_serum"
+					id: "000000001085C2C8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000019EF1E67"
-					item: "bewitchment:grim_elixir"
-					type: "item"
-				}
-			]
-			x: -13.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000FCFA0C5A"
-				"000000007E0F79D3"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005BF8F57E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000AFEE7D59"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000018052D50"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000FB7ADBEA"
-					item: "bewitchment:alchemist_wool"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000206F4A1C"
-					item: "bewitchment:cleansing_balm"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["0000000047F96448"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008F800A92"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001C1DB90C"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EA23315A"
-					table_id: 2258745687L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000826F0B67"
+					id: "0000000075BAF59D"
 					item: "bewitchment:elder_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BF7C7BBE"
+					id: "00000000E6FDEAFE"
 					item: "bewitchment:elder_door"
 					type: "item"
 				}
@@ -3350,43 +3667,48 @@
 		}
 		{
 			dependencies: [
-				"00000000286688E8"
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"00000000A57BE51F"
-				"000000004768A889"
-				"000000003F492E7F"
+				"00000000A66E536C"
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"00000000DC8FC4A9"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000665A34CA"
+			id: "00000000038EBCD6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006E40EEA2"
+					id: "00000000D32B487A"
 					type: "xp"
-					xp: 20
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F1697CF2"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000000E4C9E7A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000049177B5E"
+					id: "0000000035949D5A"
 					item: "bewitchment:dragons_blood_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005C9D7CCF"
+					id: "00000000A44D9C79"
 					item: "bewitchment:druid_band"
 					type: "item"
 				}
@@ -3396,39 +3718,44 @@
 		}
 		{
 			dependencies: [
-				"00000000FC00BDED"
-				"00000000FCFA0C5A"
+				"000000007F1755CE"
+				"00000000C817534D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000003912C7D"
+			id: "000000007DE5A37E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000017479710"
+					id: "0000000008B5576C"
 					type: "xp"
 					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000047D8F980"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000004BA28644"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009DB458F6"
+					id: "00000000B70CB5F8"
 					item: "bewitchment:elder_chest_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000786C00AF"
+					id: "00000000E6BA2BA0"
 					item: "bewitchment:elder_broom"
 					type: "item"
 				}
@@ -3438,39 +3765,44 @@
 		}
 		{
 			dependencies: [
-				"00000000286688E8"
-				"000000007911C8BB"
+				"00000000A66E536C"
+				"000000001E7929FC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006888EEA6"
+			id: "0000000036742B18"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000E83A771"
+					id: "000000000ED98FF0"
 					type: "xp"
-					xp: 1
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000841E7445"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000AE2D912A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EB73DE28"
+					id: "0000000068CA48AB"
 					item: "bewitchment:dragons_blood_poppet_shelf"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AF3ABF59"
+					id: "000000005613291E"
 					item: "bewitchment:dragons_blood_pressure_plate"
 					type: "item"
 				}
@@ -3479,37 +3811,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000070F5DE9A"
+			id: "0000000056BE72ED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000807099FF"
+					id: "0000000031A52FFA"
 					type: "xp"
-					xp: 4
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004EBAF2F6"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000006177AE57"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CB435787"
+					id: "00000000C90301FA"
 					item: "bewitchment:dragons_blood_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008D76867E"
+					id: "00000000CDA6D2CB"
 					item: "bewitchment:dragons_blood_stairs"
 					type: "item"
 				}
@@ -3518,37 +3855,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000014C19356"
+			id: "00000000AF5DA6D0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000047E3EE0E"
+					id: "0000000094FF38CD"
 					type: "xp"
-					xp: 9
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000012743508"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000861F933D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006098327A"
+					id: "00000000E185C64A"
 					item: "bewitchment:dragons_blood_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007E777E42"
+					id: "000000004864BABE"
 					item: "bewitchment:dragons_blood_fence"
 					type: "item"
 				}
@@ -3557,37 +3899,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E2A8E35B"
+			id: "00000000ED86EB97"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000023E259E2"
+					id: "0000000020830BD9"
 					type: "xp"
-					xp: 15
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001DA44DBA"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D67E4E70"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004405B242"
+					id: "00000000962AD148"
 					item: "bewitchment:dragons_blood_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001F265D1B"
+					id: "000000005BD2690B"
 					item: "bewitchment:dragons_blood_hanging_sign"
 					type: "item"
 				}
@@ -3596,31 +3943,79 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000E254E9D9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D6B24E76"
+			id: "000000007F1755CE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000844F1356"
+					id: "000000000C73D555"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004D411719"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000B8E4DC2A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006AF34620"
+					item: "bewitchment:aqua_cerate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000385C7A34"
+					item: "bewitchment:heaven_extract"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000003670AD2E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FB8D2B36"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000323D6A91"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000002917C90B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F59BF03A"
+					id: "000000005EBDD4A3"
 					item: {
 						Count: 1
 						id: "bewitchment:death_protection_poppet"
@@ -3632,7 +4027,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000AE8256AC"
+					id: "00000000493B0754"
 					item: "bewitchment:dragons_blood_chest_boat"
 					type: "item"
 				}
@@ -3642,39 +4037,44 @@
 		}
 		{
 			dependencies: [
-				"00000000286688E8"
-				"00000000FCFA0C5A"
+				"00000000A66E536C"
+				"000000007F1755CE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EFE672EA"
+			id: "00000000772FF6EF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000433AB0AA"
+					id: "00000000EA61AE1E"
 					type: "xp"
-					xp: 12
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000041AA548F"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D84BBC84"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000712FA435"
+					id: "0000000034C06EC5"
 					item: "bewitchment:dragons_blood_broom"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000078D1C391"
+					id: "000000009E350AE9"
 					item: "bewitchment:dragons_blood_button"
 					type: "item"
 				}
@@ -3683,37 +4083,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000032C1DBCD"
+			id: "000000003A54C60B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FDA1C0F3"
+					id: "00000000B3426299"
 					type: "xp"
-					xp: 10
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000008D6C3CA"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000047EBC2DD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007E836BF1"
+					id: "00000000CDD8CD91"
 					item: "bewitchment:cypress_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005EA6E46C"
+					id: "00000000A66E7290"
 					item: "bewitchment:dark_oak_poppet_shelf"
 					type: "item"
 				}
@@ -3722,76 +4127,86 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D745B8A1"
+			id: "00000000BD7347E9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000044216C03"
+					id: "00000000D64A602F"
 					type: "xp"
-					xp: 8
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003714A4ED"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000B80DA90F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A41AF4E7"
+					id: "000000007A19ADE4"
 					item: "bewitchment:cypress_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CECA48C0"
+					id: "00000000C4388A85"
 					item: "bewitchment:cypress_chest"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 7.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
-				"0000000096ED7A63"
-				"00000000845871D4"
-				"000000008C592DBE"
-				"00000000A57BE51F"
-				"000000003F492E7F"
+				"00000000CD76C179"
+				"0000000077FCD5F3"
+				"00000000E132428C"
+				"0000000060A587DF"
+				"00000000F82BCDE8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E98E0265"
+			id: "00000000E9248E8C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002AABBBCA"
+					id: "00000000C590AE03"
 					type: "xp"
-					xp: 16
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000094A57F76"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D5EDF335"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000D6F1A06"
+					id: "00000000BDEA4537"
 					item: {
 						Count: 1
 						id: "bewitchment:athame"
@@ -3803,7 +4218,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000A7D05A58"
+					id: "000000001A49E76E"
 					item: {
 						Count: 1
 						id: "bewitchment:chalk"
@@ -3815,158 +4230,46 @@
 				}
 			]
 			x: -10.0d
-			y: 2.0d
+			y: 3.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007911C8BB"
+			id: "000000001E7929FC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F56BB56C"
+					id: "00000000110F7E54"
 					type: "xp"
-					xp: 16
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003E73A737"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000CEB826C5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F1DCC728"
+					id: "0000000095A63280"
 					item: "bewitchment:dragons_blood_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C862E84B"
+					id: "000000001FACF979"
 					item: "bewitchment:dragons_blood_slab"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 9.0d
-		}
-		{
-			dependencies: ["00000000286688E8"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E254E9D9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D741AEB4"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DFF35553"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000044A4D62D"
-					item: "bewitchment:cypress_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FAA258DF"
-					item: "bewitchment:dragons_blood_boat"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["0000000047F96448"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000DA0E24C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000010956485"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000241A9B2B"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B1232E2B"
-					item: "bewitchment:elder_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BF24F7D4"
-					item: "bewitchment:grilled_garlic"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["0000000047F96448"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000FC00BDED"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008178D171"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003759198A"
-					table_id: 2258745687L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F039C31A"
-					item: "bewitchment:elder_boat"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003C62B6DF"
-					item: "bewitchment:elder_chest"
 					type: "item"
 				}
 			]
@@ -3974,37 +4277,209 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000047F96448"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000972F116F"
+			id: "00000000B0B2FD32"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000040CAFA8"
+					id: "00000000F19F558B"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "000000006E319880"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "000000000FD83A0C"
+				item: "bewitchment:dragons_blood_resin_block"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000A66E536C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003670AD2E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D3580A14"
 					type: "xp"
 					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007590CC9F"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000007D6B14AB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001AB7BCD7"
+					id: "00000000156538A1"
+					item: "bewitchment:cypress_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A26474CC"
+					item: "bewitchment:dragons_blood_boat"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000C1F5CC58"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007E67F2B0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C4985291"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000FC34673B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006F95C429"
+					item: "bewitchment:elder_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000290E368D"
+					item: "bewitchment:grilled_garlic"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000C1F5CC58"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C817534D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C84991E0"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "0000000051ADCD66"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007F70CDC6"
+					item: "bewitchment:elder_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000393DF428"
+					item: "bewitchment:elder_chest"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000C1F5CC58"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A1B89743"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F85BAA16"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0000000073685F96"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000089CA9C0A"
 					item: "bewitchment:juniper_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007D763866"
+					id: "0000000083632660"
 					item: "bewitchment:raw_silver"
 					type: "item"
 				}
@@ -4013,118 +4488,133 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["0000000047F96448"]
+			dependencies: ["00000000C1F5CC58"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B8255464"
+			id: "00000000091FDB6C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F6FE7FDA"
+					id: "0000000036E2DA39"
 					type: "xp"
-					xp: 13
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007D177586"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000938A1940"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005015967A"
+					id: "00000000B8AA523E"
 					item: "bewitchment:juniper_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004ECB30B3"
+					id: "000000008691AAD3"
 					item: "bewitchment:juniper_chest"
 					type: "item"
 				}
 			]
 			x: -10.0d
-			y: 3.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FEBB85BF"
+			id: "00000000491C3B1C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FCF4EEBC"
+					id: "00000000B084F4B0"
 					type: "xp"
-					xp: 8
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003D8FC46A"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D0D76227"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C1288359"
+					id: "0000000076C611BC"
 					item: "bewitchment:salt"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001450A033"
+					id: "00000000D704CDAB"
 					item: "bewitchment:white_coffin"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 1.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
-				"00000000286688E8"
-				"00000000E254E9D9"
+				"00000000A66E536C"
+				"000000003670AD2E"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002FABC90E"
+			id: "000000008E7A39C0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000010881556"
+					id: "00000000169DDCF6"
 					type: "xp"
-					xp: 4
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000440A7289"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000036858E69"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BDEE6524"
+					id: "00000000A385AD9E"
 					item: "bewitchment:cypress_poppet_shelf"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001DCA318C"
+					id: "00000000CE80C756"
 					item: "bewitchment:cypress_pressure_plate"
 					type: "item"
 				}
@@ -4133,37 +4623,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ACD63108"
+			id: "00000000EFC87252"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000097016445"
+					id: "00000000D6CB4590"
 					type: "xp"
-					xp: 7
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000281A89A0"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000047AAC74F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000058D12EFE"
+					id: "0000000094F3B3D3"
 					item: "bewitchment:cypress_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000041BEB080"
+					id: "00000000D51BB7DC"
 					item: "bewitchment:cypress_stairs"
 					type: "item"
 				}
@@ -4172,37 +4667,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CC684421"
+			id: "00000000EF009963"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000082D5A08F"
+					id: "000000003C43F35F"
 					type: "xp"
-					xp: 11
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000984A3685"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000F760D06D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000014F6438C"
+					id: "00000000BAC05DD1"
 					item: "bewitchment:cypress_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A97E2B01"
+					id: "0000000012875473"
 					item: "bewitchment:cypress_fence"
 					type: "item"
 				}
@@ -4211,37 +4711,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000A66E536C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FA6D823F"
+			id: "0000000016D42639"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000851940C0"
+					id: "00000000C3E5AB2A"
 					type: "xp"
-					xp: 13
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000065644703"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000C41F447A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B10A4041"
+					id: "000000007706D208"
 					item: "bewitchment:cypress_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D4D56BDE"
+					id: "00000000633071AA"
 					item: "bewitchment:cypress_hanging_sign"
 					type: "item"
 				}
@@ -4251,39 +4756,44 @@
 		}
 		{
 			dependencies: [
-				"00000000D745B8A1"
-				"00000000FEBB85BF"
+				"00000000BD7347E9"
+				"00000000491C3B1C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F7AA5ECB"
+			id: "000000006CCFAD4D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000054F44366"
+					id: "00000000A569B328"
 					type: "xp"
-					xp: 13
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A3A3E72A"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D7A69B59"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B6824E79"
+					id: "00000000CBB10E83"
 					item: "bewitchment:cyan_coffin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000488F2EEA"
+					id: "000000007D785536"
 					item: "bewitchment:cypress_chest_boat"
 					type: "item"
 				}
@@ -4293,39 +4803,44 @@
 		}
 		{
 			dependencies: [
-				"00000000286688E8"
-				"00000000FCFA0C5A"
+				"00000000A66E536C"
+				"000000007F1755CE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000096C250AF"
+			id: "000000004E4892A0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000017DA542E"
+					id: "00000000EF61277F"
 					type: "xp"
-					xp: 15
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000097DAE8B6"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000809DE920"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CFE48B20"
+					id: "000000000B0B3389"
 					item: "bewitchment:cypress_broom"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000901F409B"
+					id: "000000009476232A"
 					item: "bewitchment:cypress_button"
 					type: "item"
 				}
@@ -4337,33 +4852,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DA40DA04"
+			id: "00000000BA1D0E42"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BE935324"
+					id: "000000000EF30456"
 					type: "xp"
 					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D545E73B"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000868B93B2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001034EFF7"
+					id: "000000009817837F"
 					item: "minecraft:creeper_head"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C1B6BF69"
+					id: "0000000099BC211C"
 					item: "bewitchment:crimson_poppet_shelf"
 					type: "item"
 				}
@@ -4375,33 +4895,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000096F24B75"
+			id: "00000000C934E1E0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005E0821EE"
+					id: "00000000DEB3AE71"
 					type: "xp"
-					xp: 18
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F7FC8633"
-					table_id: 2258745687L
-					type: "random"
+					id: "000000004A9E3AE2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000015CB75B4"
+					id: "00000000D84C8B0B"
 					item: "bewitchment:crystal_ball"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A5197B77"
+					id: "00000000AD22D2BB"
 					item: {
 						Count: 1
 						id: "bewitchment:curse_poppet"
@@ -4416,37 +4941,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000491C3B1C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B0A59BA8"
+			id: "00000000EF8D698D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002F998CF3"
+					id: "0000000061D00A23"
 					type: "xp"
-					xp: 5
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000D7EE226"
-					table_id: 2258745687L
-					type: "random"
+					id: "00000000D5DE245E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D16B748F"
+					id: "0000000034298E62"
 					item: "bewitchment:blue_coffin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000106094A"
+					id: "00000000D2AE83A2"
 					item: "bewitchment:book_of_shadows"
 					type: "item"
 				}
@@ -4455,37 +4985,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000286688E8"]
+			dependencies: ["00000000491C3B1C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004547812E"
+			id: "00000000C7C06311"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000008C14AD0"
+					id: "00000000E479FB56"
 					type: "xp"
-					xp: 20
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DBE4AC7F"
-					table_id: 2258745687L
-					type: "random"
+					id: "0000000078BF7C56"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_bewitchment"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D3F0A900"
+					id: "000000009C2FF154"
 					item: "bewitchment:brazier"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FAC8169B"
+					id: "000000004EFB1528"
 					item: "bewitchment:brown_coffin"
 					type: "item"
 				}

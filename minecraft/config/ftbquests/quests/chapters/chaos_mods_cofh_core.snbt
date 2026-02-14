@@ -2,34 +2,39 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_cofh_core"
-	group: "00000000DEB299A3"
-	id: "000000006A38C826"
-	order_index: 116
+	group: "000000008CDEF944"
+	id: "00000000239BCE45"
+	order_index: 115
 	quest_links: [ ]
 	quests: [{
 		hide_dependency_lines: true
 		hide_details_until_startable: true
 		hide_until_deps_complete: true
-		id: "000000004F85FDC0"
+		id: "0000000013D9461D"
 		invisible: true
 		invisible_until_tasks: 1
 		rewards: [
 			{
-				id: "0000000002312CCE"
+				id: "00000000588F2414"
 				type: "xp"
-				xp: 11
+				xp: 5
 			}
 			{
-				exclude_from_claim_all: true
-				id: "0000000081CA0532"
-				table_id: 1250235175L
-				type: "random"
+				id: "000000009C5AB38F"
+				item: {
+					Count: 1
+					id: "ftbquests:lootcrate"
+					tag: {
+						type: "chaos_box_cofh_core"
+					}
+				}
+				type: "item"
 			}
 		]
 		shape: "circle"
 		tasks: [{
 			consume_items: false
-			id: "000000004EF7E1BE"
+			id: "00000000CF719438"
 			type: "item"
 		}]
 		x: 0.0d

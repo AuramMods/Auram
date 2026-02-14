@@ -2,43 +2,48 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_farmersdelight"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "farmersdelight:rice"
-	id: "00000000E96C8637"
-	order_index: 108
+	id: "00000000096C5B1A"
+	order_index: 107
 	quest_links: [ ]
 	quests: [
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F98F8EEC"
+			id: "0000000085A41530"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007EAB845B"
+					id: "00000000BFB269E7"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000066EC1977"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000CE0EF29F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008F33588E"
+					id: "000000001A7C1F11"
 					item: "farmersdelight:acacia_cabinet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AB7FF9E2"
+					id: "0000000025790AC6"
 					item: "minecraft:acacia_planks"
 					type: "item"
 				}
@@ -50,32 +55,37 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000463C5446"
+			id: "000000001DCC70F4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000041109CDA"
+					id: "0000000067CAE3FD"
 					type: "xp"
-					xp: 5
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000248627D8"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000525E3ECE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009705D3DF"
+					id: "000000007C478C9F"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000098D8B2B2"
+					id: "0000000011E9B257"
 					item: "minecraft:amethyst_shard"
 					type: "item"
 				}
@@ -84,82 +94,139 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000033EEB435"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005D35185D"
+			id: "00000000080A96E5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009B864C4D"
+					id: "00000000F9E6DFE5"
 					type: "xp"
-					xp: 14
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EBE2C759"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000FFBAFD48"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009304F70F"
-					item: "minecraft:painting"
+					id: "00000000FFC3A824"
+					item: "minecraft:potato"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007619C371"
-					item: "minecraft:paper"
+					id: "00000000B21723F3"
+					item: "farmersdelight:potato_crate"
 					type: "item"
 				}
 			]
-			x: -3.0d
-			y: 8.0d
+			x: -4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"00000000F018205E"
-				"000000003A0F666A"
-				"000000006F87493F"
-				"0000000033EEB435"
-				"00000000189160AD"
+				"0000000049B5A69A"
+				"00000000F1AA7063"
+				"000000005E5DA185"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F9593DED"
+			id: "00000000C3103234"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000C1D5677"
+					id: "00000000788599F9"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EEA81C0B"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000029FAED2B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005CB95AFA"
+					id: "0000000009F51DBE"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000094154ED6"
+					item: "farmersdelight:pasta_with_meatballs"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000173B0F84"
+				"000000005A3B2980"
+				"0000000066E08E9C"
+				"000000008B1E98AE"
+				"000000006F2BF361"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000042D43CEB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C577C12D"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "00000000169206E6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006BB12409"
 					item: "farmersdelight:bacon_sandwich"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006ABFA6B2"
+					id: "00000000F2665242"
 					item: "farmersdelight:bacon_and_eggs"
 					type: "item"
 				}
@@ -169,83 +236,44 @@
 		}
 		{
 			dependencies: [
-				"000000007C42E144"
-				"0000000001E3E6CD"
-				"0000000094570E8F"
-				"00000000EF4F2BF6"
+				"0000000066E08E9C"
+				"0000000084AB7913"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A149DD1B"
+			id: "000000006060C1B8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EEF912EC"
+					id: "000000002BF406B6"
 					type: "xp"
-					xp: 15
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000319A87DC"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000FDC4BF29"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D01A8498"
-					item: "farmersdelight:pasta_with_meatballs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005620417C"
-					item: "farmersdelight:pasta_with_mutton_chop"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"000000003A0F666A"
-				"00000000CE1A310B"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000678FA894"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006FF60629"
-					type: "xp"
-					xp: 14
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008B7866C0"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004CF92AD2"
+					id: "000000005F3BFB37"
 					item: "farmersdelight:baked_cod_stew"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C987E558"
+					id: "000000003D795AAE"
 					item: "farmersdelight:bamboo_cabinet"
 					type: "item"
 				}
@@ -254,83 +282,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"00000000F018205E"
-				"000000003A0F666A"
-				"00000000696EDE17"
-				"000000006F87493F"
-				"0000000039D74DC6"
-				"0000000045EC4FBE"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B0808C07"
+			id: "00000000814D6678"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001F15D139"
+					id: "00000000DE3A8313"
 					type: "xp"
-					xp: 12
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008687F64E"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000972D0FE7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000026A9FBD9"
-					item: "minecraft:bamboo_planks"
+					id: "000000009F2A645D"
+					item: "minecraft:clay_ball"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C425A851"
-					item: "farmersdelight:barbecue_stick"
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004A4BD93F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D65FE2FC"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000067F89F1D"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F7732C8A"
+					id: "00000000F5D1CC95"
 					item: "minecraft:cobbled_deepslate"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008D20F49F"
-					item: "minecraft:cobblestone"
 					type: "item"
 				}
 			]
@@ -339,39 +326,186 @@
 		}
 		{
 			dependencies: [
-				"0000000033EEB435"
-				"000000007C42E144"
+				"00000000C07CB8DC"
+				"000000005A3B2980"
+				"0000000066E08E9C"
+				"0000000073E0B9A0"
+				"0000000024016FB0"
+				"000000008B1E98AE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A6EB176A"
+			id: "000000004FE9972B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C99DA249"
+					id: "000000002AF82DA4"
 					type: "xp"
-					xp: 6
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007D619C6F"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000F769CA4B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006C762498"
+					id: "000000000B5AEB23"
+					item: "minecraft:bamboo_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000084661CA0"
+					item: "farmersdelight:barbecue_stick"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000C3474AFB"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000038EB2BE8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000071F6032C"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "000000002C5D270D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001A288A6E"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006F79C011"
+					item: "minecraft:cooked_porkchop"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000066E08E9C"
+				"0000000073E0B9A0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000095E3AF0E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009FF0245A"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "000000003CAB12A2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008E72E824"
+					item: "minecraft:rabbit_stew"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001BD9857F"
+					item: "farmersdelight:ratatouille"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000049B5A69A"
+				"000000006F2BF361"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000793F97BC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C08E0C89"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "00000000C7543BA4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000006EBE337"
 					item: "farmersdelight:basket"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009417140C"
+					id: "00000000EDA10445"
 					item: "farmersdelight:beef_stew"
 					type: "item"
 				}
@@ -383,33 +517,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AD2D584C"
+			id: "00000000EB410C83"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D4FC1679"
+					id: "0000000016BAC6F0"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000068B196EA"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000E3FD5FD4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C315849C"
+					id: "0000000034657163"
 					item: "farmersdelight:cherry_cabinet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003E7C0F60"
+					id: "00000000BF7F3D45"
 					item: "minecraft:cherry_planks"
 					type: "item"
 				}
@@ -418,79 +557,86 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"0000000045EC4FBE"
-				"00000000EF4F2BF6"
-			]
+			dependencies: ["00000000F1AA7063"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000069F4E96E"
+			id: "0000000055B6CEF0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006FA97422"
+					id: "00000000C1799860"
 					type: "xp"
-					xp: 17
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008BB8C168"
-					table_id: 977112052L
-					type: "random"
+					id: "000000004B0A60BC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C3FA9F3F"
-					item: "minecraft:potato"
+					id: "000000007842AD39"
+					item: "minecraft:pumpkin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D641104B"
-					item: "minecraft:pumpkin"
+					id: "00000000390260C8"
+					item: "minecraft:pumpkin_seeds"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 0.0d
+			y: 3.0d
 		}
 		{
-			dependencies: ["0000000039D74DC6"]
+			dependencies: ["0000000024016FB0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001E495B8B"
+			id: "00000000290BDEF4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FCC7F614"
+					id: "00000000D5C0B11D"
 					type: "xp"
-					xp: 1
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002309732A"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000036F28D44"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000028F0DD0D"
+					id: "00000000436821B7"
 					item: "minecraft:beetroot"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000078C29CAA"
+					id: "000000003883858C"
 					item: "minecraft:beetroot_seeds"
 					type: "item"
 				}
@@ -500,43 +646,48 @@
 		}
 		{
 			dependencies: [
-				"00000000F018205E"
-				"000000003A0F666A"
-				"0000000033EEB435"
-				"00000000189160AD"
-				"00000000CE1A310B"
-				"0000000045EC4FBE"
+				"00000000173B0F84"
+				"0000000066E08E9C"
+				"0000000073E0B9A0"
+				"000000008B1E98AE"
+				"000000006F2BF361"
+				"0000000084AB7913"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D128C0CC"
+			id: "00000000B41BD9A9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CC6B1EC8"
+					id: "000000006648667F"
 					type: "xp"
-					xp: 13
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E192A8F9"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000015272016"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000063B272BA"
+					id: "000000009B54CC15"
 					item: "farmersdelight:chicken_sandwich"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000944A0C21"
+					id: "000000001DD8BEBD"
 					item: "farmersdelight:chicken_soup"
 					type: "item"
 				}
@@ -545,81 +696,41 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"0000000033EEB435"
-				"000000007C42E144"
-				"00000000189160AD"
-				"000000003EBC7187"
-				"00000000EF4F2BF6"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005BFDBA8F"
+			id: "00000000BF4044E7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000041A374E6"
+					id: "000000001CCD28FA"
 					type: "xp"
-					xp: 1
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C75956EB"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000CE1565B3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000ECC9E3E0"
-					item: "minecraft:pumpkin_seeds"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C7739554"
-					item: "farmersdelight:pumpkin_soup"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A14009C7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D3B61593"
-					type: "xp"
-					xp: 14
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B5E696F2"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000145D1080"
+					id: "000000005D3BA71D"
 					item: "minecraft:beetroot_soup"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E529CE4D"
+					id: "00000000E0BB2C14"
 					item: "farmersdelight:birch_cabinet"
 					type: "item"
 				}
@@ -631,154 +742,83 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007C42E144"
+			id: "00000000AE99B60A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A678A19D"
+					id: "00000000B8A0726C"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000138B945B"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000078AF91C8"
-					item: "farmersdelight:minced_beef"
+					id: "000000000FB37960"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000029498BD0"
-					item: "farmersdelight:bacon"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["000000009CCAB0C6"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B46FC759"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BCC326C4"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003DE32AE4"
-					table_id: 977112052L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BD2602EF"
-					item: "minecraft:cooked_porkchop"
+					id: "0000000059338A38"
+					item: "farmersdelight:dark_oak_cabinet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000065BF3DAB"
-					item: "farmersdelight:cooking_pot"
+					id: "00000000A4FB6023"
+					item: "minecraft:dark_oak_planks"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 6.0d
+			y: 9.0d
 		}
 		{
-			dependencies: [
-				"000000003A0F666A"
-				"0000000045EC4FBE"
-			]
+			dependencies: ["00000000CD8ED306"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000013374C1"
+			id: "00000000C4D81090"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003E2544B0"
+					id: "00000000806DD25B"
 					type: "xp"
-					xp: 10
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B69B981B"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000748E0D22"
-					item: "farmersdelight:ratatouille"
+					id: "0000000099111BC3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A3D74A42"
-					item: "minecraft:porkchop"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["00000000A15B1119"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000189160AD"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000077FAFD57"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A58FE818"
-					table_id: 977112052L
-					type: "random"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F5E7B9DD"
-					item: "farmersdelight:cabbage"
+					id: "00000000647A8D41"
+					item: "farmersdelight:pie_crust"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000099B411EB"
-					item: "farmersdelight:kelp_roll"
+					id: "00000000BC42C985"
+					item: "farmersdelight:bacon"
 					type: "item"
 				}
 			]
@@ -789,34 +829,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AE1C9E5F"
+			id: "000000002DFDC6A3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BE01F2D8"
+					id: "000000001E57F552"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002C3502D8"
-					table_id: 977112052L
-					type: "random"
+					id: "000000000F5D2D45"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000044C3D23"
-					item: "farmersdelight:crimson_cabinet"
+					id: "00000000FD8A1B19"
+					item: "farmersdelight:cooking_pot"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A8E93AD2"
-					item: "minecraft:crimson_planks"
+					id: "000000002620BFB8"
+					item: "farmersdelight:crimson_cabinet"
 					type: "item"
 				}
 			]
@@ -824,37 +869,172 @@
 			y: 7.0d
 		}
 		{
+			dependencies: ["00000000CD8ED306"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000001E3E6CD"
+			id: "0000000049B5A69A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006DBF591B"
+					id: "000000000D55E86A"
 					type: "xp"
-					xp: 20
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004405FDC1"
-					table_id: 977112052L
-					type: "random"
+					id: "000000000BF29A2E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D8AA296C"
+					id: "0000000071AE9BA8"
+					item: "farmersdelight:kelp_roll"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000091AC3C68"
+					item: "farmersdelight:minced_beef"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CC98CC0E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003F5DF58B"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "00000000EC1F8D19"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006282B581"
+					item: "minecraft:crimson_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004E461447"
+					item: "farmersdelight:cutting_board"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000297B4302"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E3FED763"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "00000000FBE59EF3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008C25080E"
 					item: "farmersdelight:mutton_chops"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006A204081"
+					id: "0000000067C5A7E4"
 					item: "farmersdelight:salmon_slice"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000084AB7913"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000019D13CCA"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000FDD2EDAF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D9870161"
+					item: "farmersdelight:chicken_cuts"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005F2CEF0D"
+					item: "farmersdelight:cod_slice"
 					type: "item"
 				}
 			]
@@ -862,74 +1042,40 @@
 			y: 5.0d
 		}
 		{
+			dependencies: [
+				"00000000297B4302"
+				"0000000084AB7913"
+				"00000000696FB0E6"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CE1A310B"
+			id: "00000000DD5CFCA3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B91027BC"
+					id: "000000008234DD88"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006327A518"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000E6CC614D"
-					item: "farmersdelight:chicken_cuts"
+					id: "00000000159BB4BC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002F2E0E3E"
-					item: "farmersdelight:cod_slice"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000017F4A69C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000E6B3100"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009C55A36E"
-					table_id: 977112052L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EE3A2F1E"
-					item: "minecraft:dark_oak_planks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000111539DC"
+					id: "00000000480F3E8E"
 					item: {
 						Count: 1
 						id: "farmersdelight:diamond_knife"
@@ -939,238 +1085,145 @@
 					}
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "000000004413E2FA"
+					item: "farmersdelight:dog_food"
+					type: "item"
+				}
 			]
-			x: -1.0d
-			y: 8.0d
+			x: -2.0d
+			y: 0.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000072664128"
+			id: "00000000C6B6E096"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004BB25152"
+					id: "0000000078E7E421"
 					type: "xp"
-					xp: 19
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000096041B06"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000B5075FF3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000079B154B4"
-					item: "farmersdelight:rice_panicle"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009ABB3CEB"
-					item: "farmersdelight:wheat_dough"
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "00000000250F9413"
+				item: "farmersdelight:wheat_dough"
+				type: "item"
+			}]
 			x: -7.0d
 			y: 7.0d
 		}
 		{
 			dependencies: [
-				"0000000033EEB435"
-				"000000007C42E144"
-				"00000000189160AD"
-				"0000000001E3E6CD"
-				"00000000C2150B2E"
-				"00000000CE1A310B"
-				"0000000045EC4FBE"
-				"0000000072664128"
+				"00000000173B0F84"
+				"0000000073E0B9A0"
+				"00000000C4D81090"
+				"0000000049B5A69A"
+				"000000006F2BF361"
+				"0000000084AB7913"
+				"00000000C6B6E096"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CC86F129"
+			id: "00000000F9CFD1E3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000621AE4D9"
+					id: "000000000C7F9442"
 					type: "xp"
-					xp: 17
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002863C82F"
-					table_id: 977112052L
-					type: "random"
+					id: "000000009039047C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000083234ADC"
-					item: "farmersdelight:dog_food"
+					id: "00000000F5A21253"
+					item: "farmersdelight:dumplings"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008A7B9DC3"
-					item: "farmersdelight:dumplings"
+					id: "00000000B2B1C06D"
+					item: "deeperdarker:echo_planks"
 					type: "item"
 				}
 			]
-			x: -1.0d
-			y: 9.0d
+			x: -2.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["000000008D0A0435"]
+			dependencies: [
+				"0000000073E0B9A0"
+				"00000000C8ED1733"
+				"0000000079E341BD"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007F8EFCDF"
+			id: "00000000C9FF6DBD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007A06B841"
+					id: "0000000010305A41"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9369376"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000E9EE510F"
-				item: "farmersdelight:tatami"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["000000003A0F666A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000BA96AC0D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000013D05A61"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D9CCBF68"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [{
-				consume_items: false
-				id: "000000006649B67E"
-				item: "farmersdelight:tomato_crate"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"000000003A0F666A"
-				"000000008D0A0435"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C2150B2E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A14B735F"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000581CC379"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000002CEF2208"
-					item: "farmersdelight:rice"
+					id: "00000000B387853E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008D36ED3F"
-					item: "farmersdelight:straw_bale"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"00000000696EDE17"
-				"0000000033EEB435"
-				"000000003EBC7187"
-				"0000000045EC4FBE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C94E2289"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CA0681E9"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DC337A42"
-					table_id: 977112052L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CB9CA264"
-					item: "minecraft:scaffolding"
+					id: "000000006BA94C9B"
+					item: "minecraft:red_mushroom"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000008D45BD9"
-					item: "farmersdelight:shepherds_pie_block"
+					id: "000000003AF6A24D"
+					item: "farmersdelight:rice_roll_medley_block"
 					type: "item"
 				}
 			]
@@ -1178,212 +1231,195 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000006F87493F"]
+			dependencies: [
+				"00000000C07CB8DC"
+				"0000000073E0B9A0"
+				"00000000CD8ED306"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B11FA75D"
+			id: "00000000FBD668B2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000033CEA756"
+					id: "00000000243C02C1"
 					type: "xp"
-					xp: 20
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005E34223B"
-					table_id: 977112052L
-					type: "random"
+					id: "000000004B45DA08"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004BFBAAF8"
-					item: "deeperdarker:echo_planks"
+					id: "00000000141E413D"
+					item: "farmersdelight:shepherds_pie_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001CDC2BBE"
+					id: "0000000007CC35B4"
+					item: {
+						Count: 1
+						id: "farmersdelight:skillet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000005A3B2980"
+				"0000000073E0B9A0"
+				"00000000297B4302"
+				"0000000084AB7913"
+				"000000005E5DA185"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000141998BB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000226A4933"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "0000000026F05713"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005F89E04D"
 					item: "farmersdelight:egg_sandwich"
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "00000000B8BE4CE6"
+					item: "farmersdelight:fish_stew"
+					type: "item"
+				}
 			]
 			x: -2.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000001BBB4616"
-				"000000003EBC7187"
-				"0000000045EC4FBE"
-				"000000009CCAB0C6"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000094CDA902"
+			id: "0000000066E08E9C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000048D13E14"
+					id: "000000004F616395"
 					type: "xp"
-					xp: 18
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EFC5D4E1"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000090F606DA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ECF0D497"
+					item: "farmersdelight:straw"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000777CF051"
+					item: "farmersdelight:tomato"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000C07CB8DC"
+				"0000000066E08E9C"
+				"0000000073E0B9A0"
+				"00000000CD8ED306"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000077D0651F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C3BB2D43"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "00000000FA680C6D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000734622F9"
-					item: "farmersdelight:rice_roll_medley_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008EAFFC4E"
+					id: "0000000091AFA3F2"
 					item: "farmersdelight:roast_chicken_block"
 					type: "item"
 				}
-			]
-			x: -4.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"000000003A0F666A"
-				"00000000696EDE17"
-				"00000000A15B1119"
-				"00000000CE786CF0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000F52C9AE3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006E5994A3"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000957EFC86"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "000000009A414896"
+					id: "000000004917FED2"
 					item: "farmersdelight:roasted_mutton_chops"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000082834780"
-					item: "farmersdelight:safety_net"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"00000000B34C3475"
-				"000000003EBC7187"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008B7B10FD"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006ED35B32"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000006D85839"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009EF4D91C"
-					item: "farmersdelight:glow_berry_custard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C0F875FB"
-					item: "minecraft:gold_nugget"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"000000003A0F666A"
-				"0000000001E3E6CD"
-				"00000000CE1A310B"
-				"00000000EF4F2BF6"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008CC1180A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000EACAF761"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005AA1006F"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000000BA3FEBE"
-					item: "minecraft:spruce_planks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000013CFF8FA"
-					item: "farmersdelight:squid_ink_pasta"
 					type: "item"
 				}
 			]
@@ -1392,40 +1428,92 @@
 		}
 		{
 			dependencies: [
-				"0000000045EC4FBE"
-				"00000000A15B1119"
+				"000000007A83CC26"
+				"00000000D6DAD8F0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003A810D68"
+			id: "0000000059AD1DD8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005345C1F4"
+					id: "00000000F7CBE9B5"
 					type: "xp"
-					xp: 14
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A604C995"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000EE05C66B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006D9CAB3A"
+					item: "farmersdelight:full_tatami_mat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004ACF0963"
+					item: "farmersdelight:rice_bale"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000006F2BF361"
+				"0000000079E341BD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000020358EF4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000970BC929"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000E6127728"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001C90DB35"
-					item: "farmersdelight:steak_and_potatoes"
+					id: "00000000FF4BAF4D"
+					item: "farmersdelight:safety_net"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F6328671"
-					item: "farmersdelight:stove"
+					id: "000000003791C813"
+					item: "minecraft:scaffolding"
 					type: "item"
 				}
 			]
@@ -1433,42 +1521,173 @@
 			y: 7.0d
 		}
 		{
-			dependencies: [
-				"0000000001E3E6CD"
-				"0000000094570E8F"
-				"0000000045EC4FBE"
-				"00000000CE1A310B"
-			]
+			dependencies: ["00000000D0BF2AF5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006E7B6EFD"
+			id: "00000000140643E9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000689F2488"
+					id: "00000000ACABB8A9"
 					type: "xp"
-					xp: 16
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000038323DB3"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000098B5DB77"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003297D4C9"
-					item: "farmersdelight:fish_stew"
+					id: "00000000D89BDCEF"
+					item: "minecraft:gold_nugget"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000012722C46"
+					id: "000000004BAE7681"
+					item: "minecraft:gravel"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000073E0B9A0"
+				"00000000CD8ED306"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D6B80240"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A9D2253E"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "00000000E041CEA0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000028ABD1A6"
+					item: "farmersdelight:steak_and_potatoes"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CFBCA2AE"
+					item: "farmersdelight:stove"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001DC2A50E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CFB805CC"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "00000000D262A6F5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C79AE756"
+					item: "minecraft:stripped_acacia_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008C824805"
+					item: "minecraft:stripped_acacia_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000073E0B9A0"
+				"00000000696FB0E6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000086E2941E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004D8CADDB"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "00000000C7789A6C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000001DACE9A"
 					item: {
 						Count: 1
 						id: "farmersdelight:flint_knife"
@@ -1478,93 +1697,57 @@
 					}
 					type: "item"
 				}
-			]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000C2150B2E"
-				"0000000045EC4FBE"
-				"00000000EF4F2BF6"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000802EF1AE"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005F9AB179"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009FE1C4C8"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "0000000036252B97"
+					id: "00000000EB5F9928"
 					item: "farmersdelight:fried_rice"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "000000006204E9A7"
-					item: "farmersdelight:fruit_salad"
-					type: "item"
-				}
 			]
 			x: -2.0d
-			y: 2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"000000003A0F666A"
-				"0000000039D74DC6"
-				"000000008D0A0435"
-				"0000000033EEB435"
-				"00000000189160AD"
-				"0000000045EC4FBE"
+				"00000000F1AA7063"
+				"00000000CD8ED306"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000016E7551A"
+			id: "0000000039E72178"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009DE536A2"
+					id: "00000000AA4D0F9D"
 					type: "xp"
-					xp: 10
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000828D838A"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000800F27EE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000867B5EFC"
-					item: "farmersdelight:half_tatami_mat"
+					id: "0000000096B67128"
+					item: "farmersdelight:fruit_salad"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002C26E9B6"
-					item: "farmersdelight:hamburger"
+					id: "00000000A2B970F1"
+					item: "farmersdelight:glow_berry_custard"
 					type: "item"
 				}
 			]
@@ -1572,118 +1755,48 @@
 			y: 4.0d
 		}
 		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C2C775B6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CD0283A4"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006FA28AA6"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004BD59F96"
-					item: "minecraft:stripped_acacia_log"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008D9AE92E"
-					item: "minecraft:stripped_acacia_wood"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 8.0d
-		}
-		{
 			dependencies: [
-				"000000009CCAB0C6"
-				"00000000A15B1119"
-				"00000000CE786CF0"
+				"0000000066E08E9C"
+				"00000000297B4302"
+				"00000000F1AA7063"
+				"0000000084AB7913"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ED9A1A88"
+			id: "00000000F1AF6145"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000009D6B6C3"
+					id: "00000000FA0D4F8F"
 					type: "xp"
-					xp: 10
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000901E34BE"
-					table_id: 977112052L
-					type: "random"
+					id: "000000006AB1F582"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001DC1803E"
-					item: "farmersdelight:honey_glazed_ham_block"
+					id: "0000000098BE33F3"
+					item: "minecraft:spruce_planks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AAE9D0A8"
-					item: "farmersdelight:horse_feed"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AA357A0C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000050106FB0"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000016C497B3"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000322D60DC"
-					item: "minecraft:stripped_birch_log"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A664AFA6"
-					item: "minecraft:stripped_birch_wood"
+					id: "00000000417C813D"
+					item: "farmersdelight:squid_ink_pasta"
 					type: "item"
 				}
 			]
@@ -1691,236 +1804,46 @@
 			y: 9.0d
 		}
 		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000CC88209"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000ECD5D5B3"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006261C5FC"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000006455380E"
-					item: "minecraft:stripped_cherry_log"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F5701899"
-					item: "minecraft:stripped_cherry_wood"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 0.0d
-		}
-		{
 			dependencies: [
-				"000000007C42E144"
-				"00000000CE1A310B"
+				"00000000C3474AFB"
+				"00000000CD8ED306"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F018205E"
+			id: "000000000E01E299"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003D85FF06"
+					id: "000000000C95BAF4"
 					type: "xp"
-					xp: 15
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000692D71A"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000BB897CF8"
-					item: "farmersdelight:cooked_bacon"
+					id: "00000000573C3834"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EBE7F471"
-					item: "farmersdelight:cooked_chicken_cuts"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000B34C3475"
-				"000000003EBC7187"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D3942F11"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C840896E"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EE255A6A"
-					table_id: 977112052L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007B2890B4"
-					item: "farmersdelight:hot_cocoa"
+					id: "0000000054DF52DA"
+					item: "farmersdelight:honey_cookie"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000039964C7D"
-					item: "minecraft:iron_nugget"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000030A5CC2A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000ABE8284E"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F0DC85E1"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000016BB3739"
-					item: "deeperdarker:stripped_echo_log"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009705D3A7"
-					item: "deeperdarker:stripped_echo_wood"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["0000000001E3E6CD"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000696EDE17"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FFA522CE"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FB70327A"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000002B9A01B7"
-					item: "farmersdelight:cooked_cod_slice"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B24E344D"
-					item: "farmersdelight:cooked_mutton_chops"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000089A7DFB5"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009C3144C5"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007C081A5B"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000452A10BA"
-					item: "farmersdelight:jungle_cabinet"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B9C0E649"
-					item: "minecraft:jungle_planks"
+					id: "00000000247522BB"
+					item: "farmersdelight:honey_glazed_ham_block"
 					type: "item"
 				}
 			]
@@ -1931,34 +1854,357 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B265DB2C"
+			id: "0000000082CE98CE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004CB72F86"
+					id: "0000000031589B5C"
 					type: "xp"
-					xp: 15
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009147E0FD"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000035054E54"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009489DA8F"
-					item: "minecraft:stripped_jungle_log"
+					id: "0000000004276AD9"
+					item: "minecraft:stripped_birch_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000F12A0E2"
-					item: "minecraft:stripped_jungle_wood"
+					id: "000000003FD73F56"
+					item: "minecraft:stripped_birch_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000173B0F84"
+				"000000005A3B2980"
+				"0000000073E0B9A0"
+				"0000000059AD1DD8"
+				"000000006F2BF361"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C1B18CD0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D638CE0C"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000C98BF58E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EE520186"
+					item: "farmersdelight:grilled_salmon"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DC1EC26C"
+					item: "farmersdelight:half_tatami_mat"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000059AD1DD8"
+				"00000000CD8ED306"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DD17F206"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E8099685"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "000000002C88837C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008E9B6803"
+					item: "farmersdelight:horse_feed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005817DA7B"
+					item: "farmersdelight:hot_cocoa"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000006F2BF361"
+				"00000000696FB0E6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000173B0F84"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000011094B32"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "0000000005C8D997"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000099F23689"
+					item: "farmersdelight:rice_bag"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000200A7229"
+					item: "farmersdelight:cabbage_leaf"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000066E08E9C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000468ACE01"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000091C368A6"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000004DD66E14"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000BC33873"
+					item: "farmersdelight:straw_bale"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000001023197"
+					item: "farmersdelight:tomato_crate"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000D6DAD8F0"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006F2BF361"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000035A90DD6"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000043E7C373"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C6FF32BC"
+					item: "farmersdelight:cabbage"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008BB9D561"
+					item: "farmersdelight:canvas"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002119AED7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EEB7AC30"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "00000000D90B4AC3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000CA2B33A"
+					item: "minecraft:stripped_cherry_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001A93A6C0"
+					item: "minecraft:stripped_cherry_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000425F24EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008A8C607F"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "00000000ACDC00EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000060749D2C"
+					item: "minecraft:stripped_crimson_hyphae"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007ECA709F"
+					item: "minecraft:stripped_crimson_stem"
 					type: "item"
 				}
 			]
@@ -1966,106 +2212,300 @@
 			y: 4.0d
 		}
 		{
+			dependencies: [
+				"00000000297B4302"
+				"0000000084AB7913"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006F87493F"
+			id: "00000000C07CB8DC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D2F753CE"
+					id: "000000005B8305FB"
 					type: "xp"
-					xp: 9
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000039E8C3DE"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000098AAAD74"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007DFDBABE"
-					item: "farmersdelight:cooked_salmon_slice"
+					id: "00000000CF7B7FCE"
+					item: "farmersdelight:cooked_cod_slice"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007E68EEBA"
-					item: "farmersdelight:fried_egg"
+					id: "000000009FDFFFAB"
+					item: "farmersdelight:cooked_mutton_chops"
 					type: "item"
 				}
 			]
 			x: -7.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
+			dependencies: ["00000000D0BF2AF5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000057306ACA"
+			id: "000000002552F14F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006C29BC53"
+					id: "000000001EFF32FB"
 					type: "xp"
-					xp: 13
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C54B7A7C"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000675891B6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000067DB899C"
-					item: "minecraft:stripped_crimson_hyphae"
+					id: "0000000066AF7E0E"
+					item: "minecraft:iron_nugget"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E6330E01"
-					item: "minecraft:stripped_crimson_stem"
+					id: "000000003EEE1F9F"
+					item: "farmersdelight:jungle_cabinet"
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 1.0d
+			x: -2.0d
+			y: 9.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B34C3475"
+			id: "0000000081979812"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000000F640CC"
+					id: "00000000660BFF1C"
 					type: "xp"
 					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EEAF56B6"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000065092146"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006F0EBA9D"
+					item: "minecraft:stripped_jungle_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000060EBAE5E"
+					item: "minecraft:stripped_jungle_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000297B4302"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005A3B2980"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000005F44DB"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000002DD41919"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BC6C673E"
+					id: "00000000C5BD69ED"
+					item: "farmersdelight:cooked_salmon_slice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B993D59F"
+					item: "farmersdelight:fried_egg"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000066E08E9C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000021075DDC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006D7414F9"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "00000000404C88C4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A0F5EBE0"
+					item: "minecraft:jungle_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E4D5628"
+					item: "minecraft:lead"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F46A9F83"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000456CD81F"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "00000000AD1D31B2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000A063127"
+					item: "minecraft:stripped_mangrove_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000099DB1BF8"
+					item: "minecraft:stripped_mangrove_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D0BF2AF5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BCEB339B"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000089709255"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FD0844B1"
 					item: {
 						Count: 1
 						id: "farmersdelight:golden_knife"
@@ -2077,7 +2517,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000DC5FAD6B"
+					id: "000000000D96A0CF"
 					item: {
 						Count: 1
 						id: "farmersdelight:iron_knife"
@@ -2089,117 +2529,89 @@
 				}
 			]
 			x: -8.0d
-			y: 2.0d
+			y: 1.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000052B818EF"
+			id: "000000002D337203"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008B8E4B6E"
+					id: "0000000046F5C02E"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007D4732C3"
-					table_id: 977112052L
-					type: "random"
+					id: "000000009C991791"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000001F4D356"
+					id: "000000005ABEA797"
 					item: "minecraft:stripped_dark_oak_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000093A94EB7"
+					id: "00000000F0F502ED"
 					item: "minecraft:stripped_dark_oak_wood"
 					type: "item"
 				}
 			]
 			x: -5.0d
-			y: 2.0d
+			y: 5.0d
 		}
 		{
+			dependencies: ["0000000049B5A69A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D3D17428"
+			id: "0000000073E0B9A0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000A35B859"
+					id: "00000000984A0E43"
 					type: "xp"
-					xp: 5
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C7C2226A"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000E7ACB1D6"
-					item: "minecraft:stripped_spruce_log"
+					id: "00000000768AD4F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000185A1F2E"
-					item: "minecraft:stripped_spruce_wood"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["000000007C42E144"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000039D74DC6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000979A1CBF"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000887E783D"
-					table_id: 977112052L
-					type: "random"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006DDFB7E8"
-					item: "farmersdelight:beef_patty"
+					id: "000000006211565F"
+					item: "farmersdelight:kelp_roll_slice"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B3C61346"
-					item: "farmersdelight:beetroot_crate"
+					id: "000000007AEEB809"
+					item: "farmersdelight:onion"
 					type: "item"
 				}
 			]
@@ -2210,76 +2622,314 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000093326A6A"
+			id: "000000008675DA2A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000021FE1FDC"
+					id: "00000000A274E109"
 					type: "xp"
-					xp: 1
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BEA56C74"
-					table_id: 977112052L
-					type: "random"
+					id: "000000005026DC89"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BB8C3BAD"
+					id: "000000007A055894"
+					item: "deeperdarker:stripped_echo_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006C7178C3"
+					item: "deeperdarker:stripped_echo_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000004781C21"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E4000A40"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "00000000600C6927"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000000C2B801"
 					item: "minecraft:stripped_warped_hyphae"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000019A590CC"
+					id: "000000007E26F72D"
 					item: "minecraft:stripped_warped_stem"
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 8.0d
+			x: -6.0d
+			y: 1.0d
 		}
 		{
-			dependencies: [
-				"000000003A0F666A"
-				"00000000189160AD"
-			]
+			dependencies: ["0000000049B5A69A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000033EEB435"
+			id: "0000000024016FB0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F8E0E3E4"
+					id: "0000000052CA72C0"
 					type: "xp"
-					xp: 16
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001A547557"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000E9D59AC6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003F167D22"
-					item: "farmersdelight:cabbage_leaf"
+					id: "00000000D1F03B1A"
+					item: "farmersdelight:beef_patty"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000018D4008A"
-					item: "farmersdelight:canvas"
+					id: "000000005D683B13"
+					item: "farmersdelight:beetroot_crate"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000066E08E9C"
+				"0000000073E0B9A0"
+				"0000000024016FB0"
+				"00000000CD8ED306"
+				"00000000696FB0E6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001CB0436C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F25DB000"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "0000000054351224"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C3024E4A"
+					item: "farmersdelight:stuffed_potato"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001824A92A"
+					item: "farmersdelight:stuffed_pumpkin_block"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000C4D81090"
+				"0000000084AB7913"
+				"00000000CD8ED306"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C8ED1733"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000792F9D25"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "000000003D6459A0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003C6CBA46"
+					item: "farmersdelight:chocolate_pie"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002F30D65C"
+					item: "farmersdelight:cod_roll"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000024B8221C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EB964B55"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000BB5E0ECA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BDC3299C"
+					item: "minecraft:stripped_oak_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000004D4D665"
+					item: "minecraft:stripped_oak_wood"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000C4D81090"
+				"0000000084AB7913"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008B1E98AE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C1A2CE08"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000B044E015"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CC267FA7"
+					item: "farmersdelight:cooked_bacon"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000FF9E8CD"
+					item: "farmersdelight:cooked_chicken_cuts"
 					type: "item"
 				}
 			]
@@ -2287,532 +2937,567 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000003A0F666A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000059E4CA72"
+			id: "000000000958B51E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000973333B7"
+					id: "00000000A2A370D8"
 					type: "xp"
-					xp: 12
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000089FEFDCD"
-					table_id: 977112052L
-					type: "random"
+					id: "000000008DD39D44"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000052D0BE83"
-					item: "minecraft:lead"
+					id: "00000000647F6353"
+					item: "minecraft:stripped_spruce_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000BE0E723"
-					item: "minecraft:leather"
+					id: "00000000E622A517"
+					item: "minecraft:stripped_spruce_wood"
 					type: "item"
 				}
 			]
-			x: -2.0d
-			y: 8.0d
+			x: -6.0d
+			y: 0.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005AB9180C"
+			id: "00000000CEEDC3A7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EED2AC7B"
+					id: "000000008F07C5D5"
 					type: "xp"
-					xp: 15
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E4F5B00B"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000C8E78671"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008C82E88C"
-					item: "minecraft:stripped_mangrove_log"
+					id: "000000005F0FC800"
+					item: "farmersdelight:mangrove_cabinet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000640CA565"
-					item: "minecraft:stripped_mangrove_wood"
+					id: "0000000042503238"
+					item: "minecraft:mangrove_planks"
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 5.0d
+			x: -3.0d
+			y: 1.0d
 		}
 		{
-			dependencies: [
-				"00000000CE1A310B"
-				"00000000A15B1119"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001BBB4616"
+			id: "00000000412D7F0A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002B490E66"
+					id: "000000002E473163"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006FEE8405"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000062DF1B20"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A7A70B82"
+					item: "farmersdelight:melon_juice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A223207"
+					item: "farmersdelight:melon_popsicle"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000C6B6E096"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F1AA7063"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E336F330"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "000000005DC19906"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002DA11A71"
-					item: "farmersdelight:carrot_crate"
+					id: "0000000025C416AC"
+					item: "farmersdelight:pumpkin_slice"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BE4AF93E"
-					item: "farmersdelight:cod_roll"
+					id: "00000000E36321DE"
+					item: "farmersdelight:raw_pasta"
 					type: "item"
 				}
 			]
 			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000066E08E9C"
+				"00000000297B4302"
+				"00000000CD8ED306"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000079E341BD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FDFFD8A4"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "0000000028D8FC15"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000089A483E6"
+					item: "farmersdelight:rope"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E7C4896"
+					item: "farmersdelight:salmon_roll"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000696FB0E6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CD8ED306"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000541901F4"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000009B80C6C9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E75C21CE"
+					item: "farmersdelight:cooked_rice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006B69C637"
+					item: "farmersdelight:milk_bottle"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C3474AFB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000827EA4FB"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "00000000CF54E53D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000048870FD"
+					item: "farmersdelight:cake_slice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E75FE664"
+					item: "farmersdelight:smoked_ham"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000066E08E9C"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005E5DA185"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CCD23F78"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000004BF3189B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000D2588CF1"
+				item: "farmersdelight:tomato_sauce"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000173B0F84"
+				"0000000066E08E9C"
+				"0000000073E0B9A0"
+				"000000006F2BF361"
+				"00000000F1AA7063"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F1D1542B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000331E246A"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "00000000B3498BD3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000049E6FEB2"
+					item: "farmersdelight:tomato_seeds"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000085B937D"
+					item: "farmersdelight:vegetable_noodles"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000173B0F84"
+				"000000006F2BF361"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000034AC6358"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008D16379B"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "00000000C3B51ABA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003A0CDE5C"
+					item: "farmersdelight:vegetable_soup"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A2C2455C"
+					item: "farmersdelight:warped_cabinet"
+					type: "item"
+				}
+			]
+			x: -6.0d
 			y: 4.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A111B12A"
+			id: "000000007A83CC26"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000045A8DEC9"
+					id: "000000007BB45DAB"
 					type: "xp"
-					xp: 7
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AD6FF8EB"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C2C559B6"
-					item: "minecraft:stripped_oak_log"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FC82844F"
-					item: "minecraft:stripped_oak_wood"
+					id: "00000000D0F21D52"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C1DFE3A7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A95B7E46"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EFC50E9E"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005F1F134E"
-					item: "minecraft:mangrove_planks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000089B5CD48"
-					item: "farmersdelight:melon_juice"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 9.0d
-		}
-		{
-			dependencies: ["00000000189160AD"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003EBC7187"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009EC172A2"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000686E5C80"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000CD1E57D0"
-					item: "farmersdelight:kelp_roll_slice"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001F24343B"
-					item: "farmersdelight:milk_bottle"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 8.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000045EC4FBE"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E1F00E31"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D83B2B74"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009EE9B741"
-					item: "farmersdelight:onion"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004AF75E64"
-					item: "farmersdelight:potato_crate"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["000000003A0F666A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000094570E8F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003A796AA2"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A9E4BB93"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "square"
+			shape: "pentagon"
 			tasks: [{
 				consume_items: false
-				id: "000000003CDC2964"
-				item: "farmersdelight:tomato_sauce"
+				id: "00000000D5EFCE8A"
+				item: "farmersdelight:tatami"
 				type: "item"
 			}]
-			x: -8.0d
+			x: -12.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000C2150B2E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A15B1119"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005F9AE421"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F3CC3AFA"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "0000000072D4DAC3"
-				item: "farmersdelight:cooked_rice"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 1.0d
-		}
-		{
 			dependencies: [
-				"0000000001E3E6CD"
-				"00000000A15B1119"
+				"00000000173B0F84"
+				"0000000066E08E9C"
+				"000000006F2BF361"
+				"00000000696FB0E6"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009CCAB0C6"
+			id: "00000000A3970C33"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000053D711CD"
+					id: "00000000E24DECBE"
 					type: "xp"
-					xp: 9
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000C8CEFDD"
-					table_id: 977112052L
-					type: "random"
+					id: "000000009551F59E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "square"
+			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FC8E4B73"
-					item: "farmersdelight:salmon_roll"
+					id: "000000008BBA11F1"
+					item: "farmersdelight:mixed_salad"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006254B2CB"
-					item: "farmersdelight:smoked_ham"
+					id: "00000000A45077AA"
+					item: "farmersdelight:mushroom_rice"
 					type: "item"
 				}
 			]
-			x: -7.0d
-			y: 9.0d
+			x: -3.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["0000000072664128"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EF4F2BF6"
+			id: "00000000D6DAD8F0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F739BC1D"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000434FEB07"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000971CF442"
-					item: "farmersdelight:pumpkin_slice"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FC0D5ECC"
-					item: "farmersdelight:raw_pasta"
-					type: "item"
-				}
-			]
-			x: -8.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000003A0F666A"
-				"0000000072664128"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CE786CF0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DDAE46C6"
+					id: "00000000AC103BC7"
 					type: "xp"
 					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000D935940"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000541C6CCB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "square"
+			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000347BCC55"
-					item: "farmersdelight:rice_bale"
+					id: "000000001187DF47"
+					item: "farmersdelight:canvas_rug"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007A76A361"
-					item: "farmersdelight:rope"
-					type: "item"
-				}
-			]
-			x: -8.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003A0F666A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FB4EEA24"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002FFAAB30"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000D541A7C8"
-					item: "farmersdelight:straw"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002EDA5537"
-					item: "farmersdelight:tomato"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008D0A0435"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E57C2B73"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007E6D00D0"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000116C1CC4"
-					item: "farmersdelight:rice_bag"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CDD1D192"
-					item: "farmersdelight:full_tatami_mat"
+					id: "00000000D33F143F"
+					item: "farmersdelight:rice_panicle"
 					type: "item"
 				}
 			]
@@ -2821,287 +3506,268 @@
 		}
 		{
 			dependencies: [
-				"000000003A0F666A"
-				"0000000033EEB435"
-				"00000000189160AD"
-				"0000000045EC4FBE"
-				"00000000EF4F2BF6"
+				"00000000C07CB8DC"
+				"00000000173B0F84"
+				"0000000073E0B9A0"
+				"000000006F2BF361"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B7E3BCB7"
+			id: "00000000593B4AB1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008408D783"
+					id: "00000000C3CC2F2B"
 					type: "xp"
-					xp: 10
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000061625C1"
-					table_id: 977112052L
-					type: "random"
+					id: "000000003684591F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007FEDDF02"
-					item: "farmersdelight:tomato_seeds"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000064A8BB21"
-					item: "farmersdelight:vegetable_noodles"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000003A0F666A"
-				"0000000039D74DC6"
-				"000000003EBC7187"
-				"00000000C2150B2E"
-				"0000000045EC4FBE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000EDECABF2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C9486276"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000019955862"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000711B31CB"
-					item: "farmersdelight:stuffed_potato"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007A17A87D"
-					item: "farmersdelight:stuffed_pumpkin_block"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"000000003A0F666A"
-				"0000000033EEB435"
-				"00000000189160AD"
-				"000000003EBC7187"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000057ABBB27"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003D7D5759"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B290B790"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C9C47EB3"
-					item: "minecraft:milk_bucket"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E03B6FCE"
-					item: "farmersdelight:mixed_salad"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["00000000C2150B2E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000536C645A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000F8B2C84"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000833D876E"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008AAAA5A6"
-					item: "farmersdelight:mushroom_rice"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000087F64B5E"
+					id: "00000000C0FA393D"
 					item: "minecraft:mushroom_stew"
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "00000000C5ABB2CF"
+					item: "farmersdelight:mutton_wrap"
+					type: "item"
+				}
 			]
 			x: -3.0d
-			y: 2.0d
+			y: 5.0d
 		}
 		{
-			dependencies: [
-				"0000000033EEB435"
-				"00000000189160AD"
-			]
+			dependencies: ["00000000CD8ED306"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C5FEAF3D"
+			id: "0000000077A5BBC1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000097E66E2F"
+					id: "00000000B3202F4A"
 					type: "xp"
-					xp: 5
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D33713B7"
-					table_id: 977112052L
-					type: "random"
+					id: "000000004930E6F9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004E2AF2FF"
-					item: "farmersdelight:vegetable_soup"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B800C525"
-					item: "farmersdelight:warped_cabinet"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000483D254D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C04C4E9E"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EF76DE5E"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000352562B9"
-					item: "farmersdelight:melon_popsicle"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A7473B9F"
+					id: "000000003FEE241F"
 					item: "minecraft:melon_slice"
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "0000000088B7C29C"
+					item: "minecraft:milk_bucket"
+					type: "item"
+				}
 			]
 			x: -3.0d
-			y: 0.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"000000006F87493F"
-				"000000007C42E144"
-				"00000000EF4F2BF6"
+				"000000005A3B2980"
+				"00000000C4D81090"
+				"00000000F1AA7063"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008C963D2A"
+			id: "00000000AEB932E1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000067E05BCA"
+					id: "00000000E8B0B1B7"
 					type: "xp"
-					xp: 17
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009C089387"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000A4965085"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B9570405"
+					id: "000000009D76C30E"
+					item: "farmersdelight:noodle_soup"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D3E123EE"
+					item: "farmersdelight:oak_cabinet"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000073E0B9A0"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000027030E55"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CCA0C13E"
+					type: "xp"
+					xp: 14
+				}
+				{
+					id: "00000000E9E19CA9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DBF97C4D"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009F640EF3"
+					item: "farmersdelight:onion_crate"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000233138AB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008D5DE927"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000002B58F0D3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F2C1CE45"
+					item: "minecraft:nether_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C0FBB083"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009D320C6B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000198BC090"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000008D5533C9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007D46558E"
+					item: "farmersdelight:nether_salad"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C699EA4D"
 					item: {
 						Count: 1
 						id: "farmersdelight:netherite_knife"
@@ -3111,207 +3777,94 @@
 					}
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "00000000158C785C"
-					item: "farmersdelight:noodle_soup"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000065AF316C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006CEDEC81"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BC6EF824"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000095B47EC1"
-					item: "farmersdelight:oak_cabinet"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000076CD492F"
-					item: "minecraft:oak_planks"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"00000000696EDE17"
-				"0000000033EEB435"
-				"00000000189160AD"
-				"0000000045EC4FBE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000055C7ED83"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E768DB40"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004FE946B9"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000E832FCAE"
-					item: "farmersdelight:mutton_wrap"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D32FE6EF"
-					item: "minecraft:nether_brick"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006CD9C36B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FAB4EB60"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006BBB3E10"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000002C659A4A"
-					item: "minecraft:quartz"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DCCC4117"
-					item: "farmersdelight:nether_salad"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["000000003A0F666A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009F248732"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000791FCD4A"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CC4F17E7"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B0BD17C4"
-					item: "farmersdelight:organic_compost"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005CE093D7"
-					item: "minecraft:packed_mud"
-					type: "item"
-				}
 			]
 			x: -3.0d
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000189160AD"]
+			dependencies: [
+				"0000000066E08E9C"
+				"000000006F2BF361"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008F8B89A6"
+			id: "0000000008C027E0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007E82B0D0"
+					id: "0000000079FA8CE4"
 					type: "xp"
-					xp: 6
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002E7DC1E0"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000F80F23BB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008B215862"
+					id: "000000003B749A82"
+					item: "minecraft:packed_mud"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F8124435"
+					item: "minecraft:painting"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000006F2BF361"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002B89108C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B2DA1EA7"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "00000000B3C82817"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002DF8A516"
 					item: "minecraft:brown_mushroom"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000264D0E4B"
+					id: "000000007B285EE6"
 					item: "farmersdelight:cabbage_crate"
 					type: "item"
 				}
@@ -3320,37 +3873,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000033EEB435"]
+			dependencies: ["000000006F2BF361"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007C9A49AA"
+			id: "0000000069A9B60D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008D5DC0DA"
+					id: "00000000CF6EBA35"
 					type: "xp"
-					xp: 9
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A855993A"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000D4211FF6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A4D76747"
+					id: "0000000002D7A01E"
 					item: "farmersdelight:bone_broth"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000860750F8"
+					id: "00000000FDA92BED"
 					item: "minecraft:book"
 					type: "item"
 				}
@@ -3359,37 +3917,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000072664128"]
+			dependencies: ["00000000C6B6E096"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000048E8A3F7"
+			id: "000000008245367D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EC8A5204"
+					id: "00000000C2869E33"
 					type: "xp"
-					xp: 16
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004E0DA219"
-					table_id: 977112052L
-					type: "random"
+					id: "0000000002FAC819"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000099E2C28C"
+					id: "0000000024BE111F"
 					item: "minecraft:bread"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000373D40BE"
+					id: "000000000F5A65D9"
 					item: "minecraft:brick"
 					type: "item"
 				}
@@ -3398,43 +3961,92 @@
 			y: 9.0d
 		}
 		{
-			dependencies: [
-				"0000000033EEB435"
-				"000000007C42E144"
-				"00000000189160AD"
-				"0000000001E3E6CD"
-				"00000000CE1A310B"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C8F15B5E"
+			id: "0000000048D6CA8E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000625D0DED"
+					id: "00000000FCF11BAD"
 					type: "xp"
-					xp: 7
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C0264D65"
-					table_id: 977112052L
-					type: "random"
+					id: "00000000BB0C1FD2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CD21A9FC"
+					id: "000000005EFEE85B"
+					item: "minecraft:carrot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000044444B28"
+					item: "farmersdelight:carrot_crate"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000173B0F84"
+				"00000000C4D81090"
+				"0000000049B5A69A"
+				"00000000297B4302"
+				"000000006F2BF361"
+				"0000000084AB7913"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000147E05F7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000093E4847"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000F7A4024D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DBE9FCC0"
 					item: "farmersdelight:cabbage_rolls"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D6B0A0DB"
+					id: "00000000BD6E0917"
 					item: "farmersdelight:cabbage_seeds"
 					type: "item"
 				}
@@ -3443,46 +4055,39 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"0000000033EEB435"
-				"000000003EBC7187"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000898A17C6"
+			id: "00000000696FB0E6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ED55873B"
+					id: "0000000058C19F8A"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000098016C95"
-					table_id: 977112052L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000081A6ACF7"
-					item: "minecraft:cake"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000064092EB9"
-					item: "farmersdelight:canvas_rug"
+					id: "00000000E1CAA8E3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_farmersdelight"
+						}
+					}
 					type: "item"
 				}
 			]
-			x: -1.0d
-			y: 2.0d
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "00000000C47FF9D9"
+				item: "farmersdelight:rice"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 1.0d
 		}
 	]
 	title: "Farmer's Delight"

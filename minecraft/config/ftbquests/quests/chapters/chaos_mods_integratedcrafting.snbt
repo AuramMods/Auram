@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_integratedcrafting"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "integratedcrafting:part_interface_crafting"
-	id: "00000000C538DD67"
+	id: "0000000078046321"
 	order_index: 96
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0000000067F0CCE5"]
+			dependencies: ["0000000053054F80"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006D309C79"
+			id: "00000000DC73F106"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001AE88CEE"
+					id: "00000000392BF454"
 					type: "xp"
-					xp: 8
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000D4FB242"
-					table_id: 3247675626L
-					type: "random"
+					id: "000000007F85CD81"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_integratedcrafting"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000057596CBF"
+				id: "00000000EC32FC5D"
 				item: "integratedcrafting:part_interface_crafting_attuned"
 				type: "item"
 			}]
@@ -43,26 +48,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006FA1FED6"
+			id: "00000000C53B141C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006881A028"
+					id: "000000008633B4AD"
 					type: "xp"
-					xp: 9
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000030F2092E"
-					table_id: 3247675626L
-					type: "random"
+					id: "00000000F1618B30"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_integratedcrafting"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CDEE66AE"
+				id: "0000000062D97019"
 				item: "integratedcrafting:part_crafting_writer"
 				type: "item"
 			}]
@@ -73,26 +83,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000067F0CCE5"
+			id: "0000000053054F80"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000074013D7C"
+					id: "00000000585CEFE5"
 					type: "xp"
-					xp: 1
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E25B6FA4"
-					table_id: 3247675626L
-					type: "random"
+					id: "00000000748EC6A7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_integratedcrafting"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000007EE6E1A3"
+				id: "000000007EAB444A"
 				item: "integratedcrafting:part_interface_crafting"
 				type: "item"
 			}]

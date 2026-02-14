@@ -2,35 +2,40 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_disenchanting_table"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "disenchanting_table:disenchanting_table"
-	id: "00000000429880BE"
+	id: "000000004A7ECC10"
 	order_index: 34
 	quest_links: [ ]
 	quests: [{
 		hide_dependency_lines: true
 		hide_details_until_startable: true
 		hide_until_deps_complete: true
-		id: "000000004D18F303"
+		id: "000000001BBCB337"
 		invisible: true
 		invisible_until_tasks: 1
 		rewards: [
 			{
-				id: "00000000EF203C00"
+				id: "000000002C910B14"
 				type: "xp"
-				xp: 5
+				xp: 9
 			}
 			{
-				exclude_from_claim_all: true
-				id: "000000003CD902EB"
-				table_id: 289442459L
-				type: "random"
+				id: "00000000BDD2676C"
+				item: {
+					Count: 1
+					id: "ftbquests:lootcrate"
+					tag: {
+						type: "chaos_box_disenchanting_table"
+					}
+				}
+				type: "item"
 			}
 		]
 		shape: "circle"
 		tasks: [{
 			consume_items: false
-			id: "000000005E6D39B0"
+			id: "0000000028599788"
 			item: "disenchanting_table:disenchanting_table"
 			type: "item"
 		}]

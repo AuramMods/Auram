@@ -2,1693 +2,135 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_refinedstorage"
-	group: "00000000DEB299A3"
-	icon: "refinedstorage:purple_crafting_monitor"
-	id: "00000000251ABE96"
-	order_index: 136
+	group: "000000008CDEF944"
+	icon: "refinedstorage:orange_grid"
+	id: "0000000044782EB1"
+	order_index: 135
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"0000000007D82B28"
-				"000000006E1358E3"
-				"0000000019F567A0"
-				"00000000C43F6B53"
-				"0000000002F467C1"
-				"000000008D7F58C7"
-				"00000000829CCED4"
+				"00000000AA49D72A"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000073CA5D70"
+			id: "000000008A996746"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000068A50993"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000475ED87"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000286BC6E0"
-					item: "refinedstorage:black_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008C2EEA0A"
-					item: "refinedstorage:black_grid"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000C0EDB5F8"
-				"0000000050E0AB00"
-				"00000000BE84A1AA"
-				"000000008A2932F2"
-				"00000000C21C19B0"
-				"0000000038B2C8D4"
-				"00000000ACBE613E"
-				"0000000092A6565F"
-				"00000000829CCED4"
-				"00000000D2ECF85D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000083D8152"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000051D18C12"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D0521931"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009939890C"
-					item: "refinedstorage:orange_fluid_grid"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B699BDA9"
-					item: "refinedstorage:pink_fluid_grid"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"0000000073CA5D70"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"0000000007D82B28"
-				"000000006E1358E3"
-				"0000000019F567A0"
-				"00000000C43F6B53"
-				"0000000002F467C1"
-				"000000008D7F58C7"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000701A9D6D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000065C9F59A"
-					type: "xp"
-					xp: 18
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C02F8AF8"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B0FCB436"
-					item: "refinedstorage:blue_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002D98708A"
-					item: "refinedstorage:blue_grid"
-					type: "item"
-				}
-			]
-			x: -8.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"0000000050E0AB00"
-				"00000000BE84A1AA"
-				"000000008A2932F2"
-				"00000000C21C19B0"
-				"0000000038B2C8D4"
-				"00000000ACBE613E"
-				"0000000002F467C1"
-				"0000000092A6565F"
-				"00000000D2ECF85D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C0EDB5F8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007C6DB978"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004A8E5951"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000E9775E29"
-					item: "refinedstorage:lime_fluid_grid"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D0CD790B"
-					item: "refinedstorage:magenta_fluid_grid"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"0000000073CA5D70"
-				"00000000701A9D6D"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"0000000007D82B28"
-				"000000006E1358E3"
-				"0000000019F567A0"
-				"00000000C43F6B53"
-				"0000000002F467C1"
-				"000000008D7F58C7"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004A60D86D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C0A892C7"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004983679B"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000042389EB"
-					item: "refinedstorage:brown_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C9759140"
-					item: "refinedstorage:brown_grid"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000003947BCAB"
-				"0000000092A6565F"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000050E0AB00"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000366D584"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004F13ED3A"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [{
-				consume_items: false
-				id: "00000000775887A4"
-				item: "refinedstorage:yellow_fluid_grid"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"0000000073CA5D70"
-				"00000000701A9D6D"
-				"000000003947BCAB"
-				"000000004A60D86D"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"0000000007D82B28"
-				"000000006E1358E3"
-				"0000000019F567A0"
-				"00000000C43F6B53"
-				"0000000002F467C1"
-				"000000008D7F58C7"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001AB0A3F7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000275E0894"
+					id: "00000000D3076B0D"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AF7CB9DF"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000004643B7E"
-					item: "refinedstorage:controller"
+					id: "00000000AAFFFDFA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000024BFC3D6"
-					item: "refinedstorage:cyan_grid"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"0000000092A6565F"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000BE84A1AA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FB7077AE"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F90F4189"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009F776FB0"
-					item: "refinedstorage:purple_fluid_grid"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CECC8B38"
-					item: "refinedstorage:red_fluid_grid"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000007D82B28"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000075098182"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003F84E8F7"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000055DBFD7B"
-					item: "refinedstorage:gray_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000309F06BB"
-					item: "refinedstorage:gray_grid"
-					type: "item"
-				}
-			]
-			x: -14.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000004A60D86D"
-				"0000000050E0AB00"
-				"00000000BE84A1AA"
-				"00000000C21C19B0"
-				"0000000038B2C8D4"
-				"00000000ACBE613E"
-				"0000000092A6565F"
-				"00000000D2ECF85D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008A2932F2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000040072CFC"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C60DEEF9"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005FCB1742"
-					item: "refinedstorage:brown_fluid_grid"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000A3C037D"
-					item: "refinedstorage:cyan_fluid_grid"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"0000000007D82B28"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006E1358E3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000447D992F"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C9858324"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000057A51166"
-					item: "refinedstorage:green_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A1FA8CB9"
-					item: "refinedstorage:green_grid"
-					type: "item"
-				}
-			]
-			x: -15.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000701A9D6D"
-				"0000000050E0AB00"
-				"00000000BE84A1AA"
-				"0000000038B2C8D4"
-				"00000000ACBE613E"
-				"0000000092A6565F"
-				"00000000D2ECF85D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C21C19B0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BCD9EDEA"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000050383BCF"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000020F7BFD4"
-					item: "refinedstorage:black_fluid_grid"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009B1401F8"
-					item: "refinedstorage:blue_fluid_grid"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"0000000044D095E7"
-				"00000000A2E6B217"
-				"00000000083D8152"
-				"0000000044741AED"
-				"00000000C0EDB5F8"
-				"000000001973D185"
-				"0000000050E0AB00"
-				"0000000071C89858"
-				"00000000BE84A1AA"
-				"0000000027951FD2"
-				"000000008A2932F2"
-				"00000000C21C19B0"
-				"0000000038B2C8D4"
-				"00000000ACBE613E"
-				"00000000D2ECF85D"
-				"0000000092A6565F"
-				"000000001A11BA1E"
-				"00000000392E1FF1"
-				"0000000034D1A783"
-				"00000000541DA9B0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007EA14098"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000002CBE4BD"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000051737C71"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000888836FA"
-					item: "refinedstorage:wireless_crafting_monitor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000048D9BA04"
-					item: "refinedstorage:wireless_fluid_grid"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"0000000007D82B28"
-				"000000006E1358E3"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000019F567A0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007E3A9474"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000045ABD99A"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F83189A0"
-					item: "refinedstorage:grid"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000021877B76"
-					item: "refinedstorage:light_gray_controller"
-					type: "item"
-				}
-			]
-			x: -16.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000005FD5FFFB"
-				"000000006E1358E3"
-				"0000000092A6565F"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000038B2C8D4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007E7BED5B"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000063458616"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000093951D7B"
-					item: "refinedstorage:green_fluid_grid"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000554FADD4"
-					item: "refinedstorage:light_gray_fluid_grid"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"0000000007D82B28"
-				"000000006E1358E3"
-				"0000000019F567A0"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C43F6B53"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C20CDAC4"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C3F56506"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008EFFD26E"
-					item: "refinedstorage:lime_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006EAD329A"
-					item: "refinedstorage:lime_grid"
-					type: "item"
-				}
-			]
-			x: -17.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000007D82B28"
-				"0000000019F567A0"
-				"0000000092A6565F"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000ACBE613E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004E3D56A0"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000097050EE8"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000FE138CD1"
-					item: "refinedstorage:fluid_grid"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000927FE39E"
-					item: "refinedstorage:gray_fluid_grid"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"0000000007D82B28"
-				"000000006E1358E3"
-				"0000000019F567A0"
-				"00000000C43F6B53"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000002F467C1"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000AA037630"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000081ADFBEC"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000037794947"
-					item: "refinedstorage:magenta_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001D68D4B4"
-					item: "refinedstorage:magenta_grid"
-					type: "item"
-				}
-			]
-			x: -18.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"000000005FD5FFFB"
-				"0000000007D82B28"
-				"000000006E1358E3"
-				"0000000019F567A0"
-				"00000000C43F6B53"
-				"0000000002F467C1"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008D7F58C7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002B52A31A"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000099C6AC0C"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000007D1BC8D6"
-					item: "refinedstorage:orange_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C5803882"
-					item: "refinedstorage:orange_grid"
-					type: "item"
-				}
-			]
-			x: -19.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000001D280AF3"
-				"00000000A65D36B3"
-				"0000000092A6565F"
-				"000000001A11BA1E"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005CF88E20"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009AB16264"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003D031DAE"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005E8DAE6B"
-					item: "refinedstorage:4096k_fluid_storage_part"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DFAA3CD5"
-					item: "refinedstorage:interface"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"0000000034F41C3A"
-				"0000000092A6565F"
-				"000000001A11BA1E"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000003F4281D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002D8D4B22"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004073BDEF"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000534BA2EC"
-					item: "refinedstorage:network_card"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D6CCE904"
-					item: "refinedstorage:speed_upgrade"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["000000001A11BA1E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009EC02DF4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C4BE1120"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000483FB0DB"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000065905384"
-				item: "refinedstorage:storage_housing"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000001A11BA1E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000067E349C2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000069555AFF"
-					type: "xp"
-					xp: 18
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008AF019F2"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000935D4461"
-					item: "refinedstorage:construction_core"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005C05EDD3"
-					item: "refinedstorage:destruction_core"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000001A11BA1E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007085657A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A4EF2E64"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000091567094"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000020124F67"
-					item: "refinedstorage:256k_fluid_storage_part"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C890B01C"
-					item: "refinedstorage:cable"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["00000000B0C9702E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007E12108C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A57647B9"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000036EC7D6"
-					table_id: 2365929981L
-					type: "random"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "000000008FA04E1A"
-				item: "refinedstorage:improved_processor"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["000000003BD02297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000415D04FA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000099EC2BDA"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000002DC9E4D"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000523B1D82"
+				id: "0000000069554A87"
 				item: "refinedstorage:raw_advanced_processor"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 1.0d
+			x: -3.0d
+			y: 4.0d
 		}
 		{
-			dependencies: [
-				"000000001973D185"
-				"0000000071C89858"
-				"0000000027951FD2"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000044D095E7"
+			id: "00000000AA49D72A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000007C9B069"
+					id: "000000006CD5F742"
 					type: "xp"
-					xp: 19
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F3736E92"
-					table_id: 2365929981L
-					type: "random"
+					id: "000000006BBE78C4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001B398202"
-					item: "refinedstorage:lime_crafting_monitor"
+					id: "000000002E57FFA6"
+					item: "refinedstorage:quartz_enriched_iron_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000038C28A72"
-					item: "refinedstorage:magenta_crafting_monitor"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"0000000044D095E7"
-				"000000001973D185"
-				"0000000071C89858"
-				"0000000027951FD2"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000044741AED"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F43238BC"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F68A13B9"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004F57F16F"
-					item: "refinedstorage:green_crafting_monitor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005BB58C7E"
-					item: "refinedstorage:light_gray_crafting_monitor"
+					id: "00000000E771B074"
+					item: "refinedstorage:processor_binding"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["0000000027951FD2"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001973D185"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000EFF1047F"
-					type: "xp"
-					xp: 19
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B58E92AA"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000083806B45"
-					item: "refinedstorage:cyan_crafting_monitor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000044C7692A"
-					item: "refinedstorage:gray_crafting_monitor"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000001973D185"
-				"0000000027951FD2"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000071C89858"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005D57B89B"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A35C6AB9"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B8201C25"
-					item: "refinedstorage:brown_crafting_monitor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FCF0627E"
-					item: "refinedstorage:crafting_monitor"
-					type: "item"
-				}
-			]
-			x: -6.0d
 			y: 0.0d
 		}
 		{
 			dependencies: [
-				"000000005CF88E20"
-				"0000000092A6565F"
-				"000000001A11BA1E"
+				"00000000BEB15D09"
+				"000000003507B447"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000044D001F9"
+			id: "0000000045F06D07"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FDC2CD4C"
-					type: "xp"
-					xp: 14
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D0665B79"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005C6A8097"
-					item: "refinedstorage:filter"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C62C1756"
-					item: "refinedstorage:fluid_interface"
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 8.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000027951FD2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002CB60679"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B5038FD9"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000116E179E"
-					item: "refinedstorage:black_crafting_monitor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000861C5758"
-					item: "refinedstorage:blue_crafting_monitor"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000034F41C3A"
-				"000000001A11BA1E"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000000F20B7B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D9A45F78"
+					id: "00000000E29DB91F"
 					type: "xp"
 					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B7F092B7"
-					table_id: 2365929981L
-					type: "random"
+					id: "00000000E76DA7D5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CCDEF50A"
-					item: "refinedstorage:fortune_2_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CC629A53"
-					item: "refinedstorage:fortune_3_upgrade"
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"0000000044D095E7"
-				"0000000044741AED"
-				"000000001973D185"
-				"0000000071C89858"
-				"0000000027951FD2"
-				"0000000034D1A783"
-				"00000000541DA9B0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000392E1FF1"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DC949D23"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002D310F61"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [{
-				consume_items: false
-				id: "000000004C449463"
-				item: "refinedstorage:yellow_crafting_monitor"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000044D095E7"
-				"0000000044741AED"
-				"000000001973D185"
-				"0000000071C89858"
-				"0000000027951FD2"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000034D1A783"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000975E2A4E"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000980D0997"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004F76948B"
-					item: "refinedstorage:purple_crafting_monitor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000ECEAA770"
-					item: "refinedstorage:red_crafting_monitor"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000044D095E7"
-				"0000000044741AED"
-				"000000001973D185"
-				"0000000071C89858"
-				"0000000027951FD2"
-				"0000000034D1A783"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000541DA9B0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009AD95AE9"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000173EAE3A"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000EADA8D98"
-					item: "refinedstorage:orange_crafting_monitor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000088B66793"
-					item: "refinedstorage:pink_crafting_monitor"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-				"00000000829CCED4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005FD5FFFB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D632B498"
-					type: "xp"
-					xp: 14
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009389D099"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000238ACB0C"
-					item: "refinedstorage:cyan_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FF43BF9A"
-					item: "refinedstorage:light_gray_grid"
-					type: "item"
-				}
-			]
-			x: -13.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000001D280AF3"
-				"000000001A11BA1E"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CD3D8CD9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C5DB0399"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000009B2DDDC"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001EF273AD"
+					id: "0000000081BA517E"
 					item: "refinedstorage:64k_storage_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003C8C83BA"
+					id: "00000000C71629FE"
 					item: "refinedstorage:64k_storage_disk"
 					type: "item"
 				}
@@ -1698,41 +140,110 @@
 		}
 		{
 			dependencies: [
-				"000000001D280AF3"
-				"000000009EC02DF4"
-				"000000001A11BA1E"
-				"000000007085657A"
+				"0000000076FD17A2"
+				"0000000067DEC8E2"
+				"00000000CF77B023"
+				"00000000359A7194"
+				"000000004DA0378C"
+				"000000006BCE8785"
+				"000000006A764620"
+				"0000000085BD5BE1"
+				"0000000068A347F5"
+				"00000000DC9765F8"
+				"000000001696A5F9"
+				"000000006237FA32"
+				"00000000507810F9"
+				"000000006731783F"
+				"0000000083F1E866"
+				"00000000D6D2C34D"
+				"00000000BBD7E661"
+				"000000008BC3FE61"
+				"000000003507B447"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000412638B"
+			id: "00000000E8FBE1C0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B565BC3C"
+					id: "00000000C05A2333"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BC2F5480"
-					table_id: 2365929981L
-					type: "random"
+					id: "000000006FF36744"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000015812395"
+					id: "000000000E9A1F34"
+					item: "refinedstorage:wireless_fluid_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E9702E8"
+					item: "refinedstorage:wireless_grid"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000003507B447"
+				"00000000AC81A512"
+				"000000001650F440"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009BB01456"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E4FE7D92"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "00000000789D86B7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000627F2B47"
 					item: "refinedstorage:256k_fluid_storage_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B8456FC6"
+					id: "000000009A568DC1"
 					item: "refinedstorage:256k_fluid_storage_disk"
 					type: "item"
 				}
@@ -1742,41 +253,46 @@
 		}
 		{
 			dependencies: [
-				"000000001D280AF3"
-				"000000005CF88E20"
-				"000000009EC02DF4"
-				"000000001A11BA1E"
+				"000000006C5BAD43"
+				"00000000BEB15D09"
+				"000000003507B447"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E82579A3"
+			id: "000000006BABA667"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A1B89D3B"
+					id: "000000000FFD6ADE"
 					type: "xp"
-					xp: 13
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007E12F560"
-					table_id: 2365929981L
-					type: "random"
+					id: "00000000D32FF133"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DB3DEF0C"
+					id: "00000000D5806B0F"
 					item: "refinedstorage:4096k_fluid_storage_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A892D7E4"
+					id: "000000008C189B3A"
 					item: "refinedstorage:4096k_fluid_storage_disk"
 					type: "item"
 				}
@@ -1786,39 +302,44 @@
 		}
 		{
 			dependencies: [
-				"000000001D280AF3"
-				"000000001A11BA1E"
+				"000000003507B447"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A67A1F00"
+			id: "0000000005C86CED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F4454CCE"
+					id: "00000000F6D64D97"
 					type: "xp"
-					xp: 13
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DD3FB156"
-					table_id: 2365929981L
-					type: "random"
+					id: "000000009A0BCC33"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EA2B8704"
+					id: "000000001EBA6027"
 					item: "refinedstorage:4k_storage_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006F346E52"
+					id: "0000000010F698CB"
 					item: "refinedstorage:4k_storage_disk"
 					type: "item"
 				}
@@ -1828,39 +349,45 @@
 		}
 		{
 			dependencies: [
-				"000000001D280AF3"
-				"000000001A11BA1E"
+				"00000000BEB15D09"
+				"000000003507B447"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FD82CA8F"
+			id: "0000000036D2C300"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C21D4C68"
+					id: "00000000DB3E36C4"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000081E662BC"
-					table_id: 2365929981L
-					type: "random"
+					id: "00000000C53F3A8B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008D63AABC"
+					id: "0000000023784E50"
 					item: "refinedstorage:64k_fluid_storage_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005E4348F2"
+					id: "00000000F7E89518"
 					item: "refinedstorage:64k_fluid_storage_disk"
 					type: "item"
 				}
@@ -1870,41 +397,46 @@
 		}
 		{
 			dependencies: [
-				"000000001D280AF3"
-				"000000009EC02DF4"
-				"00000000A65D36B3"
-				"000000001A11BA1E"
+				"00000000BEB15D09"
+				"0000000053487E03"
+				"000000003507B447"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000033D85055"
+			id: "00000000C5D1EB8B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004F95F386"
+					id: "0000000091E8AFC4"
 					type: "xp"
-					xp: 7
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A1C0705D"
-					table_id: 2365929981L
-					type: "random"
+					id: "0000000045E1893D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000033E4A255"
+					id: "00000000D0380531"
 					item: "refinedstorage:1024k_fluid_storage_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000087AEFBB6"
+					id: "000000004CA5C1DD"
 					item: "refinedstorage:1024k_fluid_storage_disk"
 					type: "item"
 				}
@@ -1914,40 +446,44 @@
 		}
 		{
 			dependencies: [
-				"000000001D280AF3"
-				"000000009EC02DF4"
-				"000000001A11BA1E"
+				"000000003507B447"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BA46ED83"
+			id: "0000000075AC7018"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EAE7B7F9"
+					id: "000000005C33A51B"
 					type: "xp"
-					xp: 16
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000058C3978F"
-					table_id: 2365929981L
-					type: "random"
+					id: "00000000441FA67A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009E503060"
+					id: "00000000FA29C467"
 					item: "refinedstorage:16k_storage_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000079CA392C"
+					id: "0000000095EE8E40"
 					item: "refinedstorage:16k_storage_disk"
 					type: "item"
 				}
@@ -1957,40 +493,44 @@
 		}
 		{
 			dependencies: [
-				"000000001D280AF3"
-				"000000009EC02DF4"
-				"000000001A11BA1E"
+				"000000003507B447"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D8DD51AE"
+			id: "000000000F66F2BA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000052F8F28D"
+					id: "00000000DFE0E9FC"
 					type: "xp"
-					xp: 14
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C4E6DD89"
-					table_id: 2365929981L
-					type: "random"
+					id: "0000000084CD517E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000021BE4CB1"
+					id: "00000000D7892C51"
 					item: "refinedstorage:1k_storage_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000933188B1"
+					id: "00000000E7B0E1E0"
 					item: "refinedstorage:1k_storage_disk"
 					type: "item"
 				}
@@ -2000,303 +540,499 @@
 		}
 		{
 			dependencies: [
-				"0000000050E0AB00"
-				"00000000BE84A1AA"
-				"0000000038B2C8D4"
-				"00000000ACBE613E"
+				"00000000246955FA"
+				"000000001650F440"
+				"00000000AC81A512"
+				"0000000077B94306"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D2ECF85D"
+			id: "000000009B8D1386"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B1385217"
+					id: "0000000023624DA4"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FCF818FF"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "octagon"
-			tasks: [{
-				consume_items: false
-				id: "00000000790DA0F1"
-				item: "refinedstorage:white_fluid_grid"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"000000001A11BA1E"
-				"000000007E12108C"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000034F41C3A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000038EB37C9"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000ADD350C2"
-					table_id: 2365929981L
-					type: "random"
+					id: "00000000EB53BBA1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "000000005DA95488"
-				item: "refinedstorage:upgrade"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 4.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006BE66926"
+					item: "refinedstorage:importer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F4468DFC"
+					item: "refinedstorage:upgrade"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
 		}
 		{
+			dependencies: [
+				"000000009B8D1386"
+				"0000000053487E03"
+				"000000003507B447"
+				"00000000AC81A512"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003BD02297"
+			id: "000000006C5BAD43"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000001C5A9AA"
+					id: "00000000DE2BD4D5"
 					type: "xp"
-					xp: 18
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A3618489"
-					table_id: 2365929981L
-					type: "random"
+					id: "00000000089778C0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AFDF552B"
-					item: "refinedstorage:processor_binding"
+					id: "000000004B0C4756"
+					item: "refinedstorage:4096k_fluid_storage_part"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000036C18FC5"
-					item: "refinedstorage:silicon"
+					id: "00000000894C0B03"
+					item: "refinedstorage:interface"
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 0.0d
+			x: -2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"000000001A11BA1E"
-				"0000000067E349C2"
-				"000000007085657A"
-				"000000007E12108C"
+				"000000009B8D1386"
+				"000000003507B447"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001D280AF3"
+			id: "000000001E992733"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006F6E5E65"
+					id: "0000000022553575"
 					type: "xp"
 					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D20C7CDB"
-					table_id: 2365929981L
-					type: "random"
+					id: "00000000A487D75F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
+			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000084BAFD30"
-					item: "refinedstorage:importer"
+					id: "00000000CE94C31B"
+					item: "refinedstorage:network_card"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A774812F"
-					item: "refinedstorage:machine_casing"
+					id: "00000000DE18F4BD"
+					item: "refinedstorage:speed_upgrade"
 					type: "item"
 				}
 			]
 			x: -2.0d
-			y: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
-				"000000001A11BA1E"
-				"0000000067E349C2"
-				"000000007085657A"
-				"000000007E12108C"
+				"0000000068A347F5"
+				"00000000DC9765F8"
+				"000000001696A5F9"
+				"00000000507810F9"
+				"00000000D6D2C34D"
+				"00000000CF77B023"
+				"000000004DA0378C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A65D36B3"
+			id: "000000006731783F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000041DDC943"
+					id: "000000003D2C731C"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000DA972FB"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000033C65DEF"
-					item: "refinedstorage:1024k_fluid_storage_part"
+					id: "00000000F0A1AD43"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005D921448"
-					item: "refinedstorage:exporter"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["000000003BD02297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B0C9702E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009BA2E539"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000045B9A251"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B2CD068F"
-					item: "refinedstorage:raw_basic_processor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C3B32E70"
-					item: "refinedstorage:raw_improved_processor"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000415D04FA"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000092A6565F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000377849A2"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000086883962"
-					table_id: 2365929981L
-					type: "random"
 				}
 			]
 			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "0000000050F0A309"
-				item: "refinedstorage:advanced_processor"
+				id: "0000000046F0CA46"
+				item: "refinedstorage:red_fluid_grid"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 4.0d
+			x: -6.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["00000000B0C9702E"]
+			dependencies: ["00000000AC81A512"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001A11BA1E"
+			id: "00000000BEB15D09"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A387058F"
+					id: "00000000718C21AD"
 					type: "xp"
-					xp: 17
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CC8B61F8"
-					table_id: 2365929981L
-					type: "random"
+					id: "000000000DB959EB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000082015D24"
+				item: "refinedstorage:storage_housing"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000246955FA"
+				"00000000AC81A512"
+				"000000001650F440"
+				"0000000077B94306"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000053487E03"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F1958776"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "0000000002834E4A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002E94FAA7"
+					item: "refinedstorage:1024k_fluid_storage_part"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B3BE8BED"
+					item: "refinedstorage:exporter"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000006237FA32"
+				"0000000083F1E866"
+				"00000000359A7194"
+				"000000006BCE8785"
+				"000000006A764620"
+				"0000000085BD5BE1"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BBD7E661"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000A3194F4"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000AB41910B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "00000000CC1BB344"
+				item: "refinedstorage:cyan_grid"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000AA49D72A"
+				"00000000B12CC21F"
+				"00000000AC81A512"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003231A65D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000827E467"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000009BA6E5F9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000037D7FE9B"
+					id: "00000000778D86F2"
 					item: "refinedstorage:basic_processor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E7A281F0"
+					id: "0000000021FA2D2D"
+					item: "refinedstorage:raw_improved_processor"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000003231A65D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000246955FA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AA139A22"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "0000000007AFA248"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000030659DA9"
+					item: "refinedstorage:construction_core"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000043D78DB9"
+					item: "refinedstorage:destruction_core"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000008A996746"
+				"00000000AC81A512"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003507B447"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C43236C9"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0000000003800A06"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000087B70980"
+					item: "refinedstorage:advanced_processor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009B2308E5"
+					item: "refinedstorage:machine_casing"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000AA49D72A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AC81A512"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007F2A35FE"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000003BA09261"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002EC9CE34"
 					item: "refinedstorage:quartz_enriched_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003DD63EF9"
+					item: "refinedstorage:silicon"
 					type: "item"
 				}
 			]
@@ -2305,292 +1041,1093 @@
 		}
 		{
 			dependencies: [
-				"0000000044D095E7"
-				"0000000044741AED"
-				"000000001973D185"
-				"0000000071C89858"
-				"0000000027951FD2"
-				"00000000392E1FF1"
-				"0000000034D1A783"
-				"00000000541DA9B0"
+				"000000003231A65D"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A2E6B217"
+			id: "000000001650F440"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000641922AB"
+					id: "00000000B11BF271"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007E1BEC5B"
-					table_id: 2365929981L
-					type: "random"
+					id: "0000000040C43AB4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004C56D2EF"
+					item: "refinedstorage:256k_fluid_storage_part"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B33FD2B"
+					item: "refinedstorage:cable"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000003231A65D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000077B94306"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003C3B628B"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000002699A8D5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "00000000308A41DF"
-				item: "refinedstorage:white_crafting_monitor"
+				id: "00000000A999DDD2"
+				item: "refinedstorage:improved_processor"
 				type: "item"
 			}]
 			x: -3.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006C02104F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C9366A7B"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D0B4267C"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009C86CBB1"
-					item: "refinedstorage:white_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000918B48AC"
-					item: "refinedstorage:white_grid"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000006C02104F"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003947BCAB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000042FB24BB"
-					type: "xp"
-					xp: 18
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000086FBE995"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000003975AC2B"
-					item: "refinedstorage:yellow_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004BA274CF"
-					item: "refinedstorage:yellow_grid"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
+				"00000000AA49D72A"
+				"00000000AC81A512"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F9496EE7"
+			id: "00000000B12CC21F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CDC74B3E"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000056EBA042"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000059E44F92"
-					item: "refinedstorage:purple_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C06D568B"
-					item: "refinedstorage:purple_grid"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000094D51F43"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000047FCDC2"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D15D2D25"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000CFB3AB50"
-					item: "refinedstorage:red_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000E59FAF6"
-					item: "refinedstorage:red_grid"
-					type: "item"
-				}
-			]
-			x: -12.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000006C02104F"
-				"000000003947BCAB"
-				"00000000F9496EE7"
-				"0000000094D51F43"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000829CCED4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000E823BC0"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A14AD1C1"
-					table_id: 2365929981L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000CABA3F13"
-					item: "refinedstorage:pink_controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CFC42392"
-					item: "refinedstorage:pink_grid"
-					type: "item"
-				}
-			]
-			x: -20.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000034F41C3A"
-				"0000000003F4281D"
-				"000000001A11BA1E"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B493A76C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000713D6227"
+					id: "00000000DC7448CD"
 					type: "xp"
 					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E69D39E1"
-					table_id: 2365929981L
-					type: "random"
+					id: "00000000DEDB6678"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000F2FC119D"
+				item: "refinedstorage:raw_basic_processor"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000009B8D1386"
+				"000000006C5BAD43"
+				"000000003507B447"
+				"00000000AC81A512"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F1E71292"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B75A0260"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "00000000A1F7FB46"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E7A11CFE"
-					item: "refinedstorage:silk_touch_upgrade"
+					id: "00000000E180DE9B"
+					item: "refinedstorage:fluid_interface"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CA3BEB5E"
-					item: "refinedstorage:stack_upgrade"
+					id: "00000000D8E3A847"
+					item: "refinedstorage:fortune_3_upgrade"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000009B8D1386"
+				"00000000AC81A512"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000988EA9BE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008DC51458"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000005CF939AC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D15DAD17"
+					item: "refinedstorage:fortune_2_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E43A3A80"
+					item: "refinedstorage:fortune_1_upgrade"
 					type: "item"
 				}
 			]
 			x: -1.0d
 			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000246955FA"
+				"000000001650F440"
+				"00000000AC81A512"
+				"0000000077B94306"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009EFBDCFA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000080EA197"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "000000002C52EFD8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E101E5FA"
+					item: "refinedstorage:external_storage"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000005E72636"
+					item: "refinedstorage:filter"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000006237FA32"
+				"0000000083F1E866"
+				"00000000BBD7E661"
+				"00000000359A7194"
+				"000000006BCE8785"
+				"000000006A764620"
+				"0000000085BD5BE1"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000076FD17A2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004FD0C0D3"
+					type: "xp"
+					xp: 21
+				}
+				{
+					id: "00000000495086E7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009F9DF52D"
+					item: "refinedstorage:brown_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000005312BAB"
+					item: "refinedstorage:gray_grid"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000006237FA32"
+				"0000000083F1E866"
+				"00000000BBD7E661"
+				"0000000076FD17A2"
+				"00000000359A7194"
+				"000000006BCE8785"
+				"000000006A764620"
+				"0000000085BD5BE1"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000067DEC8E2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BA760DC4"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "00000000E68B1C93"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EA69062A"
+					item: "refinedstorage:black_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000049963A8D"
+					item: "refinedstorage:blue_grid"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000006237FA32"
+				"0000000083F1E866"
+				"000000006A764620"
+				"0000000085BD5BE1"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000359A7194"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001AA1ECB8"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "000000001061D816"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008B26DBEF"
+					item: "refinedstorage:pink_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000697CEDE7"
+					item: "refinedstorage:purple_grid"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000068A347F5"
+				"00000000DC9765F8"
+				"000000001696A5F9"
+				"00000000507810F9"
+				"00000000D6D2C34D"
+				"00000000BBD7E661"
+				"000000003507B447"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CF77B023"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005F044092"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "00000000D5E23615"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009AB65522"
+					item: "refinedstorage:brown_fluid_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B9EB7BC3"
+					item: "refinedstorage:cyan_fluid_grid"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000006237FA32"
+				"0000000083F1E866"
+				"00000000359A7194"
+				"000000006A764620"
+				"0000000085BD5BE1"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006BCE8785"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000596BBA01"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000DC4F3AE4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001254C149"
+					item: "refinedstorage:magenta_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000018250919"
+					item: "refinedstorage:orange_grid"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000068A347F5"
+				"00000000DC9765F8"
+				"000000001696A5F9"
+				"00000000507810F9"
+				"00000000D6D2C34D"
+				"0000000067DEC8E2"
+				"00000000CF77B023"
+				"000000003507B447"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004DA0378C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F163D502"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000006F915D5F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000028BB1EF0"
+					item: "refinedstorage:black_fluid_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005B0CC1B9"
+					item: "refinedstorage:blue_fluid_grid"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000006237FA32"
+				"0000000083F1E866"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006A764620"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CC0C087D"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000B69356F3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A498B7A0"
+					item: "refinedstorage:light_gray_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000021B82808"
+					item: "refinedstorage:lime_grid"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000001E992733"
+				"000000003231A65D"
+				"00000000246955FA"
+				"000000003507B447"
+				"00000000AC81A512"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000054FC8F89"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E9478CE5"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000FF880D03"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AF68EEDD"
+					item: "refinedstorage:stack_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001049CDF0"
+					item: "refinedstorage:storage_monitor"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000006237FA32"
+				"0000000083F1E866"
+				"000000006A764620"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000085BD5BE1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000050F9F758"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "00000000C5254C78"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003F19FA48"
+					item: "refinedstorage:green_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007AE5710F"
+					item: "refinedstorage:grid"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000DC9765F8"
+				"000000001696A5F9"
+				"00000000507810F9"
+				"00000000D6D2C34D"
+				"00000000359A7194"
+				"000000003507B447"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000068A347F5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000CF8E451"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "0000000075DF346F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000050F6FCF2"
+					item: "refinedstorage:orange_fluid_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BDE596B0"
+					item: "refinedstorage:pink_fluid_grid"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"000000003507B447"
+				"000000006BCE8785"
+				"000000006A764620"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DC9765F8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000004E2AE69"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "000000002B57885B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B4E0C2B8"
+					item: "refinedstorage:lime_fluid_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000600C6139"
+					item: "refinedstorage:magenta_fluid_grid"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006237FA32"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000474C1C6B"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000005BAFA922"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000009A2AEDA2"
+				item: "refinedstorage:yellow_grid"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000DC9765F8"
+				"00000000D6D2C34D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001696A5F9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000033028E23"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "00000000B6BCCD5B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000084DFED93"
+					item: "refinedstorage:green_fluid_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CDE95E37"
+					item: "refinedstorage:light_gray_fluid_grid"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000006237FA32"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000083F1E866"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007EC235CD"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "000000005B7A38BE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F7617B08"
+					item: "refinedstorage:red_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F2C93420"
+					item: "refinedstorage:white_grid"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000DC9765F8"
+				"000000001696A5F9"
+				"00000000D6D2C34D"
+				"000000003507B447"
+				"0000000085BD5BE1"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000507810F9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DFBE819D"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "000000009073C579"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000001EFEF9A"
+					item: "refinedstorage:fluid_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056753705"
+					item: "refinedstorage:gray_fluid_grid"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000006237FA32"
+				"000000003507B447"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D6D2C34D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007A9B4B8E"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000B84449DD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000BED17EB2"
+				item: "refinedstorage:yellow_fluid_grid"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000068A347F5"
+				"00000000DC9765F8"
+				"000000001696A5F9"
+				"00000000507810F9"
+				"000000006731783F"
+				"00000000D6D2C34D"
+				"00000000359A7194"
+				"000000003507B447"
+				"00000000CF77B023"
+				"000000004DA0378C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008BC3FE61"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000048160242"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "00000000C6ED955D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_refinedstorage"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007B0B72A2"
+					item: "refinedstorage:purple_fluid_grid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DE0ED136"
+					item: "refinedstorage:white_fluid_grid"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
 		}
 	]
 	title: "Refined Storage"

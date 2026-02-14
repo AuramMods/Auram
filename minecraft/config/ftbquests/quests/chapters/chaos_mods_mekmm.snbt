@@ -2,47 +2,52 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_mekmm"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "mekmm:uu_matter"
-	id: "000000000BB2365B"
+	id: "00000000A9574DA5"
 	order_index: 10
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: [
-				"00000000908EB2C1"
-				"00000000C4C73D8F"
+				"0000000009B7DC88"
+				"00000000EC16AB50"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003BBC1253"
+			id: "0000000072486191"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A5CDA800"
+					id: "000000009122B04D"
 					type: "xp"
-					xp: 9
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000052F2BDA2"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000F53237D1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002596C17B"
+					id: "000000005A7C88BC"
 					item: "mekmm:multiversal_replicating_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003C08F210"
+					id: "00000000ED25CD74"
 					item: "mekmm:multiversal_rolling_mill_factory"
 					type: "item"
 				}
@@ -52,39 +57,44 @@
 		}
 		{
 			dependencies: [
-				"00000000908EB2C1"
-				"000000000A9D29A0"
+				"0000000009B7DC88"
+				"0000000027B5D5F5"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A289A58D"
+			id: "00000000B8E35AAA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002BF3E69D"
+					id: "00000000BAB9488A"
 					type: "xp"
-					xp: 11
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D7792F28"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000F96B467E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BB952EA2"
+					id: "00000000AAE95F05"
 					item: "mekmm:multiversal_pressurised_reacting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B5736B7A"
+					id: "00000000A5CCB507"
 					item: "mekmm:multiversal_recycling_factory"
 					type: "item"
 				}
@@ -93,40 +103,80 @@
 			y: 5.0d
 		}
 		{
-			dependencies: [
-				"000000000185CF3E"
-				"00000000C4C73D8F"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD9615D2"
+			id: "000000000D7DEC9D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000069477218"
+					id: "0000000021997821"
 					type: "xp"
-					xp: 7
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A1D7AAC7"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000005A1CE289"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000007B7BE57"
+				item: "mekmm:ultimate_mid_chemical_tank"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000002EA9586A"
+				"00000000EC16AB50"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000453448C3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004C099221"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000007A7B849F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000056A9B867"
+					id: "00000000F10F6281"
 					item: "mekmm:multiversal_stamping_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A86F4A39"
+					id: "00000000453E075D"
 					item: "mekmm:multiversal_washing_factory"
 					type: "item"
 				}
@@ -135,79 +185,89 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000E7798C9E"]
+			dependencies: ["0000000093EA3470"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001D696113"
+			id: "000000005C59510B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007923426D"
+					id: "000000008444A081"
 					type: "xp"
-					xp: 12
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005443692E"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000E83DB740"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000094B622F0"
-					item: "mekmm:elite_max_chemical_tank"
+					id: "00000000F4833BEC"
+					item: "mekmm:basic_max_chemical_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000697A254A"
+					id: "00000000694EA21E"
 					item: "mekmm:elite_mid_chemical_tank"
 					type: "item"
 				}
 			]
 			x: -3.0d
-			y: 8.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
-				"000000003971AEF8"
-				"0000000071B95880"
+				"0000000031857566"
+				"0000000090F208E6"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000068F3D53F"
+			id: "00000000A2D498DC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000095884E4C"
+					id: "00000000B147B4B0"
 					type: "xp"
 					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D31FAC26"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000ECA9A722"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007D366351"
+					id: "00000000B8AF755E"
 					item: "mekmm:multiversal_crystallizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000480677F3"
+					id: "0000000057FBCC5A"
 					item: "mekmm:multiversal_dissolving_factory"
 					type: "item"
 				}
@@ -217,39 +277,44 @@
 		}
 		{
 			dependencies: [
-				"000000003971AEF8"
-				"00000000E7798C9E"
+				"0000000031857566"
+				"0000000093EA3470"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000092C3FAE2"
+			id: "000000001498C141"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000061B9A5AB"
+					id: "00000000A6A34E16"
 					type: "xp"
-					xp: 21
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F8FA4F58"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000B39EDA2D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002AD4314B"
+					id: "000000001A393842"
 					item: "mekmm:multiversal_centrifuging_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E9DFE065"
+					id: "00000000428FDFAE"
 					item: "mekmm:multiversal_chemical_infusing_factory"
 					type: "item"
 				}
@@ -259,39 +324,44 @@
 		}
 		{
 			dependencies: [
-				"000000000A9D29A0"
-				"0000000028F3542D"
+				"0000000027B5D5F5"
+				"000000003BB9EB89"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008211B3AD"
+			id: "00000000B98B74F0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F638C931"
+					id: "00000000C0C9100B"
 					type: "xp"
-					xp: 13
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C2C1C814"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000006FD6445"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D3D3AA55"
+					id: "000000002A82D9D1"
 					item: "mekmm:multiversal_oxidizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D7A44F57"
+					id: "0000000054CBBBF5"
 					item: "mekmm:multiversal_planting_factory"
 					type: "item"
 				}
@@ -301,39 +371,44 @@
 		}
 		{
 			dependencies: [
-				"0000000028F3542D"
-				"0000000071B95880"
+				"000000003BB9EB89"
+				"0000000090F208E6"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005E0DEA5D"
+			id: "000000007535F473"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C23FEFBF"
+					id: "000000005239B9C1"
 					type: "xp"
-					xp: 18
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000784F1AA0"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000049FBE535"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A9ADB2B7"
+					id: "0000000055BADE5E"
 					item: "mekmm:multiversal_lathing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004ECCD68E"
+					id: "00000000AA3C1AC8"
 					item: "mekmm:multiversal_liquifying_factory"
 					type: "item"
 				}
@@ -345,33 +420,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E69951DC"
+			id: "0000000003A16AD6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AD5C09A7"
+					id: "000000002E2B8A79"
 					type: "xp"
-					xp: 11
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000052BD33DC"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000008B7C7744"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000084E77BB7"
+					id: "000000004D1596D5"
 					item: "mekmm:cnc_stamper"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B99DA8B2"
+					id: "00000000A96E0B0C"
 					item: "mekmm:planting_station"
 					type: "item"
 				}
@@ -380,37 +460,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000004E144BA4"]
+			dependencies: ["0000000001AF8B90"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FE847395"
+			id: "000000006D8A91A8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D084014F"
+					id: "0000000040F3A275"
 					type: "xp"
-					xp: 2
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A7E4E037"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000FA9B2639"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000008B3C232"
+					id: "00000000FF4F706F"
 					item: "mekmm:recycler"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000826682DE"
+					id: "00000000FB4ABFE6"
 					item: "mekmm:replicator"
 					type: "item"
 				}
@@ -419,41 +504,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000003BBC1253"
-				"00000000DD9615D2"
-			]
+			dependencies: ["0000000072486191"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D559C14D"
+			id: "00000000A3E2B558"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001B7F8B4E"
+					id: "0000000074ED2986"
 					type: "xp"
-					xp: 12
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FF755550"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000AEEA18DA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009EB28714"
-					item: "mekmm:creative_rolling_mill_factory"
+					id: "000000006B0F42E8"
+					item: "mekmm:creative_replicating_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000476630D2"
-					item: "mekmm:creative_stamping_factory"
+					id: "00000000C3A3CC99"
+					item: "mekmm:creative_rolling_mill_factory"
 					type: "item"
 				}
 			]
@@ -464,33 +551,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000307A14FF"
+			id: "0000000037E7A72E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000852F166C"
+					id: "00000000351A9E2A"
 					type: "xp"
-					xp: 18
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000801B8992"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000034FE5B2A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001B2C4387"
+					id: "0000000060D85FC4"
 					item: "mekmm:cnc_lathe"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D288B6B0"
+					id: "00000000709FE70F"
 					item: "mekmm:cnc_rolling_mill"
 					type: "item"
 				}
@@ -499,76 +591,86 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000025A7E7E1"]
+			dependencies: ["0000000023AFB8FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F2EE6F35"
+			id: "00000000BAF5286E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FEB4BDB1"
+					id: "000000006CE8BC94"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B6BA2B5D"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000E612BDF4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "heart"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000049319C9B"
+					id: "00000000922AED5A"
 					item: "mekmm:advanced_oxidizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006FDE3DC3"
+					id: "00000000637AED23"
 					item: "mekmm:advanced_planting_factory"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 2.0d
+			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B153B355"
+			id: "000000009699EA70"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B17D8789"
+					id: "00000000D78F7B14"
 					type: "xp"
-					xp: 10
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FFD6EFD6"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000EFB7985E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A9682695"
-					item: "thermal:nickel_plate"
+					id: "00000000E68DC2C3"
+					item: "mekmm:author_doll"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F0E08129"
-					item: "megacells:printed_accumulation_processor"
+					id: "000000004A743CE8"
+					item: "minecraft:melon_slice"
 					type: "item"
 				}
 			]
@@ -576,76 +678,86 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000901A0011"]
+			dependencies: ["0000000081656704"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000693BB465"
+			id: "000000005529F1AC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F3B1F696"
+					id: "000000003CF9B9B6"
 					type: "xp"
-					xp: 13
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C87B0DB6"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000B121F2A4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "heart"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000082E92F2F"
+					id: "000000000B4395E3"
 					item: "mekmm:advanced_pressurised_reacting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000038140A2B"
+					id: "000000003C970675"
 					item: "mekmm:advanced_recycling_factory"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 3.0d
+			y: 4.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000065BDC79E"
+			id: "00000000402E0E0A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007A977892"
+					id: "00000000721D0515"
 					type: "xp"
-					xp: 3
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004D7C5F74"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000EB92CD23"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000082CF28FB"
-					item: "ae2:printed_calculation_processor"
+					id: "0000000089E26B1D"
+					item: "thermal:nickel_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BC1336F2"
-					item: "appflux:printed_energy_processor"
+					id: "000000007240260B"
+					item: "megacells:printed_accumulation_processor"
 					type: "item"
 				}
 			]
@@ -653,76 +765,86 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000005A5A01CF"]
+			dependencies: ["0000000010496B22"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002CA36D74"
+			id: "000000005D32C0F9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FFAA2153"
+					id: "00000000E21240B9"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006825A956"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000017486558"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "heart"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009551E3A9"
+					id: "00000000CDB8E678"
 					item: "mekmm:advanced_replicating_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C5DC4706"
+					id: "00000000F943DF8E"
 					item: "mekmm:advanced_rolling_mill_factory"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 4.0d
+			y: 5.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000018D57B5F"
+			id: "00000000D67B621A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002E4A3B22"
+					id: "00000000EB58C370"
 					type: "xp"
-					xp: 12
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009235E11D"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000007DAC9A91"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000084BAD3A3"
-					item: "thermal:lead_plate"
+					id: "00000000BEA2F040"
+					item: "immersiveengineering:stick_iron"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000833ADE01"
-					item: "immersiveengineering:wire_lead"
+					id: "000000006E5F909C"
+					item: "create:iron_sheet"
 					type: "item"
 				}
 			]
@@ -730,76 +852,86 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000002A0365C1"]
+			dependencies: ["00000000B882A61E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000080E98DFF"
+			id: "0000000003642D81"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F21604CF"
+					id: "00000000243E7883"
 					type: "xp"
-					xp: 9
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9A81732"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000005642764C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "heart"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000066CA2CE8"
+					id: "00000000DD1C235F"
 					item: "mekmm:advanced_stamping_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000771862A1"
+					id: "000000007F44ACD8"
 					item: "mekmm:advanced_washing_factory"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 5.0d
+			y: 6.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007BA81C97"
+			id: "0000000081EF32D9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BEBA6E5A"
+					id: "00000000C1D882C0"
 					type: "xp"
-					xp: 16
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D69B733F"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000FB4B70A4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A0C3A55E"
-					item: "mekmm:author_doll"
+					id: "000000009E11420C"
+					item: "thermal:lead_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C57B1BC5"
-					item: "minecraft:melon_slice"
+					id: "00000000B79C2819"
+					item: "immersiveengineering:wire_lead"
 					type: "item"
 				}
 			]
@@ -807,38 +939,43 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000004E144BA4"]
+			dependencies: ["000000005C59510B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000085DD4327"
+			id: "000000006C656AED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000617B7F36"
+					id: "00000000F694BAA1"
 					type: "xp"
-					xp: 10
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000678FBA90"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000050DDF3E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EEA26932"
-					item: "mekmm:fluid_replicator"
+					id: "000000004FD58581"
+					item: "mekmm:elite_max_chemical_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000069ED2D17"
-					item: "create:golden_sheet"
+					id: "000000000EAD649D"
+					item: "immersiveengineering:empty_casing"
 					type: "item"
 				}
 			]
@@ -846,76 +983,87 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000DEBAC4C8"]
+			dependencies: ["000000002CEF907A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BA9796B0"
+			id: "00000000BA1B996A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BD165D6F"
+					id: "0000000061C9BF28"
 					type: "xp"
-					xp: 10
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000550D9CBA"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000022A0258B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "heart"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006934D40F"
+					id: "000000001D2097CA"
 					item: "mekmm:advanced_centrifuging_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CB037778"
+					id: "000000007A97DF72"
 					item: "mekmm:advanced_chemical_infusing_factory"
 					type: "item"
 				}
 			]
-			x: -6.0d
+			x: -9.0d
 			y: 0.0d
 		}
 		{
+			dependencies: ["0000000001AF8B90"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001BBA276B"
+			id: "00000000FD97A2D1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008A3C3B31"
+					id: "00000000A12A411C"
 					type: "xp"
-					xp: 17
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FC659B58"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000178F4761"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002C816C21"
-					item: "immersiveengineering:stick_iron"
+					id: "00000000CA8672FF"
+					item: "mekmm:fluid_replicator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002DE2F561"
-					item: "create:iron_sheet"
+					id: "00000000FAE1BBB7"
+					item: "create:golden_sheet"
 					type: "item"
 				}
 			]
@@ -923,77 +1071,87 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000004C23E791"]
+			dependencies: ["000000008D1EE3D6"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004F42C6F4"
+			id: "0000000047E8B2F2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000014BBD088"
+					id: "00000000627242CC"
 					type: "xp"
-					xp: 19
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000015E05BD7"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000056377B3B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "heart"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000078237844"
+					id: "00000000964BCF5A"
 					item: "mekmm:advanced_crystallizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003CC401D8"
+					id: "00000000C3F2055A"
 					item: "mekmm:advanced_dissolving_factory"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 0.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["00000000DD9615D2"]
+			dependencies: ["00000000453448C3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C999CCBB"
+			id: "00000000555D8667"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002FCC0955"
+					id: "0000000027104A8C"
 					type: "xp"
-					xp: 15
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001CF79EAE"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000002E4ED794"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F3DAE8D8"
-					item: "mekmm:creative_washing_factory"
+					id: "0000000054954A08"
+					item: "mekmm:creative_stamping_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003B1D20AE"
-					item: "thermal:electrum_plate"
+					id: "000000006D579E86"
+					item: "mekmm:creative_washing_factory"
 					type: "item"
 				}
 			]
@@ -1001,76 +1159,86 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000121C3303"]
+			dependencies: ["00000000E70378B9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006C43793D"
+			id: "000000007B3771E9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000823043C7"
+					id: "00000000A50F8C7F"
 					type: "xp"
-					xp: 9
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000024D08576"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000141E4747"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "heart"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005FBA3B05"
+					id: "00000000B50A90AC"
 					item: "mekmm:advanced_lathing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E7C1E91A"
+					id: "00000000823556DD"
 					item: "mekmm:advanced_liquifying_factory"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 1.0d
+			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000083CFD0CA"
+			id: "0000000091FDEC7A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000757771D9"
+					id: "00000000845DE86F"
 					type: "xp"
-					xp: 18
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000016FB51BD"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000DA0D22D4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008FFF107B"
-					item: "immersiveengineering:wire_electrum"
+					id: "0000000010CBB1E9"
+					item: "thermal:electrum_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D472AFF5"
-					item: "immersiveengineering:empty_casing"
+					id: "00000000C5313A28"
+					item: "immersiveengineering:wire_electrum"
 					type: "item"
 				}
 			]
@@ -1078,37 +1246,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000CC624916"]
+			dependencies: ["000000007A535BCF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C95FE0EC"
+			id: "000000006F897DB0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005EBAB8A5"
+					id: "000000002C2CD2BE"
 					type: "xp"
-					xp: 12
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A4C7E887"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000004FC630F3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000044BD79ED"
+					id: "0000000014E7C972"
 					item: "mekmm:ultimate_pressurised_reacting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DE330D1C"
+					id: "000000009A65C433"
 					item: "mekmm:ultimate_recycling_factory"
 					type: "item"
 				}
@@ -1117,37 +1290,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000005FC37E51"]
+			dependencies: ["000000000096D751"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004C3EEFA4"
+			id: "0000000077628FA5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006875528C"
+					id: "000000003B9EEBBB"
 					type: "xp"
-					xp: 13
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000DF33AD6"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000BAFFF6EF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E138F8DD"
+					id: "000000000F80A666"
 					item: "mekmm:ultimate_oxidizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003C6967C9"
+					id: "00000000BE6CE9E4"
 					item: "mekmm:ultimate_planting_factory"
 					type: "item"
 				}
@@ -1156,37 +1334,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000007D454143"]
+			dependencies: ["00000000C9D0909A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EA43A21C"
+			id: "000000000F99D463"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EB329582"
+					id: "00000000DE1DB6DE"
 					type: "xp"
-					xp: 14
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007AF2C9BC"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000C4D93987"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001E4C1577"
+					id: "0000000070EE5513"
 					item: "mekmm:ultimate_lathing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009521E7DB"
+					id: "0000000025A0DBD3"
 					item: "mekmm:ultimate_liquifying_factory"
 					type: "item"
 				}
@@ -1195,37 +1378,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000003666051F"]
+			dependencies: ["000000001B596085"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000287DC880"
+			id: "00000000DAAE40BE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000012849D05"
+					id: "0000000044E8A3B3"
 					type: "xp"
-					xp: 9
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AACFE4BA"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000FF48E97A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A1139F7C"
+					id: "00000000C8ABB149"
 					item: "mekmm:ultimate_crystallizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000013218E6C"
+					id: "00000000EB879CE7"
 					item: "mekmm:ultimate_dissolving_factory"
 					type: "item"
 				}
@@ -1234,38 +1422,43 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000000E7E19EB"]
+			dependencies: ["0000000068BC8D97"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C17EBF17"
+			id: "0000000000FE22F1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C8EF477D"
+					id: "000000005F15FC82"
 					type: "xp"
-					xp: 5
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000004DB8B7C"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000B39E82E2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000021355D9A"
-					item: "mekmm:quantum_chemical_infusing_factory"
+					id: "00000000ADC6E4E3"
+					item: "mekmm:quantum_crystallizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000D695E25"
-					item: "mekmm:quantum_crystallizing_factory"
+					id: "0000000065F40FCB"
+					item: "mekmm:quantum_dissolving_factory"
 					type: "item"
 				}
 			]
@@ -1273,76 +1466,86 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000000D96F494"]
+			dependencies: ["00000000C2FCB963"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000733E48D8"
+			id: "000000005ED4218D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F311891D"
+					id: "000000008D9162F7"
 					type: "xp"
-					xp: 18
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BBAA1834"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000E7EDB505"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000007739CAA"
-					item: "mekmm:quantum_dissolving_factory"
+					id: "00000000F1B70639"
+					item: "mekmm:quantum_lathing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D2607427"
-					item: "mekmm:quantum_lathing_factory"
+					id: "000000001D408833"
+					item: "mekmm:quantum_liquifying_factory"
 					type: "item"
 				}
 			]
 			x: -5.0d
-			y: 3.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["00000000B4FC52DD"]
+			dependencies: ["00000000BAABC131"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000021A6FE09"
+			id: "000000006529076A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000078F09A82"
+					id: "000000003B94D94F"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EAE7961B"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000EB9B0850"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002824D098"
+					id: "0000000009BC7C91"
 					item: "mekmm:ultimate_stamping_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E29A4C8F"
+					id: "00000000E090494F"
 					item: "mekmm:ultimate_washing_factory"
 					type: "item"
 				}
@@ -1351,76 +1554,86 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000002F531EDB"]
+			dependencies: ["00000000129C07D7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B61AF1B6"
+			id: "00000000773BBBC1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000910BCF9B"
+					id: "000000008C57FEDE"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F66BF7EB"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000E784BA8D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000033FDDB0D"
-					item: "mekmm:basic_max_chemical_tank"
+					id: "00000000273274CD"
+					item: "mekmm:quantum_centrifuging_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000675C39D9"
-					item: "mekmm:quantum_centrifuging_factory"
+					id: "00000000D1F338D5"
+					item: "mekmm:quantum_chemical_infusing_factory"
 					type: "item"
 				}
 			]
 			x: -5.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["00000000D6D11287"]
+			dependencies: ["00000000D569B40A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AF4A9AF5"
+			id: "0000000046B9B198"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002D97FBA2"
+					id: "00000000C2CCB0E3"
 					type: "xp"
-					xp: 16
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000516AD448"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000078F53D9C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B6A0A013"
+					id: "00000000562B16E1"
 					item: "mekmm:ultimate_replicating_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006E12E4A9"
+					id: "00000000921A7E8F"
 					item: "mekmm:ultimate_rolling_mill_factory"
 					type: "item"
 				}
@@ -1429,155 +1642,43 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000030835E92"]
+			dependencies: ["0000000012AC288E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C8F16B51"
+			id: "0000000021540824"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F179C12E"
+					id: "00000000E4ECBD08"
 					type: "xp"
-					xp: 10
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000858AF275"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000036263B32"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FB81E74A"
-					item: "mekmm:quantum_recycling_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000DF389CD"
+					id: "000000000BE964E0"
 					item: "mekmm:quantum_replicating_factory"
 					type: "item"
 				}
-			]
-			x: -5.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["00000000591A6F0A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B42959E5"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D4DF19A7"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000072D557C7"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
 				{
 					consume_items: false
-					id: "0000000039A83062"
+					id: "0000000080F75A56"
 					item: "mekmm:quantum_rolling_mill_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000487A2E70"
-					item: "mekmm:quantum_stamping_factory"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["000000000468F529"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002A8A1AD9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006AAA4DA0"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DF54BEB0"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001010ABFC"
-					item: "mekmm:quantum_liquifying_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B0D836D1"
-					item: "mekmm:quantum_oxidizing_factory"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["00000000EE0538A0"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001F234D65"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004E2097E7"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A580FA61"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004FE40623"
-					item: "mekmm:quantum_planting_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EC304204"
-					item: "mekmm:quantum_pressurised_reacting_factory"
 					type: "item"
 				}
 			]
@@ -1585,107 +1686,218 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000766C9B4D"]
+			dependencies: ["00000000F8D80E52"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000055B8AE8F"
+			id: "00000000E72D95D2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E9F24F49"
+					id: "000000000E965103"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "000000008B12C869"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E5DE469C"
+					item: "mekmm:quantum_stamping_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000051453ECE"
+					item: "mekmm:quantum_washing_factory"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000E1C1B608"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003401BA0E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000D85632F"
 					type: "xp"
 					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A105D64E"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000083451E2B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000007925127"
+					item: "mekmm:quantum_oxidizing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B2E3C574"
+					item: "mekmm:quantum_planting_factory"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000000AC6CBBD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F405260C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BB990215"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "00000000492BC7BE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003FDBE7C4"
+					item: "mekmm:quantum_pressurised_reacting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000125F68B1"
+					item: "mekmm:quantum_recycling_factory"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000002FA90E5E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000038536318"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000073B25D3E"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "00000000BC1856F7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C84EADEC"
+					id: "0000000025967401"
 					item: "mekmm:ultimate_centrifuging_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000423F585"
+					id: "000000000DB4AB12"
 					item: "mekmm:ultimate_chemical_infusing_factory"
 					type: "item"
 				}
 			]
-			x: -4.0d
+			x: -7.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000053EEDD00"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000048BAE532"
+			id: "00000000E97CC532"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000038560D9C"
+					id: "0000000004DEFFCE"
 					type: "xp"
-					xp: 5
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004183C759"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "000000008B10D611"
-				item: "mekmm:quantum_washing_factory"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 8.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000639B0F18"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005E12A3F0"
-					type: "xp"
-					xp: 18
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000065FAEC2"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000C2675DE0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000024A1D419"
-					item: "thermal:constantan_plate"
+					id: "000000002641350C"
+					item: "mekmm:ambient_gas_collector"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FFAB1C7C"
-					item: "create:copper_sheet"
+					id: "00000000F6587ED5"
+					item: "thermal:constantan_plate"
 					type: "item"
 				}
 			]
@@ -1696,34 +1908,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002D2822AE"
+			id: "00000000C2184312"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001215BBB7"
+					id: "00000000C14B2DA5"
 					type: "xp"
-					xp: 8
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FE2C99E6"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000BC783FD5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007A2A192F"
-					item: "ae2:printed_silicon"
+					id: "00000000DA8C9A8E"
+					item: "ae2:printed_engineering_processor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000056DBAB17"
-					item: "mekmm:scrap_box"
+					id: "0000000057EAEF6D"
+					item: "ae2:printed_logic_processor"
 					type: "item"
 				}
 			]
@@ -1734,34 +1951,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009BD0779F"
+			id: "00000000BE5F68B7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007A75D359"
+					id: "000000002A502E2B"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006DFF32DB"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000002CC17064"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003BA68D14"
-					item: "immersiveengineering:wire_aluminum"
+					id: "00000000F176D587"
+					item: "immersiveengineering:stick_aluminum"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E9B34A64"
-					item: "mekmm:ambient_gas_collector"
+					id: "000000006F234EA5"
+					item: "immersiveengineering:wire_aluminum"
 					type: "item"
 				}
 			]
@@ -1772,34 +1994,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C2D4CFF3"
+			id: "000000004D1CD836"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000710F0D94"
+					id: "00000000D93C9BEC"
 					type: "xp"
-					xp: 5
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000049B54402"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000094C17C76"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004120C499"
-					item: "thermal:silver_plate"
+					id: "00000000C3325203"
+					item: "ae2:printed_silicon"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000850556A5"
-					item: "thermal:steel_plate"
+					id: "0000000098050990"
+					item: "mekmm:scrap_box"
 					type: "item"
 				}
 			]
@@ -1807,41 +2034,43 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"0000000068F3D53F"
-				"0000000092C3FAE2"
-			]
+			dependencies: ["000000001498C141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003200B20A"
+			id: "00000000FE709C69"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000B218855"
+					id: "00000000EDC31EA6"
 					type: "xp"
-					xp: 11
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000797810CF"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000005EB9D285"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000084DDD5EB"
-					item: "mekmm:creative_chemical_infusing_factory"
+					id: "000000000952B6A0"
+					item: "mekmm:creative_centrifuging_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000016FC62A1"
-					item: "mekmm:creative_crystallizing_factory"
+					id: "000000008C9BDD6A"
+					item: "mekmm:creative_chemical_infusing_factory"
 					type: "item"
 				}
 			]
@@ -1849,38 +2078,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000092C3FAE2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BFA47A4F"
+			id: "00000000ED2A839E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000028793DE4"
+					id: "000000009C8B5586"
 					type: "xp"
-					xp: 17
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C56F407B"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000D1B138F1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EC8C857B"
-					item: "immersiveengineering:wire_copper"
+					id: "000000000C32E33D"
+					item: "create:copper_sheet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A5979F43"
-					item: "mekmm:creative_centrifuging_factory"
+					id: "00000000D26FFB0A"
+					item: "immersiveengineering:wire_copper"
 					type: "item"
 				}
 			]
@@ -1888,77 +2121,46 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000C8F16B51"]
+			dependencies: [
+				"0000000021540824"
+				"00000000F405260C"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000908EB2C1"
+			id: "0000000009B7DC88"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006052651C"
+					id: "0000000046BEB9A1"
 					type: "xp"
-					xp: 17
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002B1A90B6"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000035E14DB3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003E4192E7"
+					id: "00000000A404C64B"
 					item: "mekmm:dense_recycling_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FE536DAA"
+					id: "00000000EE65CFA3"
 					item: "mekmm:dense_replicating_factory"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["000000001F234D65"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000A9D29A0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B0EE3FBE"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CEB5AA91"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001B88B464"
-					item: "mekmm:dense_planting_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007A7EE164"
-					item: "mekmm:dense_pressurised_reacting_factory"
 					type: "item"
 				}
 			]
@@ -1966,37 +2168,88 @@
 			y: 5.0d
 		}
 		{
+			dependencies: [
+				"000000003401BA0E"
+				"00000000F405260C"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B92C9EBB"
+			id: "0000000027B5D5F5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EA21B221"
+					id: "00000000E439F4E8"
 					type: "xp"
-					xp: 12
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000174D5A3B"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000AF84D8F7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DD23D094"
+					item: "mekmm:dense_planting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000078133DE"
+					item: "mekmm:dense_pressurised_reacting_factory"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008CD77A17"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000045E52027"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000003E013C6C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003603F787"
-					item: "immersiveengineering:plate_aluminum"
+					id: "000000003625E17A"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E14DFAE5"
-					item: "immersiveengineering:stick_aluminum"
+					id: "000000004ADCBE97"
+					item: "immersiveengineering:plate_aluminum"
 					type: "item"
 				}
 			]
@@ -2004,68 +2257,79 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000048BAE532"]
+			dependencies: ["00000000E72D95D2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000185CF3E"
+			id: "000000002EA9586A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E237167D"
+					id: "00000000517076BC"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E3296DD3"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000B331A2DA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "0000000097074857"
+				id: "000000004D0AC9F2"
 				item: "mekmm:dense_washing_factory"
 				type: "item"
 			}]
 			x: -4.0d
-			y: 8.0d
+			y: 7.0d
 		}
 		{
-			dependencies: ["000000002F531EDB"]
+			dependencies: ["000000005C59510B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CD7B2247"
+			id: "0000000038316B48"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EC340259"
+					id: "00000000D7683028"
 					type: "xp"
-					xp: 13
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A5C3F8E2"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000269299D4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B779B9E9"
-					item: "mekmm:advanced_mid_chemical_tank"
+					id: "00000000EBCD7D71"
+					item: "mekmm:advanced_max_chemical_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F426DC11"
+					id: "00000000CC2E8AD2"
+					item: "mekmm:advanced_mid_chemical_tank"
 					type: "item"
 				}
 			]
@@ -2073,76 +2337,92 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000B42959E5"]
+			dependencies: [
+				"0000000021540824"
+				"00000000E72D95D2"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C4C73D8F"
+			id: "00000000EC16AB50"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DBAB7655"
+					id: "00000000CFE3116F"
 					type: "xp"
-					xp: 18
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DA8DFDE4"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000FE10C60C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001DF33A13"
+					id: "000000005830E5E9"
 					item: "mekmm:dense_rolling_mill_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001D29BB04"
+					id: "0000000079C14B24"
 					item: "mekmm:dense_stamping_factory"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 7.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["00000000C17EBF17"]
+			dependencies: [
+				"0000000000FE22F1"
+				"00000000773BBBC1"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003971AEF8"
+			id: "0000000031857566"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A6CDD2A5"
+					id: "00000000B59124EA"
 					type: "xp"
-					xp: 11
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000038CB24FD"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000003BC1A311"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000054B81DF0"
+					id: "0000000033453B20"
 					item: "mekmm:dense_chemical_infusing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009CA6B56A"
+					id: "00000000143D3D9E"
 					item: "mekmm:dense_crystallizing_factory"
 					type: "item"
 				}
@@ -2151,116 +2431,90 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000B61AF1B6"]
+			dependencies: ["00000000773BBBC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E7798C9E"
+			id: "0000000093EA3470"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000502C269F"
+					id: "000000002FA7FD96"
 					type: "xp"
-					xp: 11
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004B47CC71"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000841B74ED"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004A62B4EC"
-					item: "mekmm:advanced_max_chemical_tank"
+					id: "000000001813E88D"
+					item: "mekmm:basic_mid_chemical_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C2DB4136"
+					id: "00000000EFDE5870"
 					item: "mekmm:dense_centrifuging_factory"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["000000002A8A1AD9"]
+			dependencies: [
+				"000000005ED4218D"
+				"000000003401BA0E"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000028F3542D"
+			id: "000000003BB9EB89"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AA271F31"
+					id: "0000000060577075"
 					type: "xp"
-					xp: 14
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000000355F83"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000004CFF6F85"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AA820D1B"
+					id: "00000000D73C8EEA"
 					item: "mekmm:dense_liquifying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DC972323"
+					id: "000000003BAA7104"
 					item: "mekmm:dense_oxidizing_factory"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["00000000733E48D8"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000071B95880"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001DB5ACC7"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000438B54B2"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000240AC30F"
-					item: "mekmm:dense_dissolving_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E14BEB8C"
-					item: "mekmm:dense_lathing_factory"
 					type: "item"
 				}
 			]
@@ -2269,40 +2523,89 @@
 		}
 		{
 			dependencies: [
-				"000000008211B3AD"
-				"000000005E0DEA5D"
+				"0000000000FE22F1"
+				"000000005ED4218D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009F6E4CAF"
+			id: "0000000090F208E6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A71282A4"
+					id: "000000006A06BD96"
 					type: "xp"
-					xp: 1
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005AF61891"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000C6B59DB8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000404B0F51"
+					item: "mekmm:dense_dissolving_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B4B70D68"
+					item: "mekmm:dense_lathing_factory"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000007535F473"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002F9D68D3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A8B94FF7"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "00000000FD6A74C8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BEFCF590"
-					item: "mekmm:creative_liquifying_factory"
+					id: "00000000A66FF12D"
+					item: "mekmm:creative_lathing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BCAF47D4"
-					item: "mekmm:creative_oxidizing_factory"
+					id: "000000000EB29F77"
+					item: "mekmm:creative_liquifying_factory"
 					type: "item"
 				}
 			]
@@ -2310,38 +2613,43 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000001D696113"]
+			dependencies: ["000000000D7DEC9D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000028542733"
+			id: "0000000009A3DCAB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001DF21609"
+					id: "00000000FBB909CF"
 					type: "xp"
-					xp: 1
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002E1FE8CB"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000DA0F18D0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000039F2AF0E"
-					item: "mekmm:ultimate_mid_chemical_tank"
+					id: "00000000D0505006"
+					item: "mekmm:modeler_doll"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000081AE836B"
-					item: "immersiveengineering:plate_uranium"
+					id: "00000000B9C2F1FE"
+					item: "mekmm:ultimate_max_chemical_tank"
 					type: "item"
 				}
 			]
@@ -2349,41 +2657,43 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"0000000068F3D53F"
-				"000000005E0DEA5D"
-			]
+			dependencies: ["00000000A2D498DC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A1C81FD8"
+			id: "000000005D5EFBC5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FE670996"
+					id: "000000004D67F30E"
 					type: "xp"
-					xp: 6
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000161EF31C"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000007196D15A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CFD278C2"
-					item: "mekmm:creative_dissolving_factory"
+					id: "00000000B304DA6C"
+					item: "mekmm:creative_crystallizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000077385FAE"
-					item: "mekmm:creative_lathing_factory"
+					id: "0000000075BCE66D"
+					item: "mekmm:creative_dissolving_factory"
 					type: "item"
 				}
 			]
@@ -2394,68 +2704,83 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000180EF587"
+			id: "0000000011A8A8A4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000E513834"
+					id: "000000009091A20F"
 					type: "xp"
-					xp: 6
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000439C09C8"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000007F9DDFDB"
-				item: "mekmm:wireless_charging_station"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"000000003BBC1253"
-				"00000000A289A58D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AE397E3C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009C59494B"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F6D39987"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000006C3E194E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000202F052F"
-					item: "mekmm:creative_recycling_factory"
+					id: "00000000D96E498A"
+					item: "immersiveengineering:plate_uranium"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CE760B27"
-					item: "mekmm:creative_replicating_factory"
+					id: "00000000FE8149D9"
+					item: "mekmm:wireless_charging_station"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000B8E35AAA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C64C1AF1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000827FEAD4"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000E60AA3D3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C082292A"
+					item: "mekmm:creative_pressurised_reacting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000083B71252"
+					item: "mekmm:creative_recycling_factory"
 					type: "item"
 				}
 			]
@@ -2466,34 +2791,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EE1A870D"
+			id: "0000000081C476FF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FD1370B2"
+					id: "000000008A30D744"
 					type: "xp"
-					xp: 12
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003A803A1D"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000462CAFD8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B9D4995A"
-					item: "immersiveengineering:stick_steel"
+					id: "00000000CA4E5A36"
+					item: "thermal:silver_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005768281C"
-					item: "immersiveengineering:wire_steel"
+					id: "000000001620D1E6"
+					item: "thermal:steel_plate"
 					type: "item"
 				}
 			]
@@ -2501,41 +2831,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"00000000A289A58D"
-				"000000008211B3AD"
-			]
+			dependencies: ["00000000B98B74F0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000095F5A297"
+			id: "0000000064D795F1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C895F4C9"
+					id: "00000000A90CB33C"
 					type: "xp"
-					xp: 9
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000048FA480F"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000A70EA65C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000044694A34"
-					item: "mekmm:creative_planting_factory"
+					id: "00000000FF927DF7"
+					item: "mekmm:creative_oxidizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D830002C"
-					item: "mekmm:creative_pressurised_reacting_factory"
+					id: "00000000A7E62ABD"
+					item: "mekmm:creative_planting_factory"
 					type: "item"
 				}
 			]
@@ -2543,38 +2875,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000001D696113"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005ACB2D8E"
+			id: "000000009DF8ADBD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C09954D7"
+					id: "000000000639A176"
 					type: "xp"
-					xp: 13
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008C81E6AE"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000B5BA53B5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008ED2D805"
-					item: "mekmm:modeler_doll"
+					id: "00000000F172FE99"
+					item: "immersiveengineering:stick_steel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B8D483C1"
-					item: "mekmm:ultimate_max_chemical_tank"
+					id: "0000000086E3A032"
+					item: "immersiveengineering:wire_steel"
 					type: "item"
 				}
 			]
@@ -2585,34 +2921,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000061D16C76"
+			id: "000000007B359698"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CC49ED17"
+					id: "000000000D62CA9C"
 					type: "xp"
-					xp: 12
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A98FF657"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000900DA25E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009C1EAE77"
-					item: "ae2:printed_engineering_processor"
+					id: "00000000678CC1C8"
+					item: "ae2:printed_calculation_processor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000034D1665"
-					item: "ae2:printed_logic_processor"
+					id: "000000002BA4D2E1"
+					item: "appflux:printed_energy_processor"
 					type: "item"
 				}
 			]
@@ -2623,26 +2964,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004E144BA4"
+			id: "0000000001AF8B90"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000067C7F7D4"
+					id: "000000009CC519F7"
 					type: "xp"
-					xp: 10
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BBAFE3A7"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000178055F5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000AB33C517"
+				id: "00000000ED6E4C64"
 				item: "mekmm:uu_matter"
 				type: "item"
 			}]
@@ -2650,114 +2996,86 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000E69951DC"]
+			dependencies: ["0000000003A16AD6"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002A0365C1"
+			id: "00000000B882A61E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A0EBD809"
+					id: "0000000036171247"
 					type: "xp"
-					xp: 8
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006A296F8F"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000045340B8B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "gear"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B8647CAC"
+					id: "0000000032030667"
 					item: "mekmm:basic_stamping_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CE17E9F0"
+					id: "00000000EE934A8C"
 					item: "mekmm:basic_washing_factory"
 					type: "item"
 				}
 			]
 			x: -10.0d
-			y: 5.0d
+			y: 6.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DEBAC4C8"
+			id: "000000002CEF907A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000005368890"
+					id: "00000000D58833F5"
 					type: "xp"
-					xp: 19
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000315AA975"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000D5E651CE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "gear"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009B9CCEFE"
+					id: "0000000068DBCAE7"
 					item: "mekmm:basic_centrifuging_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BD433D41"
+					id: "000000009EBA9DA5"
 					item: "mekmm:basic_chemical_infusing_factory"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004C23E791"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000546F639D"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000044ACC5C5"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "gear"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000EED763BA"
-					item: "mekmm:basic_crystallizing_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002A44D18B"
-					item: "mekmm:basic_dissolving_factory"
 					type: "item"
 				}
 			]
@@ -2765,38 +3083,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000307A14FF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000121C3303"
+			id: "000000008D1EE3D6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FE6879B5"
+					id: "00000000F51D59BA"
 					type: "xp"
-					xp: 5
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004C3E6A4D"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000E4EE3CED"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "gear"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008FB5D10C"
-					item: "mekmm:basic_lathing_factory"
+					id: "00000000620CEC43"
+					item: "mekmm:basic_crystallizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002BE69191"
-					item: "mekmm:basic_liquifying_factory"
+					id: "00000000C98251FD"
+					item: "mekmm:basic_dissolving_factory"
 					type: "item"
 				}
 			]
@@ -2804,38 +3126,43 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000E69951DC"]
+			dependencies: ["0000000037E7A72E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000025A7E7E1"
+			id: "00000000E70378B9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F6E170EF"
+					id: "000000003C487103"
 					type: "xp"
-					xp: 4
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000060F5D59E"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000001E442C83"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "gear"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005429FF85"
-					item: "mekmm:basic_oxidizing_factory"
+					id: "00000000E2279F47"
+					item: "mekmm:basic_lathing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FCC1CE02"
-					item: "mekmm:basic_planting_factory"
+					id: "00000000A265C037"
+					item: "mekmm:basic_liquifying_factory"
 					type: "item"
 				}
 			]
@@ -2843,38 +3170,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000FE847395"]
+			dependencies: ["0000000003A16AD6"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000901A0011"
+			id: "0000000023AFB8FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003FF24D1A"
+					id: "00000000F006D882"
 					type: "xp"
-					xp: 10
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BDCA54B1"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000E5B40C4D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "gear"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E0809453"
-					item: "mekmm:basic_pressurised_reacting_factory"
+					id: "000000009E9E9665"
+					item: "mekmm:basic_oxidizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008A96B6E3"
-					item: "mekmm:basic_recycling_factory"
+					id: "00000000FF22B2B3"
+					item: "mekmm:basic_planting_factory"
 					type: "item"
 				}
 			]
@@ -2882,41 +3214,43 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"00000000FE847395"
-				"00000000307A14FF"
-			]
+			dependencies: ["000000006D8A91A8"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005A5A01CF"
+			id: "0000000081656704"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D1C3A646"
+					id: "000000008C3052E6"
 					type: "xp"
-					xp: 12
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F7801BA4"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000004F2646FC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "gear"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006FB0A546"
-					item: "mekmm:basic_replicating_factory"
+					id: "000000000BD280DC"
+					item: "mekmm:basic_pressurised_reacting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005E5198F0"
-					item: "mekmm:basic_rolling_mill_factory"
+					id: "000000005A7D3D7A"
+					item: "mekmm:basic_recycling_factory"
 					type: "item"
 				}
 			]
@@ -2924,80 +3258,134 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000055B8AE8F"]
+			dependencies: [
+				"000000006D8A91A8"
+				"0000000037E7A72E"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002F531EDB"
+			id: "0000000010496B22"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C3023384"
+					id: "00000000ADED75D5"
 					type: "xp"
-					xp: 1
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000018E39089"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000009454E66B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B503A492"
+					item: "mekmm:basic_replicating_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C661F7F"
+					item: "mekmm:basic_rolling_mill_factory"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000038536318"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000129C07D7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000027543162"
+					type: "xp"
+					xp: 21
+				}
+				{
+					id: "00000000CC75CAB8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E9F34FFF"
-					item: "mekmm:basic_mid_chemical_tank"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CECB8D94"
+					id: "00000000F0F57A51"
 					item: "mekmm:overclocked_centrifuging_factory"
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "00000000999C8E3F"
+					item: "mekmm:overclocked_chemical_infusing_factory"
+					type: "item"
+				}
 			]
-			x: -3.0d
+			x: -6.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"00000000287DC880"
-				"0000000055B8AE8F"
-			]
+			dependencies: ["00000000DAAE40BE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000E7E19EB"
+			id: "0000000068BC8D97"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000123A91D9"
+					id: "00000000D384028B"
 					type: "xp"
-					xp: 10
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000079FF8399"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000000C506215"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AE752BC2"
-					item: "mekmm:overclocked_chemical_infusing_factory"
+					id: "000000002A65468C"
+					item: "mekmm:overclocked_crystallizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007F107423"
-					item: "mekmm:overclocked_crystallizing_factory"
+					id: "00000000C41648F7"
+					item: "mekmm:overclocked_dissolving_factory"
 					type: "item"
 				}
 			]
@@ -3005,38 +3393,87 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000080E98DFF"]
+			dependencies: ["0000000003642D81"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B4FC52DD"
+			id: "00000000BAABC131"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F101E3B7"
+					id: "000000002E20AB8E"
 					type: "xp"
-					xp: 14
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B92D3E54"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000007BB26D49"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C9747DBA"
+					id: "0000000061D1ECDC"
 					item: "mekmm:elite_stamping_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F3391579"
+					id: "0000000086644F07"
 					item: "mekmm:elite_washing_factory"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000005D32C0F9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D569B40A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000052B17712"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "000000009A6E313A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006F1842C8"
+					item: "mekmm:elite_replicating_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003998A54D"
+					item: "mekmm:elite_rolling_mill_factory"
 					type: "item"
 				}
 			]
@@ -3044,38 +3481,43 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000002CA36D74"]
+			dependencies: ["000000005529F1AC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D6D11287"
+			id: "000000007A535BCF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007F5ADB7D"
+					id: "00000000D790276D"
 					type: "xp"
-					xp: 17
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000907AD34B"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000F05F8BFF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007FA329BB"
-					item: "mekmm:elite_replicating_factory"
+					id: "000000009DCEFE9D"
+					item: "mekmm:elite_pressurised_reacting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000084CA4F31"
-					item: "mekmm:elite_rolling_mill_factory"
+					id: "00000000AA3BC86D"
+					item: "mekmm:elite_recycling_factory"
 					type: "item"
 				}
 			]
@@ -3083,38 +3525,43 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000693BB465"]
+			dependencies: ["00000000BAF5286E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CC624916"
+			id: "000000000096D751"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C8FC0BCA"
+					id: "00000000B5DA51A1"
 					type: "xp"
-					xp: 13
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009F913AA4"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000005F03CC3D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E2B09DBD"
-					item: "mekmm:elite_pressurised_reacting_factory"
+					id: "00000000BE139962"
+					item: "mekmm:elite_oxidizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000064A5A20F"
-					item: "mekmm:elite_recycling_factory"
+					id: "00000000F674CE65"
+					item: "mekmm:elite_planting_factory"
 					type: "item"
 				}
 			]
@@ -3122,38 +3569,43 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000F2EE6F35"]
+			dependencies: ["000000007B3771E9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005FC37E51"
+			id: "00000000C9D0909A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000024F382A3"
+					id: "0000000090B313BA"
 					type: "xp"
-					xp: 15
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D82A9BA7"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000006CF973E3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003E14FCA6"
-					item: "mekmm:elite_oxidizing_factory"
+					id: "00000000731E2729"
+					item: "mekmm:elite_lathing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EB958F4F"
-					item: "mekmm:elite_planting_factory"
+					id: "0000000020CC5FE1"
+					item: "mekmm:elite_liquifying_factory"
 					type: "item"
 				}
 			]
@@ -3161,38 +3613,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000006C43793D"]
+			dependencies: ["0000000047E8B2F2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007D454143"
+			id: "000000001B596085"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000035F8D0C0"
+					id: "00000000897368B0"
 					type: "xp"
-					xp: 5
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000062AC39C9"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000D2E54B87"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000034EA525"
-					item: "mekmm:elite_lathing_factory"
+					id: "00000000FCDDD74E"
+					item: "mekmm:elite_crystallizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000022BA62F4"
-					item: "mekmm:elite_liquifying_factory"
+					id: "000000003B6BAA26"
+					item: "mekmm:elite_dissolving_factory"
 					type: "item"
 				}
 			]
@@ -3200,38 +3657,43 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000004F42C6F4"]
+			dependencies: ["00000000BA1B996A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003666051F"
+			id: "000000002FA90E5E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000043B63C81"
+					id: "000000001542E004"
 					type: "xp"
-					xp: 20
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DB35E411"
-					table_id: 2490559792L
-					type: "random"
+					id: "00000000CC6DE9E8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B4B96B9F"
-					item: "mekmm:elite_crystallizing_factory"
+					id: "00000000A4E78E62"
+					item: "mekmm:elite_centrifuging_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000077606D5E"
-					item: "mekmm:elite_dissolving_factory"
+					id: "00000000DB68C496"
+					item: "mekmm:elite_chemical_infusing_factory"
 					type: "item"
 				}
 			]
@@ -3239,80 +3701,43 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000BA9796B0"]
+			dependencies: ["000000006529076A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000766C9B4D"
+			id: "00000000F8D80E52"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001BDD1054"
+					id: "000000004CA7C5A8"
 					type: "xp"
-					xp: 13
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EE720FCC"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "octagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000587B8A88"
-					item: "mekmm:elite_centrifuging_factory"
+					id: "0000000089772361"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B13DD497"
-					item: "mekmm:elite_chemical_infusing_factory"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000021A6FE09"
-				"00000000AF4A9AF5"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000591A6F0A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000059468F"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B34A03F2"
-					table_id: 2490559792L
-					type: "random"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000991FFA9A"
-					item: "mekmm:overclocked_rolling_mill_factory"
+					id: "000000008C096DD1"
+					item: "mekmm:overclocked_stamping_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B63F1E46"
-					item: "mekmm:overclocked_stamping_factory"
+					id: "00000000DA61D111"
+					item: "mekmm:overclocked_washing_factory"
 					type: "item"
 				}
 			]
@@ -3320,72 +3745,43 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["0000000021A6FE09"]
+			dependencies: ["000000006F897DB0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000053EEDD00"
+			id: "000000000AC6CBBD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000023E9ED2C"
+					id: "000000004937DEFA"
 					type: "xp"
-					xp: 4
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FB845914"
-					table_id: 2490559792L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [{
-				consume_items: false
-				id: "00000000C62DA4C8"
-				item: "mekmm:overclocked_washing_factory"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000C95FE0EC"
-				"000000004C3EEFA4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000EE0538A0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008FBD3987"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E17C4136"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000008AED475C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AFCC89BE"
-					item: "mekmm:overclocked_planting_factory"
+					id: "00000000379B318A"
+					item: "mekmm:overclocked_pressurised_reacting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000234441DC"
-					item: "mekmm:overclocked_pressurised_reacting_factory"
+					id: "000000001147ECBE"
+					item: "mekmm:overclocked_recycling_factory"
 					type: "item"
 				}
 			]
@@ -3393,41 +3789,43 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"00000000C95FE0EC"
-				"00000000AF4A9AF5"
-			]
+			dependencies: ["0000000046B9B198"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000030835E92"
+			id: "0000000012AC288E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E4C619E2"
+					id: "000000009DBD5BD7"
 					type: "xp"
-					xp: 19
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000550DCCB2"
-					table_id: 2490559792L
-					type: "random"
+					id: "0000000080A2B600"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002B7D03FE"
-					item: "mekmm:overclocked_recycling_factory"
+					id: "000000004696A22F"
+					item: "mekmm:overclocked_replicating_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AEBCD026"
-					item: "mekmm:overclocked_replicating_factory"
+					id: "000000003C67E710"
+					item: "mekmm:overclocked_rolling_mill_factory"
 					type: "item"
 				}
 			]
@@ -3435,41 +3833,43 @@
 			y: 5.0d
 		}
 		{
-			dependencies: [
-				"00000000EA43A21C"
-				"00000000287DC880"
-			]
+			dependencies: ["000000000F99D463"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000D96F494"
+			id: "00000000C2FCB963"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000937D120E"
+					id: "00000000F6EE8708"
 					type: "xp"
-					xp: 10
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A7FBE6C4"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000007F37BEA5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000D7A5C10"
-					item: "mekmm:overclocked_dissolving_factory"
+					id: "00000000E9D40297"
+					item: "mekmm:overclocked_lathing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000067EEDDA9"
-					item: "mekmm:overclocked_lathing_factory"
+					id: "00000000836636F5"
+					item: "mekmm:overclocked_liquifying_factory"
 					type: "item"
 				}
 			]
@@ -3477,41 +3877,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000004C3EEFA4"
-				"00000000EA43A21C"
-			]
+			dependencies: ["0000000077628FA5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000468F529"
+			id: "00000000E1C1B608"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000092D76058"
+					id: "00000000D4BAAFA6"
 					type: "xp"
-					xp: 17
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FAE86097"
-					table_id: 2490559792L
-					type: "random"
+					id: "000000004ACFEFE1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekmm"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D8C637F3"
-					item: "mekmm:overclocked_liquifying_factory"
+					id: "00000000F783E9A5"
+					item: "mekmm:overclocked_oxidizing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000903C8D9B"
-					item: "mekmm:overclocked_oxidizing_factory"
+					id: "000000004907DA90"
+					item: "mekmm:overclocked_planting_factory"
 					type: "item"
 				}
 			]

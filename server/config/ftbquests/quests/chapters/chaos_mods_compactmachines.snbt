@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_compactmachines"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "compactmachines:wall"
-	id: "00000000703F4C0F"
+	id: "000000004C148B41"
 	order_index: 87
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["000000006D11D26D"]
+			dependencies: ["00000000B83B4991"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D6C351A9"
+			id: "00000000C4E73339"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000087B1586"
+					id: "00000000C8562A02"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008F7C59CA"
-					table_id: 742071830L
-					type: "random"
+					id: "000000001839EEF4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_compactmachines"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E9420DEB"
+				id: "000000001ED37E5B"
 				item: "compactmachines:machine_small"
 				type: "item"
 			}]
@@ -40,30 +45,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000006D11D26D"]
+			dependencies: ["00000000B83B4991"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009D9DC8CF"
+			id: "00000000EA64AC8A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000044EC2734"
+					id: "00000000D12F0EAF"
 					type: "xp"
-					xp: 10
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D8DAA860"
-					table_id: 742071830L
-					type: "random"
+					id: "0000000038C3BD92"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_compactmachines"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A240C967"
+				id: "00000000A62E7850"
 				item: "compactmachines:machine_tiny"
 				type: "item"
 			}]
@@ -71,30 +81,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000006D11D26D"]
+			dependencies: ["00000000B83B4991"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C4A9C21C"
+			id: "00000000F3631028"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000026D526C8"
+					id: "0000000078EE1BA6"
 					type: "xp"
-					xp: 2
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E1867501"
-					table_id: 742071830L
-					type: "random"
+					id: "00000000AB8C54F3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_compactmachines"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002CE785B1"
+				id: "000000008F3FFB3B"
 				item: "compactmachines:machine_maximum"
 				type: "item"
 			}]
@@ -102,30 +117,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000006D11D26D"]
+			dependencies: ["00000000B83B4991"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000055598A41"
+			id: "00000000662DD436"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F2195839"
+					id: "0000000047D194E9"
 					type: "xp"
-					xp: 10
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000048F1C0B"
-					table_id: 742071830L
-					type: "random"
+					id: "00000000C011AF38"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_compactmachines"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000ADF6D7E8"
+				id: "00000000C424BB89"
 				item: "compactmachines:machine_normal"
 				type: "item"
 			}]
@@ -136,26 +156,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000660071F9"
+			id: "000000007761C6B5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000175DB5E6"
+					id: "00000000A04C309D"
 					type: "xp"
-					xp: 5
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008DF2C85B"
-					table_id: 742071830L
-					type: "random"
+					id: "000000006F49FF43"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_compactmachines"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000008C53657A"
+				id: "000000002145622C"
 				item: "compactmachines:tunnel"
 				type: "item"
 			}]
@@ -166,26 +191,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B505E75C"
+			id: "00000000A9A2A610"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FFB85F69"
+					id: "0000000073ABB78E"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000035AC077B"
-					table_id: 742071830L
-					type: "random"
+					id: "000000002640853C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_compactmachines"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000986CF0CE"
+				id: "000000003EC71917"
 				item: "compactmachines:personal_shrinking_device"
 				type: "item"
 			}]
@@ -196,26 +226,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006D11D26D"
+			id: "00000000B83B4991"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007F8656F0"
+					id: "00000000BBC335AA"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C8F0E496"
-					table_id: 742071830L
-					type: "random"
+					id: "0000000082C8730D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_compactmachines"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000A012D9A9"
+				id: "000000001DD127C6"
 				item: "compactmachines:wall"
 				type: "item"
 			}]
@@ -223,30 +258,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000006D11D26D"]
+			dependencies: ["00000000B83B4991"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D00D3B81"
+			id: "00000000A96A59E9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003EA74A04"
+					id: "00000000607ABA82"
 					type: "xp"
-					xp: 5
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B24D8693"
-					table_id: 742071830L
-					type: "random"
+					id: "0000000048F7E0E6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_compactmachines"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000923DAC5F"
+				id: "00000000D9399FB3"
 				item: "compactmachines:machine_giant"
 				type: "item"
 			}]
@@ -254,30 +294,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000006D11D26D"]
+			dependencies: ["00000000B83B4991"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008F6EF737"
+			id: "00000000FB5D99AC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000721A6AFB"
+					id: "000000006A66A9CC"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000084685A3F"
-					table_id: 742071830L
-					type: "random"
+					id: "000000003C5CD1B9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_compactmachines"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000E7D4EA5"
+				id: "00000000196B18E2"
 				item: "compactmachines:machine_large"
 				type: "item"
 			}]

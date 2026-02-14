@@ -2,330 +2,363 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_ars_nouveau"
-	group: "00000000DEB299A3"
-	icon: "ars_nouveau:red_archwood_sapling"
-	id: "000000003AC1B291"
-	order_index: 129
+	group: "000000008CDEF944"
+	icon: "ars_nouveau:blue_archwood_sapling"
+	id: "000000002244943E"
+	order_index: 128
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["000000005459B30D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000075E26104"
+			id: "0000000083678F5F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BE56962E"
+					id: "00000000C5A6AE24"
 					type: "xp"
-					xp: 4
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000059AA2B74"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "gear"
-			tasks: [{
-				consume_items: false
-				id: "0000000080131AD4"
-				item: "ars_nouveau:sourceberry_bush"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["00000000E556861C"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000BC5B4661"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000E3DB792"
-					type: "xp"
-					xp: 31
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002B5146DA"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000E0ECC93F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000215E6219"
+					id: "00000000F40B7ED5"
 					item: "ars_nouveau:ritual_animal_summon"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C150D3C3"
+					id: "000000002F8E6C2E"
 					item: "ars_nouveau:ritual_wilden_summon"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C0FAF89B"
+					id: "000000008CF64A49"
 					item: "ars_nouveau:ritual_sunrise"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E2BDEAAE"
+					id: "0000000086686968"
 					item: "ars_nouveau:ritual_warping"
 					type: "item"
 				}
 			]
 			x: -5.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
-			dependencies: [
-				"0000000058FB4AF0"
-				"00000000E556861C"
-			]
+			dependencies: ["00000000B4AB0E06"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000033C43A1B"
+			id: "0000000014964277"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D1D0D13B"
+					id: "000000007BBFC487"
 					type: "xp"
-					xp: 7
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000936BD217"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000008ECF1D0B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "0000000057C118BE"
+				item: "ars_nouveau:blue_archwood_sapling"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000B4AB0E06"
+				"000000005459B30D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ADE20FAD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000075C5017D"
+					type: "xp"
+					xp: 39
+				}
+				{
+					id: "000000007BC86629"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000225826BB"
+					id: "0000000040F5D0EC"
 					item: "minecraft:tuff"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000076A329DC"
+					id: "00000000257F407E"
 					item: "ars_nouveau:vitalic_sourcelink"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000109E1127"
+					id: "00000000238E368C"
 					item: "ars_nouveau:void_prism"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A166B744"
+					id: "000000002008662A"
 					item: "ars_nouveau:volcanic_sourcelink"
 					type: "item"
 				}
 			]
 			x: -5.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001DCDCC7F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F1ED8021"
-					type: "xp"
-					xp: 32
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FC5264DD"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F475E629"
-					item: "ars_nouveau:glyph_explosion"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A3EC1748"
-					item: "ars_nouveau:glyph_extend_time"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000405D2069"
-					item: "ars_nouveau:glyph_extract"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000055A8EB5D"
-					item: "ars_nouveau:glyph_fangs"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 8.0d
-		}
-		{
-			dependencies: [
-				"000000009D80E6FB"
-				"0000000058FB4AF0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B6CF387B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000037E78BC7"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B80415F9"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F8A6A95F"
-					item: "ars_nouveau:archwood_fence"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003CD52646"
-					item: "ars_nouveau:archwood_fence_gate"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000821BDD5B"
-					item: "ars_nouveau:archwood_pressure_plate"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004B965DFA"
-					item: "ars_nouveau:archwood_sconce"
-					type: "item"
-				}
-			]
-			x: 0.0d
 			y: 4.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008E226405"
+			id: "00000000E0565D00"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000015E37B08"
+					id: "00000000289083F0"
 					type: "xp"
-					xp: 28
+					xp: 40
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000048A13606"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000045AEB115"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FB26F613"
+					item: "ars_nouveau:glyph_explosion"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AF495284"
+					item: "ars_nouveau:glyph_extend_time"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008606CFCF"
+					item: "ars_nouveau:glyph_extract"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002D1C946C"
+					item: "ars_nouveau:glyph_fangs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000B4AB0E06"
+				"0000000041BD370E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E7ED8E5B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004F81010A"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "0000000005599498"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002347F217"
+					item: "ars_nouveau:archwood_fence"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000178D912C"
+					item: "ars_nouveau:archwood_fence_gate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000041CC6BC9"
+					item: "ars_nouveau:archwood_pressure_plate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CEC9D9DA"
+					item: "ars_nouveau:archwood_sconce"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F8365F3E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003EE3CE9E"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "0000000033BC76CF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000012FD7117"
+					id: "00000000E74B51FE"
 					item: "ars_nouveau:stripped_blue_archwood_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EFCF71FC"
+					id: "0000000083593697"
 					item: "ars_nouveau:stripped_green_archwood_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000043F6ED5C"
+					id: "00000000355EC2E8"
 					item: "ars_nouveau:stripped_purple_archwood_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000115C3483"
+					id: "000000009F973295"
 					item: "ars_nouveau:purple_archwood_wood"
 					type: "item"
 				}
 			]
 			x: -8.0d
-			y: 1.0d
+			y: 3.0d
 		}
 		{
-			dependencies: [
-				"00000000DD1EE526"
-				"000000009D80E6FB"
-			]
+			dependencies: ["0000000041BD370E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E2E97FD6"
+			id: "00000000CCF26734"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000A7BDE93"
+					id: "00000000AC46E500"
 					type: "xp"
-					xp: 37
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002204204B"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000033A0205D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000015C10B63"
+					id: "00000000FC65A3F3"
 					item: {
 						Count: 1
 						id: "ars_nouveau:arcanist_boots"
@@ -337,58 +370,112 @@
 				}
 				{
 					consume_items: false
-					id: "00000000534E4A85"
+					id: "000000007620C034"
 					item: "ars_nouveau:archmage_spell_book"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C5BDDD15"
+					id: "00000000CD5EA90A"
 					item: "ars_nouveau:archwood_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A1A6BA93"
+					id: "000000006C13CB79"
 					item: "ars_nouveau:archwood_door"
 					type: "item"
 				}
 			]
 			x: 0.0d
-			y: 3.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["00000000D96F67BA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FE6957FA"
+			id: "000000009C975C63"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000076222955"
+					id: "00000000625D7C3A"
 					type: "xp"
-					xp: 8
+					xp: 22
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002A31B39B"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000001A2A5950"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008AEFB116"
+					item: "ars_nouveau:source_gem_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D3B0076B"
+					item: "ars_nouveau:sourcestone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005982F25D"
+					item: "ars_nouveau:purple_archwood_sapling"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000078713C85"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F0987963"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A5F41C1A"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "000000005221272E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003FC09902"
+					id: "00000000197F5398"
 					item: "ars_nouveau:arcane_platform"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A26B25E9"
+					id: "00000000745514B0"
 					item: {
 						Count: 1
 						id: "ars_nouveau:arcanist_hood"
@@ -400,7 +487,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000A5FE6B9C"
+					id: "00000000E2321DCE"
 					item: {
 						Count: 1
 						id: "ars_nouveau:arcanist_leggings"
@@ -412,7 +499,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000F536D3AB"
+					id: "000000005D4F921F"
 					item: {
 						Count: 1
 						id: "ars_nouveau:arcanist_robes"
@@ -424,110 +511,64 @@
 				}
 			]
 			x: 0.0d
-			y: 2.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
-				"00000000D96F67BA"
-				"00000000DD1EE526"
-				"0000000058FB4AF0"
+				"0000000078713C85"
+				"0000000014902631"
+				"00000000B4AB0E06"
+				"000000009C975C63"
+				"00000000937005F9"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F5C796BE"
+			id: "00000000A41C991D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000287F8101"
+					id: "00000000F1E55CCA"
 					type: "xp"
-					xp: 29
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000037D8814A"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000059DE9B4D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C57E99C4"
+					id: "000000009EC72E58"
 					item: "ars_nouveau:alteration_table"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E72DA104"
+					id: "00000000E8A00F10"
 					item: "minecraft:andesite"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E15A1CC7"
+					id: "00000000EE6B8EDE"
 					item: "ars_nouveau:annotated_codex"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003C15E378"
+					id: "000000000CD05F2D"
 					item: "ars_nouveau:arcane_core"
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000D96F67BA"
-				"0000000058FB4AF0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000104EB1EC"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D012B96F"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001EF26297"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009A355798"
-					item: "ars_nouveau:rotating_spell_turret"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000260DEDC6"
-					item: "ars_nouveau:agronomic_sourcelink"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008D77CBA7"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004B28076F"
-					item: "ars_nouveau:alchemical_sourcelink"
 					type: "item"
 				}
 			]
@@ -538,81 +579,97 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B02E465C"
+			id: "000000008654F530"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B257BB92"
+					id: "00000000EAA53D44"
 					type: "xp"
 					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006C577D1B"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000E85E2063"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008F940E18"
+					id: "00000000217D45D2"
 					item: "ars_nouveau:rewind"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B6F99C52"
+					id: "00000000ABAF1AB7"
 					item: "ars_nouveau:glyph_rotate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004159A09F"
+					id: "00000000CD8C2BC6"
 					item: "ars_nouveau:glyph_rune"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005E2ED0F2"
+					id: "00000000C63ED657"
 					item: "ars_nouveau:glyph_self"
 					type: "item"
 				}
 			]
 			x: -2.0d
-			y: 7.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
-				"000000009D80E6FB"
-				"0000000058FB4AF0"
+				"00000000B4AB0E06"
+				"0000000041BD370E"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000061F8582D"
+			id: "00000000CCF40816"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004C547D2F"
+					id: "00000000E3E0A2C3"
 					type: "xp"
-					xp: 15
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C400DD20"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000000F81A664"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F044C8B3"
+					id: "00000000272195CA"
+					item: "ars_nouveau:item_detector"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C937B89F"
 					item: {
 						Count: 1
 						id: "ars_nouveau:dowsing_rod"
@@ -624,13 +681,13 @@
 				}
 				{
 					consume_items: false
-					id: "00000000DF2D42EE"
+					id: "00000000B5B3BD99"
 					item: "ars_nouveau:dull_trinket"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A215EEA7"
+					id: "00000000DF69C4FB"
 					item: {
 						Count: 1
 						id: "ars_nouveau:potion_flask_amplify"
@@ -640,152 +697,166 @@
 					}
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "0000000026C46933"
-					item: {
-						Count: 1
-						id: "ars_nouveau:potion_flask_extend_time"
-						tag: {
-							Damage: 8
-						}
-					}
-					type: "item"
-				}
 			]
 			x: 0.0d
-			y: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
-				"000000009D80E6FB"
-				"0000000006E5842F"
+				"0000000078713C85"
+				"00000000937005F9"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EA5DD656"
+			id: "000000005D1AC624"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C1C078A1"
+					id: "000000000490482F"
 					type: "xp"
-					xp: 34
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000000A40E8"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000EFD3E80C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006A65B3C6"
+					id: "00000000F57044D7"
+					item: "minecraft:chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A24EACC3"
 					item: "ars_nouveau:mob_jar"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000046C5B4B9"
+					id: "000000002DF3F8F6"
 					item: "minecraft:deepslate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005ECE2181"
+					id: "00000000B26A8E57"
 					item: "minecraft:diorite"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FCD5B88E"
-					item: "ars_nouveau:item_detector"
 					type: "item"
 				}
 			]
 			x: 0.0d
-			y: 7.0d
+			y: 5.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004B9FEE4B"
+			id: "000000000202BF1E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B706D441"
+					id: "000000009C098C8B"
 					type: "xp"
-					xp: 1
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000061A28A4A"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000066818525"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E3AD1538"
+					id: "00000000545CF786"
 					item: "ars_nouveau:red_archwood_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000173B49A1"
+					id: "00000000C4408E30"
 					item: "ars_nouveau:blue_archwood_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007FB2A317"
+					id: "00000000FDE86225"
 					item: "ars_nouveau:green_archwood_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DE74E120"
+					id: "000000009B9ECC88"
 					item: "ars_nouveau:stripped_red_archwood_wood"
 					type: "item"
 				}
 			]
 			x: -8.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["0000000058FB4AF0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CAC2C0E4"
+			id: "000000009ED4665A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009AD02F5E"
+					id: "000000002715C745"
 					type: "xp"
-					xp: 38
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000091761C39"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000009799D00C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004B0A5F84"
+					id: "000000001C0BF244"
+					item: {
+						Count: 1
+						id: "ars_nouveau:battlemage_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000090F7AE42"
 					item: {
 						Count: 1
 						id: "ars_nouveau:battlemage_robes"
@@ -797,7 +868,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000000D94C21B"
+					id: "00000000190E8B02"
 					item: {
 						Count: 1
 						id: "ars_nouveau:battlemage_hood"
@@ -809,7 +880,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000096CB8040"
+					id: "000000005F68F23A"
 					item: {
 						Count: 1
 						id: "ars_nouveau:battlemage_leggings"
@@ -819,117 +890,169 @@
 					}
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "00000000F738A8B4"
-					item: "ars_nouveau:blank_thread"
-					type: "item"
-				}
 			]
 			x: 0.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["000000009D80E6FB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001C58F3CF"
+			id: "000000001646BDDD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004887E6BC"
+					id: "00000000F0663D89"
 					type: "xp"
-					xp: 17
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005F49400B"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004AF7662E"
-					item: "ars_nouveau:archwood_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000037869F7B"
-					item: "ars_nouveau:archwood_trapdoor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000038AB2D96"
-					item: "minecraft:arrow"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000023436065"
+					id: "0000000040F75B5F"
 					item: {
 						Count: 1
-						id: "ars_nouveau:battlemage_boots"
+						id: "ftbquests:lootcrate"
 						tag: {
-							Damage: 0
+							type: "chaos_box_ars_nouveau"
 						}
 					}
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 5.0d
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BEA23A17"
+					item: "ars_nouveau:glyph_glide"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BDE500E5"
+					item: "ars_nouveau:glyph_gravity"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B843C450"
+					item: "ars_nouveau:glyph_grow"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000F2F5C6F"
+					item: "ars_nouveau:glyph_harm"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000078AFFB2F"
+			id: "000000004CEE18F6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003397A50F"
+					id: "00000000A476ADD7"
 					type: "xp"
-					xp: 12
+					xp: 37
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A1AF1A96"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000089C358DD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008D06B512"
-					item: "ars_nouveau:glyph_glide"
+					id: "00000000C231B697"
+					item: "ars_nouveau:glyph_fell"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A861EE0D"
-					item: "ars_nouveau:glyph_gravity"
+					id: "000000004CD16BEC"
+					item: "ars_nouveau:glyph_firework"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000ED082B22"
-					item: "ars_nouveau:glyph_grow"
+					id: "00000000C4FC1254"
+					item: "ars_nouveau:glyph_flare"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006D100084"
-					item: "ars_nouveau:glyph_harm"
+					id: "000000009C5883EA"
+					item: "ars_nouveau:glyph_freeze"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DC96E947"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C5883789"
+					type: "xp"
+					xp: 33
+				}
+				{
+					id: "00000000FAEDC4DB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000695D5F9F"
+					item: "ars_nouveau:glyph_infuse"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009E01C5D5"
+					item: "ars_nouveau:glyph_intangible"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000209D80C0"
+					item: "ars_nouveau:glyph_interact"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000774BC421"
+					item: "ars_nouveau:glyph_invisibility"
 					type: "item"
 				}
 			]
@@ -940,46 +1063,51 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007EB1DD38"
+			id: "00000000CE661D3D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DC72CBFD"
+					id: "0000000054653A1D"
 					type: "xp"
 					xp: 22
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000001D5CB7F"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000009420B9E6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005104FC1B"
-					item: "ars_nouveau:glyph_fell"
+					id: "000000007C14CFAD"
+					item: "ars_nouveau:glyph_harvest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AF828834"
-					item: "ars_nouveau:glyph_firework"
+					id: "00000000864164A2"
+					item: "ars_nouveau:glyph_heal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000091B9FA0C"
-					item: "ars_nouveau:glyph_flare"
+					id: "00000000DE6CE458"
+					item: "ars_nouveau:glyph_hex"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000288F9DAA"
-					item: "ars_nouveau:glyph_freeze"
+					id: "00000000F0C109BF"
+					item: "ars_nouveau:glyph_ignite"
 					type: "item"
 				}
 			]
@@ -990,46 +1118,51 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000057B2DEB"
+			id: "00000000B66E915D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009AAEC083"
+					id: "00000000BE513450"
 					type: "xp"
-					xp: 24
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A2DD995B"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000007D1E2E59"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000093967737"
-					item: "ars_nouveau:glyph_infuse"
+					id: "000000009E70B7F4"
+					item: "ars_nouveau:glyph_lightning"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000CD25A38"
-					item: "ars_nouveau:glyph_intangible"
+					id: "00000000B29A7B83"
+					item: "ars_nouveau:glyph_linger"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D9B9F194"
-					item: "ars_nouveau:glyph_interact"
+					id: "00000000EC3940D7"
+					item: "ars_nouveau:glyph_fortune"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000064F69FF2"
-					item: "ars_nouveau:glyph_invisibility"
+					id: "00000000690CBD21"
+					item: "ars_nouveau:glyph_name"
 					type: "item"
 				}
 			]
@@ -1037,49 +1170,98 @@
 			y: 2.0d
 		}
 		{
+			dependencies: ["0000000041BD370E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000087D92338"
+			id: "00000000937005F9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002B13F9CA"
+					id: "00000000EDBA77FA"
 					type: "xp"
-					xp: 29
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E3309B5F"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000EC2FF557"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003722BD7E"
+					item: "ars_nouveau:archwood_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000BFF3A89"
+					item: "ars_nouveau:magebloom_fiber"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000099AFBD71"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003A692AC7"
+					type: "xp"
+					xp: 28
+				}
+				{
+					id: "0000000096F47E82"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000045AC6A5"
-					item: "ars_nouveau:glyph_harvest"
+					id: "00000000ED9D5A1C"
+					item: "ars_nouveau:glyph_pickup"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000039343497"
-					item: "ars_nouveau:glyph_heal"
+					id: "00000000A2E30126"
+					item: "ars_nouveau:glyph_gust"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000260E90FD"
-					item: "ars_nouveau:glyph_hex"
+					id: "00000000D70CC6FC"
+					item: "ars_nouveau:glyph_launch"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000013F84FD5"
-					item: "ars_nouveau:glyph_ignite"
+					id: "00000000B1E6BD9D"
+					item: "ars_nouveau:glyph_leap"
 					type: "item"
 				}
 			]
@@ -1090,46 +1272,51 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008F437A36"
+			id: "00000000C726FB7B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005111EBD8"
+					id: "000000006790E05E"
 					type: "xp"
-					xp: 38
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000505CB5DB"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000D10712B5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005363DDFA"
-					item: "ars_nouveau:glyph_lightning"
+					id: "000000003E0E24C9"
+					item: "ars_nouveau:glyph_pull"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B545D6EC"
-					item: "ars_nouveau:glyph_linger"
+					id: "000000009612910D"
+					item: "ars_nouveau:glyph_randomize"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002E13022B"
-					item: "ars_nouveau:glyph_fortune"
+					id: "00000000AFACC916"
+					item: "ars_nouveau:glyph_redstone_signal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D419EC23"
-					item: "ars_nouveau:glyph_name"
+					id: "000000007B62E868"
+					item: "ars_nouveau:reset"
 					type: "item"
 				}
 			]
@@ -1137,80 +1324,89 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000009D80E6FB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000006E5842F"
+			id: "00000000DE5D86CD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D29C1FC6"
+					id: "0000000028E314EA"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F7A92D2A"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000D2233B4B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "000000006CD31867"
-				item: "ars_nouveau:archwood_slab"
+				id: "000000005DC4D4DD"
+				item: "ars_nouveau:sourceberry_sack"
 				type: "item"
 			}]
-			x: -7.0d
-			y: 2.0d
+			x: -8.0d
+			y: 1.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009143A302"
+			id: "00000000979B62F8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000860D4607"
+					id: "0000000020A79B55"
 					type: "xp"
-					xp: 6
+					xp: 34
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F9ED0EDC"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000FD69A1D4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000096D317A5"
-					item: "ars_nouveau:glyph_pickup"
+					id: "00000000A28425F6"
+					item: "ars_nouveau:glyph_orbit"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000477308BD"
-					item: "ars_nouveau:glyph_gust"
+					id: "000000007C1C5E9F"
+					item: "ars_nouveau:glyph_pierce"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004237A6B0"
-					item: "ars_nouveau:glyph_launch"
+					id: "00000000EA7C109E"
+					item: "ars_nouveau:glyph_place_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000030932F23"
-					item: "ars_nouveau:glyph_leap"
+					id: "00000000BF6BD6CB"
+					item: "ars_nouveau:glyph_projectile"
 					type: "item"
 				}
 			]
@@ -1221,46 +1417,106 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000047560408"
+			id: "0000000018329740"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CE08BEAC"
+					id: "0000000010E712AF"
 					type: "xp"
-					xp: 21
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005A9F8D6F"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000FA7B90FC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002B41C06F"
-					item: "ars_nouveau:glyph_pull"
+					id: "00000000053381DF"
+					item: "ars_nouveau:glyph_snare"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EFEFAFBA"
-					item: "ars_nouveau:glyph_randomize"
+					id: "00000000863C9B9E"
+					item: "ars_nouveau:glyph_split"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EC12F3E5"
-					item: "ars_nouveau:glyph_redstone_signal"
+					id: "000000002EB86B83"
+					item: "ars_nouveau:glyph_summon_decoy"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005B795311"
-					item: "ars_nouveau:reset"
+					id: "00000000A983670A"
+					item: "ars_nouveau:glyph_summon_steed"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000143DE1CA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DC420CC1"
+					type: "xp"
+					xp: 28
+				}
+				{
+					id: "00000000B0FC4CE7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E5844F95"
+					item: "ars_nouveau:glyph_sense_magic"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D140BF1B"
+					item: "ars_nouveau:glyph_sensitive"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000786B559B"
+					item: "ars_nouveau:glyph_slowfall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000073BB446A"
+					item: "ars_nouveau:glyph_smelt"
 					type: "item"
 				}
 			]
@@ -1271,96 +1527,51 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000644BE3BE"
+			id: "000000002CD5B02C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C8398606"
+					id: "00000000317940F6"
 					type: "xp"
-					xp: 19
+					xp: 38
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005A56D37D"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000571C3CCE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AB75926E"
-					item: "ars_nouveau:glyph_orbit"
+					id: "000000009AA1FD4B"
+					item: "ars_nouveau:glyph_touch"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F379FA02"
-					item: "ars_nouveau:glyph_pierce"
+					id: "0000000044300B32"
+					item: "ars_nouveau:glyph_underfoot"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006398D0DC"
-					item: "ars_nouveau:glyph_place_block"
+					id: "00000000775BAA3D"
+					item: "ars_nouveau:glyph_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D04B14F2"
-					item: "ars_nouveau:glyph_projectile"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C102C139"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E391FDC4"
-					type: "xp"
-					xp: 26
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004A2CDEDA"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004EE0F92E"
-					item: "ars_nouveau:glyph_snare"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000089809B85"
-					item: "ars_nouveau:glyph_split"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004373F58C"
-					item: "ars_nouveau:glyph_summon_decoy"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000194BA7C4"
-					item: "ars_nouveau:glyph_summon_steed"
+					id: "00000000EA9EE064"
+					item: "ars_nouveau:glyph_wind_shear"
 					type: "item"
 				}
 			]
@@ -1371,46 +1582,51 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000662B9C85"
+			id: "000000001E761627"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B5FE016A"
+					id: "00000000D5F5D8B2"
 					type: "xp"
-					xp: 6
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005A1A7A7C"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000A0FFE307"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000ECDD8C3D"
-					item: "ars_nouveau:glyph_sense_magic"
+					id: "0000000058D23B7C"
+					item: "ars_nouveau:glyph_summon_undead"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001114DC2B"
-					item: "ars_nouveau:glyph_sensitive"
+					id: "000000004D273F19"
+					item: "ars_nouveau:glyph_summon_vex"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000653AFEB7"
-					item: "ars_nouveau:glyph_slowfall"
+					id: "00000000F518FD40"
+					item: "ars_nouveau:glyph_summon_wolves"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000068A06F1F"
-					item: "ars_nouveau:glyph_smelt"
+					id: "00000000F813D916"
+					item: "ars_nouveau:glyph_toss"
 					type: "item"
 				}
 			]
@@ -1418,130 +1634,55 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000AFCC8248"]
+			dependencies: ["00000000B4AB0E06"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000006826115"
+			id: "00000000F00F0678"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000132B0194"
+					id: "00000000D9BDF7B7"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F2015BF7"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000AF52E6F6"
-				item: "ars_nouveau:blue_archwood_sapling"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D6B347AD"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000585A2E40"
-					type: "xp"
-					xp: 19
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A5252C98"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000001C437B80"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000085CB490A"
-					item: "ars_nouveau:glyph_touch"
+					id: "0000000010188D5E"
+					item: "ars_nouveau:glyph_wither"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004886DB09"
-					item: "ars_nouveau:glyph_underfoot"
+					id: "000000002C774DC7"
+					item: "ars_nouveau:wololo"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B956A17C"
-					item: "ars_nouveau:glyph_wall"
+					id: "000000006EBB2435"
+					item: "ars_nouveau:sconce"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C645047F"
-					item: "ars_nouveau:glyph_wind_shear"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007C469A13"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000052414523"
-					type: "xp"
-					xp: 37
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009158AC15"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000003F463E4F"
-					item: "ars_nouveau:glyph_summon_undead"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F5319BE0"
-					item: "ars_nouveau:glyph_summon_vex"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000614AF218"
-					item: "ars_nouveau:glyph_summon_wolves"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004B5EE364"
-					item: "ars_nouveau:glyph_toss"
+					id: "0000000046E97529"
+					item: "minecraft:granite"
 					type: "item"
 				}
 			]
@@ -1549,50 +1690,59 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000058FB4AF0"]
+			dependencies: [
+				"0000000078713C85"
+				"0000000014902631"
+				"00000000B4AB0E06"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005AF3A0E1"
+			id: "0000000093B4E6BE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007A3D1B16"
+					id: "00000000E3126E96"
 					type: "xp"
-					xp: 21
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D36EB349"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000038E5D871"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B1441A40"
-					item: "ars_nouveau:glyph_wither"
+					id: "00000000438DDD4A"
+					item: "ars_nouveau:deny_scroll"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000006A676C6"
-					item: "ars_nouveau:wololo"
+					id: "00000000DB216FBE"
+					item: "minecraft:leather"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009C3BC670"
-					item: "ars_nouveau:sconce"
+					id: "000000006DDB6A26"
+					item: "ars_nouveau:apprentice_spell_book"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AE2D5451"
-					item: "minecraft:granite"
+					id: "00000000DD186BE0"
+					item: "ars_nouveau:magelight_torch"
 					type: "item"
 				}
 			]
@@ -1600,82 +1750,36 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000058FB4AF0"]
+			dependencies: ["0000000041BD370E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000042DB6866"
+			id: "00000000BB783605"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B3C3EFAC"
+					id: "00000000639C279B"
 					type: "xp"
-					xp: 14
+					xp: 39
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D41B9DB2"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000019CF216F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000871E0A48"
-					item: "ars_nouveau:deny_scroll"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BCB5D27E"
-					item: "minecraft:leather"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000068E7E17C"
-					item: "ars_nouveau:magelight_torch"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E1DB7DCD"
-					item: "minecraft:magma_block"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["000000009D80E6FB"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000060DD8379"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000388DDD47"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007CD02263"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008BF54963"
+					id: "000000009ED9527D"
 					item: {
 						Count: 1
 						id: "tomeofblood:living_mage_hood"
@@ -1687,7 +1791,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000006BC2BCE6"
+					id: "00000000ABE4290C"
 					item: {
 						Count: 1
 						id: "tomeofblood:living_mage_leggings"
@@ -1699,7 +1803,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000009B53B10"
+					id: "00000000B9EC28B7"
 					item: {
 						Count: 1
 						id: "tomeofblood:living_mage_robes"
@@ -1711,8 +1815,120 @@
 				}
 				{
 					consume_items: false
-					id: "000000001E8F5B1A"
+					id: "000000005D100BF0"
 					item: "ars_nouveau:imbuement_chamber"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000B4AB0E06"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000196483D6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A5D036C0"
+					type: "xp"
+					xp: 39
+				}
+				{
+					id: "00000000AD7ECB27"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EC4E35BB"
+					item: "ars_nouveau:mundane_belt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006DF086E5"
+					item: "ars_nouveau:mycelial_sourcelink"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000141AD5C6"
+					item: "minecraft:mycelium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000043B9E1FB"
+					item: "minecraft:obsidian"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000014902631"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000762C91DD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A69D937B"
+					type: "xp"
+					xp: 35
+				}
+				{
+					id: "0000000059F3066E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000691A48B6"
+					item: "minecraft:magma_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008539F85B"
+					item: "ars_nouveau:mimic_scroll"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BD0B4ED5"
+					item: "ars_nouveau:mirrorweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008F61E3C3"
+					item: "minecraft:moss_block"
 					type: "item"
 				}
 			]
@@ -1720,210 +1936,59 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000058FB4AF0"]
+			dependencies: [
+				"00000000B4AB0E06"
+				"000000009C975C63"
+				"0000000041BD370E"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B9584A99"
+			id: "0000000078713C85"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000067A63C88"
+					id: "00000000DDFDF78B"
 					type: "xp"
-					xp: 23
+					xp: 38
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006D01766F"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000024281E7E"
-					item: "ars_nouveau:mycelial_sourcelink"
+					id: "00000000748C1367"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002473237E"
-					item: "minecraft:mycelium"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008A914515"
-					item: "ars_nouveau:novice_spell_book"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DA1E5E75"
-					item: "minecraft:obsidian"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["0000000006826115"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000058FB4AF0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C158E970"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000042D1EAF0"
-					table_id: 3972289075L
-					type: "random"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F57B9B6D"
-					item: "ars_nouveau:green_archwood_sapling"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BD68B160"
-					item: "ars_nouveau:magebloom_fiber"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F433C967"
-					item: "ars_nouveau:source_gem"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002888F76D"
-					item: "ars_nouveau:sourcestone"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000DD1EE526"
-				"00000000FEA7EDF0"
-				"0000000058FB4AF0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002A606116"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007E7B80C7"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A3853B00"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000003D7580A"
-					item: "ars_nouveau:mimic_scroll"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C413B40E"
-					item: "ars_nouveau:mirrorweave"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CFB2BD67"
-					item: "minecraft:moss_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000070A41C11"
-					item: "ars_nouveau:mundane_belt"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"000000009D80E6FB"
-				"0000000058FB4AF0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D96F67BA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000915F1AAA"
-					type: "xp"
-					xp: 33
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004F53763C"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000653E4B4E"
+					id: "00000000A315204A"
 					item: "ars_nouveau:arcane_pedestal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CD2358AA"
+					id: "00000000654CCC21"
 					item: "ars_nouveau:archwood_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000273729E"
-					item: "ars_nouveau:basic_spell_turret"
+					id: "000000003A9EDBDE"
+					item: "ars_nouveau:blank_parchment"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DF10A81E"
-					item: "ars_nouveau:blank_parchment"
+					id: "00000000BBF6EF70"
+					item: "ars_nouveau:gilded_sourcestone_alternating"
 					type: "item"
 				}
 			]
@@ -1931,50 +1996,55 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000058FB4AF0"]
+			dependencies: ["000000009C975C63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001A0D7467"
+			id: "00000000ADA23F14"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E9054B4D"
+					id: "00000000DB503817"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006CF1F2A6"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000048B9E9E6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000069B2E090"
-					item: "ars_nouveau:gilded_sourcestone_alternating"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009E2A8966"
+					id: "00000000E89DE3F5"
 					item: "ars_nouveau:gilded_sourcestone_basketweave"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009B540C0B"
+					id: "00000000EA60195F"
 					item: "ars_nouveau:gilded_sourcestone_large_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008F557F7D"
+					id: "0000000053A9196A"
 					item: "ars_nouveau:gilded_sourcestone_mosaic"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009547AE7C"
+					item: "ars_nouveau:gilded_sourcestone_small_bricks"
 					type: "item"
 				}
 			]
@@ -1983,53 +2053,57 @@
 		}
 		{
 			dependencies: [
-				"000000004B9FEE4B"
-				"000000008E226405"
-				"0000000006E5842F"
-				"0000000058FB4AF0"
+				"000000000202BF1E"
+				"00000000F8365F3E"
+				"00000000937005F9"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD1EE526"
+			id: "0000000014902631"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000019635D4C"
+					id: "00000000B8233EAF"
 					type: "xp"
-					xp: 4
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000609184FD"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000447A9269"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005E9A8926"
-					item: "ars_nouveau:gilded_sourcestone_small_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000037CB3F5A"
+					id: "000000006E54DD09"
 					item: "ars_nouveau:allow_scroll"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002CE625F1"
-					item: "ars_nouveau:apprentice_spell_book"
+					id: "000000001F0DBBFA"
+					item: "ars_nouveau:magebloom_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E16071A4"
+					id: "00000000D6E54604"
+					item: "ars_nouveau:novice_spell_book"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BFE9B222"
 					item: "ars_nouveau:scribes_table"
 					type: "item"
 				}
@@ -2038,49 +2112,54 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000058FB4AF0"]
+			dependencies: ["000000009C975C63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CEC40FB4"
+			id: "000000007BDC57DF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E0D2592F"
+					id: "00000000AF209E18"
 					type: "xp"
-					xp: 23
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DDA078ED"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000004E44EB30"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000075DDE31D"
+					id: "0000000029228E89"
 					item: "ars_nouveau:smooth_gilded_sourcestone_alternating"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001D6D4EFE"
+					id: "000000006D8DA4E8"
 					item: "ars_nouveau:smooth_gilded_sourcestone_basketweave"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004F09BA41"
+					id: "0000000073716153"
 					item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000053DF1BF"
+					id: "00000000C2947B63"
 					item: "ars_nouveau:smooth_gilded_sourcestone_mosaic"
 					type: "item"
 				}
@@ -2089,34 +2168,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"0000000075E26104"
-				"000000007F0FB4CC"
-			]
+			dependencies: ["00000000046CA125"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000076BDC777"
+			id: "000000007D7B124A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A68893E1"
+					id: "0000000059912AE4"
 					type: "xp"
-					xp: 36
+					xp: 32
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D11AF2A5"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000079A57B5E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000057232BC6"
+					id: "000000004AA132BE"
+					item: "ars_nouveau:caster_tome"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007CA61D61"
 					item: {
 						Count: 1
 						id: "ars_nouveau:potion_flask"
@@ -2128,20 +2215,169 @@
 				}
 				{
 					consume_items: false
-					id: "0000000011151DFA"
+					id: "00000000585DB389"
 					item: "ars_nouveau:potion_jar"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D01B8DF0"
+					id: "00000000F24E2303"
 					item: "minecraft:powder_snow_bucket"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000014964277"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003A2932F8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008437500C"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000004507C1EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000F9B785D8"
+				item: "ars_nouveau:green_archwood_sapling"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000009C975C63"
+				"00000000DE5D86CD"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B4AB0E06"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000098998576"
+					type: "xp"
+					xp: 14
+				}
+				{
+					id: "000000004341F991"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000008F1249"
+					item: "ars_nouveau:red_archwood_sapling"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001C0D63B0"
-					item: "minecraft:purple_dye"
+					id: "000000005B51F230"
+					item: "ars_nouveau:source_gem"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003CA78E46"
+					item: "ars_nouveau:sourceberry_bush"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DF3E453F"
+					item: "ars_nouveau:sourcestone_mosaic"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000B4AB0E06"
+				"0000000014902631"
+				"000000007BDC57DF"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CF829995"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001EB09180"
+					type: "xp"
+					xp: 26
+				}
+				{
+					id: "00000000531583C5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FD3B31B6"
+					item: "ars_nouveau:scryers_crystal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000457A12A7"
+					item: "ars_nouveau:sky_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000022C42B32"
+					item: "ars_nouveau:smooth_gilded_sourcestone_alternating_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001463D15F"
+					item: "ars_nouveau:smooth_gilded_sourcestone_alternating_stairs"
 					type: "item"
 				}
 			]
@@ -2150,100 +2386,60 @@
 		}
 		{
 			dependencies: [
-				"00000000CEC40FB4"
-				"00000000FEA7EDF0"
+				"0000000078713C85"
+				"00000000B4AB0E06"
+				"000000000202BF1E"
+				"00000000F8365F3E"
+				"000000009C975C63"
+				"00000000937005F9"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000016B93980"
+			id: "0000000060DE7D58"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000028F2BA4D"
+					id: "000000008FFF057C"
 					type: "xp"
-					xp: 11
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000026C899A8"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000607B5772"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D8A7A943"
-					item: "ars_nouveau:sky_block"
+					id: "00000000E5880012"
+					item: "ars_nouveau:repository"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F6735F0C"
-					item: "ars_nouveau:smooth_gilded_sourcestone_alternating_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B7246BD7"
-					item: "ars_nouveau:smooth_gilded_sourcestone_alternating_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000081B1103D"
-					item: "ars_nouveau:smooth_gilded_sourcestone_basketweave_slab"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"00000000D96F67BA"
-				"00000000FEA7EDF0"
-				"0000000058FB4AF0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C52B5E3E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001D34B265"
-					type: "xp"
-					xp: 29
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000084873903"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001E361067"
+					id: "000000001581A434"
 					item: "ars_nouveau:ring_of_potential"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004C13752C"
+					id: "000000003C08E9DE"
 					item: "ars_nouveau:ritual_brazier"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D4832FF8"
+					id: "00000000BE737C10"
 					item: {
 						Count: 1
 						id: "ars_nouveau:runic_chalk"
@@ -2253,10 +2449,158 @@
 					}
 					type: "item"
 				}
+			]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000007BDC57DF"
+				"00000000BD6C1723"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009915DDA4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A1B56736"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "000000001003C1AD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
 				{
 					consume_items: false
-					id: "00000000AB615B0B"
-					item: "ars_nouveau:scryers_crystal"
+					id: "00000000F42DBDA9"
+					item: "ars_nouveau:smooth_gilded_sourcestone_mosaic_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007BCB9F53"
+					item: "ars_nouveau:smooth_gilded_sourcestone_mosaic_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008E328358"
+					item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000CA64FEE"
+					item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks_stairs"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"000000000202BF1E"
+				"00000000F8365F3E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000041BD370E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000761C10D"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "000000007C737F88"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "000000001FC9EA36"
+				item: "ars_nouveau:archwood_planks"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000007BDC57DF"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007399153C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000021D90ADC"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000EB4F424D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000904EFF1A"
+					item: "ars_nouveau:smooth_gilded_sourcestone_basketweave_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000037D8DB4A"
+					item: "ars_nouveau:smooth_gilded_sourcestone_basketweave_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000000848343"
+					item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C150C08F"
+					item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks_stairs"
 					type: "item"
 				}
 			]
@@ -2264,188 +2608,54 @@
 			y: 8.0d
 		}
 		{
-			dependencies: [
-				"00000000CEC40FB4"
-				"00000000EB5E7299"
-			]
+			dependencies: ["000000009C975C63"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008A7286A5"
+			id: "00000000BD6C1723"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000091F5C231"
+					id: "0000000003A9046C"
 					type: "xp"
-					xp: 17
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A791732B"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000068513C74"
-					item: "ars_nouveau:smooth_gilded_sourcestone_mosaic_stairs"
+					id: "000000005279BB36"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000080928942"
-					item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D381BA3A"
-					item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F503A33B"
-					item: "ars_nouveau:smooth_sourcestone_slab"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000004B9FEE4B"
-				"000000008E226405"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009D80E6FB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000EB573E00"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000853859F2"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000D9D6E4AA"
-				item: "ars_nouveau:archwood_planks"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000CEC40FB4"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000042C8DBB6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A53053C6"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BAE9B3DB"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000002A244BC5"
-					item: "ars_nouveau:smooth_gilded_sourcestone_basketweave_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000A825022"
-					item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000005E3838E"
-					item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009AB9E79D"
-					item: "ars_nouveau:smooth_gilded_sourcestone_mosaic_slab"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["0000000058FB4AF0"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000EB5E7299"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000079700A93"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E8559A4C"
-					table_id: 3972289075L
-					type: "random"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006D32A129"
+					id: "000000009EB25838"
 					item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000026535AC8"
+					id: "000000009E16C3E2"
 					item: "ars_nouveau:smooth_sourcestone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000078851BF5"
+					id: "00000000E259C337"
 					item: "ars_nouveau:smooth_sourcestone_alternating"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000312956D0"
+					id: "000000001FE1BDD0"
 					item: "ars_nouveau:smooth_sourcestone_basketweave"
 					type: "item"
 				}
@@ -2455,105 +2665,115 @@
 		}
 		{
 			dependencies: [
-				"00000000EB5E7299"
-				"000000007F0FB4CC"
+				"00000000BD6C1723"
+				"00000000046CA125"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D83F1F3E"
+			id: "00000000D2834072"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F858B273"
+					id: "000000004333EB23"
 					type: "xp"
-					xp: 36
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007A885BC6"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000006F2235F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DCCC0D97"
+					id: "0000000073E05AD5"
+					item: "ars_nouveau:smooth_sourcestone_basketweave_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C20B92E5"
 					item: "ars_nouveau:smooth_sourcestone_basketweave_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000561DC65C"
+					id: "0000000004118D06"
 					item: "ars_nouveau:smooth_sourcestone_large_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BE21AFB5"
+					id: "000000002B189626"
 					item: "ars_nouveau:smooth_sourcestone_large_bricks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F2843505"
-					item: "ars_nouveau:smooth_sourcestone_mosaic_slab"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 3.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
-				"0000000006E5842F"
-				"0000000058FB4AF0"
+				"000000009C975C63"
+				"00000000937005F9"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007F0FB4CC"
+			id: "00000000046CA125"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000090FC32EA"
+					id: "000000003395E77F"
 					type: "xp"
-					xp: 20
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B1D7BE36"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000049599B4E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000ED04C1A1"
+					id: "000000009CDC8EC4"
 					item: "ars_nouveau:smooth_sourcestone_large_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000577FBF8D"
+					id: "00000000B5D5CD8E"
 					item: "ars_nouveau:smooth_sourcestone_mosaic"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000D238B58"
+					id: "00000000AB64E41C"
 					item: "ars_nouveau:smooth_sourcestone_small_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AB4AE83C"
+					id: "00000000CCA07B89"
 					item: "ars_nouveau:source_jar"
 					type: "item"
 				}
@@ -2562,101 +2782,114 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000EB5E7299"]
+			dependencies: ["00000000BD6C1723"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A7D6B35D"
+			id: "00000000E075DE61"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000061E1704F"
+					id: "00000000B122F2AA"
 					type: "xp"
-					xp: 3
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009612C57E"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000AA31F6EC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009B13E616"
+					id: "0000000045DB9CCB"
+					item: "ars_nouveau:smooth_sourcestone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FCA964CE"
 					item: "ars_nouveau:smooth_sourcestone_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000738F2CBE"
+					id: "00000000DAEC9080"
 					item: "ars_nouveau:smooth_sourcestone_alternating_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008F3A875D"
+					id: "000000007317D2F7"
 					item: "ars_nouveau:smooth_sourcestone_alternating_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001EC14466"
-					item: "ars_nouveau:smooth_sourcestone_basketweave_slab"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["0000000058FB4AF0"]
+			dependencies: [
+				"00000000B4AB0E06"
+				"000000009C975C63"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007D5A141B"
+			id: "000000002DA984A3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C285EA0F"
+					id: "000000009241DECD"
 					type: "xp"
-					xp: 9
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C89E921E"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000DB0BA7EB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007A6945C4"
+					id: "000000005C4426AA"
+					item: "ars_nouveau:sourcestone_sconce"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F21CD888"
 					item: "ars_nouveau:sourcestone_alternating"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000ECA1C73E"
+					id: "000000005E48EE58"
+					item: "ars_nouveau:sourcestone_basketweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CD43731C"
 					item: "ars_nouveau:sourcestone_large_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008C4ED28E"
-					item: "ars_nouveau:sourcestone_mosaic"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000007EEDE28"
-					item: "ars_nouveau:sourcestone_small_bricks"
 					type: "item"
 				}
 			]
@@ -2664,49 +2897,209 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000007F0FB4CC"]
+			dependencies: ["00000000046CA125"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000270D44D8"
+			id: "00000000CE704056"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006A13C74D"
+					id: "000000009B800312"
 					type: "xp"
-					xp: 30
+					xp: 32
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002FC3A91C"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000018B30F39"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F721D062"
+					id: "000000006B4893B2"
+					item: "ars_nouveau:smooth_sourcestone_mosaic_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000181FADB5"
 					item: "ars_nouveau:smooth_sourcestone_mosaic_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EAD833A1"
+					id: "00000000FA59D8FD"
 					item: "ars_nouveau:smooth_sourcestone_small_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006EC55792"
+					id: "000000003B50DB6B"
 					item: "ars_nouveau:smooth_sourcestone_small_bricks_stairs"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000009C975C63"
+				"0000000041BD370E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005459B30D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C236F050"
+					type: "xp"
+					xp: 35
+				}
+				{
+					id: "00000000DCFA9C54"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004D3F0BE4"
+					item: "ars_nouveau:sourcestone_small_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005988954A"
+					id: "000000002223FB4C"
+					item: "ars_nouveau:spell_prism"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000072AE7539"
+					item: "ars_nouveau:starbuncle_shards"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000661A8D0C"
+					item: "ars_nouveau:warp_scroll"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000B4AB0E06"
+				"000000009C975C63"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007BA08414"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CCB45DD6"
+					type: "xp"
+					xp: 38
+				}
+				{
+					id: "00000000FB7E9590"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C8759E11"
+					item: "minecraft:soul_sand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FE42FE02"
+					item: "ars_nouveau:source_berry_pie"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AE8F4482"
+					item: "ars_nouveau:source_berry_roll"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E7EE5F30"
+					item: "ars_nouveau:relay"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B90E7912"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B3EDBDD2"
+					type: "xp"
+					xp: 29
+				}
+				{
+					id: "00000000489D3EBA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B61B0575"
 					item: {
 						Count: 1
 						id: "ars_nouveau:sorcerer_hood"
@@ -2716,80 +3109,9 @@
 					}
 					type: "item"
 				}
-			]
-			x: -4.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["000000009D80E6FB"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E556861C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000083D0CA4"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FA52576A"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
 				{
 					consume_items: false
-					id: "00000000908B4153"
-					item: "ars_nouveau:spell_prism"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007DA4A18E"
-					item: "ars_nouveau:starbuncle_shards"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000749919E0"
-					item: "ars_nouveau:warp_scroll"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 7.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000051DBE06F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D556A1A8"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007203E246"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C1C57296"
+					id: "0000000076727538"
 					item: {
 						Count: 1
 						id: "ars_nouveau:sorcerer_boots"
@@ -2801,7 +3123,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000CE9082F7"
+					id: "00000000CB26A756"
 					item: {
 						Count: 1
 						id: "ars_nouveau:sorcerer_leggings"
@@ -2813,7 +3135,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000004E851387"
+					id: "00000000A4865EA5"
 					item: {
 						Count: 1
 						id: "ars_nouveau:sorcerer_robes"
@@ -2823,10 +3145,119 @@
 					}
 					type: "item"
 				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000B4AB0E06"
+				"000000002DA984A3"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D56A67F4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005F93AF46"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000D4C7E39A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
 				{
 					consume_items: false
-					id: "000000006A94D85F"
-					item: "minecraft:soul_sand"
+					id: "00000000A28DC1BE"
+					item: "ars_nouveau:sourcestone_large_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B44993B7"
+					item: "ars_nouveau:sourcestone_large_bricks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075B2D703"
+					item: "ars_nouveau:sourcestone_mosaic_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000049EE14CC"
+					item: "ars_nouveau:sourcestone_mosaic_stairs"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000002DA984A3"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000025A2BD5B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D34E5F8B"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "00000000985A2237"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BF31C885"
+					item: "ars_nouveau:sourcestone_alternating_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000018599D09"
+					item: "ars_nouveau:sourcestone_alternating_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004267F772"
+					item: "ars_nouveau:sourcestone_basketweave_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ADF20432"
+					item: "ars_nouveau:sourcestone_basketweave_stairs"
 					type: "item"
 				}
 			]
@@ -2834,399 +3265,230 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000007D5A141B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007DD38BA8"
+			id: "00000000C4E5B33F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E04E77D5"
+					id: "0000000023B0EFC8"
 					type: "xp"
-					xp: 4
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000914C1062"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000001E093CFC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009A50716F"
-					item: "ars_nouveau:sourcestone_large_bricks_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D4888BC6"
-					item: "ars_nouveau:sourcestone_large_bricks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007342CDA3"
-					item: "ars_nouveau:sourcestone_mosaic_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000510E6C4E"
-					item: "ars_nouveau:sourcestone_mosaic_stairs"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000FEA7EDF0"
-				"000000007D5A141B"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000147F6A87"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000036DCE4BF"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000CA84533"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000067C9C4FD"
-					item: "ars_nouveau:sourcestone_alternating_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E5507C6D"
-					item: "ars_nouveau:sourcestone_alternating_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000082FA1E35"
-					item: "ars_nouveau:sourcestone_basketweave_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000009B2C94F"
-					item: "ars_nouveau:sourcestone_basketweave_stairs"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000085A4D7B8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003679076D"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000076928E35"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000CC51DDBA"
+					id: "00000000CB05119A"
 					item: "ars_nouveau:glyph_dispel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009F5146A2"
+					id: "00000000BCBA6C8C"
 					item: "ars_nouveau:glyph_duration_down"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006173CDCA"
+					id: "00000000FC1E3FE4"
 					item: "ars_nouveau:glyph_evaporate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AFB8C7AC"
+					id: "00000000F8895180"
 					item: "ars_nouveau:glyph_exchange"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 7.0d
+			y: 5.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000228D7F8"
+			id: "00000000B0C33988"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000015A2A34"
+					id: "00000000DC1EAAF9"
 					type: "xp"
-					xp: 32
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003CA957AD"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000007A074F04"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000011E02592"
+					id: "0000000086822FBB"
 					item: "ars_nouveau:glyph_cut"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C7D02A6F"
+					id: "00000000A2762D97"
 					item: "ars_nouveau:glyph_dampen"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E0F1940F"
+					id: "000000001BD5ED92"
 					item: "ars_nouveau:glyph_decelerate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000ED20C27"
+					id: "000000005032FD7F"
 					item: "ars_nouveau:glyph_delay"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AFCC8248"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A138741A"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EE1C0577"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000889FA9E6"
-				item: "ars_nouveau:red_archwood_sapling"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
-				"000000001A0D7467"
-				"00000000FEA7EDF0"
+				"0000000078713C85"
+				"0000000014902631"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000CEE00FE"
+			id: "00000000A84C8EC9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000862226FE"
+					id: "000000006D9E574C"
 					type: "xp"
-					xp: 12
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009D0F19B9"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000B0418535"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000003ADC866"
+					id: "00000000A7D11D89"
+					item: "ars_nouveau:falseweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D9730C46"
 					item: "minecraft:fire_charge"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BB347C16"
-					item: "ars_nouveau:caster_tome"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C81ED801"
+					id: "00000000FCFCCDB3"
 					item: "ars_nouveau:ghostweave"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009CF572D2"
+					id: "0000000034035960"
 					item: "ars_nouveau:gilded_sourcestone_alternating_slab"
 					type: "item"
 				}
 			]
 			x: 0.0d
-			y: 9.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
-				"00000000D96F67BA"
-				"0000000006826115"
-				"00000000AFCC8248"
-				"000000003ABCF141"
-				"0000000058FB4AF0"
+				"0000000078713C85"
+				"00000000B4AB0E06"
+				"0000000014964277"
+				"000000009C975C63"
+				"000000003A2932F8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000080E1F9E3"
+			id: "00000000CAD8A969"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005EDC39EB"
+					id: "00000000D9B4C1FF"
 					type: "xp"
-					xp: 14
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E16CBD81"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000033E0CFB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EADA4168"
+					id: "000000007815F2DA"
 					item: "ars_nouveau:ritual_awakening"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000072038DA8"
+					id: "00000000E614ACCD"
 					item: "ars_nouveau:ritual_binding"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009BAC17DB"
+					id: "00000000B4353C5B"
 					item: "ars_nouveau:ritual_burrowing"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000022EC049A"
+					id: "0000000036BB888F"
 					item: "ars_nouveau:ritual_challenge"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"000000007D5A141B"
-				"0000000058FB4AF0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000115BD917"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E6EEC7E8"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001B0E69EC"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000E9BB7905"
-					item: "ars_nouveau:sourcestone_small_bricks_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003B72F986"
-					item: "ars_nouveau:sourcestone_small_bricks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006EFCF14D"
-					item: "ars_nouveau:stable_warp_scroll"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000029050C4C"
-					item: "ars_nouveau:starbuncle_shades"
 					type: "item"
 				}
 			]
@@ -3235,156 +3497,505 @@
 		}
 		{
 			dependencies: [
-				"0000000075E26104"
-				"0000000058FB4AF0"
+				"00000000B4AB0E06"
+				"000000005459B30D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FEA7EDF0"
+			id: "000000002DC269D0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000015B8AC72"
+					id: "000000009A9BDF0D"
 					type: "xp"
-					xp: 11
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007C888A9D"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000006E18CDB8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008C20711D"
-					item: "ars_nouveau:magebloom_block"
+					id: "00000000366D68B6"
+					item: "ars_nouveau:sourcestone_small_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E434EA6C"
-					item: "ars_nouveau:source_gem_block"
+					id: "00000000FB9A5359"
+					item: "ars_nouveau:sourcestone_small_bricks_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000031BA4DD1"
-					item: "ars_nouveau:sourceberry_sack"
+					id: "0000000053C78C24"
+					item: "ars_nouveau:stable_warp_scroll"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BD47A2F6"
-					item: "ars_nouveau:sourcestone_basketweave"
+					id: "00000000593D83B1"
+					item: "ars_nouveau:starbuncle_shades"
 					type: "item"
 				}
 			]
-			x: -8.0d
-			y: 3.0d
+			x: -4.0d
+			y: 7.0d
 		}
 		{
-			dependencies: [
-				"000000001A0D7467"
-				"00000000DD1EE526"
-			]
+			dependencies: ["00000000ADA23F14"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000025F6DD6E"
+			id: "000000006F132C7E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001B507C84"
+					id: "00000000A18D0642"
 					type: "xp"
-					xp: 31
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A54F1F96"
-					table_id: 3972289075L
-					type: "random"
+					id: "00000000C6DD4C4E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000037915B0C"
+					id: "000000009BFB7AA0"
 					item: "ars_nouveau:gilded_sourcestone_large_bricks_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000000E02CF5"
+					id: "00000000CB6FE8ED"
 					item: "ars_nouveau:gilded_sourcestone_mosaic_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007577BBEB"
+					id: "0000000012B176AF"
 					item: "ars_nouveau:gilded_sourcestone_mosaic_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AC587301"
+					id: "00000000698A36A0"
 					item: "ars_nouveau:gilded_sourcestone_small_bricks_slab"
 					type: "item"
 				}
 			]
-			x: -1.0d
-			y: 1.0d
+			x: 0.0d
+			y: 9.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F77A43A9"
+			id: "00000000B4684714"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C8403E10"
+					id: "000000002CC60D90"
 					type: "xp"
-					xp: 4
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D6629219"
-					table_id: 3972289075L
-					type: "random"
+					id: "000000005589D847"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000031C0474A"
+					id: "0000000042B22206"
 					item: "ars_nouveau:ritual_disintegration"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F008D9D5"
+					id: "00000000836701C0"
 					item: "ars_nouveau:ritual_fertility"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B91B7408"
+					id: "00000000A84D884F"
 					item: "ars_nouveau:ritual_flight"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000062987191"
+					id: "000000008A458F84"
 					item: "ars_nouveau:ritual_flowering"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000078713C85"
+				"00000000ADA23F14"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000938855B2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000092C6CCC1"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "0000000048B36886"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D5B7ACDC"
+					item: "ars_nouveau:gilded_sourcestone_alternating_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003D6C803"
+					item: "ars_nouveau:gilded_sourcestone_basketweave_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000072FA0188"
+					item: "ars_nouveau:gilded_sourcestone_basketweave_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000076FBB75D"
+					item: "ars_nouveau:gilded_sourcestone_large_bricks_slab"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000009C975C63"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AD1B8E38"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A42108D7"
+					type: "xp"
+					xp: 30
+				}
+				{
+					id: "00000000FAA2E990"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BBC59ADA"
+					item: "ars_nouveau:ritual_cloudshaping"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C4CC219"
+					item: "ars_nouveau:ritual_conjure_island_desert"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007A1C7727"
+					item: "ars_nouveau:ritual_conjure_island_plains"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001142C491"
+					item: "ars_nouveau:ritual_containment"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B503A554"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F24B6DB5"
+					type: "xp"
+					xp: 22
+				}
+				{
+					id: "00000000F2A241C0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000500BCCD0"
+					item: "ars_nouveau:glyph_amplify"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CB18E5A7"
+					item: "ars_nouveau:glyph_animate_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002F781E15"
+					item: "ars_nouveau:glyph_blink"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001ADA1662"
+					item: "ars_nouveau:glyph_bounce"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000009C975C63"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000035C0BD5A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000064222AE7"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "00000000EB40880B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009B2F380A"
+					item: "ars_nouveau:ritual_overgrowth"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006FAAD906"
+					item: "ars_nouveau:ritual_restoration"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000F803A3B"
+					item: "ars_nouveau:ritual_sanctuary"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058F2BC57"
+					item: "ars_nouveau:ritual_scrying"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000ADA23F14"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004C936958"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009CBF8CA9"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "0000000037E6E824"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007AFFCBC7"
+					item: "ars_nouveau:gilded_sourcestone_small_bricks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006B67BAF9"
+					item: "ars_nouveau:glyph_aoe"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D2B82813"
+					item: "ars_nouveau:glyph_accelerate"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009176E6F7"
+					item: "ars_nouveau:glyph_ender_inventory"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DCDB96EF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000052DC947A"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "00000000EC910314"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F28CD91F"
+					item: "ars_nouveau:ritual_forestation"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000080BBD4C0"
+					item: "ars_nouveau:ritual_gravity"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000522DFEB2"
+					item: "ars_nouveau:ritual_harvest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EC8EEF72"
+					item: "ars_nouveau:ritual_moonfall"
 					type: "item"
 				}
 			]
@@ -3392,439 +4003,114 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000058FB4AF0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003ABCF141"
+			id: "0000000088423FCD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003AFBC29A"
+					id: "000000005896B4DA"
 					type: "xp"
-					xp: 4
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002801818E"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "0000000022E4883F"
-				item: "ars_nouveau:purple_archwood_sapling"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["000000001A0D7467"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009ACF59FE"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CD6B9BCE"
-					type: "xp"
-					xp: 34
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002C0B62B6"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000055C055A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001688B5B1"
-					item: "ars_nouveau:gilded_sourcestone_alternating_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A597B437"
-					item: "ars_nouveau:gilded_sourcestone_basketweave_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A3AA4216"
-					item: "ars_nouveau:gilded_sourcestone_basketweave_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007944A13C"
-					item: "ars_nouveau:gilded_sourcestone_large_bricks_slab"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000FEA7EDF0"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000ABD6BBB6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A0DC3391"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A67F8007"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004DF92EC0"
-					item: "ars_nouveau:ritual_cloudshaping"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000028AD68DB"
-					item: "ars_nouveau:ritual_conjure_island_desert"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000077E49AEE"
-					item: "ars_nouveau:ritual_conjure_island_plains"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000001C451A"
-					item: "ars_nouveau:ritual_containment"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007050C338"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009840BE08"
-					type: "xp"
-					xp: 35
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000F16C087"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000044055410"
-					item: "ars_nouveau:glyph_amplify"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000A1E0E78"
-					item: "ars_nouveau:glyph_animate_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F518B1E1"
-					item: "ars_nouveau:glyph_blink"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003A7D07F0"
-					item: "ars_nouveau:glyph_bounce"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["00000000FEA7EDF0"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003DC804DC"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A23BF134"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000078E24A01"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F01F97F7"
-					item: "ars_nouveau:ritual_overgrowth"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008548889B"
-					item: "ars_nouveau:ritual_restoration"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000014D6718F"
-					item: "ars_nouveau:ritual_sanctuary"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F7680DD2"
-					item: "ars_nouveau:ritual_scrying"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["00000000DD1EE526"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000D9204A8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D9466000"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002579BCF4"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F5B4D87E"
-					item: "ars_nouveau:gilded_sourcestone_small_bricks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002E743D0E"
-					item: "ars_nouveau:glyph_aoe"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000221B1999"
-					item: "ars_nouveau:glyph_accelerate"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003A5DBCAD"
-					item: "ars_nouveau:glyph_ender_inventory"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000009A11065"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C925D0BC"
-					type: "xp"
-					xp: 33
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000659201FD"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000056E7F0BD"
-					item: "ars_nouveau:ritual_forestation"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FA31975D"
-					item: "ars_nouveau:ritual_gravity"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000816E46D5"
-					item: "ars_nouveau:ritual_harvest"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DE9C598B"
-					item: "ars_nouveau:ritual_moonfall"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003348D1A8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000087D93D32"
-					type: "xp"
-					xp: 31
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D96E9AE4"
-					table_id: 3972289075L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001269D2D5"
+					id: "000000002D91A5F7"
 					item: "ars_nouveau:glyph_light"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FB2439CF"
+					id: "000000006A644CD7"
 					item: "ars_nouveau:glyph_conjure_water"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008C7DDC2B"
+					id: "00000000A154646F"
 					item: "ars_nouveau:glyph_craft"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009E8F11E6"
+					id: "000000007F8C1A06"
 					item: "ars_nouveau:glyph_crush"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 5.0d
+			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D126D399"
+			id: "00000000FFB2A7E1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F3BC5318"
+					id: "00000000F0F37A06"
 					type: "xp"
-					xp: 39
+					xp: 31
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008F796B8F"
-					table_id: 3972289075L
-					type: "random"
+					id: "0000000052F7DE45"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ars_nouveau"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F2F6260B"
+					id: "00000000E5E1F1D1"
 					item: "ars_nouveau:glyph_break"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004CD0FD33"
+					id: "000000006C85D8FD"
 					item: "ars_nouveau:burst"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008CBDE928"
+					id: "00000000CE49F281"
 					item: "ars_nouveau:glyph_cold_snap"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000035294FD9"
+					id: "0000000070B8633D"
 					item: "ars_nouveau:glyph_phantom_block"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 4.0d
+			y: 2.0d
 		}
 	]
 	title: "Ars Nouveau"

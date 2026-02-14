@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_tomeofblood"
-	group: "00000000DEB299A3"
-	id: "000000003983577D"
+	group: "000000008CDEF944"
+	id: "000000003A55E699"
 	order_index: 23
 	quest_links: [ ]
 	quests: [
@@ -11,26 +11,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FBF12C5A"
+			id: "000000005F6132DB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000008A95B7B"
+					id: "0000000080B98099"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009E634554"
-					table_id: 3492813670L
-					type: "random"
+					id: "00000000E7F107DA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tomeofblood"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001BFD8899"
+				id: "000000002A49F5DE"
 				item: "tomeofblood:glyph_sentient_wrath"
 				type: "item"
 			}]
@@ -41,26 +46,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B9FF415D"
+			id: "000000006968BD14"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000054F55B3"
+					id: "00000000F34B8B29"
 					type: "xp"
 					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ACBA1372"
-					table_id: 3492813670L
-					type: "random"
+					id: "00000000CF9694E6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tomeofblood"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004BFEFA7A"
+				id: "00000000DA3A483B"
 				item: "tomeofblood:glyph_sentient_harm"
 				type: "item"
 			}]
@@ -71,26 +81,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000081140075"
+			id: "000000003BA95585"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001970C0D2"
+					id: "000000004DEAD18B"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DE27633D"
-					table_id: 3492813670L
-					type: "random"
+					id: "0000000078FF3CD7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tomeofblood"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000343C32DC"
+				id: "000000002CE8F779"
 				type: "item"
 			}]
 			x: 0.0d

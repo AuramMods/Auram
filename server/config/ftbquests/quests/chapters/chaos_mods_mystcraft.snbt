@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_mystcraft"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "mystcraft:page"
-	id: "00000000613E1FF4"
+	id: "00000000E343C46A"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
@@ -12,26 +12,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000083E8173A"
+			id: "0000000089E879D0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A7292BA7"
+					id: "000000009ECB8FCB"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000462E29D3"
-					table_id: 4017886626L
-					type: "random"
+					id: "000000000E2B3D09"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000046F5D376"
+				id: "000000008EECAF2A"
 				item: "mystcraft:folder"
 				type: "item"
 			}]
@@ -42,26 +47,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DE260644"
+			id: "0000000005212A38"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005A0FA1D9"
+					id: "00000000414C8A9F"
 					type: "xp"
-					xp: 3
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CD6646B2"
-					table_id: 4017886626L
-					type: "random"
+					id: "00000000EEA46A54"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000E8B23FC5"
+				id: "00000000BCCCE8F0"
 				item: "mystcraft:page"
 				type: "item"
 			}]
@@ -69,30 +79,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000DE260644"]
+			dependencies: ["0000000005212A38"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000809BEB4"
+			id: "0000000046EEEFF0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000941E4EA8"
+					id: "0000000043235EA3"
 					type: "xp"
-					xp: 7
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000006E94774"
-					table_id: 4017886626L
-					type: "random"
+					id: "00000000A76CED55"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000034109DC0"
+				id: "00000000EF2F6619"
 				item: "mystcraft:guidebook"
 				type: "item"
 			}]
@@ -100,35 +115,39 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000CB59DDC4"]
+			dependencies: ["00000000B4CCBCD6"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005D2D1D58"
+			id: "000000005BEC4721"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001EF738B5"
+					id: "000000002C6AAE62"
 					type: "xp"
 					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C15A2F6C"
-					table_id: 4017886626L
-					type: "random"
+					id: "000000002816D5F0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002DF8959B"
+				id: "000000001FD6A458"
 				item: {
 					Count: 1
 					id: "mystcraft:personal_link_book"
 					tag: {
-						MaxHealth: 10.0f
 						damage: 0.0f
 					}
 				}
@@ -138,30 +157,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000DE260644"]
+			dependencies: ["0000000005212A38"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CB59DDC4"
+			id: "00000000B4CCBCD6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A2C4EDA4"
+					id: "000000005B5BD789"
 					type: "xp"
-					xp: 9
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D8218A97"
-					table_id: 4017886626L
-					type: "random"
+					id: "00000000E39E5DD2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000000927D5EE"
+				id: "00000000F6F5F6E8"
 				item: "mystcraft:linkbook_unlinked"
 				type: "item"
 			}]
@@ -169,30 +193,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000083E8173A"]
+			dependencies: ["0000000089E879D0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C2352ECF"
+			id: "0000000047F0A781"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000042BADEA0"
+					id: "000000004695B36A"
 					type: "xp"
-					xp: 9
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000017B05E11"
-					table_id: 4017886626L
-					type: "random"
+					id: "00000000F2F3DCEA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D75EFC35"
+				id: "0000000085FD3306"
 				item: "mystcraft:portfolio"
 				type: "item"
 			}]
@@ -203,26 +232,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A0195714"
+			id: "00000000CF876F75"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006194CCD4"
+					id: "000000004C4AE77C"
 					type: "xp"
-					xp: 2
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008000A89E"
-					table_id: 4017886626L
-					type: "random"
+					id: "000000000E1FCDEA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005F130D51"
+				id: "000000004A7D6C72"
 				item: "mystcraft:ink_bucket"
 				type: "item"
 			}]
@@ -233,26 +267,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002DCF6972"
+			id: "0000000011826769"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000048E745F3"
+					id: "000000004DB9C5D8"
 					type: "xp"
 					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B9757322"
-					table_id: 4017886626L
-					type: "random"
+					id: "000000002F32E2CA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CBA57E06"
+				id: "000000005D38C1F3"
 				item: "mystcraft:inkvial"
 				type: "item"
 			}]
@@ -263,26 +302,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007F1B098D"
+			id: "00000000C4DA34FB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000365330B1"
+					id: "00000000208FBDBE"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000327C7129"
-					table_id: 4017886626L
-					type: "random"
+					id: "0000000026742946"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EC64CB7B"
+				id: "0000000061AF39D0"
 				item: "mystcraft:blockcrystal"
 				type: "item"
 			}]
@@ -293,26 +337,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009A4A404A"
+			id: "00000000D5E8C92B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E1EE6947"
+					id: "00000000B21A5C0E"
 					type: "xp"
-					xp: 11
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000006933160"
-					table_id: 4017886626L
-					type: "random"
+					id: "00000000237F3F5B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003CD7A3BD"
+				id: "0000000042BAAE57"
 				item: "mystcraft:blocklinkmodifier"
 				type: "item"
 			}]
@@ -323,26 +372,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009D3B6057"
+			id: "0000000081D9E8DC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E9736DF3"
+					id: "000000009267DBD0"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008191DE1A"
-					table_id: 4017886626L
-					type: "random"
+					id: "000000003B4497CE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000FF149E3B"
+				id: "00000000090BCA59"
 				item: "mystcraft:blockbookreceptacle"
 				type: "item"
 			}]
@@ -353,26 +407,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B28AFAA1"
+			id: "00000000FF744556"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AC0A1B75"
+					id: "000000007FB946AD"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CC5D8DCC"
-					table_id: 4017886626L
-					type: "random"
+					id: "000000003F1DCEA5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mystcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004728844B"
+				id: "00000000209A15AC"
 				item: "mystcraft:blockbookstand"
 				type: "item"
 			}]

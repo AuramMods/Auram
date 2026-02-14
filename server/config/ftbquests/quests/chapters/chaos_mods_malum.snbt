@@ -2,272 +2,106 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_malum"
-	group: "00000000DEB299A3"
-	icon: "malum:soul_stained_steel_ingot"
-	id: "0000000051F16E80"
+	group: "000000008CDEF944"
+	icon: "malum:twisted_rock_tiles"
+	id: "00000000C5AB43C2"
 	order_index: 49
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: [
+				"00000000E042A1DF"
+				"00000000C0319CA8"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000005ADAB9C"
+			id: "00000000AAD26B32"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F7BA6C0D"
+					id: "00000000DF952F07"
 					type: "xp"
-					xp: 8
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000D7BD68C"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000004E6DA0E9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "heart"
 			tasks: [{
 				consume_items: false
-				id: "0000000056ACEA2B"
-				item: "malum:stripped_soulwood_log"
+				id: "00000000C9399E16"
+				item: "malum:soulwood_planks"
 				type: "item"
 			}]
-			x: -6.0d
+			x: -11.0d
 			y: 1.0d
 		}
 		{
 			dependencies: [
-				"000000003868FCDB"
-				"00000000F6A68D48"
-				"00000000050B986D"
-				"0000000053E01B12"
+				"00000000F2215732"
+				"0000000034BC97EA"
+				"000000003C9F2B7F"
+				"000000007D301F01"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000029BD3666"
+			id: "0000000035454DDD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BE58D565"
+					id: "00000000DE58621D"
 					type: "xp"
-					xp: 12
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000049B6E215"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000008ED1E6B0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000035132FA0"
+					id: "0000000063F5D961"
 					item: "malum:spectral_optic"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CE3AAB85"
+					id: "00000000510151F7"
 					item: "malum:spirit_altar"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000217F32BE"
+					id: "00000000E1B3E593"
 					item: "malum:spirit_jar"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005AF6D7AA"
+					id: "00000000F9225574"
 					item: "malum:spirit_pouch"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000B1A2B3F5"
-				"00000000A44A6195"
-				"00000000EFFB4367"
-				"000000005C56CD3B"
-				"000000008E0A6032"
-				"00000000D6ABA561"
-				"00000000ECA26453"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005C93377F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005CB48C17"
-					type: "xp"
-					xp: 22
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000043C1DCA4"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000317B92ED"
-					item: "malum:soulwood_planks_pressure_plate"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DA3775E9"
-					item: "malum:soulwood_planks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002A43D364"
-					item: "malum:soulwood_tiles_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000083ACA133"
-					item: "malum:soulwood_trapdoor"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"00000000B1A2B3F5"
-				"00000000A44A6195"
-				"00000000EFFB4367"
-				"000000005C56CD3B"
-				"000000008E0A6032"
-				"00000000D6ABA561"
-				"0000000052D07F79"
-				"0000000084776289"
-				"00000000ECA26453"
-				"00000000C7D66A95"
-				"00000000B71BCD30"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008CF585BA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D9BB2BD1"
-					type: "xp"
-					xp: 22
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007141ECB3"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C68CE980"
-					item: "malum:soulwood_planks_button"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000022E92FF4"
-					item: "malum:soulwood_door"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EB8FA28C"
-					item: "malum:soulwood_item_pedestal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000093DF7287"
-					item: "malum:soulwood_item_stand"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"00000000B1A2B3F5"
-				"00000000A44A6195"
-				"00000000EFFB4367"
-				"000000005C56CD3B"
-				"000000008E0A6032"
-				"00000000ECA26453"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D40FDAA0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003D5133F0"
-					type: "xp"
-					xp: 22
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003A7A0002"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000AEBA46DC"
-					item: "malum:soulwood_beam"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006C0519D6"
-					item: "malum:soulwood_boards_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C7397A6A"
-					item: "malum:soulwood_boards_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003FD4CE61"
-					item: "malum:soulwood_boat"
 					type: "item"
 				}
 			]
@@ -276,53 +110,66 @@
 		}
 		{
 			dependencies: [
-				"00000000A44A6195"
-				"00000000CD3DA79A"
-				"00000000D66B2541"
+				"00000000AAD26B32"
+				"00000000AEF599E2"
+				"000000006C997D38"
+				"0000000031DD5059"
+				"000000000F18F89A"
+				"00000000C5521B1B"
+				"000000002D5306C9"
+				"00000000ED44FDC2"
+				"00000000D31D3A45"
+				"000000002EB7F205"
+				"00000000738630F8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E6BEB38F"
+			id: "000000004E096DC7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000708BFA81"
+					id: "00000000EBB81032"
 					type: "xp"
-					xp: 20
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004D9184E0"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000078CA7FC5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000071EACA54"
-					item: "malum:smooth_twisted_rock_slab"
+					id: "000000002DE79B31"
+					item: "malum:soulwood_planks_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008718CF9C"
-					item: "malum:smooth_twisted_rock_stairs"
+					id: "0000000057EB9F7B"
+					item: "malum:soulwood_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B211DA0C"
-					item: "malum:smooth_twisted_rock_wall"
+					id: "00000000B87C8191"
+					item: "malum:soulwood_item_pedestal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005888FD80"
-					item: "malum:soul_stained_steel_plating"
+					id: "00000000A6EE08F0"
+					item: "malum:soulwood_item_stand"
 					type: "item"
 				}
 			]
@@ -331,52 +178,62 @@
 		}
 		{
 			dependencies: [
-				"00000000A44A6195"
-				"000000009210D006"
+				"00000000AAD26B32"
+				"00000000AEF599E2"
+				"000000006C997D38"
+				"0000000031DD5059"
+				"000000000F18F89A"
+				"000000002D5306C9"
+				"000000002EB7F205"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000272776F"
+			id: "0000000026219119"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000436172A9"
+					id: "000000007AA070FB"
 					type: "xp"
-					xp: 11
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000061D0A046"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000000766BD7F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000826140FD"
-					item: "malum:small_twisted_rock_bricks_wall"
+					id: "00000000C525B1AF"
+					item: "malum:soulwood_beam"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000032C356F7"
-					item: "malum:smooth_tainted_rock_slab"
+					id: "0000000060379D77"
+					item: "malum:soulwood_boards_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009157945C"
-					item: "malum:smooth_tainted_rock_stairs"
+					id: "00000000582BFD64"
+					item: "malum:soulwood_boards_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C184AFE9"
-					item: "malum:smooth_tainted_rock_wall"
+					id: "00000000C7F7468E"
+					item: "malum:soulwood_boat"
 					type: "item"
 				}
 			]
@@ -384,50 +241,55 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000009210D006"]
+			dependencies: ["0000000003F351F5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007C02A4D7"
+			id: "0000000002A21D9B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000099B02578"
+					id: "0000000070E7C1E8"
 					type: "xp"
-					xp: 10
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009161D193"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000087768B1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C3CBA7FF"
-					item: "malum:small_tainted_rock_bricks_stairs"
+					id: "00000000D7C249D9"
+					item: "malum:smooth_tainted_rock_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C86CAB8C"
-					item: "malum:small_tainted_rock_bricks_wall"
+					id: "00000000531B3C1F"
+					item: "malum:smooth_tainted_rock_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005F5F6C03"
-					item: "malum:small_twisted_rock_bricks_slab"
+					id: "000000003EB7C89C"
+					item: "malum:smooth_tainted_rock_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C336E3BC"
-					item: "malum:small_twisted_rock_bricks_stairs"
+					id: "0000000003035088"
+					item: "malum:smooth_twisted_rock_slab"
 					type: "item"
 				}
 			]
@@ -436,53 +298,57 @@
 		}
 		{
 			dependencies: [
-				"00000000B1A2B3F5"
-				"000000003781EF21"
-				"00000000D6ABA561"
+				"00000000DA30CB66"
+				"00000000531BA21A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000091E34147"
+			id: "00000000E713A507"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000041BF69E"
+					id: "00000000A71FFBE1"
 					type: "xp"
-					xp: 18
+					xp: 35
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009FB15900"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000009743DC6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004389B598"
-					item: "malum:rustic_soulwood_tiles_stairs"
+					id: "000000005F2B3015"
+					item: "malum:small_tainted_rock_bricks_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003631F3DE"
-					item: "thermal:silver_nugget"
+					id: "00000000FA159FCA"
+					item: "malum:small_twisted_rock_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006DCAD00F"
-					item: "minecraft:skeleton_skull"
+					id: "00000000AA6804E7"
+					item: "malum:small_twisted_rock_bricks_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000010AAC530"
-					item: "malum:small_tainted_rock_bricks_slab"
+					id: "0000000086B6CB27"
+					item: "malum:small_twisted_rock_bricks_wall"
 					type: "item"
 				}
 			]
@@ -491,179 +357,252 @@
 		}
 		{
 			dependencies: [
-				"0000000005ADAB9C"
-				"0000000051F61283"
+				"000000007261F6DD"
+				"00000000531BA21A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008E0A6032"
+			id: "00000000A686D250"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004E0BCB23"
+					id: "0000000063CB60DC"
 					type: "xp"
-					xp: 5
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002FC29973"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000008B2C697D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000033E86D39"
+					item: "thermal:silver_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000587231AC"
+					item: "minecraft:skeleton_skull"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CC9CDE72"
+					item: "malum:small_tainted_rock_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000027D92291"
+					item: "malum:small_tainted_rock_bricks_stairs"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["000000002D5306C9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000F18F89A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000DD13A4F"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000004BB0131E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000A97BF75F"
-				item: "malum:soulwood_planks"
+				id: "00000000548790C7"
+				item: "malum:soulwood_tiles"
 				type: "item"
 			}]
 			x: -9.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"000000005C56CD3B"
-				"0000000051F61283"
+				"00000000F2215732"
+				"0000000031DD5059"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A44A6195"
+			id: "00000000AEF599E2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000005E104A7"
+					id: "00000000AAE4CC41"
 					type: "xp"
-					xp: 12
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F94EFBB8"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000B9298607"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E1CB7E79"
-					item: "malum:smooth_tainted_rock"
+					id: "00000000C744528A"
+					item: "malum:runic_twisted_rock_tiles"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000005200021"
+					id: "000000007457BC5B"
+					item: "malum:rustic_runewood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009AF5FC93"
+					item: "malum:rustic_soulwood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F7A69C1E"
 					item: "malum:smooth_twisted_rock"
 					type: "item"
 				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000C0319CA8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006C997D38"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000513F236C"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "00000000918EDDB8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
 				{
 					consume_items: false
-					id: "00000000D33D8D0C"
+					id: "00000000568FCE94"
 					item: "malum:soulwood_boards"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000076ACC2B5"
-					item: "malum:tainted_rock_tiles"
+					id: "00000000F8A70DC0"
+					item: "malum:stripped_runewood_log"
 					type: "item"
 				}
 			]
-			x: -7.0d
+			x: -6.0d
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000005C56CD3B"
-				"000000008E0A6032"
-			]
+			dependencies: ["000000001E5DAB5E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EFFB4367"
+			id: "00000000975FE976"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007B033DA9"
+					id: "000000000AF2C97C"
 					type: "xp"
-					xp: 12
+					xp: 39
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000011F3B864"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000003280F971"
-					item: "malum:vertical_rustic_soulwood_planks"
+					id: "00000000980CBBC0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000907AA415"
-					item: "malum:vertical_soulwood_planks"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["00000000B1A2B3F5"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000046800B8E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A4A0C27E"
-					type: "xp"
-					xp: 37
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FB0406D4"
-					table_id: 1178931755L
-					type: "random"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000035C16376"
+					id: "00000000FC626E91"
 					item: "malum:charcoal_fragment"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000163F6FD9"
+					id: "000000002FC3B062"
 					item: "malum:chunk_of_brilliance"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000045AD98A4"
+					id: "00000000E60012AF"
 					item: "malum:coal_fragment"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000088512733"
-					item: "malum:cut_tainted_rock"
+					id: "000000007CFCDBE5"
+					item: "malum:cthonic_gold"
 					type: "item"
 				}
 			]
@@ -672,53 +611,59 @@
 		}
 		{
 			dependencies: [
-				"0000000005ADAB9C"
-				"00000000CD3DA79A"
-				"00000000F6A68D48"
-				"0000000051F61283"
+				"000000001E5DAB5E"
+				"000000006C997D38"
+				"0000000003F351F5"
+				"00000000E143A4EC"
+				"000000007D301F01"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000012321610"
+			id: "0000000040D7113E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000411480AC"
+					id: "0000000013BD3E3D"
 					type: "xp"
-					xp: 21
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007836766D"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000014A79815"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EFD8CB6D"
+					id: "000000003DC58147"
 					item: "malum:arcane_charcoal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A1D35667"
+					id: "00000000E44DD263"
 					item: "malum:blazing_quartz"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000043987248"
+					id: "00000000E4784A40"
 					item: "malum:block_of_hallowed_gold"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000058F6CC53"
+					id: "000000009A119580"
 					item: "malum:block_of_soul_stained_steel"
 					type: "item"
 				}
@@ -728,109 +673,63 @@
 		}
 		{
 			dependencies: [
-				"00000000B1A2B3F5"
-				"0000000065B04AAB"
-				"00000000B0D110D6"
-				"0000000053E01B12"
+				"00000000AEF599E2"
+				"00000000F2215732"
+				"000000000E074440"
+				"0000000031DD5059"
+				"000000009A03121D"
+				"00000000531BA21A"
+				"0000000003F351F5"
+				"000000007D301F01"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FB99DD85"
+			id: "0000000034BC97EA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000223B2DDC"
+					id: "00000000EA673FC1"
 					type: "xp"
-					xp: 2
+					xp: 31
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C469B1EE"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000000F36E238"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FE6FB55B"
-					item: "malum:runewood_panel"
+					id: "0000000077761306"
+					item: "malum:polished_tainted_rock_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000093852144"
-					item: "malum:runewood_planks_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DA36F852"
-					item: "malum:runewood_tiles_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000084F18004"
-					item: "malum:runic_small_tainted_rock_bricks"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"00000000B1A2B3F5"
-				"0000000065B04AAB"
-				"0000000030F362F0"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003868FCDB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F72F584F"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D725B8E8"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000BA147DDD"
-					item: "malum:cut_twisted_rock"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DA1A09CD"
-					item: "malum:polished_twisted_rock_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000874CCA44"
+					id: "000000003D7E93E0"
 					item: "malum:processed_soulstone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000419CCC50"
+					id: "00000000B2E76F01"
 					item: "malum:runewood_boards_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F1F32227"
+					item: "malum:runewood_panel"
 					type: "item"
 				}
 			]
@@ -839,113 +738,243 @@
 		}
 		{
 			dependencies: [
-				"000000000758A117"
-				"0000000030F362F0"
+				"000000001E5DAB5E"
+				"0000000003F351F5"
+				"000000007D301F01"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F6A68D48"
+			id: "0000000068182B5E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000F304DBB"
+					id: "00000000A253A33A"
 					type: "xp"
-					xp: 32
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C3590CAA"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B902C300"
-					item: "malum:block_of_hex_ash"
+					id: "000000000972D87F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000061EEE3C"
-					item: "malum:block_of_raw_soulstone"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000018F67B2E"
-					item: "malum:hallowed_gold_ingot"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003C9531DD"
-					item: "malum:malignant_pewter_ingot"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000B1A2B3F5"
-				"00000000A44A6195"
-				"00000000EFFB4367"
-				"0000000065B04AAB"
-				"000000005C56CD3B"
-				"000000008E0A6032"
-				"00000000B0D110D6"
-				"0000000053E01B12"
-				"00000000ECA26453"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D6ABA561"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000582981C1"
-					type: "xp"
-					xp: 18
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E046802B"
-					table_id: 1178931755L
-					type: "random"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000029EE1B4C"
+					id: "00000000BB81734A"
+					item: "malum:cut_tainted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000035973D77"
+					item: "malum:cut_twisted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000457ACBC3"
+					item: "malum:malignant_pewter_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004A595624"
+					item: "malum:polished_tainted_rock"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000AEF599E2"
+				"00000000F2215732"
+				"000000000E074440"
+				"0000000031DD5059"
+				"000000009A03121D"
+				"00000000531BA21A"
+				"0000000003F351F5"
+				"000000007D301F01"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C5521B1B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006BF6DB6B"
+					type: "xp"
+					xp: 34
+				}
+				{
+					id: "00000000802E6295"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000028C5B25"
+					item: "malum:rustic_runewood_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B36F81C6"
+					item: "malum:rustic_soulwood_planks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DE717C8F"
 					item: "malum:rustic_soulwood_tiles_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003317F656"
-					item: "malum:small_tainted_rock_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000034268F43"
+					id: "00000000A4E33083"
 					item: "malum:solid_runewood_trapdoor"
 					type: "item"
 				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000F2215732"
+				"00000000AEF599E2"
+				"0000000003F351F5"
+				"000000007D301F01"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003A759C3E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B227E57D"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "000000007E99EAC5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
 				{
 					consume_items: false
-					id: "000000001207F589"
-					item: "malum:solid_soulwood_trapdoor"
+					id: "0000000032ED9D8E"
+					item: "malum:runewood_planks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C354D42"
+					item: "malum:runewood_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C08E098"
+					item: "malum:runic_twisted_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B70F9E58"
+					item: "malum:rustic_runewood_planks_slab"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000EABF27CF"
+				"000000009A03121D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003C9F2B7F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008320B8EA"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000003C9F91F0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000077B5EE32"
+					item: "malum:spectral_lens"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009C479250"
+					item: "malum:tainted_rock_column"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004882E510"
+					item: "malum:twisted_rock_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D987A60C"
+					item: "malum:vertical_runewood_boards_slab"
 					type: "item"
 				}
 			]
@@ -954,215 +983,61 @@
 		}
 		{
 			dependencies: [
-				"0000000065B04AAB"
-				"000000009210D006"
+				"00000000AAD26B32"
+				"00000000AEF599E2"
+				"000000006C997D38"
+				"0000000031DD5059"
+				"000000000F18F89A"
+				"000000002D5306C9"
+				"000000002EB7F205"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B0D110D6"
+			id: "00000000ED44FDC2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000036F87926"
+					id: "00000000EF697BC1"
 					type: "xp"
-					xp: 12
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008C26B1E1"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000DD13F770"
-					item: "malum:runewood_tiles"
+					id: "00000000D9A25800"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C0EAAACC"
-					item: "malum:rustic_runewood_planks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000047F71496"
-					item: "malum:twisted_rock_tiles"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B7A62BD4"
-					item: "malum:vertical_runewood_boards"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"000000005C56CD3B"
-				"0000000065B04AAB"
-				"00000000B0D110D6"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000052D07F79"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002655090F"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003906AA8D"
-					table_id: 1178931755L
-					type: "random"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F7F24AD3"
-					item: "malum:runic_tainted_rock_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000089030F7D"
-					item: "malum:rustic_runewood_planks_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000342BE0D8"
-					item: "malum:rustic_runewood_tiles_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E15D7BB8"
-					item: "malum:rustic_soulwood_planks_slab"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["0000000030F362F0"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000050B986D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C7EFF9F7"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A539F655"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000061920FBE"
-					item: "malum:spectral_lens"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000361122E4"
-					item: "malum:stripped_runewood_log"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007A8A3A32"
-					item: "malum:tainted_rock_column"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006B28C8C1"
-					item: "malum:tainted_rock_slab"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000B1A2B3F5"
-				"00000000A44A6195"
-				"00000000EFFB4367"
-				"000000005C56CD3B"
-				"000000008E0A6032"
-				"00000000ECA26453"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000084776289"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000099E5E418"
-					type: "xp"
-					xp: 40
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000008F75DCA"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000007AECF9D7"
+					id: "00000000B7240ED0"
 					item: "malum:soulwood_boards_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007B1C2D54"
+					id: "00000000AF34DE7E"
 					item: "malum:soulwood_panel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A3E09388"
+					id: "0000000019C97408"
 					item: "malum:soulwood_planks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000953B4077"
+					id: "00000000FB2C09E9"
 					item: "malum:soulwood_tiles_slab"
 					type: "item"
 				}
@@ -1172,107 +1047,57 @@
 		}
 		{
 			dependencies: [
-				"0000000065B04AAB"
-				"000000005C56CD3B"
-				"00000000B0D110D6"
+				"00000000AEF599E2"
+				"0000000031DD5059"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000000A25D48"
+			id: "00000000DE77383A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002E3FF775"
+					id: "000000009E7D09A9"
 					type: "xp"
-					xp: 21
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000143F3AAE"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000E6AB3075"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BB8B3E22"
-					item: "malum:runic_twisted_rock_tiles_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000037CD98D0"
+					id: "00000000E91D7BEB"
 					item: "malum:rustic_runewood_planks_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008C8B9CD3"
+					id: "00000000532B3A33"
 					item: "malum:rustic_runewood_tiles_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EF3B3982"
+					id: "00000000CC959CA4"
 					item: "malum:rustic_soulwood_planks_stairs"
 					type: "item"
 				}
-			]
-			x: -1.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"00000000CDA92912"
-				"000000009210D006"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000846105EB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000595063D1"
-					type: "xp"
-					xp: 37
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002F75D096"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "00000000EFFD51C8"
-					item: "malum:runic_twisted_rock_bricks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000019F82EA0"
-					item: "malum:runic_twisted_rock_bricks_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A41A4648"
-					item: "malum:runic_twisted_rock_tiles_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000790B7B14"
-					item: "malum:runic_twisted_rock_tiles_stairs"
+					id: "00000000C73DFDD5"
+					item: "malum:rustic_soulwood_tiles_stairs"
 					type: "item"
 				}
 			]
@@ -1281,40 +1106,154 @@
 		}
 		{
 			dependencies: [
-				"00000000EFFB4367"
-				"00000000ECA26453"
+				"00000000AEF599E2"
+				"00000000F2215732"
+				"00000000E143A4EC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C7D66A95"
+			id: "00000000980D95BF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E9E7098E"
+					id: "00000000BFB39AB8"
 					type: "xp"
-					xp: 17
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002A49F171"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000005276BA58"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FADCA749"
+					item: "malum:runic_twisted_rock_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001EBFE50E"
+					item: "malum:runic_twisted_rock_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000005707D09"
+					item: "malum:runic_twisted_rock_tiles_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000066BC227D"
+					item: "malum:runic_twisted_rock_tiles_wall"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["000000002D5306C9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D31D3A45"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F69FA336"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000000143EC4A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000F21D3E44"
+				item: "malum:vertical_soulwood_planks_slab"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000000E074440"
+				"0000000003F351F5"
+				"000000002EB7F205"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000738630F8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000963690C0"
+					type: "xp"
+					xp: 32
+				}
+				{
+					id: "00000000BF5E9E7E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003C037152"
-					item: "malum:vertical_soulwood_boards_slab"
+					id: "0000000042CBB387"
+					item: "malum:vertical_runewood_planks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000469AA1F7"
-					item: "malum:vertical_soulwood_planks_slab"
+					id: "0000000038A9CBAD"
+					item: "malum:vertical_rustic_runewood_planks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000087C29CC7"
+					item: "malum:vertical_rustic_soulwood_planks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009365A131"
+					item: "malum:vertical_soulwood_boards_slab"
 					type: "item"
 				}
 			]
@@ -1323,346 +1262,112 @@
 		}
 		{
 			dependencies: [
-				"00000000EFFB4367"
-				"0000000065B04AAB"
-				"00000000B0D110D6"
-				"0000000053E01B12"
+				"000000003A759C3E"
+				"00000000E143A4EC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B71BCD30"
+			id: "00000000C2440A0A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000124DE635"
+					id: "00000000AE31CDDC"
 					type: "xp"
-					xp: 7
+					xp: 41
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000737518B4"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000FA3523B7"
-					item: "malum:vertical_runewood_boards_slab"
+					id: "00000000145AFDD7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000788D6983"
-					item: "malum:vertical_runewood_planks_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004DA4B81C"
-					item: "malum:vertical_rustic_runewood_planks_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003D26CF3A"
-					item: "malum:vertical_rustic_soulwood_planks_slab"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["00000000B1A2B3F5"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000082A1B7BB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003D518F1A"
-					type: "xp"
-					xp: 19
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E8F59123"
-					table_id: 1178931755L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000C9C1081"
-					item: "malum:runic_tainted_rock_tiles_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004AD95CB5"
+					id: "00000000D1FE9B50"
 					item: "malum:runic_tainted_rock_tiles_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000072E1C24"
+					id: "0000000000CF636F"
 					item: "malum:runic_tainted_rock_tiles_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C4311DD6"
+					id: "00000000CF041C0B"
 					item: "malum:runic_twisted_rock_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F98E4665"
+					item: "malum:runic_twisted_rock_bricks_stairs"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000EFFB4367"
-				"0000000053E01B12"
-				"00000000ECA26453"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000FB9AA1B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E36A5C93"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004358F0AC"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B81CF4D8"
-					item: "malum:vertical_rustic_runewood_planks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A299CA9F"
-					item: "malum:vertical_rustic_soulwood_planks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005660D48C"
-					item: "malum:vertical_soulwood_boards_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AF1D8EA3"
-					item: "malum:vertical_soulwood_planks_stairs"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"0000000065B04AAB"
-				"00000000B0D110D6"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E5E5FFA3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006B6B4368"
-					type: "xp"
-					xp: 40
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FB250B64"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000484FA00C"
-					item: "malum:twisted_rock_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000777952B9"
-					item: "immersiveengineering:nugget_uranium"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E9E31963"
-					item: "malum:vertical_runewood_boards_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000033E0433D"
-					item: "malum:vertical_runewood_planks_stairs"
-					type: "item"
-				}
-			]
-			x: -3.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000B0D110D6"]
+			dependencies: [
+				"00000000F2215732"
+				"000000007261F6DD"
+				"00000000EABF27CF"
+				"000000007D301F01"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F5B593E9"
+			id: "00000000ED37211F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A97E6309"
+					id: "0000000024720009"
 					type: "xp"
-					xp: 7
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000091A0291D"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000CDF235B5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000183888D5"
-					item: "malum:twisted_rock_stairs"
+					id: "00000000969DA600"
+					item: "malum:weavers_workbench"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002C63010F"
-					item: "malum:twisted_rock_tiles_slab"
+					id: "00000000EE63CB80"
+					item: "create:zinc_nugget"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007966D98F"
-					item: "malum:twisted_rock_tiles_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000095D42E6"
-					item: "malum:twisted_rock_tiles_wall"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["00000000D66B2541"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CD3DA79A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000062FE8E1A"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000444287EF"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [{
-				consume_items: false
-				id: "00000000671C0909"
-				item: "malum:soul_stained_steel_ingot"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000018DBFFCA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007A596087"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000010588B14"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000CF1F4582"
-					item: "malum:twisted_rock_item_pedestal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000019F90070"
-					item: "malum:twisted_rock_item_stand"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006FF22AAA"
-					item: "malum:twisted_rock_pressure_plate"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000745EA4C6"
-					item: "malum:twisted_rock_slab"
+					id: "00000000AC361337"
+					item: "minecraft:zombie_head"
 					type: "item"
 				}
 			]
@@ -1670,50 +1375,119 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000009210D006"]
+			dependencies: [
+				"00000000F2215732"
+				"00000000531BA21A"
+				"000000007D301F01"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CC7533B4"
+			id: "00000000DA30CB66"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C86A7CB9"
+					id: "00000000B8DB22B3"
 					type: "xp"
-					xp: 27
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003673BB1A"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000CBCF722D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ED3D1804"
+					item: "malum:block_of_malignant_pewter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000036F5A9A8"
+					item: "malum:runic_tainted_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005719E9B7"
+					item: "malum:small_twisted_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000804444C1"
+					item: "malum:tainted_rock_bricks"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000000E074440"
+				"000000009A03121D"
+				"0000000003F351F5"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004C0BCD0A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000470174A9"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000146B46DE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000668DBA1B"
-					item: "malum:twisted_rock_bricks_wall"
+					id: "00000000D3E1BF29"
+					item: "immersiveengineering:nugget_uranium"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005D5067CF"
-					item: "malum:twisted_rock_button"
+					id: "00000000EE16208A"
+					item: "malum:vertical_runewood_boards_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001D8E0A35"
-					item: "malum:twisted_rock_column"
+					id: "0000000018ECF14C"
+					item: "malum:vertical_runewood_planks_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001F7BBF39"
-					item: "malum:twisted_rock_column_cap"
+					id: "000000000016D4C5"
+					item: "malum:vertical_rustic_runewood_planks_stairs"
 					type: "item"
 				}
 			]
@@ -1721,84 +1495,54 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000009210D006"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000987125A4"
+			id: "0000000029DEFB3D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004A8B8B75"
+					id: "0000000009B9A1E0"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000BCAC8A7"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "000000002153D7A7"
-				item: "malum:runic_small_twisted_rock_bricks"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000012321610"
-				"000000009210D006"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006748A157"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008426AB51"
-					type: "xp"
-					xp: 26
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000084FF9507"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000049636E86"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000093777A32"
-					item: "minecraft:torch"
+					id: "00000000E07C6788"
+					item: "malum:twisted_rock_tiles_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F189BF85"
-					item: "malum:trans_prideweave"
+					id: "00000000502012D4"
+					item: "malum:twisted_rock_tiles_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A40ED9BB"
-					item: "malum:twisted_rock_bricks_slab"
+					id: "000000006FEF7F4A"
+					item: "malum:twisted_rock_tiles_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005D5C3DE9"
-					item: "malum:twisted_rock_bricks_stairs"
+					id: "0000000090CAE998"
+					item: "malum:twisted_rock_wall"
 					type: "item"
 				}
 			]
@@ -1806,104 +1550,55 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000000758A117"
-				"0000000030F362F0"
-			]
+			dependencies: ["000000003C9F2B7F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003781EF21"
+			id: "00000000956EF0FA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005CD9FE46"
+					id: "00000000A43EFC18"
 					type: "xp"
-					xp: 14
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A2C6DA7B"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000D7B22918"
-					item: "malum:blighted_gunk"
+					id: "00000000802570BE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002E7F9B3F"
-					item: "malum:cluster_of_brilliance"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001ADD237A"
-					item: "malum:cthonic_gold"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000D14ADA5"
-					item: "malum:grim_talc"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000A44A6195"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009F12A642"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B7A1E84F"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000018FDEB5C"
-					table_id: 1178931755L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F8AD5A98"
-					item: "malum:tainted_rock_tiles_wall"
+					id: "00000000248A06DE"
+					item: "malum:twisted_rock_item_pedestal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DDE756FA"
-					item: "malum:tainted_rock_wall"
+					id: "00000000C674C258"
+					item: "malum:twisted_rock_item_stand"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000066D19E48"
-					item: "malum:the_device"
+					id: "00000000138D3E84"
+					item: "malum:twisted_rock_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000075D39528"
-					item: "thermal:tin_nugget"
+					id: "0000000039D5D2D8"
+					item: "malum:twisted_rock_stairs"
 					type: "item"
 				}
 			]
@@ -1911,50 +1606,91 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000A44A6195"]
+			dependencies: ["00000000F2215732"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008AC4152E"
+			id: "000000000E074440"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FF244762"
+					id: "000000002C7CF790"
 					type: "xp"
-					xp: 12
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000075368B73"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000009A1839DA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "00000000148DAE5F"
+				item: "malum:vertical_runewood_planks"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000001E5DAB5E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001EFD07EB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000610C3088"
+					type: "xp"
+					xp: 39
+				}
+				{
+					id: "0000000015637EE1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001CF44CD8"
-					item: "malum:tainted_rock_pressure_plate"
+					id: "00000000C26018CF"
+					item: "malum:twisted_rock_bricks_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F8B712A4"
-					item: "malum:tainted_rock_stairs"
+					id: "000000008EA05D2E"
+					item: "malum:twisted_rock_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000881142BC"
-					item: "malum:tainted_rock_tiles_slab"
+					id: "00000000FF4E2450"
+					item: "malum:twisted_rock_column"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004295CB77"
-					item: "malum:tainted_rock_tiles_stairs"
+					id: "00000000A7557F05"
+					item: "malum:twisted_rock_column_cap"
 					type: "item"
 				}
 			]
@@ -1963,52 +1699,57 @@
 		}
 		{
 			dependencies: [
-				"00000000B1A2B3F5"
-				"00000000050B986D"
+				"0000000040D7113E"
+				"00000000E143A4EC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000038B9F40B"
+			id: "0000000026B66086"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B52AC734"
+					id: "00000000CFD53C67"
 					type: "xp"
-					xp: 31
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B66CC338"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000251CA126"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F10E1FB3"
-					item: "malum:tainted_rock_button"
+					id: "00000000B66FD61E"
+					item: "minecraft:torch"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008206E4BA"
-					item: "malum:tainted_rock_column_cap"
+					id: "0000000011FA4E12"
+					item: "malum:trans_prideweave"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E0EE371E"
-					item: "malum:tainted_rock_item_pedestal"
+					id: "00000000D40FF8E0"
+					item: "malum:twisted_rock_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E4427660"
-					item: "malum:tainted_rock_item_stand"
+					id: "0000000003404858"
+					item: "malum:twisted_rock_bricks_stairs"
 					type: "item"
 				}
 			]
@@ -2016,53 +1757,55 @@
 			y: 9.0d
 		}
 		{
-			dependencies: [
-				"000000005C56CD3B"
-				"00000000050B986D"
-			]
+			dependencies: ["00000000E143A4EC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009F2A790A"
+			id: "00000000AEC9B2FA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000092B7FE26"
+					id: "00000000507DE278"
 					type: "xp"
-					xp: 12
+					xp: 34
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000026752229"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000427FE721"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A14D8174"
-					item: "malum:stripped_runewood"
+					id: "00000000C839937A"
+					item: "malum:tainted_rock_tiles_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F7226293"
-					item: "malum:tainted_rock_bricks_slab"
+					id: "00000000ACBC361F"
+					item: "malum:tainted_rock_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F82FA819"
-					item: "malum:tainted_rock_bricks_stairs"
+					id: "00000000658DEEC5"
+					item: "malum:the_device"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001AFD9020"
-					item: "malum:tainted_rock_bricks_wall"
+					id: "00000000E83D6D88"
+					item: "thermal:tin_nugget"
 					type: "item"
 				}
 			]
@@ -2070,103 +1813,430 @@
 			y: 8.0d
 		}
 		{
+			dependencies: ["00000000E143A4EC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003972F7FC"
+			id: "00000000F6B8932D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DC261E02"
+					id: "00000000106E921D"
 					type: "xp"
-					xp: 26
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AA7E7891"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000A1938D11"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005966034D"
+					id: "00000000D6498731"
+					item: "malum:tainted_rock_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF19FF91"
+					item: "malum:tainted_rock_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000068BBAD5A"
+					item: "malum:tainted_rock_tiles_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009B01E2D7"
+					item: "malum:tainted_rock_tiles_stairs"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"000000007261F6DD"
+				"000000007D301F01"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EABF27CF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B71D3DC7"
+					type: "xp"
+					xp: 35
+				}
+				{
+					id: "0000000055711007"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C4F75D11"
+					item: "malum:block_of_grim_talc"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C105504B"
+					item: "malum:block_of_raw_soulstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F1BE6182"
+					item: "malum:hallowed_gold_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000158C1695"
+					item: "malum:hex_ash"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000007261F6DD"
+				"000000009A03121D"
+				"00000000E143A4EC"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000531BA21A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C0300944"
+					type: "xp"
+					xp: 29
+				}
+				{
+					id: "00000000A12F6186"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005D8CB957"
+					item: "malum:mass_of_blighted_gunk"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000027842B11"
+					item: "malum:runewood_boards"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001A5A9BF7"
+					item: "malum:runic_small_tainted_rock_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008010E53C"
+					item: "malum:small_tainted_rock_bricks"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000E143A4EC"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000089842B82"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C98547DB"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000A0E28067"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000784010FB"
+				item: "malum:soul_stained_steel_nugget"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000E042A1DF"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C0319CA8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000035C3A22A"
+					type: "xp"
+					xp: 22
+				}
+				{
+					id: "00000000A0A72247"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000085572A3C"
+					item: "malum:revealed_soulwood_log"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BA295FEE"
+					item: "malum:soulwood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E11202B8"
+					item: "malum:stripped_soulwood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000068182B5E"
+				"000000003C9F2B7F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002F481951"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000093C3D77B"
+					type: "xp"
+					xp: 23
+				}
+				{
+					id: "00000000C7A86828"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000058ED3225"
+					item: "malum:tainted_rock_column_cap"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000063CC1811"
+					item: "malum:tainted_rock_item_pedestal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DEC77F47"
+					item: "malum:tainted_rock_item_stand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DD51355D"
+					item: "malum:tainted_rock_pressure_plate"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000DA30CB66"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CFD694CD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C527956A"
+					type: "xp"
+					xp: 38
+				}
+				{
+					id: "0000000086A035D0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BC849B6F"
+					item: "malum:tainted_rock_bricks_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000020417B2D"
+					item: "malum:tainted_rock_bricks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000253FE7D"
+					item: "malum:tainted_rock_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075584C4E"
+					item: "malum:tainted_rock_button"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FF64CDE4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AB9B342E"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "00000000ECF7F5F7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CCF57DA0"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000081751C31"
 					item: "malum:intersex_prideweave"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000099886F9"
+					id: "000000003735109F"
 					item: "minecraft:iron_nugget"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D6BD7A97"
+					id: "00000000D59DD781"
 					item: "thermal:lead_nugget"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AB4ABF65"
-					item: "malum:lesbian_prideweave"
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 8.0d
-		}
-		{
-			dependencies: [
-				"000000003868FCDB"
-				"00000000F6A68D48"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AD32E93E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000029C35150"
-					type: "xp"
-					xp: 30
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B43DA95D"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F40B4B3D"
-					item: "malum:genderqueer_prideweave"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000345E7CB4"
-					item: "malum:gilded_belt"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004852923A"
-					item: "malum:gilded_ring"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001D10C8C8"
-					item: "minecraft:gold_nugget"
 					type: "item"
 				}
 			]
@@ -2174,50 +2244,58 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000003868FCDB"]
+			dependencies: [
+				"0000000034BC97EA"
+				"000000007D301F01"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000517B2661"
+			id: "00000000DDF41007"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005E7C026F"
+					id: "00000000E47515AE"
 					type: "xp"
-					xp: 8
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005B4F92CA"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000F02912C0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C553359D"
-					item: "malum:enby_prideweave"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000055A2A8CD"
-					item: "malum:encyclopedia_arcana"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008756C7F9"
-					item: "malum:gay_prideweave"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DE25DB18"
+					id: "00000000C65759CE"
 					item: "malum:genderfluid_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000011E931DC"
+					item: "malum:genderqueer_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000007FE5552"
+					item: "malum:gilded_belt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000762DE77B"
+					item: "malum:gilded_ring"
 					type: "item"
 				}
 			]
@@ -2226,52 +2304,58 @@
 		}
 		{
 			dependencies: [
-				"00000000CD3DA79A"
-				"0000000012321610"
+				"0000000040D7113E"
+				"0000000034BC97EA"
+				"00000000E143A4EC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001971530A"
+			id: "0000000078E69666"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007CAE53B5"
+					id: "0000000005F701D1"
 					type: "xp"
-					xp: 35
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008BCAC115"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000335E3D81"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A8D8FA96"
-					item: "malum:demiboy_prideweave"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008B51BCAF"
-					item: "malum:demigirl_prideweave"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BD6C92BE"
-					item: "malum:dreaded_weave"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001BE3E815"
+					id: "000000006BE1A781"
 					item: "malum:elaborate_brooch"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000069DE1969"
+					item: "malum:enby_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004DA895C0"
+					item: "malum:encyclopedia_arcana"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBC0287D"
+					item: "malum:gay_prideweave"
 					type: "item"
 				}
 			]
@@ -2280,61 +2364,63 @@
 		}
 		{
 			dependencies: [
-				"00000000B1A2B3F5"
-				"00000000A44A6195"
-				"00000000EFFB4367"
-				"0000000065B04AAB"
-				"000000005C56CD3B"
-				"00000000FB99DD85"
-				"000000008E0A6032"
-				"00000000B0D110D6"
-				"0000000053E01B12"
-				"0000000084776289"
-				"00000000ECA26453"
+				"00000000AAD26B32"
+				"00000000AEF599E2"
+				"000000006C997D38"
+				"0000000031DD5059"
+				"000000000F18F89A"
+				"000000002D5306C9"
+				"00000000ED44FDC2"
+				"000000002EB7F205"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DED0D705"
+			id: "000000001BE00739"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000003B59041"
+					id: "00000000E03E3E95"
 					type: "xp"
-					xp: 36
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008B5CB871"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000009F4C660D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A9CC2423"
-					item: "malum:cursed_sap_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EED9AA73"
-					item: "malum:cursed_sapball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C596601B"
-					item: "malum:cut_runewood_planks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000E353160"
+					id: "00000000654BAFF9"
 					item: "malum:cut_soulwood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D942BFE3"
+					item: "malum:demiboy_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007541D0A1"
+					item: "malum:demigirl_prideweave"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001115FCA7"
+					item: "malum:dreaded_weave"
 					type: "item"
 				}
 			]
@@ -2342,525 +2428,429 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000005ADAB9C"]
+			dependencies: [
+				"00000000AEF599E2"
+				"00000000F2215732"
+				"000000007261F6DD"
+				"000000000E074440"
+				"0000000031DD5059"
+				"0000000034BC97EA"
+				"000000009A03121D"
+				"00000000531BA21A"
+				"0000000003F351F5"
+				"000000007D301F01"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000051F61283"
+			id: "00000000A4A78718"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000044D8BDCD"
+					id: "00000000C25360BD"
 					type: "xp"
-					xp: 26
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001AD76344"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000803E541B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "octagon"
+			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E0579F72"
-					item: "malum:revealed_soulwood_log"
+					id: "00000000FB70F252"
+					item: "malum:crushed_soulstone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001B819E00"
-					item: "malum:soulwood"
+					id: "00000000EEA6807C"
+					item: "malum:cursed_sap_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F70ABD77"
-					item: "malum:stripped_soulwood"
+					id: "0000000002D87608"
+					item: "malum:cursed_sapball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005E6D320D"
+					item: "malum:cut_runewood_planks"
 					type: "item"
 				}
 			]
-			x: -6.0d
+			x: 0.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"00000000A44A6195"
-				"00000000EFFB4367"
-			]
+			dependencies: ["00000000AAD26B32"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B1A2B3F5"
+			id: "000000002D5306C9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000059DE9D64"
+					id: "00000000EB11E57E"
 					type: "xp"
-					xp: 11
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006487BFEC"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000C5FC7ADB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000040FEFDD3"
+				item: "malum:vertical_soulwood_planks"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000AEF599E2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001E5DAB5E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FE7BCA4F"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000008BCF996B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EB3D9FEE"
-					item: "malum:polished_tainted_rock"
+					id: "0000000069A397F1"
+					item: "malum:cthonic_gold_fragment"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002D6A08C2"
+					id: "000000005235F564"
 					item: "malum:polished_twisted_rock"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B84BABC1"
-					item: "malum:runic_tainted_rock_tiles"
+					id: "000000008F1C791D"
+					item: "malum:revealed_runewood_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000014FC4A3A"
-					item: "malum:rustic_soulwood_tiles"
+					id: "000000000B37D4DA"
+					item: "malum:runewood"
 					type: "item"
 				}
 			]
 			x: -6.0d
-			y: 4.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["000000008E0A6032"]
+			dependencies: [
+				"000000000F18F89A"
+				"000000007D301F01"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005C56CD3B"
+			id: "0000000031DD5059"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000019CF4A1B"
+					id: "0000000022A5FA27"
 					type: "xp"
-					xp: 5
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E4B809E4"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000BA034D75"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AEFA16EC"
-					item: "malum:rustic_soulwood_planks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007AA48B0C"
-					item: "malum:tainted_rock_bricks"
-					type: "item"
-				}
-			]
-			x: -8.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000065B04AAB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008616DD1D"
-					type: "xp"
-					xp: 19
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000019BAF4EC"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000FCA9A63B"
-					item: "malum:runewood_boards"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B4352CE1"
+					id: "000000007DB3957C"
 					item: "malum:rustic_runewood_tiles"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A29DEA56"
-					item: "malum:vertical_runewood_planks"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000758A117"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B0E01BE6"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BB391AC1"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000002DBB260C"
-					item: "malum:block_of_brilliance"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000058B1E96A"
-					item: "malum:block_of_grim_talc"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D303363D"
-					item: "malum:cthonic_gold_fragment"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000013053756"
-					item: "malum:hallowed_gold_nugget"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000030F362F0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C6220E34"
-					type: "xp"
-					xp: 23
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F69FB97D"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000007E948C7F"
-					item: "malum:hex_ash"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000061ADAA9"
-					item: "malum:malignant_pewter_nugget"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001A1028D2"
-					item: "malum:mass_of_blighted_gunk"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FA8ABDEB"
-					item: "malum:raw_soulstone"
+					id: "00000000E69B2729"
+					item: "malum:rustic_soulwood_tiles"
 					type: "item"
 				}
 			]
 			x: -8.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"00000000A44A6195"
-				"00000000EFFB4367"
+				"00000000AEF599E2"
+				"000000006C997D38"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ECA26453"
+			id: "0000000003F351F5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000078FC806D"
+					id: "000000002D824A21"
 					type: "xp"
-					xp: 19
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000067F3537C"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000047304E28"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FA6074B8"
-					item: "malum:soulwood_tiles"
+					id: "0000000028773C6E"
+					item: "malum:runic_small_twisted_rock_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001BC2CF5C"
+					id: "00000000C31170E7"
+					item: "malum:smooth_tainted_rock"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000051F0732"
+					item: "malum:stripped_runewood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000476F04E8"
+					item: "malum:vertical_rustic_runewood_planks"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000AEF599E2"
+				"000000006C997D38"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002EB7F205"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000085191311"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "00000000A963EC01"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002358BD9D"
+					item: "malum:vertical_rustic_soulwood_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006E7CDEE4"
 					item: "malum:vertical_soulwood_boards"
 					type: "item"
 				}
 			]
 			x: -6.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009210D006"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000EEFF426"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CAAE00F7"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000053336CA3"
-					item: "malum:runic_twisted_rock_tiles"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D65820EB"
-					item: "malum:small_twisted_rock_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000072F65E8A"
-					item: "malum:twisted_rock_bricks"
-					type: "item"
-				}
-			]
-			x: -8.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
-				"0000000046800B8E"
-				"000000003868FCDB"
+				"00000000DA30CB66"
+				"00000000E143A4EC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000035C0FE49"
+			id: "00000000EA41B6A6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001ADF4E60"
+					id: "00000000B02C24CC"
 					type: "xp"
-					xp: 7
+					xp: 39
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F889E55A"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000095D14173"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000087F8C3F"
-					item: "malum:chiseled_twisted_rock"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000ED24318E"
-					item: "minecraft:coal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000027DA2A0C"
-					item: "tconstruct:cobalt_nugget"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002ACBC640"
-					item: "create:copper_nugget"
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["0000000052D07F79"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000EC091CD9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FBF643CF"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D0F6A90E"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008B04D96D"
-					item: "malum:runic_small_twisted_rock_bricks_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BD7B5E36"
+					id: "0000000088AF10D1"
 					item: "malum:runic_tainted_rock_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000502E9C6"
+					id: "00000000909AA91F"
 					item: "malum:runic_tainted_rock_bricks_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000572FCA19"
+					id: "0000000085E85E3D"
 					item: "malum:runic_tainted_rock_bricks_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002F7FEB97"
+					item: "malum:runic_tainted_rock_tiles_slab"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
-				"0000000046800B8E"
-				"000000003868FCDB"
+				"00000000975FE976"
+				"0000000034BC97EA"
+				"0000000068182B5E"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CA1396B5"
+			id: "00000000507D4F9D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F64A0CB3"
+					id: "000000004202119B"
 					type: "xp"
-					xp: 14
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000094A26A28"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000029481161"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CD5112CB"
+					id: "00000000DC1250AA"
 					item: "minecraft:charcoal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000061C4454B"
+					id: "00000000BE4E8DBB"
 					item: "malum:checkered_tainted_rock"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AEBA4CB9"
+					id: "000000007C6DFDBC"
 					item: "malum:checkered_twisted_rock"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000047EF522D"
+					id: "00000000A926A2EC"
 					item: "malum:chiseled_tainted_rock"
 					type: "item"
 				}
@@ -2870,106 +2860,57 @@
 		}
 		{
 			dependencies: [
-				"00000000FB99DD85"
-				"00000000D6ABA561"
+				"00000000531BA21A"
+				"0000000003F351F5"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000058F1A40C"
+			id: "000000005F5E9ADB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000027E92686"
+					id: "00000000C0243064"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E0C27E02"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000006B6B0CAE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FE56B0D9"
-					item: "malum:runic_small_tainted_rock_bricks_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001C3256D7"
+					id: "00000000A2822FDF"
 					item: "malum:runic_small_tainted_rock_bricks_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000089A33393"
+					id: "000000003B8A607A"
 					item: "malum:runic_small_twisted_rock_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000844B6361"
+					id: "000000001654E5A7"
 					item: "malum:runic_small_twisted_rock_bricks_stairs"
 					type: "item"
 				}
-			]
-			x: -1.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"0000000012321610"
-				"00000000F6A68D48"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000069A4501C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A96BC608"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000009CA94D0"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "000000006911C515"
-					item: "malum:runic_brooch"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001ECC46A6"
-					item: "malum:runic_sap_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003E727144"
-					item: "malum:runic_sapball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E7596438"
-					item: "malum:runic_small_tainted_rock_bricks_slab"
+					id: "00000000946BBEBB"
+					item: "malum:runic_small_twisted_rock_bricks_wall"
 					type: "item"
 				}
 			]
@@ -2977,109 +2918,99 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"000000003781EF21"
-				"0000000030F362F0"
-			]
+			dependencies: ["00000000E143A4EC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EE42066F"
+			id: "00000000F2215732"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000056427568"
+					id: "0000000062AA9E60"
 					type: "xp"
-					xp: 7
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000713D40C6"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000034AD3EC6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000083B762BD"
-					item: "malum:cornered_weave"
+					id: "0000000083ADB4E4"
+					item: "malum:runewood_planks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C2D97220"
-					item: "malum:crushed_brilliance"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F34BE53E"
-					item: "create:crushed_raw_iron"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B75D8E9C"
-					item: "malum:crushed_soulstone"
+					id: "00000000DD9C1FDA"
+					item: "malum:twisted_rock_tiles"
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 3.0d
+			x: -9.0d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"0000000065B04AAB"
-				"00000000D6ABA561"
-				"00000000B0D110D6"
-				"0000000053E01B12"
-			]
+			dependencies: ["00000000531BA21A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000075C94D4D"
+			id: "0000000050A369C8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000003B80FA8"
+					id: "000000001BA11131"
 					type: "xp"
-					xp: 31
+					xp: 34
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004E11F397"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000000CC08E1E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E2107AA4"
-					item: "malum:runewood_planks_pressure_plate"
+					id: "00000000150B2C94"
+					item: "malum:runic_sap_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005D00755A"
-					item: "malum:runewood_planks_stairs"
+					id: "0000000008A2029F"
+					item: "malum:runic_sapball"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000022048167"
-					item: "malum:runewood_tiles_stairs"
+					id: "00000000432CB4CC"
+					item: "malum:runic_small_tainted_rock_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003B9EA400"
-					item: "malum:runewood_trapdoor"
+					id: "00000000E0096DFE"
+					item: "malum:runic_small_tainted_rock_bricks_stairs"
 					type: "item"
 				}
 			]
@@ -3087,58 +3018,116 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"0000000065B04AAB"
-				"00000000FB99DD85"
-				"000000003868FCDB"
-				"00000000B0D110D6"
-				"0000000052D07F79"
-				"0000000053E01B12"
-				"00000000B71BCD30"
-			]
+			dependencies: ["00000000975FE976"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001640D7F4"
+			id: "00000000C3366B12"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000033F63490"
+					id: "000000005D81FCE4"
 					type: "xp"
-					xp: 18
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000095341971"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000009AEBA545"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AA5B927E"
-					item: "malum:runewood_planks_button"
+					id: "000000006658B048"
+					item: "create:copper_nugget"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009DA82B8A"
-					item: "malum:runewood_door"
+					id: "00000000D4A59B72"
+					item: "malum:cornered_weave"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006333D186"
-					item: "malum:runewood_item_pedestal"
+					id: "00000000ED3C6594"
+					item: "malum:crushed_brilliance"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001AC4C962"
-					item: "malum:runewood_item_stand"
+					id: "000000009E8AAB4D"
+					item: "create:crushed_raw_iron"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000F2215732"
+				"0000000040D7113E"
+				"00000000C5521B1B"
+				"000000007D301F01"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B543B462"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FF6CD473"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "000000009985BC0B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ADF3BA25"
+					item: "malum:runewood_planks_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B6C162CC"
+					item: "malum:runewood_tiles_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ED645602"
+					item: "malum:runewood_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000079CB373F"
+					item: "malum:runic_brooch"
 					type: "item"
 				}
 			]
@@ -3147,53 +3136,68 @@
 		}
 		{
 			dependencies: [
-				"0000000065B04AAB"
-				"00000000B0D110D6"
-				"0000000053E01B12"
+				"00000000F2215732"
+				"000000000E074440"
+				"000000009A03121D"
+				"00000000531BA21A"
+				"000000007D301F01"
+				"00000000AEF599E2"
+				"0000000031DD5059"
+				"0000000034BC97EA"
+				"00000000C5521B1B"
+				"000000003A759C3E"
+				"000000003C9F2B7F"
+				"0000000003F351F5"
+				"00000000738630F8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009DAB6974"
+			id: "00000000A41C16FE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004042B0CC"
+					id: "000000001423F662"
 					type: "xp"
-					xp: 19
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006547F2CC"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000B9C89116"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CD95582B"
-					item: "malum:runewood_beam"
+					id: "00000000BDCDEC7B"
+					item: "malum:runewood_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F2814924"
-					item: "malum:runewood_boards_stairs"
+					id: "000000006E804FD9"
+					item: "malum:runewood_item_pedestal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005F4D7649"
-					item: "malum:runewood_boards_wall"
+					id: "000000003BB896B6"
+					item: "malum:runewood_item_stand"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008F5F4711"
-					item: "malum:runewood_boat"
+					id: "0000000097B52279"
+					item: "malum:runewood_planks_pressure_plate"
 					type: "item"
 				}
 			]
@@ -3201,82 +3205,157 @@
 			y: 1.0d
 		}
 		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D66B2541"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000066F9E645"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000060710840"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "octagon"
-			tasks: [{
-				consume_items: false
-				id: "00000000CC1E6FF0"
-				item: "malum:soul_stained_steel_nugget"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 1.0d
-		}
-		{
 			dependencies: [
-				"000000003781EF21"
-				"0000000012321610"
+				"00000000AEF599E2"
+				"00000000F2215732"
+				"000000000E074440"
+				"0000000031DD5059"
+				"000000009A03121D"
+				"00000000531BA21A"
+				"0000000003F351F5"
+				"000000007D301F01"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000015AA544B"
+			id: "000000006EC1D189"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F0C6BE3E"
+					id: "0000000062D9C2AE"
 					type: "xp"
-					xp: 28
+					xp: 22
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000032948F5A"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000094850F96"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C4583C0B"
+					id: "000000003FD3A91E"
+					item: "malum:runewood_boards_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003957D7F1"
+					item: "malum:runewood_boards_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003AB9B849"
+					item: "malum:runewood_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005BEBC7FC"
+					item: "malum:runewood_planks_button"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009A03121D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003885A459"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000B0D0FC92"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000C2D37881"
+				item: "malum:vertical_runewood_boards"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000007261F6DD"
+				"0000000040D7113E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000571A3650"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000054F7DD43"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "00000000DAA02C1A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000013A39C21"
 					item: "immersiveengineering:nugget_aluminum"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002C61BE9C"
+					id: "00000000DDCE8326"
 					item: "malum:ancient_weave"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000828BF4D8"
+					id: "000000006DD8AA2A"
 					item: "malum:arcane_charcoal_fragment"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000605B909F"
+					id: "00000000077F56D5"
 					item: "malum:aro_prideweave"
 					type: "item"
 				}
@@ -3285,176 +3364,314 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000987125A4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CDA92912"
+			id: "00000000E143A4EC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E4CDBCC8"
+					id: "00000000F5E98D4D"
 					type: "xp"
-					xp: 8
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000041C92A0C"
-					table_id: 1178931755L
-					type: "random"
+					id: "00000000B246C860"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000116DEB38"
-				item: "malum:runic_twisted_rock_bricks"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["00000000B0D110D6"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000053E01B12"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000257CD8C3"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004164D71D"
-					table_id: 1178931755L
-					type: "random"
-				}
-			]
-			shape: "octagon"
+			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CA6A2D55"
-					item: "malum:runewood_planks"
+					id: "000000004800815E"
+					item: "malum:runic_tainted_rock_tiles"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000139039CD"
-					item: "malum:vertical_rustic_runewood_planks"
+					id: "000000005E9FC820"
+					item: "malum:soul_stained_steel_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DBD977DD"
+					item: "malum:tainted_rock_tiles"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B82799FF"
+					item: "malum:twisted_rock_bricks"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000000E074440"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007D301F01"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005EE4EEA4"
+					type: "xp"
+					xp: 31
+				}
+				{
+					id: "00000000778C071D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BAF98DBE"
+					item: "malum:block_of_hex_ash"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005CA11DA0"
+					item: "malum:hallowed_gold_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000617943CC"
+					item: "malum:malignant_pewter_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BCA97506"
+					item: "malum:runewood_tiles"
 					type: "item"
 				}
 			]
 			x: -7.0d
-			y: 5.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["00000000B1A2B3F5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009DF01CFA"
+			id: "000000007261F6DD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000665F064E"
+					id: "000000006757E5B2"
 					type: "xp"
-					xp: 32
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000760A501A"
-					table_id: 1178931755L
-					type: "random"
+					id: "0000000058579560"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D1FE8BD6"
+					id: "000000001FC13462"
+					item: "malum:blighted_gunk"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B4218B1A"
+					item: "malum:grim_talc"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A99E0F15"
+					item: "malum:raw_soulstone"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E042A1DF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CADDB4A6"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000002B9DB03A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000006EF8C5E7"
+				item: "malum:stripped_soulwood_log"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000001E5DAB5E"
+				"0000000068182B5E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D5BF6C58"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BF6D2B71"
+					type: "xp"
+					xp: 23
+				}
+				{
+					id: "0000000029264F42"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EA4BD4C8"
 					item: "malum:polished_tainted_rock_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000041306A95"
+					id: "00000000ED959699"
+					item: "malum:polished_twisted_rock_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007725FC24"
 					item: "malum:polished_twisted_rock_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F08F201D"
+					id: "00000000D0326016"
 					item: "malum:polished_twisted_rock_wall"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "00000000BDE7D16C"
-					item: "malum:poly_prideweave"
-					type: "item"
-				}
 			]
-			x: -1.0d
-			y: 0.0d
+			x: 0.0d
+			y: 9.0d
 		}
 		{
-			dependencies: ["00000000B1A2B3F5"]
+			dependencies: ["0000000068182B5E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001E752020"
+			id: "0000000040C8C8C0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000361AE72E"
+					id: "00000000CD2A7FD9"
 					type: "xp"
-					xp: 11
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E89B95B4"
-					table_id: 1178931755L
-					type: "random"
+					id: "000000007DCA2534"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_malum"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000049D917B9"
+					id: "000000005C10D84A"
+					item: "mekanism:nugget_osmium"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BF78D143"
 					item: "malum:pan_prideweave"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C4133207"
+					id: "00000000189E1AC3"
 					item: "malum:plural_prideweave"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000AEFC7EF"
-					item: "malum:polished_tainted_rock_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C8FBA8D9"
+					id: "00000000C7ADD289"
 					item: "malum:polished_tainted_rock_stairs"
 					type: "item"
 				}
 			]
 			x: 0.0d
-			y: 9.0d
+			y: 8.0d
 		}
 	]
 	title: "Malum"

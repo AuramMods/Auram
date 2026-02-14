@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_dimdoors"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "dimdoors:gold_door"
-	id: "00000000BA023355"
+	id: "00000000FE324707"
 	order_index: 79
 	quest_links: [ ]
 	quests: [
@@ -12,26 +12,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EA562085"
+			id: "000000009C1FB85D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000049B39732"
+					id: "000000005AE3A49B"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006878425A"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000811E012A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000007DF7E5D4"
+				id: "00000000E549BADC"
 				item: "dimdoors:stone_door"
 				type: "item"
 			}]
@@ -39,30 +44,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000068D63A2A"]
+			dependencies: ["0000000041934308"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A8FE307B"
+			id: "000000004A8A963D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000005E60981"
+					id: "0000000099383B69"
 					type: "xp"
-					xp: 5
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001B519E29"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000D6EA148F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000BA374077"
+				id: "000000006AC2FA14"
 				item: "dimdoors:tesselating_loom"
 				type: "item"
 			}]
@@ -70,30 +80,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000D700D90C"]
+			dependencies: ["00000000483B4528"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000095A8DD4"
+			id: "0000000096E61FAA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B44D4815"
+					id: "0000000096E4B5F3"
 					type: "xp"
-					xp: 10
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E776CC2E"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000D92248C1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D843932A"
+				id: "00000000B83A782C"
 				item: {
 					Count: 1
 					id: "dimdoors:garment_of_reality_boots"
@@ -110,26 +125,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003C3E98DB"
+			id: "0000000060D47EE4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000053A477DA"
+					id: "000000005614CF4B"
 					type: "xp"
-					xp: 7
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DEE73F53"
-					table_id: 921003194L
-					type: "random"
+					id: "0000000051F10306"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C39E5669"
+				id: "0000000017060048"
 				item: {
 					Count: 1
 					id: "dimdoors:world_thread_boots"
@@ -143,30 +163,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000D700D90C"]
+			dependencies: ["00000000483B4528"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000899A342"
+			id: "000000008479FAED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003245E164"
+					id: "00000000F3F4E785"
 					type: "xp"
-					xp: 3
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A0CC70C8"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000D6B67F48"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E62CECAF"
+				id: "000000001078D1EF"
 				item: {
 					Count: 1
 					id: "dimdoors:garment_of_reality_chestplate"
@@ -183,26 +208,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E956389B"
+			id: "000000001EF24C0C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BBE64169"
+					id: "00000000C4D8203A"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003C72E480"
-					table_id: 921003194L
-					type: "random"
+					id: "0000000080C78096"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000051A25EFE"
+				id: "00000000C750498E"
 				item: {
 					Count: 1
 					id: "dimdoors:world_thread_chestplate"
@@ -216,30 +246,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000D700D90C"]
+			dependencies: ["00000000483B4528"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008FA9F6E0"
+			id: "00000000F76C004C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007839A942"
+					id: "000000003F558908"
 					type: "xp"
-					xp: 8
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000043AF3DB2"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000302191A1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000080B4295A"
+				id: "00000000D5DD18F5"
 				item: {
 					Count: 1
 					id: "dimdoors:garment_of_reality_helmet"
@@ -256,26 +291,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001157F6EB"
+			id: "00000000159BEFFD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003823EF6F"
+					id: "00000000582E5C0F"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000068216358"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000EB36D540"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000186C174D"
+				id: "0000000035EB0FD8"
 				item: {
 					Count: 1
 					id: "dimdoors:world_thread_helmet"
@@ -289,30 +329,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000D700D90C"]
+			dependencies: ["00000000483B4528"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B8A7C4FF"
+			id: "00000000327AC232"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C156B010"
+					id: "00000000990F4A75"
 					type: "xp"
-					xp: 6
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003B07B4B3"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000713366EC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000A293065"
+				id: "0000000095A9744F"
 				item: {
 					Count: 1
 					id: "dimdoors:garment_of_reality_leggings"
@@ -329,26 +374,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A212E93D"
+			id: "000000009C7E8142"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A27EDD6C"
+					id: "00000000AC7ED8E4"
 					type: "xp"
-					xp: 3
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002B944DC5"
-					table_id: 921003194L
-					type: "random"
+					id: "000000009E5E4B44"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003721B4B2"
+				id: "00000000E315EB56"
 				item: {
 					Count: 1
 					id: "dimdoors:world_thread_leggings"
@@ -365,26 +415,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000011EB0030"
+			id: "000000005CC23F48"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003C63E06E"
+					id: "00000000518ACC07"
 					type: "xp"
-					xp: 5
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ABF65BD5"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000D477F08B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003E782949"
+				id: "00000000C5ABF14E"
 				item: "dimdoors:gray_fabric"
 				type: "item"
 			}]
@@ -395,26 +450,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B27A6342"
+			id: "00000000E6CDCAA3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000769A4923"
+					id: "00000000AA06A510"
 					type: "xp"
-					xp: 2
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000798981EF"
-					table_id: 921003194L
-					type: "random"
+					id: "0000000033383F25"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006F3574C3"
+				id: "00000000345AE27A"
 				item: "dimdoors:yellow_fabric"
 				type: "item"
 			}]
@@ -425,26 +485,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B9616144"
+			id: "0000000060EF7276"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000008AC0F3D"
+					id: "000000009E6D2E35"
 					type: "xp"
-					xp: 3
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000060DD4D62"
-					table_id: 921003194L
-					type: "random"
+					id: "000000000F4E3A1E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EFBA0BBE"
+				id: "0000000054049383"
 				item: "dimdoors:green_fabric"
 				type: "item"
 			}]
@@ -455,26 +520,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000493206EA"
+			id: "000000009F59DB29"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BAD86293"
+					id: "00000000A2B7172E"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007A86BA40"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000C0832FA3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000C782D5B"
+				id: "00000000510679F5"
 				item: "dimdoors:light_blue_fabric"
 				type: "item"
 			}]
@@ -485,26 +555,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000428C774D"
+			id: "000000004077E2E6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000083CD0B9F"
+					id: "000000007FB8A1B9"
 					type: "xp"
-					xp: 11
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9EDC7E1"
-					table_id: 921003194L
-					type: "random"
+					id: "0000000091E37986"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000048092FBE"
+				id: "00000000F48F64BF"
 				item: "dimdoors:light_gray_fabric"
 				type: "item"
 			}]
@@ -515,26 +590,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001E3DD467"
+			id: "00000000F528961D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F2FB5BFE"
+					id: "00000000E4D85E17"
 					type: "xp"
-					xp: 1
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005B891D60"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000590ECDBE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000036EFDC92"
+				id: "000000004CC3C4B7"
 				item: "dimdoors:lime_fabric"
 				type: "item"
 			}]
@@ -545,26 +625,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005823B79A"
+			id: "00000000E3D53400"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E96AAEF4"
+					id: "000000006E30F78C"
 					type: "xp"
-					xp: 9
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007C39BE1C"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000FC121EE5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006999DD82"
+				id: "00000000DCF28514"
 				item: "dimdoors:magenta_fabric"
 				type: "item"
 			}]
@@ -575,26 +660,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000068D63A2A"
+			id: "0000000041934308"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003D2A79E5"
+					id: "000000007B7010E2"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000067B8CE39"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000F76D0CB8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000A77238C1"
+				id: "00000000715C73F2"
 				item: "dimdoors:black_fabric"
 				type: "item"
 			}]
@@ -605,26 +695,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004A5A8DBE"
+			id: "00000000B0C4B56E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000085C5ECDD"
+					id: "00000000AC0430E7"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D849671D"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000C824E49B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000008616DD83"
+				id: "00000000E0503AD2"
 				item: "dimdoors:gold_door"
 				type: "item"
 			}]
@@ -635,26 +730,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000A6024E3"
+			id: "00000000B0E81DB3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FA5B2309"
+					id: "00000000156BBEEA"
 					type: "xp"
-					xp: 5
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000036207BF3"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000F8073212"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000F8034082"
+				id: "00000000B89CE717"
 				item: "dimdoors:enduring_fibers"
 				type: "item"
 			}]
@@ -665,26 +765,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FACA6B89"
+			id: "000000006F8AF318"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FC37E33C"
+					id: "0000000050B70F42"
 					type: "xp"
-					xp: 7
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C134CE2B"
-					table_id: 921003194L
-					type: "random"
+					id: "000000006C7DDF49"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C642087A"
+				id: "000000001B9D0289"
 				item: "dimdoors:orange_fabric"
 				type: "item"
 			}]
@@ -695,26 +800,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A7890F84"
+			id: "00000000968FE627"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A31DF06B"
+					id: "000000004C8F7FC7"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F468F1F8"
-					table_id: 921003194L
-					type: "random"
+					id: "000000008296E58D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000008F7CAAC"
+				id: "00000000C75C3BD6"
 				item: {
 					Count: 1
 					id: "dimdoors:rift_signature"
@@ -731,26 +841,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D700D90C"
+			id: "00000000483B4528"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006290EA31"
+					id: "000000006955A457"
 					type: "xp"
-					xp: 3
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008D4162D0"
-					table_id: 921003194L
-					type: "random"
+					id: "0000000075218DD1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000009AD8D75F"
+				id: "00000000A3999F0C"
 				item: "dimdoors:stable_fabric"
 				type: "item"
 			}]
@@ -761,26 +876,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008087133D"
+			id: "0000000055B770AC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A9CFBD4C"
+					id: "00000000C5288352"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001798A7F0"
-					table_id: 921003194L
-					type: "random"
+					id: "000000008403412A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000033DC165A"
+				id: "00000000FAA85E21"
 				item: "dimdoors:pink_fabric"
 				type: "item"
 			}]
@@ -791,26 +911,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D2B18498"
+			id: "00000000E1036007"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000325BA41E"
+					id: "00000000C5E7E21F"
 					type: "xp"
-					xp: 2
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000990388D6"
-					table_id: 921003194L
-					type: "random"
+					id: "000000005625E953"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000004FBCF36C"
+				id: "00000000E571296B"
 				item: "dimdoors:liminal_lint"
 				type: "item"
 			}]
@@ -821,26 +946,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000197CF780"
+			id: "00000000077D35CD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008B2EB72D"
+					id: "00000000DF83A1A5"
 					type: "xp"
-					xp: 4
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FBD751C5"
-					table_id: 921003194L
-					type: "random"
+					id: "0000000019A1E12A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000451E5AE5"
+				id: "0000000058161828"
 				item: "dimdoors:purple_fabric"
 				type: "item"
 			}]
@@ -851,26 +981,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000928C52BE"
+			id: "00000000E67AE45C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000051040DA3"
+					id: "000000004D2A2AD2"
 					type: "xp"
-					xp: 8
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000026042844"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000F8057531"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000FA60C61A"
+				id: "00000000AAFB20F8"
 				item: "dimdoors:quartz_door"
 				type: "item"
 			}]
@@ -878,30 +1013,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000D700D90C"]
+			dependencies: ["00000000483B4528"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000040241FE"
+			id: "0000000047A2E252"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006E536DCE"
+					id: "00000000F427EB18"
 					type: "xp"
-					xp: 2
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003C356F9F"
-					table_id: 921003194L
-					type: "random"
+					id: "000000008EDBF40E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000757D57E4"
+				id: "000000007235225D"
 				item: "dimdoors:reality_sponge"
 				type: "item"
 			}]
@@ -912,26 +1052,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000038B76E50"
+			id: "0000000086F6EF13"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AFE28DA1"
+					id: "00000000EF89E0EB"
 					type: "xp"
-					xp: 4
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006DEA3D65"
-					table_id: 921003194L
-					type: "random"
+					id: "000000003ED64F0B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001C780921"
+				id: "00000000F3A17B42"
 				item: "dimdoors:item_ag_dim_minecraft_oak_door"
 				type: "item"
 			}]
@@ -939,30 +1084,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000928C52BE"]
+			dependencies: ["00000000E67AE45C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005ACF46A7"
+			id: "00000000D0C2E744"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F50DE332"
+					id: "0000000053D53844"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CB77DDE8"
-					table_id: 921003194L
-					type: "random"
+					id: "000000004E374A97"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DC3AE532"
+				id: "0000000092283371"
 				item: "dimdoors:item_ag_dim_dimdoors_quartz_door"
 				type: "item"
 			}]
@@ -970,30 +1120,35 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000004A5A8DBE"]
+			dependencies: ["00000000B0C4B56E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000083ED585D"
+			id: "00000000A9E1A953"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000452B053A"
+					id: "000000009265F721"
 					type: "xp"
-					xp: 6
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000132868C0"
-					table_id: 921003194L
-					type: "random"
+					id: "000000000D653EC3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000093EC567C"
+				id: "0000000012EAB41B"
 				item: "dimdoors:item_ag_dim_dimdoors_gold_door"
 				type: "item"
 			}]
@@ -1004,26 +1159,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C08D37AD"
+			id: "00000000D10A09EC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001DA69B98"
+					id: "000000008446BA02"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000016E76548"
-					table_id: 921003194L
-					type: "random"
+					id: "0000000066C367C5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000131282E7"
+				id: "00000000B7611055"
 				item: "dimdoors:item_ag_dim_minecraft_iron_door"
 				type: "item"
 			}]
@@ -1034,26 +1194,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000323EF838"
+			id: "00000000EC15D885"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005EBFDFCE"
+					id: "000000008C93806E"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000582E7F20"
-					table_id: 921003194L
-					type: "random"
+					id: "000000008534C678"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B115B862"
+				id: "00000000C5A7DD95"
 				item: "dimdoors:brown_fabric"
 				type: "item"
 			}]
@@ -1064,26 +1229,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F2CA3581"
+			id: "000000002074F3D3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005703AD82"
+					id: "0000000072B9896C"
 					type: "xp"
-					xp: 7
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BC244AA9"
-					table_id: 921003194L
-					type: "random"
+					id: "0000000086EA90DB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000004F3E95D"
+				id: "000000003E809C39"
 				item: "dimdoors:cyan_fabric"
 				type: "item"
 			}]
@@ -1094,26 +1264,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D879AB71"
+			id: "00000000AA3E6E53"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008FE922FF"
+					id: "000000008D26400B"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C61F198C"
-					table_id: 921003194L
-					type: "random"
+					id: "000000008460328E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000008C37394D"
+				id: "000000002EC6B000"
 				item: "dimdoors:white_fabric"
 				type: "item"
 			}]
@@ -1124,26 +1299,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000042115ED3"
+			id: "00000000C191C2C2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002831D1B1"
+					id: "00000000953737DA"
 					type: "xp"
-					xp: 7
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009AFDDF33"
-					table_id: 921003194L
-					type: "random"
+					id: "000000008DA6DD58"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002081992B"
+				id: "00000000405AE88F"
 				item: "dimdoors:blue_fabric"
 				type: "item"
 			}]
@@ -1151,30 +1331,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000000A6024E3"]
+			dependencies: ["00000000B0E81DB3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009F3155D9"
+			id: "00000000A23A18A5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BAEF7EAD"
+					id: "00000000057D3970"
 					type: "xp"
-					xp: 6
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002C09254F"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000A262A9A3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F33F73F5"
+				id: "00000000ECC799ED"
 				item: "dimdoors:fabric_of_finality"
 				type: "item"
 			}]
@@ -1182,30 +1367,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000D2B18498"]
+			dependencies: ["00000000E1036007"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008026E095"
+			id: "0000000055C598C2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000C517326"
+					id: "0000000033A45EE5"
 					type: "xp"
-					xp: 9
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004C4E1050"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000131B46FE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000067536B2C"
+				id: "00000000FA1F4507"
 				item: "dimdoors:fuzzy_fireball"
 				type: "item"
 			}]
@@ -1216,26 +1406,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000966E7181"
+			id: "00000000F482D1A5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F79B5CF9"
+					id: "000000006F934057"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001FA573F0"
-					table_id: 921003194L
-					type: "random"
+					id: "000000002CC23C9A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000088CD2355"
+				id: "00000000B8D7D02D"
 				item: "dimdoors:red_fabric"
 				type: "item"
 			}]
@@ -1246,26 +1441,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000356805F8"
+			id: "000000006E162C1D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000063E7BF22"
+					id: "0000000051933067"
 					type: "xp"
-					xp: 2
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000046D8F7A9"
-					table_id: 921003194L
-					type: "random"
+					id: "000000008990B9CE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000012FD2078"
+				id: "00000000CFA44F93"
 				item: {
 					Count: 1
 					id: "dimdoors:rift_blade"
@@ -1279,30 +1479,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000D700D90C"]
+			dependencies: ["00000000483B4528"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000091001EBA"
+			id: "000000008E996FBC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005797F245"
+					id: "00000000099388B9"
 					type: "xp"
 					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000068984B3A"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000E49EF694"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000ED77B2A4"
+				id: "00000000408F5DD1"
 				item: "dimdoors:rift_pearl"
 				type: "item"
 			}]
@@ -1313,26 +1518,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002E4F486C"
+			id: "00000000E177575A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009C93B526"
+					id: "00000000F1DA0678"
 					type: "xp"
-					xp: 3
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003B306B26"
-					table_id: 921003194L
-					type: "random"
+					id: "00000000D7D72409"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C8D8F269"
+				id: "00000000B8D80464"
 				item: {
 					Count: 1
 					id: "dimdoors:rift_remover"
@@ -1349,26 +1559,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B8723416"
+			id: "0000000047753592"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C9BA4D31"
+					id: "00000000DFB236CF"
 					type: "xp"
-					xp: 5
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FF36F534"
-					table_id: 921003194L
-					type: "random"
+					id: "000000007E25ECF0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000C5BCD5C"
+				id: "000000002B53342A"
 				item: {
 					Count: 1
 					id: "dimdoors:rift_stabilizer"
@@ -1382,30 +1597,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000A7890F84"]
+			dependencies: ["00000000968FE627"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B21C5FA3"
+			id: "00000000919CA943"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F02736F3"
+					id: "00000000ACEDF371"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006F9B8CF0"
-					table_id: 921003194L
-					type: "random"
+					id: "000000008E0A8630"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_dimdoors"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000095962297"
+				id: "000000002B53CDEA"
 				item: {
 					Count: 1
 					id: "dimdoors:stabilized_rift_signature"

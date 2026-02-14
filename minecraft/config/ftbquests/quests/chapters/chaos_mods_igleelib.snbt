@@ -2,68 +2,114 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_igleelib"
-	group: "00000000DEB299A3"
-	icon: "igleelib:blazum_ingot"
-	id: "00000000E25BA95E"
-	order_index: 118
+	group: "000000008CDEF944"
+	icon: "igleelib:derium_ingot"
+	id: "000000004189BBAD"
+	order_index: 117
 	quest_links: [ ]
 	quests: [
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002FB2DB02"
+			id: "000000001DA63BEB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E99536A4"
+					id: "0000000090BE1324"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000735FA4CD"
-					table_id: 4159449158L
-					type: "random"
+					id: "00000000E7C8A5A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_igleelib"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000086EFC5D4"
-				item: "igleelib:blazum_ingot"
+				id: "000000003EAAF79E"
+				item: "igleelib:derium_ingot"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000002FB2DB02"]
+			dependencies: ["000000002040448B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002A3A6FDC"
+			id: "00000000E304DA97"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007E69E6DE"
+					id: "0000000020B44356"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001F605462"
-					table_id: 4159449158L
-					type: "random"
+					id: "0000000028D5735C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_igleelib"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002B41CC7B"
-				item: "igleelib:blazum_block"
+				id: "0000000052D23397"
+				item: "igleelib:modium_block"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000001DA63BEB"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001F805749"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000008204679"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000305B9910"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_igleelib"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000DB9F1A1C"
+				item: "igleelib:derium_block"
 				type: "item"
 			}]
 			x: 0.0d
@@ -73,31 +119,71 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000048CFEA46"
+			id: "000000002040448B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000067BED117"
+					id: "0000000063753A89"
 					type: "xp"
-					xp: 2
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000062372EA8"
-					table_id: 4159449158L
-					type: "random"
+					id: "00000000F96A3203"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_igleelib"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000067F220AC"
+				item: "igleelib:modium_ingot"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C41350E8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AB5495C6"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "0000000007053559"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_igleelib"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004F5305A5"
+				id: "000000001CCE6269"
 				item: "igleelib:iglium_upgrade_smithing_template"
 				type: "item"
 			}]
 			x: 0.0d
-			y: 1.0d
+			y: 2.0d
 		}
 	]
 	title: "Iglee's Library"

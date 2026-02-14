@@ -2,36 +2,41 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_tinkersjewelry"
-	group: "00000000DEB299A3"
-	icon: "tinkersjewelry:malachite"
-	id: "00000000C87A82A3"
-	order_index: 106
+	group: "000000008CDEF944"
+	icon: "tinkersjewelry:prehnite"
+	id: "000000005B210463"
+	order_index: 105
 	quest_links: [ ]
 	quests: [
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001E306ADA"
+			id: "00000000C44C21E8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000002B1E934"
+					id: "00000000577663EA"
 					type: "xp"
-					xp: 8
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000454CC2A7"
-					table_id: 3702360860L
-					type: "random"
+					id: "00000000094DFB62"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000062835CE6"
+				id: "00000000EB2E5407"
 				item: {
 					Count: 1
 					id: "tinkersjewelry:ring"
@@ -49,26 +54,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CF2E0F9D"
+			id: "00000000498F55E3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002B15C5A3"
+					id: "00000000D981C032"
 					type: "xp"
-					xp: 6
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000086B75E4A"
-					table_id: 3702360860L
-					type: "random"
+					id: "00000000782CBBC2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000000CCCBEB6"
+				id: "00000000CB265738"
 				item: "tinkersjewelry:rubellite"
 				type: "item"
 			}]
@@ -79,26 +89,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000307C167E"
+			id: "00000000FAC8C926"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D81EDB50"
+					id: "00000000B2B5B9E5"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000036433749"
-					table_id: 3702360860L
-					type: "random"
+					id: "0000000020099394"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000086BDE11B"
+				id: "000000009A907C0F"
 				item: "tinkersjewelry:plain_ring_sand_cast"
 				type: "item"
 			}]
@@ -109,26 +124,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003CD945AD"
+			id: "000000000152AD8E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C2560E5C"
+					id: "000000004D9E8EA2"
 					type: "xp"
-					xp: 1
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009CAB3F4D"
-					table_id: 3702360860L
-					type: "random"
+					id: "00000000E15E0AC5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F93FF97D"
+				id: "00000000B729E3E6"
 				item: "tinkersjewelry:gem"
 				type: "item"
 			}]
@@ -137,38 +157,43 @@
 		}
 		{
 			dependencies: [
-				"00000000CF2E0F9D"
-				"0000000027ED3358"
-				"00000000A9C759FA"
-				"00000000B8B300E6"
-				"0000000075C753E7"
-				"0000000044BAFF50"
-				"00000000BFBA3C75"
-				"000000006641EE30"
+				"00000000498F55E3"
+				"0000000023FF83F2"
+				"000000005D864508"
+				"000000006FA4C66C"
+				"000000005226FFF9"
+				"00000000F1AEFEAD"
+				"000000002BCCE52A"
+				"00000000C8E67C36"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EBEF4C5F"
+			id: "00000000E1C1069F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000083063830"
+					id: "00000000DC9B43ED"
 					type: "xp"
-					xp: 4
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008F4CA8E2"
-					table_id: 3702360860L
-					type: "random"
+					id: "0000000013668DC6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A82FF7E5"
+				id: "000000001917145C"
 				item: "tinkersjewelry:book"
 				type: "item"
 			}]
@@ -179,26 +204,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DFFD5F4D"
+			id: "00000000F504B9FE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D2A40BF6"
+					id: "00000000BE513FB0"
 					type: "xp"
-					xp: 9
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C7B09FF8"
-					table_id: 3702360860L
-					type: "random"
+					id: "000000006B80FA0D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000008775B781"
+				id: "0000000090EABBD4"
 				item: "tinkersjewelry:plain_ring_red_sand_cast"
 				type: "item"
 			}]
@@ -206,30 +236,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000DC91CD5D"]
+			dependencies: ["00000000440300C2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DE89E535"
+			id: "00000000AFB02FF5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A19E0B1E"
+					id: "00000000C6CA70B5"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E0649263"
-					table_id: 3702360860L
-					type: "random"
+					id: "0000000058203A92"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005CA0BF23"
+				id: "00000000E11085F5"
 				item: "tinkersjewelry:plain_ring_cast"
 				type: "item"
 			}]
@@ -240,26 +275,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000027ED3358"
+			id: "0000000023FF83F2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004A8689DB"
+					id: "00000000C200072D"
 					type: "xp"
-					xp: 6
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003C63085B"
-					table_id: 3702360860L
-					type: "random"
+					id: "0000000026E6F452"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000C22C91C3"
+				id: "00000000950E002B"
 				item: "tinkersjewelry:eudialyte"
 				type: "item"
 			}]
@@ -270,26 +310,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A9C759FA"
+			id: "000000005D864508"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000048C9C3A4"
+					id: "000000009AD3BD2C"
 					type: "xp"
-					xp: 4
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C48F0CFD"
-					table_id: 3702360860L
-					type: "random"
+					id: "00000000EDBB42D0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000023CE8EF9"
+				id: "00000000954B8E25"
 				item: "tinkersjewelry:calcite"
 				type: "item"
 			}]
@@ -300,57 +345,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B8B300E6"
+			id: "000000006FA4C66C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005361FFB3"
+					id: "000000002FB9AF2A"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000950426C7"
-					table_id: 3702360860L
-					type: "random"
+					id: "0000000096E5848F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000956F6384"
+				id: "00000000DA576E55"
 				item: "tinkersjewelry:malachite"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000075C753E7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000773BC589"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006A3CE020"
-					table_id: 3702360860L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000038B209C5"
-				item: "tinkersjewelry:fire_opal"
 				type: "item"
 			}]
 			x: -1.0d
@@ -360,27 +380,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000044BAFF50"
+			id: "000000005226FFF9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D13C2168"
+					id: "000000000494C483"
 					type: "xp"
-					xp: 3
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DC51DFCE"
-					table_id: 3702360860L
-					type: "random"
+					id: "00000000A08C3799"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000BF2A5A44"
-				item: "tinkersjewelry:milky_quartz"
+				id: "000000004ED4CE73"
+				item: "tinkersjewelry:fire_opal"
 				type: "item"
 			}]
 			x: -1.0d
@@ -390,27 +415,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BFBA3C75"
+			id: "00000000F1AEFEAD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D41AF8D8"
+					id: "00000000AF87A7F8"
 					type: "xp"
-					xp: 11
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003CD3917E"
-					table_id: 3702360860L
-					type: "random"
+					id: "00000000181EE5FB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000079A52C2A"
-				item: "tinkersjewelry:merlinite"
+				id: "00000000E388EFFA"
+				item: "tinkersjewelry:milky_quartz"
 				type: "item"
 			}]
 			x: -1.0d
@@ -420,27 +450,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006641EE30"
+			id: "000000002BCCE52A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009A836F23"
+					id: "0000000014BC502C"
 					type: "xp"
-					xp: 7
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003A005E3F"
-					table_id: 3702360860L
-					type: "random"
+					id: "000000001A822246"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000004F2405C6"
-				item: "tinkersjewelry:prehnite"
+				id: "0000000015385CAA"
+				item: "tinkersjewelry:merlinite"
 				type: "item"
 			}]
 			x: -1.0d
@@ -450,26 +485,66 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DC91CD5D"
+			id: "00000000C8E67C36"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A22C59D8"
+					id: "0000000043641828"
 					type: "xp"
-					xp: 2
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000040597507"
-					table_id: 3702360860L
-					type: "random"
+					id: "000000000C3CBC08"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000E86E5D09"
+				id: "00000000A8462B04"
+				item: "tinkersjewelry:prehnite"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000440300C2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BD8B404B"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000003DCE4391"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000060B7CC3C"
 				item: "tinkersjewelry:plain_ring"
 				type: "item"
 			}]
@@ -477,30 +552,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000B8B300E6"]
+			dependencies: ["00000000C8E67C36"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F187A55E"
+			id: "00000000110CF003"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000070DAC54B"
+					id: "00000000C6A4354A"
 					type: "xp"
 					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F1D8232D"
-					table_id: 3702360860L
-					type: "random"
+					id: "00000000D4EC159C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_tinkersjewelry"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000575A6809"
+				id: "000000009E6EE5F1"
 				type: "item"
 			}]
 			x: 0.0d

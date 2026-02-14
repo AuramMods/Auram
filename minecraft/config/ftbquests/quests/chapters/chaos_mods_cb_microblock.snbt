@@ -2,36 +2,41 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_cb_microblock"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "cb_microblock:stone_rod"
-	id: "00000000F61426F7"
-	order_index: 117
+	id: "0000000071294F31"
+	order_index: 116
 	quest_links: [ ]
 	quests: [
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A3D1CE37"
+			id: "00000000BA3E388A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000641E9FB1"
+					id: "0000000088AAC783"
 					type: "xp"
-					xp: 3
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FA7DC194"
-					table_id: 3173510441L
-					type: "random"
+					id: "000000003B6541F1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_cb_microblock"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009CC48148"
+				id: "00000000E9E01491"
 				item: "cb_microblock:stone_rod"
 				type: "item"
 			}]
@@ -42,26 +47,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A8CFA142"
+			id: "000000000FE9C532"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000056DB02D8"
+					id: "0000000090A3D8EE"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000D2B5B7E"
-					table_id: 3173510441L
-					type: "random"
+					id: "000000008B1FF073"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_cb_microblock"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001FB73A75"
+				id: "000000002EE00236"
 				item: "cb_microblock:microblock"
 				type: "item"
 			}]

@@ -2,38 +2,43 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_lost_aether_content"
-	group: "00000000DEB299A3"
-	icon: "lost_aether_content:gale_pillar"
-	id: "00000000708EFC8D"
-	order_index: 100
+	group: "000000008CDEF944"
+	icon: "lost_aether_content:light_gale_stone"
+	id: "0000000055969891"
+	order_index: 99
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0000000050E4D75D"]
+			dependencies: ["00000000E55BB0CB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004EE8DD79"
+			id: "000000004FBCC908"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006EB660DB"
+					id: "00000000F5206790"
 					type: "xp"
-					xp: 10
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F2C806D3"
-					table_id: 2415260300L
-					type: "random"
+					id: "0000000021A7545E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000529CA106"
-				item: "lost_aether_content:gale_slab"
+				id: "000000007B4C74F7"
+				item: "lost_aether_content:gale_pillar"
 				type: "item"
 			}]
 			x: 0.0d
@@ -43,26 +48,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000078CC8E90"
+			id: "00000000171827FC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A8BD8B39"
+					id: "00000000306C07B0"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005C348756"
-					table_id: 2415260300L
-					type: "random"
+					id: "00000000EF21EDA4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D4AE6E5F"
+				id: "00000000863E844F"
 				item: "lost_aether_content:enchanted_pink_aercloud"
 				type: "item"
 			}]
@@ -70,62 +80,72 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000050E4D75D"]
+			dependencies: ["00000000E55BB0CB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002AF38CEB"
+			id: "000000003F63D14C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ED71509F"
+					id: "0000000005D8D469"
 					type: "xp"
-					xp: 7
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000011765266"
-					table_id: 2415260300L
-					type: "random"
+					id: "000000007D2FF190"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A964F306"
-				item: "lost_aether_content:gale_wall"
+				id: "0000000080A353B6"
+				item: "lost_aether_content:gale_stairs"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000050E4D75D"]
+			dependencies: ["00000000E55BB0CB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000915A01CC"
+			id: "000000009C5E052E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F01D7852"
+					id: "000000007DDAD0AA"
 					type: "xp"
-					xp: 3
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003276CC34"
-					table_id: 2415260300L
-					type: "random"
+					id: "00000000DE7E2F0E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000AC15B059"
-				item: "lost_aether_content:gale_stairs"
+				id: "0000000017CAFFAB"
+				item: "lost_aether_content:gale_slab"
 				type: "item"
 			}]
 			x: 0.0d
@@ -135,26 +155,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FD8FF09A"
+			id: "00000000DBF34B8D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FB02A1FA"
+					id: "000000009730B752"
 					type: "xp"
-					xp: 7
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CF8001F5"
-					table_id: 2415260300L
-					type: "random"
+					id: "00000000E384ED34"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000005C0087D"
+				id: "000000002E66B3F6"
 				item: "lost_aether_content:brown_moa_egg"
 				type: "item"
 			}]
@@ -162,30 +187,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000006D479D23"]
+			dependencies: ["00000000922C0B37"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000050E4D75D"
+			id: "00000000E55BB0CB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000042CB6E22"
+					id: "0000000075589C2F"
 					type: "xp"
-					xp: 2
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E7DF4663"
-					table_id: 2415260300L
-					type: "random"
+					id: "000000000CF62453"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009D3712D9"
+				id: "0000000089CB2F20"
 				item: "lost_aether_content:gale_stone"
 				type: "item"
 			}]
@@ -193,30 +223,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000050E4D75D"]
+			dependencies: ["00000000E55BB0CB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007736DF45"
+			id: "00000000C094F19B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C74E36BC"
+					id: "00000000A1FF697E"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005A8EDE3B"
-					table_id: 2415260300L
-					type: "random"
+					id: "00000000ED2C87DF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000BE018097"
+				id: "00000000F29AC8FC"
 				item: "lost_aether_content:noble_armor_trim_smithing_template"
 				type: "item"
 			}]
@@ -227,27 +262,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006D479D23"
+			id: "00000000922C0B37"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C89D579A"
+					id: "00000000C75801FC"
 					type: "xp"
-					xp: 5
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BCB8BCBD"
-					table_id: 2415260300L
-					type: "random"
+					id: "000000009CEE7042"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000030A19126"
-				item: "lost_aether_content:gale_pillar"
+				id: "00000000BCD9A3A0"
+				item: "lost_aether_content:light_gale_stone"
 				type: "item"
 			}]
 			x: -3.0d
@@ -257,62 +297,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000007B861ED"
+			id: "0000000054DB5BFD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F5A806F6"
+					id: "000000000DD517C8"
 					type: "xp"
-					xp: 5
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F224502F"
-					table_id: 2415260300L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000E33716BA"
-				item: {
-					Count: 1
-					id: "minecraft:iron_chestplate"
-					tag: {
-						Damage: 0
+					id: "0000000090C82DE7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
 					}
-				}
-				type: "item"
-			}]
-			x: 0.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000072101B3F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001FEDBDEB"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000013E15E5A"
-					table_id: 2415260300L
-					type: "random"
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006DAD8ACA"
+				id: "00000000987420E9"
 				item: {
 					Count: 1
 					id: "lost_aether_content:gravitite_shield"
@@ -323,32 +332,73 @@
 				type: "item"
 			}]
 			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000E55BB0CB"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000034C023EF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009B6634E7"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000005B6985C0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000413596F5"
+				item: "lost_aether_content:gale_wall"
+				type: "item"
+			}]
+			x: 0.0d
 			y: 5.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000276CC3D5"
+			id: "000000009E8F9533"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006E0630F9"
+					id: "000000009D1D53C0"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A9C1F10B"
-					table_id: 2415260300L
-					type: "random"
+					id: "000000004A863DC3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000030E83292"
+				id: "00000000FE3114A7"
 				item: "lost_aether_content:orange_moa_egg"
 				type: "item"
 			}]
@@ -356,31 +406,41 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000050E4D75D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F8C26413"
+			id: "000000000D2D7493"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BCFFD885"
+					id: "00000000E9BF07A1"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007B755294"
-					table_id: 2415260300L
-					type: "random"
+					id: "00000000E58BB968"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000008C9E538F"
-				item: "lost_aether_content:light_gale_stone"
+				id: "0000000006CE3627"
+				item: {
+					Count: 1
+					id: "minecraft:iron_chestplate"
+					tag: {
+						Damage: 0
+					}
+				}
 				type: "item"
 			}]
 			x: 0.0d
@@ -390,26 +450,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008EC9A27D"
+			id: "00000000CA4649FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001ED70956"
+					id: "00000000D9FF3538"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000046561A48"
-					table_id: 2415260300L
-					type: "random"
+					id: "000000002DBDA62D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_lost_aether_content"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000ABD97805"
+				id: "00000000B7EC095F"
 				item: {
 					Count: 1
 					id: "lost_aether_content:zanite_shield"

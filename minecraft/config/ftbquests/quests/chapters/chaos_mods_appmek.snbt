@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_appmek"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "appmek:chemical_cell_housing"
-	id: "00000000A179B3D6"
+	id: "0000000036F76210"
 	order_index: 15
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000040E4AAD6"
+			id: "000000003D48EF11"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000077E82297"
+					id: "00000000474EF4E1"
 					type: "xp"
-					xp: 2
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F8586FB5"
-					table_id: 1064920226L
-					type: "random"
+					id: "00000000D11494D7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003DC690F9"
+				id: "0000000022E84F52"
 				item: "appmek:chemical_storage_cell_64k"
 				type: "item"
 			}]
@@ -40,30 +45,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000082D4C465"
+			id: "00000000D30151EB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000020151021"
+					id: "000000001162C060"
 					type: "xp"
-					xp: 4
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005C1CB832"
-					table_id: 1064920226L
-					type: "random"
+					id: "00000000C25C5F81"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000007E8EE543"
+				id: "0000000015BC0304"
 				item: "appmek:portable_chemical_storage_cell_4k"
 				type: "item"
 			}]
@@ -71,30 +81,35 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C1FF8769"
+			id: "00000000DE37663A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000001FDE6F5"
+					id: "000000008F45E17D"
 					type: "xp"
-					xp: 6
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FE6BEDE4"
-					table_id: 1064920226L
-					type: "random"
+					id: "000000009D56D01B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000BB6AAAF4"
+				id: "0000000078167798"
 				item: "appmek:chemical_storage_cell_4k"
 				type: "item"
 			}]
@@ -102,30 +117,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002DA41243"
+			id: "0000000092E654BF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E2D79576"
+					id: "000000008FD737EB"
 					type: "xp"
-					xp: 7
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009F57C11E"
-					table_id: 1064920226L
-					type: "random"
+					id: "00000000C5D6A65F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002FB92D8B"
+				id: "000000007E7EEF85"
 				item: "appmek:portable_chemical_storage_cell_256k"
 				type: "item"
 			}]
@@ -136,26 +156,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000066D2E17B"
+			id: "000000007987F141"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B2DDA66D"
+					id: "00000000C0857AA0"
 					type: "xp"
-					xp: 3
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DC43EF34"
-					table_id: 1064920226L
-					type: "random"
+					id: "00000000109694E9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000090E6BD4B"
+				id: "00000000E99EF9E5"
 				item: "appmek:chemical_cell_housing"
 				type: "item"
 			}]
@@ -163,30 +188,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB45F03A"
+			id: "00000000DEB59707"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BFBBE986"
+					id: "000000002ED15C59"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002DD15F00"
-					table_id: 1064920226L
-					type: "random"
+					id: "00000000A70739B7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D25703BB"
+				id: "00000000C7D9E2F6"
 				item: "appmek:portable_chemical_storage_cell_64k"
 				type: "item"
 			}]
@@ -194,30 +224,35 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000029EC68CF"
+			id: "000000007E581560"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AE54ABD1"
+					id: "00000000953FC013"
 					type: "xp"
-					xp: 3
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000048604D5E"
-					table_id: 1064920226L
-					type: "random"
+					id: "00000000BCB3A6AF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A7956827"
+				id: "000000003B31B499"
 				item: "appmek:chemical_storage_cell_16k"
 				type: "item"
 			}]
@@ -225,30 +260,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BE0BE52B"
+			id: "000000000738AC1B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000074E58041"
+					id: "00000000CBADFD93"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000054FB89AF"
-					table_id: 1064920226L
-					type: "random"
+					id: "000000009C7E7A19"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000617D841D"
+				id: "00000000C99BC6D6"
 				item: "appmek:chemical_storage_cell_256k"
 				type: "item"
 			}]
@@ -256,30 +296,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C8193F64"
+			id: "000000001C05180F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ECCC9830"
+					id: "00000000FF3A35DF"
 					type: "xp"
-					xp: 5
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A0BEC25A"
-					table_id: 1064920226L
-					type: "random"
+					id: "000000005A398721"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E74DA7F2"
+				id: "00000000A026E056"
 				item: "appmek:portable_chemical_storage_cell_1k"
 				type: "item"
 			}]
@@ -287,30 +332,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007DAAF235"
+			id: "000000004718AF95"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007970ABD9"
+					id: "00000000EA31B7C3"
 					type: "xp"
-					xp: 10
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005109E147"
-					table_id: 1064920226L
-					type: "random"
+					id: "00000000C35A0E56"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F8D56F3B"
+				id: "000000001B94E6E8"
 				item: "appmek:chemical_storage_cell_1k"
 				type: "item"
 			}]
@@ -318,30 +368,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000066D2E17B"]
+			dependencies: ["000000007987F141"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009427097D"
+			id: "00000000EE9C8F08"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B00D72DD"
+					id: "0000000020B7744E"
 					type: "xp"
-					xp: 7
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000063137862"
-					table_id: 1064920226L
-					type: "random"
+					id: "00000000FFCB862E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_appmek"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009B326554"
+				id: "00000000DB4A1FFC"
 				item: "appmek:portable_chemical_storage_cell_16k"
 				type: "item"
 			}]

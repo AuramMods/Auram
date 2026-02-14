@@ -2,40 +2,45 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_create_new_age"
-	group: "00000000DEB299A3"
-	icon: "create_new_age:copper_wire"
-	id: "000000000331551E"
+	group: "000000008CDEF944"
+	icon: "create_new_age:copper_wire_block"
+	id: "00000000BC908C25"
 	order_index: 85
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: [
-				"00000000930AE755"
-				"00000000ACB84486"
+				"000000006B09A8EB"
+				"0000000042D73583"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A16A267F"
+			id: "00000000BF31C638"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FDB34825"
+					id: "00000000D7B13B4E"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EC764F71"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000AC42E334"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000AB15C53E"
+				id: "000000007295CF98"
 				item: "create_new_age:heater"
 				type: "item"
 			}]
@@ -44,32 +49,37 @@
 		}
 		{
 			dependencies: [
-				"0000000090896E92"
-				"00000000ACB84486"
+				"00000000BE03187A"
+				"0000000042D73583"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002B0B2D56"
+			id: "000000004044A8CC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C1EB10BC"
+					id: "00000000E7B2C22A"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000066AD4F4"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000094DA6A1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000118F7E1A"
+				id: "00000000DB1ADFD3"
 				item: "create_new_age:heat_pump"
 				type: "item"
 			}]
@@ -80,26 +90,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EA66CED7"
+			id: "000000006C8CF808"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000046086880"
+					id: "00000000EC91BAF1"
 					type: "xp"
-					xp: 7
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009EB7F66D"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000000EFCBE12"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000AF15C1E8"
+				id: "00000000586207A2"
 				item: "create_new_age:generator_coil"
 				type: "item"
 			}]
@@ -107,61 +122,71 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000280EE0FA"]
+			dependencies: ["000000008ACD041E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008CAF1518"
+			id: "00000000DF0FBF93"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000039816031"
+					id: "00000000CF361EE1"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DEBA4BB5"
-					table_id: 1412960155L
-					type: "random"
+					id: "0000000033D2C7EC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001CFBFF07"
-				item: "create_new_age:overcharged_golden_wire_block"
+				id: "00000000615E48E6"
+				item: "create_new_age:overcharged_golden_sheet"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000EAD351E8"]
+			dependencies: ["00000000FCF86963"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000842B3654"
+			id: "00000000B81971CE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F565B64D"
+					id: "00000000E8086557"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005FD76B51"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000000CBE5CA2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000044B34CB3"
+				id: "0000000045600731"
 				item: "create_new_age:overcharged_diamond_wire_block"
 				type: "item"
 			}]
@@ -169,61 +194,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000A449DD28"]
+			dependencies: ["000000001088062F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000026B175FF"
+			id: "00000000C8C70AC7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007887C0B6"
+					id: "0000000095F86836"
 					type: "xp"
-					xp: 6
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000044DD79F6"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000CE43FA89"
-				item: "create_new_age:copper_wire_block"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000C16B1556"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D8E15FD3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000039637551"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000058768939"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000E78EA4C9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A1BA4E0A"
+				id: "00000000134F3BF5"
 				item: "create_new_age:netherite_magnet"
 				type: "item"
 			}]
@@ -232,32 +231,37 @@
 		}
 		{
 			dependencies: [
-				"00000000930AE755"
-				"00000000D16B03CB"
+				"000000008ACD041E"
+				"000000006B09A8EB"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000047DCF88C"
+			id: "00000000D9720D52"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000013261297"
+					id: "000000005EADB061"
 					type: "xp"
-					xp: 5
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000036599F3"
-					table_id: 1412960155L
-					type: "random"
+					id: "0000000091BFB99C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000024E6A1CB"
+				id: "00000000F8AACF0B"
 				item: "create_new_age:layered_magnet"
 				type: "item"
 			}]
@@ -265,152 +269,105 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000004C9C1A14"]
+			dependencies: ["000000005ACA2AAB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000546ABF6D"
+			id: "000000005F491786"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009F22E732"
+					id: "00000000A2C4D242"
 					type: "xp"
-					xp: 4
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005C5ABAE1"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000005B429579"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000AC085A1E"
-				item: "create_new_age:reactor_fuel_acceptor"
+				id: "0000000062EA7F30"
+				item: "create_new_age:copper_wire_block"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 9.0d
-		}
-		{
-			dependencies: ["0000000090896E92"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000074154A50"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B83EC087"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C5398DB2"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000F210E076"
-				item: "create_new_age:radioactive_thorium"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["000000005219DE5D"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000061B8BA94"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007B2C0399"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000079BAF228"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000ECF637FC"
-				item: "create_new_age:overcharged_iron_wire_block"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 7.0d
+			x: -6.0d
+			y: 0.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E11E3F27"
+			id: "000000009FB6873D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C4089EAC"
+					id: "00000000D4ABDA46"
 					type: "xp"
-					xp: 3
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000333EC1B9"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000E3229461"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000AFCEDB39"
+				id: "0000000037055A83"
 				item: "create_new_age:basic_energiser"
 				type: "item"
 			}]
 			x: -5.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003A5F80EB"
+			id: "0000000047472E98"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000262272F9"
+					id: "00000000A0EFC95F"
 					type: "xp"
-					xp: 5
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008110C9BF"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000562A847C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "000000002EA0E279"
+				id: "00000000691EC709"
 				item: "create_new_age:blank_circuit"
 				type: "item"
 			}]
@@ -421,26 +378,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000090896E92"
+			id: "00000000BE03187A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000018F0943"
+					id: "00000000BF0D2181"
 					type: "xp"
-					xp: 6
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000084E40BC3"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000E9EB4693"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000C7B4966B"
+				id: "00000000BC9C1B29"
 				item: "create_new_age:thorium"
 				type: "item"
 			}]
@@ -451,147 +413,66 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000930AE755"
+			id: "000000000F6A5D08"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007A6CC2E2"
+					id: "0000000032158225"
 					type: "xp"
-					xp: 3
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005BD5A919"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000289DFD92"
-				item: "create_new_age:overcharged_iron"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000930AE755"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000EA441802"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008AD1F6E4"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000ADBF741"
-					table_id: 1412960155L
-					type: "random"
+					id: "0000000088C5FE94"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "000000008BB1D6AA"
-				item: "create_new_age:overcharged_iron_sheet"
+				id: "000000007B24C631"
+				item: "create_new_age:reactor_casing"
 				type: "item"
 			}]
 			x: -3.0d
-			y: 2.0d
+			y: 9.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D16B03CB"
+			id: "000000001088062F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000229568C6"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000E9A1D53"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "000000009BE53019"
-				item: "create_new_age:overcharged_gold"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004C9C1A14"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000056E519AB"
+					id: "0000000098BC54C8"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000696C0DF0"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000D5DBD412"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000536B79AB"
-				item: "create_new_age:reactor_casing"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C16B1556"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005D8196D3"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009FE905D7"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000140F617F"
+				id: "000000007F4F08CF"
 				item: "create_new_age:overcharged_diamond"
 				type: "item"
 			}]
@@ -599,66 +480,75 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000D16B03CB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006B00BD91"
+			id: "000000008ACD041E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000045F0A74A"
+					id: "00000000CC9C896D"
 					type: "xp"
-					xp: 2
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008114A079"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000EA0542C3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000AFA4CAFD"
-				item: "create_new_age:overcharged_golden_sheet"
+				id: "0000000005FB3D98"
+				item: "create_new_age:overcharged_gold"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 3.0d
+			x: -3.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
-				"0000000029645535"
-				"00000000EA441802"
-				"00000000C16B1556"
-				"0000000086C01721"
+				"00000000BA6A02FB"
+				"00000000C36FA0A5"
+				"000000001088062F"
+				"00000000C6C053B7"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B915F040"
+			id: "0000000096A531C7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F7133D41"
+					id: "0000000078C96317"
 					type: "xp"
-					xp: 9
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000201C3473"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000006D32FB00"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002B23D64F"
+				id: "00000000579FB184"
 				item: "create_new_age:advanced_motor_extension"
 				type: "item"
 			}]
@@ -669,26 +559,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EAD351E8"
+			id: "00000000FCF86963"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000031D99DDD"
+					id: "000000007FFC5450"
 					type: "xp"
-					xp: 11
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000D9E4748"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000F9DA5248"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000753CCE6D"
+				id: "0000000081070C70"
 				item: "create_new_age:overcharged_diamond_wire"
 				type: "item"
 			}]
@@ -696,30 +591,70 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000930AE755"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000010F83E2B"
+			id: "000000006B09A8EB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000000F6E084"
+					id: "0000000002F1EBA6"
 					type: "xp"
-					xp: 9
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000481B0532"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000000A4F43BD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000000143499B"
+				item: "create_new_age:overcharged_iron"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000006B09A8EB"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008066469F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000097C7D028"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000000A2E00A5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A2D56B51"
+				id: "0000000088D74029"
 				item: "create_new_age:advanced_motor"
 				type: "item"
 			}]
@@ -727,60 +662,34 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000006B00BD91"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000280EE0FA"
+			id: "0000000042D73583"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F4CEF7E7"
+					id: "00000000CB6DCDED"
 					type: "xp"
-					xp: 9
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000482D39F8"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000883610EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000061B56E0D"
-				item: "create_new_age:overcharged_golden_wire"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 9.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000ACB84486"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B3C7244D"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005366C577"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000058197BA5"
+				id: "00000000A458BBA3"
 				item: "create_new_age:heat_pipe"
 				type: "item"
 			}]
@@ -789,33 +698,38 @@
 		}
 		{
 			dependencies: [
-				"00000000930AE755"
-				"000000005923E94C"
-				"0000000086C01721"
+				"000000006B09A8EB"
+				"000000000963C3F5"
+				"00000000C6C053B7"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000090F52955"
+			id: "00000000508659DD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BF0E4D68"
+					id: "00000000567BF28D"
 					type: "xp"
-					xp: 11
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C6277581"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000EF39039B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000ABEF853C"
+				id: "00000000730D2475"
 				item: "create_new_age:basic_motor_extension"
 				type: "item"
 			}]
@@ -824,32 +738,37 @@
 		}
 		{
 			dependencies: [
-				"00000000930AE755"
-				"00000000ACB84486"
+				"000000006B09A8EB"
+				"0000000042D73583"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008698352B"
+			id: "000000003CC9EDB9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DB18870C"
+					id: "0000000086FFB9A6"
 					type: "xp"
-					xp: 7
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ABBADFA3"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000009EFEAF69"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000B0EE38C"
+				id: "000000005842B86F"
 				item: "create_new_age:advanced_solar_heating_plate"
 				type: "item"
 			}]
@@ -860,56 +779,66 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B981DFB7"
+			id: "00000000E047F565"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B72161B8"
+					id: "0000000041124958"
 					type: "xp"
-					xp: 3
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D69AD6A2"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000B841032B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000003FE9076F"
+				id: "00000000EC685345"
 				item: "create_new_age:nuclear_fuel"
 				type: "item"
 			}]
 			x: -4.0d
-			y: 3.0d
+			y: 1.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005923E94C"
+			id: "000000000963C3F5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000002A42C91"
+					id: "00000000A049BEC9"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006B2A6DD4"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000007121665A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000782208A6"
+				id: "000000005125C70F"
 				item: "create_new_age:basic_motor"
 				type: "item"
 			}]
@@ -920,26 +849,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008941DC8D"
+			id: "00000000E6278FC0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000021B77C8E"
+					id: "00000000B4578AA3"
 					type: "xp"
 					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C2A03A8A"
-					table_id: 1412960155L
-					type: "random"
+					id: "0000000051B9A995"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CA462B56"
+				id: "0000000071F6C4C9"
 				item: "minecraft:experience_bottle"
 				type: "item"
 			}]
@@ -948,66 +882,76 @@
 		}
 		{
 			dependencies: [
-				"00000000C16B1556"
-				"000000000E06580E"
+				"000000000F6A5D08"
+				"0000000042D73583"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000010A83A96"
+			id: "00000000B51C16E1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A85678BD"
+					id: "000000000B65DD91"
 					type: "xp"
-					xp: 11
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008170513D"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000004AAA871F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009D088C3A"
-				item: "create_new_age:reinforced_energiser"
+				id: "00000000A90A54D4"
+				item: "create_new_age:reactor_heat_vent"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 3.0d
+			x: -1.0d
+			y: 9.0d
 		}
 		{
 			dependencies: [
-				"000000003A5F80EB"
-				"00000000A449DD28"
+				"0000000047472E98"
+				"000000005ACA2AAB"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000086C01721"
+			id: "00000000C6C053B7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000032E6B063"
+					id: "00000000BD0624C5"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000719610D1"
-					table_id: 1412960155L
-					type: "random"
+					id: "0000000031C9B35C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000023F02B78"
+				id: "00000000B668DF73"
 				item: "create_new_age:copper_circuit"
 				type: "item"
 			}]
@@ -1015,30 +959,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000ACB84486"]
+			dependencies: ["0000000042D73583"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F994D86D"
+			id: "000000009D934165"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BD132399"
+					id: "0000000070C29675"
 					type: "xp"
-					xp: 10
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007344BD98"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000D3517D57"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000034DFD196"
+				id: "00000000F5A2C54F"
 				item: "create_new_age:basic_solar_heating_plate"
 				type: "item"
 			}]
@@ -1046,124 +995,70 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["000000000F6A5D08"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003529CCCA"
+			id: "0000000006E1B053"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000624864EB"
+					id: "000000006BA4CE59"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D686E1BA"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000007033FF3F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005F6605F9"
-				item: "create_new_age:redstone_magnet"
+				id: "00000000448987F4"
+				item: "create_new_age:reactor_fuel_acceptor"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 2.0d
+			x: -1.0d
+			y: 8.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C7567A6D"
+			id: "000000005ACA2AAB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000055C79DE8"
+					id: "0000000008437A2F"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009564EA53"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000003473DEE6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "000000008241FB9E"
-				item: "create_new_age:electrical_connector"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"000000004C9C1A14"
-				"00000000E821DEF7"
-				"00000000B981DFB7"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000030E13D39"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008A6E1A68"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D2755725"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000F1B0FD94"
-				item: "create_new_age:reactor_rod"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A449DD28"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B0BA3176"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002FC454B7"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "0000000043C617BA"
+				id: "000000001BB58252"
 				item: "create_new_age:copper_wire"
 				type: "item"
 			}]
@@ -1174,26 +1069,102 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002AE30AFA"
+			id: "00000000AE28E8DC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D5349BC6"
+					id: "000000001D291638"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D33975EF"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000EAA49E41"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005D713302"
+				id: "00000000EFDA313C"
+				item: "create_new_age:electrical_connector"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000BE03187A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A55DD61B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BDA5B9B8"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "00000000F3F47BEB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000112B0BEC"
+				item: "create_new_age:radioactive_thorium"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C31EA4DD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000715DF379"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "000000005661E3A1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000E452EC7D"
 				item: "create_new_age:carbon_brushes"
 				type: "item"
 			}]
@@ -1202,100 +1173,76 @@
 		}
 		{
 			dependencies: [
-				"000000004C9C1A14"
-				"00000000ACB84486"
+				"000000009FB6873D"
+				"000000008ACD041E"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000019D4AFCD"
+			id: "0000000082C6F35F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F940A476"
+					id: "000000007728B649"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002EF6D68D"
-					table_id: 1412960155L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000D39AD3B3"
-				item: "create_new_age:reactor_heat_vent"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000E11E3F27"
-				"00000000D16B03CB"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000E06580E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CBC1D948"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EC3AC24D"
-					table_id: 1412960155L
-					type: "random"
+					id: "0000000084FE6EC7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000EF92E39D"
+				id: "000000007EC00870"
 				item: "create_new_age:advanced_energiser"
 				type: "item"
 			}]
 			x: -4.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"00000000D16B03CB"
-				"00000000C16B1556"
+				"000000001088062F"
+				"000000008ACD041E"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005DA25A3B"
+			id: "0000000049D8801E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000607B5EA5"
+					id: "00000000E80E5577"
 					type: "xp"
-					xp: 9
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C4A8CD9B"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000606174E1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DA4BBD91"
+				id: "0000000066467928"
 				item: "create_new_age:fluxuated_magnetite"
 				type: "item"
 			}]
@@ -1303,29 +1250,70 @@
 			y: 9.0d
 		}
 		{
+			dependencies: ["0000000042D73583"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006148E319"
+			id: "00000000409D6E5F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FFC148F1"
+					id: "00000000977A915A"
 					type: "xp"
-					xp: 9
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007FBE9EB7"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000CFAC2C1B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001576982E"
+				id: "00000000725B546E"
+				item: "create_new_age:stirling_engine"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006E1E9AA8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005DF3B3CA"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "000000003CC159C2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000936A54ED"
 				item: "minecraft:enchanted_golden_apple"
 				type: "item"
 			}]
@@ -1333,61 +1321,149 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000ACB84486"]
+			dependencies: [
+				"000000001088062F"
+				"0000000082C6F35F"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000047C4D47E"
+			id: "0000000007DFFF45"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A6DA3CB6"
+					id: "0000000013E8BCA5"
 					type: "xp"
-					xp: 2
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000920D2208"
-					table_id: 1412960155L
-					type: "random"
+					id: "00000000309292C9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000006E76FDE"
-				item: "create_new_age:stirling_engine"
+				id: "00000000930812B7"
+				item: "create_new_age:reinforced_energiser"
 				type: "item"
 			}]
 			x: -2.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["00000000C16B1556"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000029645535"
+			id: "00000000C21528C4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000033EB708E"
+					id: "00000000E2689E4C"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000AB59723"
-					table_id: 1412960155L
-					type: "random"
+					id: "0000000046A50C45"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000B602CBBE"
+				item: "create_new_age:redstone_magnet"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000000F6A5D08"
+				"00000000D1063616"
+				"00000000E047F565"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000113FBA79"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B7D48A23"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000B12FFBF1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000008793BC5C"
+				item: "create_new_age:reactor_rod"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000001088062F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BA6A02FB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009EDF4D14"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000917688AB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000EB28F531"
+				id: "00000000FB3307CC"
 				item: "create_new_age:reinforced_motor"
 				type: "item"
 			}]
@@ -1395,66 +1471,75 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000EA441802"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005219DE5D"
+			id: "00000000C36FA0A5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000443F2F40"
+					id: "000000006E6BBC0C"
 					type: "xp"
-					xp: 9
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B44D989C"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000007A3F4AF5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000084232683"
-				item: "create_new_age:overcharged_iron_wire"
+				id: "0000000080D030AE"
+				item: "create_new_age:overcharged_iron_sheet"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 0.0d
+			x: -3.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["000000004C9C1A14"]
+			dependencies: ["000000000F6A5D08"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E821DEF7"
+			id: "00000000D1063616"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000520B1CA1"
+					id: "00000000C91C307D"
 					type: "xp"
-					xp: 9
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000EEF0407"
-					table_id: 1412960155L
-					type: "random"
+					id: "000000008C8B5D75"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_new_age"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000F98096AB"
+				id: "000000009D712187"
 				item: "create_new_age:reactor_glass"
 				type: "item"
 			}]
 			x: -4.0d
-			y: 2.0d
+			y: 0.0d
 		}
 	]
 	title: "Create: New Age"

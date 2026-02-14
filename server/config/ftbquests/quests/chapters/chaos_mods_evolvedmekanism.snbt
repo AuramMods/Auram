@@ -2,224 +2,275 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_evolvedmekanism"
-	group: "00000000DEB299A3"
-	icon: "evolvedmekanism:block_alloy_creative"
-	id: "00000000F7DE669E"
-	order_index: 111
+	group: "000000008CDEF944"
+	icon: "evolvedmekanism:alloy_creative"
+	id: "000000003BAA2072"
+	order_index: 110
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["0000000056087EFB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B4507348"
+			id: "00000000D1B69A16"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000889D5601"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D81A7247"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [{
-				consume_items: false
-				id: "00000000859DBD00"
-				item: "evolvedmekanism:alloy_singular"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000005BF89F4F"
-				"00000000B4507348"
-				"0000000003E1D0D0"
-				"00000000898348CB"
-				"00000000D1FED67D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000065271BD3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000EE0C0384"
-					type: "xp"
-					xp: 37
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FEB8485F"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009C7DC514"
-					item: "evolvedmekanism:dense_control_circuit"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000972EAA2C"
-					item: "evolvedmekanism:dense_energy_cube"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000794C3FD4"
-					item: "evolvedmekanism:alloy_exoversal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003C157E22"
-					item: "evolvedmekanism:quantum_alloying_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C4B677E7"
-					item: "evolvedmekanism:quantum_bin"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"000000005BF89F4F"
-				"0000000003E1D0D0"
-				"0000000098920DB5"
-				"00000000D1FED67D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A5B35C62"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004EF2D328"
+					id: "00000000D19B03D5"
 					type: "xp"
 					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003282F292"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000006047688F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000246F5C79"
+				item: "evolvedmekanism:alloy_hypercharged"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000F59C991F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FB93231D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002CA1D782"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "000000008E5DA941"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004FBECF2B"
-					item: "evolvedmekanism:quantum_chemical_tank"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000065959CD2"
-					item: "evolvedmekanism:quantum_combining_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C8CE9877"
-					item: "evolvedmekanism:quantum_compressing_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009CFF7EF1"
-					item: "evolvedmekanism:quantum_crushing_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C1569C53"
-					item: "evolvedmekanism:quantum_enriching_factory"
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "00000000011DD721"
+				item: "evolvedmekanism:block_alloy_creative"
+				type: "item"
+			}]
 			x: -4.0d
 			y: 6.0d
 		}
 		{
 			dependencies: [
-				"000000006CF27A7A"
-				"00000000A000B3F8"
-				"000000002E166AF2"
-				"00000000ADFDA11A"
-				"000000001C4D7520"
+				"000000005FDC4EEE"
+				"000000003ED32A57"
+				"00000000BAED812D"
+				"0000000085C5CD59"
+				"00000000CCE88D4C"
+				"000000004AE51F5D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000879930B0"
+			id: "00000000C5D2C6DD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BA886177"
+					id: "00000000544A913C"
+					type: "xp"
+					xp: 31
+				}
+				{
+					id: "0000000036279231"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006561DC80"
+					item: "evolvedmekanism:nugget_better_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BBD5154F"
+					item: "evolvedmekanism:dense_control_circuit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FC9B0C90"
+					item: "evolvedmekanism:dense_energy_cube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000873B1985"
+					item: "evolvedmekanism:quantum_alloying_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000543B0B2A"
+					item: "evolvedmekanism:quantum_bin"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000005FDC4EEE"
+				"00000000BAED812D"
+				"00000000CCE88D4C"
+				"00000000C28BFC85"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D5FD1A07"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BC458F12"
 					type: "xp"
 					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DA5DFF12"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000AC61FAF9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000DF637417"
+					item: "evolvedmekanism:quantum_chemical_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005388F250"
+					item: "evolvedmekanism:quantum_combining_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000162FEE80"
+					item: "evolvedmekanism:quantum_compressing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056C6469C"
+					item: "evolvedmekanism:quantum_crushing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000701E0324"
+					item: "evolvedmekanism:quantum_enriching_factory"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000802FC13D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BB86DE5C"
+					type: "xp"
+					xp: 40
+				}
+				{
+					id: "00000000B90BD718"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005FAC60F4"
-					item: "evolvedmekanism:creative_solar_generator"
+					id: "00000000F7397790"
+					item: "mekanism:elite_alloying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006B12AA57"
-					item: "evolvedmekanism:creative_thermodynamic_conductor"
+					id: "0000000035515A10"
+					item: "thermal:enderium_ingot"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000095B02787"
-					item: "evolvedmekanism:creative_tier_installer"
+					id: "00000000BD56B6BF"
+					item: "ae2:engineering_processor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000013F48B83"
-					item: "evolvedmekanism:creative_universal_cable"
+					id: "000000009A3D842A"
+					item: "evolvedmekanism:enriched_better_gold"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000011CDAF49"
-					item: "evolvedmekanism:mold_dust"
+					id: "000000006049EC7F"
+					item: "evolvedmekanism:enriched_plaslitherite"
 					type: "item"
 				}
 			]
@@ -228,59 +279,66 @@
 		}
 		{
 			dependencies: [
-				"000000006CF27A7A"
-				"000000002E166AF2"
-				"00000000C19BA038"
+				"00000000484D3A3D"
+				"00000000F40CC0A9"
+				"0000000080E11406"
+				"00000000F59C991F"
+				"000000001AAC7B02"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E81BD4D5"
+			id: "00000000C5DFA667"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C8F77F3A"
+					id: "00000000BA7494B3"
 					type: "xp"
-					xp: 25
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AB60EA4F"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000D83BFC50"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004A931AB0"
-					item: "evolvedmekanism:creative_pressurized_tube"
+					id: "00000000625AF17B"
+					item: "evolvedmekanism:creative_solar_generator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003FB61763"
-					item: "evolvedmekanism:creative_purifying_factory"
+					id: "000000005FCB4C09"
+					item: "evolvedmekanism:creative_thermodynamic_conductor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000074ABB053"
-					item: "evolvedmekanism:qio_drive_creative"
+					id: "0000000063CEE7EE"
+					item: "evolvedmekanism:creative_tier_installer"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001F8FEA11"
-					item: "evolvedmekanism:creative_sawing_factory"
+					id: "00000000A4A7B03A"
+					item: "evolvedmekanism:creative_universal_cable"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001DE9B82B"
-					item: "evolvedmekanism:creative_smelting_factory"
+					id: "000000000E9C32EE"
+					item: "evolvedmekanism:mold_dust"
 					type: "item"
 				}
 			]
@@ -289,60 +347,66 @@
 		}
 		{
 			dependencies: [
-				"000000006CF27A7A"
-				"000000002E166AF2"
-				"00000000C19BA038"
-				"00000000FBAC87DB"
+				"00000000484D3A3D"
+				"00000000D1B6DF53"
+				"00000000F59C991F"
+				"000000001AAC7B02"
+				"000000002C589FAE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001719BD2A"
+			id: "000000004D23FFAF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006DD4C17A"
+					id: "0000000030795FF0"
 					type: "xp"
-					xp: 13
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000092AF2EFB"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000F4DE32A1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B89C2EE0"
-					item: "evolvedmekanism:creative_injecting_factory"
+					id: "000000004BCAB2A8"
+					item: "evolvedmekanism:creative_pressurized_tube"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001CBEA4E0"
-					item: "evolvedmekanism:creative_logistical_transporter"
+					id: "00000000D5A697F4"
+					item: "evolvedmekanism:creative_purifying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007F676C6E"
-					item: "evolvedmekanism:creative_mechanical_pipe"
+					id: "00000000FB31EEEF"
+					item: "evolvedmekanism:qio_drive_creative"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004D9EE114"
-					item: "evolvedmekanism:creative_personal_barrel"
+					id: "0000000094933D14"
+					item: "evolvedmekanism:creative_sawing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000094FD5899"
-					item: "evolvedmekanism:creative_personal_chest"
+					id: "00000000C358905F"
+					item: "evolvedmekanism:creative_smelting_factory"
 					type: "item"
 				}
 			]
@@ -351,60 +415,65 @@
 		}
 		{
 			dependencies: [
-				"00000000C5A8B75C"
-				"000000006CF27A7A"
-				"000000002E166AF2"
-				"00000000FBAC87DB"
+				"00000000B8E09E5B"
+				"00000000484D3A3D"
+				"00000000F59C991F"
+				"000000002C589FAE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000314B2648"
+			id: "000000005AE1DF7D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000093181181"
+					id: "000000006B5B162C"
 					type: "xp"
-					xp: 10
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000005745607"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000008CD4444E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F1167245"
-					item: "evolvedmekanism:creative_enriching_factory"
+					id: "00000000A395622A"
+					item: "evolvedmekanism:creative_injecting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D2311FF6"
-					item: "mekanism:creative_fluid_tank"
+					id: "0000000024FA6DCA"
+					item: "evolvedmekanism:creative_logistical_transporter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FB3F1BA7"
-					item: "evolvedmekanism:creative_induction_cell"
+					id: "00000000C44232E2"
+					item: "evolvedmekanism:creative_mechanical_pipe"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000088A14744"
-					item: "evolvedmekanism:creative_induction_provider"
+					id: "000000007223C141"
+					item: "evolvedmekanism:creative_personal_barrel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003D3ADC75"
-					item: "evolvedmekanism:creative_infusing_factory"
+					id: "0000000000591D06"
+					item: "evolvedmekanism:creative_personal_chest"
 					type: "item"
 				}
 			]
@@ -415,52 +484,57 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C744A509"
+			id: "00000000EEFBC47B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A59A3CD6"
+					id: "00000000195545C1"
 					type: "xp"
-					xp: 6
+					xp: 44
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000880406A3"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000005F7B0DD7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000074236BE0"
-					item: "mekanism:elite_alloying_factory"
+					id: "0000000089F38D51"
+					item: "evolvedmekanism:enriched_uranium"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009173F20E"
-					item: "thermal:enderium_ingot"
+					id: "00000000ACDDEDC4"
+					item: "ae2:fluix_crystal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000086B21411"
-					item: "ae2:engineering_processor"
+					id: "00000000D01E2528"
+					item: "mekanism:fluorite_ore"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000068E139B"
-					item: "evolvedmekanism:enriched_better_gold"
+					id: "000000002BA3878A"
+					item: "evolvedmekanism:mold_gear"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008FF349DF"
-					item: "evolvedmekanism:enriched_plaslitherite"
+					id: "00000000C8625F52"
+					item: "evolvedmekanism:mold_gem"
 					type: "item"
 				}
 			]
@@ -469,56 +543,61 @@
 		}
 		{
 			dependencies: [
-				"00000000A000B3F8"
-				"00000000D1FED67D"
+				"00000000D1B6DF53"
+				"00000000BAED812D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008A3DB685"
+			id: "000000008B852991"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007C168543"
+					id: "00000000CEF7C547"
 					type: "xp"
-					xp: 32
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007D1E1641"
-					table_id: 1526046823L
-					type: "random"
+					id: "0000000007938DFC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000099C864F1"
+					id: "00000000070FB7AF"
 					item: "evolvedmekanism:apt_port"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D5EEB0D2"
+					id: "00000000BA44B85A"
 					item: "mekanism:advanced_alloying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BE7551FC"
+					id: "0000000074575163"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B1DBED52"
+					id: "0000000019991EF8"
 					item: "evolvedmekanism:module_air_affinity_unit"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000023B97139"
+					id: "00000000A39B5BF4"
 					item: "evolvedmekanism:module_aqua_affinity_unit"
 					type: "item"
 				}
@@ -528,61 +607,65 @@
 		}
 		{
 			dependencies: [
-				"00000000C5A8B75C"
-				"00000000B6A6304B"
-				"000000006CF27A7A"
-				"00000000672352F1"
-				"000000002E166AF2"
+				"00000000B8E09E5B"
+				"00000000ACF3499A"
+				"00000000484D3A3D"
+				"00000000F59C991F"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F79B5015"
+			id: "000000006FFA15E9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000041B030D1"
+					id: "0000000001C94397"
 					type: "xp"
-					xp: 19
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008E569892"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000218FF5C0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000576378FB"
-					item: "mekanism:creative_chemical_tank"
+					id: "0000000080706B13"
+					item: "evolvedmekanism:creative_enriching_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F4ADAE2B"
-					item: "evolvedmekanism:creative_combining_factory"
+					id: "00000000D51F7E46"
+					item: "mekanism:creative_fluid_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008B2987FA"
-					item: "evolvedmekanism:creative_compressing_factory"
+					id: "0000000032ED6D74"
+					item: "evolvedmekanism:creative_induction_cell"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000025CDBBE2"
-					item: "evolvedmekanism:creative_crushing_factory"
+					id: "00000000F360EAD3"
+					item: "evolvedmekanism:creative_induction_provider"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002568FD23"
-					item: "mekanism:creative_energy_cube"
+					id: "00000000F229A5DF"
+					item: "evolvedmekanism:creative_infusing_factory"
 					type: "item"
 				}
 			]
@@ -591,62 +674,65 @@
 		}
 		{
 			dependencies: [
-				"00000000B6A6304B"
-				"000000006CF27A7A"
-				"00000000A000B3F8"
-				"00000000B4507348"
-				"0000000065271BD3"
-				"000000002E166AF2"
+				"00000000ACF3499A"
+				"00000000484D3A3D"
+				"00000000419F3DB9"
+				"00000000F59C991F"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003C3E6F52"
+			id: "00000000517AACEB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004CFC19CA"
+					id: "0000000030ADD7CB"
 					type: "xp"
-					xp: 36
+					xp: 46
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003EA1EF86"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000DF44B862"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008C84A5BD"
-					item: "evolvedmekanism:module_capturing_unit"
+					id: "000000009D064790"
+					item: "mekanism:creative_chemical_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001C098841"
-					item: "evolvedmekanism:chemixer"
+					id: "00000000D6C09081"
+					item: "evolvedmekanism:creative_combining_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000088B52EDA"
-					item: "evolvedmekanism:mold_coin"
+					id: "00000000D72D697A"
+					item: "evolvedmekanism:creative_compressing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000097033703"
-					item: "evolvedmekanism:creative_alloying_factory"
+					id: "000000005D4AB2A6"
+					item: "evolvedmekanism:creative_crushing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006111827E"
-					item: "mekanism:creative_bin"
+					id: "000000005DF16E42"
+					item: "mekanism:creative_energy_cube"
 					type: "item"
 				}
 			]
@@ -655,62 +741,124 @@
 		}
 		{
 			dependencies: [
-				"000000005BF89F4F"
-				"000000006CF27A7A"
-				"00000000A000B3F8"
-				"00000000C9FBA118"
-				"000000001D00F12D"
-				"000000002E166AF2"
-				"00000000ADFDA11A"
+				"00000000484D3A3D"
+				"00000000D1B6DF53"
+				"00000000C5D2C6DD"
+				"00000000F59C991F"
+				"000000004AE51F5D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C896AA16"
+			id: "00000000D90ABE41"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000C8E3EB5"
+					id: "000000003311913B"
 					type: "xp"
-					xp: 6
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007804DB4F"
-					table_id: 1526046823L
-					type: "random"
+					id: "0000000029FD9B64"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000782ADB3A"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:better_gold_leggings"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "0000000088DE1375"
+					item: "evolvedmekanism:module_capturing_unit"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CC52B97E"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:better_gold_paxel"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "00000000A2847043"
+					item: "evolvedmekanism:chemixer"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000384295AE"
+					id: "00000000C8747FD8"
+					item: "evolvedmekanism:mold_coin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000793B3239"
+					item: "evolvedmekanism:creative_alloying_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007C79948E"
+					item: "mekanism:creative_bin"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000005FDC4EEE"
+				"00000000484D3A3D"
+				"00000000D1B6DF53"
+				"0000000056087EFB"
+				"00000000FB93231D"
+				"000000004FFBB2A0"
+				"000000001F0B86F9"
+				"000000008E49D626"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000070D555D3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E7D70780"
+					type: "xp"
+					xp: 14
+				}
+				{
+					id: "00000000B3F6C687"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C976CB55"
+					item: "mekanism:alloy_atomic"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000099BE5F06"
+					item: "mekanism:basic_alloying_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D3D7452F"
 					item: {
 						Count: 1
 						id: "evolvedmekanism:better_gold_shield"
@@ -722,92 +870,14 @@
 				}
 				{
 					consume_items: false
-					id: "00000000414D76B0"
+					id: "0000000022D1A995"
 					item: "evolvedmekanism:mold_storage_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009BC5906B"
+					id: "00000000F1F3B676"
 					item: "ae2:calculation_processor"
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"000000005BF89F4F"
-				"00000000A000B3F8"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004E78BE79"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000720B525C"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000025688A5D"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000037650BB1"
-					item: "mekanism:alloy_atomic"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001281288A"
-					item: "mekanism:basic_alloying_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EDE1F1C8"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:better_gold_boots"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000033C78320"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:better_gold_chestplate"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003F4DC04C"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:better_gold_helmet"
-						tag: {
-							Damage: 0
-						}
-					}
 					type: "item"
 				}
 			]
@@ -816,60 +886,65 @@
 		}
 		{
 			dependencies: [
-				"000000005BF89F4F"
-				"00000000898348CB"
-				"0000000098920DB5"
-				"000000009E9FE0A9"
-				"00000000D1FED67D"
+				"000000005FDC4EEE"
+				"00000000BAED812D"
+				"0000000085C5CD59"
+				"00000000C28BFC85"
+				"0000000001A2CFAC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000021B922D4"
+			id: "0000000029744BCB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000084BE4BC9"
+					id: "00000000BD09EA73"
 					type: "xp"
-					xp: 10
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002992A963"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000009A39D3CC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006E573BA4"
+					id: "0000000013BBB200"
 					item: "evolvedmekanism:quantum_fluid_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000DE7B84F"
+					id: "0000000023E8EE84"
 					item: "evolvedmekanism:quantum_induction_cell"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AACF6EB8"
+					id: "00000000EDACB85F"
 					item: "evolvedmekanism:quantum_induction_provider"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009432E4CC"
+					id: "00000000C0116D03"
 					item: "evolvedmekanism:quantum_infusing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000098BFC5C2"
+					id: "00000000A6683FE8"
 					item: "evolvedmekanism:quantum_injecting_factory"
 					type: "item"
 				}
@@ -879,59 +954,64 @@
 		}
 		{
 			dependencies: [
-				"000000005BF89F4F"
-				"000000009E9FE0A9"
-				"000000007F91994E"
-				"00000000D1FED67D"
+				"000000005FDC4EEE"
+				"00000000BAED812D"
+				"0000000001A2CFAC"
+				"000000008F61AF6A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000348A95C1"
+			id: "00000000C03BD491"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000004B1F643"
+					id: "00000000C955922E"
 					type: "xp"
-					xp: 48
+					xp: 45
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004441734F"
-					table_id: 1526046823L
-					type: "random"
+					id: "0000000077DEDF74"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007CA391D4"
+					id: "00000000D4A26087"
 					item: "evolvedmekanism:quantum_logistical_transporter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000089EBD7F5"
+					id: "00000000E41A90B3"
 					item: "evolvedmekanism:quantum_mechanical_pipe"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000555D3E4F"
+					id: "00000000ABFD5289"
 					item: "evolvedmekanism:quantum_personal_barrel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B298346F"
+					id: "00000000CF8F750C"
 					item: "evolvedmekanism:quantum_personal_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002AF97EAD"
+					id: "00000000DE067B18"
 					item: "evolvedmekanism:quantum_pressurized_tube"
 					type: "item"
 				}
@@ -941,59 +1021,112 @@
 		}
 		{
 			dependencies: [
-				"000000005BF89F4F"
-				"000000007F91994E"
-				"00000000D1FED67D"
+				"000000005FDC4EEE"
+				"00000000BAED812D"
+				"000000008F61AF6A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000028A0AE18"
+			id: "000000000F8A10CF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000474E8155"
+					id: "00000000703F8F09"
 					type: "xp"
-					xp: 30
+					xp: 44
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B66BC155"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000000BB19800"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DE376742"
+					id: "000000005D6CD63B"
 					item: "evolvedmekanism:quantum_purifying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B4C112E6"
+					id: "0000000074BE27CF"
 					item: "evolvedmekanism:quantum_sawing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FF81A89E"
+					id: "000000007AD6170F"
 					item: "evolvedmekanism:quantum_smelting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000862BAB00"
+					id: "000000009D23EE79"
 					item: "evolvedmekanism:quantum_solar_generator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D600032E"
+					id: "000000004598A075"
 					item: "evolvedmekanism:quantum_thermodynamic_conductor"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000005FDC4EEE"
+				"00000000BAED812D"
+				"00000000CCE88D4C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000721A9D6D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CB7FA391"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "00000000C61FCA53"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E48F88AE"
+					item: "evolvedmekanism:quantum_universal_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C28F964F"
+					item: "evolvedmekanism:qio_drive_singularity"
 					type: "item"
 				}
 			]
@@ -1001,141 +1134,108 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000B4507348"]
+			dependencies: ["00000000F40CC0A9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002E166AF2"
+			id: "00000000441BE6B1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002D091BF6"
+					id: "00000000E25E2395"
 					type: "xp"
-					xp: 5
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006C75B1B9"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "gear"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000997C572F"
-					item: "evolvedmekanism:alloy_creative"
+					id: "00000000CC3B73AF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003C28A0CA"
-					item: "evolvedmekanism:block_alloy_singular"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"000000005BF89F4F"
-				"0000000003E1D0D0"
-				"00000000D1FED67D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D442B5A6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A918C3A8"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DBED4F1B"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B67B10C6"
-					item: "evolvedmekanism:quantum_universal_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B6A51AE4"
-					item: "evolvedmekanism:qio_drive_singularity"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"000000002133F31E"
-				"000000001D00F12D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005934F58B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D75537D4"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000260F9EC9"
-					table_id: 1526046823L
-					type: "random"
 				}
 			]
 			shape: "hexagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004A6C3CE8"
-					item: "evolvedmekanism:overclocked_control_circuit"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000043BF7213"
-					item: "evolvedmekanism:overclocked_energy_cube"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CEC252B7"
-					item: "evolvedmekanism:ultimate_personal_barrel"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009B434CA0"
+					id: "00000000CA26399D"
 					item: "evolvedmekanism:ultimate_personal_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000006A5C5AE"
+					id: "00000000D13A4E30"
 					item: "evolvedmekanism:ultimate_solar_generator"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000D1B69A16"
+				"00000000F40CC0A9"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005FDC4EEE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DED5E8B0"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "00000000DF8C2951"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BF993FF0"
+					item: "evolvedmekanism:ingot_better_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000076064DE3"
+					item: "evolvedmekanism:overclocked_control_circuit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000227C92BC"
+					item: "evolvedmekanism:overclocked_energy_cube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000490342C3"
+					item: "evolvedmekanism:alloy_subatomic"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E2B0507"
+					item: "evolvedmekanism:ultimate_personal_barrel"
 					type: "item"
 				}
 			]
@@ -1146,213 +1246,110 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000094115151"
+			id: "000000006907E4A2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000039C365C7"
+					id: "0000000052F24395"
 					type: "xp"
-					xp: 1
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000891C0142"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000C549F645"
-				item: "evolvedmekanism:mold_wire"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 8.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001D00F12D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E7A1E6CD"
-					type: "xp"
-					xp: 26
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E6786267"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000003AF6D5A3"
-					item: "evolvedmekanism:nugget_better_gold"
+					id: "00000000153081C4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EE2C5F4D"
-					item: "evolvedmekanism:alloy_hypercharged"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A7D00838"
-					item: "evolvedmekanism:block_plaslitherite"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000048CD5086"
-					item: "evolvedmekanism:nugget_refined_redstone"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007785891F"
-					item: "evolvedmekanism:block_alloy_subatomic"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009E095EF4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000362C7BD2"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000056089CC6"
-					table_id: 1526046823L
-					type: "random"
 				}
 			]
 			shape: "heart"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000085C23CF5"
+					id: "000000001117EE4E"
 					item: "evolvedmekanism:advanced_personal_barrel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006AA87A2E"
+					id: "0000000084CAA2B2"
 					item: "evolvedmekanism:advanced_personal_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AE43CFAB"
+					id: "00000000DA7607C8"
 					item: "evolvedmekanism:advanced_solar_generator"
 					type: "item"
 				}
 			]
 			x: -5.0d
-			y: 0.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["000000005BF89F4F"]
+			dependencies: [
+				"000000004FFBB2A0"
+				"000000001F0B86F9"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009419BF5F"
+			id: "000000005C735E65"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009F79D81F"
+					id: "00000000CB7B4D6B"
 					type: "xp"
-					xp: 33
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000094294ECB"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000003F275BE9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000485EA187"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:refined_redstone_chestplate"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "000000007759E1E4"
+					item: "evolvedmekanism:supercharging_element"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DEDF2AC0"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:refined_redstone_helmet"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "00000000D3549AA7"
+					item: "evolvedmekanism:thermalizer"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000015C6DC15"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:refined_redstone_leggings"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "0000000038297B0B"
+					item: "thermal:tin_ore"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008C3800D0"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:refined_redstone_paxel"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "00000000DF916689"
+					item: "mekanism:ultimate_alloying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000043CDCBA1"
-					item: {
-						Count: 1
-						id: "evolvedmekanism:refined_redstone_shield"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "000000009D96D746"
+					item: "immersiveengineering:ore_uranium"
 					type: "item"
 				}
 			]
@@ -1361,33 +1358,334 @@
 		}
 		{
 			dependencies: [
-				"000000005BF89F4F"
-				"00000000B4507348"
+				"000000001F0B86F9"
+				"00000000B9F709BA"
+				"000000004AE51F5D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B504B9F6"
+			id: "000000004FFBB2A0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CA5F7696"
+					id: "000000006568D0E7"
 					type: "xp"
-					xp: 48
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ACB442FF"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000C4A179DE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000886B8443"
+					id: "00000000B7AF8BF8"
+					item: "evolvedmekanism:alloy_exoversal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003EEFF475"
+					item: "evolvedmekanism:ingot_plaslitherite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000FFB8CC9"
+					item: "evolvedmekanism:nugget_refined_redstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E4F63B71"
+					item: "evolvedmekanism:block_alloy_singular"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000008E49D626"
+				"000000004AE51F5D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005BB50D38"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001DBD129B"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "00000000D0B57AC7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000976F5F88"
+					item: "mekanism:alloy_reinforced"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000056E4DC61"
+					item: "evolvedmekanism:mold_rod"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A54345C4"
+					item: "thermal:signalum_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007B66B468"
+					item: "evolvedmekanism:upgrade_solar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009DD557B3"
+					item: "evolvedmekanism:solidification_chamber"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DA4501B0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009F5C5E2D"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "000000007C88428E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000004C75BB86"
+				item: "evolvedmekanism:mold_wire"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000484D3A3D"
+				"00000000419F3DB9"
+				"00000000C5D2C6DD"
+				"000000004FFBB2A0"
+				"0000000080E11406"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CA7D7D09"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009CE582AE"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "0000000029A18F0C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FB9915D8"
+					item: "evolvedmekanism:module_luck_unit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003A1C1893"
+					item: "thermal:lumium_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ADEC2A40"
+					item: "evolvedmekanism:max_tier_installer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C69A793"
+					item: "evolvedmekanism:mold_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C8CC8944"
+					item: "mekanism:osmium_ore"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000005FDC4EEE"
+				"00000000484D3A3D"
+				"000000004FFBB2A0"
+				"000000001F0B86F9"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E1FF7C0E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A6C2B176"
+					type: "xp"
+					xp: 45
+				}
+				{
+					id: "00000000D9374FB6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000850B84A9"
+					item: "thermal:obsidian_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C759CD41"
+					item: "mekanism:alloy_infused"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000044B91AA1"
+					item: "evolvedmekanism:mold_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A2A17F62"
+					item: "thermal:lead_ore"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E5BB87AB"
+					item: "ae2:logic_processor"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000004FFBB2A0"
+				"000000001F0B86F9"
+				"000000004AE51F5D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000065B06117"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B7535854"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "000000001917B946"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001AABF72F"
 					item: {
 						Count: 1
 						id: "evolvedmekanism:plaslitherite_shield"
@@ -1399,28 +1697,28 @@
 				}
 				{
 					consume_items: false
-					id: "0000000090E7AD98"
+					id: "000000004A4D9956"
 					item: "evolvedmekanism:mold_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005A7091B3"
+					id: "0000000031ED2683"
 					item: "evolvedmekanism:upgrade_radioactive"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000332C33CA"
+					id: "0000000044802BDD"
 					item: "minecraft:redstone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000063A774DC"
+					id: "000000003F8C01E3"
 					item: {
 						Count: 1
-						id: "evolvedmekanism:refined_redstone_boots"
+						id: "evolvedmekanism:refined_redstone_shield"
 						tag: {
 							Damage: 0
 						}
@@ -1429,270 +1727,39 @@
 				}
 			]
 			x: -1.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
-			dependencies: [
-				"000000005BF89F4F"
-				"000000002E166AF2"
-			]
+			dependencies: ["000000004FFBB2A0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000918314B"
+			id: "0000000066930606"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E1C2049F"
+					id: "000000004261FB5B"
 					type: "xp"
-					xp: 10
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000019AB373"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000CADBA0B5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000DEC7A7D"
-					item: "evolvedmekanism:supercharging_element"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000041A494C7"
-					item: "evolvedmekanism:thermalizer"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BE144AC1"
-					item: "thermal:tin_ore"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009BFBABF7"
-					item: "mekanism:ultimate_alloying_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000061CDF65D"
-					item: "immersiveengineering:ore_uranium"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000B4507348"
-				"00000000ADFDA11A"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E2E9A056"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000086A05BE3"
-					type: "xp"
-					xp: 36
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000003448078"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C05EAE56"
-					item: "mekanism:alloy_reinforced"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C77171D4"
-					item: "evolvedmekanism:mold_rod"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A7501270"
-					item: "thermal:signalum_ingot"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B048EA70"
-					item: "evolvedmekanism:upgrade_solar"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000068533D65"
-					item: "evolvedmekanism:solidification_chamber"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"000000005BF89F4F"
-				"000000006CF27A7A"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007E373251"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000097F7124C"
-					type: "xp"
-					xp: 34
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001086409F"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000D7D2142D"
-					item: "thermal:obsidian_glass"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000098C54A8A"
-					item: "mekanism:alloy_infused"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D28F2230"
-					item: "evolvedmekanism:mold_ingot"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E6ACE88C"
-					item: "thermal:lead_ore"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002B130975"
-					item: "ae2:logic_processor"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000787452B5"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FAA80A02"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000803B50BA"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000CC307AA5"
-					item: "evolvedmekanism:enriched_uranium"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B6F828F0"
-					item: "ae2:fluix_crystal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000054B1F1B3"
-					item: "mekanism:fluorite_ore"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EA45A7E6"
-					item: "evolvedmekanism:mold_gear"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000032CBFC4D"
-					item: "evolvedmekanism:mold_gem"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["000000005BF89F4F"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C59A3D3B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006A66016F"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008583E3D9"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000E4689A9F"
+					id: "00000000BB8894B4"
 					item: {
 						Count: 1
 						id: "evolvedmekanism:plaslitherite_boots"
@@ -1704,7 +1771,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000158CAB51"
+					id: "00000000FCAE73C3"
 					item: {
 						Count: 1
 						id: "evolvedmekanism:plaslitherite_chestplate"
@@ -1716,7 +1783,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000D7DA46E9"
+					id: "00000000559900C0"
 					item: {
 						Count: 1
 						id: "evolvedmekanism:plaslitherite_helmet"
@@ -1728,7 +1795,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000008308C256"
+					id: "00000000453B8207"
 					item: {
 						Count: 1
 						id: "evolvedmekanism:plaslitherite_leggings"
@@ -1740,7 +1807,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000609CA9F0"
+					id: "0000000086045F55"
 					item: {
 						Count: 1
 						id: "evolvedmekanism:plaslitherite_paxel"
@@ -1752,247 +1819,296 @@
 				}
 			]
 			x: -1.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"000000006CF27A7A"
-				"00000000672352F1"
-				"000000001D00F12D"
-				"00000000ADFDA11A"
-				"000000001C4D7520"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000BA3C8DDB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009CA4233C"
-					type: "xp"
-					xp: 46
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DFA7134D"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000267D273B"
-					item: "evolvedmekanism:module_luck_unit"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A6FD9434"
-					item: "thermal:lumium_ingot"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E35B4604"
-					item: "evolvedmekanism:max_tier_installer"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000077D9F9F5"
-					item: "evolvedmekanism:mold_nugget"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008AE4A89E"
-					item: "mekanism:osmium_ore"
-					type: "item"
-				}
-			]
-			x: -1.0d
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000005934F58B"
-				"000000001D00F12D"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000003E1D0D0"
+			id: "0000000056087EFB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003E899651"
+					id: "000000003912F1B8"
 					type: "xp"
-					xp: 44
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008698EEA7"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000001FB3C470"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000739BE8BF"
+				item: "evolvedmekanism:block_alloy_hypercharged"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F59C991F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007B1644DB"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "0000000048CF0B3C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000022E7B3AB"
+				item: "evolvedmekanism:alloy_creative"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000005FDC4EEE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003ED32A57"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003A8B1565"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "00000000D61DBE54"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A977DDDA"
-					item: "evolvedmekanism:qio_drive_boosted"
+					id: "00000000DCAE731A"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:better_gold_boots"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000780F5A64"
-					item: "evolvedmekanism:overclocked_alloying_factory"
+					id: "00000000271556A7"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:better_gold_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003FCD8175"
-					item: "evolvedmekanism:overclocked_bin"
+					id: "00000000938584EC"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:better_gold_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006365C91C"
-					item: "evolvedmekanism:overclocked_chemical_tank"
+					id: "000000005454DAA8"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:better_gold_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005489A0D7"
-					item: "evolvedmekanism:overclocked_combining_factory"
+					id: "00000000BF794ECE"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:better_gold_paxel"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 			]
 			x: -5.0d
-			y: 3.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"00000000B4507348"
-				"0000000065271BD3"
-				"00000000A5B35C62"
+				"00000000C5D2C6DD"
+				"00000000D5FD1A07"
+				"000000004AE51F5D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A8A01291"
+			id: "0000000084FDC0BC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000096E90DD7"
+					id: "00000000F80893CA"
 					type: "xp"
-					xp: 21
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C5248BB8"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000B343CFB5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008A40961E"
+					id: "00000000DABC37CE"
 					item: "evolvedmekanism:dense_alloying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000082A5B8E9"
+					id: "00000000F89BA441"
 					item: "evolvedmekanism:dense_bin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C84709ED"
+					id: "000000003AD5DDCD"
 					item: "evolvedmekanism:dense_chemical_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B4BFF265"
+					id: "000000009DB71261"
 					item: "evolvedmekanism:dense_combining_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009FA05D5D"
+					id: "0000000072044CE6"
 					item: "evolvedmekanism:dense_compressing_factory"
 					type: "item"
 				}
 			]
 			x: -3.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"00000000B4507348"
-				"0000000065271BD3"
-				"00000000A5B35C62"
-				"0000000021B922D4"
+				"00000000C5D2C6DD"
+				"00000000D5FD1A07"
+				"0000000029744BCB"
+				"000000004AE51F5D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000066FD6FD7"
+			id: "00000000ADA6650A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D53C5938"
+					id: "0000000083E23D1B"
 					type: "xp"
-					xp: 21
+					xp: 46
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000071BA1691"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000006FC23559"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000045851E7"
+					id: "000000007CDE4F24"
 					item: "evolvedmekanism:dense_crushing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000211D3F0B"
+					id: "000000004943AA76"
 					item: "evolvedmekanism:dense_enriching_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000039B77E5C"
+					id: "0000000081DE82ED"
 					item: "evolvedmekanism:dense_fluid_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000054C610A8"
+					id: "000000007BD47E4C"
 					item: "evolvedmekanism:dense_induction_cell"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003C79DB31"
+					id: "000000009C67265C"
 					item: "evolvedmekanism:dense_induction_provider"
 					type: "item"
 				}
@@ -2002,59 +2118,64 @@
 		}
 		{
 			dependencies: [
-				"00000000B4507348"
-				"0000000065271BD3"
-				"0000000021B922D4"
-				"00000000348A95C1"
+				"00000000C5D2C6DD"
+				"0000000029744BCB"
+				"00000000C03BD491"
+				"000000004AE51F5D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000F14A59D"
+			id: "00000000EFADB462"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000056A3F41D"
+					id: "0000000075F8F4AA"
 					type: "xp"
-					xp: 38
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000036E0E183"
-					table_id: 1526046823L
-					type: "random"
+					id: "0000000052175579"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006F784D56"
+					id: "000000002BB875A5"
 					item: "evolvedmekanism:dense_infusing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004B28E055"
+					id: "0000000070F31777"
 					item: "evolvedmekanism:dense_injecting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D1681BF3"
+					id: "000000003501D064"
 					item: "evolvedmekanism:dense_logistical_transporter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A94626FF"
+					id: "00000000B7FDDEAA"
 					item: "evolvedmekanism:dense_mechanical_pipe"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B6145994"
+					id: "00000000C4A33FDA"
 					item: "evolvedmekanism:dense_personal_barrel"
 					type: "item"
 				}
@@ -2064,175 +2185,119 @@
 		}
 		{
 			dependencies: [
-				"000000005BF89F4F"
-				"00000000D1FED67D"
+				"000000005FDC4EEE"
+				"000000001F0B86F9"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ADFDA11A"
+			id: "000000008E49D626"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005CF06A07"
+					id: "000000008EA885FC"
 					type: "xp"
-					xp: 38
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000069EA966E"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000F0707A49"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000023150ECD"
-					item: "evolvedmekanism:dust_plaslitherite"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000533848F"
-					item: "evolvedmekanism:quantum_tier_installer"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CB9FCE25"
+					id: "000000008E6A9C1B"
 					item: "evolvedmekanism:block_refined_redstone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EEE930C1"
+					id: "00000000DA8B87B7"
 					item: "evolvedmekanism:block_alloy_reinforced"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019455A8B"
+					item: "evolvedmekanism:block_alloy_subatomic"
 					type: "item"
 				}
 			]
 			x: -2.0d
-			y: 3.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"000000005934F58B"
-				"0000000093A5CE78"
-				"0000000065271BD3"
-				"000000001D00F12D"
+				"00000000D1B69A16"
+				"000000005FDC4EEE"
+				"00000000F7869260"
+				"00000000BAED812D"
+				"000000004FFBB2A0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001C4D7520"
+			id: "0000000080E11406"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F14A004B"
+					id: "0000000006B76903"
 					type: "xp"
-					xp: 8
+					xp: 47
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005B8CC454"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000004CD4C2D1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A47A0FC8"
-					item: "evolvedmekanism:multiversal_solar_generator"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000080C576EC"
-					item: "evolvedmekanism:multiversal_thermodynamic_conductor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AB4597C1"
+					id: "00000000EEFB968E"
 					item: "evolvedmekanism:multiversal_tier_installer"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000136B3EA1"
+					id: "000000003E7D8BF7"
 					item: "evolvedmekanism:multiversal_universal_cable"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000022E1B189"
+					id: "00000000CF06778D"
 					item: "evolvedmekanism:overclocked_tier_installer"
 					type: "item"
 				}
-			]
-			x: -2.0d
-			y: 8.0d
-		}
-		{
-			dependencies: [
-				"00000000517EC0C3"
-				"0000000093A5CE78"
-				"0000000065271BD3"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C19BA038"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008DB58261"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D2C45E39"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
 				{
 					consume_items: false
-					id: "0000000001E5EF60"
-					item: "evolvedmekanism:multiversal_personal_chest"
+					id: "00000000AFC295E5"
+					item: "evolvedmekanism:dust_plaslitherite"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A68DD095"
-					item: "evolvedmekanism:multiversal_pressurized_tube"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000006E9A36"
-					item: "evolvedmekanism:multiversal_purifying_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B488E558"
-					item: "evolvedmekanism:multiversal_sawing_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F55E452F"
-					item: "evolvedmekanism:multiversal_smelting_factory"
+					id: "00000000D8907DFB"
+					item: "evolvedmekanism:quantum_tier_installer"
 					type: "item"
 				}
 			]
@@ -2241,59 +2306,64 @@
 		}
 		{
 			dependencies: [
-				"0000000093A5CE78"
-				"0000000065271BD3"
-				"000000000F14A59D"
+				"0000000086A68E2F"
+				"00000000F7869260"
+				"000000004FFBB2A0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FBAC87DB"
+			id: "000000001AAC7B02"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B320D889"
+					id: "00000000ED282EC0"
 					type: "xp"
-					xp: 23
+					xp: 51
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C89830C6"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000002ABFA2DC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BC6C1DDB"
-					item: "evolvedmekanism:multiversal_infusing_factory"
+					id: "0000000048E1EF50"
+					item: "evolvedmekanism:multiversal_purifying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008A0EE0E8"
-					item: "evolvedmekanism:multiversal_injecting_factory"
+					id: "00000000187341B4"
+					item: "evolvedmekanism:multiversal_sawing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002BB2B076"
-					item: "evolvedmekanism:multiversal_logistical_transporter"
+					id: "0000000027891145"
+					item: "evolvedmekanism:multiversal_smelting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E079187D"
-					item: "evolvedmekanism:multiversal_mechanical_pipe"
+					id: "000000006B1DEAF3"
+					item: "evolvedmekanism:multiversal_solar_generator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007DC02FCC"
-					item: "evolvedmekanism:multiversal_personal_barrel"
+					id: "00000000BAAEEF8E"
+					item: "evolvedmekanism:multiversal_thermodynamic_conductor"
 					type: "item"
 				}
 			]
@@ -2302,60 +2372,65 @@
 		}
 		{
 			dependencies: [
-				"0000000093A5CE78"
-				"0000000065271BD3"
-				"00000000672352F1"
-				"0000000066FD6FD7"
+				"0000000086A68E2F"
+				"00000000F7869260"
+				"000000004FFBB2A0"
+				"00000000EFADB462"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C5A8B75C"
+			id: "000000002C589FAE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000097387D46"
+					id: "0000000056244074"
 					type: "xp"
-					xp: 24
+					xp: 48
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A1EF84E3"
-					table_id: 1526046823L
-					type: "random"
+					id: "0000000099A9D012"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009F7EE971"
-					item: "evolvedmekanism:multiversal_crushing_factory"
+					id: "0000000010BC76B9"
+					item: "evolvedmekanism:multiversal_logistical_transporter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007D98F746"
-					item: "evolvedmekanism:multiversal_enriching_factory"
+					id: "00000000D5BC1D80"
+					item: "evolvedmekanism:multiversal_mechanical_pipe"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000B7C3349"
-					item: "evolvedmekanism:multiversal_fluid_tank"
+					id: "00000000E05856CC"
+					item: "evolvedmekanism:multiversal_personal_barrel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000097B21C7F"
-					item: "evolvedmekanism:multiversal_induction_cell"
+					id: "0000000021134E11"
+					item: "evolvedmekanism:multiversal_personal_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A995EDBA"
-					item: "evolvedmekanism:multiversal_induction_provider"
+					id: "00000000E4174C5C"
+					item: "evolvedmekanism:multiversal_pressurized_tube"
 					type: "item"
 				}
 			]
@@ -2364,59 +2439,66 @@
 		}
 		{
 			dependencies: [
-				"0000000093A5CE78"
-				"0000000065271BD3"
-				"00000000A8A01291"
+				"00000000F7869260"
+				"00000000419F3DB9"
+				"000000004FFBB2A0"
+				"00000000ADA6650A"
+				"00000000EFADB462"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B6A6304B"
+			id: "00000000B8E09E5B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000016308D57"
+					id: "00000000C475D99F"
 					type: "xp"
-					xp: 31
+					xp: 44
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000035A9AFBA"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000002938BC5D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000994A09C"
-					item: "evolvedmekanism:multiversal_alloying_factory"
+					id: "00000000E104F402"
+					item: "evolvedmekanism:multiversal_fluid_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006022FD51"
-					item: "evolvedmekanism:multiversal_bin"
+					id: "000000005D730FBC"
+					item: "evolvedmekanism:multiversal_induction_cell"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000088913FBA"
-					item: "evolvedmekanism:multiversal_chemical_tank"
+					id: "000000002944A9EC"
+					item: "evolvedmekanism:multiversal_induction_provider"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000047F8340F"
-					item: "evolvedmekanism:multiversal_combining_factory"
+					id: "00000000914CB4B1"
+					item: "evolvedmekanism:multiversal_infusing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009F59C391"
-					item: "evolvedmekanism:multiversal_compressing_factory"
+					id: "000000001375A9BE"
+					item: "evolvedmekanism:multiversal_injecting_factory"
 					type: "item"
 				}
 			]
@@ -2425,117 +2507,200 @@
 		}
 		{
 			dependencies: [
-				"00000000B4507348"
-				"0000000093A5CE78"
-				"00000000672352F1"
-				"0000000065271BD3"
-				"000000002E166AF2"
+				"00000000F7869260"
+				"000000004FFBB2A0"
+				"0000000084FDC0BC"
+				"00000000ADA6650A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006CF27A7A"
+			id: "00000000ACF3499A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E8F1D7BE"
+					id: "0000000058611804"
 					type: "xp"
-					xp: 14
+					xp: 37
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C7B9A2B3"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000009AE625E5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D2282215"
-					item: "evolvedmekanism:qio_drive_black_hole"
+					id: "000000008C096EA4"
+					item: "evolvedmekanism:multiversal_chemical_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F92586E9"
+					id: "00000000DF43E308"
+					item: "evolvedmekanism:multiversal_combining_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000760E70AC"
+					item: "evolvedmekanism:multiversal_compressing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000051105284"
+					item: "evolvedmekanism:multiversal_crushing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000016FA254D"
+					item: "evolvedmekanism:multiversal_enriching_factory"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000F7869260"
+				"00000000C5D2C6DD"
+				"0000000084FDC0BC"
+				"000000004FFBB2A0"
+				"00000000F59C991F"
+				"000000004AE51F5D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000484D3A3D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A6E10BA2"
+					type: "xp"
+					xp: 37
+				}
+				{
+					id: "000000008CABA713"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D67CBE57"
 					item: "evolvedmekanism:creative_control_circuit"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D18D4711"
+					id: "00000000FE564C45"
 					item: "evolvedmekanism:dense_tier_installer"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F0D9B01F"
-					item: "evolvedmekanism:block_alloy_exoversal"
+					id: "00000000476FA556"
+					item: "evolvedmekanism:block_alloy_infused"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008DF44E2A"
-					item: "evolvedmekanism:block_alloy_infused"
+					id: "000000009FCCA97A"
+					item: "evolvedmekanism:multiversal_alloying_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000726B74E3"
+					item: "evolvedmekanism:multiversal_bin"
 					type: "item"
 				}
 			]
 			x: -2.0d
-			y: 2.0d
+			y: 1.0d
 		}
 		{
+			dependencies: [
+				"000000005FDC4EEE"
+				"00000000F7869260"
+				"00000000419F3DB9"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A000B3F8"
+			id: "00000000D1B6DF53"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000000AAEDBD"
+					id: "000000001A48C6BB"
 					type: "xp"
-					xp: 1
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000042457B77"
-					table_id: 1526046823L
-					type: "random"
+					id: "0000000065B24692"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F0FD6CD5"
+					id: "00000000374B1B16"
 					item: "evolvedmekanism:apt_casing"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004159E230"
+					id: "00000000CD1CFA95"
 					item: "evolvedmekanism:alloyer"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A7DE9ED7"
+					id: "0000000089A96674"
 					item: "evolvedmekanism:block_alloy_atomic"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009F4EFFE0"
+					id: "00000000B6C899C5"
 					item: "evolvedmekanism:block_better_gold"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A203129E"
-					item: "evolvedmekanism:dust_better_gold"
+					id: "00000000EEFD7698"
+					item: "evolvedmekanism:qio_drive_black_hole"
 					type: "item"
 				}
 			]
@@ -2543,91 +2708,65 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000002E166AF2"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C9FBA118"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000995D2786"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000274810D4"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000BFAA3014"
-				item: "evolvedmekanism:block_alloy_creative"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 2.0d
-		}
-		{
 			dependencies: [
-				"00000000B4507348"
-				"0000000065271BD3"
-				"00000000348A95C1"
-				"0000000028A0AE18"
+				"00000000C5D2C6DD"
+				"00000000C03BD491"
+				"000000000F8A10CF"
+				"000000004AE51F5D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000517EC0C3"
+			id: "0000000086A68E2F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002F37498C"
+					id: "00000000FD486DD0"
 					type: "xp"
-					xp: 28
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B0E66B13"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000000E060748"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000019E30E47"
+					id: "0000000075B2AD18"
 					item: "evolvedmekanism:dense_personal_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000028C532D3"
+					id: "000000009B08A758"
 					item: "evolvedmekanism:dense_pressurized_tube"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000035CA13F1"
+					id: "00000000F19586CD"
 					item: "evolvedmekanism:dense_purifying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000099FBBC69"
+					id: "00000000A4F771D5"
 					item: "evolvedmekanism:dense_sawing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EE625B4C"
+					id: "000000000DEBC0C5"
 					item: "evolvedmekanism:dense_smelting_factory"
 					type: "item"
 				}
@@ -2637,61 +2776,113 @@
 		}
 		{
 			dependencies: [
-				"00000000B4507348"
-				"0000000065271BD3"
-				"000000001D00F12D"
-				"0000000028A0AE18"
-				"00000000D442B5A6"
+				"00000000C5D2C6DD"
+				"000000004FFBB2A0"
+				"000000000F8A10CF"
+				"00000000721A9D6D"
+				"000000004AE51F5D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000093A5CE78"
+			id: "00000000F7869260"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000013C62524"
+					id: "00000000915647A2"
 					type: "xp"
-					xp: 41
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E2BA0FDC"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000003A4D7861"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B17F46BD"
+					id: "000000003EA01CD6"
 					item: "evolvedmekanism:dense_solar_generator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000503DECC2"
+					id: "00000000D51F262F"
 					item: "evolvedmekanism:dense_thermodynamic_conductor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000069429247"
+					id: "00000000013C1D6B"
 					item: "evolvedmekanism:dense_universal_cable"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009FE146BE"
+					id: "0000000007F0FE5C"
 					item: "evolvedmekanism:qio_drive_hypra_solidified"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008508AE36"
+					id: "0000000096D83204"
 					item: "evolvedmekanism:multiversal_control_circuit"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000C5D2C6DD"
+				"000000004FFBB2A0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000419F3DB9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009CED1598"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "00000000330D9A4B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000A4F230B"
+					item: "evolvedmekanism:multiversal_energy_cube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007A7674FC"
+					item: "evolvedmekanism:nugget_plaslitherite"
 					type: "item"
 				}
 			]
@@ -2700,74 +2891,100 @@
 		}
 		{
 			dependencies: [
-				"000000005BF89F4F"
-				"0000000065271BD3"
+				"00000000D1B69A16"
+				"00000000441BE6B1"
+				"000000005FDC4EEE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000672352F1"
+			id: "00000000BAED812D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000353F8E4"
+					id: "0000000059DDBEDB"
 					type: "xp"
-					xp: 17
+					xp: 31
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E2D25727"
-					table_id: 1526046823L
-					type: "random"
+					id: "0000000095A63ED3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
+			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DEE359D9"
-					item: "evolvedmekanism:multiversal_energy_cube"
+					id: "00000000D17BCD32"
+					item: "evolvedmekanism:overclocked_smelting_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001B63538A"
-					item: "evolvedmekanism:nugget_plaslitherite"
+					id: "0000000054854543"
+					item: "evolvedmekanism:overclocked_solar_generator"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7A4F84A"
+					item: "evolvedmekanism:overclocked_thermodynamic_conductor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EB2F18AE"
+					item: "evolvedmekanism:overclocked_universal_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E593CBDF"
+					item: "evolvedmekanism:quantum_control_circuit"
 					type: "item"
 				}
 			]
-			x: -3.0d
+			x: -5.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"000000005BF89F4F"
-				"000000005934F58B"
-			]
+			dependencies: ["000000005FDC4EEE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000898348CB"
+			id: "0000000085C5CD59"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C4B485B8"
+					id: "000000004ABFC59A"
 					type: "xp"
-					xp: 6
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000044A8D65E"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000C9EA5064"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000C10C916E"
+				id: "00000000C286B9C1"
 				item: "evolvedmekanism:quantum_energy_cube"
 				type: "item"
 			}]
@@ -2775,179 +2992,113 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"000000005934F58B"
-				"000000001D00F12D"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000098920DB5"
+			id: "000000001F0B86F9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000944A0770"
+					id: "0000000095152DE1"
 					type: "xp"
-					xp: 13
+					xp: 22
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004A8E4F31"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000719E1AD0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "pentagon"
+			shape: "gear"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009EF5A16E"
-					item: "evolvedmekanism:overclocked_compressing_factory"
+					id: "00000000EBAEAD3A"
+					item: "evolvedmekanism:block_alloy_exoversal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000957CB671"
-					item: "evolvedmekanism:overclocked_crushing_factory"
+					id: "00000000EF4A5CFE"
+					item: "evolvedmekanism:block_plaslitherite"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000535CEAF5"
-					item: "evolvedmekanism:overclocked_enriching_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000024543B44"
-					item: "evolvedmekanism:overclocked_fluid_tank"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000012656FCC"
-					item: "evolvedmekanism:overclocked_induction_cell"
+					id: "0000000071789364"
+					item: "evolvedmekanism:ingot_refined_redstone"
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 6.0d
+			x: -7.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
-				"000000005934F58B"
-				"000000001D00F12D"
+				"00000000D1B69A16"
+				"000000005FDC4EEE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009E9FE0A9"
+			id: "00000000CCE88D4C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D787140C"
+					id: "000000005018425F"
 					type: "xp"
 					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E84A321B"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000023B601F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000065AC22EE"
-					item: "evolvedmekanism:overclocked_induction_provider"
+					id: "00000000BF360A99"
+					item: "evolvedmekanism:qio_drive_boosted"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000924835D6"
-					item: "evolvedmekanism:overclocked_infusing_factory"
+					id: "000000007B78B765"
+					item: "evolvedmekanism:overclocked_alloying_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004A3CF5B9"
-					item: "evolvedmekanism:overclocked_injecting_factory"
+					id: "0000000092D7F5AD"
+					item: "evolvedmekanism:overclocked_bin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005C761619"
-					item: "evolvedmekanism:overclocked_logistical_transporter"
+					id: "00000000731BB80B"
+					item: "evolvedmekanism:overclocked_chemical_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EF9ABBDE"
-					item: "evolvedmekanism:overclocked_mechanical_pipe"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"000000005934F58B"
-				"000000001D00F12D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007F91994E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A0A9FED7"
-					type: "xp"
-					xp: 19
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000980D820C"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000211E46CA"
-					item: "evolvedmekanism:overclocked_personal_barrel"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F7866E3D"
-					item: "evolvedmekanism:overclocked_personal_chest"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000084C67145"
-					item: "evolvedmekanism:overclocked_pressurized_tube"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C37C7A04"
-					item: "evolvedmekanism:overclocked_purifying_factory"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002BE09B85"
-					item: "evolvedmekanism:overclocked_sawing_factory"
+					id: "00000000322EFDB0"
+					item: "evolvedmekanism:overclocked_combining_factory"
 					type: "item"
 				}
 			]
@@ -2956,166 +3107,382 @@
 		}
 		{
 			dependencies: [
-				"000000005934F58B"
-				"000000005BF89F4F"
-				"000000001D00F12D"
+				"00000000D1B69A16"
+				"000000005FDC4EEE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D1FED67D"
+			id: "00000000C28BFC85"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002B407F59"
+					id: "0000000017C6C2AA"
 					type: "xp"
-					xp: 38
+					xp: 47
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007783E036"
-					table_id: 1526046823L
-					type: "random"
+					id: "000000006C876BB1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A710AE05"
-					item: "evolvedmekanism:overclocked_smelting_factory"
+					id: "000000000F3D31B8"
+					item: "evolvedmekanism:overclocked_compressing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003587730E"
-					item: "evolvedmekanism:overclocked_solar_generator"
+					id: "000000000E8443AB"
+					item: "evolvedmekanism:overclocked_crushing_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004FF36DA8"
-					item: "evolvedmekanism:overclocked_thermodynamic_conductor"
+					id: "00000000E004EC19"
+					item: "evolvedmekanism:overclocked_enriching_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AAF8A7FE"
-					item: "evolvedmekanism:overclocked_universal_cable"
+					id: "000000004B10AC49"
+					item: "evolvedmekanism:overclocked_fluid_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000059B46EE3"
-					item: "evolvedmekanism:quantum_control_circuit"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000001D00F12D"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005BF89F4F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003BC9415B"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D0B79C0A"
-					table_id: 1526046823L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001C263BDE"
-					item: "evolvedmekanism:ingot_better_gold"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009C5B03F3"
-					item: "evolvedmekanism:block_alloy_hypercharged"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D3162135"
-					item: "evolvedmekanism:ingot_plaslitherite"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BC22113F"
-					item: "evolvedmekanism:ingot_refined_redstone"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000949FE058"
-					item: "evolvedmekanism:alloy_subatomic"
+					id: "00000000F70CB1A7"
+					item: "evolvedmekanism:overclocked_induction_cell"
 					type: "item"
 				}
 			]
 			x: -5.0d
-			y: 1.0d
+			y: 8.0d
 		}
 		{
-			dependencies: ["000000009E095EF4"]
+			dependencies: [
+				"00000000D1B69A16"
+				"000000005FDC4EEE"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002133F31E"
+			id: "0000000001A2CFAC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000AC2E742"
+					id: "0000000028CA0EDE"
 					type: "xp"
-					xp: 25
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000081DFF485"
-					table_id: 1526046823L
-					type: "random"
+					id: "00000000CD1BA1C5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000AFC126D4"
+					item: "evolvedmekanism:overclocked_induction_provider"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008CA9A5C3"
+					item: "evolvedmekanism:overclocked_infusing_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007DFE51A0"
+					item: "evolvedmekanism:overclocked_injecting_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FB6BBA43"
+					item: "evolvedmekanism:overclocked_logistical_transporter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001FBDC17B"
+					item: "evolvedmekanism:overclocked_mechanical_pipe"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000441BE6B1"
+				"00000000D1B69A16"
+				"000000005FDC4EEE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008F61AF6A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002837BF51"
+					type: "xp"
+					xp: 39
+				}
+				{
+					id: "000000006726F8DD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E551B13C"
+					item: "evolvedmekanism:overclocked_personal_barrel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000650AC7E7"
+					item: "evolvedmekanism:overclocked_personal_chest"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003E3371A2"
+					item: "evolvedmekanism:overclocked_pressurized_tube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003C2496C0"
+					item: "evolvedmekanism:overclocked_purifying_factory"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ED4B2D9D"
+					item: "evolvedmekanism:overclocked_sawing_factory"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["000000006907E4A2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F40CC0A9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008832F4BD"
+					type: "xp"
+					xp: 29
+				}
+				{
+					id: "000000009410349E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006CF525D7"
+					id: "00000000E8B30E83"
+					item: "evolvedmekanism:dust_better_gold"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000094EC9490"
 					item: "evolvedmekanism:elite_personal_barrel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D8141CD4"
+					id: "00000000B47131C1"
 					item: "evolvedmekanism:elite_personal_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AB2EF87C"
+					id: "00000000FD9DBACB"
 					item: "evolvedmekanism:elite_solar_generator"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000001F0B86F9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B9F709BA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FCA423CD"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000009081279C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006ACF3491"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:refined_redstone_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F1E80279"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:refined_redstone_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000093778677"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:refined_redstone_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006E7D21DD"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:refined_redstone_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045DDF3AB"
+					item: {
+						Count: 1
+						id: "evolvedmekanism:refined_redstone_paxel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004AE51F5D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000059DFE72F"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "00000000EEBC3894"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_evolvedmekanism"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000F696D88C"
+				item: "evolvedmekanism:alloy_singular"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 6.0d
 		}
 	]
 	title: "Evolved Mekanism"

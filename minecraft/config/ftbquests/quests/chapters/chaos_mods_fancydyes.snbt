@@ -2,328 +2,372 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_fancydyes"
-	group: "00000000DEB299A3"
-	icon: "fancydyes:small_dye_bottle"
-	id: "00000000C1CF4BDA"
+	group: "000000008CDEF944"
+	icon: "fancydyes:dye_bottle"
+	id: "000000004F420722"
 	order_index: 54
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: [
-				"000000008C9162F1"
-				"000000009C328DDB"
+				"000000009401A279"
+				"000000000E796ABA"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008BD4559E"
+			id: "000000006C362C8D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B31BCFD5"
+					id: "000000001548265F"
 					type: "xp"
-					xp: 2
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003DB1D253"
-					table_id: 1503995555L
-					type: "random"
+					id: "00000000CF51F9FE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000014DAA734"
-					item: "fancydyes:small_purple_dye"
+					id: "0000000068D701CD"
+					item: "fancydyes:bright_blue_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A17CBEEC"
-					item: "fancydyes:small_rainbow_dye"
+					id: "000000009B38A68A"
+					item: "fancydyes:bright_red_dye"
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"000000009FB27F78"
-				"0000000049B2EF81"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B7EC84B9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B9F184A4"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000018EFD6F0"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004E02A020"
-					item: "fancydyes:green_dye"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E55305EE"
-					item: "fancydyes:green_flame_dye"
-					type: "item"
-				}
-			]
-			x: -2.0d
+			x: -5.0d
 			y: 0.0d
 		}
 		{
 			dependencies: [
-				"00000000F8845D98"
-				"0000000049B2EF81"
+				"000000009401A279"
+				"000000000E796ABA"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002780BE16"
+			id: "00000000AAFB852B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000054F13ABE"
+					id: "00000000E3058972"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001DF05137"
-					table_id: 1503995555L
-					type: "random"
+					id: "00000000BEF378D7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000ED02212B"
-					item: "fancydyes:bright_flame_dye"
+					id: "000000002AF25707"
+					item: "fancydyes:small_dye_bottle"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F357FCB7"
-					item: "fancydyes:bright_purple_dye"
+					id: "0000000045FD31F2"
+					item: "fancydyes:trans_dye"
 					type: "item"
 				}
 			]
-			x: -4.0d
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000009606BA6B"
+				"00000000E005256E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007634C25E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EA063705"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "0000000053B67B24"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004518FA99"
+					item: "fancydyes:small_pink_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DDD7B6C9"
+					item: "fancydyes:small_purple_dye"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000AAFB852B"
+				"000000008A58D99D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002296B403"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D324471F"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "00000000F088E6D2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000753CD583"
+					item: "fancydyes:small_trans_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004A1C294B"
+					item: "fancydyes:small_yellow_dye"
+					type: "item"
+				}
+			]
+			x: -1.0d
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"000000007BA17832"
-				"00000000E1F112F3"
-			]
+			dependencies: ["0000000074B0A61C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000051215581"
+			id: "0000000015C4B2A2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BD66EACF"
+					id: "00000000B9C6C99E"
 					type: "xp"
-					xp: 5
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006142346A"
-					table_id: 1503995555L
-					type: "random"
+					id: "00000000E1D7C4FA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CE261D57"
-					item: "fancydyes:small_cyan_dye"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BDB59A49"
+					id: "00000000241CB6C0"
 					item: "fancydyes:small_enby_dye"
 					type: "item"
 				}
-			]
-			x: 0.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["000000007F450D06"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000054AB4C71"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C1CB2D8D"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000009E45962"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "000000004F95117C"
-				item: "fancydyes:yellow_dye"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["00000000B936EE7B"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CCBD3397"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003903266B"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002F371080"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "000000005D1DE287"
+					id: "000000008A9FC12C"
 					item: "fancydyes:small_flame_dye"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "000000008A381607"
-					item: "fancydyes:small_light_blue_dye"
-					type: "item"
-				}
 			]
 			x: 0.0d
-			y: 3.0d
+			y: 7.0d
 		}
 		{
-			dependencies: [
-				"000000009FB27F78"
-				"00000000F2042A31"
-			]
+			dependencies: ["00000000F3B01DFB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB717A5D"
+			id: "00000000B827B1C9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C4E29586"
+					id: "0000000008CB627C"
 					type: "xp"
 					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000668D8535"
-					table_id: 1503995555L
-					type: "random"
+					id: "0000000072DE5A16"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009D50D334"
-					item: "fancydyes:magenta_dye"
+					id: "000000006AD8E988"
+					item: "fancydyes:small_green_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009AEE9089"
-					item: "fancydyes:pink_dye"
+					id: "000000000D168B82"
+					item: "fancydyes:small_green_flame_dye"
 					type: "item"
 				}
 			]
-			x: -4.0d
-			y: 0.0d
+			x: 0.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
-				"00000000F8845D98"
-				"0000000009BAD1FE"
+				"000000009221893D"
+				"00000000E005256E"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000096072EF0"
+			id: "00000000BF2990BD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000088F3130A"
+					id: "0000000023C832A1"
 					type: "xp"
-					xp: 2
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007E96867B"
-					table_id: 1503995555L
-					type: "random"
+					id: "0000000040DAF9D3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A7C0FC47"
+					id: "000000006796456E"
+					item: "fancydyes:small_light_blue_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BCAD0E3D"
+					item: "fancydyes:small_lime_dye"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009401A279"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000868FC6BB"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000006FD89B09"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A77C8077"
 					item: "fancydyes:blue_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F66C5A26"
-					item: "fancydyes:bright_cyan_dye"
+					id: "0000000077E9926B"
+					item: "fancydyes:bright_trans_dye"
 					type: "item"
 				}
 			]
@@ -334,303 +378,580 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F2042A31"
+			id: "000000000E796ABA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000E5DCC1B"
+					id: "00000000CCA9A0A4"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D5B552FA"
-					table_id: 1503995555L
-					type: "random"
+					id: "00000000A4047667"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000AF45DB84"
-				item: "fancydyes:small_pink_dye"
-				type: "item"
-			}]
-			x: -5.0d
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000052DB9AB"
+					item: "fancydyes:dye_bottle"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004B438BE3"
+					item: "fancydyes:red_dye"
+					type: "item"
+				}
+			]
+			x: -4.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000009BAD1FE"]
+			dependencies: ["000000000E796ABA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000067573358"
+			id: "000000009221893D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000383F41F5"
+					id: "0000000055CA9834"
 					type: "xp"
-					xp: 4
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BC2795D1"
-					table_id: 1503995555L
-					type: "random"
+					id: "00000000D2B40A58"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000D970CE4"
-					item: "fancydyes:aurora_dye"
+					id: "00000000A2E7D855"
+					item: "fancydyes:bright_aurora_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006D7D356B"
-					item: "fancydyes:bright_orange_dye"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["0000000009BAD1FE"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007BA17832"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000EFD9DDD7"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008BCF5136"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "0000000020E20542"
-				item: "fancydyes:enby_dye"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000002780BE16"
-				"0000000009BAD1FE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B936EE7B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CEAA1323"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CE25C872"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005B9187AA"
-					item: "fancydyes:flame_dye"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007555C672"
+					id: "000000003FD1E20E"
 					item: "fancydyes:light_blue_dye"
 					type: "item"
 				}
 			]
-			x: -1.0d
-			y: 4.0d
+			x: -3.0d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"0000000054AB4C71"
-				"0000000096072EF0"
-			]
+			dependencies: ["000000000E796ABA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E1F112F3"
+			id: "000000009606BA6B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000058BCB6EC"
+					id: "00000000604DB8E3"
 					type: "xp"
-					xp: 10
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000093FB8C2F"
-					table_id: 1503995555L
-					type: "random"
+					id: "00000000FCDE30EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "0000000019955001"
+				item: "fancydyes:purple_dye"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000000E796ABA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E005256E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CA7DD6ED"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "000000002678913A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007B09AD23"
+					item: "fancydyes:lime_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D0A768A6"
+					item: "fancydyes:pink_dye"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000009606BA6B"
+				"00000000E005256E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008F7E3FED"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000000BECDBA"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "00000000ECD6A1FB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004BCE7978"
-					item: "fancydyes:bright_yellow_dye"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000027F373BA"
-					item: "fancydyes:cyan_dye"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"00000000BB717A5D"
-				"0000000009BAD1FE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000077CAAB03"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000021F2FBB6"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003BDF2E0E"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000035804220"
+					id: "000000005C6DC3B6"
 					item: "fancydyes:bright_pink_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002DC82364"
-					item: "fancydyes:bright_red_dye"
+					id: "00000000D5E90CB5"
+					item: "fancydyes:bright_purple_dye"
 					type: "item"
 				}
 			]
-			x: -1.0d
-			y: 2.0d
+			x: -2.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
-				"00000000B7EC84B9"
-				"000000007BA17832"
+				"00000000E005256E"
+				"000000000E796ABA"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007BA4E0FD"
+			id: "0000000035AD9109"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B2966CF9"
+					id: "000000007CB4604C"
 					type: "xp"
-					xp: 17
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BFDAB300"
-					table_id: 1503995555L
-					type: "random"
+					id: "00000000004D1F4D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C9AB2078"
+					id: "000000008B05597C"
+					item: "fancydyes:bright_lime_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001FC113E4"
+					item: "fancydyes:bright_magenta_dye"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000009221893D"
+				"000000000E796ABA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000000F343F2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008681E882"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000CC769304"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000B2AC9B4"
+					item: "fancydyes:bright_green_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004B09F40A"
+					item: "fancydyes:bright_light_blue_dye"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000000E796ABA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C44D7C67"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005134041A"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "000000007EB8596D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006EE1E198"
 					item: "fancydyes:bright_enby_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000990031A4"
-					item: "fancydyes:bright_green_dye"
+					id: "000000005A891C84"
+					item: "fancydyes:bright_flame_dye"
 					type: "item"
 				}
 			]
-			x: -1.0d
-			y: 0.0d
+			x: -2.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["000000007BA4E0FD"]
+			dependencies: ["000000000E796ABA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A475EA69"
+			id: "00000000DD2E2945"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A4F69759"
+					id: "00000000FDFF12C4"
 					type: "xp"
-					xp: 11
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000151BF79F"
-					table_id: 1503995555L
-					type: "random"
+					id: "0000000025327C27"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000776988CE"
+					item: "fancydyes:bright_blue_flame_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E9664A5F"
+					item: "fancydyes:bright_cyan_dye"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000006C362C8D"
+				"00000000DD2E2945"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A6A46CDA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E2BDAAA5"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "000000002779CD53"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F1727A56"
-					item: "fancydyes:small_bright_enby_dye"
+					id: "00000000A76D3AEC"
+					item: "fancydyes:small_bright_blue_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000539E7209"
-					item: "fancydyes:small_bright_green_dye"
+					id: "000000008B7557EC"
+					item: "fancydyes:small_bright_blue_flame_dye"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000009221893D"
+				"000000000E796ABA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005BECC3AE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001F23CAD3"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "00000000382F5CF3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000042A82EBF"
+					item: "fancydyes:aurora_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000417AF22C"
+					item: "fancydyes:blue_flame_dye"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000C44D7C67"
+				"00000000DD2E2945"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CBB5502D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000CD74A27"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000005ED89CCD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D47D3A28"
+					item: "fancydyes:small_bright_cyan_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F128ECA2"
+					item: "fancydyes:small_bright_enby_dye"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000005BECC3AE"
+				"000000009401A279"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E7059CA7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FD4AC33F"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000002591DB5C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BA0D6FCB"
+					item: "fancydyes:small_aurora_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006D30041C"
+					item: "fancydyes:small_blue_dye"
 					type: "item"
 				}
 			]
@@ -638,332 +959,414 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000009BAD1FE"]
+			dependencies: [
+				"000000009221893D"
+				"000000005BECC3AE"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008C9162F1"
+			id: "000000000442BB9C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002402763E"
+					id: "000000008844301C"
 					type: "xp"
-					xp: 8
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000122B9923"
-					table_id: 1503995555L
-					type: "random"
+					id: "000000002AE0E628"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000707F7FE5"
-				item: "fancydyes:rainbow_dye"
-				type: "item"
-			}]
-			x: -1.0d
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EFF20185"
+					item: "fancydyes:small_blue_flame_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7637CA2"
+					item: "fancydyes:small_bright_aurora_dye"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000000F343F2"
+				"00000000C44D7C67"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009C870F79"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F35C48C8"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000BE5139F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F916D91C"
+					item: "fancydyes:small_bright_flame_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A744AD63"
+					item: "fancydyes:small_bright_green_dye"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000035AD9109"
+				"0000000000F343F2"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E71F9C56"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000045B6445C"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000000F68A9FD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000088BE2ECD"
+					item: "fancydyes:small_bright_light_blue_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001BA92496"
+					item: "fancydyes:small_bright_lime_dye"
+					type: "item"
+				}
+			]
+			x: 0.0d
 			y: 5.0d
 		}
 		{
 			dependencies: [
-				"0000000067573358"
-				"000000002780BE16"
+				"00000000AC6EEEEE"
+				"000000000E796ABA"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009C328DDB"
+			id: "000000008A58D99D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C8A92B24"
+					id: "00000000EF878242"
 					type: "xp"
-					xp: 10
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C2859740"
-					table_id: 1503995555L
-					type: "random"
+					id: "00000000A2542D39"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003B5D3A1A"
-					item: "fancydyes:orange_dye"
+					id: "00000000167F56F0"
+					item: "fancydyes:magenta_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000D0BDD66"
-					item: "fancydyes:purple_dye"
+					id: "0000000054F1B1EE"
+					item: "fancydyes:yellow_dye"
 					type: "item"
 				}
 			]
-			x: -1.0d
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000AC6EEEEE"
+				"000000000E796ABA"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F3B01DFB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D6A2A3AB"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "000000007EBFED1E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000094EF5E55"
+					item: "fancydyes:green_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009C59CE5B"
+					item: "fancydyes:green_flame_dye"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["000000000E796ABA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000074B0A61C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F2365183"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "0000000083FE1F35"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E617FD00"
+					item: "fancydyes:enby_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000072A8E222"
+					item: "fancydyes:flame_dye"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000F244B493"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AC6EEEEE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001672B368"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "0000000074EE3689"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003682796F"
+					item: "fancydyes:bright_green_flame_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B067E172"
+					item: "fancydyes:bright_yellow_dye"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000008F7E3FED"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000049D65F0D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000123A82EB"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000005A2DCD20"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004A7C54B1"
+					item: "fancydyes:small_bright_pink_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7440309"
+					item: "fancydyes:small_bright_purple_dye"
+					type: "item"
+				}
+			]
+			x: 0.0d
 			y: 6.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F8845D98"
+			id: "00000000F244B493"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D4C8098E"
+					id: "0000000009C61C2E"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000091C70934"
-					table_id: 1503995555L
-					type: "random"
+					id: "000000004FCE78DB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_fancydyes"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "pentagon"
+			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001379AC91"
-					item: "fancydyes:small_bright_cyan_dye"
+					id: "00000000491655AE"
+					item: "fancydyes:small_bright_green_flame_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B3EFD573"
-					item: "fancydyes:small_bright_flame_dye"
+					id: "000000000BFC80DA"
+					item: "fancydyes:small_bright_yellow_dye"
 					type: "item"
 				}
 			]
-			x: -5.0d
+			x: -4.0d
 			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000009BAD1FE"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E0E99624"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D86016F2"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009BB9DC06"
-					item: "fancydyes:dye_bottle"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008FD361F9"
-					item: "fancydyes:small_blue_dye"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009FB27F78"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006CF2FC38"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000042336D87"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000039B724F8"
-					item: "fancydyes:small_green_flame_dye"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000ACA20086"
-					item: "fancydyes:small_magenta_dye"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000067573358"
-				"0000000077CAAB03"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009FD102C6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000360FC195"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009D150BE2"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000081EBDFD9"
-					item: "fancydyes:small_bright_orange_dye"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000551BA69C"
-					item: "fancydyes:small_bright_pink_dye"
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000049B2EF81"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005877F58F"
-					type: "xp"
-					xp: 14
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B9162747"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000FAE7DB6F"
-					item: "fancydyes:small_bright_purple_dye"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008D8E9529"
-					item: "fancydyes:small_green_dye"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007F450D06"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B7AD6E55"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000080C563D7"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [{
-				consume_items: false
-				id: "00000000CAF7206B"
-				item: "fancydyes:small_yellow_dye"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["0000000009BAD1FE"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000FFFF773B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000016AC827E"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006E3B9F41"
-					table_id: 1503995555L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [{
-				consume_items: false
-				id: "000000003D506AAB"
-				item: "fancydyes:small_dye_bottle"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 0.0d
 		}
 	]
 	title: "Fancy Dyes"

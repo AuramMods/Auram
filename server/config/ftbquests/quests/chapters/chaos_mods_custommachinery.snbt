@@ -2,35 +2,40 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_custommachinery"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "custommachinery:configuration_card"
-	id: "000000007D07B79D"
-	order_index: 105
+	id: "000000005E10DC5A"
+	order_index: 104
 	quest_links: [ ]
 	quests: [{
 		hide_dependency_lines: true
 		hide_details_until_startable: true
 		hide_until_deps_complete: true
-		id: "00000000492FED88"
+		id: "000000000C9CDA18"
 		invisible: true
 		invisible_until_tasks: 1
 		rewards: [
 			{
-				id: "00000000EBFAA172"
+				id: "000000009D6C3E42"
 				type: "xp"
-				xp: 3
+				xp: 9
 			}
 			{
-				exclude_from_claim_all: true
-				id: "000000005D14BA97"
-				table_id: 282127153L
-				type: "random"
+				id: "000000004BBBDBEE"
+				item: {
+					Count: 1
+					id: "ftbquests:lootcrate"
+					tag: {
+						type: "chaos_box_custommachinery"
+					}
+				}
+				type: "item"
 			}
 		]
 		shape: "circle"
 		tasks: [{
 			consume_items: false
-			id: "00000000DE7EB8EA"
+			id: "00000000519DFBC6"
 			item: "custommachinery:configuration_card"
 			type: "item"
 		}]

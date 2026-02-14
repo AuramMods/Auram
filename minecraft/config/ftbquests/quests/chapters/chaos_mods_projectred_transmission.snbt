@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_projectred_transmission"
-	group: "00000000DEB299A3"
-	icon: "projectred_transmission:neutral_bundled_wire"
-	id: "0000000096CB01C7"
+	group: "000000008CDEF944"
+	icon: "projectred_transmission:pink_bundled_wire"
+	id: "00000000B2508387"
 	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["00000000CFBA10BE"]
+			dependencies: ["00000000E4B3D790"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000081DA292D"
+			id: "00000000EF858762"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000566A348C"
+					id: "00000000471457D9"
 					type: "xp"
-					xp: 5
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CC845130"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000E8836DF1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E9CB6E8B"
+				id: "00000000CDF1D680"
 				item: "projectred_core:wired_plate"
 				type: "item"
 			}]
@@ -40,120 +45,105 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000B432F19F"
-				"00000000122D1FC7"
-				"00000000FEFF2DF4"
-				"0000000028204869"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"0000000067CB0DE8"
-				"000000006D49FAF1"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F58C7462"
+			id: "00000000C07E1985"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001862D64B"
+					id: "000000008D5869F7"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000F5B1F9C4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000A57FE4B9"
+				item: "projectred_transmission:white_insulated_wire"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C1C25558"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F3497DD1"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000005D92FD2C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000016CCFC2"
+				item: "projectred_transmission:yellow_insulated_wire"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000010EFD52D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FFA0CCBD"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000057B8D4FC"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000446844EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "octagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000CB7F6A9E"
-				item: "projectred_transmission:yellow_bundled_wire"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"000000007FB24909"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000FEFF2DF4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BE4C9DE0"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001C8CA167"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "000000004CA6A99F"
-				item: "projectred_transmission:red_bundled_wire"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000B432F19F"
-				"00000000122D1FC7"
-				"00000000FEFF2DF4"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"000000006D49FAF1"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000028204869"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000AEB58D03"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001E7B91CE"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000D7BED769"
-				item: "projectred_transmission:white_bundled_wire"
+				id: "00000000CCB01887"
+				item: "projectred_transmission:purple_insulated_wire"
 				type: "item"
 			}]
 			x: -10.0d
@@ -161,33 +151,125 @@
 		}
 		{
 			dependencies: [
-				"000000007FB24909"
-				"000000005C5549FF"
+				"00000000AC2080ED"
+				"00000000C07E1985"
+				"00000000C1C25558"
+				"0000000010EFD52D"
+				"000000005E2F875C"
+				"000000005E4E9D0E"
+				"00000000FAB8C598"
+				"000000006F3B9664"
+				"00000000610B68D6"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BE5A55C8"
+			id: "00000000B1EF1F7C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000051543930"
+					id: "00000000A3E29A72"
 					type: "xp"
-					xp: 8
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A9EBC4F0"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000BFA2C8C5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "octagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000851E34FA"
-				item: "projectred_transmission:pink_bundled_wire"
+				id: "0000000031B582BE"
+				item: "projectred_transmission:red_insulated_wire"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005E2F875C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004DA79D8C"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000FB138804"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000020B1295D"
+				item: "projectred_transmission:orange_insulated_wire"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000AC2080ED"
+				"00000000C07E1985"
+				"00000000C1C25558"
+				"0000000010EFD52D"
+				"000000005E2F875C"
+				"00000000FAB8C598"
+				"000000006F3B9664"
+				"00000000610B68D6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005E4E9D0E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000537AF80C"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000BBAB75F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "000000004FB1A31E"
+				item: "projectred_transmission:pink_insulated_wire"
 				type: "item"
 			}]
 			x: -11.0d
@@ -195,113 +277,52 @@
 		}
 		{
 			dependencies: [
-				"000000007FB24909"
-				"00000000BE5A55C8"
-				"000000005C5549FF"
+				"00000000884D77B4"
+				"00000000F7808F4D"
+				"0000000007B9193A"
+				"000000000312CF55"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000001D874595"
+				"00000000FD620AB5"
+				"000000007EC2AC5C"
+				"00000000C6FAFA35"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"00000000ED225AD1"
+				"000000007DC5AE3B"
+				"00000000AE11409D"
+				"0000000005D50CE5"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B34F741F"
+			id: "000000005A0D2E73"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007F350024"
+					id: "00000000454EBFD5"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CAC52571"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "0000000044DB98F4"
-				item: "projectred_transmission:purple_bundled_wire"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000007FB24909"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005C5549FF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000022A94C64"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EE41825A"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000F086001D"
-				item: "projectred_transmission:orange_bundled_wire"
-				type: "item"
-			}]
-			x: -13.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000007F6ABC34"
-				"000000003B78F63F"
-				"00000000D013B95A"
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000E0127C45"
-				"00000000B432F19F"
-				"00000000122D1FC7"
-				"00000000F58C7462"
-				"00000000FEFF2DF4"
-				"0000000028204869"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"0000000042B940F0"
-				"0000000067CB0DE8"
-				"000000006D49FAF1"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000021C412FE"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D72AE9B6"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000008773797"
-					table_id: 893590406L
-					type: "random"
+					id: "000000001C9C766A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F90DADDF"
+				id: "0000000048223702"
 				item: "projectred_core:bundled_plate"
 				type: "item"
 			}]
@@ -309,75 +330,34 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"000000003B78F63F"
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000B432F19F"
-				"00000000122D1FC7"
-				"00000000F58C7462"
-				"00000000FEFF2DF4"
-				"0000000028204869"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"0000000042B940F0"
-				"0000000067CB0DE8"
-				"000000006D49FAF1"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007F6ABC34"
+			id: "00000000E4B3D790"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006DA569A5"
+					id: "00000000E6C91730"
 					type: "xp"
-					xp: 10
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000064606678"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000CF80DCC8"
-				item: "projectred_transmission:blue_bundled_wire"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CFBA10BE"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000095D79801"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009B60BE30"
-					table_id: 893590406L
-					type: "random"
+					id: "000000006BED6A37"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000997DFF0B"
+				id: "0000000019AF20CB"
 				item: "projectred_transmission:red_alloy_wire"
 				type: "item"
 			}]
@@ -386,44 +366,313 @@
 		}
 		{
 			dependencies: [
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000B432F19F"
-				"00000000122D1FC7"
-				"00000000F58C7462"
-				"00000000FEFF2DF4"
-				"0000000028204869"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"0000000042B940F0"
-				"0000000067CB0DE8"
-				"000000006D49FAF1"
+				"000000002C3B3AC4"
+				"000000007E5F281A"
+				"00000000AC2080ED"
+				"000000001FEE8143"
+				"00000000C07E1985"
+				"00000000C1C25558"
+				"0000000010EFD52D"
+				"00000000B1EF1F7C"
+				"000000005E2F875C"
+				"000000005E4E9D0E"
+				"00000000FAB8C598"
+				"000000006F3B9664"
+				"00000000610B68D6"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003B78F63F"
+			id: "000000006E492311"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000091BEFF5D"
+					id: "000000005FEBD549"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000DBD34BB6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000096BDE580"
+				item: "projectred_transmission:magenta_insulated_wire"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000AC2080ED"
+				"000000001FEE8143"
+				"00000000C07E1985"
+				"00000000C1C25558"
+				"0000000010EFD52D"
+				"00000000B1EF1F7C"
+				"000000005E2F875C"
+				"000000005E4E9D0E"
+				"00000000FAB8C598"
+				"000000006F3B9664"
+				"00000000610B68D6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002C3B3AC4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007ED8BEAF"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "0000000056615B42"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000092EBB7ED"
+				item: "projectred_transmission:light_gray_insulated_wire"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000002C3B3AC4"
+				"00000000AC2080ED"
+				"000000001FEE8143"
+				"00000000C07E1985"
+				"00000000C1C25558"
+				"0000000010EFD52D"
+				"00000000B1EF1F7C"
+				"000000005E2F875C"
+				"000000005E4E9D0E"
+				"00000000FAB8C598"
+				"000000006F3B9664"
+				"00000000610B68D6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007E5F281A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000021625BBF"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000004F67A4A9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "000000007843ED20"
+				item: "projectred_transmission:lime_insulated_wire"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AC2080ED"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F2357AAC"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000A8E6AA6B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "000000000DE90B9B"
+				item: "projectred_transmission:green_insulated_wire"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000009D3FD9AC"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000884D77B4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000007A37581"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "0000000066118075"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "00000000B384A2A0"
+				item: "projectred_transmission:pink_bundled_wire"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000AC2080ED"
+				"00000000C07E1985"
+				"00000000C1C25558"
+				"0000000010EFD52D"
+				"00000000B1EF1F7C"
+				"000000005E2F875C"
+				"000000005E4E9D0E"
+				"00000000FAB8C598"
+				"000000006F3B9664"
+				"00000000610B68D6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001FEE8143"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000AAFE22A"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000F8BD459"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000A43CAE2B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "octagon"
 			tasks: [{
 				consume_items: false
-				id: "000000003C7D8EFE"
-				item: "projectred_transmission:black_bundled_wire"
+				id: "0000000008DAFBDA"
+				item: "projectred_transmission:light_blue_insulated_wire"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000884D77B4"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000007EC2AC5C"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"000000007DC5AE3B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F7808F4D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003B259FCD"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "00000000F721376E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "00000000F88054B1"
+				item: "projectred_transmission:orange_bundled_wire"
 				type: "item"
 			}]
 			x: -2.0d
@@ -431,47 +680,52 @@
 		}
 		{
 			dependencies: [
-				"000000007F6ABC34"
-				"000000003B78F63F"
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000E0127C45"
-				"00000000B432F19F"
-				"00000000122D1FC7"
-				"00000000F58C7462"
-				"00000000FEFF2DF4"
-				"0000000028204869"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"0000000042B940F0"
-				"0000000067CB0DE8"
-				"000000006D49FAF1"
+				"00000000884D77B4"
+				"00000000F7808F4D"
+				"000000000312CF55"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000001D874595"
+				"00000000FD620AB5"
+				"000000007EC2AC5C"
+				"00000000C6FAFA35"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"00000000ED225AD1"
+				"000000007DC5AE3B"
+				"00000000AE11409D"
+				"0000000005D50CE5"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D013B95A"
+			id: "0000000007B9193A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C43F7D90"
+					id: "00000000C126C034"
 					type: "xp"
-					xp: 2
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AA2E0D6F"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000F3B64D67"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "000000004D556F9A"
-				item: "projectred_transmission:cyan_bundled_wire"
+				id: "000000009918B819"
+				item: "projectred_transmission:blue_bundled_wire"
 				type: "item"
 			}]
 			x: -3.0d
@@ -479,172 +733,138 @@
 		}
 		{
 			dependencies: [
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"00000000D8009BC0"
-				"000000009ED98E0C"
-				"00000000E0DE3431"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
+				"00000000884D77B4"
+				"00000000F7808F4D"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000001D874595"
+				"000000007EC2AC5C"
+				"00000000C6FAFA35"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"00000000ED225AD1"
+				"000000007DC5AE3B"
+				"00000000AE11409D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002ED86A39"
+			id: "000000000312CF55"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002078E834"
+					id: "000000000E3AB84E"
 					type: "xp"
 					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008E5A1550"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000BCE83300"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "00000000FB97DCFE"
-				item: "projectred_transmission:magenta_insulated_wire"
+				id: "000000008CE56E8C"
+				item: "projectred_transmission:brown_bundled_wire"
 				type: "item"
 			}]
-			x: -5.0d
+			x: -4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: [
-				"000000002ED86A39"
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"00000000BC5E682F"
-				"00000000D8009BC0"
-				"000000009ED98E0C"
-				"0000000014B46EE9"
-				"000000005CB5C7BC"
-				"00000000E0DE3431"
-				"00000000705AB283"
-				"0000000091684129"
-				"00000000719CFCA3"
-				"0000000082546EDD"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
+				"000000006E492311"
+				"000000002C3B3AC4"
+				"000000007E5F281A"
+				"00000000AC2080ED"
+				"000000001FEE8143"
+				"00000000C07E1985"
+				"00000000C1C25558"
+				"0000000010EFD52D"
+				"00000000B1EF1F7C"
+				"000000005E2F875C"
+				"000000005E4E9D0E"
+				"00000000669704A2"
+				"00000000FAB8C598"
+				"000000006F3B9664"
+				"00000000610B68D6"
+				"0000000072A84501"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007FB24909"
+			id: "00000000E1BE534F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FB7CC12A"
+					id: "00000000B2C220AC"
 					type: "xp"
 					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E57CE7C2"
-					table_id: 893590406L
-					type: "random"
+					id: "0000000045973169"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "00000000A2AFECED"
+				id: "00000000FEB5AA86"
 				item: "projectred_transmission:neutral_bundled_wire"
 				type: "item"
 			}]
-			x: -4.0d
+			x: -5.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"000000007FB24909"
-				"00000000122D1FC7"
-				"00000000FEFF2DF4"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-			]
+			dependencies: ["00000000E1BE534F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005236427B"
+			id: "0000000098C180BD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008655FB14"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EA3A68ED"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "0000000044DD9F4B"
-				item: "projectred_transmission:green_bundled_wire"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000007F6ABC34"
-				"000000003B78F63F"
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000B432F19F"
-				"00000000122D1FC7"
-				"00000000F58C7462"
-				"00000000FEFF2DF4"
-				"0000000028204869"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"0000000042B940F0"
-				"0000000067CB0DE8"
-				"000000006D49FAF1"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E0127C45"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004294CDDA"
+					id: "0000000018F20605"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DC148DDD"
-					table_id: 893590406L
-					type: "random"
+					id: "0000000002D09C95"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "heart"
 			tasks: [{
 				consume_items: false
-				id: "00000000D6737EA3"
-				item: "projectred_transmission:gray_bundled_wire"
+				id: "0000000026904508"
+				item: "projectred_transmission:lime_bundled_wire"
 				type: "item"
 			}]
 			x: -5.0d
@@ -652,293 +872,140 @@
 		}
 		{
 			dependencies: [
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000122D1FC7"
-				"00000000FEFF2DF4"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"000000006D49FAF1"
+				"00000000884D77B4"
+				"00000000F7808F4D"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000007EC2AC5C"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"000000007DC5AE3B"
+				"00000000AE11409D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B432F19F"
+			id: "000000001D874595"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000017D09B26"
+					id: "00000000D8B8C9B2"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "000000007573E7BA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "000000008E288A19"
+				item: "projectred_transmission:cyan_bundled_wire"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000884D77B4"
+				"00000000F7808F4D"
+				"000000000312CF55"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000001D874595"
+				"000000007EC2AC5C"
+				"00000000C6FAFA35"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"00000000ED225AD1"
+				"000000007DC5AE3B"
+				"00000000AE11409D"
+				"0000000005D50CE5"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FD620AB5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A22E9232"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000E6B5C9D5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "000000007D701540"
+				item: "projectred_transmission:black_bundled_wire"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000884D77B4"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000009D3FD9AC"
+				"000000007DC5AE3B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007EC2AC5C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000E734BA8"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000949F1501"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000EF337224"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "00000000E9F7D0A4"
-				item: "projectred_transmission:light_gray_bundled_wire"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"000000007FB24909"
-				"00000000FEFF2DF4"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000122D1FC7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004CD1E2E8"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000D41CEAF"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000000B569F"
-				item: "projectred_transmission:light_blue_bundled_wire"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000099C4C27D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008B5647D2"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000042CB759E"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "0000000078379E0B"
-				item: "projectred_transmission:white_insulated_wire"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008A9BA087"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000041A0A3DC"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008A57176A"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000E206E102"
-				item: "projectred_transmission:yellow_insulated_wire"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000002ED86A39"
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"00000000D8009BC0"
-				"000000009ED98E0C"
-				"00000000E0DE3431"
-				"00000000705AB283"
-				"0000000082546EDD"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000BC5E682F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000029472CC1"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000099460D13"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000380776C1"
-				item: "projectred_transmission:purple_insulated_wire"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"000000009ED98E0C"
-				"00000000E0DE3431"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D8009BC0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000076F1A881"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003850837E"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000609CD42C"
-				item: "projectred_transmission:red_insulated_wire"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009ED98E0C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003AF9B1DD"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D7EE93F3"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000002AC01C47"
-				item: "projectred_transmission:orange_insulated_wire"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000002ED86A39"
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"00000000BC5E682F"
-				"00000000D8009BC0"
-				"000000009ED98E0C"
-				"00000000E0DE3431"
-				"00000000705AB283"
-				"0000000091684129"
-				"0000000082546EDD"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000014B46EE9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C71F0CDE"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000029BEC9D"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000DF1240BE"
-				item: "projectred_transmission:pink_insulated_wire"
+				id: "00000000EFD7BE0C"
+				item: "projectred_transmission:magenta_bundled_wire"
 				type: "item"
 			}]
 			x: -8.0d
@@ -948,26 +1015,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000322567AF"
+			id: "00000000782602AF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000081C20B4F"
+					id: "00000000011C3858"
 					type: "xp"
-					xp: 7
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F7B8090D"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000E487CCAA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000067E1B25E"
+				id: "000000003311948C"
 				item: "projectred_transmission:low_load_power_wire"
 				type: "item"
 			}]
@@ -976,333 +1048,224 @@
 		}
 		{
 			dependencies: [
-				"000000002ED86A39"
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"00000000BC5E682F"
-				"00000000D8009BC0"
-				"000000009ED98E0C"
-				"0000000014B46EE9"
-				"00000000E0DE3431"
-				"00000000705AB283"
-				"0000000091684129"
-				"00000000719CFCA3"
-				"0000000082546EDD"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
+				"00000000884D77B4"
+				"00000000F7808F4D"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000001D874595"
+				"000000007EC2AC5C"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"000000007DC5AE3B"
+				"00000000AE11409D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005CB5C7BC"
+			id: "00000000C6FAFA35"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006B56013E"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009004FAB8"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000000505A199"
-				item: "projectred_transmission:black_insulated_wire"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000B432F19F"
-				"00000000122D1FC7"
-				"00000000F58C7462"
-				"00000000FEFF2DF4"
-				"0000000028204869"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"0000000067CB0DE8"
-				"000000006D49FAF1"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000042B940F0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BEFDC97F"
+					id: "00000000A693112D"
 					type: "xp"
 					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EB06C174"
-					table_id: 893590406L
-					type: "random"
+					id: "000000001594D6AE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "000000007AB0CF07"
-				item: "projectred_transmission:brown_bundled_wire"
+				id: "00000000D865EDD7"
+				item: "projectred_transmission:gray_bundled_wire"
 				type: "item"
 			}]
-			x: -14.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E0DE3431"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000083845A29"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004AC533FF"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000AC9DEBDF"
-				item: "projectred_transmission:gray_insulated_wire"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 0.0d
+			x: -9.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000B432F19F"
-				"00000000122D1FC7"
-				"00000000FEFF2DF4"
-				"0000000028204869"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-				"000000006D49FAF1"
+				"00000000884D77B4"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000007EC2AC5C"
+				"000000009D3FD9AC"
+				"000000007DC5AE3B"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000067CB0DE8"
+			id: "0000000097033C5C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000096236917"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F1B27878"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000A1378A82"
-				item: "projectred_transmission:magenta_bundled_wire"
-				type: "item"
-			}]
-			x: -15.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000002ED86A39"
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"00000000D8009BC0"
-				"000000009ED98E0C"
-				"00000000E0DE3431"
-				"0000000082546EDD"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000705AB283"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B4CA2068"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CCB80CE4"
-					table_id: 893590406L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000FA9D9EF1"
-				item: "projectred_transmission:cyan_insulated_wire"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000007FB24909"
-				"000000005236427B"
-				"00000000122D1FC7"
-				"00000000FEFF2DF4"
-				"00000000BE5A55C8"
-				"00000000B34F741F"
-				"000000005C5549FF"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006D49FAF1"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000051D5E2FF"
+					id: "000000008608B636"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000031AC5FAA"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000D1F3033C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "000000000DAA8F52"
-				item: "projectred_transmission:lime_bundled_wire"
+				id: "00000000F1ED8086"
+				item: "projectred_transmission:green_bundled_wire"
 				type: "item"
 			}]
-			x: -16.0d
-			y: 0.0d
+			x: -10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
-				"000000002ED86A39"
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"00000000BC5E682F"
-				"00000000D8009BC0"
-				"000000009ED98E0C"
-				"00000000E0DE3431"
-				"00000000705AB283"
-				"0000000082546EDD"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
+				"00000000884D77B4"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000007EC2AC5C"
+				"0000000097033C5C"
+				"000000009D3FD9AC"
+				"000000007DC5AE3B"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000091684129"
+			id: "0000000078F067F2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000876F2103"
+					id: "000000008FDD6F25"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000000B2F817"
-					table_id: 893590406L
-					type: "random"
+					id: "000000009538AFA2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "00000000E159D46F"
-				item: "projectred_transmission:brown_insulated_wire"
+				id: "00000000AD429135"
+				item: "projectred_transmission:light_blue_bundled_wire"
 				type: "item"
 			}]
 			x: -11.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"000000002ED86A39"
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"00000000BC5E682F"
-				"00000000D8009BC0"
-				"000000009ED98E0C"
-				"0000000014B46EE9"
-				"00000000E0DE3431"
-				"00000000705AB283"
-				"0000000091684129"
-				"0000000082546EDD"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
+				"00000000E1BE534F"
+				"0000000098C180BD"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000719CFCA3"
+			id: "000000009D3FD9AC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000054FC3C60"
+					id: "000000008BA0BBCF"
 					type: "xp"
-					xp: 3
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000005492EDB"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000530BA7F4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "000000008B322A36"
-				item: "projectred_transmission:blue_insulated_wire"
+				id: "000000003D7B2F05"
+				item: "projectred_transmission:light_gray_bundled_wire"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"000000006E492311"
+				"000000002C3B3AC4"
+				"000000007E5F281A"
+				"00000000AC2080ED"
+				"000000001FEE8143"
+				"00000000C07E1985"
+				"00000000C1C25558"
+				"0000000010EFD52D"
+				"00000000B1EF1F7C"
+				"000000005E2F875C"
+				"000000005E4E9D0E"
+				"00000000FAB8C598"
+				"000000006F3B9664"
+				"00000000610B68D6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000669704A2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CB0AB4AE"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000CD2EBB8A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000AE7E801D"
+				item: "projectred_transmission:cyan_insulated_wire"
 				type: "item"
 			}]
 			x: -12.0d
@@ -1310,70 +1273,124 @@
 		}
 		{
 			dependencies: [
-				"000000002ED86A39"
-				"0000000099C4C27D"
-				"000000008A9BA087"
-				"00000000D8009BC0"
-				"000000009ED98E0C"
-				"00000000E0DE3431"
-				"0000000030255FD7"
-				"00000000BBC1EA97"
-				"00000000318559A7"
+				"00000000884D77B4"
+				"00000000F7808F4D"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000001D874595"
+				"000000007EC2AC5C"
+				"00000000C6FAFA35"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"000000007DC5AE3B"
+				"00000000AE11409D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000082546EDD"
+			id: "00000000ED225AD1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006D5C7D45"
+					id: "000000009190FB62"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008A01768A"
-					table_id: 893590406L
-					type: "random"
+					id: "0000000010FD617D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "000000008F95503A"
-				item: "projectred_transmission:lime_insulated_wire"
+				id: "00000000AC071E24"
+				item: "projectred_transmission:red_bundled_wire"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FAB8C598"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000032793B2B"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000B6076D2D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "000000007EE482C9"
+				item: "projectred_transmission:gray_insulated_wire"
 				type: "item"
 			}]
 			x: -13.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"00000000884D77B4"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000009D3FD9AC"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000030255FD7"
+			id: "000000007DC5AE3B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000040DD16A5"
+					id: "00000000818B3971"
 					type: "xp"
-					xp: 3
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B02F341D"
-					table_id: 893590406L
-					type: "random"
+					id: "000000003BBED2BD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "0000000027175A30"
-				item: "projectred_transmission:light_gray_insulated_wire"
+				id: "00000000834D843C"
+				item: "projectred_transmission:purple_bundled_wire"
 				type: "item"
 			}]
 			x: -14.0d
@@ -1383,61 +1400,220 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BBC1EA97"
+			id: "000000006F3B9664"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009A1A3AB6"
+					id: "00000000D4C4763D"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000F0697B95"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "000000002355E1B2"
+				item: "projectred_transmission:blue_insulated_wire"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000884D77B4"
+				"00000000F7808F4D"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000007EC2AC5C"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"000000007DC5AE3B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AE11409D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007FAF5CBD"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004305276E"
-					table_id: 893590406L
-					type: "random"
+					id: "000000001FC92AE0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "gear"
 			tasks: [{
 				consume_items: false
-				id: "000000008C3F9073"
-				item: "projectred_transmission:light_blue_insulated_wire"
+				id: "00000000F0D8DFE4"
+				item: "projectred_transmission:yellow_bundled_wire"
 				type: "item"
 			}]
-			x: -14.0d
-			y: 1.0d
+			x: -15.0d
+			y: 0.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000318559A7"
+			id: "00000000610B68D6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000193E3F74"
+					id: "00000000634003C4"
 					type: "xp"
-					xp: 6
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006BE863BF"
-					table_id: 893590406L
-					type: "random"
+					id: "00000000E42B720C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "circle"
+			shape: "octagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000BF54E081"
-				item: "projectred_transmission:green_insulated_wire"
+				id: "00000000D26AF590"
+				item: "projectred_transmission:brown_insulated_wire"
 				type: "item"
 			}]
-			x: -14.0d
+			x: -13.0d
 			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000884D77B4"
+				"00000000F7808F4D"
+				"000000000312CF55"
+				"00000000E1BE534F"
+				"0000000098C180BD"
+				"000000001D874595"
+				"000000007EC2AC5C"
+				"00000000C6FAFA35"
+				"0000000097033C5C"
+				"0000000078F067F2"
+				"000000009D3FD9AC"
+				"00000000ED225AD1"
+				"000000007DC5AE3B"
+				"00000000AE11409D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000005D50CE5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E7587E47"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "00000000D8D3B54C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "00000000572487F7"
+				item: "projectred_transmission:white_bundled_wire"
+				type: "item"
+			}]
+			x: -16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000006E492311"
+				"000000002C3B3AC4"
+				"000000007E5F281A"
+				"00000000AC2080ED"
+				"000000001FEE8143"
+				"00000000C07E1985"
+				"00000000C1C25558"
+				"0000000010EFD52D"
+				"00000000B1EF1F7C"
+				"000000005E2F875C"
+				"000000005E4E9D0E"
+				"00000000669704A2"
+				"00000000FAB8C598"
+				"000000006F3B9664"
+				"00000000610B68D6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000072A84501"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007556BBE1"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000018F14019"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_transmission"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "000000002D57B75E"
+				item: "projectred_transmission:black_insulated_wire"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 3.0d
 		}
 	]
 	title: "ProjectRed Transmission"

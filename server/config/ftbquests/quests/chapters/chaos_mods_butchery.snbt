@@ -2,43 +2,43 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_butchery"
-	group: "00000000DEB299A3"
-	icon: "butchery:dragon_scale_ingot"
-	id: "00000000FE9EBAD8"
+	group: "000000008CDEF944"
+	icon: "butchery:empty_head_mount"
+	id: "000000001BECCABD"
 	order_index: 24
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004354D556"
+			id: "00000000FA8CD95D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000AE1F2DA"
+					id: "00000000C4050763"
 					type: "xp"
-					xp: 11
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000083A6B581"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000006E8E6185"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000041B0F552"
-					item: "butchery:spike_trap"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002EE0DCEA"
+					id: "00000000CBB70079"
 					item: {
 						Count: 1
 						id: "butchery:sponge"
@@ -50,8 +50,14 @@
 				}
 				{
 					consume_items: false
-					id: "0000000013D3D274"
+					id: "00000000514B6A3F"
 					item: "butchery:spruce_butchers_table"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D32761D"
+					item: "butchery:stray_head_mount"
 					type: "item"
 				}
 			]
@@ -60,49 +66,56 @@
 		}
 		{
 			dependencies: [
-				"0000000051D94541"
-				"00000000B6390A91"
-				"00000000EA5F143A"
-				"0000000035BFBE7E"
-				"0000000034E24BD1"
+				"00000000AEDF9937"
+				"000000007B51F58D"
+				"0000000006C6D489"
+				"0000000061ABEF36"
+				"000000000130B6FF"
+				"00000000488575DD"
+				"0000000083DBA3C7"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008B63FDBA"
+			id: "0000000074E62E84"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000712CCCA3"
+					id: "00000000A50E4728"
 					type: "xp"
-					xp: 4
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A4250CD1"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000005D9E6CCE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AE4E935E"
-					item: "butchery:stray_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D4FDD887"
+					id: "000000001AF916D8"
 					item: "minecraft:string"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006A12888C"
+					id: "000000007C7A6494"
 					item: "butchery:taxidermy_table"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBBB279F"
+					item: "butchery:trimmed_ender_dragon_head_mount"
 					type: "item"
 				}
 			]
@@ -111,46 +124,57 @@
 		}
 		{
 			dependencies: [
-				"000000001AEC027D"
-				"00000000EA5F143A"
+				"00000000BDB44D3B"
+				"00000000AEDF9937"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004F5F281C"
+			id: "00000000B9D6D012"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006286101D"
+					id: "0000000082A4DF23"
 					type: "xp"
-					xp: 4
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006B8E0629"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000B75C68B9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000615A3D17"
-					item: "butchery:trimmed_ender_dragon_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000341B7434"
+					id: "000000008E2D2D04"
 					item: "butchery:trimmed_warden_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001EDE5F93"
+					id: "0000000036D6AF4F"
 					item: "butchery:turtle_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005BC6E311"
+					item: {
+						Count: 1
+						id: "minecraft:turtle_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 			]
@@ -161,40 +185,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000285F3403"
+			id: "00000000A7C5D682"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004FFA7D2B"
+					id: "000000005002492D"
 					type: "xp"
-					xp: 24
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D92BA5D0"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000B51A3258"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000030C3730E"
-					item: "butchery:cooked_bee_back_meat"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CDAFA050"
+					id: "000000005B7D89B7"
 					item: "butchery:cooked_polar_bear_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000488323AE"
+					id: "00000000E27AFDB2"
 					item: "butchery:salt_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001E7E4304"
+					item: "butchery:sculkbonemeal"
 					type: "item"
 				}
 			]
@@ -203,46 +232,51 @@
 		}
 		{
 			dependencies: [
-				"00000000ED4370F8"
-				"00000000EA5F143A"
+				"00000000BDB44D3B"
+				"00000000876182DE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000192F2E40"
+			id: "00000000C77A1ECB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005FDFC9BD"
+					id: "0000000041C1FD22"
 					type: "xp"
-					xp: 29
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D3E97F3A"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000DC9F15CE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000A6B1AF8"
-					item: "butchery:sculkbonemeal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000064FE1EC6"
+					id: "00000000CC60F9F1"
 					item: "butchery:sheep_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000367F0E0C"
+					id: "00000000F13BE920"
 					item: "butchery:silverfish_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BD1E9C92"
+					item: "butchery:skeleton_head_mount"
 					type: "item"
 				}
 			]
@@ -250,44 +284,49 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DA4D8278"
+			id: "00000000A753B60F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000014FDF8E4"
+					id: "000000009E042612"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006C2FE0ED"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000099F7D558"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000031104A18"
-					item: "butchery:skeleton_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000149FC15A"
+					id: "0000000036DCB285"
 					item: "butchery:skeleton_horse_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005AEA4A0C"
+					id: "00000000B7FCEB8D"
 					item: "butchery:skin_rack"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B11CEDAF"
+					item: "minecraft:slime_ball"
 					type: "item"
 				}
 			]
@@ -295,44 +334,49 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D50836EE"
+			id: "0000000026653586"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008ED2C414"
+					id: "0000000007E60FAA"
 					type: "xp"
-					xp: 19
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C626FCB5"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000E0A1C29D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000031BAC3EA"
-					item: "minecraft:slime_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000090A31634"
+					id: "0000000031023BEB"
 					item: "butchery:snowy_fox_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D51B32AA"
+					id: "00000000550C0E25"
 					item: "butchery:spider_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E51339B2"
+					item: "butchery:spike_trap"
 					type: "item"
 				}
 			]
@@ -340,44 +384,49 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000051D94541"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D91A1E95"
+			id: "000000002A9E1AA9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000044A682B8"
+					id: "000000005A16D7E1"
 					type: "xp"
-					xp: 17
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EAD55809"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000031F85637"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B9A8F912"
-					item: "butchery:panda_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B99F2EAB"
+					id: "00000000F03F5441"
 					item: "butchery:panda_rug"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007C9DD430"
+					id: "000000001B3A183C"
 					item: "butchery:pestle_and_mortar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C010023"
+					item: "butchery:phantom_head_mount"
 					type: "item"
 				}
 			]
@@ -385,44 +434,49 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004B9D9284"
+			id: "00000000D02967A2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000024CB8049"
+					id: "00000000CB4930E7"
 					type: "xp"
-					xp: 30
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007055714A"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000A9F0F181"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000021716C53"
-					item: "butchery:phantom_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000174E3BFC"
+					id: "0000000081F1F3A3"
 					item: "butchery:pig_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000099BE5A9E"
+					id: "000000009B3B4A76"
 					item: "butchery:piglin_brute_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B1C7B9C8"
+					item: "butchery:piglin_head_mount"
 					type: "item"
 				}
 			]
@@ -430,44 +484,49 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000154BBE2C"
+			id: "00000000148217F4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A23878C2"
+					id: "0000000061293F4B"
 					type: "xp"
-					xp: 26
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D7E968AD"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000000120B6A4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A76F08BE"
-					item: "butchery:piglin_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006BD15C57"
+					id: "0000000073DADEAD"
 					item: "butchery:pillager_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B2C5D319"
+					id: "0000000098DEF238"
 					item: "butchery:polarbear_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000933887EA"
+					item: "butchery:polarbear_rug"
 					type: "item"
 				}
 			]
@@ -475,44 +534,49 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F6150D29"
+			id: "0000000059C93567"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A6ED2C51"
+					id: "00000000EF8FE06B"
 					type: "xp"
-					xp: 12
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D0CD1AA7"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000009204A2DD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000069D62040"
-					item: "butchery:polarbear_rug"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000882B0099"
+					id: "00000000D7BD734D"
 					item: "butchery:rabbit_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000090812389"
+					id: "00000000021A614E"
 					item: "butchery:rag"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CFC081ED"
+					item: "butchery:cooked_bee_back_meat"
 					type: "item"
 				}
 			]
@@ -523,82 +587,98 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001AEC027D"
+			id: "00000000AEDF9937"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EEE72568"
+					id: "00000000A22AE521"
 					type: "xp"
-					xp: 10
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006862F12A"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000051CC5711"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003C850E44"
-					item: "butchery:empty_dragon_trimmed_head_mount"
+					id: "0000000037FB9BCE"
+					item: "butchery:spiked_dragon_bone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B975D8FA"
+					id: "00000000EEFE15DE"
 					item: "butchery:empty_warden_trimmed_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000011054D10"
+					item: "butchery:empty_dragon_trimmed_head_mount"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 8.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
-				"0000000051D94541"
-				"00000000EA5F143A"
+				"00000000BDB44D3B"
+				"0000000006C6D489"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000012114CB1"
+			id: "000000006AE7A57E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000095BE66BE"
+					id: "000000007AFC0CAC"
 					type: "xp"
-					xp: 8
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F2311606"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000B0BC3A93"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C20292B7"
-					item: "butchery:wooden_spit_rotisserie"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000022A5E1C3"
+					id: "00000000E9891423"
 					item: "butchery:zoglin_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003949280A"
+					id: "000000002BB21E8D"
 					item: "butchery:zombie_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008FD3EA81"
+					item: "butchery:zombie_horse_head_mount"
 					type: "item"
 				}
 			]
@@ -606,44 +686,49 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000E2473A21"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ED4370F8"
+			id: "00000000876182DE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000165A747"
+					id: "000000003826CBDD"
 					type: "xp"
-					xp: 9
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FD3E5636"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000085DBE434"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000034823F3E"
+					id: "000000002C696D70"
+					item: "butchery:raw_lamb_mince"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003CC906F0"
 					item: "butchery:raw_sausage"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008FD492A0"
+					id: "00000000AFDFE7A5"
 					item: "butchery:small_empty_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009CD1ECD1"
-					item: "butchery:spiked_dragon_bone"
 					type: "item"
 				}
 			]
@@ -651,43 +736,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BE3F3D16"
+			id: "00000000EF4EAE73"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D8128522"
+					id: "0000000057395CA5"
 					type: "xp"
-					xp: 10
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EFF2283A"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000B3C72C83"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FD61F2B4"
-					item: "butchery:zombie_horse_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000062570C13"
+					id: "000000002D507BDF"
 					item: "butchery:zombie_villager_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F199D9EC"
+					id: "00000000EAD6D835"
 					item: "butchery:zombified_piglin_head_mount"
 					type: "item"
 				}
@@ -696,93 +780,36 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000E2473A21"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000243F949F"
+			id: "000000007B51F58D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000022AA1036"
+					id: "00000000D954653D"
 					type: "xp"
-					xp: 9
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CE38C137"
-					table_id: 1333864530L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000006CAEC642"
-					item: "butchery:raw_beef_mince"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EE1C4C06"
-					item: "butchery:raw_blood_sausage"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BA75E67C"
-					item: "butchery:raw_lamb_mince"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000051D94541"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000063CE0694"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E1B6364C"
-					table_id: 1333864530L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000000A79B343"
-					item: "butchery:large_empty_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000086B03845"
+					id: "00000000513A5118"
 					item: {
 						Count: 1
-						id: "butchery:netherite_cleaver"
+						id: "ftbquests:lootcrate"
 						tag: {
-							Damage: 0
+							type: "chaos_box_butchery"
 						}
 					}
 					type: "item"
 				}
+			]
+			shape: "square"
+			tasks: [
 				{
 					consume_items: false
-					id: "00000000C95EDFD2"
+					id: "0000000033EFE3F8"
 					item: {
 						Count: 1
 						id: "butchery:netherite_skinning_knife"
@@ -792,35 +819,114 @@
 					}
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "00000000532D1AA1"
+					item: "butchery:raw_beef_mince"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007083FA13"
+					item: "butchery:raw_blood_sausage"
+					type: "item"
+				}
 			]
 			x: -9.0d
-			y: 5.0d
+			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B6390A91"
+			id: "0000000006C6D489"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000064ED4794"
+					id: "00000000123CFFC1"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000037C415C4"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000409B68AD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000066B180BC"
+					id: "000000004D02B038"
+					item: {
+						Count: 1
+						id: "butchery:iron_skinning_knife"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000058A27243"
+					item: "butchery:large_empty_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007689FFEF"
+					item: {
+						Count: 1
+						id: "butchery:netherite_cleaver"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000BDB44D3B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000061ABEF36"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002B5E7E71"
+					type: "xp"
+					xp: 28
+				}
+				{
+					id: "00000000EB7E1F13"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000132237B8"
 					item: {
 						Count: 1
 						id: "butchery:gold_skinning_knife"
@@ -832,22 +938,16 @@
 				}
 				{
 					consume_items: false
-					id: "0000000029BCBD9F"
-					item: {
-						Count: 1
-						id: "butchery:iron_cleaver"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "00000000B5FC2D33"
+					item: "butchery:chestnut_horse_head"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008BEEA971"
+					id: "00000000376AAE50"
 					item: {
 						Count: 1
-						id: "butchery:iron_skinning_knife"
+						id: "butchery:iron_cleaver"
 						tag: {
 							Damage: 0
 						}
@@ -862,39 +962,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BC991ED9"
+			id: "000000006A9575CD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A4519AE7"
+					id: "00000000BA5DF6FE"
 					type: "xp"
-					xp: 24
+					xp: 30
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B7366A2A"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000006961D54B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E507FE86"
-					item: {
-						Count: 1
-						id: "minecraft:turtle_helmet"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DCA7093C"
+					id: "000000006358FDA2"
 					item: {
 						Count: 1
 						id: "butchery:turtle_shell_armor_boots"
@@ -906,10 +999,22 @@
 				}
 				{
 					consume_items: false
-					id: "0000000075DD6670"
+					id: "00000000723E4693"
 					item: {
 						Count: 1
 						id: "butchery:turtle_shell_armor_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D97FC485"
+					item: {
+						Count: 1
+						id: "butchery:turtle_shell_armor_leggings"
 						tag: {
 							Damage: 0
 						}
@@ -921,42 +1026,48 @@
 			y: 3.0d
 		}
 		{
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EA5F143A"
+			id: "000000000130B6FF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000AFCBB81"
+					id: "000000002A2B5C5D"
 					type: "xp"
-					xp: 12
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000068AF7663"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000005F372E31"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DA89FEB1"
+					id: "000000008347B6F5"
 					item: "butchery:diorite_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C14A4C27"
-					item: "butchery:empty_head_mount"
+					id: "00000000DBD15F3D"
+					item: "butchery:dragon_scale_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000306048C8"
+					id: "000000003D7C5694"
 					item: {
 						Count: 1
 						id: "butchery:gold_cleaver"
@@ -968,53 +1079,55 @@
 				}
 			]
 			x: -9.0d
-			y: 0.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: [
+				"00000000BDB44D3B"
+				"0000000006C6D489"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001F23557F"
+			id: "000000009C098A82"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FB2E8C49"
+					id: "0000000000DD2ECB"
 					type: "xp"
-					xp: 21
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A4EC5326"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000AFDBBB64"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F5A03697"
-					item: {
-						Count: 1
-						id: "butchery:turtle_shell_armor_leggings"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004BB51452"
+					id: "00000000A9C775EC"
 					item: "butchery:villager_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000805345CF"
+					id: "000000002138C517"
 					item: "butchery:vindicator_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E9DEC367"
+					item: "butchery:warden_head_mount"
 					type: "item"
 				}
 			]
@@ -1025,27 +1138,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000035BFBE7E"
+			id: "00000000488575DD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009EF9CC7F"
+					id: "00000000E066EE21"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A7758DAC"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000033E5D678"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000079B2BFFD"
+					id: "0000000008DBB9AC"
 					item: {
 						Count: 1
 						id: "butchery:copper_skinning_knife"
@@ -1057,7 +1175,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000350A1666"
+					id: "00000000AA779899"
 					item: {
 						Count: 1
 						id: "butchery:diamond_cleaver"
@@ -1069,7 +1187,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000122F9E7E"
+					id: "000000002D649332"
 					item: {
 						Count: 1
 						id: "butchery:diamond_skinning_knife"
@@ -1081,50 +1199,52 @@
 				}
 			]
 			x: -9.0d
-			y: 6.0d
+			y: 7.0d
 		}
 		{
-			dependencies: [
-				"0000000051D94541"
-				"00000000EA5F143A"
-			]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F73A2A01"
+			id: "00000000647B7770"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000D08666D"
+					id: "000000008702BA5B"
 					type: "xp"
-					xp: 6
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008899B6ED"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000A9BCF260"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000046292CE8"
-					item: "butchery:warden_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007026AE2F"
+					id: "000000006F632E32"
 					item: "butchery:warped_butchers_table"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E70EA294"
+					id: "000000003A8EBC9C"
 					item: "butchery:witch_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000238FCA28"
+					item: "butchery:wither_bone_meal"
 					type: "item"
 				}
 			]
@@ -1135,27 +1255,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000034E24BD1"
+			id: "0000000083DBA3C7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E4859579"
+					id: "00000000747ACE63"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000E0C7EC6"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000DC08F116"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F6D39EC4"
+					id: "00000000737C287B"
 					item: {
 						Count: 1
 						id: "butchery:bone_cleaver"
@@ -1167,7 +1292,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000DB13781A"
+					id: "00000000C00D7C65"
 					item: {
 						Count: 1
 						id: "butchery:bone_skinning_knife"
@@ -1179,7 +1304,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000008420613F"
+					id: "000000009AF77B5F"
 					item: {
 						Count: 1
 						id: "butchery:copper_cleaver"
@@ -1191,47 +1316,52 @@
 				}
 			]
 			x: -9.0d
-			y: 7.0d
+			y: 8.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A8CC1D38"
+			id: "000000009E320120"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000229C3133"
+					id: "00000000BD9FC122"
 					type: "xp"
-					xp: 26
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B247AF3E"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000D03D498D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000029962DD7"
-					item: "butchery:wither_bone_meal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009BD55BC5"
+					id: "00000000FE442AF5"
 					item: "butchery:wither_skeleton_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000005911D5B"
+					id: "00000000BA4B13F2"
 					item: "butchery:wolf_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000065B3A800"
+					item: "butchery:wooden_spit_rotisserie"
 					type: "item"
 				}
 			]
@@ -1242,71 +1372,95 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E2473A21"
+			id: "00000000BDB44D3B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003C911282"
+					id: "000000007564B8CA"
 					type: "xp"
-					xp: 8
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000168149FC"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000A9AB09D8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000870E762D"
-				item: "butchery:sausage_attachment"
-				type: "item"
-			}]
-			x: -10.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003EB7FE26"
+					item: "butchery:dragon_scale_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C8C78684"
+					item: "butchery:empty_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D4F6B6B3"
+					item: "butchery:sausage_attachment"
+					type: "item"
+				}
+			]
+			x: -9.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001733868F"
+			id: "00000000963A9962"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F9247380"
+					id: "000000008D92FC5D"
 					type: "xp"
-					xp: 7
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000016979EE0"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000DB57019B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000023D67886"
-					item: "butchery:all_black_cat_head_mount"
+					id: "000000004044299C"
+					item: "butchery:siamese_cat_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007CD58B80"
-					item: "butchery:white_cat_head_mount"
+					id: "0000000059A66F6D"
+					item: "butchery:black_cat_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008FB813D2"
-					item: "butchery:ragdoll_cat_head_mount"
+					id: "00000000D2150F4A"
+					item: "butchery:persian_cat_head_mount"
 					type: "item"
 				}
 			]
@@ -1314,43 +1468,48 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D5FDC77C"
+			id: "000000002C3EE8B8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B36D9A8C"
+					id: "00000000360A8F82"
 					type: "xp"
-					xp: 7
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005C663969"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000009C0FA0B3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005C8076EE"
+					id: "00000000324BD914"
 					item: "butchery:cave_spider_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A2FB75C4"
+					id: "000000002576B91C"
 					item: "butchery:chicken_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000D903A1B"
+					id: "000000008515A6AD"
 					item: "butchery:cooked_pink_axolotl_fillet"
 					type: "item"
 				}
@@ -1362,40 +1521,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C9289558"
+			id: "00000000BD083CC6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B7C30BE1"
+					id: "000000004B55C489"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DE574366"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000039285622"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D09F40E1"
-					item: "butchery:canopy_brown"
+					id: "0000000074CE79EE"
+					item: "butchery:canopy_blue"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004F0980D0"
-					item: "butchery:canopy_orange"
+					id: "00000000CFC66666"
+					item: "butchery:canopy_red"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E6F30286"
-					item: "butchery:canopy_green"
+					id: "00000000E3AC8706"
+					item: "butchery:canopy_gray"
 					type: "item"
 				}
 			]
@@ -1403,44 +1567,49 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007EFBF2B5"
+			id: "0000000087B9BC43"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000006CF9652"
+					id: "00000000FA31F0BC"
 					type: "xp"
-					xp: 20
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000EC40F28"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000008D167B3D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002F33B6EB"
+					id: "00000000A3A29CD1"
 					item: "butchery:cash_register"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AD686CC7"
-					item: "butchery:jellie_cat_head_mount"
+					id: "000000005F99DA17"
+					item: "butchery:tabby_cat_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D1122F5C"
-					item: "butchery:tabby_cat_head_mount"
+					id: "000000000772A02D"
+					item: "butchery:shorthair_cat_head_mount"
 					type: "item"
 				}
 			]
@@ -1448,44 +1617,49 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000049E51029"
+			id: "00000000B55EE024"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D965533F"
+					id: "000000002FD7AEE9"
 					type: "xp"
-					xp: 19
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E6B1046F"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000442E1719"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EA88174B"
+					id: "0000000091B6E79B"
+					item: "butchery:all_black_cat_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007F0248B9"
+					item: "butchery:calico_cat_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003F8C6C56"
 					item: "butchery:red_cat_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000031373398"
-					item: "butchery:shorthair_cat_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008976CF0B"
-					item: "butchery:siamese_cat_head_mount"
 					type: "item"
 				}
 			]
@@ -1493,44 +1667,49 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000879490CC"
+			id: "000000002279D2E4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004896D771"
+					id: "00000000FC815C2D"
 					type: "xp"
-					xp: 18
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009683D698"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000C32B0633"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000076C02467"
-					item: "butchery:black_cat_head_mount"
+					id: "00000000B0B0238C"
+					item: "butchery:jellie_cat_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C7AD30B2"
-					item: "butchery:persian_cat_head_mount"
+					id: "0000000067FF40A4"
+					item: "butchery:ragdoll_cat_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D31CC1C1"
-					item: "butchery:calico_cat_head_mount"
+					id: "000000007CFB34FA"
+					item: "butchery:white_cat_head_mount"
 					type: "item"
 				}
 			]
@@ -1541,39 +1720,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000047102255"
+			id: "0000000019516E16"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000003DF6F3"
+					id: "00000000A12EBB03"
 					type: "xp"
-					xp: 21
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008BA9F6C9"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000054D525E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D714C9B6"
-					item: "butchery:canopy_black"
+					id: "000000000B4DB3B3"
+					item: "butchery:canopy_magenta"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EB7E9346"
-					item: "butchery:canopy_red"
+					id: "00000000DCD37447"
+					item: "butchery:canopy_pink"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000727B1C2C"
+					id: "00000000C9CB0403"
 					item: "butchery:canopy_light_blue"
 					type: "item"
 				}
@@ -1585,40 +1769,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000020EDEA68"
+			id: "000000006F808228"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000018E9E4C7"
+					id: "000000007130E88D"
 					type: "xp"
-					xp: 22
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004C7359A6"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000002D5C6F3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DE1B141F"
-					item: "butchery:canopy_pink"
+					id: "000000005A7BFF98"
+					item: "butchery:canopy_yellow"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A16B66D3"
-					item: "butchery:canopy_gray"
+					id: "00000000753D32B5"
+					item: "butchery:canopy_lime"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000005400F46"
-					item: "butchery:canopy_blue"
+					id: "00000000CE718D3B"
+					item: "butchery:canopy_cyan"
 					type: "item"
 				}
 			]
@@ -1629,40 +1818,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001784B641"
+			id: "00000000ED58547A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FAAC075E"
+					id: "00000000FDE21022"
 					type: "xp"
-					xp: 26
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000076431A25"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000090E20D34"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000081BF0D35"
-					item: "butchery:canopy_magenta"
+					id: "00000000FA269E2B"
+					item: "butchery:canopy_brown"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BBA823D4"
-					item: "butchery:canopy_lime"
+					id: "0000000046D73A74"
+					item: "butchery:canopy_light_gray"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006CE7B17F"
-					item: "butchery:canopy_cyan"
+					id: "0000000026409BF7"
+					item: "butchery:canopy_purple"
 					type: "item"
 				}
 			]
@@ -1673,40 +1867,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CDE53ACB"
+			id: "0000000050C47FA0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A1DC24B7"
+					id: "000000009D508918"
 					type: "xp"
-					xp: 19
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CE464ADA"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000E945DD00"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000012311BAB"
-					item: "butchery:canopy_yellow"
+					id: "000000008BF24CED"
+					item: "butchery:canopy_black"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006C4AF058"
-					item: "butchery:canopy_purple"
+					id: "000000008786D282"
+					item: "butchery:canopy_orange"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FA01F4E3"
-					item: "butchery:canopy_light_gray"
+					id: "000000002008D100"
+					item: "butchery:canopy_green"
 					type: "item"
 				}
 			]
@@ -1717,39 +1916,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB3117F9"
+			id: "00000000B1C6A1F3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FB104501"
+					id: "000000005DD54AD3"
 					type: "xp"
-					xp: 21
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000654DC1A8"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000068490DBE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003F02F63E"
+					id: "00000000E748FF5D"
 					item: "butchery:cooked_endermite_chunks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006278871F"
+					id: "00000000338855A8"
 					item: "butchery:cooked_evoker_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BDA98CAF"
+					id: "00000000032FBCC2"
 					item: "butchery:cooked_fox_meat"
 					type: "item"
 				}
@@ -1761,39 +1965,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000005E9F678"
+			id: "000000000A94865E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000053F9B6DF"
+					id: "00000000E6C9E30E"
 					type: "xp"
-					xp: 26
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000042B934"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000009F689383"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004648DB48"
+					id: "00000000D7D092A5"
 					item: "butchery:cooked_cod_fillet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BA2D56E2"
+					id: "000000001FA39C02"
 					item: "butchery:cooked_creeper_leg"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CD17B085"
+					id: "0000000097CEA1B8"
 					item: "butchery:cooked_creeper_steak"
 					type: "item"
 				}
@@ -1805,39 +2014,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002D4166D9"
+			id: "000000005323B367"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F6BDE961"
+					id: "00000000D41A5A69"
 					type: "xp"
-					xp: 18
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BBC5FB75"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000BB9AB486"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005EE0D7ED"
+					id: "00000000F1BEF186"
 					item: "butchery:cooked_dolphin_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EF8495C9"
+					id: "00000000C195EECF"
 					item: "butchery:cooked_donkey_steak"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009DF86D0B"
+					id: "000000005A2D6B17"
 					item: "butchery:cooked_elder_guardian_meat"
 					type: "item"
 				}
@@ -1849,39 +2063,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000838D83B8"
+			id: "0000000015B98C7C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000051C4483"
+					id: "000000006583B334"
 					type: "xp"
-					xp: 22
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000048C4B6"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000D36502C7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AF19E0DB"
+					id: "000000000EC4B482"
 					item: "butchery:cooked_enderman_intestines"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003B5C3F2C"
+					id: "00000000970F7277"
 					item: "butchery:cooked_enderman_kidney"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001BA2CE3E"
+					id: "00000000D357A3BA"
 					item: "butchery:cooked_enderman_liver"
 					type: "item"
 				}
@@ -1893,39 +2112,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B3FA5F53"
+			id: "00000000E22F7180"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C409BFD3"
+					id: "000000002D2FEE7B"
 					type: "xp"
-					xp: 11
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FC2C9DAF"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000F18CE5FA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009CB49A6F"
+					id: "0000000082B98A48"
 					item: "butchery:cooked_enderman_lungs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000028A5B4A4"
+					id: "0000000094FE32DB"
 					item: "butchery:cooked_enderman_steak"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B25C4BF4"
+					id: "0000000039DF794E"
 					item: "butchery:cooked_enderman_stomach"
 					type: "item"
 				}
@@ -1934,43 +2158,48 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000243F949F"]
+			dependencies: ["000000007B51F58D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007DB0B9B8"
+			id: "000000003E3E8897"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B2F8C303"
+					id: "00000000FA4CC353"
 					type: "xp"
-					xp: 17
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B4FF8D49"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000005C91C1BA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000326CD1B0"
-					item: "butchery:cooked_brown_axolotl_fillet"
+					id: "00000000BD13F465"
+					item: "butchery:cooked_blue_axolotl_fillet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005AC2CE0B"
+					id: "00000000BF893DE1"
 					item: "butchery:cooked_bat_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000270175AD"
+					id: "00000000FB6517BF"
 					item: "butchery:cooked_beef_mince"
 					type: "item"
 				}
@@ -1979,43 +2208,48 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000243F949F"]
+			dependencies: ["000000007B51F58D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD1EF73F"
+			id: "00000000FC971E2E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000054DB4118"
+					id: "00000000ED727464"
 					type: "xp"
-					xp: 29
+					xp: 30
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AEE8F5A8"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000007DB203EC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000025D19C99"
+					id: "000000005FC02428"
 					item: "butchery:cooked_blood_sausage"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DF2FD9E9"
+					id: "00000000B552783F"
 					item: "butchery:cooked_camel_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D24456E3"
+					id: "00000000A966E8E2"
 					item: "butchery:cooked_cat_meat"
 					type: "item"
 				}
@@ -2027,39 +2261,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004CC24276"
+			id: "000000008903C74E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F13DABD7"
+					id: "0000000044746FB6"
 					type: "xp"
-					xp: 12
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000066B9A377"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000FC3AA771"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000ED977BE4"
+					id: "00000000256003D6"
 					item: "butchery:cooked_cave_spider_leg"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A7057222"
+					id: "0000000000961887"
 					item: "butchery:cooked_chicken_leg"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000039BB6993"
+					id: "000000000E798464"
 					item: "butchery:cooked_chicken_wing"
 					type: "item"
 				}
@@ -2071,39 +2310,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A2D5CA4D"
+			id: "0000000027A0B221"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004FD74B6D"
+					id: "0000000073C5A4C0"
 					type: "xp"
-					xp: 7
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B40C7B78"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000C78AF710"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C7669318"
-					item: "butchery:cooked_rump_steak"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006B3DF0DF"
+					id: "000000009CA0B80F"
 					item: "butchery:cooked_chuck_steak"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002F6FC30C"
+					id: "00000000BCCAF474"
+					item: "butchery:cooked_rump_steak"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CC8C5BF3"
 					item: "butchery:cooked_ribeye_steak"
 					type: "item"
 				}
@@ -2115,40 +2359,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001C016883"
+			id: "000000003E83D0C5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B406C65E"
+					id: "00000000FB36BCAE"
 					type: "xp"
-					xp: 16
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B529724B"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000053CC9CA2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000447D22D6"
-					item: "butchery:cooked_cyan_axolotl_fillet"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000000A091BA"
+					id: "000000006C602581"
 					item: "butchery:cooked_gold_axolotl_fillet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CD1966F8"
-					item: "butchery:cooked_blue_axolotl_fillet"
+					id: "0000000011BF0C74"
+					item: "butchery:cooked_cyan_axolotl_fillet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BD926FAB"
+					item: "butchery:cooked_brown_axolotl_fillet"
 					type: "item"
 				}
 			]
@@ -2159,39 +2408,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000559F3C51"
+			id: "000000000E52CA52"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000089B7E5B0"
+					id: "000000009CBCA0F3"
 					type: "xp"
-					xp: 3
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000336CBA7F"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000B722487F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000098C6B160"
+					id: "00000000B91746CC"
 					item: "butchery:cooked_mule_steak"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000054568B2E"
+					id: "000000001C100176"
 					item: "butchery:cooked_ocelot_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000058C4ECA8"
+					id: "000000009E0496C3"
 					item: "butchery:cooked_orange_frog_leg"
 					type: "item"
 				}
@@ -2203,39 +2457,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000385A0555"
+			id: "00000000356FDE27"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B661E159"
+					id: "000000003461FC10"
 					type: "xp"
-					xp: 3
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000631054D7"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000673D7D2A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000DDC8D6B"
+					id: "000000005FA45EB4"
 					item: "butchery:cooked_panda_steak"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000018BCAC3E"
+					id: "00000000B08F60F5"
 					item: "butchery:cooked_pillager_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006775E2A4"
+					id: "00000000107D2879"
 					item: "butchery:cooked_pork_belly"
 					type: "item"
 				}
@@ -2247,39 +2506,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000DFC4AC1"
+			id: "000000009CDF2579"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000F6BC0E5"
+					id: "0000000012C6A0A3"
 					type: "xp"
-					xp: 9
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008E9E6EDE"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000066264B38"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AD049726"
+					id: "000000001862528E"
 					item: "butchery:cooked_pork_leg"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000473E4A64"
+					id: "0000000082DEF345"
 					item: "butchery:cooked_pork_loin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D5BD9C73"
+					id: "000000005B63113B"
 					item: "butchery:cooked_pork_shoulder"
 					type: "item"
 				}
@@ -2288,43 +2552,48 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000ED4370F8"]
+			dependencies: ["00000000876182DE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002F8A9AC4"
+			id: "000000000C09DF1D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000578E9C6C"
+					id: "00000000FDDC02B3"
 					type: "xp"
-					xp: 30
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000023473BAE"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000D8C60986"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000066EF7B8B"
+					id: "000000008FB8B8E4"
 					item: "butchery:cooked_pufferfish"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000882C8BBC"
+					id: "000000004999781E"
 					item: "butchery:cooked_salmon"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000886E56A8"
+					id: "00000000F97CA017"
 					item: "butchery:cooked_sausage"
 					type: "item"
 				}
@@ -2336,39 +2605,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002B716E39"
+			id: "000000005355B195"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006703C9B4"
+					id: "00000000A0262F3B"
 					type: "xp"
-					xp: 2
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DA1532FC"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000076B8559C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D7EFCDE6"
+					id: "00000000FB3A686B"
 					item: "butchery:cooked_horse_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D8D75972"
+					id: "00000000A1F07D67"
 					item: "butchery:cookedhumanmeat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005ECEDD2E"
+					id: "000000001C909865"
 					item: "butchery:cooked_intestines"
 					type: "item"
 				}
@@ -2377,43 +2651,48 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000243F949F"]
+			dependencies: ["00000000876182DE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CAE97C8F"
+			id: "000000006B620F5A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E2AF41A2"
+					id: "0000000063ECEDF5"
 					type: "xp"
-					xp: 17
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000078C6E268"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000007943E85C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D1E7ABA3"
+					id: "000000005C3E9328"
 					item: "butchery:cooked_kidney"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000042EB8669"
+					id: "000000007C083C44"
 					item: "butchery:cooked_lamb_loin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000863B1FD5"
+					id: "000000000A3653B3"
 					item: "butchery:cooked_lamb_mince"
 					type: "item"
 				}
@@ -2425,39 +2704,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000099FB8BF8"
+			id: "00000000E1E6296A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008D44C9E7"
+					id: "0000000057B8F969"
 					type: "xp"
-					xp: 23
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001E2DBD04"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000AB670AF0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004C7AD65D"
+					id: "0000000036E2B9DE"
 					item: "butchery:cooked_lamb_rib"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008A83F62D"
+					id: "0000000076C6A862"
 					item: "butchery:cooked_lamb_shoulder"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001332611D"
+					id: "0000000006DBFFF1"
 					item: "butchery:cooked_lamb_sirloin"
 					type: "item"
 				}
@@ -2469,39 +2753,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000032FF09D6"
+			id: "00000000B3DE1C11"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BEE0AEE8"
+					id: "000000008A757935"
 					type: "xp"
-					xp: 6
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EF959523"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000CED9B7F2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000666F7023"
+					id: "000000000ED203BB"
 					item: "butchery:cooked_leg_of_lamb"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000092B1D01B"
+					id: "00000000A7831D82"
 					item: "butchery:cooked_liver"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AFB3EB41"
+					id: "000000009E1C45DE"
 					item: "butchery:cooked_llama_steak"
 					type: "item"
 				}
@@ -2513,39 +2802,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000854CF763"
+			id: "00000000313641FC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ABF319ED"
+					id: "0000000041D62A9E"
 					type: "xp"
-					xp: 7
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A128AC64"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000008E09B4DD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000012CFC60D"
+					id: "000000000E48C643"
 					item: "butchery:cooked_gray_frog_leg"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000016C20ACF"
+					id: "0000000026485745"
 					item: "butchery:cooked_green_frog_leg"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000088B77788"
+					id: "0000000019FAE3B2"
 					item: "butchery:cooked_guardian_meat"
 					type: "item"
 				}
@@ -2557,39 +2851,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000236AF69F"
+			id: "000000008EAFD97B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A7EF4F8E"
+					id: "00000000E376E358"
 					type: "xp"
-					xp: 13
+					xp: 31
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000000C085FE"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000D1A32FB4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009F93D500"
+					id: "0000000037D1497C"
 					item: "butchery:cooked_ham"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C174DBCF"
+					id: "00000000546A9F37"
 					item: "butchery:cooked_heart"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CEC6B3C8"
+					id: "0000000008CA080E"
 					item: "butchery:cooked_hoglin_chunk"
 					type: "item"
 				}
@@ -2601,40 +2900,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A768837F"
+			id: "0000000061926817"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000932E625B"
+					id: "000000006AC95A93"
 					type: "xp"
-					xp: 28
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D35BE74E"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000003D72ACF1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E49974BD"
-					item: "butchery:oak_counter"
+					id: "00000000D469145B"
+					item: "butchery:crimson_counter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B6F5D776"
-					item: "butchery:acacia_counter"
+					id: "0000000017505D1E"
+					item: "butchery:warped_counter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E681923B"
-					item: "butchery:dark_oak_counter"
+					id: "00000000BB907921"
+					item: "butchery:birch_counter"
 					type: "item"
 				}
 			]
@@ -2642,43 +2946,48 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C8CAA554"
+			id: "00000000D4218855"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CA1F25CC"
+					id: "00000000549351B0"
 					type: "xp"
-					xp: 20
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D7C6B29F"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000000BFF0DC8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EEBE5531"
+					id: "000000002E5C4D6F"
 					item: "butchery:cow_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000032E9CD23"
+					id: "000000003EB37584"
 					item: "butchery:crackling"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000047674F87"
+					id: "00000000A90AD41B"
 					item: "butchery:creeper_head_mount"
 					type: "item"
 				}
@@ -2690,39 +2999,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007E70A47A"
+			id: "0000000082962283"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A6736D68"
+					id: "000000001BE632D1"
 					type: "xp"
-					xp: 13
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000027208839"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000D966326D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E64739F8"
+					id: "00000000B8B00AC0"
 					item: "butchery:crimson_butchers_table"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D599ABA2"
+					id: "00000000DC2ED61C"
 					item: "butchery:dark_oak_butchers_table"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000067DA5B08"
+					id: "00000000DB22343C"
 					item: "butchery:deep_smithing_template"
 					type: "item"
 				}
@@ -2734,39 +3048,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AC969042"
+			id: "00000000287087E3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006DBCE439"
+					id: "00000000CA14C429"
 					type: "xp"
-					xp: 9
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EC1B59AC"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000002033AACB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AFA42033"
+					id: "000000002613E814"
 					item: "butchery:cooked_villager_steak"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DA5FF9DA"
+					id: "0000000094C82636"
 					item: "butchery:cooked_vindicator_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000873D8D60"
+					id: "00000000D3D2FFAC"
 					item: "butchery:cooked_warden_meat"
 					type: "item"
 				}
@@ -2778,39 +3097,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006BC0A121"
+			id: "00000000948F32C4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002C1A086F"
+					id: "000000002D7D0454"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000026435B5E"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000804D99A5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F4513A8C"
+					id: "00000000B7766A3D"
 					item: "butchery:cooked_witch_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007A48AFB9"
+					id: "00000000BA413F76"
 					item: "butchery:cooked_wolf_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A87D5942"
+					id: "00000000434B4031"
 					item: {
 						Count: 1
 						id: "butchery:copper_hacksaw"
@@ -2828,27 +3152,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F52CC319"
+			id: "00000000333B3B89"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C96E1753"
+					id: "000000005A8FC5A3"
 					type: "xp"
-					xp: 14
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F5A60053"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000002839F18F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006550EF87"
+					id: "0000000029D10257"
 					item: {
 						Count: 1
 						id: "butchery:copper_hammer"
@@ -2860,14 +3189,14 @@
 				}
 				{
 					consume_items: false
-					id: "00000000C0897B5D"
-					item: "butchery:spruce_counter"
+					id: "0000000035C019FB"
+					item: "butchery:jungle_counter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004A97E27B"
-					item: "butchery:warped_counter"
+					id: "0000000028CFD65D"
+					item: "butchery:oak_counter"
 					type: "item"
 				}
 			]
@@ -2878,40 +3207,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000CA5D468"
+			id: "00000000222D5324"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C464F56F"
+					id: "00000000EBB43545"
 					type: "xp"
-					xp: 14
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000076FDEC3D"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000071F7EFB5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D3C3460B"
-					item: "butchery:crimson_counter"
+					id: "000000009E295C8F"
+					item: "butchery:acacia_counter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AF5ABE85"
-					item: "butchery:birch_counter"
+					id: "00000000349DBD45"
+					item: "butchery:dark_oak_counter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F8032742"
-					item: "butchery:jungle_counter"
+					id: "000000001EEFC468"
+					item: "butchery:spruce_counter"
 					type: "item"
 				}
 			]
@@ -2922,39 +3256,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003A7E6470"
+			id: "0000000041AEE42F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000094765EFC"
+					id: "00000000D374EE64"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002F6607C5"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000072F0DE85"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004CB36C31"
+					id: "00000000F5EAF7B5"
 					item: "butchery:cooked_shulker_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AB07D037"
+					id: "00000000E45109BA"
 					item: "butchery:cooked_silverfish_chunks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006368A7C1"
+					id: "0000000018E20FAD"
 					item: "butchery:cooked_sirloin_steak"
 					type: "item"
 				}
@@ -2966,39 +3305,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000034EFEE7"
+			id: "0000000071EEBABD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003B79EC8C"
+					id: "00000000E8E8AB65"
 					type: "xp"
-					xp: 11
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003ABE2318"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000269C5F19"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008594444C"
+					id: "00000000800E7BBA"
 					item: "butchery:cooked_sniffer_steak"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002B074EB2"
+					id: "0000000003132785"
 					item: "butchery:cooked_spider_leg"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A65237E4"
+					id: "000000005B75B22B"
 					item: "butchery:cooked_stomach"
 					type: "item"
 				}
@@ -3010,39 +3354,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000042164F40"
+			id: "0000000009E8E5A3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000C67B7F9"
+					id: "0000000082277135"
 					type: "xp"
-					xp: 11
+					xp: 31
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001F9FD2B4"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000002D3EEA87"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004D512439"
+					id: "000000001322A237"
 					item: "butchery:cooked_strider_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EDD28D96"
+					id: "00000000A3F15E28"
 					item: "butchery:cooked_tbone_steak"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002F53E761"
+					id: "00000000DD17852F"
 					item: "butchery:cooked_turtle_meat"
 					type: "item"
 				}
@@ -3051,43 +3400,48 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000051D94541"]
+			dependencies: ["0000000006C6D489"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E4C7A859"
+			id: "0000000094FF70F1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EFD7AD8E"
+					id: "0000000005E741A7"
 					type: "xp"
-					xp: 28
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000041427274"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000007C47C0B9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000449032E9"
+					id: "000000008180C74A"
 					item: "butchery:rope"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A8456C52"
+					id: "00000000B20E42FA"
 					item: "butchery:hoglin_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C73B2C08"
+					id: "00000000EDA92033"
 					item: "minecraft:honey_bottle"
 					type: "item"
 				}
@@ -3096,44 +3450,49 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001F6EBC67"
+			id: "00000000AD5B5C65"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000053F3D573"
+					id: "0000000005BFB62A"
 					type: "xp"
-					xp: 15
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000039397ADB"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000005EA25A54"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002508102C"
+					id: "0000000009B0A171"
 					item: "butchery:acacia_butchers_table"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FCCE20CF"
-					item: "butchery:gold_axolotl_head_mount"
+					id: "00000000E6EECECB"
+					item: "butchery:brown_axolotl_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C213BA4D"
-					item: "butchery:blue_axolotl_head_mount"
+					id: "00000000803A2C62"
+					item: "butchery:pink_axolotl_head_mount"
 					type: "item"
 				}
 			]
@@ -3141,62 +3500,36 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000001DD878EF"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001715911E"
+			id: "000000004BD60550"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000095DEC25B"
+					id: "00000000ECEB3982"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004FA6B813"
-					table_id: 1333864530L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [{
-				consume_items: false
-				id: "0000000055DAB2C0"
-				item: "butchery:dragon_scale_ingot"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["00000000EA5F143A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A520215E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007A28A0D9"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F9B935BC"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000ADDEBABD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F2D0949E"
+					id: "00000000D48C2C67"
 					item: {
 						Count: 1
 						id: "butchery:fur_suit_chestplate"
@@ -3208,7 +3541,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000077CBFC24"
+					id: "000000003F006078"
 					item: {
 						Count: 1
 						id: "butchery:fur_suit_leggings"
@@ -3220,7 +3553,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000005803A89A"
+					id: "00000000A66C5245"
 					item: "butchery:goat_head_mount"
 					type: "item"
 				}
@@ -3232,33 +3565,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005AD48A79"
+			id: "000000009C38B16A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000146BB426"
+					id: "000000008EEA5B31"
 					type: "xp"
-					xp: 3
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AAFB196E"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000005E7DF218"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009E2D1674"
+					id: "00000000D66BF382"
 					item: "butchery:goat_rug"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000018CE33B8"
+					id: "00000000DAA3C9AC"
 					item: {
 						Count: 1
 						id: "butchery:gold_hammer"
@@ -3270,7 +3608,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000CC502573"
+					id: "000000006B4FB0C2"
 					item: {
 						Count: 1
 						id: "butchery:gold_hacksaw"
@@ -3286,47 +3624,52 @@
 		}
 		{
 			dependencies: [
-				"000000001DD878EF"
-				"00000000ED4370F8"
-				"0000000051D94541"
-				"00000000EA5F143A"
+				"00000000BDB44D3B"
+				"00000000AEDF9937"
+				"0000000006C6D489"
+				"000000000130B6FF"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D14C8B8E"
+			id: "00000000D8CA0DFF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003A8FE8A7"
+					id: "000000005A6FCA17"
 					type: "xp"
-					xp: 24
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005BC542A6"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000061F69516"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000948CD922"
+					id: "00000000E1AB0AC2"
 					item: "butchery:dragon_smithing_template"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F24B8B97"
+					id: "000000001E851C9F"
 					item: "butchery:drowned_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003C52AFCE"
+					id: "000000006616C9CB"
 					item: "butchery:ender_dragon_head_mount"
 					type: "item"
 				}
@@ -3336,49 +3679,56 @@
 		}
 		{
 			dependencies: [
-				"00000000ED4370F8"
-				"0000000051D94541"
-				"00000000B6390A91"
-				"00000000EA5F143A"
-				"0000000035BFBE7E"
-				"0000000034E24BD1"
+				"00000000BDB44D3B"
+				"00000000876182DE"
+				"000000007B51F58D"
+				"0000000006C6D489"
+				"0000000061ABEF36"
+				"000000000130B6FF"
+				"00000000488575DD"
+				"0000000083DBA3C7"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AF4B5AEA"
+			id: "000000000D57C251"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001CAA6C6F"
+					id: "000000007A213316"
 					type: "xp"
-					xp: 8
+					xp: 22
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000070A9E94F"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000E68C8B6A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FB9F1C05"
+					id: "000000006894F71E"
 					item: "minecraft:ender_pearl"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A2380253"
+					id: "00000000E89D9644"
 					item: "butchery:enderman_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008491B23C"
+					id: "000000004BF34CF2"
 					item: "butchery:endermite_head_mount"
 					type: "item"
 				}
@@ -3387,43 +3737,48 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006A5DAC30"
+			id: "00000000557E4ECC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004E2E739F"
+					id: "0000000068064A0A"
 					type: "xp"
-					xp: 26
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002D5A72B3"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000FB8FE1FD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000076039B5B"
+					id: "0000000001A0A0DC"
 					item: "butchery:evoker_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000052FAAF7C"
+					id: "00000000B7D16A0F"
 					item: "butchery:floorstanding_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000086DA23D5"
+					id: "00000000F624F93B"
 					item: "butchery:fox_head_mount"
 					type: "item"
 				}
@@ -3435,33 +3790,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002C67BB8C"
+			id: "000000006DAA1DF7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004725121C"
+					id: "000000003C923897"
 					type: "xp"
-					xp: 7
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005F3E7730"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000075F1A642"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B4DCB6EC"
+					id: "00000000117866EE"
 					item: "butchery:freezer"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D61D6ADB"
+					id: "00000000D1D85359"
 					item: {
 						Count: 1
 						id: "butchery:fur_suit_boots"
@@ -3473,7 +3833,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000F236A6F3"
+					id: "0000000077BA9F9D"
 					item: {
 						Count: 1
 						id: "butchery:fur_suit_helmet"
@@ -3488,31 +3848,36 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["000000000130B6FF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000063A31C5D"
+			id: "00000000ACD746B4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ED15C712"
+					id: "00000000E6BC689E"
 					type: "xp"
-					xp: 22
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000886E3B09"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000897E9C6C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000001893A2"
+					id: "00000000542191FC"
 					item: {
 						Count: 1
 						id: "butchery:diamond_hacksaw"
@@ -3524,7 +3889,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000002ABEEFC9"
+					id: "000000001C12A7F7"
 					item: {
 						Count: 1
 						id: "butchery:diamond_hammer"
@@ -3536,7 +3901,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000008FF894E0"
+					id: "000000009B66B2E9"
 					item: "butchery:diorite_brick_slab"
 					type: "item"
 				}
@@ -3545,43 +3910,51 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: [
+				"00000000BDB44D3B"
+				"000000000130B6FF"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008B4A907F"
+			id: "00000000F7E3DD5F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D1FC0656"
+					id: "00000000C3AFBAFF"
 					type: "xp"
-					xp: 4
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F9F68218"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000006AE7B260"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BE0B4C8D"
+					id: "000000000757D6D4"
 					item: "butchery:diorite_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007706AD05"
+					id: "000000001287557C"
 					item: "butchery:diorite_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000099E5CE1E"
+					id: "00000000CE8B76EC"
 					item: "butchery:dolphin_head_mount"
 					type: "item"
 				}
@@ -3590,43 +3963,48 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001B293C8C"
+			id: "000000009DEED79A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005162FA42"
+					id: "000000008B6D8D4F"
 					type: "xp"
-					xp: 17
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005D65701D"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000006AA4F122"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E4C9CD67"
+					id: "0000000003DC64DA"
 					item: "butchery:donkey_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000439046AB"
+					id: "00000000FCF841F9"
 					item: "butchery:cooked_dragon_meat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CBA69557"
+					id: "00000000F2477378"
 					item: {
 						Count: 1
 						id: "butchery:dragon_scale_armor_boots"
@@ -3644,27 +4022,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000324CA42D"
+			id: "00000000ECEA8C0F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E3DB908D"
+					id: "0000000014C4373E"
 					type: "xp"
-					xp: 5
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000864D6903"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000009F8C60E6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009F60C3DA"
+					id: "0000000043FE9754"
 					item: {
 						Count: 1
 						id: "butchery:dragon_scale_armor_chestplate"
@@ -3676,7 +4059,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000059AE61E7"
+					id: "0000000091B65D36"
 					item: {
 						Count: 1
 						id: "butchery:dragon_scale_armor_helmet"
@@ -3688,7 +4071,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000008CFCA6E0"
+					id: "0000000049A532EA"
 					item: {
 						Count: 1
 						id: "butchery:dragon_scale_armor_leggings"
@@ -3703,46 +4086,57 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004F78D960"
+			id: "0000000057570628"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007E8B6E10"
+					id: "00000000E47550E4"
 					type: "xp"
-					xp: 5
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006F42FF7E"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000C25F16FD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000013A6CD9D"
-					item: "butchery:red_mooshroom_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F8933285"
+					id: "00000000CA7D3B3D"
 					item: "butchery:mule_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000165605B5"
+					id: "0000000000F8218A"
 					item: {
 						Count: 1
 						id: "butchery:netherite_hacksaw"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C1EAF3C"
+					item: {
+						Count: 1
+						id: "butchery:netherite_hammer"
 						tag: {
 							Damage: 0
 						}
@@ -3754,50 +4148,52 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: [
+				"00000000BDB44D3B"
+				"0000000006C6D489"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004C3436B0"
+			id: "00000000178E702D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D898C214"
+					id: "00000000E4909CDA"
 					type: "xp"
-					xp: 7
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000537DA3F2"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000A16A0773"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AF95ABC0"
-					item: {
-						Count: 1
-						id: "butchery:netherite_hammer"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BA800797"
+					id: "00000000C94877CD"
 					item: "butchery:oak_butchers_table"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B84337D4"
+					id: "0000000043B028A8"
 					item: "butchery:ocelot_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003415D0FE"
+					item: "butchery:panda_head_mount"
 					type: "item"
 				}
 			]
@@ -3805,43 +4201,48 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009EAB8A4D"
+			id: "00000000BB91EFF8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000506E9066"
+					id: "00000000E93C8288"
 					type: "xp"
-					xp: 11
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000054CD1010"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000F654D4F0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000055A685D5"
+					id: "000000000E2DA717"
 					item: "butchery:calamari"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000999B0E5F"
+					id: "00000000E0480BD9"
 					item: "butchery:camel_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E1DAAE07"
+					id: "0000000009261E07"
 					item: "minecraft:candle"
 					type: "item"
 				}
@@ -3850,43 +4251,48 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005FB8C565"
+			id: "00000000F933C5B3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000033A30CF4"
+					id: "00000000F9BA0731"
 					type: "xp"
-					xp: 31
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008CA899DD"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000005A7D7564"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E6470515"
-					item: "butchery:metal_butchers_table"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001B39E293"
+					id: "0000000021A323A3"
 					item: "butchery:metal_tray"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E70D6105"
+					id: "0000000089B869A6"
+					item: "butchery:red_mooshroom_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009F6F0059"
 					item: "butchery:brown_mooshroom_head_mount"
 					type: "item"
 				}
@@ -3898,63 +4304,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001DD878EF"
+			id: "00000000DC0E0697"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000452ABF7F"
+					id: "00000000FB2F4594"
 					type: "xp"
-					xp: 3
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000617D1169"
-					table_id: 1333864530L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [{
-				consume_items: false
-				id: "000000009E487627"
-				item: "butchery:dragon_scale_block"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000081D94C8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D2EDFF3F"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000028A7F204"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000377D6090"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002E05759C"
+					id: "00000000E88D9B31"
 					item: "butchery:blood_grate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E5C5CAEF"
+					id: "00000000F7694484"
 					item: {
 						Count: 1
 						id: "butchery:bone_hacksaw"
@@ -3966,7 +4347,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000079AA636B"
+					id: "00000000E990A4D9"
 					item: {
 						Count: 1
 						id: "butchery:bone_hammer"
@@ -3981,42 +4362,43 @@
 			y: 4.0d
 		}
 		{
+			dependencies: [
+				"000000007B51F58D"
+				"0000000006C6D489"
+				"0000000061ABEF36"
+				"000000000130B6FF"
+				"00000000488575DD"
+				"0000000083DBA3C7"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009CB055B0"
+			id: "00000000D252F4ED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B9F3A702"
+					id: "00000000684577EA"
 					type: "xp"
-					xp: 17
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000937373E0"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000005BE75A63"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F60DDC46"
-					item: {
-						Count: 1
-						id: "butchery:iron_hacksaw"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B4DF94A1"
+					id: "00000000DE78797D"
 					item: {
 						Count: 1
 						id: "butchery:iron_hammer"
@@ -4028,8 +4410,14 @@
 				}
 				{
 					consume_items: false
-					id: "0000000084A72C73"
+					id: "00000000C8008B5C"
 					item: "butchery:jungle_butchers_table"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000008593F70"
+					item: "minecraft:leather"
 					type: "item"
 				}
 			]
@@ -4037,43 +4425,48 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000ED4370F8"]
+			dependencies: ["00000000876182DE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000049C0C734"
+			id: "00000000C577391D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000017DBD31C"
+					id: "00000000429CBE05"
 					type: "xp"
-					xp: 4
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E79748E1"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000005EC55E05"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005FAC3B13"
+					id: "000000005E60330E"
 					item: "butchery:basin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000073D31D0D"
+					id: "000000004CF78191"
 					item: "butchery:bat_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D3BE0907"
+					id: "00000000B5E45269"
 					item: "butchery:birch_butchers_table"
 					type: "item"
 				}
@@ -4082,50 +4475,49 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"0000000051D94541"
-				"00000000B6390A91"
-				"00000000EA5F143A"
-				"0000000035BFBE7E"
-				"0000000034E24BD1"
-			]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B600B2DE"
+			id: "000000002F10ED60"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000EDF6BCA"
+					id: "00000000CDAC3621"
 					type: "xp"
-					xp: 11
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007930F6A5"
-					table_id: 1333864530L
-					type: "random"
+					id: "0000000033B77411"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CE40E6DE"
-					item: "minecraft:leather"
+					id: "000000004AF406E0"
+					item: "butchery:gray_llama_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004A96FE7F"
+					id: "00000000F20635D9"
 					item: "butchery:white_llama_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DD5B2F8F"
-					item: "butchery:gray_llama_head_mount"
+					id: "00000000A9F3793C"
+					item: "butchery:brown_llama_head_mount"
 					type: "item"
 				}
 			]
@@ -4136,39 +4528,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007D529478"
+			id: "000000005C2A7C64"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000045A289EF"
+					id: "0000000029021BBE"
 					type: "xp"
-					xp: 13
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F42AC84C"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000B0E84AB4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000654921DD"
+					id: "00000000C0311005"
 					item: "butchery:bone_barrel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000099ABE14"
+					id: "00000000A0540DD3"
 					item: "butchery:cod_barrel"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007C6172E1"
+					id: "000000003E635607"
 					item: "butchery:salmon_barrel"
 					type: "item"
 				}
@@ -4177,44 +4574,49 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000029196C95"
+			id: "00000000A14039A1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F28A30A0"
+					id: "00000000567F7853"
 					type: "xp"
-					xp: 30
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E154BEA3"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000F643EA46"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000633E3959"
-					item: "butchery:brown_llama_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A7B56710"
+					id: "000000005D8A72F8"
 					item: "butchery:creamy_llama_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003413209D"
+					id: "0000000005E10341"
 					item: "butchery:cooked_lungs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D11AE5C1"
+					item: "butchery:mangrove_butchers_table"
 					type: "item"
 				}
 			]
@@ -4222,44 +4624,49 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005D6DB6B8"
+			id: "00000000646807F4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000698F085C"
+					id: "00000000652915B8"
 					type: "xp"
-					xp: 10
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008A7110AB"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000E2402A98"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E12899AB"
-					item: "butchery:brown_axolotl_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009CAEE665"
+					id: "00000000FC38DC4E"
 					item: "butchery:cyan_axolotl_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000056EBF871"
-					item: "butchery:pink_axolotl_head_mount"
+					id: "00000000191305D6"
+					item: "butchery:gold_axolotl_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B0FFB02C"
+					item: "butchery:blue_axolotl_head_mount"
 					type: "item"
 				}
 			]
@@ -4267,43 +4674,49 @@
 			y: 1.0d
 		}
 		{
+			dependencies: ["0000000061ABEF36"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000091993032"
+			id: "00000000A19D36B2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E4018532"
+					id: "00000000D221F80E"
 					type: "xp"
-					xp: 28
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D0F38C75"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000008C626AC2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007139CC4A"
-					item: "butchery:mangrove_butchers_table"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CF355C96"
+					id: "00000000D524E9DA"
 					item: "butchery:meat_grinder"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000057462F9F"
+					id: "0000000041CC4B19"
 					item: "butchery:meat_scraps"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B8218DF1"
+					item: "butchery:metal_butchers_table"
 					type: "item"
 				}
 			]
@@ -4311,37 +4724,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000B6390A91"]
+			dependencies: ["0000000061ABEF36"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B17903F7"
+			id: "00000000FEC54F8E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DF90036F"
+					id: "0000000074B2E5D1"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E36877C8"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000DF44FDAD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005D8306F5"
+					id: "00000000A74D36B2"
 					item: "butchery:butcher_statue"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006FB7B8D3"
+					id: "0000000039CF391B"
 					item: {
 						Count: 1
 						id: "butchery:butchers_apron_chestplate"
@@ -4353,7 +4771,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000E84FB81B"
+					id: "00000000F8F6C494"
 					item: "butchery:butchers_papers"
 					type: "item"
 				}
@@ -4362,44 +4780,49 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B5CE1CB0"
+			id: "00000000D4556741"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A522EB03"
+					id: "00000000EC60B163"
 					type: "xp"
-					xp: 2
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BB3212CC"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000E14C17A6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002392BD11"
+					id: "00000000954D790A"
 					item: "butchery:hook"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E6842BAA"
-					item: "butchery:chestnut_horse_head"
+					id: "000000009C16E291"
+					item: "butchery:creamy_horse_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000B1BB5DD"
-					item: "butchery:black_horse_head_mount"
+					id: "0000000064A5A4A1"
+					item: "butchery:brown_horse_head_mount"
 					type: "item"
 				}
 			]
@@ -4408,46 +4831,51 @@
 		}
 		{
 			dependencies: [
-				"00000000ED4370F8"
-				"00000000243F949F"
+				"00000000876182DE"
+				"000000007B51F58D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000018D5526B"
+			id: "000000005B9960FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C4B84B67"
+					id: "000000006235B4C7"
 					type: "xp"
-					xp: 17
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B53AB21C"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000C82C07E3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000030F942B0"
+					id: "00000000BF6B1448"
 					item: "butchery:acacia_butcher_display"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002E505376"
-					item: "butchery:crimson_butcher_display"
+					id: "00000000CA97E9D2"
+					item: "butchery:warped_butcher_display"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000871C6ACC"
-					item: "butchery:warped_butcher_display"
+					id: "00000000D223D7A4"
+					item: "butchery:spruce_butcher_display"
 					type: "item"
 				}
 			]
@@ -4455,44 +4883,49 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000074876D39"
+			id: "000000008699E172"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ABA17DBE"
+					id: "0000000020CA899D"
 					type: "xp"
-					xp: 4
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000030822196"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000B76179F3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E1B415A7"
-					item: "butchery:creamy_horse_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008B84B70E"
+					id: "0000000078717A1A"
 					item: "butchery:gray_horse_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EE1ADCA2"
-					item: "butchery:brown_horse_head_mount"
+					id: "00000000703BB51D"
+					item: "butchery:white_horse_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000030E1297A"
+					item: "butchery:dark_brown_horse_head_mount"
 					type: "item"
 				}
 			]
@@ -4501,46 +4934,51 @@
 		}
 		{
 			dependencies: [
-				"00000000ED4370F8"
-				"00000000243F949F"
+				"00000000876182DE"
+				"000000007B51F58D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001DF55122"
+			id: "00000000D0A61F60"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E7F2AAE1"
+					id: "00000000D2BA2BB9"
 					type: "xp"
-					xp: 15
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A3A90139"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000007F9384B3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004D0E44C2"
-					item: "butchery:dark_oak_butcher_display"
+					id: "0000000024111721"
+					item: "butchery:jungle_butcher_display"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000012820271"
-					item: "butchery:spruce_butcher_display"
+					id: "00000000EB1D57EF"
+					item: "butchery:oak_butcher_display"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000D7D5352"
-					item: "butchery:birch_butcher_display"
+					id: "0000000005BAF436"
+					item: "butchery:crimson_butcher_display"
 					type: "item"
 				}
 			]
@@ -4548,44 +4986,49 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000EA5F143A"]
+			dependencies: ["00000000BDB44D3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F9E33E55"
+			id: "00000000CC23EC48"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AF6C6144"
+					id: "00000000DA4649BA"
 					type: "xp"
-					xp: 29
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008BEE3442"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000B0F3B194"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000248CD13"
-					item: "butchery:dark_brown_horse_head_mount"
+					id: "00000000EEE7ECFB"
+					item: "butchery:black_horse_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003AE5787A"
-					item: "butchery:white_horse_head_mount"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000000980589"
+					id: "00000000CE853DB6"
 					item: "butchery:husk_head_mount"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000098819F39"
+					item: "butchery:icey_bone_meal"
 					type: "item"
 				}
 			]
@@ -4594,46 +5037,51 @@
 		}
 		{
 			dependencies: [
-				"00000000ED4370F8"
-				"00000000243F949F"
+				"00000000876182DE"
+				"000000007B51F58D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DEB0F075"
+			id: "000000005BADBE68"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007153B3BE"
+					id: "00000000E8160959"
 					type: "xp"
-					xp: 23
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CE2949A2"
-					table_id: 1333864530L
-					type: "random"
+					id: "000000003A4F9298"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EECE2700"
+					id: "00000000526286C9"
 					item: "minecraft:bone_meal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A769B0D1"
-					item: "butchery:jungle_butcher_display"
+					id: "00000000A0D660B7"
+					item: "butchery:dark_oak_butcher_display"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000425AA32C"
-					item: "butchery:oak_butcher_display"
+					id: "0000000094BAB689"
+					item: "butchery:birch_butcher_display"
 					type: "item"
 				}
 			]
@@ -4641,44 +5089,55 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000051D94541"]
+			dependencies: ["0000000006C6D489"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000F742CD4"
+			id: "0000000002169BD6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C8A8F118"
+					id: "00000000EF4FD825"
 					type: "xp"
-					xp: 31
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EBB3B7E0"
-					table_id: 1333864530L
-					type: "random"
+					id: "00000000C23830F1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_butchery"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B949A84A"
-					item: "butchery:icey_bone_meal"
+					id: "0000000024F1C28F"
+					item: "butchery:repaired_iron_golem_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009D1313A0"
+					id: "00000000F5F5233F"
 					item: "butchery:iron_golem_head_mount"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003721D2F6"
-					item: "butchery:repaired_iron_golem_head_mount"
+					id: "00000000888C1F4E"
+					item: {
+						Count: 1
+						id: "butchery:iron_hacksaw"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 			]

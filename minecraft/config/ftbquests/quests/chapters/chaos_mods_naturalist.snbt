@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_naturalist"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "naturalist:shellstone"
-	id: "00000000D7D5158B"
+	id: "000000004CD7720C"
 	order_index: 90
 	quest_links: [ ]
 	quests: [
@@ -12,26 +12,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A1975F85"
+			id: "0000000071CFEDE6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008319FCF4"
+					id: "00000000B33071E6"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000049BD5550"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000B4F9AD7A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001584FF4F"
+				id: "000000004C251036"
 				item: "naturalist:cooked_bass"
 				type: "item"
 			}]
@@ -39,30 +44,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000F47E4032"]
+			dependencies: ["00000000DF38D0AC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004B9AB256"
+			id: "00000000052D2D85"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000010E9E276"
+					id: "000000007C79BFD6"
 					type: "xp"
-					xp: 9
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007037434C"
-					table_id: 3971620037L
-					type: "random"
+					id: "0000000089952862"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D875BA61"
+				id: "000000008F92E2F4"
 				item: "naturalist:smooth_shellstone_slab"
 				type: "item"
 			}]
@@ -73,26 +83,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000052A138BC"
+			id: "000000003F96480D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009FAF85A2"
+					id: "00000000271FDB8C"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007C9CDBBF"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000AFE5309A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A6250F3A"
+				id: "00000000251EEEE4"
 				item: "minecraft:cake"
 				type: "item"
 			}]
@@ -100,30 +115,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000068585A36"]
+			dependencies: ["00000000F81E61C5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005305C1EA"
+			id: "0000000063A3D81C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FA738CD1"
+					id: "00000000ABDF967A"
 					type: "xp"
-					xp: 9
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008459EFDB"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000A27618C8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001C8022FD"
+				id: "000000003196D68B"
 				item: "naturalist:shellstone_wall"
 				type: "item"
 			}]
@@ -134,26 +154,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000066C08CA3"
+			id: "00000000FCEA4116"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000003E5C754"
+					id: "00000000E95ED316"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FD7497BE"
-					table_id: 3971620037L
-					type: "random"
+					id: "0000000074965636"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000358665F5"
+				id: "00000000B8653CD0"
 				item: {
 					Count: 1
 					id: "naturalist:bug_net"
@@ -167,30 +192,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000F47E4032"]
+			dependencies: ["00000000DF38D0AC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F76EA8E8"
+			id: "00000000217883A0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B71DB60A"
+					id: "0000000014742159"
 					type: "xp"
-					xp: 1
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000028C61EC7"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000005BD2B152"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000008527C27B"
+				id: "000000001CE3ED81"
 				item: "naturalist:smooth_shellstone_wall"
 				type: "item"
 			}]
@@ -201,26 +231,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006DBA2583"
+			id: "00000000DFAD2228"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CD41DDCA"
+					id: "00000000CA156B3E"
 					type: "xp"
-					xp: 11
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000050E03FF5"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000000D98062F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000096F60CF5"
+				id: "000000002F9A95CC"
 				item: "naturalist:azure_froglass_pane"
 				type: "item"
 			}]
@@ -228,30 +263,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000F47E4032"]
+			dependencies: ["00000000DF38D0AC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000036BD808"
+			id: "000000002713155A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E4AA78DF"
+					id: "000000000ABFB149"
 					type: "xp"
 					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D1D0C797"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000009A1C9503"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000321E883D"
+				id: "00000000026C0CC6"
 				item: "naturalist:smooth_shellstone_stairs"
 				type: "item"
 			}]
@@ -259,30 +299,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000068585A36"]
+			dependencies: ["00000000F81E61C5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F47E4032"
+			id: "00000000DF38D0AC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EEDDAC5C"
+					id: "00000000CF69D6FD"
 					type: "xp"
-					xp: 2
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007701D847"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000AFF2E2A7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000A9B1EA8A"
+				id: "000000005CF42BE7"
 				item: "naturalist:smooth_shellstone"
 				type: "item"
 			}]
@@ -293,26 +338,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000028D0A692"
+			id: "000000008BB356D3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000028C783FB"
+					id: "000000007DE8291A"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000073B67975"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000D0BF5E4C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E46E6A75"
+				id: "0000000018547F65"
 				item: "naturalist:teddy_bear"
 				type: "item"
 			}]
@@ -320,30 +370,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000067D65215"]
+			dependencies: ["00000000F65748D3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005A74B27F"
+			id: "000000004E48F98C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FCF469CD"
+					id: "000000008F193D05"
 					type: "xp"
-					xp: 2
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C53853E7"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000B721A51A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000041947A57"
+				id: "00000000683285D4"
 				item: "minecraft:spectral_arrow"
 				type: "item"
 			}]
@@ -354,26 +409,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000693E04B9"
+			id: "000000009AAE98F0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000969443CB"
+					id: "000000000672F664"
 					type: "xp"
-					xp: 1
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002B6933AD"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000B781ACD6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005F367C0F"
+				id: "000000003F562703"
 				item: "naturalist:verdant_froglass_pane"
 				type: "item"
 			}]
@@ -381,30 +441,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000F7525473"]
+			dependencies: ["000000000A37619D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F6C310B7"
+			id: "000000001D48E467"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000038334EB1"
+					id: "00000000C457A3C2"
 					type: "xp"
-					xp: 9
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FFD7720F"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000004FA622C2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000084D4A74D"
+				id: "00000000A310B39E"
 				item: "naturalist:cut_shellstone"
 				type: "item"
 			}]
@@ -415,26 +480,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000580008C0"
+			id: "0000000048179AC2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001D2B6266"
+					id: "000000009ACBC13D"
 					type: "xp"
-					xp: 10
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003016A9A8"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000D5AB120F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000661653E6"
+				id: "00000000A53C6F65"
 				item: "naturalist:cooked_venison"
 				type: "item"
 			}]
@@ -445,26 +515,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000067D65215"
+			id: "00000000F65748D3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C3B8ED8D"
+					id: "000000006C8F0575"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007864AFCD"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000008E40AE14"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000023477473"
+				id: "00000000FF5B328C"
 				item: "naturalist:glow_goop"
 				type: "item"
 			}]
@@ -475,26 +550,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A5BE26A5"
+			id: "00000000051A5A2B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A31826F7"
+					id: "00000000FEEFAE11"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CF67AA7C"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000AD52B2CA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DC18104B"
+				id: "00000000DFDADBAB"
 				item: "naturalist:cooked_lizard_tail"
 				type: "item"
 			}]
@@ -502,30 +582,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000068585A36"]
+			dependencies: ["00000000F81E61C5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002A3D9E49"
+			id: "0000000051B4ADA2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006D09FE9B"
+					id: "00000000D10ADC38"
 					type: "xp"
-					xp: 3
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CB5FE3B6"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000D30B5551"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000E9CC7AC5"
+				id: "000000002802383F"
 				item: "naturalist:shellstone_bricks"
 				type: "item"
 			}]
@@ -536,26 +621,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A2808B34"
+			id: "000000004D5539D3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006D024079"
+					id: "00000000B30C0118"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EBAED66C"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000003F13C469"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000051C6079"
+				id: "00000000A6627D27"
 				item: "naturalist:cooked_egg"
 				type: "item"
 			}]
@@ -566,26 +656,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008454673E"
+			id: "00000000B77FC19D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000554E0388"
+					id: "00000000D83D5A63"
 					type: "xp"
-					xp: 5
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000019160877"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000008E3438FA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001BFBE779"
+				id: "0000000003CF4F27"
 				item: "naturalist:cooked_duck"
 				type: "item"
 			}]
@@ -596,26 +691,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001E26EB9A"
+			id: "00000000D55898A3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F9F2CB2F"
+					id: "00000000E6FB7ECD"
 					type: "xp"
 					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004A266662"
-					table_id: 3971620037L
-					type: "random"
+					id: "0000000078B5968C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000711419CF"
+				id: "00000000171F5B68"
 				item: "naturalist:cooked_catfish"
 				type: "item"
 			}]
@@ -626,26 +726,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000075B29703"
+			id: "0000000087F477CD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000270B3498"
+					id: "0000000019DDFA8F"
 					type: "xp"
-					xp: 3
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000829A161F"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000B2269BCF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000056C22CAA"
+				id: "00000000DA377FF6"
 				item: "naturalist:cooked_bushmeat"
 				type: "item"
 			}]
@@ -656,26 +761,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000068585A36"
+			id: "00000000F81E61C5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000033BEEB32"
+					id: "00000000DDA6FBE7"
 					type: "xp"
-					xp: 5
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007A94BF80"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000BD66A315"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "00000000A49C40DB"
+				id: "0000000049228441"
 				item: "naturalist:shellstone"
 				type: "item"
 			}]
@@ -683,30 +793,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000068585A36"]
+			dependencies: ["00000000F81E61C5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F7525473"
+			id: "000000000A37619D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CB94AD31"
+					id: "000000004217F2D3"
 					type: "xp"
-					xp: 11
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000157464BF"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000B1859CA2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000A39DB359"
+				id: "0000000077CC0F96"
 				item: "naturalist:shellstone_slab"
 				type: "item"
 			}]
@@ -717,26 +832,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005BD1A000"
+			id: "0000000029A9ED60"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F950600D"
+					id: "00000000E4FA4C30"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000033B4CAF7"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000007053294C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000285CFDBD"
+				id: "0000000032DB9E24"
 				item: "naturalist:crimson_froglass_pane"
 				type: "item"
 			}]
@@ -744,30 +864,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000F6C310B7"]
+			dependencies: ["000000001D48E467"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002F592EA6"
+			id: "00000000F4B55490"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001CF45645"
+					id: "000000006ED1FCE2"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B4CEDEFA"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000007A916C3B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005CED26C7"
+				id: "00000000DDF8F546"
 				item: "naturalist:cut_shellstone_stairs"
 				type: "item"
 			}]
@@ -775,30 +900,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000F6C310B7"]
+			dependencies: ["000000001D48E467"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B857E6C0"
+			id: "000000009C3AF871"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009BD73B31"
+					id: "00000000C8CFB5B5"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000030DD64FA"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000008CBABA75"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000725FEFD3"
+				id: "00000000D452861A"
 				item: "naturalist:cut_shellstone_slab"
 				type: "item"
 			}]
@@ -809,26 +939,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002D26AF50"
+			id: "00000000C1807CD6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C1A5922B"
+					id: "000000003E2F726E"
 					type: "xp"
-					xp: 8
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002E52BFBB"
-					table_id: 3971620037L
-					type: "random"
+					id: "0000000075EAF640"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000E19A5C7"
+				id: "000000006CCAACA8"
 				item: "minecraft:dirt"
 				type: "item"
 			}]
@@ -836,30 +971,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000F6C310B7"]
+			dependencies: ["000000001D48E467"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000050CA1301"
+			id: "00000000FF588293"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001F807F8C"
+					id: "00000000571E7813"
 					type: "xp"
-					xp: 8
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000114C1046"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000BA91B6C8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F1C38812"
+				id: "000000008C79B399"
 				item: "naturalist:cut_shellstone_wall"
 				type: "item"
 			}]
@@ -867,30 +1007,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000002A3D9E49"]
+			dependencies: ["0000000051B4ADA2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000283CD780"
+			id: "00000000BA7BC401"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006246A41B"
+					id: "000000002639B970"
 					type: "xp"
-					xp: 5
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FD489D7C"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000FD36809F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A5B45EB4"
+				id: "00000000465784BB"
 				item: "naturalist:shellstone_brick_slab"
 				type: "item"
 			}]
@@ -901,26 +1046,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D08CCCB2"
+			id: "00000000F439417E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000025E0FDAF"
+					id: "00000000CCC44B94"
 					type: "xp"
-					xp: 2
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000067E9DCBF"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000095B8E37"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D224A7A1"
+				id: "00000000D73AE981"
 				item: "minecraft:pumpkin_pie"
 				type: "item"
 			}]
@@ -928,30 +1078,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000002A3D9E49"]
+			dependencies: ["0000000051B4ADA2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F0E29311"
+			id: "00000000CD4F7DEB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000052346A2E"
+					id: "00000000AE87EA51"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A24005D9"
-					table_id: 3971620037L
-					type: "random"
+					id: "000000008FC1286A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E1D998D6"
+				id: "000000007D505B80"
 				item: "naturalist:shellstone_brick_wall"
 				type: "item"
 			}]
@@ -959,30 +1114,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000002A3D9E49"]
+			dependencies: ["0000000051B4ADA2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000913CAD07"
+			id: "000000008F00CB2C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003C80F04B"
+					id: "000000003A918CBF"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C1555B11"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000898B8EF3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000012498155"
+				id: "00000000AC6A64F4"
 				item: "naturalist:shellstone_brick_stairs"
 				type: "item"
 			}]
@@ -990,30 +1150,35 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["0000000068585A36"]
+			dependencies: ["00000000F81E61C5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EA97E825"
+			id: "0000000000B4A6AB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A68F3FF6"
+					id: "00000000E23C09B9"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000057221D9D"
-					table_id: 3971620037L
-					type: "random"
+					id: "00000000A60D70F3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_naturalist"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000001D6D58"
+				id: "000000002ACD9139"
 				item: "naturalist:shellstone_stairs"
 				type: "item"
 			}]

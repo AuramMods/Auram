@@ -2,79 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_waystones"
-	group: "00000000DEB299A3"
-	icon: {
-		Count: 1
-		id: "waystones:warp_stone"
-		tag: {
-			Damage: 0
-		}
-	}
-	id: "00000000CC738D0B"
+	group: "000000008CDEF944"
+	icon: "waystones:warp_dust"
+	id: "0000000088948C17"
 	order_index: 39
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["000000006F5221A4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000B21B26E"
+			id: "0000000073883CE0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006E006688"
+					id: "000000001E4F271E"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004BAA9271"
-					table_id: 627792850L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000DACDB061"
-				item: {
-					Count: 1
-					id: "waystones:warp_stone"
-					tag: {
-						Damage: 0
+					id: "00000000E21E210E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
 					}
-				}
-				type: "item"
-			}]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["0000000062F4968B"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002482F9B3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000001A4E3B3"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008A33A90A"
-					table_id: 627792850L
-					type: "random"
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F13F8140"
+				id: "0000000075ABCC0C"
 				item: "waystones:attuned_shard"
 				type: "item"
 			}]
@@ -82,30 +45,34 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000000B21B26E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A0430C79"
+			id: "00000000181E6131"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EE387511"
+					id: "0000000051D2225C"
 					type: "xp"
-					xp: 6
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005C256987"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000F18EB772"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000006DF3125"
+				id: "0000000010B6CC76"
 				item: "waystones:blackstone_waystone"
 				type: "item"
 			}]
@@ -113,61 +80,69 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000000B21B26E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000F220ABE"
+			id: "0000000083A2AAB5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001CEA0862"
+					id: "00000000D42FD6C2"
 					type: "xp"
-					xp: 5
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007994D8F4"
-					table_id: 627792850L
-					type: "random"
+					id: "0000000098C20172"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000A985CC8B"
+				id: "000000009EE4C773"
 				item: "waystones:waystone"
 				type: "item"
 			}]
 			x: -2.0d
-			y: 2.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["000000000B21B26E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E35D8A23"
+			id: "00000000521A1C69"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007315374B"
+					id: "000000001F4FD992"
 					type: "xp"
-					xp: 6
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008D2064E2"
-					table_id: 627792850L
-					type: "random"
+					id: "000000009CB7622F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000379A0831"
+				id: "00000000188FE0BA"
 				item: "waystones:sandy_waystone"
 				type: "item"
 			}]
@@ -178,26 +153,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000069242670"
+			id: "0000000064F3A12A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008A8E5FD4"
+					id: "0000000018232458"
 					type: "xp"
-					xp: 2
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F41AEFE7"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000B75FF04C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000007B1B859B"
+				id: "00000000346D6DB8"
 				item: "waystones:bound_scroll"
 				type: "item"
 			}]
@@ -208,26 +188,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F6BAA20E"
+			id: "00000000A5E694E2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C1294CE9"
+					id: "000000005E5143CE"
 					type: "xp"
-					xp: 3
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008F5BEE1A"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000378142D0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000C22278E"
+				id: "000000000FCD38D1"
 				item: "waystones:return_scroll"
 				type: "item"
 			}]
@@ -238,26 +223,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000062F4968B"
+			id: "000000006F5221A4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B63C6ED9"
+					id: "00000000F8C20C54"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008E46919B"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000081BF276"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000CF437698"
+				id: "00000000216F8CBB"
 				item: "waystones:warp_dust"
 				type: "item"
 			}]
@@ -268,26 +258,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000042E2B51A"
+			id: "000000000F6E9756"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A322A3DA"
+					id: "000000001346B213"
 					type: "xp"
-					xp: 2
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FDDA0709"
-					table_id: 627792850L
-					type: "random"
+					id: "000000001393F4F4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000040901585"
+				id: "0000000076582C19"
 				item: "waystones:crumbling_attuned_shard"
 				type: "item"
 			}]
@@ -295,30 +290,34 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000000B21B26E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E9D89710"
+			id: "000000000F40D083"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D9FD9083"
+					id: "00000000B8E87A16"
 					type: "xp"
-					xp: 2
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008DDCC20A"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000A8751582"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E01B45EB"
+				id: "00000000845A1ED3"
 				item: "waystones:end_stone_waystone"
 				type: "item"
 			}]
@@ -326,30 +325,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000000F220ABE"]
+			dependencies: ["0000000083A2AAB5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A92C1E68"
+			id: "000000007BFB62D8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001C3A8850"
+					id: "000000009A5C72CF"
 					type: "xp"
 					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006E74D9C7"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000941EA15E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000013E7C9F"
+				id: "000000003ED99693"
 				item: "waystones:mossy_waystone"
 				type: "item"
 			}]
@@ -357,30 +361,34 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000000B21B26E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000057506640"
+			id: "000000003C255FA7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000689C0621"
+					id: "00000000AD05BC90"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000060BF756C"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000A1882448"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000720B063E"
+				id: "00000000B735E348"
 				item: "waystones:deepslate_waystone"
 				type: "item"
 			}]
@@ -391,26 +399,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B82E435A"
+			id: "000000006DA8A467"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000056C9B4BB"
+					id: "000000000FC86213"
 					type: "xp"
-					xp: 9
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000153948AD"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000E0313506"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EC9BBBA6"
+				id: "000000006FCD77A7"
 				item: "waystones:warp_scroll"
 				type: "item"
 			}]
@@ -418,30 +431,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000062F4968B"]
+			dependencies: ["000000006F5221A4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FADC549C"
+			id: "000000008C29BB31"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000014A90745"
+					id: "00000000492EC0F3"
 					type: "xp"
-					xp: 7
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BB0A203C"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000C78E51E1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000838C679"
+				id: "00000000B4CDFDA5"
 				item: "waystones:warp_plate"
 				type: "item"
 			}]
@@ -449,30 +467,34 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000000B21B26E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002318A390"
+			id: "00000000E94B4B45"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A00061CD"
+					id: "0000000020A38231"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000033857E54"
-					table_id: 627792850L
-					type: "random"
+					id: "00000000C384CD26"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_waystones"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006C7F75A1"
+				id: "00000000C2427AFE"
 				item: "waystones:portstone"
 				type: "item"
 			}]

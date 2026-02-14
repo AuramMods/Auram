@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_integratedterminals"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "integratedterminals:menril_glass"
-	id: "000000008AB76DA7"
+	id: "00000000CDDBF384"
 	order_index: 56
 	quest_links: [ ]
 	quests: [
@@ -12,26 +12,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000998CCDC1"
+			id: "000000005FBB2DCB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F9755377"
+					id: "000000006833408E"
 					type: "xp"
-					xp: 2
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009592E1AE"
-					table_id: 1938106562L
-					type: "random"
+					id: "00000000BC83100B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_integratedterminals"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000B298D81"
+				id: "00000000F30E4A5C"
 				item: "integratedterminals:chorus_glass"
 				type: "item"
 			}]
@@ -39,30 +44,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000A39F17F9"]
+			dependencies: ["000000006E911381"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000067A18067"
+			id: "000000003F160242"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C1E27DB6"
+					id: "0000000077D07612"
 					type: "xp"
 					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000240685AD"
-					table_id: 1938106562L
-					type: "random"
+					id: "0000000032425CDD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_integratedterminals"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000AF25CD88"
+				id: "000000002A9EE981"
 				item: "integratedterminals:part_terminal_crafting_job"
 				type: "item"
 			}]
@@ -70,30 +80,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000003F28FD39"]
+			dependencies: ["000000000C3CB849"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C6D59044"
+			id: "00000000539EF218"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A8ABBD5C"
+					id: "000000007B6A0A90"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000068F55843"
-					table_id: 1938106562L
-					type: "random"
+					id: "00000000CEE825F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_integratedterminals"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000069D87FBF"
+				id: "000000006A0CE0E5"
 				item: "integratedterminals:terminal_storage_portable"
 				type: "item"
 			}]
@@ -101,30 +116,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000A39F17F9"]
+			dependencies: ["000000006E911381"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003F28FD39"
+			id: "000000000C3CB849"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000180591CC"
+					id: "000000002309DEF6"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B24785BC"
-					table_id: 1938106562L
-					type: "random"
+					id: "00000000D79508B1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_integratedterminals"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000B791B2CB"
+				id: "000000006F2B720D"
 				item: "integratedterminals:part_terminal_storage"
 				type: "item"
 			}]
@@ -135,26 +155,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A39F17F9"
+			id: "000000006E911381"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E7EC6D6C"
+					id: "000000004E433A6A"
 					type: "xp"
-					xp: 11
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000688E2191"
-					table_id: 1938106562L
-					type: "random"
+					id: "0000000041DE5F84"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_integratedterminals"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000286D15C6"
+				id: "00000000ED0464AD"
 				item: "integratedterminals:menril_glass"
 				type: "item"
 			}]

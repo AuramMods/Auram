@@ -2,67 +2,219 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_extrautilitiesrebirth"
-	group: "00000000DEB299A3"
-	icon: "extrautilitiesrebirth:quintuple_compressed_cobblestone"
-	id: "0000000043349034"
-	order_index: 131
+	group: "000000008CDEF944"
+	icon: "extrautilitiesrebirth:evil_infused_iron_ingot"
+	id: "0000000065EEA94E"
+	order_index: 130
 	quest_links: [ ]
 	quests: [
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007859391C"
+			id: "00000000FDDEE5FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F5398BC5"
+					id: "0000000004A74707"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000A4F3A642"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000CAEC3967"
+				item: "extrautilitiesrebirth:unstable_ingot"
+				type: "item"
+			}]
+			x: -16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000001CD1C972"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C3C8BCF7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009FCF84D1"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0000000091F9DE52"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "0000000072FBF621"
+				item: "extrautilitiesrebirth:double_compressed_cobblestone"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000081B894C0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004D056039"
 					type: "xp"
 					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005DF9F19C"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000087FB539D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "000000006BB18355"
+				item: "extrautilitiesrebirth:triple_compressed_dirt"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007F053A60"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006367FAAB"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "00000000A056DFEB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000F5354A97"
+				item: "extrautilitiesrebirth:block_of_enchaned_metal"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000006B861B1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008543C7C5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000031F22CB4"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000003030E2C6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "0000000047858C4B"
-				item: "extrautilitiesrebirth:golden_feather"
+				id: "000000004FBE2701"
+				item: "extrautilitiesrebirth:frosty_generator_1"
 				type: "item"
 			}]
 			x: -11.0d
-			y: 1.0d
+			y: 3.0d
 		}
 		{
-			dependencies: ["00000000ABEB69C8"]
+			dependencies: ["00000000F01235E4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009FA6C586"
+			id: "0000000092C6DC3D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BCB36AA0"
+					id: "0000000045E4C686"
 					type: "xp"
-					xp: 2
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000DD1F244"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000008CB5FD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000566CA5FE"
+				id: "0000000019F491AF"
 				item: "extrautilitiesrebirth:wireless_fe_battery"
 				type: "item"
 			}]
@@ -73,118 +225,136 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000061B713E0"
+			id: "000000008B9C64FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000951AC323"
+					id: "000000004F086078"
 					type: "xp"
-					xp: 11
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005187D005"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000AF703225"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000D1D90745"
-				item: "extrautilitiesrebirth:golden_lasso"
+				id: "0000000002DEDE43"
+				item: "extrautilitiesrebirth:golden_feather"
 				type: "item"
 			}]
-			x: -11.0d
-			y: 2.0d
+			x: -10.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["00000000AA97B455"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000031F77C1D"
+			id: "00000000244BF59D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003DFF2555"
+					id: "000000000F28BB84"
 					type: "xp"
-					xp: 4
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F309D03C"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000EB434313"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000044BF4216"
-				item: "extrautilitiesrebirth:triple_compressed_cobblestone"
+				id: "00000000B1688761"
+				item: "extrautilitiesrebirth:trash_can_fluid"
 				type: "item"
 			}]
 			x: -5.0d
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000067A7E935"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009223F573"
+			id: "00000000A7D7B09A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000092F2F0BD"
+					id: "000000004C6BB1C8"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F7087D65"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000006DDD8C63"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000B40BE34F"
-				item: "extrautilitiesrebirth:halitosis_generator"
+				id: "0000000033D68B34"
+				item: "extrautilitiesrebirth:golden_lasso"
 				type: "item"
 			}]
-			x: -13.0d
+			x: -10.0d
 			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F1DA3ADF"
+			id: "0000000028C1BFD3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C4DC40EA"
+					id: "000000005065B705"
 					type: "xp"
-					xp: 4
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F864A7A3"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000018F41DF5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C16A6B2F"
+				id: "0000000081BAD7E8"
 				item: "extrautilitiesrebirth:wrench"
 				type: "item"
 			}]
@@ -195,26 +365,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AABCFF9E"
+			id: "0000000023185D0D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AEC6E9EC"
+					id: "00000000180DE923"
 					type: "xp"
-					xp: 6
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D62CF53C"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000059D9386A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000025C2D5DB"
+				id: "000000009B38C82D"
 				item: "extrautilitiesrebirth:wood_spike"
 				type: "item"
 			}]
@@ -222,126 +397,181 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"0000000067A7E935"
-				"000000008A100492"
-			]
+			dependencies: ["0000000006B861B1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000751933B5"
+			id: "0000000093CA6A6F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002F4984D8"
+					id: "00000000FAF3B0AB"
 					type: "xp"
-					xp: 3
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000008D031B"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000006C021AB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000ADAFB3DB"
-				item: "extrautilitiesrebirth:disenchantment_generator"
+				id: "0000000098ACAFBB"
+				item: "extrautilitiesrebirth:death_generator"
 				type: "item"
 			}]
-			x: -13.0d
-			y: 3.0d
+			x: -11.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["000000009659185A"]
+			dependencies: [
+				"0000000006B861B1"
+				"000000009402E4C4"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007D3F586B"
+			id: "000000000FC69B06"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BFCF8C47"
+					id: "000000003A57F14B"
 					type: "xp"
-					xp: 4
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001B50154D"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000003BF70963"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "square"
+			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000286ED29A"
-				item: "extrautilitiesrebirth:bedrock_slabs"
+				id: "000000008E0877C8"
+				item: "extrautilitiesrebirth:disenchantment_generator"
 				type: "item"
 			}]
 			x: -11.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000067A7E935"]
+			dependencies: ["0000000006B861B1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005602E4C9"
+			id: "0000000073A72B42"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009B5A88D7"
+					id: "000000009B0BCA56"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001ED95784"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000005BC8FD80"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000880E74E9"
+				id: "000000007D774B93"
 				item: "extrautilitiesrebirth:ender_generator"
 				type: "item"
 			}]
-			x: -13.0d
-			y: 4.0d
+			x: -11.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["00000000A8B511F9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006111BA21"
+			id: "000000005AEC2977"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A68C4DA9"
+					id: "00000000E736E742"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "0000000037F9EEB6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000B51A54DD"
+				item: "extrautilitiesrebirth:trash_can"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000005FD07D60"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AC064E5E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F7676028"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009AB3AD97"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000980EC4FB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000C7D91B7C"
+				id: "00000000DBF0886B"
 				item: "extrautilitiesrebirth:ethereal_glass"
 				type: "item"
 			}]
@@ -349,213 +579,105 @@
 			y: 9.0d
 		}
 		{
+			dependencies: ["000000000232379B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EA15A884"
+			id: "000000002CB46591"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F30C44E1"
+					id: "00000000AC8D2A47"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003F1B1400"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000000C41DD6B"
-				item: "extrautilitiesrebirth:trash_can_fluid"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["0000000067A7E935"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001DD2034A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002899CC2A"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005D21905C"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000C3D3840C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000D5D350B3"
-				item: "extrautilitiesrebirth:frosty_generator_1"
+				id: "00000000A23B8286"
+				item: "extrautilitiesrebirth:bedrock_cobblestone"
 				type: "item"
 			}]
-			x: -13.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["0000000010E090B3"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003AAF458E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000565DA12F"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009F51B1EF"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000000EE302B3"
-				item: "extrautilitiesrebirth:double_compressed_gravel"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["00000000ACB4BD3A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D466C6B0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000AF4C5E23"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D6F0A21E"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000320B80AF"
-				item: "extrautilitiesrebirth:enchanted_ingot"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C8C07ED1"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007CAC063A"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005C41C4F2"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000C5AEF051"
-				item: "extrautilitiesrebirth:border_stone"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["000000006390B8AA"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008F94DB5A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000220EA22E"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002A6DE99C"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000EF043823"
-				item: "extrautilitiesrebirth:double_compressed_cobblestone"
-				type: "item"
-			}]
-			x: -11.0d
+			x: -10.0d
 			y: 7.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E484A375"
+			id: "0000000040754612"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006653ECBB"
+					id: "0000000016C31880"
 					type: "xp"
-					xp: 7
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000091F00AEB"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000075D17FE7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000ED70B815"
+				id: "0000000081F3737A"
+				item: "extrautilitiesrebirth:border_stone"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A9105AC5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DF076BDB"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "000000009DA7A14F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000003C1C1C1A"
 				item: "extrautilitiesrebirth:clean_glass"
 				type: "item"
 			}]
@@ -563,908 +685,912 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000005875726A"]
+			dependencies: ["0000000013F440AA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006518EC92"
+			id: "000000005F76BAF1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000055840F22"
+					id: "00000000EC45F402"
 					type: "xp"
-					xp: 6
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000016A99FD7"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000E53091FD"
-				item: "extrautilitiesrebirth:double_compressed_dirt"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["0000000067A7E935"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A23D1EE4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F7956DAA"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D1007BFA"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "000000007E8F8212"
-				item: "extrautilitiesrebirth:death_generator"
-				type: "item"
-			}]
-			x: -13.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["00000000A7C14069"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000504509E2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C86F841A"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000073A84012"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000085344771"
-				item: "extrautilitiesrebirth:sextuple_compressed_cobblestone"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["000000007D3F586B"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B4F108C6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000055BCD241"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E9F95A81"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000A676BA4C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E1409C99"
-				item: "extrautilitiesrebirth:bedrockium_ingot"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002F223711"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A75DD86F"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005CF797CD"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000FA47BFEE"
-				item: "extrautilitiesrebirth:sandy_glass"
+				id: "00000000C80CDA3A"
+				item: "minecraft:sand"
 				type: "item"
 			}]
 			x: -4.0d
 			y: 9.0d
 		}
 		{
-			dependencies: ["000000003BBE0916"]
+			dependencies: ["00000000FDDEE5FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B830B505"
+			id: "00000000617ED2C3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001F8F23F9"
+					id: "000000002655BFC1"
 					type: "xp"
-					xp: 3
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004F6A4320"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000089D3EAA8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D25D8C39"
-				item: "minecraft:sand"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["00000000ABEB69C8"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008B15FC2A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000050146BB8"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006BA7D6C8"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000EDC02126"
-				item: "extrautilitiesrebirth:sorting_machine"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000388F4443"
-				"00000000ABEB69C8"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B1DD43C9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D9FABC8A"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008FF73CB8"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "0000000069DE1BC4"
-				item: "extrautilitiesrebirth:solar_panel"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000160BF574"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CDC3B5D0"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A0A89F06"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000007CBB5F09"
-				item: "extrautilitiesrebirth:trash_can"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["000000006111BA21"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D4F4317C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002A0BD5EF"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A947C86B"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000F3F66C4C"
-				item: "extrautilitiesrebirth:swirling_glass"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000005236379"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000006FDD6CF"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E08A14C6"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "0000000030F04BC9"
-				item: "extrautilitiesrebirth:stone_drum"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["00000000F017FCD8"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CE5EE6C7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B5251A5F"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000034D9F199"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000008DD90521"
-				item: "extrautilitiesrebirth:square_glass"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"00000000CF8481CF"
-				"0000000052B7F388"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B1E0BB03"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009671270F"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000021A1EE8A"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000000DA2A7D7"
-				item: "extrautilitiesrebirth:super_speed_upgrade"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["000000006390B8AA"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000024C64891"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C07C3454"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000AFB95DE4"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000B71CE3D4"
-				item: "extrautilitiesrebirth:stone_spike"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002AE33519"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008766C727"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000AD948514"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [{
-				consume_items: false
-				id: "0000000001BB31E3"
-				item: "extrautilitiesrebirth:machine_block"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["0000000067A7E935"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000746A4806"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E8DA5E86"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005E1A5D2C"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "0000000048C78C36"
-				item: "extrautilitiesrebirth:tnt_generator"
-				type: "item"
-			}]
-			x: -13.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000E484A375"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009D1E5F06"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006F052FF2"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001741E363"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000005003B6DF"
-				item: "extrautilitiesrebirth:dark_glass"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 7.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008FFD728D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008BA0F3F0"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008BD8F992"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000082FB1858"
-				item: "extrautilitiesrebirth:diamond_spike"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["00000000C8C07ED1"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000BE97AA51"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009B56C288"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C616D6B8"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000BE8721FC"
-				item: "extrautilitiesrebirth:edged_stone_bricks"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"000000005067C310"
-				"00000000D466C6B0"
-				"000000006BEFD79A"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CF8481CF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BA11FFC9"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002ADC0778"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000002248488B"
-				item: "extrautilitiesrebirth:enchanted_speed_upgrade"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A3A7FCC5"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000051145843"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000037C1FE96"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000009E158CAA"
-				item: "extrautilitiesrebirth:ender_quarry_upgrade_base"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["000000005FACD734"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001639EBB6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CFDCCD8B"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000105C357E"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000ADA49360"
+				id: "0000000039FDC534"
 				item: {
 					Count: 1
-					id: "extrautilitiesrebirth:etheric_sword"
+					id: "extrautilitiesrebirth:reversing_hoe"
 					tag: {
 						Damage: 0
 					}
 				}
 				type: "item"
 			}]
-			x: -8.0d
-			y: 9.0d
+			x: -4.0d
+			y: 8.0d
 		}
 		{
+			dependencies: [
+				"00000000F01235E4"
+				"000000005E4045F0"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A7C14069"
+			id: "000000009F3C9BCA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005133D2BA"
+					id: "000000002BCC5D8C"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000594CDCBD"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000D3F31472"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
+			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000FAEC4E9B"
-				item: "extrautilitiesrebirth:septuple_compressed_cobblestone"
+				id: "00000000BE6BDA64"
+				item: "extrautilitiesrebirth:solar_panel"
 				type: "item"
 			}]
-			x: -9.0d
+			x: -5.0d
 			y: 1.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005875726A"
+			id: "0000000008F8657C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000005EE78EF"
+					id: "00000000C9C8ABF9"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000E1FB607F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000282639AC"
+				item: "extrautilitiesrebirth:sandy_glass"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000AC064E5E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001D062DB0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000007173A41"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000000FB7D2E4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000B71671F1"
+				item: "extrautilitiesrebirth:swirling_glass"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000011917E6E"
+				"00000000BD026D14"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003AFF8922"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009E5238C4"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "000000003E15EF7D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000AE15DD9B"
+				item: "extrautilitiesrebirth:super_speed_upgrade"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000008125C4B6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000070221BF3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D4DEF982"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000520F1C85"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000018246E6A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
+			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006E0435A9"
-				item: "extrautilitiesrebirth:triple_compressed_dirt"
+				id: "0000000006620F19"
+				item: "extrautilitiesrebirth:square_glass"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 4.0d
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000F01235E4"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000066D4A226"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B6EB00A2"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000C084008D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000000F824D5B"
+				item: "extrautilitiesrebirth:sorting_machine"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000001CD1C972"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A1948824"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E2CAA4EF"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000001D7C240D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000012B02056"
+				item: "extrautilitiesrebirth:stone_spike"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 5.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000052B7F388"
+			id: "000000002FCE1339"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001F3AABC8"
+					id: "00000000385B4055"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009898E52E"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000CE2608D5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
+			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000087820DBF"
-				item: "extrautilitiesrebirth:evil_infused_iron_ingot"
+				id: "000000002114ED84"
+				item: "extrautilitiesrebirth:stone_drum"
 				type: "item"
 			}]
-			x: -7.0d
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000FDDEE5FD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000099611A14"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F34AF069"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000EF5F8515"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "000000000C6EA461"
+				item: "extrautilitiesrebirth:unstable_nugget"
+				type: "item"
+			}]
+			x: -15.0d
 			y: 0.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AA97B455"
+			id: "00000000D3D44D4B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009A867DED"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000084364FAF"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000C0984276"
-				item: "extrautilitiesrebirth:quadruple_compressed_cobblestone"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006390B8AA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C1548586"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008F408E29"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "000000001276CE48"
-				item: "extrautilitiesrebirth:compressed_cobblestone"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["000000007859391C"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000021F9BC20"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000678F48BF"
+					id: "00000000F167E6DF"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D9926C5D"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000003B7819C0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "square"
+			shape: "hexagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000B4B0B317"
-				item: "extrautilitiesrebirth:angel_block"
+				id: "0000000029ED7AEF"
+				item: "extrautilitiesrebirth:machine_block"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 3.0d
+			x: -11.0d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"000000007859391C"
-				"0000000061B713E0"
-				"00000000ABEB69C8"
-				"00000000D466C6B0"
-			]
+			dependencies: ["00000000C3C8BCF7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000069D1E697"
+			id: "00000000B2790FD5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F32DBA4B"
+					id: "0000000028594A11"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000067DC6030"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000BBCA070D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000E75CBA33"
+				item: "extrautilitiesrebirth:triple_compressed_cobblestone"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006901DF8E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009863A57F"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "0000000037B170F7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000006AE89AB6"
+				item: "extrautilitiesrebirth:speed_upgrade"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000664D4DB6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005C1AEA49"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000C89393BD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000006E133104"
+				item: "extrautilitiesrebirth:survival_generator"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000006B861B1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000003678772"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CF23FFB7"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000007EE80862"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "0000000044AA6A30"
+				item: "extrautilitiesrebirth:tnt_generator"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000041046E4A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002867E3B2"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000D076192E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000098A802A7"
+				id: "0000000088D1184E"
+				item: "extrautilitiesrebirth:compressed_gravel"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000013F440AA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004E5A5B48"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "000000009C38262B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000356D0EF8"
+				item: "extrautilitiesrebirth:compressed_sand"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000A9105AC5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008F54D261"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001E36332B"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000EC9719A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000108C4FCA"
+				item: "extrautilitiesrebirth:dark_glass"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000091815524"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D9511033"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "0000000044EFECBA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000279346E6"
+				item: "extrautilitiesrebirth:diamond_spike"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000040754612"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007702B10C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000EDE8CFD8"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "0000000033953BB6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000C7461771"
+				item: "extrautilitiesrebirth:edged_stone_bricks"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000009D7D448C"
+				"000000006901DF8E"
+				"00000000C67BD5F5"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BD026D14"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DB0C78B8"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "0000000015BEEAB9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000C9FEF814"
+				item: "extrautilitiesrebirth:enchanted_speed_upgrade"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["000000008B9C64FD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006B02279C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008182BB17"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "000000007719DA20"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000004EA39F7C"
+				item: "extrautilitiesrebirth:angel_block"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000002CB46591"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000091D99EE9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CDD0015A"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000003AE9AB10"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000EB2BC0DA"
+				item: "extrautilitiesrebirth:bedrock_bricks"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000008B9C64FD"
+				"00000000A7D7B09A"
+				"00000000F01235E4"
+				"000000009D7D448C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002C3D49A2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000049BE108B"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000C8EE93EF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000035CA9863"
 				item: {
 					Count: 1
 					id: "extrautilitiesrebirth:chicken_wing_ring"
@@ -1478,518 +1604,431 @@
 			y: 1.0d
 		}
 		{
+			dependencies: ["00000000B61839B7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000010E090B3"
+			id: "00000000334F7F54"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000003AC5DE"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000663A2A2E"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "000000002642771F"
-				item: "extrautilitiesrebirth:compressed_gravel"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009659185A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000491ECB2"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005EAC0605"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "0000000044689B8D"
-				item: "extrautilitiesrebirth:bedrock_bricks"
-				type: "item"
-			}]
-			x: -14.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006674C537"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000AEE2F203"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000006556B05"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000C611845F"
-				item: "extrautilitiesrebirth:compressed_dirt"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000ACB4BD3A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DCCE9793"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FEA35CA7"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000EADD17EA"
-				item: "extrautilitiesrebirth:block_of_enchaned_metal"
-				type: "item"
-			}]
-			x: -14.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003BBE0916"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000EC2E6A27"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A9BC4B03"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000C07EE6E6"
-				item: "extrautilitiesrebirth:compressed_sand"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["0000000067A7E935"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003E01A8C2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DBD99E07"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FBDB8358"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000D87B94EF"
-				item: "extrautilitiesrebirth:overclocked_generator"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["0000000067A7E935"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D6A2B7F9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002878FB82"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000057A3088"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000F3FAD106"
-				item: "extrautilitiesrebirth:pink_generator"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["0000000067A7E935"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000964CA2BA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000923BDB68"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CC67EB99"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000FDAFDE0F"
-				item: "extrautilitiesrebirth:potion_generator_1"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["00000000931E925E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000ABEB69C8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000080338E"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EC34DC35"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000E81AAB51"
-				item: "extrautilitiesrebirth:redstone_crystal"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["000000006FC20C1A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000577F72A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000088BFB34E"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000608F692A"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000CCA37CF9"
-				item: "extrautilitiesrebirth:redstone_generator"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["0000000067A7E935"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000294A82AC"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003653F004"
+					id: "00000000CE0738D8"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CE7778EC"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000CC8144E9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "rounded_square"
+			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000F6532497"
-				item: "extrautilitiesrebirth:slimey_generator"
+				id: "00000000100D87D1"
+				item: "extrautilitiesrebirth:compressed_dirt"
 				type: "item"
 			}]
-			x: -12.0d
-			y: 8.0d
+			x: -7.0d
+			y: 6.0d
 		}
 		{
+			dependencies: ["0000000006B861B1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006CA5065D"
+			id: "00000000C7FE30F0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000090E3A192"
+					id: "000000003F071614"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009B69420E"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000B096DC6C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "000000005929C99E"
-				item: "extrautilitiesrebirth:unstable_nugget"
+				id: "000000007781C2E0"
+				item: "extrautilitiesrebirth:netherstar_generator"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000006B861B1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E82F3148"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F992E035"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000E79EEBAC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000BFB30BD2"
+				item: "extrautilitiesrebirth:overclocked_generator"
 				type: "item"
 			}]
 			x: -12.0d
 			y: 0.0d
 		}
 		{
+			dependencies: ["0000000006B861B1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005067C310"
+			id: "0000000044FD0D95"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000078AEEDC"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000023E1ABCD"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000555641E8"
-				item: "extrautilitiesrebirth:speed_upgrade"
-				type: "item"
-			}]
-			x: -13.0d
-			y: 7.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003921D4DB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005710CA4D"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006CDE3E85"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "000000008BCFFA31"
-				item: "extrautilitiesrebirth:survival_generator"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 9.0d
-		}
-		{
-			dependencies: ["000000008A100492"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006BEFD79A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B9BB5E51"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BE3AA439"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000F8156E97"
-				item: "extrautilitiesrebirth:magical_apple"
-				type: "item"
-			}]
-			x: -13.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["0000000067A7E935"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000035DA9B6D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002F9589D9"
+					id: "00000000575B4BD4"
 					type: "xp"
 					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AE0DB90F"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000003A6D8B20"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "0000000079113321"
-				item: "extrautilitiesrebirth:netherstar_generator"
+				id: "0000000001957FEC"
+				item: "extrautilitiesrebirth:pink_generator"
 				type: "item"
 			}]
-			x: -13.0d
+			x: -12.0d
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000002AE33519"]
+			dependencies: ["0000000006B861B1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000067A7E935"
+			id: "00000000758675F4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000076376CDA"
+					id: "000000007C79FAB0"
 					type: "xp"
-					xp: 2
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000047682BD2"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000CDA37F03"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000003CAC73F6"
+				item: "extrautilitiesrebirth:potion_generator_1"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000002D86B234"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F01235E4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000720C7C2B"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "0000000049466BD4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000001E8060BF"
+				item: "extrautilitiesrebirth:redstone_crystal"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000008A5805A2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E989BCC9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006BFEDDCB"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000927B1AD6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000A535DF97"
+				item: "extrautilitiesrebirth:redstone_generator"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000001086DF8A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000798C366D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FA67CBBB"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000D393CE91"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000DA57B6D4"
+				item: "extrautilitiesrebirth:sextuple_compressed_cobblestone"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000006B861B1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000279C337A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D1184147"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0000000022E4A74F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000B325F64D"
+				item: "extrautilitiesrebirth:slimey_generator"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000006B861B1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005429E200"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C240C964"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "00000000F51017A0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000BBFC23E2"
+				item: "extrautilitiesrebirth:halitosis_generator"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000009402E4C4"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C67BD5F5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000834E4F25"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000ABBD68D6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "0000000094A077F2"
+				item: "extrautilitiesrebirth:magical_apple"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000D3D44D4B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000006B861B1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D5607E47"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "00000000FDEB4F89"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [{
 				consume_items: false
-				id: "0000000071678C34"
+				id: "000000006B8E29E3"
 				item: "extrautilitiesrebirth:furnace_generator"
 				type: "item"
 			}]
@@ -2000,126 +2039,217 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DC4F571B"
+			id: "0000000011917E6E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000576404CE"
+					id: "00000000B4FBB3A6"
 					type: "xp"
-					xp: 10
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002116AE6F"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000AB509015"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "00000000968CCC9D"
+				item: "extrautilitiesrebirth:evil_infused_iron_ingot"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000009402E4C4"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000615544CE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000046D87DC5"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000E87CB317"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002DAE971F"
-				item: "extrautilitiesrebirth:ender_marker"
+				id: "000000001F26BB0F"
+				item: "extrautilitiesrebirth:ender_core"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 7.0d
 		}
 		{
+			dependencies: ["00000000D3D44D4B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000094852D0A"
+			id: "000000003E64F554"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CE0DD931"
+					id: "0000000051F2AD4B"
 					type: "xp"
-					xp: 8
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006B49B678"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000035AAC9F4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004D530291"
-				item: "extrautilitiesrebirth:ender_lilly_stage_1"
+				id: "0000000099D094A9"
+				item: "extrautilitiesrebirth:enchanter"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 6.0d
 		}
 		{
+			dependencies: [
+				"0000000099611A14"
+				"00000000FDDEE5FD"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000E0D5930"
+			id: "00000000C75490E9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002194B805"
+					id: "000000003939F580"
 					type: "xp"
-					xp: 2
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003544CDA4"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000DE784352"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000812B571D"
-				item: {
-					Count: 1
-					id: "extrautilitiesrebirth:glass_cutter"
-					tag: {
-						Damage: 0
-					}
-				}
+				id: "00000000E6D3C9E1"
+				item: "extrautilitiesrebirth:reinforced_glass_cutter"
 				type: "item"
 			}]
-			x: -15.0d
+			x: -14.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"0000000052B7F388"
-				"0000000069D1E697"
-			]
+			dependencies: ["00000000B2790FD5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E1C87481"
+			id: "0000000027350159"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007F4E824F"
+					id: "0000000091861CD4"
 					type: "xp"
-					xp: 10
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006E77724D"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000034F1CF9D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "000000008C4E38AE"
+				item: "extrautilitiesrebirth:quadruple_compressed_cobblestone"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000011917E6E"
+				"000000002C3D49A2"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FECAD1D4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A2B0BD59"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000B6A85583"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000090FBCFBD"
+				id: "0000000030D8D910"
 				item: {
 					Count: 1
 					id: "extrautilitiesrebirth:advanced_chicken_wing_ring"
@@ -2133,218 +2263,141 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000006CA5065D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005FACD734"
+			id: "000000001BB3776D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CAAD0897"
+					id: "000000005CF69544"
 					type: "xp"
-					xp: 5
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000070A187F0"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000BF6CC24C"
-				item: "extrautilitiesrebirth:unstable_ingot"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000AA97B455"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D41DBD44"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005492F76C"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000032E557B0"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "000000005235980B"
-				item: "extrautilitiesrebirth:quintuple_compressed_cobblestone"
-				type: "item"
-			}]
-			x: -13.0d
-			y: 9.0d
-		}
-		{
-			dependencies: ["0000000052B7F388"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005E527AF0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000EAA9D3DE"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009FE920D4"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "000000003A7E561D"
-				item: "extrautilitiesrebirth:block_of_evil_infused_iron"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000A3A7FCC5"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C3BFC13B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000037CB0802"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EB6A3945"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000AEBFF678"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000097B9B60A"
-				item: "extrautilitiesrebirth:ender_quarry_speed_upgrade"
+				id: "000000005EA77986"
+				item: "extrautilitiesrebirth:ender_lilly_stage_1"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 8.0d
 		}
 		{
-			dependencies: [
-				"00000000BE97AA51"
-				"00000000C8C07ED1"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000078B4F26C"
+			id: "0000000036BB299E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BECDFF72"
+					id: "000000008E026770"
 					type: "xp"
-					xp: 8
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002DE3BE11"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000942B2333"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001579CE40"
-				item: "extrautilitiesrebirth:chisled_stone_bricks"
+				id: "000000001F338B96"
+				item: "extrautilitiesrebirth:chandelier"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 3.0d
 		}
 		{
+			dependencies: ["0000000091D99EE9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002A9F868F"
+			id: "0000000098E54AC2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D14D53CA"
+					id: "000000006B436BDA"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FF2AD3EB"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000005783C02F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F3014A8D"
-				item: "extrautilitiesrebirth:chandelier"
+				id: "000000002FC40048"
+				item: "extrautilitiesrebirth:bedrock_slabs"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000B4F108C6"]
+			dependencies: ["000000000232379B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000074A67FF3"
+			id: "0000000034E9609A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C435092C"
+					id: "00000000D9715026"
 					type: "xp"
-					xp: 1
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000432277A8"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000010345A2B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D99334A6"
+				id: "00000000876434AB"
 				item: "extrautilitiesrebirth:bedrock_drum"
 				type: "item"
 			}]
@@ -2352,184 +2405,224 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000E484A375"]
+			dependencies: ["000000001CD1C972"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000B8FEFAB"
+			id: "00000000F9269CC9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004C2BDABD"
+					id: "00000000335FC819"
 					type: "xp"
-					xp: 3
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DDE8DEC3"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000FCE36AAB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000084C34CA4"
-				item: "extrautilitiesrebirth:creeper_glass"
+				id: "00000000A71BEE4F"
+				item: "minecraft:cobblestone"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000007859391C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009A228A0D"
+			id: "00000000DC4FF558"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005C299726"
+					id: "00000000B483AE1D"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008F2067DA"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000009752AC75"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A648F182"
-				item: "extrautilitiesrebirth:gold_chest"
+				id: "00000000B57A67CA"
+				item: {
+					Count: 1
+					id: "extrautilitiesrebirth:glass_cutter"
+					tag: {
+						Damage: 0
+					}
+				}
 				type: "item"
 			}]
 			x: -2.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000006390B8AA"]
+			dependencies: ["00000000334F7F54"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB754B35"
+			id: "000000006D52CD33"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000018CC8D13"
+					id: "0000000015CBB3C0"
 					type: "xp"
-					xp: 3
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C6361B2E"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000090248014"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005D1699A0"
-				item: "minecraft:cobblestone"
+				id: "00000000B6C66D34"
+				item: "minecraft:coarse_dirt"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 6.0d
 		}
 		{
+			dependencies: ["00000000D3D44D4B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FCDF2B83"
+			id: "000000007D3A2CA9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000734007B7"
+					id: "000000005DAEA235"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DBC7BB27"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000E3396058"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000DB7DB43"
-				item: "extrautilitiesrebirth:glowstone_glass"
+				id: "000000004B6588AA"
+				item: "extrautilitiesrebirth:furnace"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000006674C537"]
+			dependencies: [
+				"00000000A7D7B09A"
+				"0000000069B6EAD4"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009578E419"
+			id: "00000000D01089F0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C6C5DB47"
+					id: "000000005E912AD1"
 					type: "xp"
-					xp: 9
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BE8B64CE"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000D99766D3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000068380512"
-				item: "minecraft:coarse_dirt"
+				id: "000000003E4C3ECE"
+				item: "extrautilitiesrebirth:chunk_loading_wand"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 5.0d
 		}
 		{
+			dependencies: ["000000008B9C64FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008D62C35E"
+			id: "00000000A002219E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006435017A"
+					id: "00000000E0E5478F"
 					type: "xp"
-					xp: 3
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CC5AC052"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000BA0DE05E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EE13469B"
-				item: "extrautilitiesrebirth:golden_bag_of_holding"
+				id: "00000000D5895B45"
+				item: "extrautilitiesrebirth:gold_chest"
 				type: "item"
 			}]
 			x: -2.0d
@@ -2537,33 +2630,38 @@
 		}
 		{
 			dependencies: [
-				"0000000061B713E0"
-				"000000002F8AFA3C"
+				"000000007702B10C"
+				"0000000040754612"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006340917D"
+			id: "000000002441DF31"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004EFF4610"
+					id: "0000000000A52B8D"
 					type: "xp"
-					xp: 11
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004243C184"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000001E06F192"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000058F468CC"
-				item: "extrautilitiesrebirth:chunk_loading_wand"
+				id: "00000000473E4D38"
+				item: "extrautilitiesrebirth:chisled_stone_bricks"
 				type: "item"
 			}]
 			x: 0.0d
@@ -2573,57 +2671,217 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DA9D84E7"
+			id: "000000003B72D589"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008F900348"
+					id: "00000000D80BC38D"
 					type: "xp"
-					xp: 10
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000068C0F85A"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000005C394B50"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D941167A"
-				item: "extrautilitiesrebirth:gold_spike"
+				id: "00000000ED9693D4"
+				item: "extrautilitiesrebirth:glowstone_glass"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000005FACD734"]
+			dependencies: [
+				"00000000A5A57FFA"
+				"00000000B0DA93A5"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000822A46CD"
+			id: "00000000CF984768"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006715EE67"
+					id: "000000002BACC675"
 					type: "xp"
-					xp: 3
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000637B716F"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000003F2BEF3A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000041B6B4DD"
+				id: "00000000D4903ACA"
+				item: "extrautilitiesrebirth:ender_quarry_world_hole_upgrade"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000087CE3FF9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006E4E55CF"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0000000049BE0437"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000004A766CF"
+				item: "extrautilitiesrebirth:ender_marker"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000FDDEE5FD"
+				"000000002ABF5EDC"
+				"000000000232379B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E24CBB46"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001D262E4A"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "000000002024BAF3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000007DB6F21D"
+				item: "extrautilitiesrebirth:fire_axe"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000A9105AC5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DF775EC1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000275C6837"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000004811425C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000002DA018F0"
+				item: "extrautilitiesrebirth:creeper_glass"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000FDDEE5FD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FCFBC1BC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CDF5C80C"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "0000000056F0CC26"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000004E8B360B"
 				item: {
 					Count: 1
 					id: "extrautilitiesrebirth:erosion_shovel"
@@ -2634,419 +2892,485 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000A3A7FCC5"
-				"0000000048FFCC27"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AD0707A6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006109F438"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000056382681"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000DB99CC12"
-				item: "extrautilitiesrebirth:ender_quarry_world_hole_upgrade"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 9.0d
-		}
-		{
-			dependencies: ["000000002AE33519"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000E8BA3AF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B7052587"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000062D2FEF2"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000CD39FF98"
-				item: "extrautilitiesrebirth:furnace"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["0000000067A7E935"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E43FD766"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BBB7B3A5"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DE696048"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000B2CC96D3"
-				item: "extrautilitiesrebirth:culinary_generator"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 8.0d
-		}
-		{
-			dependencies: [
-				"000000005FACD734"
-				"00000000B4F108C6"
-				"00000000E78DD397"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009DF5840F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000A12FCE7"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FE164EAE"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "0000000047DF958D"
-				item: "extrautilitiesrebirth:fire_axe"
-				type: "item"
-			}]
-			x: -2.0d
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"000000009223F573"
-				"0000000067A7E935"
-				"00000000ABEB69C8"
-				"00000000751933B5"
-				"000000005602E4C9"
-				"000000001DD2034A"
-				"000000006FC20C1A"
-				"00000000A23D1EE4"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004037042F"
+			id: "000000005E4045F0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000005F8A927"
+					id: "000000002B879EE4"
 					type: "xp"
-					xp: 4
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000025E21D71"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000D178A148"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000C5E76470"
-				item: "extrautilitiesrebirth:rainmbow_generator_top"
+				id: "0000000080D38F31"
+				item: "extrautilitiesrebirth:polished_stone"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 6.0d
+			x: -8.0d
+			y: 9.0d
 		}
 		{
-			dependencies: ["00000000E484A375"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000517B9013"
+			id: "00000000A5A57FFA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D400D641"
+					id: "000000005D573AFE"
 					type: "xp"
-					xp: 6
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F6C7AF83"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000073F0467D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000A4F031AB"
+				item: "extrautilitiesrebirth:trash_can_energy"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000798C366D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000305C2FD9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000019C6E83A"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "0000000056EBB0C4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000F1EBDEC8"
+				item: "extrautilitiesrebirth:septuple_compressed_cobblestone"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001CD1C972"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005A32809F"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000686789E1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "00000000053E0858"
+				item: "extrautilitiesrebirth:compressed_cobblestone"
+				type: "item"
+			}]
+			x: -14.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000041046E4A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C1F58D0C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A09D8CD8"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000FD7984D9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EAA9098D"
-				item: "extrautilitiesrebirth:edged_glass"
+				id: "00000000B116DD31"
+				item: "extrautilitiesrebirth:double_compressed_gravel"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000003BBE0916"]
+			dependencies: [
+				"000000008543C7C5"
+				"0000000006B861B1"
+				"00000000F01235E4"
+				"0000000093CA6A6F"
+				"000000000FC69B06"
+				"0000000073A72B42"
+				"000000008A5805A2"
+				"000000005429E200"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FED3B24A"
+			id: "0000000003D82FD5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004E295497"
+					id: "000000004BD4F4B1"
 					type: "xp"
-					xp: 3
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000032F147FA"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000D506C27A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000001E7065AB"
+				item: "extrautilitiesrebirth:rainmbow_generator_top"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004068145B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005EE63F9F"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000C03245D1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006F82F0D8"
-				item: "extrautilitiesrebirth:double_compressed_sand"
+				id: "000000007076B023"
+				item: "extrautilitiesrebirth:diamond_edged_computational_matrix"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 2.0d
 		}
 		{
+			dependencies: [
+				"00000000C7FE30F0"
+				"00000000E82F3148"
+				"0000000044FD0D95"
+				"00000000758675F4"
+				"00000000F01235E4"
+				"00000000E989BCC9"
+				"00000000279C337A"
+				"00000000664D4DB6"
+				"0000000003678772"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000048FFCC27"
+			id: "00000000654C1313"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A37FF38E"
+					id: "000000001B0E6536"
 					type: "xp"
-					xp: 1
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000918EEA92"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000497578B1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000018D644A9"
-				item: "extrautilitiesrebirth:trash_can_energy"
+				id: "0000000077190D7B"
+				item: "extrautilitiesrebirth:rainbow_generator_bottom"
 				type: "item"
 			}]
-			x: -8.0d
+			x: -9.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000008A100492"]
+			dependencies: ["00000000A9105AC5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007722AA40"
+			id: "000000001E1ED2D5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004119DE0F"
+					id: "00000000CD822DB0"
 					type: "xp"
-					xp: 9
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A5E84C27"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000001F94C033"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006B12D63C"
-				item: "extrautilitiesrebirth:ender_core"
+				id: "0000000026D65D98"
+				item: "extrautilitiesrebirth:edged_glass"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000002AE33519"]
+			dependencies: ["0000000013F440AA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C08228F2"
+			id: "00000000F08CB15D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005AEA0707"
+					id: "000000003CB2226D"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000F8C533D"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000BDE22130"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000081279632"
-				item: "extrautilitiesrebirth:enchanter"
+				id: "000000007C166BE3"
+				item: "extrautilitiesrebirth:double_compressed_sand"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000006111BA21"]
+			dependencies: ["00000000AC064E5E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001B07E8DA"
+			id: "000000008A163BCC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EB48A5E7"
+					id: "0000000032EC0E6D"
 					type: "xp"
-					xp: 1
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000043C02878"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000C77FF4C9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000076599D0E"
+				id: "0000000028A25BC9"
 				item: "extrautilitiesrebirth:dark_ethereal_glass"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000006B861B1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000079793726"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BE7C0ED8"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000CF95ACE0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000EA0E253B"
+				item: "extrautilitiesrebirth:culinary_generator"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 9.0d
 		}
 		{
+			dependencies: ["00000000FDDEE5FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006074135D"
+			id: "000000000C0238D2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000483DC324"
+					id: "00000000E1AF3376"
 					type: "xp"
-					xp: 11
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000628FD724"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000D4A8A89C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000053C3C3B9"
-				item: "extrautilitiesrebirth:diamond_edged_computational_matrix"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000005FACD734"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000088742F21"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007DE0D4B8"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B4227DAE"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000007800CBFF"
+				id: "00000000B025212F"
 				item: {
 					Count: 1
 					id: "extrautilitiesrebirth:destruction_pickaxe"
@@ -3057,32 +3381,256 @@
 				type: "item"
 			}]
 			x: -1.0d
-			y: 0.0d
+			y: 1.0d
 		}
 		{
+			dependencies: ["0000000011917E6E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008A100492"
+			id: "000000000D48CF1D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000755F6A9F"
+					id: "000000009759AF38"
 					type: "xp"
-					xp: 4
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009D340E28"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000898B18E9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000CAABA61D"
+				item: "extrautilitiesrebirth:block_of_evil_infused_iron"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000081B894C0"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B61839B7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000042C298AD"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000A292F4F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "000000002E07B482"
+				item: "extrautilitiesrebirth:double_compressed_dirt"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000C75490E9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002D86B234"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DC173A8D"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000C20AFEB5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "00000000FDC21910"
+				id: "000000007EA2B360"
+				item: "extrautilitiesrebirth:ender_shard"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000007F053A60"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009D7D448C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006CC7F432"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000004B0FD75E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000FB163CBC"
+				item: "extrautilitiesrebirth:enchanted_ingot"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000B2790FD5"
+				"0000000027350159"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000232379B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B970AA1A"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000564B23EC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "000000008D75FA1F"
+				item: "extrautilitiesrebirth:bedrockium_ingot"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000006B861B1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008A5805A2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000492EC667"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000403EC19E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "0000000044489116"
+				item: "extrautilitiesrebirth:magma_generator"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009402E4C4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005486C95F"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "00000000CD120A78"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "0000000034019FB3"
 				item: "extrautilitiesrebirth:magical_wood"
 				type: "item"
 			}]
@@ -3090,411 +3638,356 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000000E0D5930"]
+			dependencies: ["0000000027350159"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000931E925E"
+			id: "000000001086DF8A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000907CEB5B"
+					id: "00000000883B69EC"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000013D69EC9"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000AA1329BF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "00000000BC54F800"
-				item: "extrautilitiesrebirth:ender_shard"
+				id: "000000004A0EC909"
+				item: "extrautilitiesrebirth:quintuple_compressed_cobblestone"
 				type: "item"
 			}]
-			x: -14.0d
-			y: 0.0d
+			x: -13.0d
+			y: 4.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A8B511F9"
+			id: "000000005FD07D60"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C99D6071"
+					id: "00000000F2B8461C"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DFDD4A6B"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000295E8081"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "000000001B587846"
+				id: "00000000EAC9D1B3"
 				item: "extrautilitiesrebirth:moon_stone"
 				type: "item"
 			}]
 			x: -11.0d
-			y: 9.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["0000000067A7E935"]
+			dependencies: ["00000000F01235E4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006FC20C1A"
+			id: "0000000081F9FB15"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000098AD52EA"
+					id: "00000000E4F223A2"
 					type: "xp"
-					xp: 5
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003C92A10C"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "000000001925D441"
-				item: "extrautilitiesrebirth:magma_generator"
-				type: "item"
-			}]
-			x: -14.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["00000000CD00FE73"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D1467D3C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D578B7D3"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C39CA84D"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000705E1A0B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000091AD69AE"
-				item: "extrautilitiesrebirth:portable_globe"
+				id: "000000004BE1CC4D"
+				item: "extrautilitiesrebirth:mechanical_user"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 8.0d
 		}
 		{
-			dependencies: [
-				"000000003E01A8C2"
-				"00000000D6A2B7F9"
-				"00000000964CA2BA"
-				"00000000ABEB69C8"
-				"000000000577F72A"
-				"00000000294A82AC"
-				"000000003921D4DB"
-				"00000000746A4806"
-				"0000000035DA9B6D"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000069DF0A1E"
+			id: "00000000D41F135F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009042ECBD"
+					id: "0000000009DEC053"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E3306BF6"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000F6133070"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000009CA4233"
-				item: "extrautilitiesrebirth:rainbow_generator_bottom"
+				id: "000000005D0D55FA"
+				item: "extrautilitiesrebirth:overworld_portal"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000A9105AC5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006BB15755"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000079E632AA"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000001A5BC109"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000B917E2DD"
+				item: "extrautilitiesrebirth:obsidian_glass"
 				type: "item"
 			}]
 			x: -9.0d
 			y: 5.0d
 		}
 		{
+			dependencies: ["00000000D41F135F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000388F4443"
+			id: "0000000089CF16F3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000061B1C43D"
+					id: "0000000019EFDA45"
 					type: "xp"
-					xp: 1
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000083F71E70"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000014E2BD8"
-				item: "extrautilitiesrebirth:polished_stone"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CD00FE73"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000035DA26D"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000ED46C949"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000014486189"
-				item: "extrautilitiesrebirth:overworld_portal"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["000000005875726A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000049A9B138"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000068908DB4"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EA87EF62"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000D3A630F0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001A98A96A"
-				item: "extrautilitiesrebirth:quadruple_compressed_dirt"
+				id: "00000000899C1AA0"
+				item: "extrautilitiesrebirth:portable_globe"
 				type: "item"
 			}]
 			x: -4.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"000000005FACD734"
-				"0000000021F9BC20"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FF3EF5D4"
+			id: "000000008E5ED999"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DAEA0BF6"
+					id: "0000000027ECE066"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000ECC50183"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000007FFD44F0"
+				item: "extrautilitiesrebirth:iron_drum"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000AC064E5E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000048F1668C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000071024874"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002FBAD13A"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000010D494E7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000000671C5FE"
+				item: "extrautilitiesrebirth:ineffable_glass"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000305C2FD9"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000083AC5D74"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004FB49077"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "00000000EF650283"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000656AEA84"
-				item: "extrautilitiesrebirth:precision_shears"
+				id: "000000009430AAFF"
+				item: "extrautilitiesrebirth:octuple_compressed_cobblestone"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000E484A375"]
+			dependencies: ["00000000FDDEE5FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EB42CA5F"
+			id: "000000002ABF5EDC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A21FC64D"
+					id: "000000003AB6E19F"
 					type: "xp"
-					xp: 5
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007AE8CE64"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000001759FB81"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000833B2D6E"
-				item: "extrautilitiesrebirth:obsidian_glass"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 8.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000029C12572"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B07E0902"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FE7EAA29"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000124ED667"
-				item: "extrautilitiesrebirth:iron_drum"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 9.0d
-		}
-		{
-			dependencies: ["000000006111BA21"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C2A86C66"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000303C2883"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F2EC755D"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000ADC77087"
-				item: "extrautilitiesrebirth:ineffable_glass"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["000000005FACD734"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E78DD397"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000034FE6807"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000019018A6C"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000ED9BE240"
+				id: "00000000A01446AD"
 				item: {
 					Count: 1
 					id: "extrautilitiesrebirth:healing_axe"
@@ -3508,93 +4001,185 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000E484A375"]
+			dependencies: ["00000000A9105AC5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F017FCD8"
+			id: "000000008125C4B6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000346C5BEA"
+					id: "000000005F3FD0BD"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008A9AE050"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000C332BF50"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000B3D816AD"
+				id: "000000000543DDC5"
 				item: "extrautilitiesrebirth:glass_bricks"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 0.0d
+			x: -9.0d
+			y: 8.0d
 		}
 		{
-			dependencies: ["00000000ABEB69C8"]
+			dependencies: ["00000000F01235E4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002F8AFA3C"
+			id: "0000000069B6EAD4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000522B5AED"
+					id: "000000007C05AEC7"
 					type: "xp"
-					xp: 6
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D46EAA8B"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000B5AC2024"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000C0AA05DC"
+				id: "00000000CDB66387"
 				item: "extrautilitiesrebirth:eye_of_redstone"
 				type: "item"
 			}]
 			x: -7.0d
-			y: 4.0d
+			y: 5.0d
 		}
 		{
-			dependencies: ["00000000ABEB69C8"]
+			dependencies: ["00000000FDDEE5FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000084DCE78B"
+			id: "00000000E9C70770"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A842FF43"
+					id: "00000000F4446959"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000071EE9774"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000003EA04639"
+				item: {
+					Count: 1
+					id: "extrautilitiesrebirth:etheric_sword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -8.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B0DA93A5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DC6EFB2F"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "000000008EBA6A7C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000B31E4BA4"
+				item: "extrautilitiesrebirth:ender_quarry_upgrade_base"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000008E5ED999"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009F2E43F3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000946E6CAD"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000306BF07E"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000A043DEB9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003DB8FBFE"
-				item: "extrautilitiesrebirth:resonator"
+				id: "0000000049AF7D95"
+				item: "extrautilitiesrebirth:reinforced_drum"
 				type: "item"
 			}]
 			x: -4.0d
@@ -3602,131 +4187,110 @@
 		}
 		{
 			dependencies: [
-				"000000005FACD734"
-				"000000006CA5065D"
+				"000000006BB15755"
+				"000000008F54D261"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000217BE4B5"
+			id: "00000000FB1590BF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000006B07404"
+					id: "000000005D906457"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000042F794BB"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000038B17E6F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000007548DCC2"
-				item: "extrautilitiesrebirth:reinforced_glass_cutter"
+				id: "00000000A950265E"
+				item: "extrautilitiesrebirth:reinforced_dark_glass"
 				type: "item"
 			}]
 			x: -4.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000005FACD734"]
+			dependencies: ["00000000F01235E4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006B00A215"
+			id: "000000004371CED0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009DFAA481"
+					id: "000000003C874759"
 					type: "xp"
-					xp: 6
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000339B0EA4"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000CB6E6D26"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000007EE66ACD"
-				item: {
-					Count: 1
-					id: "extrautilitiesrebirth:reversing_hoe"
-					tag: {
-						Damage: 0
-					}
-				}
+				id: "000000002B47DD52"
+				item: "extrautilitiesrebirth:resonator"
 				type: "item"
 			}]
 			x: -4.0d
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000B4F108C6"]
+			dependencies: ["0000000081B894C0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000054F74CC5"
+			id: "0000000053C3D7D4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000615CC733"
+					id: "00000000621DE9FF"
 					type: "xp"
-					xp: 10
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000097206FDA"
-					table_id: 2397468588L
-					type: "random"
-				}
-			]
-			shape: "gear"
-			tasks: [{
-				consume_items: false
-				id: "00000000BC409A62"
-				item: "extrautilitiesrebirth:bedrock_cobblestone"
-				type: "item"
-			}]
-			x: -15.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000FBCCC6E6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009820A2D2"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000025ED743C"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000D3C2CC29"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009A07DFB3"
-				item: "extrautilitiesrebirth:redstone_clock"
+				id: "0000000086FCA34C"
+				item: "extrautilitiesrebirth:quadruple_compressed_dirt"
 				type: "item"
 			}]
 			x: -4.0d
@@ -3734,64 +4298,73 @@
 		}
 		{
 			dependencies: [
-				"0000000069DF0A1E"
-				"000000004037042F"
+				"00000000FDDEE5FD"
+				"000000006B02279C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ED7D66D2"
+			id: "00000000DC9A42D9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005B631E58"
+					id: "000000004780D03E"
 					type: "xp"
-					xp: 2
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FF4291ED"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000007B642F06"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000084E821F4"
-				item: "extrautilitiesrebirth:rainbow_generator"
+				id: "00000000B55D0F29"
+				item: "extrautilitiesrebirth:precision_shears"
 				type: "item"
 			}]
 			x: -4.0d
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000029C12572"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005214320B"
+			id: "00000000095E2CD4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004E1CD0FE"
+					id: "00000000A53EFE2A"
 					type: "xp"
-					xp: 8
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007A5E094E"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000021F02010"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E76ACD76"
-				item: "extrautilitiesrebirth:reinforced_drum"
+				id: "0000000021B38A49"
+				item: "extrautilitiesrebirth:redstone_clock"
 				type: "item"
 			}]
 			x: -4.0d
@@ -3799,249 +4372,294 @@
 		}
 		{
 			dependencies: [
-				"000000009D1E5F06"
-				"00000000EB42CA5F"
+				"0000000003D82FD5"
+				"00000000654C1313"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000690660EE"
+			id: "000000008AC0911D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A86E923D"
+					id: "000000006E64587E"
 					type: "xp"
-					xp: 2
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C682F4FF"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000009282B4E0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C865EFFC"
-				item: "extrautilitiesrebirth:reinforced_dark_glass"
+				id: "0000000065F49D12"
+				item: "extrautilitiesrebirth:rainbow_generator"
 				type: "item"
 			}]
 			x: -4.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000E484A375"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A5CBF47E"
+			id: "00000000234A31F1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009EFC8265"
+					id: "00000000034F9517"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EF3209CD"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000068DB32D0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000041E24BAD"
-				item: "extrautilitiesrebirth:golden_edged_glass"
+				id: "00000000C0DA4B6D"
+				item: "extrautilitiesrebirth:gold_spike"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 7.0d
 		}
 		{
+			dependencies: ["00000000A9105AC5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008C46D1D5"
+			id: "0000000041D010EF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C3BAED48"
+					id: "00000000E225BB79"
 					type: "xp"
-					xp: 1
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003B73906D"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000023C0C37F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F25C01BF"
-				item: "extrautilitiesrebirth:heart_glass"
+				id: "000000002C5E8147"
+				item: "extrautilitiesrebirth:golden_edged_glass"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000010E090B3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ABB9C0E0"
+			id: "000000002BCE779C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000067810331"
+					id: "0000000035053548"
 					type: "xp"
-					xp: 1
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C401F2EC"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000A6993950"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B99D68E1"
-				item: "minecraft:gravel"
+				id: "000000007B668F12"
+				item: "extrautilitiesrebirth:golden_bag_of_holding"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000ABEB69C8"]
+			dependencies: [
+				"00000000F01235E4"
+				"000000005E4045F0"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000379695FE"
+			id: "00000000B7EC8FDF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008B65B65C"
+					id: "00000000C05A6ED0"
 					type: "xp"
-					xp: 5
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000835587C1"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000007863E3EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DAE5D066"
-				item: "extrautilitiesrebirth:mechanical_miner"
+				id: "000000002DB1B641"
+				item: "extrautilitiesrebirth:lunar_panel"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000008A100492"]
+			dependencies: [
+				"0000000091815524"
+				"00000000E9C70770"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A7C74763"
+			id: "000000009F2A8C85"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B658C9D7"
+					id: "00000000DDF8077F"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000089524E98"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000E28A74B9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004B7FB3A3"
-				item: "extrautilitiesrebirth:magical_planks"
+				id: "00000000B95CC5CF"
+				item: "extrautilitiesrebirth:kikoku"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000A7C14069"]
+			dependencies: ["00000000F01235E4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000070CBA12"
+			id: "00000000F97C61BE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005703BD86"
+					id: "0000000063D49265"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DB400C6D"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000002E39F36C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000ECB91AC"
-				item: "extrautilitiesrebirth:octuple_compressed_cobblestone"
+				id: "00000000E18CC6B9"
+				item: "extrautilitiesrebirth:mechanical_miner"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000ABEB69C8"]
+			dependencies: ["000000009402E4C4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004FF6FCC5"
+			id: "0000000090D30D9E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000526457B"
+					id: "000000008F8FE6BB"
 					type: "xp"
-					xp: 11
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B85B9566"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000A335C275"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000072E6CE35"
-				item: "extrautilitiesrebirth:mechanical_user"
+				id: "000000005212B87F"
+				item: "extrautilitiesrebirth:magical_planks"
 				type: "item"
 			}]
 			x: -3.0d
@@ -4051,126 +4669,139 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EC4570A8"
+			id: "0000000053D6709D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006E3CC4F4"
+					id: "0000000052220059"
 					type: "xp"
-					xp: 1
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000058181849"
-					table_id: 2397468588L
-					type: "random"
+					id: "000000009756B38C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000007CB3BBDD"
-				item: "extrautilitiesrebirth:iron_spike"
+				id: "00000000201A5DA7"
+				item: "extrautilitiesrebirth:heart_glass"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000C2A86C66"]
+			dependencies: ["0000000041046E4A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FD4A2928"
+			id: "0000000057D1B617"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D7269445"
+					id: "00000000A155703E"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009315164A"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000D2282C2C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A253FCE6"
-				item: "extrautilitiesrebirth:ineffable_inverted_glass"
+				id: "000000000036183A"
+				item: "minecraft:gravel"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"00000000388F4443"
-				"00000000ABEB69C8"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ED8B566D"
+			id: "0000000087944CCD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002D284BDD"
+					id: "00000000C6EF5D0B"
 					type: "xp"
-					xp: 8
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000815C1B30"
-					table_id: 2397468588L
-					type: "random"
+					id: "00000000C4555A15"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006AC3A7E5"
-				item: "extrautilitiesrebirth:lunar_panel"
+				id: "00000000FA59D645"
+				item: "extrautilitiesrebirth:iron_spike"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"000000008FFD728D"
-				"000000001639EBB6"
-			]
+			dependencies: ["0000000048F1668C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000080F84E1"
+			id: "0000000053496F63"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002303BA49"
+					id: "00000000FFA71388"
 					type: "xp"
 					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006BA5C117"
-					table_id: 2397468588L
-					type: "random"
+					id: "0000000096D877C8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_extrautilitiesrebirth"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B1931195"
-				item: "extrautilitiesrebirth:kikoku"
+				id: "0000000024970E5A"
+				item: "extrautilitiesrebirth:ineffable_inverted_glass"
 				type: "item"
 			}]
 			x: -3.0d

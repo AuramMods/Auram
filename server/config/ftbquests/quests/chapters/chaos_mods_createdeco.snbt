@@ -2,92 +2,190 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_createdeco"
-	group: "00000000DEB299A3"
-	icon: "createdeco:lime_placard"
-	id: "000000008B6372C5"
+	group: "000000008CDEF944"
+	icon: "createdeco:cyan_placard"
+	id: "000000000EABCC5C"
 	order_index: 98
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: [
-				"00000000DC039292"
-				"000000008EE47BF2"
-				"00000000D3A3B7C2"
-				"00000000A890AD53"
+				"00000000D0FCA7A7"
+				"00000000E22356B2"
+				"0000000029C7F51E"
+				"00000000E55D781A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E35CE8C4"
+			id: "00000000D4547499"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001A83B19B"
+					id: "00000000E7C0052B"
 					type: "xp"
-					xp: 15
+					xp: 69
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001987EB86"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000005A75541F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007F1EEE0A"
-					item: "createdeco:umber_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000038624F36"
-					item: "createdeco:umber_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000BA4B1FF"
-					item: "createdeco:decal_up"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A28F1E0B"
-					item: "createdeco:decal_top_left"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000109AB105"
-					item: "createdeco:decal_top_right"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008CC32A14"
-					item: "createdeco:verdant_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001BB0E968"
-					item: "createdeco:verdant_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FFCA34BF"
+					id: "000000005B9AF409"
 					item: "createdeco:decal_warning"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004F31800A"
+					id: "00000000AB6AA13E"
 					item: "createdeco:white_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009CFB9BAA"
+					item: "createdeco:yellow_andesite_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000010F82A8E"
+					item: "createdeco:yellow_brass_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001C3C89A6"
+					item: "createdeco:yellow_copper_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E49C7AFA"
+					item: "createdeco:yellow_industrial_iron_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AD1A5081"
+					item: "createdeco:yellow_iron_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A8B64480"
+					item: "createdeco:yellow_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CE2955C3"
+					item: "createdeco:yellow_zinc_lamp"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000004277E42"
+				"000000002F466C56"
+				"00000000021E67C6"
+				"000000009ADCE120"
+				"00000000F23CFEE2"
+				"0000000029C7F51E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006751CFE0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F7BDD7C2"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "0000000079ED165A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A0945BD7"
+					item: "createdeco:tiled_verdant_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D2705D56"
+					item: "createdeco:umber_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000853EF55E"
+					item: "createdeco:umber_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000028CDA966"
+					item: "createdeco:umber_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000074754A3E"
+					item: "createdeco:decal_up"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C01FA084"
+					item: "createdeco:decal_top_left"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003253783C"
+					item: "createdeco:decal_top_right"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B3F5A18C"
+					item: "createdeco:verdant_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008A3572B9"
+					item: "createdeco:verdant_brick_wall"
 					type: "item"
 				}
 			]
@@ -95,80 +193,171 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000007AEC5963"]
+			dependencies: ["000000004A371286"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001D82E01A"
+			id: "00000000DA37B114"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003681D13B"
+					id: "000000008A928B1B"
 					type: "xp"
-					xp: 56
+					xp: 87
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B649E926"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000FB6803AD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B46D2D97"
-					item: "createdeco:cracked_pearl_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000023F03D97"
-					item: "createdeco:cracked_pearl_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005953BEBB"
-					item: "createdeco:cracked_red_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008881939A"
+					id: "00000000BDD352EB"
 					item: "createdeco:cracked_red_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000085341013"
+					id: "0000000029A0F4A1"
 					item: "createdeco:cracked_red_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B6EE265B"
+					id: "00000000ABA78F80"
 					item: "createdeco:cracked_scarlet_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AC84C78D"
+					id: "0000000090BF3D7E"
 					item: "createdeco:cracked_scarlet_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008C98C784"
+					id: "0000000093BEACDD"
 					item: "createdeco:cracked_scarlet_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005F381A44"
+					id: "000000007EBFDDB6"
 					item: "createdeco:cracked_umber_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008C354A17"
+					item: "createdeco:cracked_umber_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000083046D93"
+					item: "createdeco:cracked_umber_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009EEF2F7A"
+					item: "createdeco:cracked_verdant_brick_slab"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["000000004A371286"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B3418DDD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001AB8FB5E"
+					type: "xp"
+					xp: 46
+				}
+				{
+					id: "0000000071C7E795"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000096F7AF14"
+					item: "createdeco:cracked_dean_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000492932ED"
+					item: "createdeco:cracked_dean_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C36F1175"
+					item: "createdeco:cracked_dusk_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001980852C"
+					item: "createdeco:cracked_dusk_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CB17EDDD"
+					item: "createdeco:cracked_dusk_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000334C85CC"
+					item: "createdeco:cracked_pearl_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CC6D30C4"
+					item: "createdeco:cracked_pearl_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D6325912"
+					item: "createdeco:cracked_pearl_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007D8EF46F"
+					item: "createdeco:cracked_red_brick_slab"
 					type: "item"
 				}
 			]
@@ -176,114 +365,178 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000A890AD53"]
+			dependencies: ["000000009386319F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB2F4D5F"
+			id: "000000007982C268"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A559CD10"
+					id: "00000000B1F58873"
 					type: "xp"
-					xp: 2
+					xp: 62
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009DBC35D4"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000004DBB40F4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000007F0083D6"
-				item: "createdeco:long_blue_bricks"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 0.0d
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000018AFFA45"
+					item: "createdeco:black_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F0C72ECB"
+					item: "createdeco:blue_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000040D27506"
+					item: "createdeco:brown_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000014D9D1C7"
+					item: "createdeco:cyan_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001D7BDE3F"
+					item: "createdeco:gray_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D2134B42"
+					item: "createdeco:green_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FAB651D9"
+					item: "createdeco:light_blue_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000483DA410"
+					item: "createdeco:light_gray_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000021C12F22"
+					item: "createdeco:lime_placard"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
-				"000000007AEC5963"
-				"0000000016532F98"
+				"000000004A371286"
+				"00000000849540BF"
+				"00000000021E67C6"
+				"000000004FE22AD0"
+				"000000009ADCE120"
+				"0000000029C7F51E"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E410B475"
+			id: "00000000418626E5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007004C009"
+					id: "00000000B41FE38B"
 					type: "xp"
-					xp: 10
+					xp: 52
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004916D309"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000FC898B8F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A15001DB"
+					id: "000000003204C416"
+					item: "createdeco:corner_red_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C8DDB714"
+					item: "createdeco:corner_scarlet_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005C50EFE1"
+					item: "createdeco:corner_umber_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AF94ED2D"
+					item: "createdeco:corner_umber_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000071B4E526"
+					item: "createdeco:corner_verdant_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000078E3DD5D"
+					item: "createdeco:cracked_blue_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D27C274F"
 					item: "createdeco:cracked_blue_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000046F0FEB8"
+					id: "0000000000031394"
 					item: "createdeco:cracked_blue_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002AA02F8A"
+					id: "00000000E26903C4"
 					item: "createdeco:cracked_dean_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009D35BE55"
-					item: "createdeco:cracked_dean_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000038E98F46"
-					item: "createdeco:cracked_dean_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008D19DD94"
-					item: "createdeco:cracked_dusk_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000053DE985E"
-					item: "createdeco:cracked_dusk_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009A76E353"
-					item: "createdeco:cracked_dusk_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000FF5C56F"
-					item: "createdeco:cracked_pearl_brick_slab"
 					type: "item"
 				}
 			]
@@ -292,86 +545,91 @@
 		}
 		{
 			dependencies: [
-				"0000000075B773C8"
-				"0000000016532F98"
-				"000000008EE47BF2"
-				"0000000078F7CB59"
-				"000000002AF693A4"
-				"00000000955B9D99"
+				"0000000004277E42"
+				"00000000021E67C6"
+				"000000004FE22AD0"
+				"000000009ADCE120"
+				"00000000F8B666F0"
+				"00000000316C77F8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000825AE707"
+			id: "00000000D9F73508"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007A76F4AB"
+					id: "0000000040C36C97"
 					type: "xp"
-					xp: 67
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CE5D5D7A"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000004680998F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000528AC492"
-					item: "createdeco:corner_dean_brick_slab"
+					id: "00000000D1300342"
+					item: "createdeco:corner_blue_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003F1337FF"
-					item: "createdeco:corner_dean_brick_stairs"
+					id: "00000000109A5060"
+					item: "createdeco:corner_dean_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000AECD36A"
+					id: "000000000C27ED17"
 					item: "createdeco:corner_dusk_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A1737CCA"
+					id: "00000000AD156F3D"
 					item: "createdeco:corner_dusk_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006E18AC4F"
+					id: "00000000872F1159"
+					item: "createdeco:corner_dusk_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009DE815A1"
 					item: "createdeco:corner_pearl_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B10A7F65"
-					item: "createdeco:corner_pearl_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B7F49F03"
+					id: "000000007B4C2903"
 					item: "createdeco:corner_pearl_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D9F9FC3C"
-					item: "createdeco:corner_red_brick_stairs"
+					id: "0000000057BB772A"
+					item: "createdeco:corner_red_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000027BCA42B"
-					item: "createdeco:corner_red_bricks"
+					id: "0000000081130EA6"
+					item: "createdeco:corner_red_brick_stairs"
 					type: "item"
 				}
 			]
@@ -380,83 +638,88 @@
 		}
 		{
 			dependencies: [
-				"0000000016532F98"
-				"000000008EE47BF2"
-				"000000006053083B"
+				"000000002F466C56"
+				"00000000021E67C6"
+				"00000000E012DAE0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000719E25C1"
+			id: "000000005BFABD8A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004BF13265"
+					id: "00000000D11C1FCD"
 					type: "xp"
-					xp: 4
+					xp: 69
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000093CFF12D"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000000CF8FD02"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C9BC740E"
+					id: "000000009F168728"
 					item: "createdeco:copper_mesh_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F952A746"
+					id: "00000000D133C28F"
 					item: "createdeco:copper_sheet_metal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C4BDF919"
+					id: "000000008A82169E"
 					item: "createdeco:copper_support"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EBB8F6FF"
+					id: "00000000D702A35C"
 					item: "createdeco:copper_support_wedge"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004EACACC4"
+					id: "00000000759E3AC4"
 					item: "createdeco:copper_hull"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009540F42F"
+					id: "000000007816B55A"
 					item: "createdeco:copper_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000086A54F4F"
+					id: "00000000EB4C8636"
 					item: "createdeco:copper_window_pane"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F2558F61"
+					id: "0000000072ECBE64"
 					item: "createdeco:corner_blue_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FF03607C"
-					item: "createdeco:corner_blue_brick_wall"
+					id: "0000000024AE35C1"
+					item: "createdeco:corner_blue_brick_stairs"
 					type: "item"
 				}
 			]
@@ -464,79 +727,84 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000287195F3"]
+			dependencies: ["00000000D0FCA7A7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006CC22497"
+			id: "00000000D71D2DA8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E8408768"
+					id: "0000000040361329"
 					type: "xp"
-					xp: 22
+					xp: 80
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E97B588C"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000EA278159"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000C196B4C"
+					id: "00000000E2B9794C"
+					item: "createdeco:brass_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000026873642"
 					item: "createdeco:brass_window_pane"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000817A6F66"
+					id: "00000000510F6ECF"
 					item: "createdeco:brown_shipping_container"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BB2573EA"
+					id: "00000000AFA8FDF3"
 					item: "createdeco:copper_bars_overlay"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000469B0714"
-					item: "createdeco:copper_catwalk"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000051DC4BAA"
+					id: "00000000B58E33F5"
 					item: "createdeco:copper_catwalk_railing"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000094C23BBA"
+					id: "00000000B446B316"
 					item: "createdeco:copper_catwalk_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000ACDF5160"
+					id: "00000000FD2DEF0F"
 					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001681B68F"
+					id: "0000000040749E55"
 					item: "createdeco:copper_coinstack"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008EB28AF4"
+					id: "00000000AA608A31"
 					item: "createdeco:copper_facade"
 					type: "item"
 				}
@@ -545,83 +813,174 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"000000001BE183E8"
-				"0000000078F7CB59"
-			]
+			dependencies: ["000000004FE22AD0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C7F20682"
+			id: "000000009CFC64A0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000234C362D"
+					id: "000000004B3583E8"
 					type: "xp"
-					xp: 15
+					xp: 70
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E9B675E4"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000AF31B4E9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000F54B5EA"
-					item: "createdeco:mossy_pearl_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000007B28E7F"
-					item: "createdeco:mossy_red_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E55BAE11"
-					item: "createdeco:mossy_red_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A7E752AE"
-					item: "createdeco:mossy_red_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000029CE52F"
-					item: "createdeco:mossy_scarlet_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000538ED58F"
-					item: "createdeco:mossy_scarlet_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000093365CB6"
+					id: "000000003C35EED6"
 					item: "createdeco:mossy_scarlet_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B843C395"
+					id: "000000007D99E261"
 					item: "createdeco:mossy_umber_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000678ED5CB"
+					id: "00000000DCFC79E7"
 					item: "createdeco:mossy_umber_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000009F921ED"
+					item: "createdeco:mossy_umber_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E330BA1"
+					item: "createdeco:mossy_verdant_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A2291827"
+					item: "createdeco:mossy_verdant_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B54E6E16"
+					item: "createdeco:mossy_verdant_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C252C715"
+					item: "createdeco:netherite_coin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000D8E39B3"
+					item: "createdeco:netherite_coinstack"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000004FE22AD0"
+				"000000007C17C717"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000055131939"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D00D740C"
+					type: "xp"
+					xp: 61
+				}
+				{
+					id: "000000004F3B826D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C5288A10"
+					item: "createdeco:mossy_dusk_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000051C54995"
+					item: "createdeco:mossy_pearl_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000107E7787"
+					item: "createdeco:mossy_pearl_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000164A763B"
+					item: "createdeco:mossy_pearl_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AB0F5E1F"
+					item: "createdeco:mossy_red_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000074AF6E23"
+					item: "createdeco:mossy_red_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BC0351B9"
+					item: "createdeco:mossy_red_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A918A942"
+					item: "createdeco:mossy_scarlet_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009668902D"
+					item: "createdeco:mossy_scarlet_brick_stairs"
 					type: "item"
 				}
 			]
@@ -629,80 +988,668 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000078F7CB59"]
+			dependencies: [
+				"00000000D0FCA7A7"
+				"000000007C17C717"
+				"00000000E22356B2"
+				"0000000029C7F51E"
+				"00000000E55D781A"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FA2BA2FF"
+			id: "000000007D4BCF3A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002E2632ED"
+					id: "00000000A12AD7DD"
 					type: "xp"
-					xp: 18
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000009CCBCE5"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000007063DA81"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CE1A91AB"
+					id: "000000009A8B2BEA"
+					item: "createdeco:red_andesite_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F19407CD"
+					item: "createdeco:red_brass_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A16AAC35"
+					item: "createdeco:red_copper_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000037474B52"
+					item: "createdeco:red_industrial_iron_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005A46B6E9"
+					item: "createdeco:red_iron_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F9A4BC66"
+					item: "createdeco:red_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B54025C9"
+					item: "createdeco:red_zinc_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005D24CB7C"
+					item: "createdeco:decal_right"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000049B0924"
+					item: "createdeco:scarlet_brick_stairs"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000007982C268"
+				"000000002F466C56"
+				"00000000950C6DC7"
+				"000000004FE22AD0"
+				"000000009386319F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000050415CF0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ACDA5364"
+					type: "xp"
+					xp: 59
+				}
+				{
+					id: "000000009DE66D26"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E262B577"
+					item: "minecraft:netherite_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C952FBB"
+					item: "createdeco:netherite_sheet"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B68EBADB"
+					item: "createdeco:decal_no_entry"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008EA890A9"
+					item: "createdeco:orange_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000AB20221"
+					item: "createdeco:pearl_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C7F158D"
+					item: "createdeco:pink_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D810BCFB"
+					item: "create:placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000740FAFE6"
+					item: "createdeco:purple_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000009EC7146"
+					item: "createdeco:decal_radioactive"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000849540BF"
+				"000000002F466C56"
+				"00000000E148760F"
+				"000000004FE22AD0"
+				"00000000E22356B2"
+				"000000009ADCE120"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000365300AB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000776E87F0"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000F0D87342"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000005D2D96F"
+					item: "createdeco:decal_skull"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007BAC3856"
+					item: "createdeco:tiled_blue_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009FC00E46"
+					item: "createdeco:tiled_blue_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A5A71A3D"
+					item: "createdeco:tiled_dean_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002F0C0E07"
+					item: "createdeco:tiled_dean_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000080AFB4FB"
+					item: "createdeco:tiled_dusk_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FA9C4A69"
+					item: "createdeco:tiled_dusk_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004CF049AA"
+					item: "createdeco:tiled_pearl_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001EEA17E0"
+					item: "createdeco:tiled_pearl_brick_stairs"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EAF2063F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003DA37A57"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000076D852A7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "00000000166DFDAD"
+				item: "createdeco:short_blue_bricks"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000048DBB2F1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E148760F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000031A78B11"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "00000000225E0273"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F1CC1C85"
+					item: "createdeco:long_pearl_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000FF7AC55"
+					item: "createdeco:short_dusk_bricks"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000021E67C6"
+				"00000000E55D781A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000009F31067"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000024CBFF53"
+					type: "xp"
+					xp: 84
+				}
+				{
+					id: "000000004D564FF2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007F6CF193"
+					item: "createdeco:zinc_bars_overlay"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F736881F"
+					item: "createdeco:zinc_catwalk"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005BCEFC85"
+					item: "createdeco:zinc_catwalk_railing"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002BD72CB0"
+					item: "createdeco:zinc_catwalk_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000002073DBE"
+					item: "createdeco:zinc_coinstack"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007214FF13"
+					item: "createdeco:zinc_facade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000096ED51A3"
+					item: "createdeco:zinc_ladder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000438484A6"
+					item: "createdeco:zinc_mesh_fence"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000001872108"
+					item: "createdeco:zinc_sheet_metal"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000E012DAE0"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000573983F1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FBCC7AD9"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "00000000F50C171C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000134754A4"
+					item: "createdeco:blue_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AB3992E9"
+					item: "createdeco:tiled_red_bricks"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000EAF2063F"
+				"000000002F466C56"
+				"00000000021E67C6"
+				"00000000573983F1"
+				"000000004FE22AD0"
+				"000000007C17C717"
+				"00000000E55D781A"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000948F574D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CFDD769B"
+					type: "xp"
+					xp: 40
+				}
+				{
+					id: "00000000BEED2539"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C28FEF04"
+					item: "createdeco:locked_zinc_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000091C76F82"
+					item: "createdeco:long_blue_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000043DB6419"
+					item: "createdeco:long_blue_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003EED19C0"
+					item: "createdeco:long_dean_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000052DA3475"
+					item: "createdeco:long_dean_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B86BD95C"
+					item: "createdeco:long_dean_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007E9012BA"
+					item: "createdeco:long_dusk_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006867BB3D"
+					item: "createdeco:long_dusk_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006F28C033"
+					item: "createdeco:long_pearl_brick_slab"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["000000007C17C717"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008B9D560A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E03528B1"
+					type: "xp"
+					xp: 49
+				}
+				{
+					id: "00000000CFD99871"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000003C70BD7"
+					item: "createdeco:magenta_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AE1D2CB7"
+					item: "createdeco:mossy_blue_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A37360B1"
+					item: "createdeco:mossy_blue_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000641DDBF0"
 					item: "createdeco:mossy_blue_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009FCDFB73"
+					id: "00000000B41D1E21"
 					item: "createdeco:mossy_dean_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000062F0C229"
+					id: "000000009EE52CE9"
 					item: "createdeco:mossy_dean_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000073C6C076"
+					id: "000000008A1945A2"
 					item: "createdeco:mossy_dean_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F15BA820"
+					id: "00000000639502BC"
 					item: "createdeco:mossy_dusk_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AF870E7D"
+					id: "000000003C1E8B71"
 					item: "createdeco:mossy_dusk_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E68E01B7"
-					item: "createdeco:mossy_dusk_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001219E5C9"
-					item: "createdeco:mossy_pearl_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008856F65C"
-					item: "createdeco:mossy_pearl_brick_stairs"
 					type: "item"
 				}
 			]
@@ -711,1548 +1658,460 @@
 		}
 		{
 			dependencies: [
-				"0000000064049B28"
-				"000000003C3EA435"
-				"00000000C23E7E3A"
-				"00000000287195F3"
-				"00000000A890AD53"
+				"0000000004277E42"
+				"00000000E980A863"
+				"00000000F23CFEE2"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002BEA5B8D"
+			id: "00000000849540BF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008FA43125"
+					id: "00000000A7B10554"
 					type: "xp"
-					xp: 19
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001B4BBC26"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008878FFF8"
-					item: "createdeco:orange_shipping_container"
+					id: "00000000BF2F0FAB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000051DD5367"
-					item: "createdeco:pearl_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000012BCA4AD"
-					item: "createdeco:pink_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000056DD7D97"
-					item: "create:placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007B56D771"
-					item: "createdeco:purple_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009095DE16"
-					item: "createdeco:decal_radioactive"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B655832D"
-					item: "createdeco:red_andesite_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000074465F83"
-					item: "createdeco:red_brass_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000777396A6"
-					item: "createdeco:red_copper_lamp"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000001BE183E8"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000057538130"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000072C7411A"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000090A9B6A0"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C20C675C"
-					item: "createdeco:mossy_umber_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A8CC1747"
-					item: "createdeco:mossy_verdant_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000045C45D80"
-					item: "createdeco:mossy_verdant_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002A8E9342"
-					item: "createdeco:mossy_verdant_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001E2D1BBA"
-					item: "createdeco:netherite_coin"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000057A85430"
-					item: "createdeco:netherite_coinstack"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B24ABFC4"
-					item: "minecraft:netherite_ingot"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C6E04B9F"
-					item: "createdeco:netherite_sheet"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000538F56CD"
-					item: "createdeco:decal_no_entry"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000078F7CB59"
-				"000000002AF693A4"
-				"0000000083C13062"
-				"0000000023CE8217"
-				"00000000A890AD53"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000828A49F3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004577FD51"
-					type: "xp"
-					xp: 55
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000023B4D30"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000086064505"
-					item: "createdeco:short_blue_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006C0E7941"
-					item: "createdeco:short_dean_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C18A5167"
-					item: "createdeco:short_dean_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009AC90C2C"
-					item: "createdeco:short_dean_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008C78E4B6"
-					item: "createdeco:short_dusk_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F4379667"
-					item: "createdeco:short_dusk_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000073FA2B8E"
-					item: "createdeco:short_pearl_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003F0FF2FE"
-					item: "createdeco:short_pearl_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000094ACDE99"
-					item: "createdeco:short_pearl_brick_wall"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"000000007AEC5963"
-				"000000008EE47BF2"
-				"000000001BE183E8"
-				"0000000078F7CB59"
-				"0000000023CE8217"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007111565F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000A5D4814"
-					type: "xp"
-					xp: 82
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000032AE3818"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000000763EE48"
-					item: "createdeco:decal_skull"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000009A5BA47"
-					item: "createdeco:tiled_dean_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000777F9B8B"
-					item: "createdeco:tiled_dean_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006104AA0C"
-					item: "createdeco:tiled_dean_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CE8DDAC5"
-					item: "createdeco:tiled_dusk_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000486B6D98"
-					item: "createdeco:tiled_dusk_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FA71D981"
-					item: "createdeco:tiled_pearl_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A9DCB203"
-					item: "createdeco:tiled_pearl_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D590FEF3"
-					item: "createdeco:tiled_red_brick_slab"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D55FC707"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000066011790"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A18C76FB"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [{
-				consume_items: false
-				id: "00000000D9EB621C"
-				item: "createdeco:tiled_dusk_bricks"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"00000000DC039292"
-				"00000000287195F3"
-				"000000006053083B"
-				"0000000070F4C8E6"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000DC542B20"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004F814816"
-					type: "xp"
-					xp: 32
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000055E5B826"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000068AE6069"
-					item: "createdeco:yellow_andesite_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007C1B6366"
-					item: "createdeco:yellow_brass_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D0DD94F6"
-					item: "createdeco:yellow_copper_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EB326E18"
-					item: "createdeco:yellow_industrial_iron_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003396E36D"
-					item: "createdeco:yellow_iron_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000080D398F2"
-					item: "createdeco:yellow_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002C7F107D"
-					item: "createdeco:yellow_zinc_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000900FE1FE"
-					item: "createdeco:zinc_bars_overlay"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BEC42A9B"
-					item: "createdeco:zinc_catwalk"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["0000000083C13062"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009AB31FA7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002F346FB7"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C3020B2A"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [{
-				consume_items: false
-				id: "00000000C64F23CB"
-				item: "createdeco:tiled_dean_bricks"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"000000003C3EA435"
-				"00000000C23E7E3A"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000064049B28"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005E4ADA3D"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000842029E8"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "gear"
-			tasks: [{
-				consume_items: false
-				id: "00000000A14453B9"
-				item: "createdeco:gray_placard"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000D55FC707"
-				"00000000BB2F4D5F"
-				"0000000016532F98"
-				"000000006053083B"
-				"000000002AF693A4"
-				"0000000083C13062"
-				"0000000023CE8217"
-				"0000000070F4C8E6"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E64D485D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004490D68C"
-					type: "xp"
-					xp: 29
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000054C77BC7"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000055C24E86"
-					item: "createdeco:locked_copper_door"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B3A48A17"
-					item: "createdeco:locked_industrial_iron_door"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001EA55663"
-					item: "createdeco:locked_zinc_door"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000BF54F66"
-					item: "createdeco:long_blue_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000083EC035"
-					item: "createdeco:long_blue_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000024493635"
-					item: "createdeco:long_dean_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000084CD04BF"
-					item: "createdeco:long_dean_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DEB4D124"
-					item: "createdeco:long_dusk_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EE34052F"
-					item: "createdeco:long_dusk_brick_stairs"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"0000000016532F98"
-				"0000000075B773C8"
-				"000000008EE47BF2"
-				"00000000D3A3B7C2"
-				"0000000078F7CB59"
-				"0000000079A3AF4B"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CD68BBC0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E8CE3639"
-					type: "xp"
-					xp: 62
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000030199AEC"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F2B952C0"
-					item: "createdeco:long_umber_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EC214096"
-					item: "createdeco:long_umber_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B3DC056A"
-					item: "createdeco:long_verdant_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000012FDAF25"
-					item: "createdeco:long_verdant_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C9C76F97"
-					item: "createdeco:long_verdant_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FC52D3CF"
-					item: "createdeco:long_verdant_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004C70AF3A"
-					item: "createdeco:magenta_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006522F181"
-					item: "createdeco:mossy_blue_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000452BFC4A"
-					item: "createdeco:mossy_blue_brick_stairs"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000DC039292"
-				"00000000A890AD53"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000075B773C8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F4E83C37"
-					type: "xp"
-					xp: 25
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000010BFF684"
-					table_id: 4094692335L
-					type: "random"
 				}
 			]
 			shape: "heart"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005C6D4BD0"
-					item: "createdeco:industrial_iron_ingot"
+					id: "000000008369064E"
+					item: "createdeco:corner_verdant_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000A7520D9"
-					item: "createdeco:long_scarlet_bricks"
+					id: "00000000DB809652"
+					item: "createdeco:tiled_dean_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A111DEDA"
-					item: "createdeco:long_umber_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007E22E631"
-					item: "createdeco:short_pearl_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007F20CC05"
-					item: "createdeco:tiled_verdant_bricks"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000007AEC5963"
-				"000000009AB31FA7"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000000CDCB7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004A722764"
-					type: "xp"
-					xp: 88
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E7C1EE6B"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000007775FE29"
-					item: "createdeco:cracked_umber_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FF3C0CE2"
-					item: "createdeco:cracked_umber_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F327C30A"
-					item: "createdeco:cracked_verdant_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000023240399"
-					item: "createdeco:cracked_verdant_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000058F7FF61"
-					item: "createdeco:cracked_verdant_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F0AEEFEA"
-					item: "createdeco:decal_creeper"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000616C1BB4"
-					item: "createdeco:decal_cross"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009BE763DA"
-					item: "createdeco:cyan_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B5C7A135"
-					item: "createdeco:dean_brick_slab"
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"00000000BB2F4D5F"
-				"0000000075B773C8"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D3A3B7C2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004576F03D"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001E16CF5B"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009AD01210"
-					item: "createdeco:corner_blue_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F7D7F6EA"
-					item: "createdeco:short_verdant_bricks"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000DC039292"
-				"00000000287195F3"
-				"000000006053083B"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A1B815C4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000071060880"
-					type: "xp"
-					xp: 45
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001B9C11BA"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004678D018"
-					item: "createdeco:decal_flow"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000057EDDDDC"
-					item: "createdeco:decal_fluid"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000256B04F4"
-					item: "createdeco:gold_coin"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BD91CE03"
-					item: "createdeco:gold_coinstack"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E8218F10"
-					item: "createdeco:gray_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E3B24C20"
-					item: "createdeco:green_andesite_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000597CC1A2"
-					item: "createdeco:green_brass_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000458B12E7"
-					item: "createdeco:green_copper_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000689CC6F7"
-					item: "createdeco:green_industrial_iron_lamp"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"0000000016532F98"
-				"000000008EE47BF2"
-				"000000001BE183E8"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000027205B6B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000044891537"
-					type: "xp"
-					xp: 79
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E7ED7168"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F1A91E76"
-					item: "createdeco:dean_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FB8A099D"
-					item: "createdeco:dean_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000943C4959"
-					item: "createdeco:decal_down"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000179435EF"
-					item: "createdeco:decal_down_left"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006FAEBC3A"
-					item: "createdeco:decal_down_right"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C6E4EFB8"
-					item: "createdeco:dusk_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009C43B8DC"
-					item: "createdeco:decal_electrical"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000012AD50B8"
-					item: "createdeco:decal_fire"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002A05C373"
-					item: "createdeco:decal_fire_diamond"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"0000000075B773C8"
-				"000000006053083B"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000072FD126D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CB4F8CA5"
-					type: "xp"
-					xp: 30
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000062C52698"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000A9DFE059"
-					item: "createdeco:industrial_iron_facade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000098FC2F24"
-					item: "createdeco:industrial_iron_ladder"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AD6F1963"
-					item: "createdeco:industrial_iron_mesh_fence"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007630C29B"
-					item: "createdeco:industrial_iron_sheet_metal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005B26E4A3"
-					item: "createdeco:industrial_iron_support"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F9427DAD"
-					item: "createdeco:industrial_iron_support_wedge"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000055D4D0F8"
-					item: "createdeco:industrial_iron_hull"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000E2F4232"
-					item: "createdeco:industrial_iron_trapdoor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AAE2740E"
-					item: "createdeco:industrial_iron_window_pane"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"0000000075B773C8"
-				"000000006053083B"
-				"0000000070F4C8E6"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000076055407"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D88BAB75"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F920B083"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000086F6C0DC"
-					item: "createdeco:green_iron_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002E9E8402"
-					item: "createdeco:green_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000981F1B74"
-					item: "createdeco:green_zinc_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001FE27550"
-					item: "createdeco:decal_ice"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000B4E5852"
-					item: "createdeco:industrial_iron_bars_overlay"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005454085D"
-					item: "createdeco:industrial_iron_catwalk_railing"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A4A43804"
-					item: "createdeco:industrial_iron_catwalk_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000037A8462B"
-					item: "createdeco:industrial_iron_coin"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D8C0FF38"
-					item: "createdeco:industrial_iron_coinstack"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"0000000075B773C8"
-				"000000002AF693A4"
-				"00000000A890AD53"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000023CE8217"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000ADF0DE34"
-					type: "xp"
-					xp: 86
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BC591AE4"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000000A499E5D"
-					item: "createdeco:blue_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000020B2ECAC"
-					item: "createdeco:corner_dusk_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000039C39970"
-					item: "createdeco:corner_dusk_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000249D8878"
-					item: "createdeco:long_dean_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FD5D3F11"
-					item: "createdeco:long_red_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009D13C988"
-					item: "createdeco:long_umber_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B9992C0E"
-					item: "createdeco:pearl_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000070017517"
-					item: "createdeco:short_red_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002A7517A9"
-					item: "createdeco:tiled_blue_brick_slab"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"00000000287195F3"
-				"000000006053083B"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000EE77C8A0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000067DF3AD2"
-					type: "xp"
-					xp: 36
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000002B6D37E"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001B1DA7FF"
-					item: "createdeco:iron_support_wedge"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D6D515FC"
-					item: "createdeco:iron_hull"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CEFAF63F"
-					item: "createdeco:iron_window_pane"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000BD9A123"
-					item: "createdeco:decal_left"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000231CE5F0"
-					item: "createdeco:light_blue_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DCF8EBD4"
-					item: "createdeco:light_gray_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000063C2A0AB"
-					item: "createdeco:lime_shipping_container"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E5048294"
-					item: "createdeco:locked_andesite_door"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E28179DC"
-					item: "createdeco:locked_brass_door"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"00000000DC039292"
-				"0000000075B773C8"
-				"00000000D3A3B7C2"
-				"000000002AF693A4"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000079A3AF4B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000063DCAEE1"
-					type: "xp"
-					xp: 47
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007F69F98D"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000BEAD0B28"
-					item: "createdeco:tiled_blue_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BD8B9EB0"
-					item: "createdeco:tiled_pearl_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CBB3B34D"
+					id: "00000000C35A79E5"
 					item: "createdeco:tiled_scarlet_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006F9C1085"
-					item: "createdeco:tiled_umber_bricks"
+					id: "000000008815D94F"
+					item: "createdeco:tiled_verdant_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000070AB9CBF"
-					item: "createdeco:tiled_verdant_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003DF4644B"
+					id: "0000000072747FE3"
 					item: "createdeco:umber_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BB8B7475"
-					item: "createdeco:verdant_bricks"
 					type: "item"
 				}
 			]
 			x: -5.0d
-			y: 5.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["000000006053083B"]
+			dependencies: [
+				"000000004A371286"
+				"00000000849540BF"
+				"000000002F466C56"
+				"00000000021E67C6"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000053920A26"
+			id: "000000007AF5F944"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E9DFC860"
+					id: "0000000038561F60"
 					type: "xp"
-					xp: 1
+					xp: 89
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000088341F40"
-					table_id: 4094692335L
-					type: "random"
+					id: "0000000011185F7E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000021E70F93"
+					id: "000000008476D87D"
+					item: "createdeco:cracked_verdant_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F46E8302"
+					item: "createdeco:cracked_verdant_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E75BCD4"
+					item: "createdeco:decal_creeper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F916E37B"
+					item: "createdeco:decal_cross"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000002DD200E"
+					item: "createdeco:cyan_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005B600EEA"
+					item: "createdeco:dean_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000014D4EA52"
+					item: "createdeco:dean_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000003DF2D57"
+					item: "createdeco:dean_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D17C66AD"
+					item: "createdeco:decal_down"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000004277E42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006A390B3B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000959135FA"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "00000000B7F12A95"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000B4DC1D14"
+				item: "createdeco:long_scarlet_bricks"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000004A371286"
+				"00000000D0FCA7A7"
+				"00000000E22356B2"
+				"0000000029C7F51E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B05DAD11"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003D1A460B"
+					type: "xp"
+					xp: 23
+				}
+				{
+					id: "00000000D063178C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000063C0521"
+					item: "createdeco:decal_fluid"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006D968415"
+					item: "createdeco:gold_coinstack"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000929A1936"
+					item: "createdeco:gray_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001DFFAAC6"
+					item: "createdeco:green_andesite_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DB37B255"
+					item: "createdeco:green_brass_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000080449F4F"
+					item: "createdeco:green_copper_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000362C0E5"
+					item: "createdeco:green_industrial_iron_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019A680CB"
+					item: "createdeco:green_iron_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C1299A58"
+					item: "createdeco:green_shipping_container"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000009ADCE120"
+				"0000000029C7F51E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000404D1C96"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005C6E3128"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "00000000F612B8B4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004EAFB573"
+					item: "createdeco:decal_down_left"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D0E133F0"
+					item: "createdeco:decal_down_right"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001AD99BF5"
+					item: "createdeco:dusk_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B895791F"
+					item: "createdeco:dusk_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F7F3AF14"
+					item: "createdeco:dusk_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000392F066A"
+					item: "createdeco:decal_electrical"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000017F60E51"
+					item: "createdeco:decal_fire"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019234B63"
+					item: "createdeco:decal_fire_diamond"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C498A64E"
+					item: "createdeco:decal_flow"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000E22356B2"
+				"000000009ADCE120"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D9EFBEE5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000845AA449"
+					type: "xp"
+					xp: 84
+				}
+				{
+					id: "0000000016C1B3AC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C0707E56"
+					item: "createdeco:industrial_iron_sheet_metal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008961029C"
+					item: "createdeco:industrial_iron_support"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F79E4796"
+					item: "createdeco:industrial_iron_support_wedge"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B0A84228"
+					item: "createdeco:industrial_iron_hull"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000425ABF07"
+					item: "createdeco:industrial_iron_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006D50B87E"
+					item: "createdeco:industrial_iron_window_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F3383253"
 					item: "createdeco:iron_bars_overlay"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BA95BAE3"
+					id: "00000000686A6336"
 					item: "createdeco:iron_catwalk_railing"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FC9D3103"
+					id: "000000006EEF055F"
 					item: "createdeco:iron_catwalk_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A92E50E8"
-					item: "createdeco:iron_coinstack"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F9D9060C"
-					item: "createdeco:iron_facade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005F182574"
-					item: "createdeco:iron_ladder"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000236D2396"
-					item: "createdeco:iron_mesh_fence"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009754DBD9"
-					item: "createdeco:iron_sheet_metal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000063543686"
-					item: "createdeco:iron_support"
 					type: "item"
 				}
 			]
@@ -2260,79 +2119,546 @@
 			y: 4.0d
 		}
 		{
+			dependencies: [
+				"00000000E22356B2"
+				"000000009ADCE120"
+				"00000000E55D781A"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E6076169"
+			id: "00000000BD6EBC1C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000051353D19"
+					id: "00000000688DC0EC"
 					type: "xp"
-					xp: 71
+					xp: 42
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000739C55BB"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000B44EA038"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004FF8C16D"
+					id: "00000000AED50400"
+					item: "createdeco:green_zinc_lamp"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000438D5FBD"
+					item: "createdeco:decal_ice"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000001655245"
+					item: "createdeco:industrial_iron_bars_overlay"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008574EF6B"
+					item: "createdeco:industrial_iron_catwalk_railing"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002AEC13B0"
+					item: "createdeco:industrial_iron_catwalk_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C0C8115B"
+					item: "createdeco:industrial_iron_coinstack"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000006D6F925"
+					item: "createdeco:industrial_iron_facade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F602B4B9"
+					item: "createdeco:industrial_iron_ladder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C2A453D9"
+					item: "createdeco:industrial_iron_mesh_fence"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000004277E42"
+				"000000009ADCE120"
+				"00000000F23CFEE2"
+				"00000000F8B666F0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000029C7F51E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C728F291"
+					type: "xp"
+					xp: 89
+				}
+				{
+					id: "00000000AC4599C0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005B2B5B09"
+					item: "createdeco:corner_dean_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000663EBBFB"
+					item: "createdeco:corner_red_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007DFF84D0"
+					item: "createdeco:dusk_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001EB9F7B8"
+					item: "createdeco:industrial_iron_nugget"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D84E7773"
+					item: "createdeco:long_blue_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BF6A0A56"
+					item: "createdeco:long_umber_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D20DF220"
+					item: "createdeco:long_umber_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000046B79E27"
+					item: "createdeco:scarlet_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008A347F6D"
+					item: "createdeco:short_dean_bricks"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000D0FCA7A7"
+				"00000000E22356B2"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006CC8B111"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000060D5543B"
+					type: "xp"
+					xp: 89
+				}
+				{
+					id: "00000000D434E0CE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005D5131F0"
+					item: "createdeco:iron_window_pane"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007AB68E82"
+					item: "createdeco:decal_left"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C127C2C"
+					item: "createdeco:light_blue_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000214A3C9F"
+					item: "createdeco:light_gray_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A434271B"
+					item: "createdeco:lime_shipping_container"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008CB56FC6"
+					item: "createdeco:locked_andesite_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009C7E6145"
+					item: "createdeco:locked_brass_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001799FCFE"
+					item: "createdeco:locked_copper_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E51550B1"
+					item: "createdeco:locked_industrial_iron_door"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000EAF2063F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E012DAE0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FDCAEA84"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000D1CFFAF0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000AF410A96"
+				item: "createdeco:long_blue_bricks"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000849540BF"
+				"000000009ADCE120"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000316C77F8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000092DB8C92"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000002032CEB8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001EC5BB55"
+					item: "createdeco:short_dusk_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000007CBA689"
+					item: "createdeco:short_pearl_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FEEF40B6"
+					item: "createdeco:short_pearl_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000084CFCB81"
+					item: "createdeco:short_red_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005F05049D"
+					item: "createdeco:short_verdant_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029FFA5F4"
+					item: "createdeco:short_verdant_bricks"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002F0A83BF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002C884C5F"
+					type: "xp"
+					xp: 48
+				}
+				{
+					id: "00000000A30BB78D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F19BA4B4"
+					item: "createdeco:iron_coin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000023B94AD6"
+					item: "createdeco:iron_coinstack"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CACD395D"
+					item: "createdeco:iron_facade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000024CA2232"
+					item: "createdeco:iron_ladder"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000195017E"
+					item: "createdeco:iron_mesh_fence"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000938B523C"
+					item: "createdeco:iron_sheet_metal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004FB84E37"
+					item: "createdeco:iron_support"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002EA7F610"
+					item: "createdeco:iron_support_wedge"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B221D247"
+					item: "createdeco:iron_hull"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009CEBB296"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009F3E392D"
+					type: "xp"
+					xp: 34
+				}
+				{
+					id: "0000000003207C94"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A37708CB"
+					item: "createdeco:brass_catwalk_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EE84AE3F"
 					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000318A1ED6"
+					id: "00000000F60973AD"
 					item: "createdeco:brass_coinstack"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000060E58BFE"
+					id: "00000000CF01A8A8"
 					item: "createdeco:brass_facade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000031976BAA"
+					id: "000000008776A70A"
 					item: "createdeco:brass_mesh_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000091E8FD6F"
+					id: "00000000C57340C1"
 					item: "createdeco:brass_sheet_metal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000061BB8DEC"
+					id: "00000000472AD168"
 					item: "createdeco:brass_support"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000DEDA850"
+					id: "000000007AAB574A"
 					item: "createdeco:brass_support_wedge"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007BC7A8D1"
+					id: "000000006A4003C5"
 					item: "createdeco:brass_hull"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DF987C00"
-					item: "createdeco:brass_trapdoor"
 					type: "item"
 				}
 			]
@@ -2341,84 +2667,88 @@
 		}
 		{
 			dependencies: [
-				"00000000DC039292"
-				"00000000287195F3"
-				"000000006053083B"
-				"0000000070F4C8E6"
+				"00000000E22356B2"
+				"0000000029C7F51E"
+				"00000000E55D781A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B496CBB9"
+			id: "0000000065818C28"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000015313C38"
+					id: "00000000A975B717"
 					type: "xp"
-					xp: 78
+					xp: 88
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000050C5A789"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000DD7F3EC8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000BC71DD7"
+					id: "000000000DD41F05"
 					item: "createdeco:blue_copper_lamp"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F69D7EB9"
+					id: "000000001D7AE1AE"
 					item: "createdeco:blue_industrial_iron_lamp"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E46CF54A"
+					id: "000000001C179A89"
 					item: "createdeco:blue_iron_lamp"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005055FC5F"
+					id: "00000000536A140F"
 					item: "createdeco:blue_shipping_container"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A51A376F"
+					id: "0000000081400695"
 					item: "createdeco:blue_zinc_lamp"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000089BCC88D"
+					id: "00000000EDB9D1D6"
+					item: "createdeco:brass_bars"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000094D5F6A5"
 					item: "createdeco:brass_bars_overlay"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000054BD5409"
+					id: "00000000DEE2FB71"
 					item: "createdeco:brass_catwalk"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000052ECD867"
+					id: "00000000F7FF4A83"
 					item: "createdeco:brass_catwalk_railing"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006D05C587"
-					item: "createdeco:brass_catwalk_stairs"
 					type: "item"
 				}
 			]
@@ -2427,84 +2757,89 @@
 		}
 		{
 			dependencies: [
-				"0000000075B773C8"
-				"00000000287195F3"
-				"000000002AF693A4"
-				"00000000A890AD53"
+				"000000002F466C56"
+				"00000000D0FCA7A7"
+				"000000004FE22AD0"
+				"000000009ADCE120"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000926D0396"
+			id: "00000000EA455EE6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E079E78C"
+					id: "00000000EC8F66DC"
 					type: "xp"
-					xp: 21
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000186A0C78"
-					table_id: 4094692335L
-					type: "random"
+					id: "0000000000556668"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000099F7B1A3"
+					id: "000000000A8881A3"
+					item: "createdeco:andesite_hull"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007CE2AD4B"
 					item: "createdeco:andesite_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FADABFC3"
+					id: "0000000088154FD8"
 					item: "createdeco:andesite_window_pane"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B5E39A60"
+					id: "000000005B61CBA5"
 					item: "createdeco:black_shipping_container"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000055574855"
+					id: "00000000F535DE0C"
 					item: "create:industrial_iron_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A4F72688"
+					id: "00000000BA20272C"
 					item: "createdeco:blue_andesite_lamp"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003381A619"
+					id: "00000000CB05923F"
 					item: "createdeco:blue_brass_lamp"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000808A68A5"
+					id: "00000000DD18300F"
 					item: "createdeco:blue_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DB344835"
+					id: "000000001EFBD198"
 					item: "createdeco:blue_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007729F4C4"
-					item: "createdeco:blue_brick_wall"
 					type: "item"
 				}
 			]
@@ -2512,80 +2847,85 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000287195F3"]
+			dependencies: ["00000000D0FCA7A7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D062BC65"
+			id: "0000000074CD5C25"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E54C9508"
+					id: "000000000A4F2761"
 					type: "xp"
-					xp: 7
+					xp: 33
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000025D1471A"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000E0724075"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000027F20723"
+					id: "000000002D9FC268"
 					item: "createdeco:andesite_bars_overlay"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001C44EA4E"
+					id: "00000000F650865F"
+					item: "createdeco:andesite_catwalk"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D03FA145"
 					item: "createdeco:andesite_catwalk_railing"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000649F7A78"
+					id: "00000000D3E0120D"
 					item: "createdeco:andesite_catwalk_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000283D463E"
+					id: "000000003160CF5E"
 					item: "createdeco:andesite_facade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002094E73B"
+					id: "000000004028101D"
 					item: "createdeco:andesite_mesh_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D573DAF9"
+					id: "00000000FE5518CC"
 					item: "createdeco:andesite_sheet_metal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000099FFEE4B"
+					id: "000000006F7FA691"
 					item: "createdeco:andesite_support"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005AF9CFB8"
+					id: "00000000FE44A4A2"
 					item: "createdeco:andesite_support_wedge"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000669F51E2"
-					item: "createdeco:andesite_hull"
 					type: "item"
 				}
 			]
@@ -2593,256 +2933,415 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"00000000D3A3B7C2"
-				"0000000023CE8217"
-				"0000000079A3AF4B"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008EE47BF2"
+			id: "000000009386319F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E6792044"
+					id: "000000001D526B22"
+					type: "xp"
+					xp: 23
+				}
+				{
+					id: "00000000FF149CA7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009D7A601E"
+					item: "createdeco:magenta_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007AF040DC"
+					item: "createdeco:orange_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005F1BD5BE"
+					item: "createdeco:pink_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D7384ECA"
+					item: "createdeco:purple_placard"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DD858602"
+					item: "createdeco:red_placard"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000007982C268"
+				"000000009386319F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000950C6DC7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000022F5272B"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000047145245"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000DC3E2C37"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "000000006C230540"
+				item: "createdeco:yellow_placard"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000048DBB2F1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DE1ED0D4"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000AE16CAF5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000911A4C11"
+				item: "createdeco:corner_pearl_bricks"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000E148760F"
+				"00000000573983F1"
+				"0000000029C7F51E"
+				"00000000316C77F8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000021E67C6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000088EA1BFE"
+					type: "xp"
+					xp: 27
+				}
+				{
+					id: "000000007320E2E0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000276DBB2"
-					item: "createdeco:short_scarlet_bricks"
+					id: "00000000956C6C6E"
+					item: "createdeco:short_red_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000081F31B5B"
-					item: "createdeco:short_umber_brick_stairs"
+					id: "000000009B9F975C"
+					item: "createdeco:tiled_blue_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004F817412"
-					item: "createdeco:short_verdant_brick_stairs"
+					id: "00000000E6665B6F"
+					item: "createdeco:tiled_dean_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C6D827AE"
-					item: "createdeco:tiled_blue_brick_wall"
+					id: "000000006A15FB68"
+					item: "createdeco:tiled_dusk_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F3CBA58C"
-					item: "createdeco:tiled_dusk_brick_stairs"
+					id: "000000001E935097"
+					item: "createdeco:tiled_red_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A219A0B7"
-					item: "createdeco:tiled_red_bricks"
+					id: "0000000037CB05E7"
+					item: "createdeco:tiled_umber_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002C2EF0E4"
+					id: "00000000BAEC58B6"
 					item: "createdeco:tiled_umber_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CA1679D2"
-					item: "createdeco:umber_brick_slab"
+					id: "000000003806931D"
+					item: "createdeco:zinc_bars"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E9DC2111"
-					item: "createdeco:verdant_brick_wall"
+					id: "0000000049C2FF90"
+					item: "createdeco:zinc_coin"
 					type: "item"
 				}
 			]
 			x: -3.0d
-			y: 6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
-				"00000000DC039292"
-				"000000009AB31FA7"
-				"0000000023CE8217"
-				"0000000079A3AF4B"
+				"0000000004277E42"
+				"00000000849540BF"
+				"0000000048DBB2F1"
+				"000000009ADCE120"
+				"00000000F23CFEE2"
+				"0000000029C7F51E"
+				"00000000316C77F8"
+				"00000000E012DAE0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001BE183E8"
+			id: "000000004FE22AD0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000055E94BFB"
+					id: "000000002D4CDB37"
 					type: "xp"
-					xp: 61
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001C735E94"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000000B0C813B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000001BCE52B"
+					id: "000000001F5EF19F"
+					item: "createdeco:mossy_scarlet_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FFA7F60D"
 					item: "createdeco:mossy_umber_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002394860D"
+					id: "00000000A35ADB85"
 					item: "createdeco:mossy_verdant_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F228E26F"
+					id: "000000003207458D"
 					item: "createdeco:netherite_nugget"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000378F29E"
-					item: "createdeco:pearl_brick_stairs"
+					id: "000000000B1574D0"
+					item: "createdeco:pearl_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000021169282"
+					id: "00000000AC3B05E4"
 					item: "createdeco:pearl_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B4886784"
-					item: "createdeco:scarlet_brick_slab"
+					id: "0000000016ED1243"
+					item: "createdeco:scarlet_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008A884D9E"
-					item: "createdeco:short_dean_bricks"
+					id: "00000000D4F52E09"
+					item: "createdeco:short_blue_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000575CCE47"
-					item: "createdeco:short_dusk_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000200BC808"
-					item: "createdeco:short_red_brick_wall"
+					id: "0000000061532171"
+					item: "createdeco:short_blue_brick_wall"
 					type: "item"
 				}
 			]
 			x: -3.0d
-			y: 9.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"00000000DC039292"
-				"000000002AF693A4"
-				"0000000083C13062"
-				"0000000023CE8217"
+				"0000000004277E42"
+				"00000000E148760F"
+				"00000000849540BF"
+				"00000000573983F1"
+				"000000009ADCE120"
+				"00000000E980A863"
+				"0000000029C7F51E"
+				"00000000316C77F8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000078F7CB59"
+			id: "000000007C17C717"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000003CA338C"
+					id: "00000000763C8BFD"
 					type: "xp"
-					xp: 26
+					xp: 81
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001EC45FE6"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000CAB51902"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D939276E"
-					item: "createdeco:long_dean_bricks"
+					id: "000000009F005E96"
+					item: "createdeco:long_dusk_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000065F2852B"
-					item: "createdeco:long_pearl_bricks"
+					id: "00000000EBE27C1E"
+					item: "createdeco:long_pearl_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BAFBCB16"
-					item: "createdeco:long_red_brick_stairs"
+					id: "0000000004919991"
+					item: "createdeco:long_scarlet_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B0132AED"
+					id: "00000000A10CEC34"
+					item: "createdeco:long_verdant_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FCBAF696"
 					item: "createdeco:mossy_blue_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000630169AC"
+					id: "000000006DC74D96"
 					item: "createdeco:mossy_dean_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000D8797B1"
+					id: "00000000FAE69FEF"
 					item: "createdeco:mossy_dusk_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008FAD106D"
+					id: "000000008F0561FC"
 					item: "createdeco:mossy_pearl_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DFB62B43"
+					id: "0000000022FDBB8C"
 					item: "createdeco:mossy_red_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002997837D"
-					item: "createdeco:mossy_scarlet_bricks"
 					type: "item"
 				}
 			]
@@ -2851,82 +3350,88 @@
 		}
 		{
 			dependencies: [
-				"0000000075B773C8"
-				"0000000023CE8217"
+				"000000009ADCE120"
+				"0000000029C7F51E"
+				"00000000316C77F8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006053083B"
+			id: "00000000E22356B2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000087ADCC7B"
+					id: "000000001FDF71F4"
 					type: "xp"
-					xp: 91
+					xp: 87
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009D402ADD"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000009934C9FA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005D78D9E0"
+					id: "0000000048E83BD7"
 					item: "createdeco:industrial_iron_bars"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005446BCA1"
+					id: "0000000022EF539A"
 					item: "createdeco:industrial_iron_catwalk"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007CC99B52"
+					id: "00000000E32445FC"
+					item: "createdeco:industrial_iron_coin"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B6F872BD"
 					item: "createdeco:industrial_iron_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A5638BDC"
+					id: "00000000CB98869A"
 					item: "createdeco:industrial_iron_sheet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002E498699"
+					id: "0000000031773913"
 					item: "createdeco:industrial_iron_window"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CDF96337"
+					id: "00000000E8BAB111"
 					item: "createdeco:iron_catwalk"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003A9B6187"
-					item: "createdeco:iron_coin"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000036D72ED0"
+					id: "00000000F8857925"
 					item: "createdeco:iron_window"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009644ACAD"
-					item: "createdeco:long_blue_brick_slab"
+					id: "000000005849003C"
+					item: "createdeco:long_dusk_brick_stairs"
 					type: "item"
 				}
 			]
@@ -2937,51 +3442,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000070F4C8E6"
+			id: "00000000E55D781A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D95FA732"
+					id: "0000000096CE896D"
 					type: "xp"
-					xp: 8
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000017FE02E5"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000E5012710"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000EB2DCEA"
-					item: "createdeco:zinc_bars"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000347B4AFD"
-					item: "createdeco:zinc_coin"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004F0E75B1"
+					id: "0000000017A446EA"
 					item: "createdeco:zinc_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006F91D190"
+					id: "00000000E8FC8D2F"
 					item: "createdeco:zinc_sheet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000062188A5C"
+					id: "0000000093E29275"
 					item: "createdeco:zinc_window"
 					type: "item"
 				}
@@ -2990,285 +3488,249 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["00000000E012DAE0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000083C13062"
+			id: "00000000B390BB97"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D33A77F0"
+					id: "000000000F322315"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "0000000080789FE4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "00000000CA5E5AC2"
+				item: "createdeco:tiled_blue_bricks"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000004277E42"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E980A863"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D29AE1B2"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "000000009C248F6E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000045AE8E27"
+					item: "createdeco:corner_verdant_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000016C6F7AC"
+					item: "createdeco:dean_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D707F7DB"
+					item: "createdeco:tiled_pearl_bricks"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000E148760F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F8B666F0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FCB3D101"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "00000000EC8AA562"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000F030E132"
+				item: "createdeco:corner_dusk_bricks"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000004277E42"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D7B9999D"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005334225E"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [{
-				consume_items: false
-				id: "00000000F50E8ED9"
-				item: "createdeco:dean_bricks"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["00000000D55FC707"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000955B9D99"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000002AB0AF4"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C81D0F85"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "octagon"
-			tasks: [{
-				consume_items: false
-				id: "000000004AF6BF77"
-				item: "createdeco:short_dusk_bricks"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000DC039292"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006D86CA4E"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006E21CCC5"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000001E4031D1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003FFE9110"
-					item: "createdeco:corner_umber_bricks"
+					id: "00000000CCC9AE66"
+					item: "createdeco:long_dean_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006192DD5F"
-					item: "createdeco:industrial_iron_nugget"
+					id: "00000000711843B6"
+					item: "createdeco:long_verdant_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000045A45DC7"
-					item: "createdeco:scarlet_bricks"
+					id: "000000007372F756"
+					item: "createdeco:pearl_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008F81892A"
+					item: "createdeco:short_scarlet_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000086EF96BC"
+					item: "createdeco:verdant_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F5988399"
+					item: "createdeco:verdant_bricks"
 					type: "item"
 				}
 			]
-			x: -5.0d
+			x: -4.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000C23E7E3A"]
+			dependencies: ["00000000E55D781A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003C3EA435"
+			id: "000000004F4D0ABA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006709734C"
+					id: "00000000B7857C92"
 					type: "xp"
-					xp: 41
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CB9F5639"
-					table_id: 4094692335L
-					type: "random"
+					id: "0000000051839139"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DE5E7515"
-					item: "createdeco:black_placard"
+					id: "000000005DADFF55"
+					item: "createdeco:zinc_support"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000039BF51F5"
-					item: "createdeco:blue_placard"
+					id: "000000001B8BAA13"
+					item: "createdeco:zinc_support_wedge"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000771F5478"
-					item: "createdeco:brown_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C677E4DD"
-					item: "createdeco:cyan_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000ECB51E65"
-					item: "createdeco:green_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002E56294F"
-					item: "createdeco:light_blue_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007991F750"
-					item: "createdeco:light_gray_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CB011DA4"
-					item: "createdeco:lime_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001669202F"
-					item: "createdeco:magenta_placard"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C23E7E3A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000064B5AD9A"
-					type: "xp"
-					xp: 37
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002DDAAFBD"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005EFAEAF0"
-					item: "createdeco:orange_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008158367E"
-					item: "createdeco:pink_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000031EED861"
-					item: "createdeco:purple_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B30D3032"
-					item: "createdeco:red_placard"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F8CC55AA"
-					item: "createdeco:yellow_placard"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["0000000070F4C8E6"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000DF0B2F87"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000061D1B312"
-					type: "xp"
-					xp: 27
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E2C642A1"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000ED0D6A62"
+					id: "0000000033FB3185"
 					item: "createdeco:zinc_hull"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000012A627FB"
+					id: "00000000782618AC"
 					item: "createdeco:zinc_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AA0CED82"
+					id: "000000003E7D82FC"
 					item: "createdeco:zinc_window_pane"
 					type: "item"
 				}
@@ -3277,445 +3739,400 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["0000000070F4C8E6"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005C677A1F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000EE674175"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EC7E1F1F"
-					table_id: 4094692335L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000040FAA6AC"
-					item: "createdeco:zinc_catwalk_railing"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000098E42515"
-					item: "createdeco:zinc_catwalk_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000458FF3F4"
-					item: "createdeco:zinc_coinstack"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AE06FE28"
-					item: "createdeco:zinc_facade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000094EF287A"
-					item: "createdeco:zinc_ladder"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006055ABB3"
-					item: "createdeco:zinc_mesh_fence"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CCCE8C6C"
-					item: "createdeco:zinc_sheet_metal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007907245B"
-					item: "createdeco:zinc_support"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B5993CEF"
-					item: "createdeco:zinc_support_wedge"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 6.0d
-		}
-		{
 			dependencies: [
-				"00000000D55FC707"
-				"00000000BB2F4D5F"
-				"0000000075B773C8"
-				"000000009AB31FA7"
+				"00000000849540BF"
+				"00000000E148760F"
+				"00000000573983F1"
+				"00000000F23CFEE2"
+				"00000000F8B666F0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002AF693A4"
+			id: "000000009ADCE120"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CB242D78"
+					id: "0000000012991168"
 					type: "xp"
-					xp: 24
+					xp: 40
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005EBC539B"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000009AC857B1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005B4C7F53"
-					item: "createdeco:corner_dean_bricks"
+					id: "000000002EB80080"
+					item: "createdeco:blue_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005EA05DC6"
+					id: "00000000C5B9D77E"
 					item: "createdeco:corner_scarlet_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000008E4E0A5"
-					item: "createdeco:dusk_bricks"
+					id: "0000000093387A02"
+					item: "createdeco:corner_umber_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000069ADA11"
-					item: "createdeco:long_dusk_bricks"
+					id: "0000000008E01B6A"
+					item: "createdeco:industrial_iron_ingot"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D468C0B1"
-					item: "createdeco:tiled_blue_bricks"
+					id: "00000000199BE83B"
+					item: "createdeco:long_red_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004AB4403A"
+					item: "createdeco:long_verdant_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000069F5959B"
+					item: "createdeco:short_pearl_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002535AA21"
+					item: "createdeco:tiled_dusk_bricks"
 					type: "item"
 				}
 			]
-			x: -3.0d
+			x: -4.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000DC039292"]
+			dependencies: ["000000006A390B3B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A890AD53"
+			id: "00000000F23CFEE2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000041DF5C58"
+					id: "00000000924046CE"
 					type: "xp"
-					xp: 24
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FC9A682F"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000007F7EC259"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "gear"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DD997C57"
-					item: "createdeco:corner_verdant_bricks"
+					id: "00000000F8133FA0"
+					item: "createdeco:scarlet_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000029455B3E"
-					item: "createdeco:short_blue_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000071A38524"
-					item: "createdeco:short_umber_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007A83BB40"
-					item: "createdeco:tiled_pearl_bricks"
+					id: "00000000855932A7"
+					item: "createdeco:tiled_umber_bricks"
 					type: "item"
 				}
 			]
-			x: -5.0d
+			x: -6.0d
 			y: 1.0d
 		}
 		{
 			dependencies: [
-				"00000000DC039292"
-				"000000002AF693A4"
-				"0000000083C13062"
-				"0000000023CE8217"
-				"0000000079A3AF4B"
+				"0000000004277E42"
+				"00000000849540BF"
+				"00000000573983F1"
+				"00000000E980A863"
+				"0000000029C7F51E"
+				"00000000F23CFEE2"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007AEC5963"
+			id: "000000004A371286"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BA5DD73F"
+					id: "00000000AB535A10"
 					type: "xp"
-					xp: 80
+					xp: 85
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D4EE675B"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000E0951A0E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DA600A53"
+					id: "00000000942EEA7D"
+					item: "createdeco:cracked_blue_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D73C3B03"
 					item: "createdeco:cracked_dean_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000B95CE0D"
+					id: "000000000B9FEEA5"
 					item: "createdeco:cracked_dusk_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005A14944A"
+					id: "00000000D9F2A236"
 					item: "createdeco:cracked_pearl_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C315E802"
+					id: "00000000F52D57D1"
 					item: "createdeco:cracked_red_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000451EEA2A"
+					id: "00000000A454F2C6"
 					item: "createdeco:cracked_scarlet_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000043E6A68F"
+					id: "000000005D233513"
 					item: "createdeco:cracked_umber_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A2DB56EC"
+					id: "00000000C8198B58"
 					item: "createdeco:cracked_verdant_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000885E8AE"
-					item: "createdeco:dusk_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000067117407"
-					item: "createdeco:dusk_brick_wall"
+					id: "00000000A46A4271"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
 			x: -3.0d
-			y: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
-				"0000000075B773C8"
-				"0000000023CE8217"
-				"0000000079A3AF4B"
+				"0000000004277E42"
+				"00000000B390BB97"
+				"000000006A390B3B"
+				"000000009ADCE120"
+				"0000000029C7F51E"
+				"00000000316C77F8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000016532F98"
+			id: "000000002F466C56"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FCC81E90"
+					id: "000000003F822609"
 					type: "xp"
-					xp: 75
+					xp: 73
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003824C4F9"
-					table_id: 4094692335L
-					type: "random"
+					id: "00000000ABDEC640"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008DCA9B50"
-					item: "createdeco:copper_door"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000128F323F"
+					id: "00000000502CD38B"
 					item: "createdeco:copper_window"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004DD0553F"
-					item: "createdeco:corner_blue_brick_stairs"
+					id: "00000000778F36DC"
+					item: "createdeco:corner_blue_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000763339F5"
-					item: "createdeco:corner_dean_brick_wall"
+					id: "00000000641DB5AA"
+					item: "createdeco:corner_dean_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009A0ACE10"
-					item: "createdeco:corner_pearl_bricks"
+					id: "00000000F427D9E0"
+					item: "createdeco:corner_dean_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000062003EF7"
-					item: "createdeco:corner_red_brick_slab"
+					id: "000000007A0ADE34"
+					item: "createdeco:corner_pearl_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000061BBB123"
-					item: "createdeco:corner_red_brick_wall"
+					id: "0000000057C6E5AE"
+					item: "createdeco:corner_scarlet_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B8DCCA7F"
-					item: "createdeco:corner_verdant_brick_slab"
+					id: "000000001E5A041D"
+					item: "createdeco:corner_scarlet_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003A4F2573"
-					item: "createdeco:cracked_blue_bricks"
+					id: "0000000041C76368"
+					item: "createdeco:corner_umber_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E636B7E5"
+					item: "createdeco:corner_verdant_brick_wall"
 					type: "item"
 				}
 			]
 			x: -3.0d
-			y: 5.0d
+			y: 1.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000287195F3"
+			id: "00000000D0FCA7A7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F8E77B58"
+					id: "00000000ECFC1F46"
 					type: "xp"
-					xp: 88
+					xp: 36
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000074CAF2DC"
-					table_id: 4094692335L
-					type: "random"
+					id: "000000009CC3FB6F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createdeco"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E8E6264E"
+					id: "00000000187FA0F8"
 					item: "createdeco:andesite_sheet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AB97807C"
+					id: "000000004051F6F8"
 					item: "createdeco:andesite_bars"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F489DC93"
-					item: "createdeco:andesite_catwalk"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D8C0FF91"
+					id: "00000000F906F212"
 					item: "createdeco:andesite_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E2AC1194"
+					id: "000000000E7E7916"
 					item: "createdeco:andesite_window"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006A1AA6EC"
-					item: "createdeco:brass_bars"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000050D41E2B"
+					id: "000000004CC6BD2F"
 					item: "createdeco:brass_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F175E59F"
+					id: "00000000337F8386"
 					item: "createdeco:brass_window"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000DD0C4E2"
+					id: "000000005FEFB335"
 					item: "createdeco:copper_bars"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006F441276"
+					item: "createdeco:copper_catwalk"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008EEA9C2E"
+					item: "createdeco:copper_door"
 					type: "item"
 				}
 			]

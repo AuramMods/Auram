@@ -2,34 +2,39 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_jeed"
-	group: "00000000DEB299A3"
-	id: "0000000050C9C689"
+	group: "000000008CDEF944"
+	id: "000000007D0B9A2C"
 	order_index: 41
 	quest_links: [ ]
 	quests: [{
 		hide_dependency_lines: true
 		hide_details_until_startable: true
 		hide_until_deps_complete: true
-		id: "0000000067F15B15"
+		id: "00000000E6B918F4"
 		invisible: true
 		invisible_until_tasks: 1
 		rewards: [
 			{
-				id: "000000007178D5EF"
+				id: "00000000C8EB87CA"
 				type: "xp"
-				xp: 7
+				xp: 1
 			}
 			{
-				exclude_from_claim_all: true
-				id: "00000000A0CF05BA"
-				table_id: 3014722659L
-				type: "random"
+				id: "00000000842EDBD3"
+				item: {
+					Count: 1
+					id: "ftbquests:lootcrate"
+					tag: {
+						type: "chaos_box_jeed"
+					}
+				}
+				type: "item"
 			}
 		]
 		shape: "circle"
 		tasks: [{
 			consume_items: false
-			id: "00000000FA99FA16"
+			id: "00000000086ADF6E"
 			type: "item"
 		}]
 		x: 0.0d

@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_ae2wtlib"
-	group: "00000000DEB299A3"
-	icon: "ae2wtlib:wireless_pattern_access_terminal"
-	id: "0000000067D9A7B4"
+	group: "000000008CDEF944"
+	icon: "ae2wtlib:wireless_pattern_encoding_terminal"
+	id: "0000000042F491C9"
 	order_index: 32
 	quest_links: [ ]
 	quests: [
@@ -12,27 +12,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DC02F987"
+			id: "00000000EB5BA1C2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004D76326D"
+					id: "000000000D713572"
 					type: "xp"
-					xp: 3
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007D2C3F18"
-					table_id: 1388291519L
-					type: "random"
+					id: "00000000E59B26E2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2wtlib"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000C05FE9A1"
-				item: "ae2wtlib:wireless_pattern_access_terminal"
+				id: "00000000AAC6217C"
+				item: "ae2wtlib:wireless_pattern_encoding_terminal"
 				type: "item"
 			}]
 			x: -1.0d
@@ -42,27 +47,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006837C52F"
+			id: "00000000F16A5F43"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004957283C"
+					id: "0000000021101DDD"
 					type: "xp"
-					xp: 2
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000036CC0081"
-					table_id: 1388291519L
-					type: "random"
+					id: "000000003F53A894"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2wtlib"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003435245B"
-				item: "ae2wtlib:wireless_pattern_encoding_terminal"
+				id: "000000003306275C"
+				item: "ae2wtlib:wireless_pattern_access_terminal"
 				type: "item"
 			}]
 			x: 0.0d
@@ -72,26 +82,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005FF403AB"
+			id: "00000000C1C37BAA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000F59BB80"
+					id: "00000000DD25A296"
 					type: "xp"
-					xp: 9
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AF7C4A3E"
-					table_id: 1388291519L
-					type: "random"
+					id: "000000008F91AD1B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2wtlib"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000CEF2B22"
+				id: "000000000DBA8493"
 				item: "ae2wtlib:quantum_bridge_card"
 				type: "item"
 			}]
@@ -99,30 +114,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000DC02F987"]
+			dependencies: ["00000000EB5BA1C2"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000AD2DA2D"
+			id: "000000001546E816"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008DEA1F5C"
+					id: "00000000FDEC156C"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CB4974F8"
-					table_id: 1388291519L
-					type: "random"
+					id: "00000000A19ED9A9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2wtlib"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000035902A5D"
+				id: "00000000B3944153"
 				item: "ae2wtlib:wireless_universal_terminal"
 				type: "item"
 			}]
@@ -133,26 +153,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E2E736EB"
+			id: "00000000C7A97028"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E9B15C38"
+					id: "00000000778746F1"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D707FA3B"
-					table_id: 1388291519L
-					type: "random"
+					id: "00000000A7FD79D7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2wtlib"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002B95E917"
+				id: "00000000F89B2DF3"
 				item: "ae2wtlib:magnet_card"
 				type: "item"
 			}]

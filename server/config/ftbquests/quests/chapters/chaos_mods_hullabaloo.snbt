@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_hullabaloo"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "hullabaloo:iron_cobblestone_generator_upgrade"
-	id: "00000000C18E03EB"
+	id: "0000000065299406"
 	order_index: 89
 	quest_links: [ ]
 	quests: [
@@ -12,26 +12,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008F4D6B35"
+			id: "00000000A7B0A3FF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007EAF244D"
+					id: "0000000006D0B464"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000016BEE87C"
-					table_id: 1744503304L
-					type: "random"
+					id: "000000001FB82021"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000358817CA"
+				id: "00000000AA96E566"
 				item: "hullabaloo:iron_cobblestone_generator_upgrade"
 				type: "item"
 			}]
@@ -39,30 +44,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000002AE171A0"]
+			dependencies: ["00000000D7C88281"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D679BF53"
+			id: "0000000022EDC6BD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003C27B984"
+					id: "00000000ED682BC8"
 					type: "xp"
-					xp: 3
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FD406BB2"
-					table_id: 1744503304L
-					type: "random"
+					id: "00000000FD476528"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000A7DB3F30"
+				id: "00000000A21A4916"
 				item: "hullabaloo:netherite_cobblestone_generator_upgrade"
 				type: "item"
 			}]
@@ -73,26 +83,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E3704704"
+			id: "00000000508A4416"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000042EC74DD"
+					id: "00000000BC444111"
 					type: "xp"
-					xp: 8
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004E35478A"
-					table_id: 1744503304L
-					type: "random"
+					id: "00000000BA48C79C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F3F5ABEB"
+				id: "00000000660041C9"
 				item: "hullabaloo:mob_attractor"
 				type: "item"
 			}]
@@ -100,30 +115,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000D679BF53"]
+			dependencies: ["0000000022EDC6BD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000F5DE747"
+			id: "0000000033F47240"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007BACB829"
+					id: "000000007110A2C9"
 					type: "xp"
-					xp: 3
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000C4AC60B"
-					table_id: 1744503304L
-					type: "random"
+					id: "00000000F4E438FB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B05F41E0"
+				id: "00000000C514535C"
 				item: "hullabaloo:ultimate_cobblestone_generator_upgrade"
 				type: "item"
 			}]
@@ -134,26 +154,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000490639E0"
+			id: "0000000078C94B37"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D8DEA23E"
+					id: "00000000C5079B7D"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B193DFDF"
-					table_id: 1744503304L
-					type: "random"
+					id: "000000001C57D067"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004AFFB156"
+				id: "000000009528D50E"
 				item: "hullabaloo:cobblestone_generator"
 				type: "item"
 			}]
@@ -164,26 +189,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003E33E1D4"
+			id: "00000000D7B3A13B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CC902B74"
+					id: "000000003A400E3F"
 					type: "xp"
-					xp: 3
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005D6AECD5"
-					table_id: 1744503304L
-					type: "random"
+					id: "00000000A1D15B26"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001B7E1F7A"
+				id: "000000007AB07A03"
 				item: "hullabaloo:block_activator"
 				type: "item"
 			}]
@@ -191,30 +221,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000FF38192C"]
+			dependencies: ["00000000A447E495"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002E2EEFF1"
+			id: "00000000CF4D634D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F78F5228"
+					id: "00000000410E8323"
 					type: "xp"
-					xp: 3
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EDA8E45F"
-					table_id: 1744503304L
-					type: "random"
+					id: "00000000C7B97D23"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "0000000005BD5EDC"
+				id: "0000000039D069C4"
 				item: "hullabaloo:diamond_cobblestone_generator_upgrade"
 				type: "item"
 			}]
@@ -225,26 +260,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000099EB5743"
+			id: "00000000C934F1B6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009FBB573C"
+					id: "000000009ECB43C2"
 					type: "xp"
-					xp: 10
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000062542E11"
-					table_id: 1744503304L
-					type: "random"
+					id: "000000003612616A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003D76B7F1"
+				id: "00000000716CE8BD"
 				item: "hullabaloo:vacuum_hopper"
 				type: "item"
 			}]
@@ -252,30 +292,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000002E2EEFF1"]
+			dependencies: ["00000000CF4D634D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002AE171A0"
+			id: "00000000D7C88281"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A3910A95"
+					id: "00000000578F87B9"
 					type: "xp"
-					xp: 5
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ED290228"
-					table_id: 1744503304L
-					type: "random"
+					id: "00000000ECCBFAAF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "000000001A35418F"
+				id: "000000006EF290BE"
 				item: "hullabaloo:amethyst_cobblestone_generator_upgrade"
 				type: "item"
 			}]
@@ -286,26 +331,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000095C2941E"
+			id: "00000000953995FC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009144279C"
+					id: "000000003CBBB12B"
 					type: "xp"
 					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000189D5A01"
-					table_id: 1744503304L
-					type: "random"
+					id: "00000000A72FD3C8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D133C973"
+				id: "000000001FDE197B"
 				item: "hullabaloo:vacuum_filter"
 				type: "item"
 			}]
@@ -316,26 +366,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F27BB397"
+			id: "0000000050EA7B3B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003FF7C1BE"
+					id: "00000000EA58993B"
 					type: "xp"
-					xp: 11
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008442709D"
-					table_id: 1744503304L
-					type: "random"
+					id: "0000000045C6702E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000058DF4CBE"
+				id: "000000000444B10C"
 				item: "hullabaloo:screwdriver"
 				type: "item"
 			}]
@@ -343,30 +398,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000008F4D6B35"]
+			dependencies: ["00000000A7B0A3FF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FF38192C"
+			id: "00000000A447E495"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C9E7C0EC"
+					id: "000000006DA5EC93"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CEA5D324"
-					table_id: 1744503304L
-					type: "random"
+					id: "000000005E583C81"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_hullabaloo"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000B0000074"
+				id: "000000006BDEE46D"
 				item: "hullabaloo:gold_cobblestone_generator_upgrade"
 				type: "item"
 			}]

@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_sereneseasons"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "sereneseasons:calendar"
-	id: "00000000D97A4BEF"
-	order_index: 103
+	id: "000000005F000BB8"
+	order_index: 102
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["000000000AC32DF8"]
+			dependencies: ["0000000061C53132"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FAE74556"
+			id: "00000000A6050B3D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000817A5B67"
+					id: "0000000053303B77"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000077104A3A"
-					table_id: 1378130491L
-					type: "random"
+					id: "00000000A02A3F32"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_sereneseasons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EC6DF80C"
+				id: "0000000088F91777"
 				item: "sereneseasons:season_sensor"
 				type: "item"
 			}]
@@ -43,26 +48,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000AC32DF8"
+			id: "0000000061C53132"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EF48EC50"
+					id: "0000000007A37D7B"
 					type: "xp"
-					xp: 2
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A52D4A40"
-					table_id: 1378130491L
-					type: "random"
+					id: "00000000D470D0F2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_sereneseasons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000778EDABD"
+				id: "000000003EE1545C"
 				item: "sereneseasons:calendar"
 				type: "item"
 			}]

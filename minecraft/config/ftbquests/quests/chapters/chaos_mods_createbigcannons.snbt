@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_createbigcannons"
-	group: "00000000DEB299A3"
-	icon: "createbigcannons:cast_iron_nugget"
-	id: "00000000F87F9F3A"
-	order_index: 137
+	group: "000000008CDEF944"
+	icon: "createbigcannons:guncotton"
+	id: "000000003038DCE7"
+	order_index: 136
 	quest_links: [ ]
 	quests: [
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB36B2A3"
+			id: "00000000E37E9FCD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009103310A"
+					id: "00000000A3C6310B"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F6299063"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000073EA8C7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "000000001C1D0331"
-				item: "createbigcannons:cast_iron_nugget"
+				id: "00000000102317CB"
+				item: "createbigcannons:guncotton"
 				type: "item"
 			}]
 			x: -9.0d
@@ -42,1000 +47,1162 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001157384D"
+			id: "0000000075DD3683"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F160956F"
+					id: "00000000678EC040"
 					type: "xp"
-					xp: 2
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DFE299E4"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000DBFAE309"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000A75330B9"
+				id: "000000006C42B84B"
 				item: "createbigcannons:shot_balls"
 				type: "item"
 			}]
 			x: -7.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000F6844002"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A2CECCCA"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FF9918FE"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000018C2846E"
-				item: "createbigcannons:timed_fuze"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005326E69F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BEB3F197"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005B02D8AE"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000077B46DDB"
-				item: "createbigcannons:worm_head"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000049693C63"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001FC863F9"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E6CC9C31"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000009A98188B"
-				item: "createbigcannons:wrought_iron_cannon_end"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["0000000085D3F999"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008DF3CD73"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000092545A37"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E77F638C"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000024146891"
-				item: "createbigcannons:packed_guncotton"
-				type: "item"
-			}]
-			x: -7.0d
 			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CAA3BA57"
+			id: "00000000F4FA9327"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AB5F0139"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003B19C006"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000004CAD0701"
-				item: "createbigcannons:machine_gun_round"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["0000000064330FB4"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007BBB607A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FD712D0F"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C7CF38A9"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000B24C7E74"
-				item: "createbigcannons:nethersteel_ingot"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000864F92AD"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D3CD996A"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A89FBEC4"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000007F456788"
-				item: "createbigcannons:medium_cast_mould"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001CF361A4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001740BA21"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000054B9326B"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000001A9CA55E"
-				item: "createbigcannons:gunpowder_pinch"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000065E47477"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000081EA1BAE"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EAD4F6F5"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000003BAEB21A"
-				item: "createbigcannons:pair_of_cannon_wheels"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000BC39F123"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D1A153AF"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FE03977E"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000AB81FB67"
-				item: "createbigcannons:log_cannon_end"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000053D7F507"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003AD88165"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BD987B63"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000036584EF0"
-				item: "createbigcannons:ram_head"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"0000000069D6888D"
-				"00000000724C80DF"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007E299D68"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F81E5E38"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001627AAC8"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000505156E8"
-				item: "createbigcannons:powder_charge"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["0000000053D7F507"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CBE39FED"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000074A1DE30"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000075C7A315"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000B8302683"
-				item: "createbigcannons:ram_rod"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 9.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CE517323"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003A59607E"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000032093B74"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000F395D67B"
-				item: "createbigcannons:proximity_fuze"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 7.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000048EF06FA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007EAF6FF1"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002A579955"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000D843318C"
-				item: "createbigcannons:quickfiring_mechanism"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 8.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003A510D46"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E2D71382"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000025B234EB"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000763370F7"
-				item: "createbigcannons:cast_iron_block"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["000000007BBB607A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000419DD23F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BF29AEC8"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000096F2EDAD"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000009EA20903"
-				item: "createbigcannons:nethersteel_screw_lock"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008C18A501"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001B307284"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E7122ED6"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000F44D8577"
-				item: "createbigcannons:autocannon_cartridge_sheet"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 9.0d
-		}
-		{
-			dependencies: ["00000000E97FBBC9"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A481D00D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000463B5D17"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000211B23E4"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000E9897622"
-				item: "createbigcannons:nitropowder"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000344D21C6"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DEA7CB07"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DFC1FD1C"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000050F16B54"
-				item: "createbigcannons:impact_fuze"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 7.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000004F104F5"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F838977E"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A8CE4405"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000002DCF0262"
-				item: "createbigcannons:mortar_stone"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["000000007BBB607A"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000055D02946"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FC21CCCB"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000076CB3FE9"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "0000000041850225"
-				item: "createbigcannons:nethersteel_nugget"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["000000006025B125"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E97FBBC9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CFA9E4DE"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000DB06A57"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000006B91877B"
-				item: "createbigcannons:hardened_nitro"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000001157384D"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000036C2F71"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C88299D0"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DB73F3A3"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "0000000051F941C5"
-				item: "createbigcannons:shrapnel_shell"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000ED1E9598"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F83B4659"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000091B95765"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000F02DBF68"
-				item: "createbigcannons:sliding_breech_cast_mould"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000080A48679"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000626ED658"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005A0E00F6"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000009AC0CA4C"
-				item: "createbigcannons:recoil_spring"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A3DC99B5"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C38F474F"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008265FFF6"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000BE76D460"
-				item: "createbigcannons:screw_breech_cast_mould"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000096A96ECF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A870B8E5"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C3CACCC9"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000218A7414"
-				item: "createbigcannons:cannon_builder"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["0000000065E47477"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000744D45B0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B8F60D62"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D16E1D15"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000B632F0DD"
-				item: "createbigcannons:cannon_carriage"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 7.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004E702723"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000042811A36"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B292C845"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000001DBFDFB4"
-				item: "createbigcannons:bronze_autocannon_breech_extractor"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D6929D5A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000041086872"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000085FDBC09"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "00000000D3DBCF97"
-				item: "createbigcannons:steel_autocannon_breech_extractor"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 8.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A0EEFC67"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005FF4854D"
+					id: "00000000DB3639EF"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B1E100D4"
-					table_id: 43477359L
-					type: "random"
+					id: "000000003CF06B6C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000008F993B43"
+				item: "createbigcannons:timed_fuze"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A2FFA271"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C2A5CB21"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000EE7115EE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000BD5ADF0E"
+				item: "createbigcannons:worm_head"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000659044DC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005F168CE3"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000008B4EAC30"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000004D2F856D"
+				item: "createbigcannons:wrought_iron_cannon_end"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000E37E9FCD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000089E48327"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000553980C6"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000002B1E7DFA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000C5963C03"
+				item: "createbigcannons:packed_guncotton"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CA23D2D5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002CB29D5F"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000002A2E81B5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000099C80607"
+				id: "000000004F0154D9"
+				item: "createbigcannons:log_cannon_chamber"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000014346AAE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007A38EAC8"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000061CE04EF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000082D0EDB"
+				item: "createbigcannons:nethersteel_ingot"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A670A73C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DDEDAF1E"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "0000000091CBECDB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000009272CE58"
+				item: "createbigcannons:log_cannon_end"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000072F47F4F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DFBCAB01"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000364C86CE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000831AE586"
+				item: "createbigcannons:gunpowder_pinch"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005E750879"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005BD76617"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "000000008758E8C3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000044EEECFB"
+				item: "createbigcannons:pair_of_cannon_wheels"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DBD40B93"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A19D8B88"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000E9C9E1D8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000005B8EAC35"
+				item: "createbigcannons:large_cast_mould"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000099E1A936"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009F845683"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "00000000AB707ACF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000E8499214"
+				item: "createbigcannons:ram_head"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000CDE63A42"
+				"00000000BDDA1CA9"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000074FE0E43"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000076CF0EB8"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000007E9E068E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000C67EBD5A"
+				item: "createbigcannons:powder_charge"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A28D385C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009A2A94DD"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000CB6DC29F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000093C59532"
+				item: "createbigcannons:proximity_fuze"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000014346AAE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000186ECA68"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002A7DFF2A"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "00000000977207B1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000007E60F1A6"
+				item: "createbigcannons:nethersteel_screw_lock"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000037CBF92"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000086EBF113"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009D8245DC"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0000000076A70A15"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000C2BED428"
+				item: "createbigcannons:nitropowder"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D7CD574B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D9F2FFB5"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000B2CD2A42"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000005706B00A"
+				item: "createbigcannons:cast_iron_ingot"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000098B2AC4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DD6A2E7A"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000988CD551"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000061F84305"
+				item: "createbigcannons:mortar_stone"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000069C93075"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B0391B74"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000A405F581"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000C09CFDB6"
+				item: "createbigcannons:autocannon_cartridge_sheet"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A690E919"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E3D043F0"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "0000000018ACF2B4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000000C8DFC1C"
+				item: "createbigcannons:nethersteel_nugget"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E9FBC5AF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000188855BF"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "000000006A9742F1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000004AD08E1C"
+				item: "createbigcannons:impact_fuze"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000383F6BFB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000FDE3BB7"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "00000000C1998AE0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000A98B4FFD"
+				item: "createbigcannons:machine_gun_round"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000944E0B03"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A0743A2F"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000C8D94E51"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000007915D2ED"
+				item: "createbigcannons:medium_cast_mould"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000DABDD9CD"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000037CBF92"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000796A1B87"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000EFB430B5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000DB24D57A"
+				item: "createbigcannons:hardened_nitro"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000064E208B8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000002DE6C9E"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "000000003B1EC5A3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000079150C19"
+				item: "createbigcannons:recoil_spring"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000355E4C47"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D1AAC95A"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000C8DCF155"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000F09679A2"
+				item: "createbigcannons:screw_breech_cast_mould"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C5806B58"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000014AD3924"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000003035D928"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000008C3A57D1"
+				item: "createbigcannons:quickfiring_mechanism"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000099E1A936"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001AB866C5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001A309B69"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000FE056420"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000004BA58FC7"
+				item: "createbigcannons:ram_rod"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B18A13AC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008C46241A"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000A44D4B61"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000003569C288"
 				item: "createbigcannons:bronze_sliding_breechblock"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009AB1DFF2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004B21E82D"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "0000000057A7BAB7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000006AC6E17B"
+				item: "createbigcannons:cannon_builder"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000014346AAE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F96DA6BD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DCCC7A19"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "000000007F3D810F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000007BD756ED"
+				item: "createbigcannons:nethersteel_block"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BD5B94F9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000041BB965E"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000008E21D0FC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000008E8BE8E"
+				item: "createbigcannons:solid_shot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008EA11DD5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009E23DFFB"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "0000000057359133"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000D4032DF2"
+				item: "createbigcannons:bronze_autocannon_breech_extractor"
 				type: "item"
 			}]
 			x: -1.0d
@@ -1045,27 +1212,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AA0B3AC4"
+			id: "00000000474BFF43"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AE26E2A0"
+					id: "000000009015ACF6"
 					type: "xp"
-					xp: 9
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002F72CE5D"
-					table_id: 43477359L
-					type: "random"
+					id: "000000002EF43D0F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000021A34B89"
-				item: "createbigcannons:steel_screw_lock"
+				id: "0000000003E10D11"
+				item: "createbigcannons:spring_wire"
 				type: "item"
 			}]
 			x: -5.0d
@@ -1075,26 +1247,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EE7D59CC"
+			id: "00000000011F567B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000ACC476B"
+					id: "000000003AB6E2D8"
 					type: "xp"
-					xp: 1
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000095A2B01E"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000078CC550D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002A0DC825"
+				id: "000000007FD97EC7"
 				item: "createbigcannons:big_cartridge_sheet"
 				type: "item"
 			}]
@@ -1105,58 +1282,67 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000092A45E3F"
+			id: "00000000B33EC478"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A2DCD04E"
+					id: "00000000072BE32E"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C29EB9D8"
-					table_id: 43477359L
-					type: "random"
+					id: "000000008FE55F51"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000032BBEFEA"
-				item: "createbigcannons:solid_shot"
+				id: "00000000FA7F5955"
+				item: "createbigcannons:small_cast_mould"
 				type: "item"
 			}]
 			x: -5.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000007BBB607A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004E57D8C2"
+			id: "000000009769A279"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000316B8010"
+					id: "00000000DC018809"
 					type: "xp"
-					xp: 6
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000881ACC0D"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000055757820"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B2CA7F68"
-				item: "createbigcannons:nethersteel_block"
+				id: "0000000076F6AEDE"
+				item: "createbigcannons:cast_iron_block"
 				type: "item"
 			}]
 			x: -1.0d
@@ -1166,27 +1352,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008ECFFE5D"
+			id: "0000000012B84682"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001727601C"
+					id: "00000000142A307F"
 					type: "xp"
-					xp: 5
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008A8BE885"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000011087264"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000041E58834"
-				item: "createbigcannons:spring_wire"
+				id: "00000000D342E5EB"
+				item: "createbigcannons:smoke_shell"
 				type: "item"
 			}]
 			x: -5.0d
@@ -1196,26 +1387,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000074850FB"
+			id: "00000000AA0D57D9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C7B030FF"
+					id: "00000000CEDFDD28"
 					type: "xp"
-					xp: 3
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000097C996CA"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000B95A882B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000075948D68"
+				id: "00000000280F61E8"
 				item: "createbigcannons:basin_foundry_lid"
 				type: "item"
 			}]
@@ -1223,30 +1419,36 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["0000000075DD3683"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000371ED7ED"
+			id: "000000009EAD3389"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007DA0AAEC"
+					id: "0000000049FD5CA1"
 					type: "xp"
-					xp: 9
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000015C758AB"
-					table_id: 43477359L
-					type: "random"
+					id: "000000002EA89B28"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004C3DB020"
-				item: "createbigcannons:small_cast_mould"
+				id: "000000009CB4BBA4"
+				item: "createbigcannons:shrapnel_shell"
 				type: "item"
 			}]
 			x: -5.0d
@@ -1256,26 +1458,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C271E867"
+			id: "000000002BAD60E2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A0704E38"
+					id: "00000000D8A0880C"
 					type: "xp"
-					xp: 2
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CE582EBD"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000069980531"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DFB1EBFE"
+				id: "00000000A47C89D5"
 				item: "createbigcannons:big_cartridge"
 				type: "item"
 			}]
@@ -1286,57 +1493,68 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000587E7E02"
+			id: "00000000012E15F7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C98EC3DD"
+					id: "00000000B0278F8E"
 					type: "xp"
 					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000492E2CD5"
-					table_id: 43477359L
-					type: "random"
+					id: "000000002417F8BF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C15463A6"
-				item: "createbigcannons:smoke_shell"
+				id: "000000007865B992"
+				item: "createbigcannons:sliding_breech_cast_mould"
 				type: "item"
 			}]
 			x: -5.0d
 			y: 5.0d
 		}
 		{
+			dependencies: ["000000005E750879"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000049412338"
+			id: "00000000868FCC1E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E05ACDFB"
+					id: "0000000035DB56D0"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000019881E8F"
-					table_id: 43477359L
-					type: "random"
+					id: "000000000BDE7171"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D22EBD43"
-				item: "createbigcannons:cannon_drill"
+				id: "0000000006EB76D7"
+				item: "createbigcannons:cannon_carriage"
 				type: "item"
 			}]
 			x: -1.0d
@@ -1346,27 +1564,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DA1B69EC"
+			id: "00000000A116E474"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000056D6C853"
+					id: "00000000AFD8E17F"
 					type: "xp"
-					xp: 11
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000013F3BCA"
-					table_id: 43477359L
-					type: "random"
+					id: "000000002062B489"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A1848F00"
-				item: "createbigcannons:cannon_end_cast_mould"
+				id: "000000008190A504"
+				item: "createbigcannons:cannon_drill"
 				type: "item"
 			}]
 			x: -1.0d
@@ -1374,32 +1597,37 @@
 		}
 		{
 			dependencies: [
-				"000000008DF3CD73"
-				"0000000064330FB4"
+				"0000000089E48327"
+				"00000000D7CD574B"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DF7FF3DF"
+			id: "0000000038AF5C57"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002B3CB8CA"
+					id: "000000003C0BCFCD"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008F26ED2A"
-					table_id: 43477359L
-					type: "random"
+					id: "000000007877616D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005CB7DB90"
+				id: "000000002631E75E"
 				item: "createbigcannons:ap_shell"
 				type: "item"
 			}]
@@ -1410,57 +1638,67 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001FE70B3C"
+			id: "0000000078C291EA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F4D3EFEC"
+					id: "00000000B84BEAED"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EAF0A095"
-					table_id: 43477359L
-					type: "random"
+					id: "000000004DE61227"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000023909EA7"
-				item: "createbigcannons:very_small_cast_mould"
+				id: "00000000E060398D"
+				item: "createbigcannons:tracer_tip"
 				type: "item"
 			}]
 			x: -6.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000064330FB4"]
+			dependencies: ["00000000D7CD574B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008A8DCB0D"
+			id: "00000000D7511894"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ECAA3967"
+					id: "00000000D6EFC19A"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D505ADB6"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000D7AE8BE6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002439697F"
+				id: "00000000E546181C"
 				item: "createbigcannons:ap_autocannon_round"
 				type: "item"
 			}]
@@ -1471,27 +1709,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005AC1D7C3"
+			id: "0000000040C29D81"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000095129C8B"
+					id: "00000000F3665491"
 					type: "xp"
-					xp: 3
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007D094A7E"
-					table_id: 43477359L
-					type: "random"
+					id: "000000002DCB7F7B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003A830F54"
-				item: "createbigcannons:cannon_loader"
+				id: "000000007AD938FD"
+				item: "createbigcannons:cannon_end_cast_mould"
 				type: "item"
 			}]
 			x: -2.0d
@@ -1501,27 +1744,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D6BBA7B2"
+			id: "00000000631DDC1F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005D0BACD1"
+					id: "000000005AA9D312"
 					type: "xp"
-					xp: 5
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B5F48F9D"
-					table_id: 43477359L
-					type: "random"
+					id: "000000002B9ED9DD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EE4161E8"
-				item: "createbigcannons:wired_fuze"
+				id: "00000000B15AD402"
+				item: "createbigcannons:very_large_cast_mould"
 				type: "item"
 			}]
 			x: -6.0d
@@ -1531,26 +1779,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000077495B92"
+			id: "00000000F79AA2A3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005EEF6A51"
+					id: "00000000A39D6763"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003AFE8D0D"
-					table_id: 43477359L
-					type: "random"
+					id: "000000000867A4A5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000094D2FE00"
+				id: "00000000F4687B65"
 				item: "createbigcannons:autocannon_ammo_container"
 				type: "item"
 			}]
@@ -1561,57 +1814,67 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EBCC26FF"
+			id: "0000000015BFE682"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000240EB24A"
+					id: "0000000063A8134D"
 					type: "xp"
-					xp: 5
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002CC26E88"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000027637693"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000A2627E4"
-				item: "createbigcannons:tracer_tip"
+				id: "00000000FF1F8441"
+				item: "createbigcannons:steel_screw_lock"
 				type: "item"
 			}]
 			x: -6.0d
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000064330FB4"]
+			dependencies: ["00000000D7CD574B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009C4A48FA"
+			id: "000000000F7FE8F8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000291A3F9E"
+					id: "00000000041E9C9D"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AA55B00D"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000737D7407"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EDCCB7E3"
+				id: "00000000ED14FF16"
 				item: "createbigcannons:ap_shot"
 				type: "item"
 			}]
@@ -1622,27 +1885,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000001979467"
+			id: "0000000012046B84"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B97B3B53"
+					id: "00000000BD4E89A4"
 					type: "xp"
-					xp: 10
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006E40625F"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000074ACDF88"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000090F116CD"
-				item: "createbigcannons:very_large_cast_mould"
+				id: "00000000D8244049"
+				item: "createbigcannons:steel_sliding_breechblock"
 				type: "item"
 			}]
 			x: -6.0d
@@ -1652,212 +1920,173 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000069D6888D"
+			id: "00000000CB1CF46A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000099FD5D13"
+					id: "00000000C43C2DB8"
 					type: "xp"
-					xp: 10
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A3897F86"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000CA3E4A77"
-				item: "createbigcannons:packed_gunpowder"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000085D3F999"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E56C9BAD"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BB494F4C"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000B50D123B"
-				item: "createbigcannons:guncotton"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000069FF491B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000070086D92"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E773DBC0"
-					table_id: 43477359L
-					type: "random"
+					id: "000000002F653A41"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F9681375"
-				item: "createbigcannons:steel_sliding_breechblock"
+				id: "00000000B155F8A1"
+				item: "createbigcannons:steel_autocannon_breech_extractor"
 				type: "item"
 			}]
 			x: -6.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000003A510D46"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000084012E86"
+			id: "000000009F81232F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000000EE9958"
+					id: "000000008865C5B1"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000003CD75B7"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000C8B9F47F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009AB91607"
+				id: "00000000C961DDCC"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000BB36B2A3"]
+			dependencies: ["00000000D7CD574B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000064330FB4"
+			id: "0000000092591521"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B2DF963B"
+					id: "00000000771DA46C"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000223B4946"
-					table_id: 43477359L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000733150D6"
-				item: "createbigcannons:cast_iron_ingot"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000F6844002"
-				"00000000344D21C6"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002078E961"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D7FE7C97"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A3E20249"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000DC17AE34"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000723EC64A"
-				item: "createbigcannons:delayed_impact_fuze"
+				id: "00000000CB8CE2D8"
+				item: "createbigcannons:cast_iron_sliding_breechblock"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000001157384D"]
+			dependencies: ["00000000E37E9FCD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000843FC7AB"
+			id: "00000000DABDD9CD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CE6E866F"
+					id: "000000001A4D6F4C"
 					type: "xp"
-					xp: 9
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C4C480E0"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000069B50777"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000C3E600BA"
+				item: "createbigcannons:congealed_nitro"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000075DD3683"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004823F787"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000090B46AB4"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000471D0102"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006CA0B0D2"
+				id: "0000000028238ECA"
 				item: "createbigcannons:bag_of_grapeshot"
 				type: "item"
 			}]
@@ -1865,65 +2094,70 @@
 			y: 9.0d
 		}
 		{
-			dependencies: [
-				"000000008DF3CD73"
-				"000000007E299D68"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000037A2CE99"
+			id: "0000000002E1FFE5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004DF01FE9"
+					id: "000000004DF2D68E"
 					type: "xp"
 					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C3D49DEC"
-					table_id: 43477359L
-					type: "random"
+					id: "000000000574ECB3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CCECFF5E"
-				item: "createbigcannons:drop_mortar_shell"
+				id: "00000000C0A32B45"
+				item: "createbigcannons:casting_sand"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000064330FB4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000085F8D291"
+			id: "00000000EA453444"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D8DF87D0"
+					id: "00000000C8F45AC7"
 					type: "xp"
-					xp: 4
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005DA7FF96"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000535FEE0B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000BB98E1E3"
-				item: "createbigcannons:cast_iron_sliding_breechblock"
+				id: "00000000BD4E33CA"
+				item: "createbigcannons:cast_iron_autocannon_breech_extractor"
 				type: "item"
 			}]
 			x: -2.0d
@@ -1933,57 +2167,104 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000724C80DF"
+			id: "00000000CDE63A42"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000025370011"
+					id: "000000003F8B83D0"
 					type: "xp"
-					xp: 3
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002442FDC9"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000FAA20AB2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "0000000065D665DB"
-				item: "createbigcannons:empty_powder_charge"
+				id: "000000003864CDDE"
+				item: "createbigcannons:packed_gunpowder"
 				type: "item"
 			}]
 			x: -9.0d
-			y: 3.0d
+			y: 1.0d
 		}
 		{
+			dependencies: ["00000000659044DC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000056811835"
+			id: "00000000042FE042"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000084768E3E"
+					id: "00000000FE504F1F"
 					type: "xp"
-					xp: 11
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005AAB96B3"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000BBE4CAF1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E2D922C2"
-				item: "createbigcannons:casting_sand"
+				id: "00000000E7717F68"
+				item: "createbigcannons:wrought_iron_drop_mortar_end"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000D7CD574B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006C49F1EB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AC13C7AC"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000753F6A36"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000C0E75735"
+				item: "createbigcannons:cast_iron_nugget"
 				type: "item"
 			}]
 			x: -2.0d
@@ -1993,56 +2274,66 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006025B125"
+			id: "00000000BDDA1CA9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008B934C0E"
+					id: "00000000F07AB274"
 					type: "xp"
-					xp: 6
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005F367348"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000032649794"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000D753F69A"
-				item: "createbigcannons:congealed_nitro"
+				id: "00000000EB2CA575"
+				item: "createbigcannons:empty_powder_charge"
 				type: "item"
 			}]
 			x: -9.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DC3916A9"
+			id: "00000000254CE42B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007E5047DB"
+					id: "000000006D914AFA"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005BBFFBBF"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000FF97C640"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005F41D268"
+				id: "000000006014443C"
 				item: "createbigcannons:autocannon_breech_cast_mould"
 				type: "item"
 			}]
@@ -2053,64 +2344,68 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000069602E9C"
+			id: "000000008F98A6E3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004BA2F522"
+					id: "000000006C6A0FC1"
 					type: "xp"
-					xp: 7
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E7437C13"
-					table_id: 43477359L
-					type: "random"
+					id: "000000009ACC0E15"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F64B96B4"
-				item: {
-					Count: 1
-					id: "createbigcannons:cannon_welder"
-					tag: {
-						Damage: 0
-					}
-				}
+				id: "000000004E077002"
+				item: "createbigcannons:cannon_mount_extension"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000049693C63"]
+			dependencies: ["00000000A2FFA271"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D650F23F"
+			id: "00000000B4ACB289"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003B052D07"
+					id: "00000000CD199ED3"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000080825883"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000688E9C11"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000F5D000D"
-				item: "createbigcannons:wrought_iron_drop_mortar_end"
+				id: "0000000066623023"
+				item: "createbigcannons:worm"
 				type: "item"
 			}]
 			x: -6.0d
@@ -2120,26 +2415,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A873F6B5"
+			id: "00000000E3FE6899"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C4D6BECE"
+					id: "00000000C2A1A23D"
 					type: "xp"
-					xp: 7
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004DAD5212"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000649EB2D6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CC3AA383"
+				id: "00000000F6C44F60"
 				item: "createbigcannons:autocannon_barrel_cast_mould"
 				type: "item"
 			}]
@@ -2150,27 +2450,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000004FE8586"
+			id: "00000000D2E672D0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000072309063"
+					id: "00000000A39CCC90"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005941DB07"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000020553B2A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CE2AFB2B"
-				item: "createbigcannons:cast_iron_autocannon_breech_extractor"
+				id: "00000000E158E45D"
+				item: {
+					Count: 1
+					id: "createbigcannons:cannon_welder"
+					tag: {
+						Damage: 0
+					}
+				}
 				type: "item"
 			}]
 			x: -2.0d
@@ -2180,26 +2491,66 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FD074520"
+			id: "0000000030C007B2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000ACB4ED3"
+					id: "00000000A0BDE562"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000988D7B6F"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000433DE477"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006904829F"
+				id: "0000000046566A21"
+				item: "createbigcannons:wrought_iron_cannon_chamber"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000090FC3F07"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008273E5CB"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "000000006C83D54B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000F7396899"
 				item: "createbigcannons:autocannon_recoil_spring_cast_mould"
 				type: "item"
 			}]
@@ -2210,58 +2561,67 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000B577151"
+			id: "000000004F9B765A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C9DBAED1"
+					id: "00000000A74524E9"
 					type: "xp"
-					xp: 8
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000064894596"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000C613EBD9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009A32E37B"
-				item: "createbigcannons:cannon_mount"
+				id: "000000009A7BAD14"
+				item: "createbigcannons:cannon_loader"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000005326E69F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E8FAA3CF"
+			id: "0000000070BEC579"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CD063D32"
+					id: "000000005CB3945C"
 					type: "xp"
-					xp: 6
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B1FF5A92"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000014968E77"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000058531E1"
-				item: "createbigcannons:worm"
+				id: "00000000BCCA12C8"
+				item: "createbigcannons:very_small_cast_mould"
 				type: "item"
 			}]
 			x: -6.0d
@@ -2271,26 +2631,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BBCF2CB0"
+			id: "00000000204382F8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000072CCBF71"
+					id: "0000000054BC0CCA"
 					type: "xp"
-					xp: 11
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000422C7EB8"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000091A30C1E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E1D738F6"
+				id: "00000000EAFADB4C"
 				item: "createbigcannons:autocannon_cartridge"
 				type: "item"
 			}]
@@ -2301,27 +2666,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000898FAF2"
+			id: "00000000629AD8AE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E817242C"
+					id: "000000006A42AA5C"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000394FBE24"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000067CE8CEE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002FE7D763"
-				item: "createbigcannons:cannon_mount_extension"
+				id: "000000005646971C"
+				item: "createbigcannons:cannon_mount"
 				type: "item"
 			}]
 			x: -2.0d
@@ -2331,88 +2701,110 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C05914F4"
+			id: "00000000BC4F6835"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B6BA03A4"
+					id: "000000001EFE393F"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000004DA2136"
-					table_id: 43477359L
-					type: "random"
+					id: "000000003A7892A7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CDEE6BD4"
-				item: "createbigcannons:wrought_iron_cannon_chamber"
+				id: "0000000072859E19"
+				item: "createbigcannons:wired_fuze"
 				type: "item"
 			}]
 			x: -6.0d
 			y: 6.0d
 		}
 		{
+			dependencies: [
+				"00000000F4FA9327"
+				"00000000E9FBC5AF"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000036EBA0FB"
+			id: "0000000011EAFF6E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C11CB041"
+					id: "000000003DB4B225"
 					type: "xp"
-					xp: 9
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003F307110"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000BD770930"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000FAC1517C"
-				item: "createbigcannons:empty_autocannon_cartridge"
+				id: "0000000074741806"
+				item: "createbigcannons:delayed_impact_fuze"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 9.0d
 		}
 		{
-			dependencies: ["000000008C18A501"]
+			dependencies: [
+				"0000000089E48327"
+				"0000000074FE0E43"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CF2E7DAE"
+			id: "00000000C62E5CFB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B960D70C"
+					id: "00000000D3DAC6C1"
 					type: "xp"
-					xp: 6
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004B310C19"
-					table_id: 43477359L
-					type: "random"
+					id: "000000000303E713"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A39F6C90"
-				item: "createbigcannons:empty_machine_gun_round"
+				id: "00000000943E950C"
+				item: "createbigcannons:drop_mortar_shell"
 				type: "item"
 			}]
 			x: -3.0d
@@ -2422,149 +2814,174 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AF326A9B"
+			id: "0000000028CD04C4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CCADB034"
+					id: "0000000045E87E4F"
 					type: "xp"
-					xp: 8
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B5EFCA7C"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000D08E5DFF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000067EEC6C7"
-				item: "createbigcannons:filled_autocannon_cartridge"
+				id: "000000007ED93636"
+				item: "createbigcannons:empty_autocannon_cartridge"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 1.0d
 		}
 		{
+			dependencies: ["0000000072F47F4F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD38C0B0"
+			id: "000000009C1F2473"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ED80BF8A"
+					id: "0000000099F4E209"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000959F2AA"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000FD519B45"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000096823BE1"
-				item: "createbigcannons:large_cast_mould"
+				id: "000000006EE365F6"
+				item: "minecraft:gunpowder"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 8.0d
 		}
 		{
+			dependencies: ["0000000089E48327"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BC7FBAC2"
+			id: "00000000747B87F7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E2262504"
+					id: "00000000346AB9B3"
 					type: "xp"
-					xp: 6
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009EB43DD4"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000097D3185C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000008838361D"
-				item: "createbigcannons:log_cannon_chamber"
+				id: "00000000FC1A209E"
+				item: "createbigcannons:he_shell"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 9.0d
 		}
 		{
-			dependencies: ["000000001CF361A4"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FF1F4E09"
+			id: "00000000782B9E05"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FEBA7D3D"
+					id: "000000002AE85810"
 					type: "xp"
-					xp: 3
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002C24EC72"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000051AA7B5E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A4047AC1"
-				item: "minecraft:gunpowder"
+				id: "00000000CE9ACCE8"
+				item: "createbigcannons:fluid_shell"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000008DF3CD73"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C87892A2"
+			id: "00000000132B8C92"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003C5851F3"
+					id: "00000000019C776A"
 					type: "xp"
 					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003CBBEABE"
-					table_id: 43477359L
-					type: "random"
+					id: "000000007B350788"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000008B70695"
-				item: "createbigcannons:he_shell"
+				id: "000000000978A46F"
+				item: "createbigcannons:gas_mask"
 				type: "item"
 			}]
 			x: -3.0d
@@ -2574,118 +2991,139 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E9F9BC0C"
+			id: "00000000C628555A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000031531A88"
+					id: "000000001FB2260E"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007EAB0539"
-					table_id: 43477359L
-					type: "random"
+					id: "00000000AB169DBE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005111FA68"
-				item: "createbigcannons:fluid_shell"
+				id: "000000006E66AC34"
+				item: "createbigcannons:fixed_cannon_mount"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 4.0d
 		}
 		{
+			dependencies: ["0000000075DD3683"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DA38A1AC"
+			id: "00000000146E0A5D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000048A1CC83"
+					id: "00000000879DC2CD"
 					type: "xp"
-					xp: 3
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D7A02D26"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000007AA4D04"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002700978A"
-				item: "createbigcannons:gas_mask"
+				id: "00000000F2783D1A"
+				item: "createbigcannons:flak_autocannon_round"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 5.0d
 		}
 		{
+			dependencies: ["0000000069C93075"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000044A5D749"
+			id: "0000000038B8125C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000078DAFC0C"
+					id: "00000000685D097D"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007B73CD0A"
-					table_id: 43477359L
-					type: "random"
+					id: "000000000AC47306"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000063014C50"
-				item: "createbigcannons:fixed_cannon_mount"
+				id: "00000000BA3A1C69"
+				item: "createbigcannons:empty_machine_gun_round"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000001157384D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D65A5590"
+			id: "0000000035157D60"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A5648C73"
+					id: "00000000ECFC2F76"
 					type: "xp"
-					xp: 3
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D59D2D33"
-					table_id: 43477359L
-					type: "random"
+					id: "0000000082686C91"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_createbigcannons"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004514D094"
-				item: "createbigcannons:flak_autocannon_round"
+				id: "0000000039A6244F"
+				item: "createbigcannons:filled_autocannon_cartridge"
 				type: "item"
 			}]
 			x: -3.0d

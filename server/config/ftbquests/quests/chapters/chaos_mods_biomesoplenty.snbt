@@ -2,82 +2,96 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_biomesoplenty"
-	group: "00000000DEB299A3"
-	icon: "biomesoplenty:chiseled_black_sandstone"
-	id: "00000000099FDB94"
-	order_index: 107
+	group: "000000008CDEF944"
+	icon: "biomesoplenty:stripped_mahogany_wood"
+	id: "00000000F3ABC6B4"
+	order_index: 106
 	quest_links: [ ]
 	quests: [
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D5FA7373"
+			id: "00000000B8F7C628"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000019B10C2B"
+					id: "0000000098078C3D"
 					type: "xp"
-					xp: 14
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007DEA0AA2"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000E58D52E2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DBFE7E30"
-					item: "biomesoplenty:stripped_mahogany_wood"
+					id: "0000000055F950A1"
+					item: "biomesoplenty:stripped_magic_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BA0B3F41"
-					item: "biomesoplenty:stripped_maple_wood"
+					id: "00000000B3CAEFBE"
+					item: "biomesoplenty:stripped_mahogany_wood"
 					type: "item"
 				}
 			]
 			x: -13.0d
-			y: 9.0d
+			y: 8.0d
 		}
 		{
-			dependencies: ["0000000004FFFD10"]
+			dependencies: [
+				"00000000E09181EE"
+				"0000000024CF24E7"
+				"000000003E85F194"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FD1240D8"
+			id: "00000000A15EC07D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001447B423"
+					id: "000000008403B432"
 					type: "xp"
-					xp: 10
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000015D51E6E"
-					table_id: 874265822L
-					type: "random"
+					id: "000000006A406D4A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AFA50F19"
+					id: "00000000FBFBF312"
 					item: "biomesoplenty:orange_sandstone_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000F7058ED"
+					id: "00000000A8F94A37"
 					item: "biomesoplenty:orange_sandstone_wall"
 					type: "item"
 				}
@@ -86,40 +100,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"0000000035A15BE6"
-				"0000000004FFFD10"
-			]
+			dependencies: ["000000003E85F194"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000018278E78"
+			id: "00000000432FDD21"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000209407FF"
+					id: "000000001D04E36C"
 					type: "xp"
-					xp: 10
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F2582968"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000B729FDA2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AC134398"
+					id: "00000000C6ADC342"
 					item: "biomesoplenty:orange_maple_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000526B8F90"
+					id: "00000000371E733B"
 					item: "biomesoplenty:orange_sandstone_slab"
 					type: "item"
 				}
@@ -131,71 +147,81 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007B778BFA"
+			id: "000000003DE87EFA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003A405639"
+					id: "000000006BBFFA56"
 					type: "xp"
-					xp: 10
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003C49CFC8"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000B8EAFEE4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000084536A85"
-					item: "biomesoplenty:stripped_fir_wood"
+					id: "000000007C6AF46E"
+					item: "biomesoplenty:stripped_empyreal_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C7DC763E"
-					item: "biomesoplenty:stripped_hellbark_wood"
+					id: "0000000072DB3B4E"
+					item: "biomesoplenty:stripped_fir_wood"
 					type: "item"
 				}
 			]
 			x: -13.0d
-			y: 5.0d
+			y: 4.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006700FD24"
+			id: "00000000CA9CE617"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000063A5E31B"
+					id: "00000000E18569C1"
 					type: "xp"
-					xp: 5
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000098B33692"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000027F60272"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F9803A00"
+					id: "0000000015316D9E"
 					item: "minecraft:mossy_stone_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008BE319FD"
+					id: "00000000AE7B7433"
 					item: "minecraft:orange_dye"
 					type: "item"
 				}
@@ -207,71 +233,81 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DB12DCC0"
+			id: "00000000B0A7B644"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000354C9978"
+					id: "00000000E17EE827"
 					type: "xp"
-					xp: 2
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009F82911C"
-					table_id: 874265822L
-					type: "random"
+					id: "000000007EB10F3B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000806E9D0D"
-					item: "biomesoplenty:stripped_jacaranda_wood"
+					id: "0000000006F1014E"
+					item: "biomesoplenty:stripped_hellbark_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F639B8EE"
-					item: "biomesoplenty:stripped_magic_wood"
+					id: "000000004217EEA0"
+					item: "biomesoplenty:stripped_jacaranda_wood"
 					type: "item"
 				}
 			]
 			x: -13.0d
-			y: 7.0d
+			y: 6.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000735BCF82"
+			id: "00000000EF2C3150"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004FAEB356"
+					id: "0000000066426D7F"
 					type: "xp"
-					xp: 11
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D92E1DBC"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000EDF82A08"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004EACDBA1"
+					id: "000000007D6CF256"
 					item: "biomesoplenty:mossy_black_sand"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007178A882"
+					id: "000000007EC2D9A3"
 					item: "minecraft:mossy_cobblestone"
 					type: "item"
 				}
@@ -280,37 +316,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DF4E7579"
+			id: "00000000D0014BC1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000015C534DF"
+					id: "0000000026776BF6"
 					type: "xp"
-					xp: 9
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FB4BE91D"
-					table_id: 874265822L
-					type: "random"
+					id: "000000004BEF469B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000076262E3"
+					id: "000000004F4230FF"
 					item: "biomesoplenty:palm_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000321DD9D4"
+					id: "0000000030CF3808"
 					item: "biomesoplenty:palm_pressure_plate"
 					type: "item"
 				}
@@ -319,37 +360,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000100DD0D0"
+			id: "00000000E112577C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000039F1FA1B"
+					id: "000000004D663951"
 					type: "xp"
-					xp: 12
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000074A6A000"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000D3AAD9EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000203575A0"
+					id: "000000004AEACC02"
 					item: "biomesoplenty:palm_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CC72D751"
+					id: "00000000424EE368"
 					item: "biomesoplenty:palm_fence_gate"
 					type: "item"
 				}
@@ -358,37 +404,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C19502E8"
+			id: "0000000096CA38D7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007B55D033"
+					id: "000000007F78E57D"
 					type: "xp"
-					xp: 14
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005876C97F"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000CBF36A83"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F846C13E"
+					id: "000000007D0E5DE1"
 					item: "biomesoplenty:palm_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000014BA8561"
+					id: "00000000192BB695"
 					item: "biomesoplenty:palm_door"
 					type: "item"
 				}
@@ -397,37 +448,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B7429D14"
+			id: "000000004ACA3313"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000084382D5A"
+					id: "0000000082EBD44A"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000097680807"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000A37DC7F5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F728C9C4"
+					id: "000000004CD21BBC"
 					item: "biomesoplenty:palm_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000013706FA8"
+					id: "00000000EAD194DB"
 					item: "biomesoplenty:palm_chest_boat"
 					type: "item"
 				}
@@ -439,148 +495,168 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000015B6407C"
+			id: "000000003AFE5E6B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000060D2A68E"
+					id: "00000000F264F3C0"
 					type: "xp"
-					xp: 16
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000075205A6"
-					table_id: 874265822L
-					type: "random"
+					id: "000000009D305F36"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006D1167A5"
-					item: "biomesoplenty:fir_wood"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000216B8F15"
-					item: "biomesoplenty:hellbark_wood"
-					type: "item"
-				}
-			]
-			x: -13.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000187058F2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004B34D0C1"
-					type: "xp"
-					xp: 18
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006187885E"
-					table_id: 874265822L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000003915BC6C"
-					item: "biomesoplenty:jacaranda_wood"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CC5048E4"
-					item: "biomesoplenty:magic_wood"
-					type: "item"
-				}
-			]
-			x: -13.0d
-			y: 8.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C2F8F0C2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DCDADB39"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D90F659D"
-					table_id: 874265822L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000052291F88"
-					item: "biomesoplenty:dead_wood"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009B0B7D31"
+					id: "00000000EF659D6F"
 					item: "biomesoplenty:empyreal_wood"
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "00000000EF9FA650"
+					item: "biomesoplenty:fir_wood"
+					type: "item"
+				}
 			]
 			x: -13.0d
-			y: 3.0d
+			y: 5.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004109FFBD"
+			id: "000000004DADD64C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DC977327"
+					id: "0000000050E9E87F"
 					type: "xp"
-					xp: 14
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009942B80B"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000DA001D1B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006559FDA3"
+					item: "biomesoplenty:hellbark_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FD50995D"
+					item: "biomesoplenty:jacaranda_wood"
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E2296EB8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001B280B3C"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000007B2C963A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000047A7F68F"
+					item: "biomesoplenty:black_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003CA0D584"
+					item: "biomesoplenty:dead_wood"
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000BE175CC1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000066EEA06E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000011DE0585"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "000000008E9A0745"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000027BA22C0"
+					id: "00000000AAA97A29"
 					item: "biomesoplenty:palm_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002271E3D8"
+					id: "000000006919893E"
 					item: "biomesoplenty:palm_slab"
 					type: "item"
 				}
@@ -592,186 +668,211 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A539BE18"
+			id: "0000000037A76B14"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BCCA74BC"
+					id: "000000003481E3F5"
 					type: "xp"
-					xp: 19
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005852694A"
-					table_id: 874265822L
-					type: "random"
+					id: "000000005822E722"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008456FE15"
-					item: "biomesoplenty:pine_wood"
+					id: "00000000D7CF41F2"
+					item: "biomesoplenty:palm_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F75340AF"
-					item: "biomesoplenty:redwood_wood"
+					id: "0000000045973EB9"
+					item: "biomesoplenty:pine_wood"
 					type: "item"
 				}
 			]
 			x: -14.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000006A160C3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002372FE99"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "00000000B34FFBB5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C7D083AD"
+					item: "biomesoplenty:redwood_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008636E3A2"
+					item: "biomesoplenty:stripped_dead_wood"
+					type: "item"
+				}
+			]
+			x: -13.0d
 			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000262D7BCD"
+			id: "00000000A5D81DF9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002F34244A"
+					id: "00000000068FD892"
 					type: "xp"
 					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003BB0E160"
-					table_id: 874265822L
-					type: "random"
+					id: "000000001202C437"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000055DE0526"
-					item: "biomesoplenty:stripped_dead_wood"
+					id: "000000002A8C0AE2"
+					item: "biomesoplenty:magic_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E0BC3460"
-					item: "biomesoplenty:stripped_empyreal_wood"
-					type: "item"
-				}
-			]
-			x: -13.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007238D7A3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005C2F3233"
-					type: "xp"
-					xp: 18
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C7F10FDF"
-					table_id: 874265822L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000513D4C49"
+					id: "0000000047D2F3F8"
 					item: "biomesoplenty:mahogany_wood"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "000000004C302D70"
-					item: "biomesoplenty:maple_wood"
-					type: "item"
-				}
 			]
-			x: -14.0d
-			y: 0.0d
+			x: -13.0d
+			y: 9.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000004FFFD10"
+			id: "000000003E85F194"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000558236BA"
+					id: "000000007D8CAC83"
 					type: "xp"
-					xp: 16
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B1D4170E"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000977B1BF0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005014E9F8"
-					item: "biomesoplenty:orange_sandstone"
+					id: "00000000D2A3EFF4"
+					item: "biomesoplenty:maple_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C9504D31"
-					item: "biomesoplenty:palm_wood"
+					id: "00000000FF531F7F"
+					item: "biomesoplenty:orange_sandstone"
 					type: "item"
 				}
 			]
 			x: -13.0d
-			y: 2.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001FEE5E83"
+			id: "0000000029A8CFF4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008FF7AEE4"
+					id: "00000000CA8F5CD7"
 					type: "xp"
-					xp: 19
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D82D3794"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000DE04F3CB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003FBC5946"
+					id: "00000000357B67AC"
 					item: "biomesoplenty:pine_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000060D586B4"
+					id: "00000000A290B9B5"
 					item: "biomesoplenty:pine_chest_boat"
 					type: "item"
 				}
@@ -780,37 +881,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000687341E3"
+			id: "00000000E3056D35"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001D766214"
+					id: "000000009F632951"
 					type: "xp"
-					xp: 15
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000049E7437D"
-					table_id: 874265822L
-					type: "random"
+					id: "000000002F6E9BA8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000F00FC74"
+					id: "000000004CAA919B"
 					item: "biomesoplenty:palm_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003E19E1F4"
+					id: "0000000067CC34D4"
 					item: "biomesoplenty:palm_trapdoor"
 					type: "item"
 				}
@@ -819,37 +925,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000081A7F745"
+			id: "00000000341F9A16"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000282C880E"
+					id: "0000000030055060"
 					type: "xp"
-					xp: 15
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000569F6994"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000374E7348"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C441AAE5"
+					id: "000000008647E6DA"
 					item: "biomesoplenty:pine_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000019D33CF"
+					id: "00000000AA7611EE"
 					item: "biomesoplenty:pine_slab"
 					type: "item"
 				}
@@ -858,37 +969,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000880AC622"
+			id: "00000000E4635418"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000098B79974"
+					id: "00000000A5976678"
 					type: "xp"
-					xp: 18
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000020EAA65C"
-					table_id: 874265822L
-					type: "random"
+					id: "000000008A118FC8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000418A23F5"
+					id: "00000000157D7A0D"
 					item: "biomesoplenty:pine_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001BCFD393"
+					id: "0000000024B06181"
 					item: "biomesoplenty:pine_pressure_plate"
 					type: "item"
 				}
@@ -897,37 +1013,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B7101399"
+			id: "00000000C5CE8D5A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005F6F7904"
+					id: "00000000835A7947"
 					type: "xp"
-					xp: 9
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000077F22635"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000FF1380A9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004726408C"
+					id: "0000000097BC3B2E"
 					item: "biomesoplenty:pine_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006ACD711A"
+					id: "00000000B2489B92"
 					item: "biomesoplenty:pine_fence_gate"
 					type: "item"
 				}
@@ -936,37 +1057,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FA280C7E"
+			id: "00000000ABF688C1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000419C2A25"
+					id: "000000003361EFAF"
 					type: "xp"
-					xp: 8
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000045287474"
-					table_id: 874265822L
-					type: "random"
+					id: "000000002CF0D098"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F8855F60"
+					id: "00000000449EDE2D"
 					item: "biomesoplenty:pine_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000086AB3AD2"
+					id: "0000000099A97D98"
 					item: "biomesoplenty:pine_door"
 					type: "item"
 				}
@@ -975,37 +1101,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008251C846"
+			id: "00000000B9BEF882"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000072FCA17A"
+					id: "000000007D80C8B3"
 					type: "xp"
-					xp: 18
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ACA7056D"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000DFA9C64F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AB3CDC41"
+					id: "00000000D1A713DA"
 					item: "biomesoplenty:red_maple_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007F4F9127"
+					id: "00000000B72716CB"
 					item: "biomesoplenty:redwood_boat"
 					type: "item"
 				}
@@ -1017,33 +1148,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000067A97610"
+			id: "000000009BB45CAA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000947EF69A"
+					id: "0000000000CF1C20"
 					type: "xp"
-					xp: 18
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000099F78DC2"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000065152569"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006EC6F8E1"
+					id: "00000000EDB3EBC2"
 					item: "minecraft:rabbit_stew"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A363A521"
+					id: "000000009250C5C3"
 					item: "minecraft:red_dye"
 					type: "item"
 				}
@@ -1055,33 +1191,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A592435B"
+			id: "00000000D943D4DD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AABE6A1F"
+					id: "00000000FC285F8F"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007FAD3F81"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000FA0F03CB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000046C185FF"
+					id: "000000009A5E94DD"
 					item: "minecraft:pink_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008D8E2239"
+					id: "00000000DD266AEA"
 					item: "minecraft:purple_dye"
 					type: "item"
 				}
@@ -1090,68 +1231,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000CEB88DFB"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008C7F5C2B"
+			id: "00000000BA28CE3C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F21B77B1"
+					id: "00000000A6874670"
 					type: "xp"
-					xp: 2
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CE12E1A2"
-					table_id: 874265822L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "00000000D8CC65D7"
-				item: "biomesoplenty:black_sandstone_slab"
-				type: "item"
-			}]
-			x: -15.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000AE2108D5"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000EDA27DC5"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000724F0BF4"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DD6CBB6C"
-					table_id: 874265822L
-					type: "random"
+					id: "000000001ABC5C83"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000143336A7"
+					id: "000000009A303C73"
 					item: "biomesoplenty:pine_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002B3FBD48"
+					id: "0000000082D01F76"
 					item: "biomesoplenty:pine_trapdoor"
 					type: "item"
 				}
@@ -1163,75 +1278,120 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009ED371FF"
+			id: "0000000044EC7230"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005217ACC6"
+					id: "000000008D06A334"
 					type: "xp"
-					xp: 5
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AEA4BDD8"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000099D53384"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008B876077"
-					item: "biomesoplenty:white_sandstone"
+					id: "000000006A09ACD9"
+					item: "biomesoplenty:umbran_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007250E70D"
-					item: "biomesoplenty:willow_wood"
+					id: "00000000D0726381"
+					item: "biomesoplenty:white_sandstone"
 					type: "item"
 				}
 			]
 			x: -13.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FE4D3A14"
+			id: "0000000071D5809F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005FB07951"
+					id: "00000000881B0260"
 					type: "xp"
-					xp: 17
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003AEC7ABB"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000030DB575A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000075FFCA6B"
-					item: "biomesoplenty:stripped_willow_wood"
+					id: "00000000E141F9EC"
+					item: "biomesoplenty:stripped_umbran_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000047FD0CFC"
-					item: "biomesoplenty:umbran_wood"
+					id: "0000000075A01336"
+					item: "biomesoplenty:stripped_willow_wood"
 					type: "item"
 				}
 			]
+			x: -14.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DB069F41"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A196B628"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000034667B2D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000002F8E7F5B"
+				item: "biomesoplenty:willow_wood"
+				type: "item"
+			}]
 			x: -14.0d
 			y: 4.0d
 		}
@@ -1239,34 +1399,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008E54B4EE"
+			id: "000000006171A1FE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E6A25F4C"
+					id: "00000000AAEABF5B"
 					type: "xp"
-					xp: 4
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009BFA5559"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000C320B3C0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000099BE273B"
-					item: "biomesoplenty:stripped_redwood_wood"
+					id: "00000000CEAC254A"
+					item: "biomesoplenty:stripped_pine_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000967A3D2B"
-					item: "biomesoplenty:stripped_umbran_wood"
+					id: "00000000734F7A77"
+					item: "biomesoplenty:stripped_redwood_wood"
 					type: "item"
 				}
 			]
@@ -1277,64 +1442,74 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000883C5334"
+			id: "0000000044F0BF06"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A9B5A2D4"
+					id: "00000000BD7DF25A"
 					type: "xp"
-					xp: 11
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001574819C"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000073199D05"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000029C7EC4E"
-					item: "biomesoplenty:stripped_palm_wood"
+					id: "00000000D1EA7610"
+					item: "biomesoplenty:stripped_maple_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B841F569"
-					item: "biomesoplenty:stripped_pine_wood"
+					id: "000000003349CDE2"
+					item: "biomesoplenty:stripped_palm_wood"
 					type: "item"
 				}
 			]
 			x: -14.0d
-			y: 1.0d
+			y: 0.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006A2B5444"
+			id: "00000000ABE43D60"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001519056D"
+					id: "000000001F6A91DB"
 					type: "xp"
-					xp: 3
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E58FD8AD"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000056A04178"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009FEBEFF9"
+				id: "0000000092B34E88"
 				item: "biomesoplenty:unmapped_end_stone"
 				type: "item"
 			}]
@@ -1342,37 +1517,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C7EF5DB9"
+			id: "00000000E83E58E3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B1BB60A3"
+					id: "000000004495DCD9"
 					type: "xp"
-					xp: 11
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000A4ACD01"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000C8710BF2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000493C8BA8"
+					id: "0000000074A6C4E1"
 					item: "biomesoplenty:redwood_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006E440E92"
+					id: "000000006A0FAAA1"
 					item: "biomesoplenty:redwood_hanging_sign"
 					type: "item"
 				}
@@ -1381,37 +1561,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000830801EB"]
+			dependencies: ["00000000E528ECFC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EAA18364"
+			id: "0000000043F108C6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000044FA9292"
+					id: "00000000C0E02226"
 					type: "xp"
-					xp: 13
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000038CA14E1"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000E10C6661"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008DB1C198"
+					id: "0000000082C5EFAB"
 					item: "biomesoplenty:willow_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007898C040"
+					id: "00000000FE717FB0"
 					item: "biomesoplenty:willow_pressure_plate"
 					type: "item"
 				}
@@ -1420,37 +1605,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007D576C38"
+			id: "000000003F5EE788"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000081631516"
+					id: "000000002232861B"
 					type: "xp"
-					xp: 9
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000078960F0C"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000C584E2D7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000805A0949"
+					id: "00000000C7CD7F59"
 					item: "biomesoplenty:redwood_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007BA5AB85"
+					id: "000000008B1EBDC8"
 					item: "biomesoplenty:redwood_fence"
 					type: "item"
 				}
@@ -1459,37 +1649,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000830801EB"]
+			dependencies: ["00000000E528ECFC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EEDA9507"
+			id: "00000000F97273E9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000074C05616"
+					id: "00000000C0D916E6"
 					type: "xp"
-					xp: 3
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003446F0C7"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000628C775D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000ACAC9219"
+					id: "00000000F6EF64B1"
 					item: "biomesoplenty:willow_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000649114BE"
+					id: "000000001B354D29"
 					item: "biomesoplenty:willow_slab"
 					type: "item"
 				}
@@ -1498,37 +1693,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CF463E30"
+			id: "000000004C9C0B4E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C525DA5A"
+					id: "000000004636304D"
 					type: "xp"
-					xp: 21
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002B0CB5D1"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000A1776320"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000060DA94D9"
+					id: "00000000B0695929"
 					item: "biomesoplenty:redwood_chest_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005A37213A"
+					id: "000000006D360536"
 					item: "biomesoplenty:redwood_button"
 					type: "item"
 				}
@@ -1537,37 +1737,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000830801EB"]
+			dependencies: ["00000000E528ECFC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000069744B28"
+			id: "0000000003E183A7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000515B2DA4"
+					id: "000000006AFA9CE8"
 					type: "xp"
-					xp: 14
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000B2176B4"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000050DDC507"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000545E9CBF"
+					id: "00000000AB6AF95F"
 					item: "biomesoplenty:willow_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A8D44C96"
+					id: "0000000099525F76"
 					item: "biomesoplenty:willow_trapdoor"
 					type: "item"
 				}
@@ -1579,33 +1784,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000064EDE9D3"
+			id: "000000004D2F596F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000381A4447"
+					id: "00000000209F6FFF"
 					type: "xp"
-					xp: 15
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B55B5704"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000F740467C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000031C69BD3"
+					id: "000000005BF6F826"
 					item: "minecraft:yellow_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EB1FB979"
+					id: "0000000041993AEF"
 					item: "biomesoplenty:yellow_maple_leaf_pile"
 					type: "item"
 				}
@@ -1615,80 +1825,88 @@
 		}
 		{
 			dependencies: [
-				"00000000D5FA7373"
-				"00000000DB12DCC0"
-				"00000000187058F2"
-				"000000007238D7A3"
+				"00000000B0A7B644"
+				"000000004DADD64C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CD20A26E"
+			id: "000000004BF1085C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F76728C7"
+					id: "0000000090B77CA6"
 					type: "xp"
-					xp: 3
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003776FD49"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000BF9E81D8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000080028CC1"
-					item: "biomesoplenty:magic_planks"
+					id: "00000000015F2F6D"
+					item: "biomesoplenty:hellbark_planks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AFAA42F1"
-					item: "biomesoplenty:mahogany_planks"
+					id: "00000000961BD293"
+					item: "biomesoplenty:jacaranda_planks"
 					type: "item"
 				}
 			]
 			x: -11.0d
-			y: 5.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["00000000EFBCE2B7"]
+			dependencies: ["0000000016D703C3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005604CB13"
+			id: "0000000042A04386"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008CCB5849"
+					id: "00000000DCDAC5E9"
 					type: "xp"
-					xp: 19
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008AF8E8A9"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000077083476"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001A78E885"
+					id: "0000000072ECECFA"
 					item: "biomesoplenty:smooth_black_sandstone_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008406F1F4"
+					id: "00000000F44F9433"
 					item: "biomesoplenty:smooth_orange_sandstone_slab"
 					type: "item"
 				}
@@ -1698,83 +1916,91 @@
 		}
 		{
 			dependencies: [
-				"000000007B778BFA"
-				"00000000DB12DCC0"
-				"0000000015B6407C"
-				"00000000187058F2"
+				"000000003DE87EFA"
+				"000000003AFE5E6B"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000060AE2619"
+			id: "00000000B23D272B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000093769AE0"
+					id: "00000000C7043C1A"
 					type: "xp"
-					xp: 9
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000073650C8A"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000010C6972E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CE337C48"
-					item: "biomesoplenty:hellbark_planks"
+					id: "00000000C6D54596"
+					item: "biomesoplenty:empyreal_planks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009A15CAD7"
-					item: "biomesoplenty:jacaranda_planks"
+					id: "00000000F268200F"
+					item: "biomesoplenty:fir_planks"
 					type: "item"
 				}
 			]
 			x: -11.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"00000000AE2108D5"
-				"00000000EFBCE2B7"
+				"0000000016D703C3"
+				"000000007B8F83C7"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002D5B40E1"
+			id: "0000000084802544"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BF1E80F5"
+					id: "000000004A064A5B"
 					type: "xp"
-					xp: 7
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F97B70C6"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000BA96DC12"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008EED4460"
+					id: "00000000BD928EBA"
 					item: "biomesoplenty:redwood_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005D2C58BC"
+					id: "00000000A340687A"
 					item: "biomesoplenty:smooth_black_sandstone_slab"
 					type: "item"
 				}
@@ -1784,79 +2010,89 @@
 		}
 		{
 			dependencies: [
-				"000000008E54B4EE"
-				"00000000883C5334"
-				"00000000A539BE18"
+				"0000000044F0BF06"
+				"0000000037A76B14"
+				"000000003E85F194"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AE2108D5"
+			id: "00000000BE175CC1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000071218D5D"
+					id: "00000000453DBAFE"
 					type: "xp"
-					xp: 16
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E4553D2C"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000EFB16381"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006CB06B61"
-					item: "biomesoplenty:pine_planks"
+					id: "000000001487FA80"
+					item: "biomesoplenty:maple_planks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C126013F"
-					item: "biomesoplenty:redwood_planks"
+					id: "0000000038E117F9"
+					item: "biomesoplenty:palm_planks"
 					type: "item"
 				}
 			]
 			x: -11.0d
-			y: 7.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000071338E9B"
+			id: "00000000A5303CB2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003BF483DD"
+					id: "000000005E5C0C09"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F2B72157"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000F69E78CC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C61A788F"
+					id: "00000000B1CBDC7B"
 					item: "biomesoplenty:redwood_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E7D790F3"
+					id: "000000001E43070C"
 					item: "biomesoplenty:redwood_stairs"
 					type: "item"
 				}
@@ -1866,80 +2102,88 @@
 		}
 		{
 			dependencies: [
-				"00000000D5FA7373"
-				"00000000883C5334"
-				"000000007238D7A3"
-				"0000000004FFFD10"
+				"00000000B8F7C628"
+				"00000000A5D81DF9"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AC0D23CE"
+			id: "0000000067AC8F8E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F1A8E628"
+					id: "00000000C2B31417"
 					type: "xp"
-					xp: 16
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009EE8862E"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000B2CB6975"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000049BCA738"
-					item: "biomesoplenty:maple_planks"
+					id: "0000000013A97E52"
+					item: "biomesoplenty:magic_planks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FE08A965"
-					item: "biomesoplenty:palm_planks"
+					id: "000000002C398A35"
+					item: "biomesoplenty:mahogany_planks"
 					type: "item"
 				}
 			]
 			x: -11.0d
-			y: 6.0d
+			y: 5.0d
 		}
 		{
-			dependencies: ["00000000AE2108D5"]
+			dependencies: ["000000007B8F83C7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000174C75C0"
+			id: "0000000022ABAD70"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002A116DA0"
+					id: "00000000D76AABDA"
 					type: "xp"
-					xp: 5
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009A96F483"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000025348B47"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EFCC60C6"
+					id: "000000007254BADC"
 					item: "biomesoplenty:redwood_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000890653C3"
+					id: "0000000047165880"
 					item: "biomesoplenty:redwood_sign"
 					type: "item"
 				}
@@ -1949,40 +2193,89 @@
 		}
 		{
 			dependencies: [
-				"000000009ED371FF"
-				"00000000CEB88DFB"
+				"0000000044EC7230"
+				"000000003E85F194"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000085081005"
+			id: "00000000E09181EE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003D6AD65D"
+					id: "00000000D61BC070"
 					type: "xp"
-					xp: 17
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000F8BACAB"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000083CE88F9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E6697583"
-					item: "biomesoplenty:chiseled_white_sandstone"
+					id: "000000009E777646"
+					item: "biomesoplenty:chiseled_orange_sandstone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A674075C"
-					item: "biomesoplenty:cut_black_sandstone"
+					id: "000000008386299A"
+					item: "biomesoplenty:chiseled_white_sandstone"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000E2296EB8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000007035D14C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000011A28DBB"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "0000000022BBCA5A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E975525C"
+					item: "biomesoplenty:brimstone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E64DD8C8"
+					item: "biomesoplenty:chiseled_black_sandstone"
 					type: "item"
 				}
 			]
@@ -1990,76 +2283,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000004FFFD10"]
+			dependencies: ["00000000040123AB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000035A15BE6"
+			id: "00000000C850F35D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EC57A845"
+					id: "00000000FD2DAAD5"
 					type: "xp"
-					xp: 8
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006FB81D0D"
-					table_id: 874265822L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000006F045D"
-					item: "biomesoplenty:brimstone_bricks"
+					id: "0000000005E61DC7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009634818F"
-					item: "biomesoplenty:chiseled_orange_sandstone"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["0000000056CD218D"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000D4ECDE2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000057886540"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002C4AC9EF"
-					table_id: 874265822L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F793983C"
+					id: "0000000093468E63"
 					item: "biomesoplenty:umbran_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006F46ECE4"
+					id: "00000000A0D756E9"
 					item: "biomesoplenty:umbran_chest_boat"
 					type: "item"
 				}
@@ -2069,80 +2328,89 @@
 		}
 		{
 			dependencies: [
-				"000000007B778BFA"
-				"0000000015B6407C"
-				"00000000C2F8F0C2"
-				"00000000262D7BCD"
+				"0000000044EC7230"
+				"00000000E2296EB8"
+				"0000000006A160C3"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000CE910ED"
+			id: "00000000EE502637"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BB36AFCA"
+					id: "00000000C9E5BF07"
 					type: "xp"
-					xp: 15
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000545FDF0E"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000492DBA38"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D64BE99E"
-					item: "biomesoplenty:empyreal_planks"
+					id: "0000000090E2C3AC"
+					item: "biomesoplenty:cut_white_sandstone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000050449768"
-					item: "biomesoplenty:fir_planks"
+					id: "0000000004AAF704"
+					item: "biomesoplenty:dead_planks"
 					type: "item"
 				}
 			]
 			x: -11.0d
-			y: 3.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["0000000056CD218D"]
+			dependencies: ["00000000040123AB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD92AF0B"
+			id: "000000005C29A50B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000015322B6E"
+					id: "00000000950C2041"
 					type: "xp"
-					xp: 8
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A61A1BC8"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000045748259"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000024917D94"
+					id: "0000000066823D6A"
 					item: "biomesoplenty:smooth_white_sandstone_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FB59EC7E"
+					id: "000000000E90D33A"
 					item: "minecraft:tnt"
 					type: "item"
 				}
@@ -2152,82 +2420,91 @@
 		}
 		{
 			dependencies: [
-				"00000000C2F8F0C2"
-				"00000000262D7BCD"
-				"0000000004FFFD10"
+				"00000000E2296EB8"
+				"000000003E85F194"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000047168974"
+			id: "0000000024CF24E7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000809618F8"
+					id: "0000000083828415"
 					type: "xp"
-					xp: 20
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008FA5A4E1"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000CD434422"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005F1F175B"
-					item: "biomesoplenty:cut_orange_sandstone"
+					id: "000000008F1AD89F"
+					item: "biomesoplenty:cut_black_sandstone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C72D1CC3"
-					item: "biomesoplenty:dead_planks"
+					id: "000000004464C2C6"
+					item: "biomesoplenty:cut_orange_sandstone"
 					type: "item"
 				}
 			]
 			x: -11.0d
-			y: 2.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
-				"0000000056CD218D"
-				"00000000EFBCE2B7"
+				"0000000016D703C3"
+				"00000000040123AB"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD8D7674"
+			id: "00000000FD8AE181"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FA5C9253"
+					id: "00000000CEEFEBFC"
 					type: "xp"
-					xp: 10
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D4BE931F"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000ADB8112B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BEB53024"
+					id: "00000000E0823C0D"
 					item: "biomesoplenty:smooth_orange_sandstone_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D6ACE6BE"
+					id: "00000000A317191C"
 					item: "biomesoplenty:smooth_white_sandstone_slab"
 					type: "item"
 				}
@@ -2237,41 +2514,45 @@
 		}
 		{
 			dependencies: [
-				"000000009ED371FF"
-				"00000000FE4D3A14"
-				"000000008E54B4EE"
+				"00000000E2296EB8"
+				"000000003E85F194"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000056CD218D"
+			id: "0000000016D703C3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000038C1DE79"
+					id: "0000000065BB7D60"
 					type: "xp"
-					xp: 16
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C0E1645E"
-					table_id: 874265822L
-					type: "random"
+					id: "000000001438C9A2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DCE178C4"
-					item: "biomesoplenty:smooth_white_sandstone"
+					id: "0000000053E3473B"
+					item: "biomesoplenty:smooth_black_sandstone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007861DD69"
-					item: "biomesoplenty:umbran_planks"
+					id: "0000000075612A6D"
+					item: "biomesoplenty:smooth_orange_sandstone"
 					type: "item"
 				}
 			]
@@ -2280,40 +2561,46 @@
 		}
 		{
 			dependencies: [
-				"00000000CEB88DFB"
-				"0000000004FFFD10"
+				"000000006171A1FE"
+				"0000000037A76B14"
+				"0000000006A160C3"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EFBCE2B7"
+			id: "000000007B8F83C7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000185A2BDC"
+					id: "00000000FD0312F2"
 					type: "xp"
-					xp: 5
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007F08D4C8"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000B4D9A6F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000741F5B65"
-					item: "biomesoplenty:smooth_black_sandstone"
+					id: "00000000DE625C37"
+					item: "biomesoplenty:pine_planks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000048A065E0"
-					item: "biomesoplenty:smooth_orange_sandstone"
+					id: "0000000079329426"
+					item: "biomesoplenty:redwood_planks"
 					type: "item"
 				}
 			]
@@ -2321,37 +2608,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000056CD218D"]
+			dependencies: ["00000000040123AB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000451C3BAD"
+			id: "00000000C0AB88A8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000322D282C"
+					id: "00000000312E5FDD"
 					type: "xp"
-					xp: 11
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000071D8A84C"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000025C5E971"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C7729777"
+					id: "000000002C6C11B2"
 					item: "biomesoplenty:umbran_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000563603AF"
+					id: "0000000024FDFF99"
 					item: "biomesoplenty:umbran_slab"
 					type: "item"
 				}
@@ -2360,37 +2652,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000056CD218D"]
+			dependencies: ["00000000040123AB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C3BA16A5"
+			id: "0000000037EC02FC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000484CF66E"
+					id: "0000000021FBC1A2"
 					type: "xp"
-					xp: 9
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004B71A096"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000BE27A53F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000472EF863"
+					id: "00000000D4706FB8"
 					item: "biomesoplenty:umbran_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000081027B9D"
+					id: "0000000017DF3D58"
 					item: "biomesoplenty:umbran_pressure_plate"
 					type: "item"
 				}
@@ -2399,37 +2696,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000056CD218D"]
+			dependencies: ["00000000040123AB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B52C4FE7"
+			id: "00000000D3B74206"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000078500B8"
+					id: "000000008731F5F2"
 					type: "xp"
-					xp: 16
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008B02D210"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000A24BFC75"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000054ABDFD8"
+					id: "00000000FA372180"
 					item: "biomesoplenty:umbran_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000007EE66E7"
+					id: "0000000036AC5FA8"
 					item: "biomesoplenty:umbran_fence_gate"
 					type: "item"
 				}
@@ -2438,37 +2740,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000056CD218D"]
+			dependencies: ["00000000040123AB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006449941D"
+			id: "000000003793DFED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D7C5A117"
+					id: "000000001823D96B"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E996D2B2"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000095482D73"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000925B76AD"
+					id: "000000004632E083"
 					item: "biomesoplenty:umbran_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009DA31540"
+					id: "00000000C0AC42CF"
 					item: "biomesoplenty:umbran_door"
 					type: "item"
 				}
@@ -2477,37 +2784,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000830801EB"]
+			dependencies: ["00000000E528ECFC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005A11BF5A"
+			id: "0000000077AA20FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F9C4AD60"
+					id: "00000000603A433A"
 					type: "xp"
-					xp: 21
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000010CF67AB"
-					table_id: 874265822L
-					type: "random"
+					id: "000000008F3B389F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E39BE3A3"
+					id: "00000000CD7FDA4B"
 					item: "biomesoplenty:willow_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003D29A217"
+					id: "0000000093CE53AC"
 					item: "biomesoplenty:willow_chest_boat"
 					type: "item"
 				}
@@ -2516,37 +2828,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000009ED371FF"]
+			dependencies: ["0000000044EC7230"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000063BCBD1D"
+			id: "000000009F661E76"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000069822403"
+					id: "00000000C14FC571"
 					type: "xp"
-					xp: 12
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006DDC732D"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000C58A9F5A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000082BD7590"
+					id: "00000000ADD5CE93"
 					item: "biomesoplenty:white_sandstone_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004723F9F4"
+					id: "0000000034CD7B54"
 					item: "biomesoplenty:white_sandstone_wall"
 					type: "item"
 				}
@@ -2556,39 +2873,44 @@
 		}
 		{
 			dependencies: [
-				"000000009ED371FF"
-				"0000000085081005"
+				"0000000044EC7230"
+				"00000000E09181EE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BDF7FFE7"
+			id: "00000000BFB50909"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F5099C17"
+					id: "00000000526A0173"
 					type: "xp"
-					xp: 3
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BD5F81E3"
-					table_id: 874265822L
-					type: "random"
+					id: "000000002750512E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000050704EBF"
+					id: "00000000E98AC03D"
 					item: "minecraft:white_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001BE5C6E9"
+					id: "00000000D8F3DB18"
 					item: "biomesoplenty:white_sandstone_slab"
 					type: "item"
 				}
@@ -2597,37 +2919,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000056CD218D"]
+			dependencies: ["00000000040123AB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000ACE0F17"
+			id: "000000004CF36A6B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002B4B4132"
+					id: "00000000E1BF9A92"
 					type: "xp"
-					xp: 14
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E3CD87D4"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000847831A5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003A346185"
+					id: "00000000EAC5FB5C"
 					item: "biomesoplenty:umbran_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C60CE761"
+					id: "0000000092E8124C"
 					item: "biomesoplenty:umbran_trapdoor"
 					type: "item"
 				}
@@ -2636,37 +2963,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000047168974"]
+			dependencies: ["00000000EE502637"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D389F427"
+			id: "000000000593FF61"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000091051BD4"
+					id: "00000000D86BCF15"
 					type: "xp"
-					xp: 17
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CFDDAEC0"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000006B01239"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000037318256"
+					id: "0000000036CC23F4"
 					item: "biomesoplenty:dead_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002B01C0E2"
+					id: "0000000066E0072E"
 					item: "biomesoplenty:dead_sign"
 					type: "item"
 				}
@@ -2675,37 +3007,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000047168974"]
+			dependencies: ["00000000EE502637"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004E058C86"
+			id: "000000008EB75C7D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ECB2C168"
+					id: "00000000EBC8BF0A"
 					type: "xp"
-					xp: 18
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007C049C44"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000F95B80CD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000093589E8"
+					id: "000000006453C75E"
 					item: "biomesoplenty:dead_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000083148077"
+					id: "0000000045ED0B1E"
 					item: "biomesoplenty:dead_hanging_sign"
 					type: "item"
 				}
@@ -2714,37 +3051,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000047168974"]
+			dependencies: ["00000000EE502637"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F722839C"
+			id: "00000000F627D0E6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007F5E5327"
+					id: "0000000077DC7DE7"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ADCDDC3B"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000B791EC39"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FA230A23"
+					id: "00000000D026B54A"
 					item: "biomesoplenty:dead_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C3E2BCD6"
+					id: "000000003C91E5F1"
 					item: "biomesoplenty:dead_fence"
 					type: "item"
 				}
@@ -2753,37 +3095,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000830801EB"]
+			dependencies: ["00000000E528ECFC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AA2B08C1"
+			id: "00000000CABD8B77"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000452A8164"
+					id: "000000007855DB2E"
 					type: "xp"
-					xp: 3
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000095A4343E"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000AEDFB164"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D02382EB"
+					id: "00000000395843FB"
 					item: "biomesoplenty:willow_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A94B0289"
+					id: "00000000F8422263"
 					item: "biomesoplenty:willow_fence_gate"
 					type: "item"
 				}
@@ -2792,37 +3139,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000047168974"]
+			dependencies: ["00000000EE502637"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000752AC727"
+			id: "00000000041EACFD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000455F290B"
+					id: "00000000FD1CC6F4"
 					type: "xp"
-					xp: 7
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002B911F32"
-					table_id: 874265822L
-					type: "random"
+					id: "000000001B536EED"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C7A0600B"
+					id: "00000000FB8261FE"
 					item: "biomesoplenty:dead_chest_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008124289C"
+					id: "0000000027DE3455"
 					item: "biomesoplenty:dead_button"
 					type: "item"
 				}
@@ -2831,37 +3183,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000830801EB"]
+			dependencies: ["00000000E528ECFC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000033984A0F"
+			id: "0000000095AC1A2E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000012D6A355"
+					id: "000000002570F96F"
 					type: "xp"
-					xp: 16
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000013FB9C3C"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000CF0D37AD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000054D2E7CA"
+					id: "00000000017B52B5"
 					item: "biomesoplenty:willow_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CCA3F49E"
+					id: "00000000A2CB9E02"
 					item: "biomesoplenty:willow_door"
 					type: "item"
 				}
@@ -2870,37 +3227,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000062595DBB"
+			id: "00000000EF04160C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B52313FE"
+					id: "00000000DD7A7BB4"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CC2F6A9F"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000034796A3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000018E5B1EF"
+					id: "000000002544E1F9"
 					item: "biomesoplenty:empyreal_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000562B1EFE"
+					id: "00000000B8CA72C8"
 					item: "biomesoplenty:empyreal_fence"
 					type: "item"
 				}
@@ -2909,37 +3271,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E49D35FC"
+			id: "000000002C197A23"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C2DB788A"
+					id: "00000000034F67BB"
 					type: "xp"
-					xp: 12
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000451CCC45"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000095A6FF03"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000002DBD140"
+					id: "00000000AE98C42D"
 					item: "biomesoplenty:empyreal_chest_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F5804504"
+					id: "0000000083587B5F"
 					item: "biomesoplenty:empyreal_button"
 					type: "item"
 				}
@@ -2949,39 +3316,44 @@
 		}
 		{
 			dependencies: [
-				"000000000CE910ED"
-				"0000000047168974"
+				"00000000B23D272B"
+				"00000000EE502637"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002988BD50"
+			id: "000000007F7A1C36"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000336F0350"
+					id: "000000007E8C38F5"
 					type: "xp"
-					xp: 3
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000065838B09"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000E693559C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000029A09DC0"
+					id: "000000005C492B5A"
 					item: "biomesoplenty:dead_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D85C53F4"
+					id: "00000000DB9ECD7C"
 					item: "biomesoplenty:empyreal_boat"
 					type: "item"
 				}
@@ -2990,37 +3362,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000047168974"]
+			dependencies: ["00000000EE502637"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000086DC7BEA"
+			id: "00000000F886D6B1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002FF9F769"
+					id: "0000000041CA6082"
 					type: "xp"
-					xp: 17
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000182450FE"
-					table_id: 874265822L
-					type: "random"
+					id: "000000008AC4956C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000048C5943A"
+					id: "0000000055A152AD"
 					item: "biomesoplenty:dead_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A0928926"
+					id: "00000000D8C24700"
 					item: "biomesoplenty:dead_stairs"
 					type: "item"
 				}
@@ -3029,37 +3406,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000015D0941A"
+			id: "00000000EDCE3F67"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007C9DD6B9"
+					id: "0000000079CF1F0B"
 					type: "xp"
-					xp: 13
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000963FA3B"
-					table_id: 874265822L
-					type: "random"
+					id: "000000006169C2AD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009DA517D4"
+					id: "00000000EEB4576A"
 					item: "biomesoplenty:empyreal_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B6CDD512"
+					id: "0000000085537171"
 					item: "biomesoplenty:empyreal_sign"
 					type: "item"
 				}
@@ -3068,37 +3450,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E0CF71EC"
+			id: "0000000065CF571C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007153D1A3"
+					id: "0000000061BDBE41"
 					type: "xp"
-					xp: 17
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000078046F01"
-					table_id: 874265822L
-					type: "random"
+					id: "000000000CEAF9C1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000493C9CCA"
+					id: "0000000062B1F0D0"
 					item: "biomesoplenty:empyreal_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000340353A0"
+					id: "0000000040642ED1"
 					item: "biomesoplenty:empyreal_hanging_sign"
 					type: "item"
 				}
@@ -3110,72 +3497,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CEB88DFB"
+			id: "000000004E8C9B13"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CAE5182E"
+					id: "00000000DA3E7153"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000026955F34"
-					table_id: 874265822L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000008F6EF79"
-					item: "biomesoplenty:black_sandstone"
+					id: "0000000051589807"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000ACDC323F"
-					item: "biomesoplenty:chiseled_black_sandstone"
-					type: "item"
-				}
-			]
-			x: -13.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003DBC17CF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C16A7EA6"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007C08F472"
-					table_id: 874265822L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007298795E"
-					item: "biomesoplenty:blackstone_spines"
+					id: "0000000095EE6300"
+					item: "biomesoplenty:blackstone_bulb"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000255BD490"
-					item: "biomesoplenty:rose_quartz_block"
+					id: "000000003425DB7C"
+					item: "biomesoplenty:blackstone_spines"
 					type: "item"
 				}
 			]
@@ -3183,37 +3537,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000BF91236"
+			id: "00000000D57B9855"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002CE1EBF5"
+					id: "00000000859EAA3E"
 					type: "xp"
-					xp: 16
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A179CE5E"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000ADFEF4F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E4C0A5C7"
+					id: "0000000012D3B130"
 					item: "biomesoplenty:empyreal_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003F4CE2A7"
+					id: "00000000632C970D"
 					item: "biomesoplenty:empyreal_stairs"
 					type: "item"
 				}
@@ -3222,38 +3581,47 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000CEB88DFB"]
+			dependencies: [
+				"000000007035D14C"
+				"0000000024CF24E7"
+				"00000000E2296EB8"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000009987479"
+			id: "000000005F1ECA7D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000191ACE52"
+					id: "000000002AA69798"
 					type: "xp"
-					xp: 3
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000060416CCF"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000286FC0FF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000060426A32"
-					item: "biomesoplenty:black_sandstone_wall"
+					id: "000000001961A44B"
+					item: "biomesoplenty:black_sandstone_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C9B1382F"
-					item: "biomesoplenty:blackstone_bulb"
+					id: "000000008F865EF7"
+					item: "biomesoplenty:black_sandstone_wall"
 					type: "item"
 				}
 			]
@@ -3261,37 +3629,43 @@
 			y: 1.0d
 		}
 		{
+			dependencies: ["000000007035D14C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001E90CD66"
+			id: "00000000B2555CD9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AB1E6AF7"
+					id: "000000006CE09BC5"
 					type: "xp"
-					xp: 20
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005CCA1E03"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000059DAAD6F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EC0C8ABA"
-					item: "biomesoplenty:brimstone_brick_wall"
+					id: "00000000D335AB03"
+					item: "biomesoplenty:brimstone_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F6DDF9F3"
-					item: "biomesoplenty:brimstone_bud"
+					id: "0000000042BD511B"
+					item: "biomesoplenty:brimstone_brick_wall"
 					type: "item"
 				}
 			]
@@ -3299,38 +3673,43 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000035A15BE6"]
+			dependencies: ["000000007035D14C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005DDAC177"
+			id: "00000000B493BBB5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002BB8D7F0"
+					id: "0000000086ED508B"
 					type: "xp"
-					xp: 2
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002FCBAB08"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000088262CFC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000254B0904"
-					item: "biomesoplenty:brimstone_brick_slab"
+					id: "0000000058ED5973"
+					item: "biomesoplenty:rose_quartz_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000391377A0"
-					item: "biomesoplenty:brimstone_brick_stairs"
+					id: "000000005BD7ECA0"
+					item: "biomesoplenty:brimstone_brick_slab"
 					type: "item"
 				}
 			]
@@ -3338,38 +3717,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000035A15BE6"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008A3C1BAE"
+			id: "000000001E6B1B98"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E853DB55"
+					id: "00000000FC8C14C4"
 					type: "xp"
-					xp: 21
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D274E2FD"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000A471B766"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001B655481"
-					item: "minecraft:brown_dye"
+					id: "00000000FAEC80C3"
+					item: "biomesoplenty:brimstone_fumarole"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004E8D81B7"
-					item: "biomesoplenty:chiseled_brimstone_bricks"
+					id: "000000006D50335E"
+					item: "minecraft:brown_dye"
 					type: "item"
 				}
 			]
@@ -3377,37 +3760,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BE4E18D2"
+			id: "00000000B333D59B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ECC65960"
+					id: "000000002F2AD7A2"
 					type: "xp"
-					xp: 8
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FFD8DDD0"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000ECD2C16F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004DEFDD07"
+					id: "00000000BC596CCD"
 					item: "biomesoplenty:fir_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000319E9008"
+					id: "00000000F21C2E6A"
 					item: "biomesoplenty:fir_fence_gate"
 					type: "item"
 				}
@@ -3419,34 +3807,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001CD5A732"
+			id: "00000000A4E3ECD5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000000D67B3E"
+					id: "000000006BD16419"
 					type: "xp"
-					xp: 14
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000C40E9AC"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000D03E9331"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000927A511"
-					item: "biomesoplenty:brimstone_cluster"
+					id: "00000000AA130F6B"
+					item: "biomesoplenty:brimstone_bud"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000043C10B2D"
-					item: "biomesoplenty:brimstone_fumarole"
+					id: "000000001D142F9C"
+					item: "biomesoplenty:brimstone_cluster"
 					type: "item"
 				}
 			]
@@ -3454,37 +3847,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000057EF9922"
+			id: "00000000E841C422"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008D47DA92"
+					id: "00000000B49CB073"
 					type: "xp"
-					xp: 15
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000067BA233"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000085DEA2ED"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E337EF1A"
+					id: "00000000EAB0C840"
 					item: "biomesoplenty:fir_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D3FD53DF"
+					id: "0000000022871618"
 					item: "biomesoplenty:fir_door"
 					type: "item"
 				}
@@ -3493,37 +3891,45 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000009ED371FF"]
+			dependencies: [
+				"00000000EE502637"
+				"0000000024CF24E7"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005D15CEC5"
+			id: "00000000094ACB43"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001413D1FF"
+					id: "000000008843E348"
 					type: "xp"
-					xp: 7
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006F473F2E"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000E50A76AB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DF8631FD"
-					item: "biomesoplenty:cut_white_sandstone"
+					id: "00000000B7B3C805"
+					item: "biomesoplenty:cut_orange_sandstone_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000B084D20"
+					id: "00000000CC5D2183"
 					item: "biomesoplenty:cut_white_sandstone_slab"
 					type: "item"
 				}
@@ -3532,37 +3938,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003DD833E5"
+			id: "00000000267E3011"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000022BB2938"
+					id: "00000000609FB4DD"
 					type: "xp"
-					xp: 2
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AA15C869"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000035280A6A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F868B23A"
+					id: "000000002AD75122"
 					item: "biomesoplenty:fir_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F4F14A86"
+					id: "000000008615238C"
 					item: "biomesoplenty:fir_chest_boat"
 					type: "item"
 				}
@@ -3571,41 +3982,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"0000000085081005"
-				"0000000047168974"
-			]
+			dependencies: ["00000000E2296EB8"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000007C8A8E4"
+			id: "0000000086FD2F71"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008D9CBB5C"
+					id: "00000000216B215B"
 					type: "xp"
-					xp: 3
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000065031ECA"
-					table_id: 874265822L
-					type: "random"
+					id: "000000003F469C8F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007F4E8289"
-					item: "biomesoplenty:cut_black_sandstone_slab"
+					id: "00000000B8218181"
+					item: "biomesoplenty:chiseled_brimstone_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000059BBE22B"
-					item: "biomesoplenty:cut_orange_sandstone_slab"
+					id: "00000000BFE73FD6"
+					item: "biomesoplenty:cut_black_sandstone_slab"
 					type: "item"
 				}
 			]
@@ -3613,37 +4026,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FB8B9A11"
+			id: "000000007EFEF6B2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B46400B9"
+					id: "00000000C8D4D625"
 					type: "xp"
-					xp: 1
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007FD8BEE9"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000013754B5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008A22D435"
+					id: "000000005A64E054"
 					item: "biomesoplenty:empyreal_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000093CB5219"
+					id: "000000003009FECD"
 					item: "biomesoplenty:null_end_stone"
 					type: "item"
 				}
@@ -3655,33 +4073,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AE28B6E4"
+			id: "000000007D932F76"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009C18A11F"
+					id: "000000001C850CB1"
 					type: "xp"
-					xp: 13
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004CD457AD"
-					table_id: 874265822L
-					type: "random"
+					id: "000000004D5D8D99"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C19C77FD"
+					id: "00000000C2255845"
 					item: "biomesoplenty:flesh"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008B737B24"
+					id: "00000000A55AB754"
 					item: "minecraft:gray_dye"
 					type: "item"
 				}
@@ -3690,37 +4113,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000047168974"]
+			dependencies: ["00000000EE502637"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006EECFAE9"
+			id: "0000000023CC0317"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D949F269"
+					id: "00000000B66363BF"
 					type: "xp"
-					xp: 15
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A77BD7C1"
-					table_id: 874265822L
-					type: "random"
+					id: "000000003A3D7846"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000012B8CAA0"
+					id: "00000000153D4577"
 					item: "minecraft:cyan_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007EECF787"
+					id: "0000000087DA3858"
 					item: "biomesoplenty:dead_boat"
 					type: "item"
 				}
@@ -3729,37 +4157,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000081D69C68"
+			id: "000000004C955A92"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000069F796EF"
+					id: "00000000B4EB08F5"
 					type: "xp"
-					xp: 11
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000031A2FED9"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000979E0FE7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000291F1438"
+					id: "00000000646F9CEA"
 					item: "biomesoplenty:fir_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008E7D19D3"
+					id: "0000000032DCD0FA"
 					item: "biomesoplenty:fir_trapdoor"
 					type: "item"
 				}
@@ -3768,37 +4201,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F8D6890D"
+			id: "000000001F0E727D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000121CE1F7"
+					id: "0000000042EB81B8"
 					type: "xp"
-					xp: 20
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D24FDC25"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000869F167A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005B07300B"
+					id: "000000003E44EE1C"
 					item: "biomesoplenty:fir_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F3AAB8E0"
+					id: "00000000D41B0648"
 					item: "biomesoplenty:fir_slab"
 					type: "item"
 				}
@@ -3807,37 +4245,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000000CE910ED"]
+			dependencies: ["00000000B23D272B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000067246F15"
+			id: "000000001B613064"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000070054C63"
+					id: "000000002C828F38"
 					type: "xp"
-					xp: 18
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003D19815B"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000F49A99A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C7993286"
+					id: "0000000032C985E5"
 					item: "biomesoplenty:fir_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006C6127E7"
+					id: "00000000BB21CB1F"
 					item: "biomesoplenty:fir_pressure_plate"
 					type: "item"
 				}
@@ -3846,37 +4289,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006820F9D4"
+			id: "00000000052D9E07"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A283AA27"
+					id: "00000000A54B2037"
 					type: "xp"
-					xp: 4
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CA6FA245"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000001798A64"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FB014573"
+					id: "000000004C5DA3B2"
 					item: "minecraft:green_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F07BA5EE"
+					id: "00000000426F5249"
 					item: "biomesoplenty:hellbark_boat"
 					type: "item"
 				}
@@ -3885,37 +4333,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008D5D7289"
+			id: "00000000E0FE0959"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000635F0956"
+					id: "0000000040CCADDD"
 					type: "xp"
-					xp: 16
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009CE46ABC"
-					table_id: 874265822L
-					type: "random"
+					id: "000000004BC26C2E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008C2526B2"
+					id: "000000007A373113"
 					item: "biomesoplenty:hellbark_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BF557E2A"
+					id: "0000000064D04F28"
 					item: "biomesoplenty:hellbark_fence"
 					type: "item"
 				}
@@ -3924,37 +4377,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007A0C72DE"
+			id: "000000008BC6D4CE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000755ABDC2"
+					id: "0000000020F17660"
 					type: "xp"
 					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006E399964"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000DA519773"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000045822BF8"
+					id: "0000000006A75DDC"
 					item: "biomesoplenty:hellbark_chest_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004D8B1308"
+					id: "00000000CA55E513"
 					item: "biomesoplenty:hellbark_button"
 					type: "item"
 				}
@@ -3963,37 +4421,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EA995489"
+			id: "0000000023325DF9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C903287D"
+					id: "00000000D618B85B"
 					type: "xp"
-					xp: 11
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AAD573BA"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000095990746"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000070B2765F"
+					id: "0000000056184417"
 					item: "biomesoplenty:hellbark_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D38BAFF4"
+					id: "0000000039F20247"
 					item: "biomesoplenty:jacaranda_boat"
 					type: "item"
 				}
@@ -4002,37 +4465,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C2B499E5"
+			id: "00000000CBEDB4FA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FB5ED8CA"
+					id: "00000000582CD085"
 					type: "xp"
-					xp: 8
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B2BE8027"
-					table_id: 874265822L
-					type: "random"
+					id: "000000001A488650"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002805AAD1"
+					id: "0000000080730AA1"
 					item: "biomesoplenty:hellbark_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000082BD5222"
+					id: "00000000C7CDAAEA"
 					item: "biomesoplenty:hellbark_stairs"
 					type: "item"
 				}
@@ -4041,37 +4509,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FDC43D7B"
+			id: "00000000FE95966D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008F78C437"
+					id: "00000000111F4DF8"
 					type: "xp"
-					xp: 10
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005EE9AD38"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000085BD1F95"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001B792094"
+					id: "00000000E3F348F7"
 					item: "biomesoplenty:hellbark_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000047C52EDE"
+					id: "000000005F28C1DC"
 					item: "biomesoplenty:hellbark_sign"
 					type: "item"
 				}
@@ -4080,37 +4553,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005AC5BAD4"
+			id: "00000000866603BA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000073EA15F2"
+					id: "00000000CFFB5BDB"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000077A5B92B"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000089ECCB16"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D4F1957D"
+					id: "00000000BA7C7B23"
 					item: "biomesoplenty:hellbark_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004148A628"
+					id: "0000000096CAD8BB"
 					item: "biomesoplenty:hellbark_hanging_sign"
 					type: "item"
 				}
@@ -4119,37 +4597,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006A134914"
+			id: "0000000051B1BD7A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000552A89A4"
+					id: "00000000C8DDEE82"
 					type: "xp"
-					xp: 8
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EE48DB73"
-					table_id: 874265822L
-					type: "random"
+					id: "000000004DB176E8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000001F62796"
+					id: "000000004CDAB297"
 					item: "biomesoplenty:jacaranda_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000003CA1AB8"
+					id: "000000004B491A9C"
 					item: "biomesoplenty:jacaranda_sign"
 					type: "item"
 				}
@@ -4158,37 +4641,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D349381B"
+			id: "0000000011302B3A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008007FC4D"
+					id: "0000000096DE44D5"
 					type: "xp"
-					xp: 9
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000566FF1DB"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000406B2B80"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EE53263B"
+					id: "00000000E9ADD319"
 					item: "biomesoplenty:jacaranda_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DC67E48D"
+					id: "0000000011C434C4"
 					item: "biomesoplenty:jacaranda_hanging_sign"
 					type: "item"
 				}
@@ -4197,37 +4685,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000335F3B51"
+			id: "00000000800B52E4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004E3FE5F9"
+					id: "00000000DD7C4980"
 					type: "xp"
-					xp: 15
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009C9E5576"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000057C20891"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000020B150FA"
+					id: "0000000077C926B1"
 					item: "biomesoplenty:jacaranda_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006985D1BC"
+					id: "0000000004F78D0B"
 					item: "biomesoplenty:jacaranda_fence"
 					type: "item"
 				}
@@ -4236,37 +4729,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E753B942"
+			id: "0000000094E8D252"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A9775946"
+					id: "00000000AB16C3E5"
 					type: "xp"
-					xp: 16
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000603D0F80"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000067C74E35"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BBA1E0BC"
+					id: "0000000000167A66"
 					item: "biomesoplenty:jacaranda_chest_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000086A4791F"
+					id: "00000000F190229E"
 					item: "biomesoplenty:jacaranda_button"
 					type: "item"
 				}
@@ -4278,33 +4776,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000471585AC"
+			id: "000000007F49C9D1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000059440213"
+					id: "000000004E5D82F6"
 					type: "xp"
-					xp: 18
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000021E9FCD0"
-					table_id: 874265822L
-					type: "random"
+					id: "000000007CA2F5C9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000013CC4FFB"
+					id: "000000003A110B3C"
 					item: "minecraft:light_gray_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EEE69504"
+					id: "000000009FCAFCCC"
 					item: "minecraft:magenta_dye"
 					type: "item"
 				}
@@ -4313,37 +4816,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DBE7CBBC"
+			id: "00000000B8F1F9EC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E576FAD1"
+					id: "000000008FC2A6F5"
 					type: "xp"
-					xp: 7
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000268A9699"
-					table_id: 874265822L
-					type: "random"
+					id: "000000007A502F5F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B77BD117"
+					id: "000000004667A5F8"
 					item: "biomesoplenty:jacaranda_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FA01C01E"
+					id: "00000000189F1657"
 					item: "minecraft:light_blue_dye"
 					type: "item"
 				}
@@ -4352,37 +4860,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000060AE2619"]
+			dependencies: ["000000004BF1085C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000051D9F087"
+			id: "0000000040805A8F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007D02404A"
+					id: "00000000923F9564"
 					type: "xp"
 					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000265A2184"
-					table_id: 874265822L
-					type: "random"
+					id: "000000007C18CC3E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000226FCE09"
+					id: "00000000CF13905D"
 					item: "biomesoplenty:jacaranda_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000576BD53B"
+					id: "00000000F288A158"
 					item: "biomesoplenty:jacaranda_stairs"
 					type: "item"
 				}
@@ -4391,37 +4904,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DABBE9FE"
+			id: "00000000FC1B979B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005EB49DE0"
+					id: "0000000040A53913"
 					type: "xp"
 					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DF04006D"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000050B1B3B1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003EA53AFD"
+					id: "00000000575E6F29"
 					item: "biomesoplenty:magic_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007F33EA8D"
+					id: "00000000C00B9D12"
 					item: "biomesoplenty:magic_pressure_plate"
 					type: "item"
 				}
@@ -4430,37 +4948,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BAD17CED"
+			id: "00000000814D6F9B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000035EC3088"
+					id: "00000000E03B0700"
 					type: "xp"
-					xp: 16
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000094256642"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000F1F7BA8E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000070D305A2"
+					id: "00000000C69C1D3D"
 					item: "biomesoplenty:magic_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A4D0FB90"
+					id: "0000000062F74D08"
 					item: "biomesoplenty:magic_fence_gate"
 					type: "item"
 				}
@@ -4469,37 +4992,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002B031CD0"
+			id: "00000000FC8797A9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009EA3A518"
+					id: "00000000143598A6"
 					type: "xp"
-					xp: 18
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CEB6B2DE"
-					table_id: 874265822L
-					type: "random"
+					id: "000000009706367D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000040200D2E"
+					id: "00000000D7E7EAD0"
 					item: "biomesoplenty:magic_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000ED40E0C7"
+					id: "000000001D737770"
 					item: "biomesoplenty:magic_door"
 					type: "item"
 				}
@@ -4508,37 +5036,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A321527A"
+			id: "00000000AAB1EE1F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000C5D2E9A"
+					id: "000000005830F4C6"
 					type: "xp"
-					xp: 17
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004CF5F8D5"
-					table_id: 874265822L
-					type: "random"
+					id: "000000001C6EC82F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008C16E366"
+					id: "00000000AE80358A"
 					item: "biomesoplenty:magic_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007AB8C2EF"
+					id: "00000000D37957C9"
 					item: "biomesoplenty:magic_chest_boat"
 					type: "item"
 				}
@@ -4547,37 +5080,81 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: [
+				"0000000071D5809F"
+				"00000000DB069F41"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000861BAAE2"
+			id: "00000000E528ECFC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BD236BC4"
+					id: "0000000099CD56F4"
 					type: "xp"
-					xp: 15
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000000078E80"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000036DA2C3C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "0000000057292FA2"
+				item: "biomesoplenty:willow_planks"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000067AC8F8E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000045D68519"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AE2ECC08"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000007A797157"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B32DAD2C"
+					id: "0000000084A13621"
 					item: "biomesoplenty:mahogany_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000015B1D756"
+					id: "0000000063A7B35C"
 					item: "biomesoplenty:mahogany_chest_boat"
 					type: "item"
 				}
@@ -4586,37 +5163,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000076B2CD97"
+			id: "00000000CECF63F9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000081641EC6"
+					id: "00000000D0B991CF"
 					type: "xp"
-					xp: 18
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F185B2DC"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000069BA921"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000056BDE166"
+					id: "000000005ABE0AB4"
 					item: "biomesoplenty:magic_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000019E77573"
+					id: "00000000D62E2458"
 					item: "biomesoplenty:magic_trapdoor"
 					type: "item"
 				}
@@ -4625,37 +5207,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E35F8AA3"
+			id: "00000000FCBD7099"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000099F3490A"
+					id: "00000000538E1154"
 					type: "xp"
-					xp: 12
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001EE846EB"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000C994040C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000013BFEF2F"
+					id: "000000001EA55974"
 					item: "biomesoplenty:magic_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C4188A00"
+					id: "000000002D11A3C0"
 					item: "biomesoplenty:magic_slab"
 					type: "item"
 				}
@@ -4665,70 +5252,88 @@
 		}
 		{
 			dependencies: [
-				"000000009ED371FF"
-				"00000000FE4D3A14"
+				"0000000044EC7230"
+				"0000000071D5809F"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000830801EB"
+			id: "00000000040123AB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000098B8A217"
+					id: "00000000B31977F1"
 					type: "xp"
-					xp: 2
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000083A3FC9E"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000A0C2CBCD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000AE6E10BC"
-				item: "biomesoplenty:willow_planks"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002EB8420C"
+					item: "biomesoplenty:smooth_white_sandstone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003864F891"
+					item: "biomesoplenty:umbran_planks"
+					type: "item"
+				}
+			]
 			x: -12.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000036CCF6BC"
+			id: "000000001A7875B9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000985B5123"
+					id: "0000000014E837AF"
 					type: "xp"
-					xp: 17
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006E3C975D"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000004DBD671"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A87E8A4E"
+					id: "000000008B8D4F9B"
 					item: "biomesoplenty:mahogany_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D4844E59"
+					id: "0000000069102B8F"
 					item: "biomesoplenty:mahogany_slab"
 					type: "item"
 				}
@@ -4737,37 +5342,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EA3EF94D"
+			id: "0000000097AEF079"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000804F1EAC"
+					id: "000000009E483B02"
 					type: "xp"
-					xp: 19
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000013983014"
-					table_id: 874265822L
-					type: "random"
+					id: "000000002CBF02F7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000E1A450E"
+					id: "00000000DE00D313"
 					item: "biomesoplenty:mahogany_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000012230561"
+					id: "00000000C89906AB"
 					item: "biomesoplenty:mahogany_pressure_plate"
 					type: "item"
 				}
@@ -4776,37 +5386,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E8DC5CD5"
+			id: "00000000AFB2B00C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005C3F8542"
+					id: "00000000464A7124"
 					type: "xp"
 					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B1B95433"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000F44259F0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D90A6246"
+					id: "0000000027AABE1D"
 					item: "biomesoplenty:mahogany_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000478EB92B"
+					id: "00000000F5F2F9DF"
 					item: "biomesoplenty:mahogany_fence_gate"
 					type: "item"
 				}
@@ -4815,37 +5430,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000267AB544"
+			id: "00000000D3CE05E7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000034C46A10"
+					id: "000000004B191696"
 					type: "xp"
-					xp: 19
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003C59DCCF"
-					table_id: 874265822L
-					type: "random"
+					id: "000000007376F4ED"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000021E9580"
+					id: "0000000082CBB99E"
 					item: "biomesoplenty:mahogany_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000ED41983A"
+					id: "000000000FEA6BD2"
 					item: "biomesoplenty:mahogany_door"
 					type: "item"
 				}
@@ -4854,37 +5474,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000786384F5"
+			id: "00000000C3C0D178"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004441E4E0"
+					id: "0000000033D26D9A"
 					type: "xp"
-					xp: 2
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000066F02BF8"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000D2FF39CD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000827125A4"
+					id: "000000007D14FF1A"
 					item: "biomesoplenty:maple_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F7F78637"
+					id: "00000000F746C2BA"
 					item: "biomesoplenty:maple_fence_gate"
 					type: "item"
 				}
@@ -4893,37 +5518,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000462BEBEA"
+			id: "000000005DBBB6D5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005A96C29C"
+					id: "000000005A100C9D"
 					type: "xp"
-					xp: 16
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F6279FBC"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000D56A5323"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BFE1F1D9"
+					id: "0000000037004A7D"
 					item: "biomesoplenty:maple_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BE5FB375"
+					id: "00000000CC5A8A5A"
 					item: "biomesoplenty:maple_door"
 					type: "item"
 				}
@@ -4932,37 +5562,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005945A00A"
+			id: "000000000244B1E2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C438F08D"
+					id: "000000005ED78CE8"
 					type: "xp"
-					xp: 18
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000040E50643"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000D8EAAD52"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000087CAC50E"
+					id: "0000000052DC1A1E"
 					item: "biomesoplenty:maple_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000067C26517"
+					id: "000000006EF5960F"
 					item: "biomesoplenty:maple_chest_boat"
 					type: "item"
 				}
@@ -4971,37 +5606,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000CD20A26E"]
+			dependencies: ["0000000067AC8F8E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E867F932"
+			id: "0000000076FF2CDB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E90384DF"
+					id: "000000004E98CA19"
 					type: "xp"
-					xp: 2
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000048A96EE8"
-					table_id: 874265822L
-					type: "random"
+					id: "00000000CCA4B00A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006879F442"
+					id: "0000000004A9F4EE"
 					item: "biomesoplenty:mahogany_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000012469D13"
+					id: "000000001219EA4A"
 					item: "biomesoplenty:mahogany_trapdoor"
 					type: "item"
 				}
@@ -5010,37 +5650,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B6AE861C"
+			id: "00000000C3A14B26"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000027BD713E"
+					id: "00000000A4AB1B2A"
 					type: "xp"
-					xp: 5
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AAB76647"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000051317E4C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001CDA97CB"
+					id: "00000000B7F2A335"
 					item: "biomesoplenty:maple_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000A5A5F9E"
+					id: "00000000916A26E7"
 					item: "biomesoplenty:maple_slab"
 					type: "item"
 				}
@@ -5049,37 +5694,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E4033B72"
+			id: "0000000050E095D7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000801DA68A"
+					id: "0000000047018814"
 					type: "xp"
-					xp: 15
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000026768F8D"
-					table_id: 874265822L
-					type: "random"
+					id: "000000001AED4B24"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A4844624"
+					id: "000000003E41BC4F"
 					item: "biomesoplenty:maple_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AAFE73C6"
+					id: "0000000093EC2C3A"
 					item: "biomesoplenty:maple_pressure_plate"
 					type: "item"
 				}
@@ -5088,37 +5738,42 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000AC0D23CE"]
+			dependencies: ["00000000BE175CC1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000010216C7B"
+			id: "00000000740E354B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000F299CE2"
+					id: "00000000CD660B53"
 					type: "xp"
-					xp: 16
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CB36338D"
-					table_id: 874265822L
-					type: "random"
+					id: "000000003D8057B6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A7B61F14"
+					id: "000000003085B43F"
 					item: "biomesoplenty:maple_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A5193F4D"
+					id: "000000005DE256D8"
 					item: "biomesoplenty:maple_trapdoor"
 					type: "item"
 				}
@@ -5128,40 +5783,45 @@
 		}
 		{
 			dependencies: [
-				"0000000085081005"
-				"00000000CEB88DFB"
+				"000000007035D14C"
+				"00000000E2296EB8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000058856D41"
+			id: "00000000BDBF73C4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000768661AB"
+					id: "0000000016F5FCD0"
 					type: "xp"
-					xp: 4
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000803D66B"
-					table_id: 874265822L
-					type: "random"
+					id: "0000000077200755"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_biomesoplenty"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E361C020"
+					id: "0000000099B33E18"
 					item: "biomesoplenty:algal_end_stone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000049CDD1FD"
-					item: "biomesoplenty:black_sandstone_stairs"
+					id: "00000000B5F3025E"
+					item: "biomesoplenty:black_sandstone_slab"
 					type: "item"
 				}
 			]

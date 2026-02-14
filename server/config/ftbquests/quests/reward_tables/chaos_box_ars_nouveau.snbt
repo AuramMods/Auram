@@ -1,6 +1,6 @@
 {
-	icon: "ars_nouveau:glyph_split"
-	id: "00000000ECC45233"
+	icon: "ars_nouveau:glyph_interact"
+	id: "00000000C105969C"
 	loot_crate: {
 		color: 16777215
 		drops: {
@@ -14,300 +14,21 @@
 	loot_size: 1
 	order_index: 18
 	rewards: [
-		{ item: "ars_nouveau:arcane_core", weight: 248.0f }
-		{ item: "ars_nouveau:glyph_duration_down", weight: 259.0f }
-		{ item: "ars_nouveau:glyph_split", weight: 4.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:arcanist_robes"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 5.0f
-		}
-		{ item: "ars_nouveau:glyph_extend_time", weight: 260.0f }
-		{ item: "ars_nouveau:sourcestone_basketweave_slab", weight: 82.0f }
-		{ item: "ars_nouveau:ritual_awakening", weight: 209.0f }
-		{ item: "ars_nouveau:glyph_toss", weight: 6.0f }
-		{ item: "ars_nouveau:ritual_animal_summon", weight: 255.0f }
-		{ item: "ars_nouveau:glyph_fell", weight: 7.0f }
-		{ item: "ars_nouveau:novice_spell_book", weight: 8.0f }
-		{ item: "ars_nouveau:glyph_light", weight: 202.0f }
-		{ item: "ars_nouveau:glyph_exchange", weight: 9.0f }
-		{ item: "ars_nouveau:starbuncle_shards", weight: 192.0f }
-		{ item: "ars_nouveau:ritual_restoration", weight: 274.0f }
-		{ item: "ars_nouveau:sourcestone_alternating_stairs", weight: 103.0f }
-		{ item: "ars_nouveau:green_archwood_wood", weight: 161.0f }
-		{ item: "ars_nouveau:glyph_extract", weight: 271.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:potion_flask"
-				tag: {
-					Damage: 8
-				}
-			}
-			weight: 277.0f
-		}
-		{ item: "ars_nouveau:archwood_pressure_plate", weight: 147.0f }
-		{ item: "ars_nouveau:ritual_moonfall", weight: 186.0f }
-		{ item: "ars_nouveau:ritual_binding", weight: 230.0f }
-		{ item: "ars_nouveau:glyph_touch", weight: 10.0f }
-		{ item: "ars_nouveau:archwood_planks", weight: 148.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:arcanist_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 11.0f
-		}
-		{ item: "ars_nouveau:glyph_decelerate", weight: 258.0f }
-		{ item: "ars_nouveau:glyph_gravity", weight: 270.0f }
-		{ item: "ars_nouveau:purple_sbed", weight: 12.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_large_bricks", weight: 104.0f }
-		{ item: "ars_nouveau:red_archwood_sapling", weight: 162.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_basketweave_stairs", weight: 105.0f }
-		{ item: "ars_nouveau:glyph_intangible", weight: 13.0f }
-		{ item: "ars_nouveau:glyph_wall", weight: 14.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_slab", weight: 83.0f }
-		{ item: "ars_nouveau:archwood_door", weight: 149.0f }
-		{ item: "ars_nouveau:source_berry_pie", weight: 15.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_small_bricks_stairs", weight: 106.0f }
-		{ item: "ars_nouveau:agronomic_sourcelink", weight: 251.0f }
+		{ item: "ars_nouveau:glyph_interact", weight: 4.0f }
+		{ item: "ars_nouveau:glyph_harm", weight: 5.0f }
+		{ item: "ars_nouveau:glyph_harvest", weight: 6.0f }
+		{ item: "ars_nouveau:sourcestone_mosaic_stairs", weight: 103.0f }
+		{ item: "ars_nouveau:glyph_launch", weight: 199.0f }
 		{ item: "ars_nouveau:ritual_fertility", weight: 275.0f }
-		{ item: "ars_nouveau:glyph_leap", weight: 216.0f }
-		{ item: "ars_nouveau:sourceberry_sack", weight: 16.0f }
-		{ item: "ars_nouveau:void_prism", weight: 264.0f }
-		{ item: "ars_nouveau:sourcestone_small_bricks_stairs", weight: 107.0f }
-		{ item: "ars_nouveau:ritual_gravity", weight: 17.0f }
-		{ item: "ars_nouveau:glyph_slowfall", weight: 235.0f }
-		{ item: "ars_nouveau:blue_archwood_sapling", weight: 163.0f }
-		{ item: "ars_nouveau:archwood_sconce", weight: 179.0f }
-		{ item: "ars_nouveau:warp_scroll", weight: 245.0f }
-		{ item: "ars_nouveau:arcane_pedestal", weight: 223.0f }
-		{ item: "ars_nouveau:glyph_summon_wolves", weight: 229.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_small_bricks", weight: 108.0f }
-		{ item: "ars_nouveau:source_jar", weight: 159.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_large_bricks_stairs", weight: 109.0f }
-		{ item: "ars_nouveau:potion_jar", weight: 207.0f }
-		{ item: "ars_nouveau:sourcestone_large_bricks_slab", weight: 84.0f }
-		{ item: "ars_nouveau:enchanting_apparatus", weight: 269.0f }
-		{ item: "ars_nouveau:scribes_table", weight: 215.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_mosaic_stairs", weight: 110.0f }
-		{ item: "ars_nouveau:stripped_green_archwood_wood", weight: 164.0f }
-		{ item: "ars_nouveau:archwood_slab", weight: 111.0f }
-		{ item: "ars_nouveau:glyph_place_block", weight: 18.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_basketweave_slab", weight: 85.0f }
-		{ item: "ars_nouveau:glyph_pull", weight: 181.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_alternating_stairs", weight: 112.0f }
-		{ item: "ars_nouveau:arcane_platform", weight: 224.0f }
-		{ item: "ars_nouveau:magebloom_block", weight: 187.0f }
-		{ item: "ars_nouveau:glyph_fortune", weight: 188.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_basketweave_slab", weight: 86.0f }
-		{ item: "ars_nouveau:starbuncle_shades", weight: 197.0f }
-		{ item: "ars_nouveau:archwood_fence_gate", weight: 150.0f }
-		{ item: "ars_nouveau:vitalic_sourcelink", weight: 253.0f }
-		{ item: "ars_nouveau:allow_scroll", weight: 211.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_alternating_stairs", weight: 113.0f }
-		{ item: "ars_nouveau:glyph_linger", weight: 19.0f }
-		{ item: "ars_nouveau:archwood_chest", weight: 199.0f }
-		{ item: "ars_nouveau:glyph_harvest", weight: 20.0f }
-		{ item: "ars_nouveau:glyph_freeze", weight: 178.0f }
-		{ item: "ars_nouveau:ritual_flight", weight: 273.0f }
-		{ item: "ars_nouveau:ritual_sanctuary", weight: 244.0f }
-		{ item: "ars_nouveau:relay", weight: 267.0f }
-		{ item: "ars_nouveau:magebloom_fiber", weight: 165.0f }
-		{ item: "ars_nouveau:glyph_summon_undead", weight: 21.0f }
-		{ item: "ars_nouveau:sourcestone_large_bricks_stairs", weight: 114.0f }
-		{ item: "ars_nouveau:glyph_flare", weight: 241.0f }
-		{ item: "ars_nouveau:green_sbed", weight: 22.0f }
-		{ item: "ars_nouveau:green_archwood_sapling", weight: 166.0f }
-		{ item: "ars_nouveau:glyph_invisibility", weight: 236.0f }
-		{ item: "ars_nouveau:wixie_hat", weight: 239.0f }
-		{ item: "ars_nouveau:red_archwood_wood", weight: 167.0f }
-		{ item: "ars_nouveau:source_gem", weight: 168.0f }
-		{ item: "ars_nouveau:annotated_codex", weight: 210.0f }
-		{ item: "ars_nouveau:glyph_sensitive", weight: 180.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_large_bricks", weight: 115.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:runic_chalk"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 23.0f
-		}
-		{ item: "ars_nouveau:glyph_ender_inventory", weight: 24.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:potion_flask_amplify"
-				tag: {
-					Damage: 8
-				}
-			}
-			weight: 278.0f
-		}
-		{ item: "ars_nouveau:sourcestone_mosaic_slab", weight: 87.0f }
-		{ item: "ars_nouveau:sourcestone_alternating", weight: 116.0f }
-		{ item: "ars_nouveau:glyph_grow", weight: 25.0f }
-		{ item: "ars_nouveau:sourcestone_small_bricks_slab", weight: 88.0f }
-		{ item: "ars_nouveau:glyph_rune", weight: 26.0f }
-		{ item: "ars_nouveau:glyph_accelerate", weight: 265.0f }
-		{ item: "ars_nouveau:archwood_button", weight: 151.0f }
-		{ item: "ars_nouveau:ritual_scrying", weight: 238.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:arcanist_leggings"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 27.0f
-		}
-		{ item: "ars_nouveau:greater_experience_gem", weight: 183.0f }
+		{ item: "ars_nouveau:archwood_planks", weight: 147.0f }
+		{ item: "ars_nouveau:stripped_red_archwood_wood", weight: 161.0f }
+		{ item: "ars_nouveau:glyph_rune", weight: 7.0f }
 		{ item: "ars_nouveau:glyph_hex", weight: 252.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:sorcerer_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 28.0f
-		}
-		{ item: "ars_nouveau:rotating_spell_turret", weight: 261.0f }
-		{ item: "ars_nouveau:archmage_spell_book", weight: 29.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_basketweave_stairs", weight: 117.0f }
-		{ item: "ars_nouveau:source_berry_roll", weight: 30.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_large_bricks_slab", weight: 89.0f }
-		{ item: "ars_nouveau:deny_scroll", weight: 206.0f }
-		{ item: "ars_nouveau:sourcestone_mosaic", weight: 118.0f }
-		{ item: "ars_nouveau:glyph_pickup", weight: 242.0f }
-		{ item: "ars_nouveau:glyph_wind_shear", weight: 233.0f }
-		{ item: "ars_nouveau:ritual_challenge", weight: 272.0f }
-		{ item: "ars_nouveau:sourcestone_alternating_slab", weight: 90.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:sorcerer_leggings"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 31.0f
-		}
-		{ item: "ars_nouveau:smooth_sourcestone_mosaic_slab", weight: 91.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_alternating", weight: 119.0f }
-		{ item: "ars_nouveau:glyph_infuse", weight: 234.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_small_bricks_slab", weight: 92.0f }
-		{ item: "ars_nouveau:ritual_containment", weight: 32.0f }
-		{ item: "ars_nouveau:purple_archwood_wood", weight: 169.0f }
-		{ item: "ars_nouveau:glyph_gust", weight: 33.0f }
-		{ item: "ars_nouveau:redstone_relay", weight: 268.0f }
-		{ item: "ars_nouveau:sourcestone_mosaic_stairs", weight: 120.0f }
-		{ item: "ars_nouveau:glyph_wither", weight: 34.0f }
-		{ item: "ars_nouveau:ghostweave", weight: 196.0f }
-		{ item: "ars_nouveau:red_sbed", weight: 35.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:arcanist_hood"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 36.0f
-		}
-		{ item: "ars_nouveau:ritual_forestation", weight: 37.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_alternating", weight: 121.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:battlemage_leggings"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 38.0f
-		}
-		{ item: "ars_nouveau:glyph_randomize", weight: 39.0f }
-		{ item: "ars_nouveau:mundane_belt", weight: 189.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_mosaic", weight: 122.0f }
-		{ item: "ars_nouveau:item_detector", weight: 40.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_basketweave_stairs", weight: 123.0f }
-		{ item: "ars_nouveau:repository", weight: 226.0f }
-		{ item: "ars_nouveau:apprentice_spell_book", weight: 41.0f }
-		{ item: "ars_nouveau:glyph_heal", weight: 279.0f }
-		{ item: "ars_nouveau:basic_spell_turret", weight: 262.0f }
-		{ item: "ars_nouveau:stripped_purple_archwood_wood", weight: 170.0f }
-		{ item: "ars_nouveau:ritual_burrowing", weight: 232.0f }
-		{ item: "ars_nouveau:sconce", weight: 213.0f }
-		{ item: "ars_nouveau:purple_archwood_sapling", weight: 171.0f }
-		{ item: "ars_nouveau:glyph_rotate", weight: 42.0f }
-		{ item: "ars_nouveau:caster_tome", weight: 43.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_basketweave", weight: 124.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_small_bricks", weight: 125.0f }
-		{ item: "ars_nouveau:glyph_interact", weight: 44.0f }
-		{ item: "ars_nouveau:burst", weight: 45.0f }
-		{ item: "ars_nouveau:ritual_cloudshaping", weight: 201.0f }
-		{ item: "ars_nouveau:glyph_snare", weight: 46.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks_stairs", weight: 126.0f }
-		{ item: "ars_nouveau:experience_gem", weight: 156.0f }
-		{ item: "ars_nouveau:blank_thread", weight: 225.0f }
-		{ item: "ars_nouveau:glyph_launch", weight: 200.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:sorcerer_robes"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 47.0f
-		}
-		{ item: "ars_nouveau:mycelial_sourcelink", weight: 48.0f }
-		{ item: "ars_nouveau:imbuement_chamber", weight: 247.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks_slab", weight: 93.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_mosaic", weight: 127.0f }
-		{ item: "ars_nouveau:falseweave", weight: 194.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_alternating_stairs", weight: 128.0f }
-		{ item: "ars_nouveau:mimic_scroll", weight: 214.0f }
-		{ item: "ars_nouveau:glyph_fangs", weight: 49.0f }
-		{ item: "ars_nouveau:glyph_evaporate", weight: 50.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_alternating", weight: 129.0f }
-		{ item: "ars_nouveau:sourceberry_bush", weight: 51.0f }
-		{ item: "ars_nouveau:glyph_firework", weight: 52.0f }
-		{ item: "ars_nouveau:glyph_dampen", weight: 81.0f }
-		{ item: "ars_nouveau:sourcestone_small_bricks", weight: 130.0f }
-		{ item: "ars_nouveau:glyph_phantom_block", weight: 152.0f }
-		{ item: "ars_nouveau:archwood_trapdoor", weight: 153.0f }
-		{ item: "ars_nouveau:sourcestone_large_bricks", weight: 131.0f }
-		{ item: "ars_nouveau:glyph_orbit", weight: 249.0f }
-		{ item: "ars_nouveau:glyph_sense_magic", weight: 240.0f }
-		{ item: "ars_nouveau:ritual_conjure_island_plains", weight: 53.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_mosaic", weight: 132.0f }
-		{ item: "ars_nouveau:glyph_pierce", weight: 185.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_small_bricks_slab", weight: 94.0f }
-		{ item: "ars_nouveau:glyph_cold_snap", weight: 182.0f }
-		{ item: "ars_nouveau:glyph_redstone_signal", weight: 54.0f }
-		{ item: "ars_nouveau:ritual_harvest", weight: 55.0f }
-		{ item: "ars_nouveau:glyph_lightning", weight: 280.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks", weight: 133.0f }
-		{ item: "ars_nouveau:glyph_dispel", weight: 208.0f }
-		{ item: "ars_nouveau:glyph_break", weight: 221.0f }
-		{ item: "ars_nouveau:glyph_summon_decoy", weight: 56.0f }
-		{ item: "ars_nouveau:glyph_animate_block", weight: 218.0f }
-		{ item: "ars_nouveau:worn_notebook", weight: 228.0f }
+		{ item: "ars_nouveau:stable_warp_scroll", weight: 256.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_basketweave_slab", weight: 82.0f }
+		{ item: "ars_nouveau:source_gem", weight: 162.0f }
+		{ item: "ars_nouveau:glyph_summon_undead", weight: 8.0f }
+		{ item: "ars_nouveau:archwood_pressure_plate", weight: 148.0f }
 		{
 			item: {
 				Count: 1
@@ -318,122 +39,45 @@
 			}
 			weight: 237.0f
 		}
-		{ item: "ars_nouveau:stripped_red_archwood_wood", weight: 172.0f }
-		{ item: "ars_nouveau:ritual_warping", weight: 246.0f }
-		{ item: "ars_nouveau:scryers_crystal", weight: 231.0f }
-		{ item: "ars_nouveau:source_gem_block", weight: 190.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks", weight: 134.0f }
-		{ item: "ars_nouveau:blue_archwood_wood", weight: 173.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_alternating_slab", weight: 95.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_small_bricks_stairs", weight: 135.0f }
-		{ item: "ars_nouveau:glyph_smelt", weight: 57.0f }
-		{ item: "ars_nouveau:sky_block", weight: 58.0f }
-		{ item: "ars_nouveau:ritual_wilden_summon", weight: 257.0f }
-		{ item: "ars_nouveau:spell_prism", weight: 263.0f }
-		{ item: "ars_nouveau:ritual_sunrise", weight: 184.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_mosaic_slab", weight: 96.0f }
-		{ item: "ars_nouveau:archwood_stairs", weight: 154.0f }
-		{ item: "ars_nouveau:glyph_underfoot", weight: 222.0f }
-		{ item: "ars_nouveau:glyph_crush", weight: 59.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_mosaic_stairs", weight: 136.0f }
-		{ item: "ars_nouveau:reset", weight: 219.0f }
-		{ item: "ars_nouveau:glyph_self", weight: 227.0f }
-		{ item: "ars_nouveau:wololo", weight: 60.0f }
-		{ item: "ars_nouveau:magelight_torch", weight: 217.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:battlemage_hood"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 61.0f
-		}
-		{ item: "ars_nouveau:ritual_overgrowth", weight: 62.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_mosaic_slab", weight: 97.0f }
-		{ item: "ars_nouveau:dull_trinket", weight: 193.0f }
-		{ item: "ars_nouveau:glyph_cut", weight: 63.0f }
-		{ item: "ars_nouveau:alteration_table", weight: 220.0f }
-		{
-			item: {
-				Count: 1
-				id: "ars_nouveau:battlemage_robes"
-				tag: {
-					Damage: 0
-				}
-			}
-			weight: 64.0f
-		}
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks_stairs", weight: 137.0f }
-		{ item: "ars_nouveau:mob_jar", weight: 157.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_large_bricks_stairs", weight: 138.0f }
-		{ item: "ars_nouveau:rewind", weight: 65.0f }
-		{ item: "ars_nouveau:ritual_brazier", weight: 254.0f }
-		{ item: "ars_nouveau:ritual_flowering", weight: 66.0f }
-		{ item: "ars_nouveau:glyph_name", weight: 67.0f }
-		{ item: "ars_nouveau:sourcestone_basketweave_stairs", weight: 139.0f }
-		{ item: "ars_nouveau:glyph_harm", weight: 68.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_mosaic_stairs", weight: 140.0f }
-		{ item: "ars_nouveau:glyph_bounce", weight: 203.0f }
-		{ item: "ars_nouveau:mirrorweave", weight: 198.0f }
-		{ item: "ars_nouveau:glyph_glide", weight: 69.0f }
+		{ item: "ars_nouveau:glyph_touch", weight: 9.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_alternating_slab", weight: 83.0f }
 		{ item: "ars_nouveau:glyph_explosion", weight: 243.0f }
-		{ item: "ars_nouveau:glyph_delay", weight: 70.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_alternating_slab", weight: 98.0f }
-		{ item: "ars_nouveau:glyph_projectile", weight: 160.0f }
-		{ item: "ars_nouveau:blank_parchment", weight: 204.0f }
-		{ item: "ars_nouveau:yellow_sbed", weight: 71.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_basketweave", weight: 141.0f }
-		{ item: "ars_nouveau:sourcestone_sconce", weight: 176.0f }
-		{ item: "ars_nouveau:glyph_summon_vex", weight: 72.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_basketweave_slab", weight: 99.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_basketweave", weight: 142.0f }
-		{ item: "ars_nouveau:blue_sbed", weight: 73.0f }
-		{ item: "ars_nouveau:glyph_blink", weight: 74.0f }
-		{ item: "ars_nouveau:sourcestone_basketweave", weight: 143.0f }
-		{ item: "ars_nouveau:ritual_disintegration", weight: 266.0f }
-		{ item: "ars_nouveau:ritual_conjure_island_desert", weight: 75.0f }
-		{ item: "ars_nouveau:archwood_fence", weight: 155.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_stairs", weight: 144.0f }
-		{ item: "ars_nouveau:glyph_summon_steed", weight: 191.0f }
-		{ item: "ars_nouveau:alchemical_sourcelink", weight: 76.0f }
-		{ item: "ars_nouveau:polished_sconce", weight: 177.0f }
-		{ item: "ars_nouveau:glyph_aoe", weight: 77.0f }
-		{ item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks_slab", weight: 100.0f }
-		{ item: "ars_nouveau:stable_warp_scroll", weight: 256.0f }
-		{ item: "ars_nouveau:glyph_conjure_water", weight: 175.0f }
-		{ item: "ars_nouveau:glyph_ignite", weight: 195.0f }
-		{ item: "ars_nouveau:ring_of_potential", weight: 205.0f }
-		{ item: "ars_nouveau:volcanic_sourcelink", weight: 250.0f }
-		{ item: "ars_nouveau:gilded_sourcestone_alternating_slab", weight: 101.0f }
-		{ item: "ars_nouveau:glyph_amplify", weight: 276.0f }
-		{ item: "ars_nouveau:smooth_sourcestone", weight: 145.0f }
-		{ item: "ars_nouveau:orange_sbed", weight: 212.0f }
 		{
 			item: {
 				Count: 1
-				id: "ars_nouveau:sorcerer_hood"
+				id: "ars_nouveau:sorcerer_boots"
 				tag: {
 					Damage: 0
 				}
 			}
-			weight: 78.0f
+			weight: 10.0f
 		}
-		{ item: "ars_nouveau:glyph_craft", weight: 158.0f }
-		{ item: "ars_nouveau:sourcestone", weight: 146.0f }
-		{ item: "ars_nouveau:stripped_blue_archwood_wood", weight: 174.0f }
-		{ item: "ars_nouveau:smooth_sourcestone_large_bricks_slab", weight: 102.0f }
+		{ item: "ars_nouveau:magebloom_fiber", weight: 163.0f }
+		{ item: "ars_nouveau:sourcestone_mosaic_slab", weight: 84.0f }
+		{ item: "ars_nouveau:ritual_disintegration", weight: 266.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_small_bricks", weight: 104.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_large_bricks", weight: 105.0f }
+		{ item: "ars_nouveau:glyph_summon_wolves", weight: 229.0f }
 		{
 			item: {
 				Count: 1
-				id: "ars_nouveau:potion_flask_extend_time"
+				id: "ars_nouveau:potion_flask_amplify"
 				tag: {
 					Damage: 8
 				}
 			}
-			weight: 79.0f
+			weight: 278.0f
 		}
+		{ item: "ars_nouveau:red_sbed", weight: 11.0f }
+		{ item: "ars_nouveau:archwood_trapdoor", weight: 149.0f }
+		{ item: "ars_nouveau:greater_experience_gem", weight: 183.0f }
+		{ item: "ars_nouveau:yellow_sbed", weight: 12.0f }
+		{ item: "ars_nouveau:burst", weight: 13.0f }
+		{ item: "ars_nouveau:ritual_gravity", weight: 14.0f }
+		{ item: "ars_nouveau:basic_spell_turret", weight: 261.0f }
+		{ item: "ars_nouveau:glyph_grow", weight: 15.0f }
+		{ item: "ars_nouveau:glyph_extend_time", weight: 260.0f }
+		{ item: "ars_nouveau:glyph_exchange", weight: 16.0f }
 		{
 			item: {
 				Count: 1
@@ -442,8 +86,364 @@
 					Damage: 0
 				}
 			}
-			weight: 80.0f
+			weight: 17.0f
 		}
+		{ item: "ars_nouveau:glyph_wither", weight: 18.0f }
+		{ item: "ars_nouveau:glyph_bounce", weight: 203.0f }
+		{ item: "ars_nouveau:warp_scroll", weight: 245.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_slab", weight: 85.0f }
+		{ item: "ars_nouveau:glyph_gravity", weight: 270.0f }
+		{ item: "ars_nouveau:glyph_wall", weight: 19.0f }
+		{ item: "ars_nouveau:novice_spell_book", weight: 20.0f }
+		{ item: "ars_nouveau:scryers_crystal", weight: 231.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:potion_flask_extend_time"
+				tag: {
+					Damage: 8
+				}
+			}
+			weight: 21.0f
+		}
+		{ item: "ars_nouveau:sourceberry_bush", weight: 22.0f }
+		{ item: "ars_nouveau:glyph_pierce", weight: 185.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_mosaic", weight: 106.0f }
+		{ item: "ars_nouveau:glyph_ender_inventory", weight: 23.0f }
+		{ item: "ars_nouveau:sourcestone", weight: 107.0f }
+		{ item: "ars_nouveau:ritual_awakening", weight: 209.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks_stairs", weight: 108.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_basketweave", weight: 109.0f }
+		{ item: "ars_nouveau:falseweave", weight: 194.0f }
+		{ item: "ars_nouveau:glyph_name", weight: 24.0f }
+		{ item: "ars_nouveau:archwood_slab", weight: 110.0f }
+		{ item: "ars_nouveau:green_sbed", weight: 25.0f }
+		{ item: "ars_nouveau:ritual_wilden_summon", weight: 257.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:arcanist_boots"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 26.0f
+		}
+		{ item: "ars_nouveau:magebloom_block", weight: 187.0f }
+		{ item: "ars_nouveau:ritual_cloudshaping", weight: 201.0f }
+		{ item: "ars_nouveau:ritual_binding", weight: 230.0f }
+		{ item: "ars_nouveau:ritual_scrying", weight: 238.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_basketweave_stairs", weight: 111.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_large_bricks_stairs", weight: 112.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:battlemage_leggings"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 27.0f
+		}
+		{ item: "ars_nouveau:glyph_lightning", weight: 280.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_basketweave_slab", weight: 86.0f }
+		{ item: "ars_nouveau:glyph_sensitive", weight: 179.0f }
+		{ item: "ars_nouveau:glyph_split", weight: 28.0f }
+		{ item: "ars_nouveau:relay", weight: 267.0f }
+		{ item: "ars_nouveau:alteration_table", weight: 220.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_small_bricks_slab", weight: 87.0f }
+		{ item: "ars_nouveau:ritual_burrowing", weight: 232.0f }
+		{ item: "ars_nouveau:enchanting_apparatus", weight: 269.0f }
+		{ item: "ars_nouveau:rotating_spell_turret", weight: 262.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:sorcerer_leggings"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 29.0f
+		}
+		{ item: "ars_nouveau:item_detector", weight: 30.0f }
+		{ item: "ars_nouveau:ritual_overgrowth", weight: 31.0f }
+		{ item: "ars_nouveau:smooth_sourcestone", weight: 113.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_large_bricks_stairs", weight: 114.0f }
+		{ item: "ars_nouveau:sourcestone_large_bricks", weight: 115.0f }
+		{ item: "ars_nouveau:ritual_animal_summon", weight: 255.0f }
+		{ item: "ars_nouveau:allow_scroll", weight: 211.0f }
+		{ item: "ars_nouveau:purple_archwood_sapling", weight: 164.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:battlemage_robes"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 32.0f
+		}
+		{ item: "ars_nouveau:smooth_sourcestone_small_bricks", weight: 116.0f }
+		{ item: "ars_nouveau:mundane_belt", weight: 188.0f }
+		{ item: "ars_nouveau:glyph_orbit", weight: 249.0f }
+		{ item: "ars_nouveau:glyph_glide", weight: 33.0f }
+		{ item: "ars_nouveau:polished_sconce", weight: 176.0f }
+		{ item: "ars_nouveau:glyph_dispel", weight: 208.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:arcanist_leggings"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 34.0f
+		}
+		{ item: "ars_nouveau:annotated_codex", weight: 210.0f }
+		{ item: "ars_nouveau:glyph_animate_block", weight: 218.0f }
+		{ item: "ars_nouveau:glyph_firework", weight: 35.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_large_bricks_slab", weight: 88.0f }
+		{ item: "ars_nouveau:redstone_relay", weight: 268.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks_slab", weight: 89.0f }
+		{ item: "ars_nouveau:ritual_containment", weight: 36.0f }
+		{ item: "ars_nouveau:stripped_purple_archwood_wood", weight: 165.0f }
+		{ item: "ars_nouveau:glyph_self", weight: 227.0f }
+		{ item: "ars_nouveau:glyph_sense_magic", weight: 240.0f }
+		{ item: "ars_nouveau:blue_archwood_wood", weight: 166.0f }
+		{ item: "ars_nouveau:stripped_green_archwood_wood", weight: 167.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_basketweave_slab", weight: 90.0f }
+		{ item: "ars_nouveau:mob_jar", weight: 157.0f }
+		{ item: "ars_nouveau:spell_prism", weight: 263.0f }
+		{ item: "ars_nouveau:volcanic_sourcelink", weight: 250.0f }
+		{ item: "ars_nouveau:arcane_pedestal", weight: 223.0f }
+		{ item: "ars_nouveau:sourcestone_large_bricks_stairs", weight: 117.0f }
+		{ item: "ars_nouveau:blue_archwood_sapling", weight: 168.0f }
+		{ item: "ars_nouveau:glyph_fangs", weight: 37.0f }
+		{ item: "ars_nouveau:glyph_decelerate", weight: 258.0f }
+		{ item: "ars_nouveau:glyph_light", weight: 202.0f }
+		{ item: "ars_nouveau:archwood_chest", weight: 200.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_alternating_slab", weight: 91.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_small_bricks_stairs", weight: 118.0f }
+		{ item: "ars_nouveau:arcane_platform", weight: 224.0f }
+		{ item: "ars_nouveau:glyph_heal", weight: 279.0f }
+		{ item: "ars_nouveau:glyph_leap", weight: 216.0f }
+		{ item: "ars_nouveau:sourceberry_sack", weight: 38.0f }
+		{ item: "ars_nouveau:archwood_sconce", weight: 180.0f }
+		{ item: "ars_nouveau:ring_of_potential", weight: 204.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_alternating_stairs", weight: 119.0f }
+		{ item: "ars_nouveau:source_berry_pie", weight: 39.0f }
+		{ item: "ars_nouveau:scribes_table", weight: 215.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_small_bricks_stairs", weight: 120.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_alternating", weight: 121.0f }
+		{ item: "ars_nouveau:repository", weight: 226.0f }
+		{ item: "ars_nouveau:void_prism", weight: 264.0f }
+		{ item: "ars_nouveau:glyph_pull", weight: 181.0f }
+		{ item: "ars_nouveau:ritual_moonfall", weight: 186.0f }
+		{ item: "ars_nouveau:glyph_smelt", weight: 40.0f }
+		{ item: "ars_nouveau:apprentice_spell_book", weight: 41.0f }
+		{ item: "ars_nouveau:ritual_flight", weight: 273.0f }
+		{ item: "ars_nouveau:glyph_craft", weight: 158.0f }
+		{ item: "ars_nouveau:green_archwood_sapling", weight: 169.0f }
+		{ item: "ars_nouveau:glyph_redstone_signal", weight: 42.0f }
+		{ item: "ars_nouveau:sourcestone_basketweave", weight: 122.0f }
+		{ item: "ars_nouveau:starbuncle_shades", weight: 197.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_alternating", weight: 123.0f }
+		{ item: "ars_nouveau:archwood_button", weight: 150.0f }
+		{ item: "ars_nouveau:glyph_cold_snap", weight: 182.0f }
+		{ item: "ars_nouveau:ritual_sunrise", weight: 184.0f }
+		{ item: "ars_nouveau:worn_notebook", weight: 228.0f }
+		{ item: "ars_nouveau:glyph_summon_decoy", weight: 43.0f }
+		{ item: "ars_nouveau:archwood_door", weight: 151.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks_stairs", weight: 124.0f }
+		{ item: "ars_nouveau:ritual_sanctuary", weight: 244.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_small_bricks_slab", weight: 92.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:runic_chalk"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 44.0f
+		}
+		{ item: "ars_nouveau:purple_sbed", weight: 45.0f }
+		{ item: "ars_nouveau:glyph_delay", weight: 46.0f }
+		{ item: "ars_nouveau:ritual_challenge", weight: 272.0f }
+		{ item: "ars_nouveau:archwood_fence_gate", weight: 152.0f }
+		{ item: "ars_nouveau:orange_sbed", weight: 212.0f }
+		{ item: "ars_nouveau:glyph_pickup", weight: 242.0f }
+		{ item: "ars_nouveau:starbuncle_shards", weight: 192.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_large_bricks", weight: 125.0f }
+		{ item: "ars_nouveau:ritual_restoration", weight: 274.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_mosaic_stairs", weight: 126.0f }
+		{ item: "ars_nouveau:arcane_core", weight: 248.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:arcanist_robes"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 47.0f
+		}
+		{ item: "ars_nouveau:source_gem_block", weight: 189.0f }
+		{ item: "ars_nouveau:mycelial_sourcelink", weight: 48.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_mosaic_stairs", weight: 127.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_mosaic", weight: 128.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_basketweave", weight: 129.0f }
+		{ item: "ars_nouveau:glyph_snare", weight: 49.0f }
+		{ item: "ars_nouveau:glyph_toss", weight: 50.0f }
+		{ item: "ars_nouveau:blank_parchment", weight: 205.0f }
+		{ item: "ars_nouveau:ritual_warping", weight: 246.0f }
+		{ item: "ars_nouveau:glyph_randomize", weight: 51.0f }
+		{ item: "ars_nouveau:green_archwood_wood", weight: 170.0f }
+		{ item: "ars_nouveau:sourcestone_sconce", weight: 177.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_mosaic_slab", weight: 93.0f }
+		{ item: "ars_nouveau:source_berry_roll", weight: 52.0f }
+		{ item: "ars_nouveau:glyph_underfoot", weight: 222.0f }
+		{ item: "ars_nouveau:glyph_gust", weight: 53.0f }
+		{ item: "ars_nouveau:glyph_projectile", weight: 160.0f }
+		{ item: "ars_nouveau:blue_sbed", weight: 54.0f }
+		{ item: "ars_nouveau:sourcestone_alternating_slab", weight: 94.0f }
+		{ item: "ars_nouveau:glyph_aoe", weight: 55.0f }
+		{ item: "ars_nouveau:ghostweave", weight: 196.0f }
+		{ item: "ars_nouveau:glyph_invisibility", weight: 236.0f }
+		{ item: "ars_nouveau:red_archwood_sapling", weight: 171.0f }
+		{ item: "ars_nouveau:mimic_scroll", weight: 214.0f }
+		{ item: "ars_nouveau:deny_scroll", weight: 206.0f }
+		{ item: "ars_nouveau:rewind", weight: 56.0f }
+		{ item: "ars_nouveau:imbuement_chamber", weight: 247.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_alternating_stairs", weight: 130.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_mosaic_slab", weight: 95.0f }
+		{ item: "ars_nouveau:glyph_infuse", weight: 234.0f }
+		{ item: "ars_nouveau:glyph_amplify", weight: 276.0f }
+		{ item: "ars_nouveau:glyph_linger", weight: 57.0f }
+		{ item: "ars_nouveau:sky_block", weight: 58.0f }
+		{ item: "ars_nouveau:ritual_flowering", weight: 59.0f }
+		{ item: "ars_nouveau:glyph_duration_down", weight: 259.0f }
+		{ item: "ars_nouveau:caster_tome", weight: 60.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_large_bricks_slab", weight: 96.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:potion_flask"
+				tag: {
+					Damage: 8
+				}
+			}
+			weight: 277.0f
+		}
+		{ item: "ars_nouveau:ritual_conjure_island_desert", weight: 61.0f }
+		{ item: "ars_nouveau:glyph_extract", weight: 271.0f }
+		{ item: "ars_nouveau:ritual_forestation", weight: 62.0f }
+		{ item: "ars_nouveau:ritual_harvest", weight: 63.0f }
+		{ item: "ars_nouveau:archwood_fence", weight: 153.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_alternating_slab", weight: 97.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:sorcerer_robes"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 64.0f
+		}
+		{ item: "ars_nouveau:glyph_intangible", weight: 65.0f }
+		{ item: "ars_nouveau:archmage_spell_book", weight: 66.0f }
+		{ item: "ars_nouveau:glyph_fortune", weight: 190.0f }
+		{ item: "ars_nouveau:potion_jar", weight: 207.0f }
+		{ item: "ars_nouveau:glyph_blink", weight: 67.0f }
+		{ item: "ars_nouveau:source_jar", weight: 159.0f }
+		{ item: "ars_nouveau:sconce", weight: 213.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:sorcerer_hood"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 68.0f
+		}
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_basketweave_stairs", weight: 131.0f }
+		{ item: "ars_nouveau:sourcestone_basketweave_slab", weight: 98.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_basketweave_stairs", weight: 132.0f }
+		{ item: "ars_nouveau:agronomic_sourcelink", weight: 251.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_stairs", weight: 133.0f }
+		{ item: "ars_nouveau:reset", weight: 219.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_large_bricks", weight: 134.0f }
+		{ item: "ars_nouveau:wololo", weight: 69.0f }
+		{ item: "ars_nouveau:mirrorweave", weight: 198.0f }
+		{ item: "ars_nouveau:sourcestone_alternating", weight: 135.0f }
+		{ item: "ars_nouveau:glyph_accelerate", weight: 265.0f }
+		{ item: "ars_nouveau:sourcestone_mosaic", weight: 136.0f }
+		{ item: "ars_nouveau:stripped_blue_archwood_wood", weight: 172.0f }
+		{ item: "ars_nouveau:sourcestone_small_bricks", weight: 137.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks_slab", weight: 99.0f }
+		{ item: "ars_nouveau:glyph_ignite", weight: 195.0f }
+		{ item: "ars_nouveau:magelight_torch", weight: 217.0f }
+		{ item: "ars_nouveau:glyph_dampen", weight: 81.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:arcanist_hood"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 70.0f
+		}
+		{ item: "ars_nouveau:glyph_wind_shear", weight: 233.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_mosaic_slab", weight: 100.0f }
+		{ item: "ars_nouveau:glyph_freeze", weight: 178.0f }
+		{ item: "ars_nouveau:purple_archwood_wood", weight: 173.0f }
+		{ item: "ars_nouveau:glyph_break", weight: 221.0f }
+		{ item: "ars_nouveau:wixie_hat", weight: 239.0f }
+		{ item: "ars_nouveau:glyph_summon_vex", weight: 71.0f }
+		{ item: "ars_nouveau:glyph_fell", weight: 72.0f }
+		{ item: "ars_nouveau:sourcestone_alternating_stairs", weight: 138.0f }
+		{ item: "ars_nouveau:glyph_flare", weight: 241.0f }
+		{ item: "ars_nouveau:glyph_place_block", weight: 73.0f }
+		{ item: "ars_nouveau:smooth_sourcestone_alternating", weight: 139.0f }
+		{
+			item: {
+				Count: 1
+				id: "ars_nouveau:battlemage_hood"
+				tag: {
+					Damage: 0
+				}
+			}
+			weight: 74.0f
+		}
+		{ item: "ars_nouveau:smooth_sourcestone_mosaic_stairs", weight: 140.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_alternating_stairs", weight: 141.0f }
+		{ item: "ars_nouveau:red_archwood_wood", weight: 174.0f }
+		{ item: "ars_nouveau:glyph_rotate", weight: 75.0f }
+		{ item: "ars_nouveau:ritual_conjure_island_plains", weight: 76.0f }
+		{ item: "ars_nouveau:archwood_stairs", weight: 154.0f }
+		{ item: "ars_nouveau:alchemical_sourcelink", weight: 77.0f }
+		{ item: "ars_nouveau:blank_thread", weight: 225.0f }
+		{ item: "ars_nouveau:glyph_summon_steed", weight: 191.0f }
+		{ item: "ars_nouveau:sourcestone_large_bricks_slab", weight: 101.0f }
+		{ item: "ars_nouveau:glyph_crush", weight: 78.0f }
+		{ item: "ars_nouveau:sourcestone_basketweave_stairs", weight: 142.0f }
+		{ item: "ars_nouveau:glyph_slowfall", weight: 235.0f }
+		{ item: "ars_nouveau:glyph_cut", weight: 79.0f }
+		{ item: "ars_nouveau:glyph_evaporate", weight: 80.0f }
+		{ item: "ars_nouveau:ritual_brazier", weight: 254.0f }
+		{ item: "ars_nouveau:dull_trinket", weight: 193.0f }
+		{ item: "ars_nouveau:sourcestone_small_bricks_slab", weight: 102.0f }
+		{ item: "ars_nouveau:experience_gem", weight: 156.0f }
+		{ item: "ars_nouveau:vitalic_sourcelink", weight: 253.0f }
+		{ item: "ars_nouveau:glyph_conjure_water", weight: 175.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_mosaic", weight: 143.0f }
+		{ item: "ars_nouveau:smooth_gilded_sourcestone_small_bricks", weight: 144.0f }
+		{ item: "ars_nouveau:glyph_phantom_block", weight: 155.0f }
+		{ item: "ars_nouveau:gilded_sourcestone_basketweave", weight: 145.0f }
+		{ item: "ars_nouveau:sourcestone_small_bricks_stairs", weight: 146.0f }
 	]
 	title: "Ars Nouveau Rewards"
 }

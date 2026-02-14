@@ -2,105 +2,151 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_pneumaticcraft"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "pneumaticcraft:compressed_iron_block"
-	id: "000000002D711495"
-	order_index: 130
+	id: "0000000004874CA5"
+	order_index: 129
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: [
-				"00000000474C7ACD"
-				"00000000FA3B7288"
-				"00000000B648DF23"
-				"000000008E6E5FCB"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"000000004FDC7352"
+				"0000000028F18000"
+				"00000000B5157619"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007E369B83"
+			id: "000000003AA77240"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AEF5EE6B"
+					id: "00000000F546E89B"
 					type: "xp"
-					xp: 21
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FC4E7C36"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000038D34885"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007FE03416"
+					id: "0000000020BFF6BD"
 					item: "pneumaticcraft:jet_boots_upgrade_1"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FDFF02BE"
+					id: "00000000EA6F6FEB"
 					item: "pneumaticcraft:medium_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D92A4CDF"
+					id: "000000003716A4C2"
 					item: "pneumaticcraft:pneumatic_cylinder"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 2.0d
+			y: 9.0d
 		}
 		{
-			dependencies: [
-				"00000000F94DD7AD"
-				"00000000B648DF23"
-				"000000005CC0A135"
-			]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009796BBBE"
+			id: "000000007FBDAA67"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000E9D7F37"
+					id: "000000002E7017C4"
 					type: "xp"
-					xp: 3
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000002E23BAF"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000038EC9ADB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "000000004ADBAE82"
+				item: "pneumaticcraft:reinforced_stone"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"00000000B5157619"
+				"00000000DDC40C23"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000047E769B0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A1DAD357"
+					type: "xp"
+					xp: 31
+				}
+				{
+					id: "0000000026B7A45A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000034C7904E"
+					id: "00000000D8354E5C"
 					item: "pneumaticcraft:air_canister"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B287839B"
+					id: "000000005C715D71"
 					item: "pneumaticcraft:air_compressor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000085442053"
+					id: "00000000F79C19D4"
 					item: "pneumaticcraft:reinforced_brick_wall"
 					type: "item"
 				}
@@ -109,228 +155,207 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000005CC0A135"]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000018B092FF"
+			id: "000000007078DE43"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DE6223B8"
+					id: "00000000A848C746"
 					type: "xp"
-					xp: 8
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004EFDDC8D"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000C5E04988"
-				item: "pneumaticcraft:turbine_rotor"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"00000000B648DF23"
-				"0000000034A0B681"
-				"000000005CC0A135"
-				"000000009796BBBE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A49999E7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000084C42386"
-					type: "xp"
-					xp: 30
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000049CFE231"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000C91826C2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B32F7EF2"
+					id: "000000002455703E"
+					item: "pneumaticcraft:thermal_lagging"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000C80B8F2"
+					item: "pneumaticcraft:turbine_rotor"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"00000000B5157619"
+				"0000000032A6FABC"
+				"00000000DDC40C23"
+				"0000000047E769B0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004D1DF6EC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003E7E4B14"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000A301C533"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008BB8EBE1"
+					item: "pneumaticcraft:pressure_chamber_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FE39D6DB"
 					item: "pneumaticcraft:reinforced_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002BBB3772"
+					id: "0000000036C32A6F"
 					item: "pneumaticcraft:safety_tube_module"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "0000000027F4BAB8"
-					item: "pneumaticcraft:thermal_lagging"
-					type: "item"
-				}
 			]
-			x: -8.0d
-			y: 6.0d
+			x: -6.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
-				"00000000F94DD7AD"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A7C0D0BB"
+			id: "0000000058539885"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D4BFEE8F"
+					id: "00000000F2F61BEB"
 					type: "xp"
-					xp: 22
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F7F01C85"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000B858F25A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000010535CC3"
+					id: "0000000022733305"
+					item: "pneumaticcraft:network_data_storage"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000183BE63F"
 					item: "pneumaticcraft:network_io_port"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000ABC12176"
+					id: "00000000D4790ACD"
 					item: "pneumaticcraft:omnidirectional_hopper"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000040307BEC"
-					item: "pneumaticcraft:pressure_chamber_wall"
 					type: "item"
 				}
 			]
 			x: -6.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"00000000474C7ACD"
-				"000000007E369B83"
-				"000000008E6E5FCB"
-				"00000000233501A7"
+				"000000004FDC7352"
+				"000000003AA77240"
+				"00000000370D2A49"
+				"0000000032A6FABC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CB29D433"
+			id: "00000000557EB4C9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000609D439B"
+					id: "000000003EBDE32D"
 					type: "xp"
-					xp: 17
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006F8C3379"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000E83DCD63"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DFBD984A"
+					id: "000000000A9F3760"
+					item: "pneumaticcraft:huge_tank"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B28D011F"
 					item: "pneumaticcraft:jet_boots_upgrade_3"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008509690A"
+					id: "00000000F8B33AE2"
 					item: "pneumaticcraft:jumping_upgrade_2"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008430CB99"
-					item: "pneumaticcraft:network_data_storage"
-					type: "item"
-				}
-			]
-			x: -8.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"00000000B648DF23"
-				"00000000233501A7"
-				"0000000034A0B681"
-				"00000000DBE7D7BA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000FD7E71EF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BFFCA524"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005636DFF7"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000E8B067DE"
-					item: "pneumaticcraft:charging_station"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BAC44774"
-					item: "pneumaticcraft:printed_circuit_board"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009B56762A"
-					item: "pneumaticcraft:huge_tank"
 					type: "item"
 				}
 			]
@@ -339,46 +364,105 @@
 		}
 		{
 			dependencies: [
-				"0000000018B092FF"
-				"000000005CC0A135"
+				"00000000B5157619"
+				"0000000032A6FABC"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DA9E1FE6"
+			id: "00000000454F9AB4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009B979DFD"
+					id: "000000008C3D047C"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E5F2CE6C"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000B827F8E9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000202A0D62"
+					item: "pneumaticcraft:charging_station"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000566728B7"
+					item: "pneumaticcraft:printed_circuit_board"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000057ABC213"
+					item: "pneumaticcraft:gps_tool"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"000000007078DE43"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AF98CCDE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000063AF7F34"
+					type: "xp"
+					xp: 27
+				}
+				{
+					id: "00000000B1CC3932"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000009DB4213"
-					item: "pneumaticcraft:wall_lamp_green"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A40BA934"
+					id: "000000000AD01005"
 					item: "pneumaticcraft:wall_lamp_inverted_green"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001234E7CB"
+					id: "000000007CDFAD38"
 					item: "pneumaticcraft:guard_drone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006FE24646"
+					item: "pneumaticcraft:harvesting_drone"
 					type: "item"
 				}
 			]
@@ -387,119 +471,50 @@
 		}
 		{
 			dependencies: [
-				"0000000053CCEA13"
-				"00000000E11831CE"
-				"00000000CC963C08"
-				"00000000DBE7D7BA"
-				"0000000079A6C87B"
-				"000000001B0FEF62"
+				"00000000944A1EA1"
+				"00000000C21612C0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008E6E5FCB"
+			id: "0000000023D60C00"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009B2EDC28"
+					id: "00000000A7024893"
 					type: "xp"
-					xp: 6
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000075EA5473"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [{
-				consume_items: false
-				id: "000000009D35DD06"
-				item: "pneumaticcraft:plastic"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"0000000018B092FF"
-				"000000005CC0A135"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CA79A63E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C252A601"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000093292230"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000AD9C4CA7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EAF9BB97"
-					item: "pneumaticcraft:harvesting_drone"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EF2586BD"
+					id: "0000000070E7DC2E"
 					item: "pneumaticcraft:heat_frame"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FCF8CBE8"
+					id: "000000007FC31537"
 					item: "pneumaticcraft:heat_sink"
 					type: "item"
 				}
-			]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000002DEFF0F4"
-				"000000005CC0A135"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D783B473"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003FED4EE6"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000E0301B7"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "000000000ADEB791"
+					id: "00000000A70F74D2"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:gun_ammo_incendiary"
@@ -509,16 +524,53 @@
 					}
 					type: "item"
 				}
+			]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000080709AE2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FC5E38AB"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000007F7C885F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
 				{
 					consume_items: false
-					id: "000000009576B52E"
+					id: "00000000A0092DCA"
 					item: "pneumaticcraft:inventory_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000DD566C9"
+					id: "00000000791D2644"
 					item: "pneumaticcraft:item_life_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003BC23F37"
+					item: "pneumaticcraft:search_upgrade"
 					type: "item"
 				}
 			]
@@ -527,47 +579,54 @@
 		}
 		{
 			dependencies: [
-				"00000000474C7ACD"
-				"0000000086255822"
-				"000000007E369B83"
+				"00000000944A1EA1"
+				"000000004FDC7352"
+				"0000000028F18000"
+				"000000003AA77240"
+				"0000000069C1430E"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D72EC705"
+			id: "00000000B1C99486"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000090D06C66"
+					id: "0000000024D37E69"
 					type: "xp"
-					xp: 28
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000725A612C"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000093614F39"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008336BB1E"
-					item: "pneumaticcraft:search_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000120C0B16"
+					id: "0000000080736671"
 					item: "pneumaticcraft:jet_boots_upgrade_5"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000749EE8A7"
+					id: "00000000CAA5974D"
 					item: "pneumaticcraft:jumping_upgrade_4"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000FE16144"
+					item: "pneumaticcraft:kerosene_lamp"
 					type: "item"
 				}
 			]
@@ -575,47 +634,49 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"00000000FA3B7288"
-				"000000005CC0A135"
-			]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000110FF1E8"
+			id: "0000000034D33277"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000348878A3"
+					id: "00000000A3AD9B8D"
 					type: "xp"
-					xp: 9
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000437F252F"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000046C3A917"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E9CAFB33"
-					item: "pneumaticcraft:kerosene_lamp"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007DEE6459"
+					id: "00000000CEE033FA"
 					item: "pneumaticcraft:wall_lamp_light_blue"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000076B2EFB8"
+					id: "00000000AAB18219"
 					item: "pneumaticcraft:wall_lamp_inverted_light_blue"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007235C3C8"
+					item: "pneumaticcraft:wall_lamp_light_gray"
 					type: "item"
 				}
 			]
@@ -623,44 +684,49 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000005CC0A135"]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005ADABC86"
+			id: "000000000306150F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000081C81BD"
+					id: "000000006C23B663"
 					type: "xp"
-					xp: 7
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006A27D427"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000056FB432D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C0BCA6C8"
-					item: "pneumaticcraft:wall_lamp_light_gray"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003F182975"
+					id: "00000000D65E8DB1"
 					item: "pneumaticcraft:wall_lamp_inverted_light_gray"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000086D7CBF4"
+					id: "00000000A8010C08"
 					item: "pneumaticcraft:wall_lamp_lime"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000443D086C"
+					item: "pneumaticcraft:wall_lamp_inverted_lime"
 					type: "item"
 				}
 			]
@@ -668,47 +734,49 @@
 			y: 5.0d
 		}
 		{
-			dependencies: [
-				"00000000FA3B7288"
-				"000000005CC0A135"
-			]
+			dependencies: ["0000000028F18000"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009BC4DBEC"
+			id: "00000000E2AE2908"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000062E67D7E"
+					id: "000000006FB5D5BE"
 					type: "xp"
-					xp: 2
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CCF09FD3"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000020EB04C6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000031FADF"
-					item: "pneumaticcraft:wall_lamp_inverted_lime"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000037BB0070"
+					id: "0000000008BC7EC4"
 					item: "pneumaticcraft:liquid_hopper"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AA3B47E5"
+					id: "00000000422ECC3C"
 					item: "pneumaticcraft:logistics_frame_active_provider"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CB90EB50"
+					item: "pneumaticcraft:logistics_frame_default_storage"
 					type: "item"
 				}
 			]
@@ -716,44 +784,48 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000C4673397"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000053809534"
+			id: "000000004E8C0F4C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004D970D44"
+					id: "000000009C375503"
 					type: "xp"
-					xp: 17
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006F0DF90E"
-					table_id: 473028740L
-					type: "random"
+					id: "000000006D078A53"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001360D8D5"
-					item: "pneumaticcraft:logistics_frame_default_storage"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C5F66A01"
+					id: "000000002B849BBA"
 					item: "pneumaticcraft:logistics_frame_passive_provider"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005CFCD7B3"
+					id: "0000000088A0941B"
 					item: "pneumaticcraft:logistics_frame_requester"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000110B49FB"
+					item: "pneumaticcraft:logistics_frame_storage"
 					type: "item"
 				}
 			]
@@ -762,48 +834,54 @@
 		}
 		{
 			dependencies: [
-				"0000000018B092FF"
-				"00000000C4673397"
-				"000000005CC0A135"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"000000007078DE43"
+				"00000000E52FA86A"
+				"00000000B5157619"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000007C15433"
+			id: "000000003937C3B3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000094BDBE33"
+					id: "000000006DBC0E6A"
 					type: "xp"
-					xp: 26
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005D3099E2"
-					table_id: 473028740L
-					type: "random"
+					id: "000000005F69FFE9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000062534AE9"
-					item: "pneumaticcraft:logistics_frame_storage"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000171F96FE"
+					id: "000000008A5D96F0"
 					item: "pneumaticcraft:logistics_configurator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000817A5A6B"
+					id: "00000000C5A52EE3"
 					item: "pneumaticcraft:logistics_drone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FCFEED42"
+					item: "pneumaticcraft:logistics_module"
 					type: "item"
 				}
 			]
@@ -812,47 +890,51 @@
 		}
 		{
 			dependencies: [
-				"00000000C4673397"
-				"00000000B648DF23"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008AA84263"
+			id: "00000000A62B7B47"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B2A1119B"
+					id: "00000000EE699AF5"
 					type: "xp"
 					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001FF531D1"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000E30596E7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FAD6A30B"
-					item: "pneumaticcraft:logistics_module"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C5890206"
+					id: "000000006703050D"
 					item: "pneumaticcraft:wall_lamp_magenta"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000073AED990"
+					id: "00000000431B3CFE"
 					item: "pneumaticcraft:wall_lamp_inverted_magenta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000062FE3464"
+					item: "pneumaticcraft:magnet_upgrade"
 					type: "item"
 				}
 			]
@@ -861,446 +943,194 @@
 		}
 		{
 			dependencies: [
-				"00000000FC72036B"
-				"00000000ED6A7395"
+				"00000000534D8AAF"
+				"00000000F2F6EE49"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000053CCEA13"
+			id: "000000005C484370"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000900FD9A7"
+					id: "0000000002EEF5BA"
 					type: "xp"
-					xp: 30
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AFE22060"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008BE61FE7"
-					item: "pneumaticcraft:smooth_plastic_brick_orange"
+					id: "00000000652DC18D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007632996F"
-					item: "pneumaticcraft:smooth_plastic_brick_pink"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004096F2E5"
-					item: "pneumaticcraft:smooth_plastic_brick_purple"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000FC72036B"
-				"0000000046A074F8"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E11831CE"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006D5FB648"
-					type: "xp"
-					xp: 29
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BF29E9E4"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000E5CE4431"
-					item: "pneumaticcraft:smooth_plastic_brick_light_gray"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F5318572"
-					item: "pneumaticcraft:smooth_plastic_brick_lime"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009AFED878"
-					item: "pneumaticcraft:smooth_plastic_brick_magenta"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000287581B0"
-				"00000000ED6A7395"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CC963C08"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003442BE62"
-					type: "xp"
-					xp: 14
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000003695291"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F07E4C32"
-					item: "pneumaticcraft:smooth_plastic_brick_red"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F030D696"
-					item: "pneumaticcraft:smooth_plastic_brick_white"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B99A12F3"
-					item: "pneumaticcraft:smooth_plastic_brick_yellow"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["00000000C701D3B1"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000CFDF710"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FE6AA85A"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000480D721F"
-					table_id: 473028740L
-					type: "random"
 				}
 			]
 			shape: "diamond"
-			tasks: [{
-				consume_items: false
-				id: "0000000057416D93"
-				item: "pneumaticcraft:compressed_stone_slab"
-				type: "item"
-			}]
-			x: -13.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008399ED21"
+					item: "pneumaticcraft:compressed_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D6F39357"
+					item: "pneumaticcraft:compressed_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CA529640"
+					item: "pneumaticcraft:display_table"
+					type: "item"
+				}
+			]
+			x: -12.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"00000000F94DD7AD"
-				"00000000F49E6B9D"
-			]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005CC0A135"
+			id: "00000000DDC40C23"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007FA9CD69"
+					id: "00000000800DC6A1"
 					type: "xp"
-					xp: 7
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9238427"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000032D39DD9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000053A44BC0"
-					item: "pneumaticcraft:ingot_iron_compressed"
+					id: "00000000B254E673"
+					item: "pneumaticcraft:compressed_iron_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000090336932"
-					item: "pneumaticcraft:reinforced_brick_tile"
+					id: "00000000FA6FB0B3"
+					item: "pneumaticcraft:reinforced_bricks"
 					type: "item"
 				}
 			]
-			x: -9.0d
+			x: -8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: [
-				"00000000C701D3B1"
-				"00000000C84B86A3"
+				"00000000D58A28F4"
+				"000000003ACF62FC"
+				"00000000EB467435"
+				"0000000010F86682"
+				"000000000011AAD4"
+				"000000005F35D98A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DBE7D7BA"
+			id: "0000000027F2B507"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000027135883"
+					id: "00000000EC5B7E02"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004F481075"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000044EA1D0D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001BADCC0E"
-					item: "pneumaticcraft:gps_area_tool"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006F1D1F81"
-					item: "pneumaticcraft:reinforced_stone_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F5BC052C"
-					item: "pneumaticcraft:smooth_plastic_brick_black"
-					type: "item"
-				}
-			]
-			x: -11.0d
+			tasks: [{
+				consume_items: false
+				id: "000000006A6C0D83"
+				item: "pneumaticcraft:plastic"
+				type: "item"
+			}]
+			x: -8.0d
 			y: 3.0d
 		}
 		{
 			dependencies: [
-				"0000000046A074F8"
-				"000000009C8BA431"
+				"00000000944A1EA1"
+				"000000002F6E50FA"
+				"00000000454F9AB4"
+				"00000000B5157619"
+				"00000000CA1401AE"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000079A6C87B"
+			id: "00000000314183F3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C90CE9F0"
+					id: "00000000FEADD870"
 					type: "xp"
-					xp: 15
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E68F583C"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F3B5602E"
-					item: "pneumaticcraft:smooth_plastic_brick_gray"
+					id: "00000000864B6256"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000006858662"
-					item: "pneumaticcraft:smooth_plastic_brick_green"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DB3A92D4"
-					item: "pneumaticcraft:smooth_plastic_brick_light_blue"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"000000009C8BA431"
-				"00000000C84B86A3"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001B0FEF62"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B76A6BD3"
-					type: "xp"
-					xp: 26
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008CB2369E"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000FBB104FB"
-					item: "pneumaticcraft:smooth_plastic_brick_blue"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C4B9937E"
-					item: "pneumaticcraft:smooth_plastic_brick_brown"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B2D27807"
-					item: "pneumaticcraft:smooth_plastic_brick_cyan"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"00000000D0562272"
-				"000000008E6E5FCB"
-				"00000000B648DF23"
-				"0000000092448D37"
-				"000000005CC0A135"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000079A0FF45"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003D02DE6B"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A822B2D2"
-					table_id: 473028740L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000049DBE266"
-					item: "pneumaticcraft:magnet_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001CF0A2C8"
+					id: "00000000DAE9D101"
 					item: "pneumaticcraft:manual_compressor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000B086DD5"
+					id: "0000000037F5FDA1"
 					item: "pneumaticcraft:memory_stick"
 					type: "item"
 				}
-			]
-			x: -3.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000FD7E71EF"
-				"00000000C4673397"
-				"000000008E6E5FCB"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000ABDB9E98"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D469715E"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A1745854"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "000000004BAC4F9C"
+					id: "000000008978AAB4"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:micromissiles"
@@ -1310,16 +1140,58 @@
 					}
 					type: "item"
 				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000C21612C0"
+				"00000000454F9AB4"
+				"0000000027F2B507"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E573734B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CE674766"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "0000000032F21866"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
 				{
 					consume_items: false
-					id: "000000004458B59A"
+					id: "00000000F889ADF1"
 					item: "pneumaticcraft:minigun_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002598EDEA"
+					id: "0000000084EA4CB5"
 					item: "pneumaticcraft:module_expansion_card"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000968478E3"
+					item: "pneumaticcraft:network_api"
 					type: "item"
 				}
 			]
@@ -1328,46 +1200,51 @@
 		}
 		{
 			dependencies: [
-				"000000008E6E5FCB"
-				"000000002DEFF0F4"
+				"00000000944A1EA1"
+				"000000004EE4ACF0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002503497D"
+			id: "0000000047022094"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002E891B46"
+					id: "000000005182948C"
 					type: "xp"
-					xp: 27
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F198D74B"
-					table_id: 473028740L
-					type: "random"
+					id: "000000002A377091"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004A0A01F1"
-					item: "pneumaticcraft:network_api"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000012A4E979"
+					id: "0000000039397DB8"
 					item: "pneumaticcraft:network_node"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009F0AE440"
+					id: "00000000E6C75297"
 					item: "pneumaticcraft:night_vision_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D9A565CA"
+					item: "pneumaticcraft:wall_lamp_orange"
 					type: "item"
 				}
 			]
@@ -1375,44 +1252,49 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000005CC0A135"]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000002BF560C"
+			id: "00000000985E2E8C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A82E5B7F"
+					id: "000000002C794464"
 					type: "xp"
-					xp: 4
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D572793B"
-					table_id: 473028740L
-					type: "random"
+					id: "000000001CDA567E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A16CC809"
-					item: "pneumaticcraft:wall_lamp_orange"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005A77F52B"
+					id: "00000000A3EACD41"
 					item: "pneumaticcraft:wall_lamp_inverted_orange"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002FBF7104"
+					id: "00000000635A5A39"
 					item: "patchouli:guide_book"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000443EB28B"
+					item: "minecraft:paper"
 					type: "item"
 				}
 			]
@@ -1420,81 +1302,53 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000005CC0A135"]
+			dependencies: [
+				"00000000944A1EA1"
+				"00000000D3E70E52"
+				"00000000454F9AB4"
+				"0000000047E769B0"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001D3B86E4"
+			id: "00000000C499CE26"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BB7B122F"
+					id: "0000000057C38F7F"
 					type: "xp"
-					xp: 12
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D14835EC"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000F138FCD6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000009721D49"
-					item: "minecraft:paper"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000055FFD7FC"
+					id: "00000000F22A1D20"
 					item: "pneumaticcraft:wall_lamp_pink"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007925C6C5"
+					id: "00000000697F0751"
 					item: "pneumaticcraft:wall_lamp_inverted_pink"
 					type: "item"
 				}
-			]
-			x: -3.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"00000000D0562272"
-				"00000000FD7E71EF"
-				"000000005CC0A135"
-				"000000009796BBBE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004315D7F3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B93C9A96"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005E9D749A"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "00000000AFE6217D"
+					id: "00000000C33E58DD"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:pneumatic_boots"
@@ -1504,9 +1358,48 @@
 					}
 					type: "item"
 				}
+			]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000002F6E50FA"
+				"00000000944A1EA1"
+				"00000000454F9AB4"
+				"000000003AA77240"
+				"00000000B5157619"
+				"0000000047E769B0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DA6D12F5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C4032867"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "000000003495C633"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
 				{
 					consume_items: false
-					id: "00000000E7D0274D"
+					id: "00000000ABED6958"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:pneumatic_chestplate"
@@ -1518,8 +1411,14 @@
 				}
 				{
 					consume_items: false
-					id: "00000000AACC70E4"
+					id: "0000000028A4C449"
 					item: "pneumaticcraft:pneumatic_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AFEC6C14"
+					item: "pneumaticcraft:pneumatic_door_base"
 					type: "item"
 				}
 			]
@@ -1528,50 +1427,50 @@
 		}
 		{
 			dependencies: [
-				"00000000D0562272"
-				"00000000FD7E71EF"
-				"000000007E369B83"
-				"00000000B648DF23"
-				"00000000209AB4AF"
-				"000000005CC0A135"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"000000002F6E50FA"
+				"00000000454F9AB4"
+				"000000003AA77240"
+				"00000000B5157619"
+				"00000000DDC40C23"
+				"0000000027F2B507"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000054E87182"
+			id: "000000007005985A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000098649398"
+					id: "000000001F69A5BE"
 					type: "xp"
-					xp: 25
+					xp: 30
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006111C55E"
-					table_id: 473028740L
-					type: "random"
+					id: "000000002E78D353"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007C56C0CB"
-					item: "pneumaticcraft:pneumatic_door_base"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FA4CA65E"
+					id: "00000000CEE85667"
 					item: "pneumaticcraft:pneumatic_dynamo"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002B878E38"
+					id: "00000000BBBE3E17"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:pneumatic_helmet"
@@ -1581,51 +1480,53 @@
 					}
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "00000000581F898C"
+					item: "pneumaticcraft:jackhammer"
+					type: "item"
+				}
 			]
 			x: -3.0d
 			y: 6.0d
 		}
 		{
 			dependencies: [
-				"00000000FD7E71EF"
-				"000000007E369B83"
-				"00000000B648DF23"
-				"000000008E6E5FCB"
-				"00000000F49E6B9D"
-				"00000000209AB4AF"
-				"000000005CC0A135"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"000000004D1DF6EC"
+				"00000000454F9AB4"
+				"000000002F781381"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006ACAED84"
+			id: "000000003AC0FB05"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004DB90289"
+					id: "0000000053F8B975"
 					type: "xp"
-					xp: 26
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007B7B1EDD"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000119EDFA2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EB4E17D8"
-					item: "pneumaticcraft:jackhammer"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003306145D"
+					id: "000000002A43D937"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:pneumatic_leggings"
@@ -1637,8 +1538,14 @@
 				}
 				{
 					consume_items: false
-					id: "000000007F0DCC01"
+					id: "000000009F75ECF2"
 					item: "pneumaticcraft:pneumatic_wrench"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A89EEE8F"
+					item: "pneumaticcraft:pressure_chamber_interface"
 					type: "item"
 				}
 			]
@@ -1647,47 +1554,53 @@
 		}
 		{
 			dependencies: [
-				"00000000A7C0D0BB"
-				"00000000B648DF23"
-				"0000000034A0B681"
+				"00000000944A1EA1"
+				"000000004D1DF6EC"
+				"00000000B5157619"
+				"0000000032A6FABC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D2FE5B20"
+			id: "0000000092F04774"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ED70BC38"
+					id: "0000000006D5DA7D"
 					type: "xp"
-					xp: 8
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9A76C2F"
-					table_id: 473028740L
-					type: "random"
+					id: "000000008DF5C05B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FF836038"
-					item: "pneumaticcraft:pressure_chamber_interface"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000061875CAE"
+					id: "000000006ED77C36"
 					item: "pneumaticcraft:pressure_chamber_valve"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000048842D0F"
+					id: "000000006CA832B8"
 					item: "pneumaticcraft:pressure_gauge_module"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000077358B93"
+					item: "pneumaticcraft:pressurized_spawner"
 					type: "item"
 				}
 			]
@@ -1696,51 +1609,56 @@
 		}
 		{
 			dependencies: [
-				"0000000018B092FF"
-				"00000000FD7E71EF"
-				"000000007A96B266"
-				"000000008E6E5FCB"
-				"00000000285D7C9F"
-				"000000002DEFF0F4"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"000000007078DE43"
+				"00000000C21612C0"
+				"00000000454F9AB4"
+				"000000002F781381"
+				"0000000042DF08A8"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FA5BAC7D"
+			id: "00000000BBA665D1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CA1D403E"
+					id: "000000009326CD86"
 					type: "xp"
-					xp: 14
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005D587712"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000689A5238"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000083EFF11C"
-					item: "pneumaticcraft:pressurized_spawner"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009C79957D"
+					id: "00000000CCB1283F"
 					item: "pneumaticcraft:programmable_controller"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008AB2E933"
+					id: "00000000D01B3AC2"
 					item: "pneumaticcraft:programmer"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004A29DD47"
+					item: "pneumaticcraft:programming_puzzle"
 					type: "item"
 				}
 			]
@@ -1749,156 +1667,164 @@
 		}
 		{
 			dependencies: [
-				"000000005CC0A135"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000474C7ACD"
+			id: "000000004FDC7352"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000062F97882"
+					id: "000000004C214A86"
 					type: "xp"
-					xp: 4
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000674BF0E7"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000029611349"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "hexagon"
 			tasks: [{
 				consume_items: false
-				id: "0000000088002037"
+				id: "00000000456F0C8B"
 				item: "pneumaticcraft:vortex_cannon"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"00000000B5157619"
+				"0000000047E769B0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000028F18000"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000088FE00B8"
+					type: "xp"
+					xp: 22
+				}
+				{
+					id: "0000000032D66913"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004977E1CE"
+					item: "pneumaticcraft:advanced_air_compressor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BC30DCF2"
+					item: "pneumaticcraft:cannon_barrel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000728BE8B5"
+					item: "pneumaticcraft:small_tank"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000944A1EA1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B5157619"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000060576471"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "00000000C510FC67"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "0000000026FE8458"
+				item: "pneumaticcraft:pressure_tube"
 				type: "item"
 			}]
 			x: -8.0d
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"00000000B648DF23"
-				"000000005CC0A135"
-				"000000009796BBBE"
-			]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FA3B7288"
+			id: "000000002F6E50FA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007CB94215"
+					id: "0000000073369C96"
 					type: "xp"
-					xp: 16
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007405E139"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B25F7A50"
-					item: "pneumaticcraft:advanced_air_compressor"
+					id: "000000003B148A68"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A5524C9D"
-					item: "pneumaticcraft:cannon_barrel"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AF4E0EF1"
-					item: "pneumaticcraft:small_tank"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["000000005CC0A135"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B648DF23"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000023A8CA5B"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BCB6AFD0"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [{
-				consume_items: false
-				id: "00000000F67BE86E"
-				item: "pneumaticcraft:pressure_tube"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["000000005CC0A135"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D0562272"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003BA38D28"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000015679023"
-					table_id: 473028740L
-					type: "random"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E69473FE"
-					item: {
-						Count: 1
-						id: "pneumaticcraft:compressed_iron_boots"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000168B7448"
+					id: "000000003553519A"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:compressed_iron_chestplate"
@@ -1910,469 +1836,13 @@
 				}
 				{
 					consume_items: false
-					id: "00000000E20B3297"
+					id: "00000000B56FBBD5"
 					item: "pneumaticcraft:compressed_iron_gear"
 					type: "item"
 				}
-			]
-			x: -6.0d
-			y: 8.0d
-		}
-		{
-			dependencies: [
-				"00000000C701D3B1"
-				"00000000FD7E71EF"
-				"000000007E369B83"
-				"00000000B648DF23"
-				"000000005CC0A135"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003E60AD4E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005D4873E1"
-					type: "xp"
-					xp: 30
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C7FE31F1"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
 				{
 					consume_items: false
-					id: "0000000003F9B834"
-					item: "pneumaticcraft:assembly_io_unit_import"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000015DEA9"
-					item: "pneumaticcraft:charging_module"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000026ED9BC8"
-					item: "pneumaticcraft:compressed_bricks"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"00000000FD7E71EF"
-				"000000008E6E5FCB"
-				"000000005CC0A135"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006F3BF39A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007893AA69"
-					type: "xp"
-					xp: 18
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000AE380221"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000064899EB7"
-					item: "pneumaticcraft:programming_puzzle"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DE3AF3FA"
-					item: "pneumaticcraft:wall_lamp_purple"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006786643D"
-					item: "pneumaticcraft:wall_lamp_inverted_purple"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000FA3B7288"
-				"0000000034A0B681"
-				"000000005CC0A135"
-				"000000009796BBBE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C4673397"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C20ACF38"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000514436EB"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004083A729"
-					item: "pneumaticcraft:logistics_core"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D6D6D7C2"
-					item: "pneumaticcraft:manometer"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C0ABD91B"
-					item: "pneumaticcraft:minigun"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"00000000A790872F"
-				"000000005CC0A135"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000089424B1B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B808E329"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000069C7227F"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000699CB91B"
-					item: "pneumaticcraft:radiation_shielding_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E6D4C664"
-					item: "pneumaticcraft:range_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004AF6145E"
-					item: "pneumaticcraft:raw_salmon_tempura"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000474C7ACD"
-				"00000000CB29D433"
-				"00000000FA3B7288"
-				"000000007E369B83"
-				"00000000B648DF23"
-				"000000009796BBBE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000086255822"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000EDBCEF81"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C948C5F4"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000030757581"
-					item: "pneumaticcraft:jet_boots_upgrade_4"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001764B269"
-					item: "pneumaticcraft:jumping_upgrade_3"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000072617906"
-					item: "pneumaticcraft:liquid_compressor"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000B648DF23"
-				"000000005CC0A135"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000018F83398"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BF718E3B"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A35EB073"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000E2078C55"
-					item: "pneumaticcraft:wall_lamp_red"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000045AC2010"
-					item: "pneumaticcraft:wall_lamp_inverted_red"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008AEC377E"
-					item: "pneumaticcraft:redstone_module"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"00000000A49999E7"
-				"00000000B648DF23"
-				"00000000F49E6B9D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007A96B266"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000639BC09B"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000005A376A4"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000FCCEE289"
-					item: "pneumaticcraft:drill_pipe"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B4A1EB18"
-					item: "pneumaticcraft:drone"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D5F4664D"
-					item: "pneumaticcraft:heat_pipe"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"00000000F94DD7AD"
-				"00000000FA3B7288"
-				"00000000DBE7D7BA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000567AD8BB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CBA3BFF3"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009EBC4E59"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B8199433"
-					item: "pneumaticcraft:refinery"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006D74E2CD"
-					item: "pneumaticcraft:refinery_output"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000002E67B00"
-					item: "pneumaticcraft:reinforced_brick_pillar"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000F49E6B9D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D4996852"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A6822F57"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000005BC1EF4"
-				item: "pneumaticcraft:compressed_iron_block"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000005CC0A135"
-				"00000000DBE7D7BA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000209AB4AF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000082A27B2E"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CADE1EAF"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000012879A7A"
+					id: "0000000075AAF205"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:compressed_iron_helmet"
@@ -2382,422 +1852,65 @@
 					}
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "00000000FA898CB0"
-					item: {
-						Count: 1
-						id: "pneumaticcraft:compressed_iron_leggings"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002FA540AA"
-					item: "pneumaticcraft:display_table"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"00000000F94DD7AD"
-				"00000000A49999E7"
-				"000000008E6E5FCB"
-				"00000000285D7C9F"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000F15C7FA8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007E9EE019"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007FA0A7B0"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000024557330"
-					item: "pneumaticcraft:reinforced_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F2544C45"
-					item: "pneumaticcraft:reinforced_chest_kit"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007BB75656"
-					item: "pneumaticcraft:scuba_upgrade"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"00000000474C7ACD"
-				"000000007E369B83"
-				"00000000B648DF23"
-				"000000008E6E5FCB"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000233501A7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000036134E07"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A9DEDE38"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000023FD7656"
-					item: "pneumaticcraft:jet_boots_upgrade_2"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FB3D5DA6"
-					item: "pneumaticcraft:jumping_upgrade_1"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000089234750"
-					item: "pneumaticcraft:large_tank"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"00000000C701D3B1"
-				"0000000018B092FF"
-				"00000000B648DF23"
-				"0000000034A0B681"
-				"000000005CC0A135"
-				"00000000DBE7D7BA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000092448D37"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B316CD76"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007DF89987"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C0036C1D"
-					item: "pneumaticcraft:spawner_agitator"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000019A059A1"
-					item: "pneumaticcraft:stone_base"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001F8348AA"
-					item: "pneumaticcraft:vacuum_pump"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"0000000018B092FF"
-				"00000000A49999E7"
-				"00000000FD7E71EF"
-				"00000000C4673397"
-				"000000008E6E5FCB"
-				"000000005CC0A135"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E5CF6EB0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007DCEB5F5"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000057DAEAAB"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000AA068BFE"
-					item: "pneumaticcraft:security_station"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C9CA3B53"
-					item: "pneumaticcraft:security_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F16204E1"
-					item: "pneumaticcraft:sentry_turret"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"000000005CC0A135"
-				"000000009796BBBE"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000034A0B681"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F5F4F3CB"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000099CBF5F6"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000002BAD6DE5"
-					item: "pneumaticcraft:pressure_gauge"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000ACAB0337"
-					item: "pneumaticcraft:reinforced_air_canister"
-					type: "item"
-				}
-			]
-			x: -8.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"00000000A49999E7"
-				"00000000A7C0D0BB"
-				"00000000FA3B7288"
-				"00000000FD7E71EF"
-				"000000007E369B83"
-				"00000000233501A7"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000A790872F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D8D6EEBD"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000023DB90D6"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000A0F0B1BD"
-					item: "pneumaticcraft:seismic_sensor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BD62F39C"
-					item: "pneumaticcraft:smart_chest"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000034EFAC6F"
-					item: "pneumaticcraft:sourdough"
-					type: "item"
-				}
 			]
 			x: -7.0d
 			y: 0.0d
 		}
 		{
 			dependencies: [
-				"00000000D0562272"
-				"00000000FD7E71EF"
-				"00000000F49E6B9D"
-				"00000000A790872F"
+				"00000000944A1EA1"
+				"00000000454F9AB4"
+				"000000003AA77240"
+				"00000000B5157619"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008531F3FF"
+			id: "00000000D3E70E52"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FEC24CFC"
+					id: "00000000F056B38B"
 					type: "xp"
-					xp: 25
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001FF87F29"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000007013BCE9"
-					item: "pneumaticcraft:smart_chest_kit"
+					id: "00000000B7300DE0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000DC6B675"
-					item: "pneumaticcraft:solar_compressor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000028E7E051"
-					item: "pneumaticcraft:sourdough_bread"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"00000000F94DD7AD"
-				"00000000C701D3B1"
-				"00000000A49999E7"
-				"00000000A7C0D0BB"
-				"00000000CB29D433"
-				"00000000B648DF23"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000285D7C9F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007BE81467"
-					type: "xp"
-					xp: 25
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001B755D4B"
-					table_id: 473028740L
-					type: "random"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005AD65D05"
-					item: "pneumaticcraft:regulator_tube_module"
+					id: "00000000929C9D55"
+					item: "pneumaticcraft:assembly_io_unit_import"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000064EDC53C"
-					item: "pneumaticcraft:reinforced_brick_slab"
+					id: "000000004B5881A6"
+					item: "pneumaticcraft:charging_module"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000007FF1435"
-					item: "pneumaticcraft:remote"
+					id: "000000003A7ACCB2"
+					item: {
+						Count: 1
+						id: "pneumaticcraft:compressed_iron_boots"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 			]
@@ -2805,86 +1918,97 @@
 			y: 7.0d
 		}
 		{
-			dependencies: [
-				"00000000A7C0D0BB"
-				"00000000B648DF23"
-				"000000007A96B266"
-				"0000000092448D37"
-				"000000002DEFF0F4"
-				"000000005CC0A135"
-			]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F0A1428E"
+			id: "000000001EEAD6D6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000057CC0A62"
+					id: "00000000D6E674D5"
 					type: "xp"
-					xp: 26
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E3689424"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000FC152AD3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DE17CAD9"
-					item: "pneumaticcraft:spawner_core_shell"
+					id: "00000000D2D53FEC"
+					item: "pneumaticcraft:wall_lamp_purple"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000069B6BE5C"
-					item: "pneumaticcraft:spawner_extractor"
+					id: "000000006434BA0C"
+					item: "pneumaticcraft:wall_lamp_inverted_purple"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000003C0FD7E"
-					item: "pneumaticcraft:speed_upgrade"
+					id: "000000008C2A4FAB"
+					item: "pneumaticcraft:radiation_shielding_upgrade"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 7.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
-				"00000000A7C0D0BB"
-				"000000008E6E5FCB"
+				"00000000944A1EA1"
+				"0000000028F18000"
+				"0000000027F2B507"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002DEFF0F4"
+			id: "00000000C21612C0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ABC3B106"
+					id: "00000000F7BF3E04"
 					type: "xp"
-					xp: 30
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DD25E83B"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000A7B37743"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000522C5C82"
+					id: "00000000C5268D8F"
+					item: "pneumaticcraft:minigun"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000029E0C052"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:gun_ammo"
@@ -2896,14 +2020,117 @@
 				}
 				{
 					consume_items: false
-					id: "0000000095C69251"
+					id: "00000000BD28FA66"
 					item: "pneumaticcraft:network_registry"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"00000000CA1401AE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003C26C67A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AE491646"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000046935DCB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008FA59787"
+					item: "pneumaticcraft:range_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004A9D87E8"
-					item: "pneumaticcraft:pressure_chamber_glass"
+					id: "000000001C9FEB18"
+					item: "pneumaticcraft:raw_salmon_tempura"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EBB62C05"
+					item: "pneumaticcraft:wall_lamp_red"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"0000000028F18000"
+				"00000000B5157619"
+				"0000000032A6FABC"
+				"0000000047E769B0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E52FA86A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000010591ECF"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000069D07EF6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003809AE42"
+					item: "pneumaticcraft:liquid_compressor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000001AE02B6"
+					item: "pneumaticcraft:logistics_core"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001E1FE315"
+					item: "pneumaticcraft:manometer"
 					type: "item"
 				}
 			]
@@ -2911,44 +2138,818 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000209AB4AF"]
+			dependencies: [
+				"00000000944A1EA1"
+				"0000000028F18000"
+				"00000000B5157619"
+				"0000000032A6FABC"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003E92E093"
+			id: "00000000C3DAAC32"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A8987C87"
+					id: "00000000BA497151"
 					type: "xp"
-					xp: 21
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A45C9AFE"
-					table_id: 473028740L
-					type: "random"
+					id: "000000007CB9C2BD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001115793D"
-					item: "pneumaticcraft:standby_upgrade"
+					id: "0000000005884C5D"
+					item: "pneumaticcraft:wall_lamp_inverted_red"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EE817A4E"
+					id: "0000000047AA5830"
+					item: "pneumaticcraft:redstone_module"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BB8E07BD"
+					item: "pneumaticcraft:refinery"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000007078DE43"
+				"000000004FDC7352"
+				"00000000557EB4C9"
+				"000000003AA77240"
+				"00000000DDC40C23"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000069C1430E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000348BE8F5"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "00000000B9DE9D35"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000066E39B3E"
+					item: "pneumaticcraft:heat_pipe"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003BB24E6F"
+					item: "pneumaticcraft:jet_boots_upgrade_4"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000098D85E9D"
+					item: "pneumaticcraft:jumping_upgrade_3"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000032A6FABC"
+				"00000000DDC40C23"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000616465B9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002B586501"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "000000008AB6FDCB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000127AF227"
+					item: "pneumaticcraft:refinery_output"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000064C82CD4"
+					item: "pneumaticcraft:reinforced_brick_pillar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000079CA835C"
+					item: "pneumaticcraft:reinforced_brick_stairs"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"00000000B5157619"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002F781381"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001D669C33"
+					type: "xp"
+					xp: 22
+				}
+				{
+					id: "00000000CD6CA849"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006EB791F7"
+					item: {
+						Count: 1
+						id: "pneumaticcraft:compressed_iron_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ADD0D63E"
+					item: "pneumaticcraft:drill_pipe"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B506B4BB"
+					item: "pneumaticcraft:drone"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000007078DE43"
+				"000000004D1DF6EC"
+				"00000000454F9AB4"
+				"000000004EE4ACF0"
+				"0000000027F2B507"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A43F2906"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C847EDB3"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "00000000EA3CD0FE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D1F15623"
+					item: "pneumaticcraft:reinforced_chest_kit"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BD9C28F5"
+					item: "pneumaticcraft:scuba_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001CE8EE47"
+					item: "pneumaticcraft:security_station"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"000000004FDC7352"
+				"000000003AA77240"
+				"00000000B5157619"
+				"0000000027F2B507"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000370D2A49"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000079EA2764"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "000000007981FF3D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C324C242"
+					item: "pneumaticcraft:jet_boots_upgrade_2"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C6552453"
+					item: "pneumaticcraft:jumping_upgrade_1"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007F9AD844"
+					item: "pneumaticcraft:large_tank"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"000000004D1DF6EC"
+				"00000000C21612C0"
+				"0000000042DF08A8"
+				"0000000027F2B507"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008DD7CC28"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ED9A29FD"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "0000000025D8B794"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FE56DB8A"
+					item: "pneumaticcraft:security_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000C6BE51D"
+					item: "pneumaticcraft:sentry_turret"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000007F5D288"
+					item: "pneumaticcraft:smart_chest_kit"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000007078DE43"
+				"00000000B5157619"
+				"0000000032A6FABC"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000B5AFF10"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008CF06D9D"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "00000000EAEE6CD8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000956563FB"
+				item: "pneumaticcraft:vacuum_pump"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"000000007FBDAA67"
+				"0000000047E769B0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000032A6FABC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B79B19BA"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "00000000B609C982"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CB9AFCF0"
+					item: "pneumaticcraft:pressure_gauge"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000368230ED"
+					item: "pneumaticcraft:reinforced_air_canister"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000088D68023"
+					item: "pneumaticcraft:reinforced_stone_slab"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"00000000534D8AAF"
+				"0000000028F18000"
+				"00000000557EB4C9"
+				"000000003AA77240"
+				"00000000B5157619"
+				"000000007FBDAA67"
+				"00000000370D2A49"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CA1401AE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004E8CE440"
+					type: "xp"
+					xp: 31
+				}
+				{
+					id: "00000000D1BAC2FC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CE9D3979"
+					item: "pneumaticcraft:sourdough"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000083FD0E4B"
+					item: "pneumaticcraft:spawner_agitator"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002ADF7F38"
+					item: "pneumaticcraft:stone_base"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000002F6E50FA"
+				"00000000944A1EA1"
+				"00000000454F9AB4"
+				"00000000CA1401AE"
+				"000000004EE4ACF0"
+				"00000000DDC40C23"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000050862243"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000642FFA3F"
+					type: "xp"
+					xp: 24
+				}
+				{
+					id: "0000000086C4A445"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005AAD0C77"
+					item: "pneumaticcraft:solar_compressor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000C84A435"
+					item: "pneumaticcraft:sourdough_bread"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000042B0E0CB"
+					item: "pneumaticcraft:spawner_core_shell"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"000000004D1DF6EC"
+				"0000000058539885"
+				"00000000454F9AB4"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000042DF08A8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000002406B4AD"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "00000000F53AC300"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ABDD229C"
+					item: "pneumaticcraft:remote"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F2C5BCE1"
+					item: "pneumaticcraft:seismic_sensor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000039E2EF00"
+					item: "pneumaticcraft:smart_chest"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"000000004D1DF6EC"
+				"00000000B5157619"
+				"000000002F781381"
+				"00000000CA1401AE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008E463462"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BB8A5EF3"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "000000006AFA281A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000012C71046"
+					item: "pneumaticcraft:spawner_extractor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BDB01FC0"
+					item: "pneumaticcraft:speed_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002568E5C0"
+					item: "pneumaticcraft:standby_upgrade"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"000000004D1DF6EC"
+				"00000000B5157619"
+				"00000000DDC40C23"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004EE4ACF0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000086892532"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "00000000839E0745"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000039B57F17"
+					item: "pneumaticcraft:pressure_chamber_glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007F47A9EC"
+					item: "pneumaticcraft:regulator_tube_module"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E93D365C"
+					item: "pneumaticcraft:reinforced_brick_slab"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"000000005C484370"
+				"00000000B5157619"
+				"0000000047E769B0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000057645990"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001F41263C"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "000000004D54E9F8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000932F0AB7"
 					item: "pneumaticcraft:stomp_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001028BA11"
+					id: "00000000B9DD7881"
 					item: "pneumaticcraft:tag_workbench"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B6B4AC00"
+					item: "pneumaticcraft:thermal_compressor"
 					type: "item"
 				}
 			]
@@ -2957,51 +2958,55 @@
 		}
 		{
 			dependencies: [
-				"00000000FA3B7288"
-				"00000000C4673397"
-				"00000000B648DF23"
-				"000000007A96B266"
-				"000000005CC0A135"
-				"00000000DBE7D7BA"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"0000000028F18000"
+				"00000000E52FA86A"
+				"00000000B5157619"
+				"0000000069C1430E"
+				"0000000032A6FABC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008352B7EC"
+			id: "00000000F660B045"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C59BCCE5"
+					id: "00000000CAF9DAB4"
 					type: "xp"
-					xp: 26
+					xp: 22
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B2898A50"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000A48C93EC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000031ED0372"
-					item: "pneumaticcraft:thermal_compressor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004ABDEF2F"
+					id: "00000000D94942BB"
 					item: "pneumaticcraft:thermopneumatic_processing_plant"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A9A7344A"
+					id: "000000001A5A2956"
 					item: "pneumaticcraft:thermostat_module"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000088585741"
+					item: "pneumaticcraft:transfer_gadget"
 					type: "item"
 				}
 			]
@@ -3009,134 +3014,300 @@
 			y: 9.0d
 		}
 		{
+			dependencies: ["0000000027F2B507"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C701D3B1"
+			id: "000000002421118B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003BF577D7"
+					id: "0000000069287661"
 					type: "xp"
-					xp: 18
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AC10FA54"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000CCB1E42E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000813E6504"
+					id: "0000000050F42B7B"
+					item: "pneumaticcraft:plastic_brick_black"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000090BD79D"
+					item: "pneumaticcraft:plastic_brick_blue"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000BF03EDF"
+					item: "pneumaticcraft:plastic_brick_brown"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000027F2B507"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000534D8AAF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001FD82624"
+					type: "xp"
+					xp: 22
+				}
+				{
+					id: "00000000E72052EF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C6B468AA"
 					item: "pneumaticcraft:compressed_stone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B645ACA1"
-					item: "pneumaticcraft:gps_tool"
+					id: "00000000EBEAB259"
+					item: "pneumaticcraft:plastic_brick_cyan"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008898359F"
-					item: "pneumaticcraft:reinforced_stone"
+					id: "000000000D1B5EC0"
+					item: "pneumaticcraft:plastic_brick_gray"
 					type: "item"
 				}
 			]
-			x: -12.0d
+			x: -11.0d
 			y: 4.0d
+		}
+		{
+			dependencies: ["0000000027F2B507"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004D38BF94"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000046AC2540"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "00000000C5ED0D8B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CB89A40A"
+					item: "pneumaticcraft:plastic_brick_green"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000031B261CB"
+					item: "pneumaticcraft:plastic_brick_light_blue"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005CD1EF33"
+					item: "pneumaticcraft:plastic_brick_light_gray"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000027F2B507"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006261E4F7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E9093AA8"
+					type: "xp"
+					xp: 29
+				}
+				{
+					id: "000000008E376DD6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B7E2A118"
+					item: "pneumaticcraft:plastic_brick_lime"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000480B7532"
+					item: "pneumaticcraft:plastic_brick_magenta"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000074861CE1"
+					item: "pneumaticcraft:plastic_brick_orange"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FC72036B"
+			id: "00000000D58A28F4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003C5BEEF5"
+					id: "00000000A4D0860A"
 					type: "xp"
-					xp: 16
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DAC3F579"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000AF2D9820"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B4AFA9D8"
-					item: "pneumaticcraft:plastic_brick_magenta"
+					id: "00000000570D6E7A"
+					item: "pneumaticcraft:smooth_plastic_brick_magenta"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A1BB0C90"
-					item: "pneumaticcraft:plastic_brick_orange"
+					id: "000000007C1A6CFE"
+					item: "pneumaticcraft:smooth_plastic_brick_orange"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000DDA5325"
-					item: "pneumaticcraft:plastic_brick_pink"
+					id: "000000003013F4B0"
+					item: "pneumaticcraft:smooth_plastic_brick_pink"
 					type: "item"
 				}
 			]
-			x: -12.0d
-			y: 0.0d
+			x: -9.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"0000000018B092FF"
-				"000000003E60AD4E"
+				"000000007078DE43"
+				"000000005C484370"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002969666D"
+			id: "0000000025826137"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CFF74E24"
+					id: "00000000A3E59274"
 					type: "xp"
 					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A2116EC7"
-					table_id: 473028740L
-					type: "random"
+					id: "000000000C6A8834"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000229154A4"
+					id: "00000000258713D5"
 					item: "pneumaticcraft:cod_n_chips"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000076746D1"
+					id: "00000000A0C0A123"
 					item: "pneumaticcraft:collector_drone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000081404D83"
+					id: "000000008FE37FAB"
 					item: "pneumaticcraft:compressed_brick_pillar"
 					type: "item"
 				}
@@ -3148,117 +3319,132 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000046A074F8"
+			id: "000000003ACF62FC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000272EDE47"
+					id: "00000000CEC57FCD"
 					type: "xp"
-					xp: 11
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C8EB9269"
-					table_id: 473028740L
-					type: "random"
+					id: "000000006429E7C2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EDEBD9FB"
-					item: "pneumaticcraft:plastic_brick_light_blue"
+					id: "000000007DEE402B"
+					item: "pneumaticcraft:smooth_plastic_brick_light_blue"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000098106111"
-					item: "pneumaticcraft:plastic_brick_light_gray"
+					id: "0000000029E0D482"
+					item: "pneumaticcraft:smooth_plastic_brick_light_gray"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B92FB0C4"
-					item: "pneumaticcraft:plastic_brick_lime"
+					id: "0000000035248FFC"
+					item: "pneumaticcraft:smooth_plastic_brick_lime"
 					type: "item"
 				}
 			]
-			x: -12.0d
-			y: 2.0d
+			x: -9.0d
+			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000287581B0"
+			id: "00000000EB467435"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003E7BDAFE"
+					id: "000000004624AAFE"
 					type: "xp"
-					xp: 9
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A6732A5C"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000F92A15DF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000F3ADED95"
-				item: "pneumaticcraft:plastic_brick_yellow"
+				id: "0000000001ED4E1A"
+				item: "pneumaticcraft:smooth_plastic_brick_yellow"
 				type: "item"
 			}]
-			x: -12.0d
-			y: 3.0d
+			x: -9.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
-				"000000005CC0A135"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DECAD824"
+			id: "00000000162832A1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C0F562B4"
+					id: "000000008DFD0269"
 					type: "xp"
-					xp: 30
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007006C178"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000B0D049B0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002EBDF07B"
+					id: "00000000B0ADF8BC"
 					item: "pneumaticcraft:wall_lamp_brown"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D2103F3F"
+					id: "000000002DE71B31"
 					item: "pneumaticcraft:wall_lamp_inverted_brown"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000057F70DE3"
+					id: "000000002B3BEE69"
 					item: "pneumaticcraft:camo_applicator"
 					type: "item"
 				}
@@ -3270,90 +3456,100 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ED6A7395"
+			id: "0000000010F86682"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000364F1D6A"
+					id: "000000001BB405BF"
 					type: "xp"
-					xp: 16
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A38C5D8B"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000007EEA0FA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006DF16E15"
-					item: "pneumaticcraft:plastic_brick_purple"
+					id: "000000009E837340"
+					item: "pneumaticcraft:smooth_plastic_brick_purple"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000196A1648"
-					item: "pneumaticcraft:plastic_brick_red"
+					id: "00000000870EE02C"
+					item: "pneumaticcraft:smooth_plastic_brick_red"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000495DF9D3"
-					item: "pneumaticcraft:plastic_brick_white"
+					id: "0000000013C4971A"
+					item: "pneumaticcraft:smooth_plastic_brick_white"
 					type: "item"
 				}
 			]
-			x: -12.0d
-			y: 1.0d
+			x: -9.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
-				"000000003E60AD4E"
-				"00000000FD7E71EF"
-				"00000000C4673397"
-				"00000000B648DF23"
-				"000000008E6E5FCB"
+				"00000000D3E70E52"
+				"00000000454F9AB4"
+				"00000000E52FA86A"
+				"00000000B5157619"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F5108EF0"
+			id: "00000000105488D5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002B9B505D"
+					id: "000000009E5E2A2F"
 					type: "xp"
-					xp: 18
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000378B4716"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000D8565656"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000085A72898"
+					id: "00000000E4FACAEB"
 					item: "pneumaticcraft:charging_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003E56578F"
+					id: "000000000525598A"
 					item: "pneumaticcraft:chunkloader_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000005C2FCE1"
+					id: "00000000492D362B"
 					item: "pneumaticcraft:classify_filter"
 					type: "item"
 				}
@@ -3362,43 +3558,48 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000005CC0A135"]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000066B77AB8"
+			id: "00000000226BA972"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000499575FD"
+					id: "000000006A56DDC3"
 					type: "xp"
-					xp: 10
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005EDD8EB7"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000627E8A90"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000087CBB738"
+					id: "00000000FC086CAA"
 					item: "pneumaticcraft:bandage"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000015779666"
+					id: "000000008D4B44FB"
 					item: "pneumaticcraft:wall_lamp_black"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E6FA3D5F"
+					id: "00000000E39249CC"
 					item: "pneumaticcraft:wall_lamp_inverted_black"
 					type: "item"
 				}
@@ -3408,45 +3609,50 @@
 		}
 		{
 			dependencies: [
-				"00000000A7C0D0BB"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"000000004D1DF6EC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000094B6B585"
+			id: "000000007164C6E7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A0930B58"
+					id: "0000000070C2167F"
 					type: "xp"
-					xp: 30
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000EFA8675"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000F1D09478"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000086A876CB"
+					id: "00000000364A20D1"
 					item: "pneumaticcraft:block_tracker_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000024DB75B"
+					id: "00000000778F3534"
 					item: "pneumaticcraft:wall_lamp_blue"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EFA27905"
+					id: "0000000013FBC5B1"
 					item: "pneumaticcraft:wall_lamp_inverted_blue"
 					type: "item"
 				}
@@ -3458,90 +3664,100 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009C8BA431"
+			id: "000000000011AAD4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006822A1C4"
+					id: "000000005C3505B4"
 					type: "xp"
-					xp: 9
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005F65B94B"
-					table_id: 473028740L
-					type: "random"
+					id: "000000000EA36671"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004FE8CBD1"
-					item: "pneumaticcraft:plastic_brick_cyan"
+					id: "00000000FF3B865C"
+					item: "pneumaticcraft:smooth_plastic_brick_cyan"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000015727F20"
-					item: "pneumaticcraft:plastic_brick_gray"
+					id: "000000003818E8E4"
+					item: "pneumaticcraft:smooth_plastic_brick_gray"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001810DBBC"
-					item: "pneumaticcraft:plastic_brick_green"
+					id: "00000000BB77BC2C"
+					item: "pneumaticcraft:smooth_plastic_brick_green"
 					type: "item"
 				}
 			]
-			x: -12.0d
+			x: -9.0d
 			y: 6.0d
 		}
 		{
 			dependencies: [
-				"000000003E60AD4E"
-				"00000000FD7E71EF"
-				"000000007E369B83"
-				"00000000B648DF23"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"00000000D3E70E52"
+				"00000000454F9AB4"
+				"000000003AA77240"
+				"00000000B5157619"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000025889245"
+			id: "00000000019CE0C9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000687A00D0"
+					id: "00000000E079FB21"
 					type: "xp"
-					xp: 30
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BDAE0CF3"
-					table_id: 473028740L
-					type: "random"
+					id: "000000005B2437DC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000090E586C4"
+					id: "000000002A7C0CDF"
 					item: "pneumaticcraft:assembly_controller"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EDF0ADBB"
+					id: "00000000A2F06C8B"
 					item: "pneumaticcraft:assembly_drill"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000429ADCA8"
+					id: "0000000027DE7EDA"
 					item: "pneumaticcraft:assembly_io_unit_export"
 					type: "item"
 				}
@@ -3553,89 +3769,99 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C84B86A3"
+			id: "000000005F35D98A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AFBA646C"
+					id: "000000001EFC48A4"
 					type: "xp"
-					xp: 6
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003158F9F4"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000FEB3A643"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009B30D6A1"
-					item: "pneumaticcraft:plastic_brick_black"
+					id: "00000000D23E8A4A"
+					item: "pneumaticcraft:smooth_plastic_brick_black"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000032A3F1EF"
-					item: "pneumaticcraft:plastic_brick_blue"
+					id: "000000001D3FAE4A"
+					item: "pneumaticcraft:smooth_plastic_brick_blue"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FBF34D74"
-					item: "pneumaticcraft:plastic_brick_brown"
+					id: "000000002557942B"
+					item: "pneumaticcraft:smooth_plastic_brick_brown"
 					type: "item"
 				}
 			]
-			x: -12.0d
-			y: 5.0d
+			x: -9.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
-				"00000000FD7E71EF"
-				"000000007E369B83"
-				"000000008E6E5FCB"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"00000000454F9AB4"
+				"000000003AA77240"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008EE8B874"
+			id: "000000000BBFCD9C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F0242357"
+					id: "000000003C74971C"
 					type: "xp"
-					xp: 16
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005C1205EF"
-					table_id: 473028740L
-					type: "random"
+					id: "000000006C5B37E2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000671175B7"
+					id: "00000000EAF116B4"
 					item: "pneumaticcraft:assembly_laser"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A2FE40EA"
+					id: "000000003EE843B6"
 					item: "pneumaticcraft:assembly_platform"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E20807E2"
+					id: "00000000421E149A"
 					item: "pneumaticcraft:assembly_program_drill_laser"
 					type: "item"
 				}
@@ -3644,51 +3870,106 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"00000000C701D3B1"
-				"00000000FA3B7288"
-				"00000000B648DF23"
-				"000000008E6E5FCB"
-				"0000000092448D37"
-				"00000000DBE7D7BA"
-				"000000009796BBBE"
-			]
+			dependencies: ["0000000027F2B507"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002FAAB055"
+			id: "0000000056CEBF63"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000086D149C9"
+					id: "00000000993A315D"
 					type: "xp"
-					xp: 4
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000076BEEC26"
-					table_id: 473028740L
-					type: "random"
+					id: "000000008366790E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000082646447"
+					item: "pneumaticcraft:plastic_brick_pink"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A197EC3C"
+					item: "pneumaticcraft:plastic_brick_purple"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000048B603A2"
+					item: "pneumaticcraft:plastic_brick_red"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000028F18000"
+				"00000000454F9AB4"
+				"00000000B5157619"
+				"0000000032A6FABC"
+				"00000000CA1401AE"
+				"0000000027F2B507"
+				"0000000047E769B0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000080912DF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000270A77C0"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "00000000A697E0AC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008E1BFCB0"
+					id: "0000000017DBD40B"
 					item: "pneumaticcraft:air_cannon"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000071A95E30"
+					id: "0000000055AB9A1F"
 					item: "pneumaticcraft:air_grate_module"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000811E592"
+					id: "00000000750D4795"
 					item: "pneumaticcraft:amadron_tablet"
 					type: "item"
 				}
@@ -3697,46 +3978,95 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"000000002DEFF0F4"
-				"000000005CC0A135"
-			]
+			dependencies: ["0000000027F2B507"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000486C61BD"
+			id: "000000007DA5BDED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D8B8F462"
+					id: "00000000FEFFC04B"
 					type: "xp"
 					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A1ED204E"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000CAFF657C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EF889B6D"
+					item: "pneumaticcraft:plastic_brick_white"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000104BFA97"
+					item: "pneumaticcraft:plastic_brick_yellow"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000944A1EA1"
+				"00000000C21612C0"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000409287BF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000478A17B"
+					type: "xp"
+					xp: 23
+				}
+				{
+					id: "000000009FEB2C2B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A0A587DD"
+					id: "00000000075F5F51"
 					item: "pneumaticcraft:aphorism_tile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000037819FC7"
+					id: "0000000010E571FA"
 					item: "pneumaticcraft:armor_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EB98EE13"
+					id: "00000000265FD819"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:gun_ammo_ap"
@@ -3752,46 +4082,52 @@
 		}
 		{
 			dependencies: [
-				"00000000A7C0D0BB"
-				"0000000086255822"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"000000004D1DF6EC"
+				"0000000058539885"
+				"00000000E52FA86A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001F1FC8B2"
+			id: "00000000CA1E5812"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005DD37753"
+					id: "00000000183D7B70"
 					type: "xp"
-					xp: 19
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000081AD9796"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000566B6D13"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006FA31AC6"
+					id: "0000000041418125"
 					item: "pneumaticcraft:advanced_liquid_compressor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BE993AA4"
+					id: "0000000030D5AA6F"
 					item: "pneumaticcraft:aerial_interface"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000724AE728"
+					id: "00000000B335E6B1"
 					type: "item"
 				}
 			]
@@ -3802,75 +4138,93 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F94DD7AD"
+			id: "00000000944A1EA1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E391A356"
+					id: "00000000AD65D875"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000005EAB35C"
-					table_id: 473028740L
-					type: "random"
+					id: "000000003E36E9F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "gear"
-			tasks: [{
-				consume_items: false
-				id: "0000000017ED6DF2"
-				item: "pneumaticcraft:reinforced_bricks"
-				type: "item"
-			}]
-			x: -8.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000026C4FD13"
+					item: "pneumaticcraft:ingot_iron_compressed"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000013D51D16"
+					item: "pneumaticcraft:reinforced_brick_tile"
+					type: "item"
+				}
+			]
+			x: -6.0d
 			y: 0.0d
 		}
 		{
 			dependencies: [
-				"00000000B648DF23"
-				"000000005CC0A135"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"00000000B5157619"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000054799DCC"
+			id: "0000000038680A31"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001BE2CEF2"
+					id: "00000000EB29EEE2"
 					type: "xp"
-					xp: 23
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B8932AC9"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000EF18DF97"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000040A003F8"
-					item: "pneumaticcraft:transfer_gadget"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007882C1CB"
+					id: "000000003F555FD6"
 					item: "pneumaticcraft:tube_junction"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E61112F4"
+					id: "000000001010B5B1"
 					item: "pneumaticcraft:uv_light_box"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008220E9A3"
+					item: "pneumaticcraft:unassembled_netherite_drill_bit"
 					type: "item"
 				}
 			]
@@ -3879,50 +4233,56 @@
 		}
 		{
 			dependencies: [
-				"00000000B648DF23"
-				"000000008E6E5FCB"
-				"00000000A790872F"
-				"00000000DBE7D7BA"
-				"000000005CC0A135"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"00000000B5157619"
+				"000000000B5AFF10"
+				"0000000032A6FABC"
+				"0000000042DF08A8"
+				"0000000027F2B507"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F9C78DA5"
+			id: "000000009DFD238A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E1DE603E"
+					id: "00000000B41231D1"
 					type: "xp"
-					xp: 13
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000092485A24"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000026D5AFAC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DDE6EDC0"
-					item: "pneumaticcraft:unassembled_netherite_drill_bit"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000020EBED35"
+					id: "000000003F387723"
 					item: "pneumaticcraft:universal_sensor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000910F1AB7"
+					id: "0000000021D29A3A"
 					item: "pneumaticcraft:vacuum_trap"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000DAADF88"
+					item: "pneumaticcraft:vacuum_module"
 					type: "item"
 				}
 			]
@@ -3931,83 +4291,52 @@
 		}
 		{
 			dependencies: [
-				"00000000B648DF23"
-				"0000000092448D37"
-				"000000005CC0A135"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"00000000C21612C0"
+				"00000000B5157619"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001B261B50"
+			id: "00000000486E99FF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000779F0D21"
+					id: "00000000D9F51711"
 					type: "xp"
-					xp: 5
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D79E540D"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000052CDD199"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A442575A"
-					item: "pneumaticcraft:vacuum_module"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001A2B19D1"
+					id: "00000000907A5176"
 					item: "pneumaticcraft:volume_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000000FAAA0B"
+					id: "000000000AAB5EF5"
 					item: "pneumaticcraft:vortex_tube"
 					type: "item"
 				}
-			]
-			x: -5.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"000000002DEFF0F4"
-				"000000005CC0A135"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000816399FF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000088E2C84B"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000082550096"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "000000000FDED760"
+					id: "0000000084D07CB9"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:gun_ammo_weighted"
@@ -4017,16 +4346,54 @@
 					}
 					type: "item"
 				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000944A1EA1"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000010BE146D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008EDFDA59"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000EC5D1777"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
 				{
 					consume_items: false
-					id: "00000000BCCC882A"
+					id: "000000003D808345"
 					item: "pneumaticcraft:wall_lamp_white"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007A742870"
+					id: "00000000B3BE3658"
 					item: "pneumaticcraft:wall_lamp_inverted_white"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007655652E"
+					item: "pneumaticcraft:wall_lamp_yellow"
 					type: "item"
 				}
 			]
@@ -4034,44 +4401,49 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000003E60AD4E"]
+			dependencies: ["000000005C484370"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C3377412"
+			id: "000000000E18ADC7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000025487B21"
+					id: "000000004513BBE1"
 					type: "xp"
-					xp: 4
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F66C9712"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000074E42871"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000062C354E4"
-					item: "pneumaticcraft:compressed_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C9242C9E"
+					id: "00000000EE0A7A09"
 					item: "pneumaticcraft:compressed_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E3E2F521"
+					id: "000000005469EF9F"
 					item: "pneumaticcraft:compressed_brick_tile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001DC75178"
+					item: "pneumaticcraft:compressed_brick_wall"
 					type: "item"
 				}
 			]
@@ -4079,87 +4451,88 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000005CC0A135"]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000073EA17C3"
+			id: "00000000CE5EA1AB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000233ACE65"
+					id: "0000000042F47EB9"
 					type: "xp"
-					xp: 12
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000018D05BEC"
-					table_id: 473028740L
-					type: "random"
+					id: "000000006AA3631B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000076FD1FB"
-					item: "pneumaticcraft:wall_lamp_yellow"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000072D83AC7"
-					item: "pneumaticcraft:wall_lamp_inverted_yellow"
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "000000005D78C4A3"
+				item: "pneumaticcraft:wall_lamp_inverted_yellow"
+				type: "item"
+			}]
 			x: -5.0d
 			y: 4.0d
 		}
 		{
 			dependencies: [
-				"00000000C701D3B1"
-				"000000003E60AD4E"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"00000000454F9AB4"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000092A6AE20"
+			id: "00000000DE40AAD4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AD525712"
+					id: "00000000BF9BF215"
 					type: "xp"
-					xp: 2
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009C102C42"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000048C5A89"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E7650415"
-					item: "pneumaticcraft:compressed_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006473F08B"
+					id: "000000009277862E"
 					item: "pneumaticcraft:coordinate_tracker_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000474D952B"
+					id: "000000009D0F56A1"
 					item: "pneumaticcraft:crop_support"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A9689555"
+					item: "pneumaticcraft:wall_lamp_cyan"
 					type: "item"
 				}
 			]
@@ -4168,46 +4541,51 @@
 		}
 		{
 			dependencies: [
-				"000000008E6E5FCB"
-				"000000005CC0A135"
+				"00000000944A1EA1"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000058E40DF7"
+			id: "00000000D7E6AA03"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000018946662"
+					id: "00000000328A641C"
 					type: "xp"
-					xp: 20
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C88AEBB4"
-					table_id: 473028740L
-					type: "random"
+					id: "000000006DE4881C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000376501FA"
-					item: "pneumaticcraft:wall_lamp_cyan"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000054C41D55"
+					id: "00000000EA54B9FB"
 					item: "pneumaticcraft:wall_lamp_inverted_cyan"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000070C4ED27"
+					id: "0000000069A9E29E"
 					item: "pneumaticcraft:diagnostic_subroutine"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BFA0CA94"
+					item: "pneumaticcraft:dispenser_upgrade"
 					type: "item"
 				}
 			]
@@ -4215,49 +4593,99 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"0000000018B092FF"
-				"00000000FA3B7288"
-				"000000008E6E5FCB"
-				"00000000209AB4AF"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000397B0F4"
+			id: "00000000F2F6EE49"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000056660DFB"
+					id: "000000002D95FC98"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D445CAB9"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000710DF893"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000075E1A6E4"
+					item: "pneumaticcraft:compressed_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000555A34F1"
+					item: "pneumaticcraft:display_shelf"
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000000007078DE43"
+				"00000000534D8AAF"
+				"0000000028F18000"
+				"000000003AA77240"
+				"000000007FBDAA67"
+				"0000000027F2B507"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000013624BD1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B6947CFB"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "000000003E6D6E24"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000322AD5C4"
-					item: "pneumaticcraft:dispenser_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006DA08D46"
-					item: "pneumaticcraft:display_shelf"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D47D9F19"
+					id: "000000000548E734"
 					item: "pneumaticcraft:electrostatic_compressor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000046649993"
+					item: "pneumaticcraft:elevator_base"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004E0B8304"
+					item: "pneumaticcraft:elevator_caller"
 					type: "item"
 				}
 			]
@@ -4265,49 +4693,49 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"00000000C701D3B1"
-				"000000007E369B83"
-				"000000008E6E5FCB"
-				"000000005CC0A135"
-			]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004FDB9E62"
+			id: "00000000F8338109"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000087378239"
+					id: "000000002225B6C5"
 					type: "xp"
-					xp: 24
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000424A69DB"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000494A74F4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000A14F4CE"
-					item: "pneumaticcraft:elevator_base"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000163978FA"
-					item: "pneumaticcraft:elevator_caller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F3E596CD"
+					id: "000000005AC6217A"
 					item: "pneumaticcraft:elevator_frame"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000040AD6BA2"
+					item: "pneumaticcraft:elytra_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FA3FAF8D"
+					item: "pneumaticcraft:empty_pcb"
 					type: "item"
 				}
 			]
@@ -4315,43 +4743,53 @@
 			y: 4.0d
 		}
 		{
+			dependencies: [
+				"0000000028F18000"
+				"000000004EE4ACF0"
+				"0000000047E769B0"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000099D48B89"
+			id: "00000000CA03F7C1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BF1E50BE"
+					id: "000000004302B3C3"
 					type: "xp"
-					xp: 17
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007088B120"
-					table_id: 473028740L
-					type: "random"
+					id: "0000000002746CAB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000033470B6B"
-					item: "pneumaticcraft:elytra_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000025204292"
-					item: "pneumaticcraft:empty_pcb"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000087FBC82B"
+					id: "00000000A4F8B2B9"
 					item: "pneumaticcraft:ender_visor_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BB90DA57"
+					item: "pneumaticcraft:entity_tracker_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004F7F3C6F"
+					item: "pneumaticcraft:etching_tank"
 					type: "item"
 				}
 			]
@@ -4360,48 +4798,40 @@
 		}
 		{
 			dependencies: [
-				"00000000FA3B7288"
-				"00000000285D7C9F"
-				"000000002DEFF0F4"
-				"000000005CC0A135"
-				"000000009796BBBE"
+				"00000000944A1EA1"
+				"00000000C21612C0"
+				"00000000B5157619"
+				"0000000027F2B507"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000993D6EF9"
+			id: "000000008F3E1E73"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000824B913D"
+					id: "00000000D77EF52A"
 					type: "xp"
-					xp: 22
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FEB8CBBB"
-					table_id: 473028740L
-					type: "random"
+					id: "000000009E58FA7C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D92A5F0F"
-					item: "pneumaticcraft:entity_tracker_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D64571B8"
-					item: "pneumaticcraft:etching_tank"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000046D5081F"
+					id: "00000000D0AD16AF"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:gun_ammo_explosive"
@@ -4411,102 +4841,74 @@
 					}
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "000000007400A520"
+					item: "pneumaticcraft:flippers_upgrade"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A893C4BF"
+					item: "pneumaticcraft:flow_detector_module"
+					type: "item"
+				}
 			]
 			x: -1.0d
 			y: 6.0d
 		}
 		{
 			dependencies: [
-				"0000000018B092FF"
-				"00000000FA3B7288"
-				"000000008E6E5FCB"
-				"00000000B648DF23"
-				"000000009796BBBE"
+				"000000007078DE43"
+				"000000002F6E50FA"
+				"00000000944A1EA1"
+				"0000000028F18000"
+				"00000000454F9AB4"
+				"00000000C21612C0"
+				"00000000B5157619"
+				"0000000047E769B0"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B86C7218"
+			id: "00000000ACD71F54"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EBF0FC83"
+					id: "000000007DC36539"
 					type: "xp"
-					xp: 9
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9B813F4"
-					table_id: 473028740L
-					type: "random"
+					id: "000000002C7B0CE8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C56458BD"
-					item: "pneumaticcraft:flippers_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FFFFB1F0"
-					item: "pneumaticcraft:flow_detector_module"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B5E951C8"
+					id: "00000000DBA003A1"
 					item: "pneumaticcraft:fluid_mixer"
 					type: "item"
 				}
-			]
-			x: -1.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000D0562272"
-				"0000000018B092FF"
-				"00000000FA3B7288"
-				"00000000FD7E71EF"
-				"00000000B648DF23"
-				"000000002DEFF0F4"
-				"000000005CC0A135"
-				"00000000DBE7D7BA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003726ECEA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000ED7415C7"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C3A1FB56"
-					table_id: 473028740L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "00000000CD1EC3B1"
+					id: "000000003FBC2F3E"
 					item: "pneumaticcraft:flux_compressor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000028A03F21"
+					id: "000000007F0DBC08"
 					item: {
 						Count: 1
 						id: "pneumaticcraft:gun_ammo_freezing"
@@ -4516,10 +4918,59 @@
 					}
 					type: "item"
 				}
+			]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000028F18000"
+				"00000000454F9AB4"
+				"00000000B5157619"
+				"0000000032A6FABC"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009EB6F5EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001DDF00C8"
+					type: "xp"
+					xp: 22
+				}
+				{
+					id: "0000000022C58627"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
 				{
 					consume_items: false
-					id: "00000000F4B1C3E4"
+					id: "00000000968EE62F"
+					item: "pneumaticcraft:gps_area_tool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003F4ADFB4"
 					item: "pneumaticcraft:gas_lift"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D1AB3C86"
+					item: "pneumaticcraft:gilded_upgrade"
 					type: "item"
 				}
 			]
@@ -4527,44 +4978,49 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000005CC0A135"]
+			dependencies: ["00000000944A1EA1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C66A5821"
+			id: "000000002152988D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A166D233"
+					id: "00000000B4208FB1"
 					type: "xp"
-					xp: 28
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F6D83B18"
-					table_id: 473028740L
-					type: "random"
+					id: "00000000EEA6C3C7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_pneumaticcraft"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C4678C4E"
-					item: "pneumaticcraft:gilded_upgrade"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009EAD6C64"
+					id: "00000000C208C98A"
 					item: "pneumaticcraft:wall_lamp_gray"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F26DE27B"
+					id: "0000000019A6EA19"
 					item: "pneumaticcraft:wall_lamp_inverted_gray"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000036364194"
+					item: "pneumaticcraft:wall_lamp_green"
 					type: "item"
 				}
 			]

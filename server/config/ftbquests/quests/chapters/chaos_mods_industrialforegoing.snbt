@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_industrialforegoing"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "industrialforegoing:dryrubber"
-	id: "000000005992B293"
+	id: "000000007BDA447D"
 	order_index: 20
 	quest_links: [ ]
 	quests: [
@@ -12,33 +12,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000010C4B4F0"
+			id: "00000000C7285B49"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000630896B7"
+					id: "000000009CB9A32B"
 					type: "xp"
-					xp: 21
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FD4FFA04"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000042013C56"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000582628C0"
+					id: "00000000546B51FC"
 					item: "industrialforegoing:range_addon9"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D558D3C4"
+					id: "00000000D8A452CB"
 					item: "industrialforegoing:range_addon10"
 					type: "item"
 				}
@@ -47,37 +52,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000F15410F7"]
+			dependencies: ["000000001FB28007"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000066B26C5A"
+			id: "0000000040491F86"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ACECE220"
+					id: "00000000B39D0429"
 					type: "xp"
-					xp: 4
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000016D33EEC"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000087DFAB1C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000518E2E6C"
+					id: "000000003327F831"
 					item: "minecraft:dark_oak_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000008C737EA"
+					id: "00000000966219F5"
 					item: "industrialforegoing:mycelial_death"
 					type: "item"
 				}
@@ -87,39 +97,44 @@
 		}
 		{
 			dependencies: [
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ADB946ED"
+			id: "0000000028296793"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000348A1F3E"
+					id: "00000000C5BFC8F2"
 					type: "xp"
-					xp: 2
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007E36D9C9"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000FF65B392"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006BFB880C"
+					id: "000000004C30A702"
 					item: "industrialforegoing:straw"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D0CB45D4"
+					id: "000000004F57DB90"
 					item: "industrialforegoing:supreme_black_hole_tank"
 					type: "item"
 				}
@@ -131,33 +146,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E9B7F825"
+			id: "00000000D45839A6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002BE444C8"
+					id: "000000002AF7F5D5"
 					type: "xp"
-					xp: 10
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000579DC623"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000C362C9DB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006771D2B7"
+					id: "000000007C3B4A1F"
 					item: "industrialforegoing:processing_addon_2"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005A4812B8"
+					id: "00000000E5C9D3A1"
 					item: "industrialforegoing:range_addon0"
 					type: "item"
 				}
@@ -166,37 +186,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000F15410F7"]
+			dependencies: ["000000001FB28007"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009B7A27E2"
+			id: "0000000066D9CAAD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FFEC3554"
+					id: "00000000212448C1"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EE040271"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000026586FD5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000553255EA"
+					id: "000000003C0A94A3"
 					item: "minecraft:spruce_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F330EB74"
+					id: "000000007909AB83"
 					item: "industrialforegoing:stasis_chamber"
 					type: "item"
 				}
@@ -208,33 +233,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BE1C9D06"
+			id: "00000000C61CBCDA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000026B17A06"
+					id: "00000000C6589876"
 					type: "xp"
-					xp: 16
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F25AE461"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000000D10ED09"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009947AB9C"
+					id: "00000000E38221CA"
 					item: "industrialforegoing:efficiency_addon_2"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003E0E56ED"
+					id: "0000000021EB2118"
 					item: "industrialforegoing:processing_addon_1"
 					type: "item"
 				}
@@ -244,40 +274,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000001FB28007"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DC4261D4"
+			id: "000000007886F25C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000019CCD0F6"
+					id: "000000001C1E4E59"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008F997DF4"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000009EDF8FED"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000036E96286"
+					id: "00000000381047C7"
 					item: "industrialforegoing:mycelial_disenchantment"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002B3E4D46"
+					id: "000000004BB3B434"
 					item: "industrialforegoing:dissolution_chamber"
 					type: "item"
 				}
@@ -289,33 +324,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008E6D9E9C"
+			id: "00000000B448DC59"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008A41A795"
+					id: "00000000898DE2B6"
 					type: "xp"
-					xp: 8
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EA2BD90E"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000D55B597B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000051043E59"
+					id: "00000000D63B17F4"
 					item: "minecraft:acacia_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000071C4A0E2"
+					id: "00000000869DBAD6"
 					item: "industrialforegoing:efficiency_addon_1"
 					type: "item"
 				}
@@ -324,37 +364,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000F15410F7"]
+			dependencies: ["000000001FB28007"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F2FE7F6E"
+			id: "0000000055EDE264"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000086F16FA1"
+					id: "00000000DA1A5580"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000171E2F35"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000E656F070"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A6ABABE9"
+					id: "00000000861175F0"
 					item: "industrialforegoing:conveyor_detection_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000008297297"
+					id: "00000000062DF4F5"
 					item: "thermal:diamond_gear"
 					type: "item"
 				}
@@ -364,42 +409,47 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"00000000E62F0571"
-				"000000008FBE77EA"
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000054F05C98"
+				"000000000DB7BEA8"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A08673F0"
+			id: "00000000CF3B74FB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B601E563"
+					id: "00000000C704E1CE"
 					type: "xp"
-					xp: 19
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C8BA4581"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000DB8437AF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E509239E"
+					id: "00000000F1EEAF6B"
 					item: "industrialforegoing:supreme_black_hole_unit"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000025ACE87C"
+					id: "0000000062C6D2DD"
 					item: "industrialforegoing:washing_factory"
 					type: "item"
 				}
@@ -411,33 +461,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000022B68490"
+			id: "000000008935A5DC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000079B6684A"
+					id: "000000000A3430A8"
 					type: "xp"
-					xp: 17
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000816EC918"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000763FF393"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001A1D1AAC"
+					id: "00000000313C20AD"
 					item: "industrialforegoing:range_addon6"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C8624F32"
+					id: "00000000144E2D74"
 					item: "industrialforegoing:range_addon7"
 					type: "item"
 				}
@@ -447,39 +502,44 @@
 		}
 		{
 			dependencies: [
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000540CE6A1"
+			id: "0000000021874B2D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008CC88327"
+					id: "00000000FB5227DB"
 					type: "xp"
-					xp: 18
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D21D7EB0"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000006CC1C41"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000095C5DBDE"
+					id: "00000000D7D3461C"
 					item: "industrialforegoing:simple_black_hole_tank"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FB62DF9E"
+					id: "000000002B41BDE7"
 					item: "industrialforegoing:simple_black_hole_unit"
 					type: "item"
 				}
@@ -491,33 +551,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E04D7929"
+			id: "00000000C470CEC7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000B613F8F"
+					id: "00000000F299ABEE"
 					type: "xp"
-					xp: 19
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000071AC5FD7"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000F593DF37"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002976BAF2"
+					id: "00000000BBB5B14F"
 					item: "industrialforegoing:range_addon4"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000643FA76D"
+					id: "00000000D5494287"
 					item: "industrialforegoing:range_addon5"
 					type: "item"
 				}
@@ -527,39 +592,44 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A317F661"
+			id: "0000000059E86929"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003D9CF033"
+					id: "0000000056225873"
 					type: "xp"
-					xp: 1
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002D66EB29"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000BE1978A0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B28DA1E4"
+					id: "000000007B9EC06B"
 					item: "industrialforegoing:sewage_composter"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000834918DB"
+					id: "000000004F1080DE"
 					item: "industrialforegoing:sewer"
 					type: "item"
 				}
@@ -571,33 +641,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB3F7A46"
+			id: "000000003331B7E0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C4D7502C"
+					id: "00000000D223E046"
 					type: "xp"
-					xp: 8
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000223C0892"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000001670544"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E9A68595"
+					id: "000000001E7C40DF"
 					item: "industrialforegoing:range_addon2"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C6649E89"
+					id: "00000000E7694947"
 					item: "industrialforegoing:range_addon3"
 					type: "item"
 				}
@@ -607,40 +682,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000001FB28007"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DEC414A1"
+			id: "00000000A542F164"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000152C398B"
+					id: "00000000ED728778"
 					type: "xp"
-					xp: 14
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B1D68146"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000BD4BC802"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B038EFA9"
+					id: "00000000FCC362C1"
 					item: "industrialforegoing:conveyor_splitting_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B378CA70"
+					id: "000000005950D68E"
 					item: "industrialforegoing:spores_recreator"
 					type: "item"
 				}
@@ -652,33 +732,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007897856B"
+			id: "00000000A4E97CB5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000036485BB1"
+					id: "00000000143F8AF4"
 					type: "xp"
-					xp: 14
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000016E33B25"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000E61F2A3A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E4910D9F"
+					id: "00000000F78B204F"
 					item: "industrialforegoing:range_addon11"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CAF76339"
+					id: "0000000025DB6C60"
 					item: "industrialforegoing:range_addon1"
 					type: "item"
 				}
@@ -688,40 +773,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000001FB28007"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000098298C88"
+			id: "000000004D74F947"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E3D85236"
+					id: "0000000026AD5E2B"
 					type: "xp"
-					xp: 15
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008B72B99C"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000004D228C96"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E1C5A966"
+					id: "00000000908D8D66"
 					item: "industrialforegoing:mycelial_slimey"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001AA24171"
+					id: "00000000A0448198"
 					item: "industrialforegoing:sludge_refiner"
 					type: "item"
 				}
@@ -731,39 +821,44 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000003A7221"
+			id: "000000000409DBF8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A51ED772"
+					id: "00000000E17AFD3F"
 					type: "xp"
-					xp: 6
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000042D8EA3F"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000E887DE06"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000211A5FC"
+					id: "00000000A917F4F0"
 					item: "industrialforegoing:fluid_collector"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000085A9AE7F"
+					id: "00000000175D1FA8"
 					item: "industrialforegoing:fluid_extractor"
 					type: "item"
 				}
@@ -773,40 +868,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FFD02B29"
+			id: "00000000DDA74022"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006AC499D5"
+					id: "00000000481A3A85"
 					type: "xp"
-					xp: 1
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F9ED89B4"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000108A70F9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C6D922E5"
+					id: "00000000B9E44E92"
 					item: "industrialforegoing:conveyor_extraction_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000037165943"
+					id: "000000008081FEAA"
 					item: "industrialforegoing:fermentation_station"
 					type: "item"
 				}
@@ -816,39 +916,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002E1CCDD1"
+			id: "00000000A9767812"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E73E09BE"
+					id: "0000000060027861"
 					type: "xp"
-					xp: 12
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E5E385AF"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000009FEBBB12"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F127D36E"
+					id: "00000000470BFD25"
 					item: "industrialforegoing:speed_addon_2"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000775008BF"
+					id: "00000000652855EE"
 					item: "industrialforegoing:advanced_black_hole_tank"
 					type: "item"
 				}
@@ -860,33 +965,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B2957BF5"
+			id: "00000000CA9ED65E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000024A5572"
+					id: "000000004E2FBCC2"
 					type: "xp"
-					xp: 5
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000082A23AFF"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000E48121EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000500B731D"
+					id: "00000000C6CEFEBF"
 					item: "industrialforegoing:range_addon8"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D26F8B4A"
+					id: "00000000C05CEAEE"
 					item: "industrialforegoing:speed_addon_1"
 					type: "item"
 				}
@@ -896,39 +1006,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000069458DD0"
+			id: "000000004AFA29F9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001A804B54"
+					id: "00000000573A09C2"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D9305B01"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000003649BFA0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000A871EC1"
+					id: "0000000019DF5156"
 					item: "industrialforegoing:enchantment_applicator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007C95090F"
+					id: "0000000002EAAD15"
 					item: "industrialforegoing:enchantment_extractor"
 					type: "item"
 				}
@@ -938,40 +1053,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000001FB28007"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EF492D6F"
+			id: "000000006D9C08F2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000281C0E9B"
+					id: "000000006A13773F"
 					type: "xp"
-					xp: 16
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000564E3204"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000BED2B442"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004B7BC9FD"
+					id: "0000000046965B41"
 					item: "industrialforegoing:conveyor_dropping_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000095436AE4"
+					id: "000000005603B2C1"
 					item: "industrialforegoing:dye_mixer"
 					type: "item"
 				}
@@ -981,40 +1101,45 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D7DFCBBB"
+			id: "0000000088715A43"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009BC60113"
+					id: "00000000D0BE3B66"
 					type: "xp"
-					xp: 9
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ADB9084A"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000034023559"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000CB89B40"
+					id: "00000000A3F23527"
 					item: "industrialforegoing:wither_builder"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000427A02CC"
+					id: "00000000E113C461"
 					item: "industrialforegoing:world_transporter_type"
 					type: "item"
 				}
@@ -1023,30 +1148,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000D998DCEA"]
+			dependencies: ["000000006784027E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002445721F"
+			id: "0000000036D12519"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000102BA196"
+					id: "0000000022F25CA5"
 					type: "xp"
-					xp: 8
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B14F0CAF"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000000B1CB485"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "000000005799BC88"
+				id: "00000000539FD319"
 				item: "industrialforegoing:plastic"
 				type: "item"
 			}]
@@ -1054,37 +1184,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000F15410F7"]
+			dependencies: ["000000001FB28007"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C530F9DB"
+			id: "0000000007F9AB1E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000510ED573"
+					id: "000000006C9B3111"
 					type: "xp"
-					xp: 21
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000099F821F1"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000003A32CA3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001C520006"
+					id: "000000006C6A947B"
 					item: "industrialforegoing:mycelial_ender"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009A6BB568"
+					id: "00000000F8AACCEA"
 					item: "industrialforegoing:mycelial_explosive"
 					type: "item"
 				}
@@ -1094,39 +1229,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD07F541"
+			id: "00000000472EDB20"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000288FBF85"
+					id: "00000000D5708479"
 					type: "xp"
-					xp: 15
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000006C65C78"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000000AD087A6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000143F71C9"
+					id: "00000000A1ADE842"
 					item: "industrialforegoing:enchantment_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000248FBB23"
+					id: "00000000443DFA06"
 					item: "industrialforegoing:enchantment_sorter"
 					type: "item"
 				}
@@ -1136,39 +1276,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001CBE27DE"
+			id: "00000000ADA4F25F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005356D2AE"
+					id: "0000000050C6C52E"
 					type: "xp"
-					xp: 19
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DB675D2F"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000002D0BE718"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000029996ECF"
+					id: "00000000BC62C8B3"
 					item: "industrialforegoing:advanced_black_hole_unit"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C5B61DDB"
+					id: "00000000A73BCB52"
 					type: "item"
 				}
 			]
@@ -1177,39 +1322,44 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000583D068F"
+			id: "000000006E86452C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000074277428"
+					id: "00000000A51ADAE7"
 					type: "xp"
-					xp: 8
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000975319F9"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000BBC19AC8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FDB61EDF"
+					id: "00000000C562B047"
 					item: "industrialforegoing:pitiful_generator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000908F262A"
+					id: "00000000B3E155DC"
 					item: "industrialforegoing:pity_black_hole_tank"
 					type: "item"
 				}
@@ -1219,39 +1369,44 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000793DEB9E"
+			id: "0000000082156155"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000032F0EEAD"
+					id: "000000002AB61CA3"
 					type: "xp"
-					xp: 8
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D72B34CB"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000009F6A03DB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000F44BAF9"
+					id: "0000000050BAEF5B"
 					item: "industrialforegoing:animal_rancher"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BB18E498"
+					id: "00000000E64AEB69"
 					item: "industrialforegoing:biofuel_generator"
 					type: "item"
 				}
@@ -1261,39 +1416,44 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002297FF67"
+			id: "000000003A6AA756"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006E6F033B"
+					id: "00000000FE36BD1D"
 					type: "xp"
-					xp: 6
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BC89F08A"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000E6467000"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000D040434"
+					id: "000000008758BFE2"
 					item: "industrialforegoing:plant_gatherer"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D6A6B4CA"
+					id: "000000002498FA1A"
 					item: "industrialforegoing:plant_sower"
 					type: "item"
 				}
@@ -1303,39 +1463,44 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000FDF5F15"
+			id: "0000000060E699B6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000210DAEB7"
+					id: "0000000059C8A48D"
 					type: "xp"
-					xp: 15
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000084D2A036"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000081FF4F1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B598D375"
+					id: "000000002F510351"
 					item: "industrialforegoing:animal_baby_separator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006D6B1869"
+					id: "000000004DF44AC4"
 					item: "industrialforegoing:animal_feeder"
 					type: "item"
 				}
@@ -1345,40 +1510,45 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FAC64559"
+			id: "00000000CED87DB0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000437E09F7"
+					id: "00000000F100B8C0"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D40E0522"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000008C550862"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000566ADEF3"
+					id: "00000000002B2B5C"
 					item: "industrialforegoing:pity_black_hole_unit"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DD08220A"
+					id: "0000000075EAA5B7"
 					item: "industrialforegoing:plant_fertilizer"
 					type: "item"
 				}
@@ -1388,39 +1558,44 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006B19EB1B"
+			id: "00000000D02D56D5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006AC58A01"
+					id: "000000003D9790D5"
 					type: "xp"
-					xp: 4
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000331A0B46"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000C61E8703"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AAEFAEE3"
+					id: "000000001386863A"
 					item: "industrialforegoing:mob_slaughter_factory"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EC887E9D"
+					id: "000000009321F7F6"
 					item: "industrialforegoing:mycelial_reactor"
 					type: "item"
 				}
@@ -1429,37 +1604,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000BF09B8A6"]
+			dependencies: ["0000000042162CC3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B2FDFA64"
+			id: "00000000C491C757"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EC1AE881"
+					id: "00000000BA8D101E"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A125BEF4"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000F6432555"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DFB618CF"
+					id: "00000000A62E4188"
 					item: "industrialforegoing:mycelial_netherstar"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E4F2542B"
+					id: "000000008BF6573C"
 					item: "minecraft:oak_log"
 					type: "item"
 				}
@@ -1468,37 +1648,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000F15410F7"]
+			dependencies: ["000000001FB28007"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008809541A"
+			id: "000000004D5F8111"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005F3EB0BE"
+					id: "00000000E07573FC"
 					type: "xp"
-					xp: 12
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001EB0C56F"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000D3A86F4F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001A78895A"
+					id: "00000000E5B30310"
 					item: "minecraft:experience_bottle"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005C1536F7"
+					id: "00000000061D4943"
 					item: "industrialforegoing:conveyor_bouncing_upgrade"
 					type: "item"
 				}
@@ -1508,39 +1693,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000008FBE77EA"
+				"000000001FB28007"
+				"000000000DB7BEA8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000001D0A14A"
+			id: "00000000795EC78B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009BC363A0"
+					id: "000000006C6B92A4"
 					type: "xp"
-					xp: 14
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F816223D"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000005C78998C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000308B767C"
+					id: "00000000370984F0"
 					item: "industrialforegoing:common_black_hole_unit"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DE197233"
+					id: "0000000026D98B18"
 					item: "industrialforegoing:mycelial_crimed"
 					type: "item"
 				}
@@ -1550,40 +1740,45 @@
 		}
 		{
 			dependencies: [
-				"00000000E62F0571"
-				"000000008FBE77EA"
-				"000000002445721F"
+				"0000000054F05C98"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CFF24305"
+			id: "0000000050C942FC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F0816D78"
+					id: "00000000B5ECF9DD"
 					type: "xp"
-					xp: 10
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000044A2352E"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000044CD80FC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003C6D9884"
+					id: "0000000046E1CF96"
 					item: "industrialforegoing:bioreactor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AA0D5FE6"
+					id: "00000000D6716D35"
 					item: "minecraft:birch_log"
 					type: "item"
 				}
@@ -1593,39 +1788,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C6D3C029"
+			id: "000000002492894F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B2F552B3"
+					id: "000000008D7F521D"
 					type: "xp"
-					xp: 6
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C03DB15C"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000C9922866"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000196F8E5E"
+					id: "000000005B4E5D8F"
 					item: "industrialforegoing:potion_brewer"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000479E9BC4"
+					id: "00000000C52953F1"
 					item: "industrialforegoing:mycelial_potion"
 					type: "item"
 				}
@@ -1635,40 +1835,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000001FB28007"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000079935E87"
+			id: "00000000C04FF9B4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009E9E949E"
+					id: "000000000ABD5F66"
 					type: "xp"
-					xp: 7
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003CF563C5"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000CC35493F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006ED369EE"
+					id: "0000000082FC20B9"
 					item: "industrialforegoing:conveyor_blinking_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009E720EF7"
+					id: "00000000AEE52BF3"
 					item: "industrialforegoing:block_breaker"
 					type: "item"
 				}
@@ -1678,40 +1883,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000001FB28007"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E5063547"
+			id: "00000000BDCCDEB5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000002886DE2"
+					id: "000000009D376588"
 					type: "xp"
-					xp: 16
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F9780824"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000008D90644A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001C25DB80"
+					id: "00000000EBB558E7"
 					item: "industrialforegoing:resourceful_furnace"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006BB53732"
+					id: "00000000CC713584"
 					item: "industrialforegoing:mycelial_rocket"
 					type: "item"
 				}
@@ -1721,40 +1931,45 @@
 		}
 		{
 			dependencies: [
-				"000000008FBE77EA"
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"000000000DB7BEA8"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F2914878"
+			id: "000000002827BBB2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A623B65F"
+					id: "00000000E57CC360"
 					type: "xp"
-					xp: 11
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000091C7B52E"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000E408C833"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000462A5F9D"
+					id: "00000000BCC0EE58"
 					item: "industrialforegoing:laser_drill"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006A733188"
+					id: "00000000F50CEECB"
 					item: "industrialforegoing:latex_processing_unit"
 					type: "item"
 				}
@@ -1763,37 +1978,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000008FBE77EA"]
+			dependencies: ["000000000DB7BEA8"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009375322D"
+			id: "00000000E4DABD3B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C0A49093"
+					id: "0000000049A503EC"
 					type: "xp"
-					xp: 20
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004F37A56E"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000002AA479CD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000028AA80C7"
+					id: "00000000BA5684A8"
 					item: "industrialforegoing:item_transporter_type"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000673409D4"
+					id: "00000000163BB5E6"
 					item: "minecraft:jungle_log"
 					type: "item"
 				}
@@ -1803,39 +2023,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DE6A1395"
+			id: "00000000F0F1CEA4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000090506B6"
+					id: "00000000F08A6472"
 					type: "xp"
-					xp: 19
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A1CDE04A"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000097514A7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005562FEE5"
+					id: "00000000164E1A4C"
 					item: "industrialforegoing:conveyor_insertion_upgrade"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D63829BE"
+					id: "0000000071741683"
 					item: "thermal:iron_gear"
 					type: "item"
 				}
@@ -1844,37 +2069,42 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000002445721F"]
+			dependencies: ["0000000036D12519"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F15410F7"
+			id: "000000001FB28007"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000010E0420"
+					id: "000000006E55677D"
 					type: "xp"
-					xp: 8
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FE3B96F3"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000004220C410"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000058CE1068"
+					id: "000000003CE56A42"
 					item: "industrialforegoing:machine_frame_advanced"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008DC48E9A"
+					id: "0000000001B1FAD0"
 					item: "industrialforegoing:conveyor"
 					type: "item"
 				}
@@ -1883,37 +2113,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000002445721F"]
+			dependencies: ["0000000036D12519"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E62F0571"
+			id: "0000000054F05C98"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000082652FC5"
+					id: "00000000616CBD66"
 					type: "xp"
-					xp: 2
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005B007B59"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000000B49FE96"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EE220577"
+					id: "00000000CD02DC52"
 					item: "industrialforegoing:meat_feeder"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BD1F3BB9"
+					id: "00000000C3795955"
 					item: "industrialforegoing:pink_slime"
 					type: "item"
 				}
@@ -1925,33 +2160,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008FBE77EA"
+			id: "000000000DB7BEA8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004963A6C7"
+					id: "0000000017626573"
 					type: "xp"
-					xp: 7
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003B12FB58"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000064697245"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006DB9EB98"
+					id: "00000000633A4645"
 					item: "industrialforegoing:pink_slime_ingot"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000846B3EE0"
+					id: "00000000B7E1F987"
 					item: "industrialforegoing:machine_frame_pity"
 					type: "item"
 				}
@@ -1963,33 +2203,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BF09B8A6"
+			id: "0000000042162CC3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A4378267"
+					id: "000000000FC5F6E0"
 					type: "xp"
-					xp: 8
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FF87B0AF"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000008894162D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000643178B9"
+					id: "000000005CAA88FB"
 					item: "industrialforegoing:machine_frame_simple"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F1361F06"
+					id: "000000006A8B8B09"
 					item: "industrialforegoing:machine_frame_supreme"
 					type: "item"
 				}
@@ -1998,37 +2243,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000BF09B8A6"]
+			dependencies: ["0000000042162CC3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BEF47F48"
+			id: "000000007E92DBC9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000042C102E3"
+					id: "00000000E11D0F43"
 					type: "xp"
-					xp: 17
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A6008E8A"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000FBBCAE00"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000016960E83"
+					id: "00000000A0EBBE55"
 					item: "industrialforegoing:mycelial_meatallurgic"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C0FFC183"
+					id: "00000000E8659FF3"
 					item: "industrialforegoing:mechanical_dirt"
 					type: "item"
 				}
@@ -2038,41 +2288,46 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"00000000E62F0571"
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000054F05C98"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000458BF350"
+			id: "00000000E71DA3FA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008FE13901"
+					id: "00000000BF130430"
 					type: "xp"
-					xp: 6
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004BFBEFA5"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000869FC6BF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005B20235A"
+					id: "00000000FF70493F"
 					item: "industrialforegoing:marine_fisher"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000740C4855"
+					id: "00000000ADCBB0A8"
 					item: "industrialforegoing:material_stonework_factory"
 					type: "item"
 				}
@@ -2082,39 +2337,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B14CCD60"
+			id: "00000000C4049B46"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F540AA59"
+					id: "00000000AD75B80D"
 					type: "xp"
-					xp: 11
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A684B44C"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000005F935FD0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000526F5C7F"
+					id: "0000000018743764"
 					item: "industrialforegoing:mob_duplicator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D41C3432"
+					id: "00000000D49137EE"
 					item: "industrialforegoing:mob_imprisonment_tool"
 					type: "item"
 				}
@@ -2124,40 +2384,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007537C5BC"
+			id: "0000000035672D64"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F2FAC099"
+					id: "000000000DA0E667"
 					type: "xp"
-					xp: 6
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002707ADCD"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000003FB0A1F9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B1C93526"
+					id: "0000000075AF1454"
 					item: "industrialforegoing:mob_crusher"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005D11BF6D"
+					id: "000000006F9CC072"
 					item: "industrialforegoing:mob_detector"
 					type: "item"
 				}
@@ -2169,26 +2434,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D998DCEA"
+			id: "000000006784027E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000064F0306"
+					id: "000000008F9E78DA"
 					type: "xp"
-					xp: 4
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001B596A55"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000004BD5F255"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "000000008197C082"
+				id: "0000000073362020"
 				item: "industrialforegoing:dryrubber"
 				type: "item"
 			}]
@@ -2196,37 +2466,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000BF09B8A6"]
+			dependencies: ["0000000042162CC3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000341CB50F"
+			id: "00000000E473460E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C0BB955D"
+					id: "00000000AC542211"
 					type: "xp"
-					xp: 6
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000025623C2A"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000F37349A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000016CFC55D"
+					id: "000000003288DF6E"
 					item: "industrialforegoing:mycelial_frosty"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CF09F917"
+					id: "0000000081CDDFBE"
 					item: "industrialforegoing:mycelial_furnace"
 					type: "item"
 				}
@@ -2236,41 +2511,46 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"00000000E62F0571"
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000054F05C98"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FFA08C6A"
+			id: "00000000413D2F56"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DF330255"
+					id: "000000007F41FB77"
 					type: "xp"
-					xp: 3
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003B432B36"
-					table_id: 3602369855L
-					type: "random"
+					id: "000000008C7359F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000678BE191"
+					id: "000000004260F6E8"
 					item: "industrialforegoing:fluid_sieving_machine"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003847B5D1"
+					id: "00000000A960C3AA"
 					item: "industrialforegoing:fluid_transporter_type"
 					type: "item"
 				}
@@ -2280,40 +2560,45 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000008FBE77EA"
-				"000000002445721F"
+				"000000001FB28007"
+				"000000000DB7BEA8"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BCE22102"
+			id: "00000000504751F4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000087E14EF4"
+					id: "000000001F98430F"
 					type: "xp"
-					xp: 11
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A034B636"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000835BF0C1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C9157800"
+					id: "000000001BAF70FF"
 					item: "industrialforegoing:fluid_laser_base"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006B8BD5AC"
+					id: "00000000B81839A6"
 					item: "industrialforegoing:fluid_placer"
 					type: "item"
 				}
@@ -2325,33 +2610,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FCAC7620"
+			id: "00000000F03DD3D5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000057BDBEC3"
+					id: "0000000043E503F3"
 					type: "xp"
-					xp: 12
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006FB690C7"
-					table_id: 3602369855L
-					type: "random"
+					id: "0000000099683E53"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F91CFED1"
+					id: "000000004AAE4EE8"
 					item: "industrialforegoing:infinity_saw"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000758B0CF9"
+					id: "0000000092197889"
 					item: "industrialforegoing:infinity_trident"
 					type: "item"
 				}
@@ -2361,39 +2651,44 @@
 		}
 		{
 			dependencies: [
-				"00000000F15410F7"
-				"000000002445721F"
+				"000000001FB28007"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009BE58D69"
+			id: "00000000BFA37EF1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C874D773"
+					id: "00000000F7C8D386"
 					type: "xp"
-					xp: 21
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000243BB49D"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000E69AA2FB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000026E64341"
+					id: "00000000E45AD2ED"
 					item: "industrialforegoing:infinity_backpack"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B07D0B7E"
+					id: "00000000F397C170"
 					item: "industrialforegoing:infinity_charger"
 					type: "item"
 				}
@@ -2403,39 +2698,44 @@
 		}
 		{
 			dependencies: [
-				"00000000BF09B8A6"
-				"000000002445721F"
+				"0000000042162CC3"
+				"0000000036D12519"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000873988E7"
+			id: "000000003C8FA5E9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E6D4379A"
+					id: "00000000889DD642"
 					type: "xp"
-					xp: 6
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004FB4AEB0"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000A65980D0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C619C504"
+					id: "000000000E9248E4"
 					item: "industrialforegoing:hydroponic_bed"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000032B90104"
+					id: "0000000053A33FDE"
 					item: "patchouli:guide_book"
 					type: "item"
 				}
@@ -2447,33 +2747,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000032A42033"
+			id: "0000000026FD983D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D018CF81"
+					id: "00000000B24E7F17"
 					type: "xp"
-					xp: 12
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001C2922AD"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000C249902F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003765743D"
+					id: "0000000095DF01AF"
 					item: "industrialforegoing:infinity_launcher"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000509AE611"
+					id: "00000000BD9B3288"
 					item: "industrialforegoing:infinity_nuke"
 					type: "item"
 				}
@@ -2485,33 +2790,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C3B5E046"
+			id: "000000000DD241B2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A24A775C"
+					id: "000000004B3508B0"
 					type: "xp"
-					xp: 21
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BAD2652C"
-					table_id: 3602369855L
-					type: "random"
+					id: "00000000B75F3B81"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_industrialforegoing"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E96E28B7"
+					id: "00000000290C9C92"
 					item: "industrialforegoing:infinity_drill"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001121F0E5"
+					id: "0000000094C928D9"
 					item: "industrialforegoing:infinity_hammer"
 					type: "item"
 				}

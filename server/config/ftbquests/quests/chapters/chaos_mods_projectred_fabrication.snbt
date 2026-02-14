@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_projectred_fabrication"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "projectred_fabrication:blank_photomask"
-	id: "000000004725F85A"
+	id: "00000000A95C0EC9"
 	order_index: 8
 	quest_links: [ ]
 	quests: [
@@ -12,26 +12,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004B16521B"
+			id: "0000000005B90105"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CE577E8E"
+					id: "0000000035F2570D"
 					type: "xp"
-					xp: 4
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000026C3F83B"
-					table_id: 999800195L
-					type: "random"
+					id: "0000000035AEAF72"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_fabrication"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002BA2BBE8"
+				id: "00000000FC7EA28F"
 				item: "projectred_fabrication:rough_silicon_wafer"
 				type: "item"
 			}]
@@ -42,26 +47,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D0BFF90D"
+			id: "00000000D07E8633"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FD00EF91"
+					id: "0000000040276306"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CBCCF25E"
-					table_id: 999800195L
-					type: "random"
+					id: "00000000ABCC7D18"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_fabrication"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000643AFDA6"
+				id: "00000000079441EC"
 				item: "projectred_fabrication:blank_photomask"
 				type: "item"
 			}]
@@ -72,26 +82,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005E3EA29C"
+			id: "0000000025D0DCF5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000071F45F59"
+					id: "000000007047F30A"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000E70791D"
-					table_id: 999800195L
-					type: "random"
+					id: "0000000091BB3371"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_fabrication"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000AA82D427"
+				id: "00000000BB54A211"
 				item: "projectred_fabrication:ic_blueprint"
 				type: "item"
 			}]
@@ -99,30 +114,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000005E3EA29C"]
+			dependencies: ["0000000025D0DCF5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AC1B7801"
+			id: "00000000EA96C4B9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E11EDE7F"
+					id: "00000000AC825C2F"
 					type: "xp"
-					xp: 6
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000095DC60EF"
-					table_id: 999800195L
-					type: "random"
+					id: "00000000651ABEF1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_fabrication"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F5E458B0"
+				id: "00000000E9E53AB7"
 				item: "projectred_fabrication:ic_workbench"
 				type: "item"
 			}]
@@ -133,26 +153,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000859B4556"
+			id: "00000000966CA654"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D985EAC2"
+					id: "000000008A5E6B5F"
 					type: "xp"
-					xp: 6
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001806AA11"
-					table_id: 999800195L
-					type: "random"
+					id: "0000000020CE78FA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_fabrication"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A69C5C0A"
+				id: "00000000D73585F9"
 				item: "projectred_fabrication:lithography_table"
 				type: "item"
 			}]
@@ -163,26 +188,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D152721D"
+			id: "000000009386B5AF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000076526F84"
+					id: "00000000E75272DB"
 					type: "xp"
-					xp: 5
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009535B501"
-					table_id: 999800195L
-					type: "random"
+					id: "00000000DA27D0CB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_fabrication"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000002205302"
+				id: "00000000DD005126"
 				item: "projectred_fabrication:packaging_table"
 				type: "item"
 			}]
@@ -190,30 +220,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000D0BFF90D"]
+			dependencies: ["00000000D07E8633"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FE0F89BA"
+			id: "00000000A9D355AC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000990B564B"
+					id: "0000000075DC0A27"
 					type: "xp"
-					xp: 5
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B3AA8703"
-					table_id: 999800195L
-					type: "random"
+					id: "00000000DDECE688"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_projectred_fabrication"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000038A552E9"
+				id: "000000009891993A"
 				item: "projectred_fabrication:plotting_table"
 				type: "item"
 			}]

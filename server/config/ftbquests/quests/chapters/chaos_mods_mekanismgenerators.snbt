@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_mekanismgenerators"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "mekanismgenerators:solar_panel"
-	id: "00000000085626BF"
-	order_index: 109
+	id: "00000000F813DBE1"
+	order_index: 108
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0000000084E9C85E"]
+			dependencies: ["0000000044036F23"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000787A9667"
+			id: "000000007A3F6735"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000D7E6448"
+					id: "0000000071E5628C"
 					type: "xp"
-					xp: 7
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003F0497F1"
-					table_id: 1087039996L
-					type: "random"
+					id: "0000000046C96051"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000EC08304D"
+				id: "00000000DF1B4C04"
 				item: "mekanismgenerators:fusion_reactor_port"
 				type: "item"
 			}]
@@ -40,30 +45,35 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000084E9C85E"]
+			dependencies: ["0000000044036F23"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001D777249"
+			id: "000000005F79E80E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000032FA3026"
+					id: "0000000083A86934"
 					type: "xp"
-					xp: 1
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B7BAE199"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000B0E2413A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000054A33184"
+				id: "00000000368FF0C1"
 				item: "mekanismgenerators:fusion_reactor_logic_adapter"
 				type: "item"
 			}]
@@ -71,30 +81,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000084E9C85E"]
+			dependencies: ["0000000044036F23"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008D434129"
+			id: "0000000089622416"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000019132833"
+					id: "000000002F16B5BD"
 					type: "xp"
 					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AEA08B74"
-					table_id: 1087039996L
-					type: "random"
+					id: "000000005B57E081"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002420C9B8"
+				id: "00000000D2E4DA6D"
 				item: "mekanismgenerators:fusion_reactor_controller"
 				type: "item"
 			}]
@@ -102,30 +117,35 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000DE64EAA5"]
+			dependencies: ["00000000342DEAFC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB75A6EB"
+			id: "000000003C42D884"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003A0DB3E1"
+					id: "000000008200FFAC"
 					type: "xp"
-					xp: 7
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FDEEDEF2"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000CEBBE9B4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CADB0B77"
+				id: "00000000FFAA3871"
 				item: "mekanismgenerators:fission_reactor_port"
 				type: "item"
 			}]
@@ -133,30 +153,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000DE64EAA5"]
+			dependencies: ["00000000342DEAFC"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F0450743"
+			id: "0000000055293736"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000016012E36"
+					id: "00000000D7339AFE"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EF15FD94"
-					table_id: 1087039996L
-					type: "random"
+					id: "0000000093D82F68"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E20BEC8A"
+				id: "00000000CB2EBE1F"
 				item: "mekanismgenerators:fission_reactor_logic_adapter"
 				type: "item"
 			}]
@@ -167,26 +192,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005F227DD6"
+			id: "000000007B69B7C3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004FD0B27A"
+					id: "000000009741EB7F"
 					type: "xp"
-					xp: 6
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006D78DEC5"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000B2D265E5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CCB492B3"
+				id: "0000000076469245"
 				item: "mekanismgenerators:fission_fuel_assembly"
 				type: "item"
 			}]
@@ -197,26 +227,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000FAE0C00"
+			id: "0000000051720C7C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004E21CE12"
+					id: "0000000078D4AF10"
 					type: "xp"
-					xp: 1
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000068988E22"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000C293B44C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000012DB91B8"
+				id: "00000000509B23FB"
 				item: "mekanismgenerators:electromagnetic_coil"
 				type: "item"
 			}]
@@ -227,26 +262,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B2CC19FD"
+			id: "000000003EF9E9C0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000059D47D1F"
+					id: "000000004AEF4D8F"
 					type: "xp"
-					xp: 2
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009A0C9FCE"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000CBA0E3F3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F0FB377B"
+				id: "00000000A9F2E5D8"
 				item: "mekanismgenerators:control_rod_assembly"
 				type: "item"
 			}]
@@ -257,26 +297,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002C915F9A"
+			id: "000000003A72E7E7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B74DA0B4"
+					id: "00000000E665D203"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000615480C9"
-					table_id: 1087039996L
-					type: "random"
+					id: "000000005C6B127F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000029EDBCE2"
+				id: "000000005A945CA3"
 				item: "mekanismgenerators:bio_generator"
 				type: "item"
 			}]
@@ -287,26 +332,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000372ADE19"
+			id: "0000000022768300"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BD918716"
+					id: "0000000052DBB89C"
 					type: "xp"
-					xp: 3
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005556B44B"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000AA1FB95F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000027F4BF99"
+				id: "00000000F11E4451"
 				type: "item"
 			}]
 			x: 0.0d
@@ -316,26 +366,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DE64EAA5"
+			id: "00000000342DEAFC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F58E719A"
+					id: "00000000EBAF97DC"
 					type: "xp"
-					xp: 7
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DBFDD96F"
-					table_id: 1087039996L
-					type: "random"
+					id: "000000006321D790"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000D75BA1A6"
+				id: "0000000010405125"
 				item: "mekanismgenerators:fission_reactor_casing"
 				type: "item"
 			}]
@@ -346,26 +401,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000084E9C85E"
+			id: "0000000044036F23"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000010B1711E"
+					id: "000000005F14F154"
 					type: "xp"
-					xp: 7
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002EFEC922"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000C9F3F726"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000005C2A7AC"
+				id: "0000000019E8F19C"
 				item: "mekanismgenerators:fusion_reactor_frame"
 				type: "item"
 			}]
@@ -376,26 +436,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D3F19816"
+			id: "00000000DAFE45C8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000868CE97"
+					id: "00000000665AE421"
 					type: "xp"
-					xp: 9
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000328D3DD8"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000A09CDE52"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000006A7F5E62"
+				id: "00000000E5AC0B54"
 				item: "mekanismgenerators:heat_generator"
 				type: "item"
 			}]
@@ -406,26 +471,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000011A3DF6A"
+			id: "000000007AE76D97"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C2A58A63"
+					id: "0000000028A9EEF4"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000184EF252"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000DCDC1CCE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000BE04EE1D"
+				id: "00000000C6D43F77"
 				item: "mekanismgenerators:reactor_glass"
 				type: "item"
 			}]
@@ -436,26 +506,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EBA86443"
+			id: "00000000E28B1E2C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000075B97AD6"
+					id: "00000000A3BDF26C"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000C37CCFF"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000F3BA8F7F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001B588CCA"
+				id: "0000000075EB83C4"
 				item: "mekanismgenerators:wind_generator"
 				type: "item"
 			}]
@@ -463,30 +538,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000002D5C3895"]
+			dependencies: ["00000000DCF42204"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007ED7E2FD"
+			id: "00000000C0D2AE7C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E89DF282"
+					id: "0000000013D9F71D"
 					type: "xp"
-					xp: 8
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000038E55385"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000E49EA6E5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000EA4B8763"
+				id: "000000002016498F"
 				item: "mekanismgenerators:advanced_solar_generator"
 				type: "item"
 			}]
@@ -494,30 +574,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000005C0FF0AE"]
+			dependencies: ["00000000A6DD248F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E494932A"
+			id: "000000006AD2989A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000076330CBC"
+					id: "000000008AAA56EF"
 					type: "xp"
-					xp: 11
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000588F8CAD"
-					table_id: 1087039996L
-					type: "random"
+					id: "000000005682B896"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D490177C"
+				id: "00000000B6B796A9"
 				item: "mekanismgenerators:turbine_vent"
 				type: "item"
 			}]
@@ -528,26 +613,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C9A495EE"
+			id: "000000008C2720FB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B43A1C90"
+					id: "00000000A6603E8B"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A8D2A1A1"
-					table_id: 1087039996L
-					type: "random"
+					id: "0000000068AD7AAE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "000000003B25669A"
+				id: "00000000E1E96AFC"
 				item: "mekanismgenerators:solar_panel"
 				type: "item"
 			}]
@@ -555,30 +645,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000C9A495EE"]
+			dependencies: ["000000008C2720FB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002D5C3895"
+			id: "00000000DCF42204"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000081284120"
+					id: "0000000081017453"
 					type: "xp"
-					xp: 9
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000063DCE0DB"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000F6A15F9F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "0000000093FAFDA3"
+				id: "000000003D99FBFE"
 				item: "mekanismgenerators:solar_generator"
 				type: "item"
 			}]
@@ -589,26 +684,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005C0FF0AE"
+			id: "00000000A6DD248F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000015EBF7F9"
+					id: "0000000015ADA1ED"
 					type: "xp"
-					xp: 4
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D97D1532"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000B89CB0A2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000A302807E"
+				id: "000000006772F72E"
 				item: "mekanismgenerators:turbine_casing"
 				type: "item"
 			}]
@@ -616,30 +716,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000005C0FF0AE"]
+			dependencies: ["00000000A6DD248F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000022C9C286"
+			id: "000000006BE0C142"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E358698F"
+					id: "000000003D228C93"
 					type: "xp"
-					xp: 9
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003EA41876"
-					table_id: 1087039996L
-					type: "random"
+					id: "000000001FB5B3E2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000477A407F"
+				id: "000000000AB6CBD3"
 				item: "mekanismgenerators:turbine_valve"
 				type: "item"
 			}]
@@ -650,26 +755,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000777D6D87"
+			id: "00000000F0A107B5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000B6BCCB7"
+					id: "00000000ED62FECE"
 					type: "xp"
-					xp: 4
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A1363561"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000EBFE1477"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000003E596A6"
+				id: "000000003152B4AF"
 				item: "mekanismgenerators:gas_burning_generator"
 				type: "item"
 			}]
@@ -680,26 +790,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000006E3E6BC"
+			id: "000000007F2E4ADA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008B795F62"
+					id: "00000000D890FF8D"
 					type: "xp"
-					xp: 8
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E7314469"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000C2808EBF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F226E929"
+				id: "00000000FBFD011A"
 				item: "mekanismgenerators:hohlraum"
 				type: "item"
 			}]
@@ -707,30 +822,35 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000D3F19816"]
+			dependencies: ["00000000DAFE45C8"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C1A09A42"
+			id: "000000004BEC6511"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001F219AAF"
+					id: "000000001A620749"
 					type: "xp"
-					xp: 3
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B4BE3489"
-					table_id: 1087039996L
-					type: "random"
+					id: "0000000058C0465C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D717B514"
+				id: "00000000819D83FE"
 				item: "mekanismgenerators:module_geothermal_generator_unit"
 				type: "item"
 			}]
@@ -741,26 +861,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003AB3E838"
+			id: "00000000E02690ED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BA23A88B"
+					id: "000000001DAE9EBA"
 					type: "xp"
-					xp: 5
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000460B9202"
-					table_id: 1087039996L
-					type: "random"
+					id: "000000005044892D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B648BE45"
+				id: "00000000544A9C83"
 				item: "mekanismgenerators:rotational_complex"
 				type: "item"
 			}]
@@ -768,30 +893,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000011A3DF6A"]
+			dependencies: ["000000007AE76D97"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DEFA04A0"
+			id: "00000000ED917BF2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000074379A3E"
+					id: "000000000856EEDA"
 					type: "xp"
-					xp: 3
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000002F4B6DC"
-					table_id: 1087039996L
-					type: "random"
+					id: "0000000064F7DF56"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DE90B585"
+				id: "000000003704C613"
 				item: "mekanismgenerators:laser_focus_matrix"
 				type: "item"
 			}]
@@ -799,30 +929,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000007ED7E2FD"]
+			dependencies: ["00000000C0D2AE7C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006B318DA0"
+			id: "000000002282153B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000491F9CC4"
+					id: "00000000296B50E3"
 					type: "xp"
-					xp: 2
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D65C0FB7"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000316B1B35"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001B5C99F7"
+				id: "00000000F9762856"
 				item: "mekanismgenerators:module_solar_recharging_unit"
 				type: "item"
 			}]
@@ -833,26 +968,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BC53A204"
+			id: "0000000023BB4421"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C39934D7"
+					id: "000000008298DE4B"
 					type: "xp"
-					xp: 8
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004599F753"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000C9FC696D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000929EAB31"
+				id: "0000000002B62736"
 				item: "mekanismgenerators:saturating_condenser"
 				type: "item"
 			}]
@@ -863,26 +1003,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000024D6EA31"
+			id: "0000000080DC783B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004279661F"
+					id: "00000000C5DA00CE"
 					type: "xp"
-					xp: 8
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A5826B9A"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000AFE260DF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000005FAB7F3"
+				id: "000000005410F2DB"
 				item: "mekanismgenerators:turbine_rotor"
 				type: "item"
 			}]
@@ -893,26 +1038,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F02843D8"
+			id: "00000000E1943964"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DCFC7234"
+					id: "00000000606B0263"
 					type: "xp"
-					xp: 6
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009EFFCE6A"
-					table_id: 1087039996L
-					type: "random"
+					id: "00000000DD1B12AA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_mekanismgenerators"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003880ED11"
+				id: "000000000CD317AF"
 				item: "mekanismgenerators:turbine_blade"
 				type: "item"
 			}]

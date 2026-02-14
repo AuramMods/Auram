@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_create_mechanical_spawner"
-	group: "00000000DEB299A3"
-	icon: "create_mechanical_spawner:loot_collector"
-	id: "00000000C8F5A097"
+	group: "000000008CDEF944"
+	icon: "create_mechanical_spawner:mechanical_spawner"
+	id: "00000000447E15EA"
 	order_index: 86
 	quest_links: [ ]
 	quests: [
@@ -12,26 +12,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000010808914"
+			id: "000000008D8E6AE2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000078C5A4F3"
+					id: "0000000038E26BE1"
 					type: "xp"
-					xp: 7
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ADC40550"
-					table_id: 2200927617L
-					type: "random"
+					id: "000000004CB04191"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_mechanical_spawner"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F045BCED"
+				id: "00000000BAC6CD3F"
 				item: "create_mechanical_spawner:mechanical_spawner"
 				type: "item"
 			}]
@@ -42,26 +47,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000003E8EC8C"
+			id: "00000000A368B36E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001F7BC05D"
+					id: "000000000FB97473"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007738F8F6"
-					table_id: 2200927617L
-					type: "random"
+					id: "00000000C8A1AB0D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_mechanical_spawner"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A67815E8"
+				id: "000000007495216C"
 				type: "item"
 			}]
 			x: 0.0d
@@ -71,26 +81,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000051A55B53"
+			id: "000000006BB6F507"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FAE9A548"
+					id: "000000007BAA92B1"
 					type: "xp"
-					xp: 7
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E074F41A"
-					table_id: 2200927617L
-					type: "random"
+					id: "00000000FE59E459"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_mechanical_spawner"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B27489A1"
+				id: "000000007C269C1E"
 				item: "create_mechanical_spawner:loot_collector"
 				type: "item"
 			}]

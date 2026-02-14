@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_nomadictents"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "nomadictents:tent_canvas"
-	id: "00000000ED3F97E9"
-	order_index: 135
+	id: "00000000734C51CC"
+	order_index: 134
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["00000000BB0FFB0E"]
+			dependencies: ["0000000029D20649"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008153B659"
+			id: "00000000D4DDD41F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000076100BD7"
+					id: "00000000E8209067"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008B4226CC"
-					table_id: 1318717469L
-					type: "random"
+					id: "0000000040A44039"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000090A2D62D"
+				id: "0000000069585B85"
 				item: "nomadictents:medium_bedouin"
 				type: "item"
 			}]
@@ -40,61 +45,71 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000CD5E06CB"]
+			dependencies: ["00000000D75BC60F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D98FBE2F"
+			id: "000000009F4E8BEA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D695534F"
+					id: "00000000A57C1CF6"
 					type: "xp"
-					xp: 7
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007CE60ECB"
-					table_id: 1318717469L
-					type: "random"
+					id: "0000000006A66C65"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006D76A0DF"
-				item: "nomadictents:mega_bedouin"
+				id: "000000008F38AD15"
+				item: "nomadictents:medium_shamiyana"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000CD5E06CB"]
+			dependencies: ["000000005A28FF4A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FB46421B"
+			id: "000000003D8C556E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DA7FA571"
+					id: "000000000EAB511B"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000046385DD0"
-					table_id: 1318717469L
-					type: "random"
+					id: "000000000A249BE4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B8CC99A4"
+				id: "00000000BA8827A9"
 				item: "nomadictents:medium_indlu"
 				type: "item"
 			}]
@@ -102,431 +117,503 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000CD5E06CB"]
+			dependencies: ["00000000E761122E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D1949B67"
+			id: "0000000096B4190E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CAFCD4D6"
+					id: "00000000E26DA89F"
 					type: "xp"
-					xp: 7
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000592A6FE8"
-					table_id: 1318717469L
-					type: "random"
+					id: "000000001AB6069F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000845725E9"
-				item: "nomadictents:mega_shamiyana"
+				id: "00000000FFDEAB36"
+				item: "nomadictents:medium_yurt"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000CD5E06CB"]
+			dependencies: ["0000000029D20649"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F9DE191C"
+			id: "00000000F08532C9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000017C3C21C"
+					id: "00000000C9F80E64"
 					type: "xp"
-					xp: 11
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000061F088C5"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000B2E24EC3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B594207F"
-				item: "nomadictents:mega_indlu"
+				id: "000000000B77335E"
+				item: "nomadictents:medium_tepee"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000005C5A9666"]
+			dependencies: ["00000000E761122E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C1837489"
+			id: "0000000076C22BFF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CA7E9864"
+					id: "00000000DCC712D4"
 					type: "xp"
-					xp: 3
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000073F1A43E"
-					table_id: 1318717469L
-					type: "random"
+					id: "000000000F30099C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F098A218"
-				item: "nomadictents:mega_yurt"
+				id: "000000006BA560CA"
+				item: "nomadictents:mega_indlu"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000CD5E06CB"]
+			dependencies: ["000000005B0CECA7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000226455C2"
+			id: "0000000049C21FAE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A19019D2"
+					id: "000000004ED2F5F5"
 					type: "xp"
-					xp: 4
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000069B0D6CD"
-					table_id: 1318717469L
-					type: "random"
+					id: "0000000009920425"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E85D59CD"
-				item: "nomadictents:mega_tepee"
+				id: "00000000F9172249"
+				item: "nomadictents:mega_bedouin"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000CD5E06CB"]
+			dependencies: ["00000000738DCA45"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000675CE81E"
+			id: "000000001406C836"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009C85FC11"
+					id: "00000000CC0BECA3"
 					type: "xp"
-					xp: 8
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A7523E0F"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000C75A0DC4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000006E0D759B"
-				item: "nomadictents:small_tepee"
+				id: "00000000240E205C"
+				item: "nomadictents:mega_tepee"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000CD5E06CB"]
+			dependencies: ["0000000031CCF2CD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000056317EB9"
+			id: "00000000D6BB1BAF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FCCA54CC"
+					id: "000000002145456F"
 					type: "xp"
-					xp: 1
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000019D8148"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000D1059FA1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000871A1AE1"
-				item: "nomadictents:small_indlu"
+				id: "000000004D82C325"
+				item: "nomadictents:mega_shamiyana"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 7.0d
 		}
 		{
+			dependencies: ["00000000483FE01A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000389A48F0"
+			id: "00000000738DCA45"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BD661636"
+					id: "00000000D64CB754"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000259FE1DC"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [{
-				consume_items: false
-				id: "0000000048146EE3"
-				item: "nomadictents:tent_canvas"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000389A48F0"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E26116E7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004CE69B83"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007F4FDBD7"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000273AFEE2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000030902F4A"
-				item: "nomadictents:golden_tent_shovel"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["00000000CD5E06CB"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000DEC32E06"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E4B8456D"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000047D45666"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000004A90DAA2"
-				item: "nomadictents:large_indlu"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["00000000E3E42F5C"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000043892D78"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000318826B0"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001651645C"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "000000005E4368DB"
-				item: "nomadictents:medium_shamiyana"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["00000000CD5E06CB"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000448702AB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000207EC08D"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000085C94AE"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000210693C9"
-				item: "nomadictents:medium_tepee"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000008675EDD2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008D65CF4B"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000597AD2F7"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000006503AFA4"
-				item: "nomadictents:tiny_indlu"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["0000000029346F11"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005C5A9666"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003E0B26B2"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000B49D7F5"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "00000000F4DA1389"
-				item: "nomadictents:giant_yurt"
+				id: "00000000EF42A8E3"
+				item: "nomadictents:giant_tepee"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000389A48F0"]
+			dependencies: ["000000001652833B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008EE92FA1"
+			id: "000000005B0CECA7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000F729E8E"
+					id: "000000001E0FB971"
 					type: "xp"
-					xp: 7
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000012372A0A"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000B6089618"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000B8822227"
+				item: "nomadictents:golden_tent_shovel"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000001652833B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000029D20649"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000069A6F34E"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "0000000002CF6EE0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000D1589A37"
+				item: "nomadictents:iron_tent_shovel"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000E761122E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005A28FF4A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009AD0F505"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "0000000065C6572F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000FF04DA3E"
+				item: "nomadictents:small_indlu"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000CAF31FF2"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D09F58F8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E82CFC5D"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000AF738B6B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F51F11F6"
+				id: "00000000405C3B04"
+				item: "nomadictents:small_tepee"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000001652833B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000031CCF2CD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000323CFDE6"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000CC0CF240"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000A38E5634"
+				item: "nomadictents:diamond_tent_shovel"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000E761122E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009877A6B8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004CAA3EE5"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000003759479D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000002E51CBEC"
+				item: "nomadictents:small_bedouin"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000001652833B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003201F3B1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007E0DD4E9"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000B92F883B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000005A7BC54F"
 				item: {
 					Count: 1
 					id: "nomadictents:mallet"
@@ -537,279 +624,287 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000999AD01"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000079A90F32"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000054E6ADBC"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000005BB48152"
-				item: "nomadictents:tiny_tepee"
-				type: "item"
-			}]
-			x: -2.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000389A48F0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CD5E06CB"
+			id: "000000001652833B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000974A5DF2"
+					id: "000000004C571C98"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AEAAC635"
-					table_id: 1318717469L
-					type: "random"
+					id: "0000000087940C6B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "000000004B37D463"
-				item: "nomadictents:stone_tent_shovel"
+				id: "0000000096CB5535"
+				item: "nomadictents:tent_canvas"
 				type: "item"
 			}]
 			x: -4.0d
 			y: 0.0d
 		}
 		{
+			dependencies: ["00000000908A6FAD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D52C8E86"
+			id: "00000000754B0F50"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AE0C99A7"
+					id: "000000009DEA85E7"
 					type: "xp"
-					xp: 6
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000FB005C3"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000A2156A8A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E70BC2D5"
-				item: "nomadictents:tiny_shamiyana"
+				id: "00000000E2FBC05A"
+				item: "nomadictents:small_yurt"
 				type: "item"
 			}]
 			x: -2.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000389A48F0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002CD0537C"
+			id: "000000006783F005"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CDE2272F"
+					id: "00000000770EEF00"
 					type: "xp"
-					xp: 10
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C7BE6E59"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000D4BD787C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000BACD1084"
+				item: "nomadictents:tiny_indlu"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004F143106"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005C0894E1"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000043142E0D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "000000008A50B827"
+				item: "nomadictents:tiny_bedouin"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["000000001652833B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000483FE01A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DCAC847E"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000005B4D1FD0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "0000000082BE81BA"
-				item: "nomadictents:iron_tent_shovel"
+				id: "00000000C9053B6E"
+				item: "nomadictents:obsidian_tent_shovel"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 2.0d
+			x: -3.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["000000002CD0537C"]
+			dependencies: ["00000000E761122E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E5CE8C05"
+			id: "00000000D75BC60F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000002B2420D"
+					id: "00000000AD597097"
 					type: "xp"
-					xp: 9
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004188521A"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000729149DD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "000000007C84FDEB"
-				item: "nomadictents:medium_yurt"
+				id: "0000000026678635"
+				item: "nomadictents:small_shamiyana"
 				type: "item"
 			}]
 			x: -3.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000BB0D29DC"]
+			dependencies: ["000000001652833B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB0FFB0E"
+			id: "00000000E761122E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000800E6398"
+					id: "00000000DAE082FA"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007B2AC7AE"
-					table_id: 1318717469L
-					type: "random"
+					id: "000000006F67E94B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "square"
+			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "000000008B7CF440"
-				item: "nomadictents:small_bedouin"
+				id: "0000000075CC0B5A"
+				item: "nomadictents:stone_tent_shovel"
 				type: "item"
 			}]
 			x: -3.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["00000000389A48F0"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000029346F11"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000994A46D9"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000001EA2B51"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "0000000026F31C16"
-				item: "nomadictents:obsidian_tent_shovel"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["00000000CD5E06CB"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E3E42F5C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DDB1EC6A"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000014840C82"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000BCBD7152"
-				item: "nomadictents:small_shamiyana"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 1.0d
+			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002854E52D"
+			id: "00000000CAF31FF2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004AA13726"
+					id: "00000000A6444615"
 					type: "xp"
-					xp: 8
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003A2FAFC6"
-					table_id: 1318717469L
-					type: "random"
+					id: "000000002CF3C35F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000792BFD28"
-				item: "nomadictents:tiny_yurt"
+				id: "000000001CF2CB90"
+				item: "nomadictents:tiny_tepee"
 				type: "item"
 			}]
 			x: -3.0d
@@ -819,88 +914,138 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB0D29DC"
+			id: "0000000070C59D09"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DFFB3EBD"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006E0E14DB"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "0000000007E6BC7E"
-				item: "nomadictents:tiny_bedouin"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["000000002854E52D"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000C4B6FEF1"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000038A81636"
+					id: "000000001BBBE67A"
 					type: "xp"
 					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007BFFDA7F"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000994EB10B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C88388EF"
-				item: "nomadictents:small_yurt"
+				id: "000000001E7D22C5"
+				item: "nomadictents:tiny_shamiyana"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000908A6FAD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000172DCDDF"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "000000002FAFAF96"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "000000005F050CC8"
+				item: "nomadictents:tiny_yurt"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000E761122E"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C8FACD9D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000651A512E"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "0000000066B8CA88"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "00000000A807A234"
+				item: "nomadictents:mega_yurt"
 				type: "item"
 			}]
 			x: -1.0d
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000E5CE8C05"]
+			dependencies: ["00000000E761122E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000362F8849"
+			id: "00000000A556776C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009810EA15"
+					id: "0000000089B020CD"
 					type: "xp"
-					xp: 3
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005636046E"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000C17DAB85"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000334A8D76"
+				id: "00000000057A24F5"
 				item: "nomadictents:large_yurt"
 				type: "item"
 			}]
@@ -908,30 +1053,35 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000448702AB"]
+			dependencies: ["00000000E761122E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005D8C40DC"
+			id: "000000005E3DFF24"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F130A0F3"
+					id: "0000000039D34255"
 					type: "xp"
 					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008295E226"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000A98F4C54"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000008CCDE0E4"
+				id: "00000000A10BAFAC"
 				item: "nomadictents:large_tepee"
 				type: "item"
 			}]
@@ -939,30 +1089,35 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000043892D78"]
+			dependencies: ["000000005B0CECA7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C499A018"
+			id: "00000000B5E82271"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E3B50E86"
+					id: "0000000095113D69"
 					type: "xp"
-					xp: 7
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C73E3CB0"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000F91E9848"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000560215FF"
+				id: "00000000E46E5AA5"
 				item: "nomadictents:large_shamiyana"
 				type: "item"
 			}]
@@ -970,61 +1125,107 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000CD5E06CB"]
+			dependencies: ["0000000029D20649"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000283B144"
+			id: "00000000D13BCD0F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000EF5A59E"
+					id: "0000000047B80B68"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009E715C3E"
-					table_id: 1318717469L
-					type: "random"
+					id: "0000000029099278"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001FF60854"
-				item: "nomadictents:large_bedouin"
+				id: "0000000074F88CF9"
+				item: "nomadictents:large_indlu"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000389A48F0"]
+			dependencies: ["000000005B0CECA7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000884FAFF0"
+			id: "000000000F624F71"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002A07049C"
+					id: "00000000EDEF3766"
 					type: "xp"
-					xp: 3
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006CC2CC0A"
-					table_id: 1318717469L
-					type: "random"
+					id: "0000000008EF739F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000016BBA02D"
+				id: "000000009EA6072A"
+				item: "nomadictents:large_bedouin"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000001652833B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AECF95B3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000088A97F10"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "00000000F1C333AD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0000000094D02EC6"
 				item: {
 					Count: 1
 					id: "nomadictents:golden_mallet"
@@ -1035,158 +1236,147 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 5.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["00000000E26116E7"]
+			dependencies: ["000000005B0CECA7"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD596005"
+			id: "00000000B4146AC3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EA9C5C75"
+					id: "00000000AA1BBBC7"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002F485797"
-					table_id: 1318717469L
-					type: "random"
+					id: "0000000098177DFF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A4617F1C"
-				item: "nomadictents:giant_tepee"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["00000000E26116E7"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B8785D9B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004F2518AF"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000082B2F89"
-					table_id: 1318717469L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "0000000096528D1E"
-				item: "nomadictents:giant_shamiyana"
+				id: "000000002E5478BB"
+				item: "nomadictents:giant_yurt"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000DEC32E06"]
+			dependencies: ["00000000483FE01A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000A410DE7"
+			id: "00000000405113CB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D442DAB1"
+					id: "000000004047893C"
 					type: "xp"
-					xp: 7
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000070B285FA"
-					table_id: 1318717469L
-					type: "random"
+					id: "000000006B2D176F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004C6389C6"
-				item: "nomadictents:giant_indlu"
+				id: "00000000BB86197B"
+				item: "nomadictents:giant_shamiyana"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000E26116E7"]
+			dependencies: ["0000000029D20649"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000357F29E4"
+			id: "00000000DB0CCFE1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000051442213"
+					id: "0000000057EBA7B5"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E438C3BE"
-					table_id: 1318717469L
-					type: "random"
+					id: "0000000037999538"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000044D44536"
-				item: "nomadictents:giant_bedouin"
+				id: "000000002E52A8D1"
+				item: "nomadictents:giant_indlu"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000389A48F0"]
+			dependencies: ["00000000483FE01A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DAEB3EC5"
+			id: "0000000039D107F2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000005B5D2BF"
+					id: "00000000DD048C9E"
 					type: "xp"
 					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004929B406"
-					table_id: 1318717469L
-					type: "random"
+					id: "00000000C870B0A9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_nomadictents"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000875ADE88"
-				item: "nomadictents:diamond_tent_shovel"
+				id: "000000004E037365"
+				item: "nomadictents:giant_bedouin"
 				type: "item"
 			}]
 			x: 0.0d

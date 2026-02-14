@@ -2,50 +2,56 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_immersive_weathering"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "immersive_weathering:plate_iron"
-	id: "000000003C90B31C"
+	id: "000000003B5C5ECB"
 	order_index: 11
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["0000000001C5CCAF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000052900D65"
+			id: "00000000C53D43FB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DF4DF65D"
+					id: "000000002CBBC59A"
 					type: "xp"
-					xp: 22
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B2D8EF32"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000057EE3DD2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000125B52EE"
+					id: "000000000490C523"
 					item: "immersive_weathering:cracked_end_stone_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A6C7F738"
+					id: "00000000FF8C9C2A"
 					item: "immersive_weathering:cracked_prismarine_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008BA9DB56"
-					item: "immersive_weathering:deepslate_brick"
+					id: "000000004882A8A3"
+					item: "immersive_weathering:cut_iron_stairs"
 					type: "item"
 				}
 			]
@@ -56,39 +62,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000023321079"
+			id: "000000004ED9C20F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E22046AD"
+					id: "000000006A955CA6"
 					type: "xp"
-					xp: 30
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007587776B"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000387455E1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D264D15B"
+					id: "0000000059BA6258"
 					item: "immersive_weathering:azalea_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000055D591FE"
+					id: "00000000E5697961"
 					item: "immersive_weathering:blackstone_brick"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C87BC8EB"
+					id: "000000005DAC3179"
 					item: "immersive_weathering:cracked_bricks"
 					type: "item"
 				}
@@ -97,44 +108,196 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000004EB5B121"]
+			dependencies: ["0000000001C5CCAF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000055EDE9F7"
+			id: "000000009357978F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009764FE01"
+					id: "0000000003D2D449"
 					type: "xp"
-					xp: 23
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000CF3E6BB"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000019409063"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000016132001"
+					id: "000000003B9933A3"
+					item: "immersive_weathering:end_stone_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075A97412"
 					item: "immersive_weathering:exposed_cut_iron_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E3F37CCA"
-					item: "immersive_weathering:exposed_cut_iron_stairs"
+					id: "00000000664B2E7F"
+					item: "immersive_weathering:frosty_glass"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AA1CE699"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000074E28926"
+					type: "xp"
+					xp: 29
+				}
+				{
+					id: "000000008069C047"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009D8AD434"
+					item: "immersive_weathering:deepslate_brick"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000974DA7FD"
-					item: "immersive_weathering:exposed_plate_iron_slab"
+					id: "00000000CAB97816"
+					item: "immersive_weathering:deepslate_tile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000352F58CD"
+					item: "immersive_weathering:earthen_clay"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000E4C0864"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000403A8001"
+					type: "xp"
+					xp: 27
+				}
+				{
+					id: "00000000DB940508"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D41E7F7A"
+					item: "immersive_weathering:prismarine_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E33BD7C6"
+					item: "immersive_weathering:prismarine_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000816861C4"
+					item: "immersive_weathering:red_sand_layer_block"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000A91362B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008DE1C02C"
+					type: "xp"
+					xp: 30
+				}
+				{
+					id: "00000000254F18FB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001D8891F9"
+					item: "immersive_weathering:moss_clump"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D8F017A2"
+					item: "immersive_weathering:mossy_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C9CD3498"
+					item: "immersive_weathering:mossy_stone"
 					type: "item"
 				}
 			]
@@ -145,217 +308,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001A50E668"
+			id: "00000000085F9E5F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DC6D9093"
+					id: "00000000B5D26235"
 					type: "xp"
-					xp: 5
+					xp: 22
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B0D7AE94"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000EC610DD5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F706FCB2"
-					item: "immersive_weathering:deepslate_tile"
+					id: "000000006503F04F"
+					item: "immersive_weathering:rusted_plate_iron_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E327A678"
-					item: "immersive_weathering:earthen_clay"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A97B30DB"
-					item: "immersive_weathering:end_stone_brick"
-					type: "item"
-				}
-			]
-			x: -12.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["000000004EB5B121"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006D2AA38D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003552DE75"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FB5B478A"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000006779BDC7"
-					item: "immersive_weathering:mossy_stone"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AF2DF96E"
-					item: "immersive_weathering:prismarine_brick"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003310D94B"
-					item: "immersive_weathering:red_sand_layer_block"
-					type: "item"
-				}
-			]
-			x: -12.0d
-			y: 8.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AA51D460"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E8C3EE95"
-					type: "xp"
-					xp: 19
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000152644CB"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000081811963"
-					item: "immersive_weathering:exposed_plate_iron_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000188805EA"
-					item: "immersive_weathering:frosty_glass"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BCE5B350"
-					item: "immersive_weathering:mossy_bricks"
-					type: "item"
-				}
-			]
-			x: -12.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["000000004EB5B121"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B1CE3AA9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BF38CBF2"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000113B057"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000AB7DD1ED"
-					item: "immersive_weathering:stone_brick"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002852237C"
-					item: "immersive_weathering:vitrified_sand"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003E2DB358"
-					item: "immersive_weathering:waxed_cut_iron"
-					type: "item"
-				}
-			]
-			x: -12.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000077BF6147"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FE61BD6E"
-					type: "xp"
-					xp: 26
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000717DE5A7"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000ED851743"
-					item: "immersive_weathering:rusted_cut_iron"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A6C8040B"
+					id: "00000000E62CAA43"
 					item: "immersive_weathering:sand_layer_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000B187828"
+					id: "00000000BDC1421F"
 					item: "immersive_weathering:sandy_dirt"
 					type: "item"
 				}
@@ -364,91 +354,101 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000B3BA0646"]
+			dependencies: ["0000000001C5CCAF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000678404BD"
+			id: "000000009D76320D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BB66B3D5"
+					id: "000000003E4A1ECE"
 					type: "xp"
-					xp: 14
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B30F2C99"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000050E62380"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CB1FE01D"
-					item: "immersive_weathering:waxed_weathered_cut_iron"
+					id: "00000000F6D08081"
+					item: "immersive_weathering:rusted_cut_iron_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005CBE992C"
-					item: "immersive_weathering:waxed_weathered_plate_iron"
+					id: "00000000167BA883"
+					item: "immersive_weathering:rusted_cut_iron_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DF454F04"
-					item: "immersive_weathering:weathered_cut_iron_stairs"
+					id: "00000000CD2DC2D9"
+					item: "immersive_weathering:rusted_plate_iron_slab"
 					type: "item"
 				}
 			]
-			x: -13.0d
-			y: 0.0d
+			x: -12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
-				"00000000B3BA0646"
-				"00000000AA77B81E"
+				"0000000001C5CCAF"
+				"000000002E1FA30A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E1D6D600"
+			id: "0000000098D2B68D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D5151A2E"
+					id: "00000000E0F569FD"
 					type: "xp"
-					xp: 3
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A02F209F"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000F28EA51F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009932C7BF"
-					item: "immersive_weathering:waxed_exposed_cut_iron"
+					id: "00000000DF16218A"
+					item: "immersive_weathering:waxed_exposed_plate_iron"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006EE6B7A5"
+					id: "0000000053DDD1EA"
 					item: "immersive_weathering:waxed_plate_iron"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AAFBC023"
+					id: "000000004F811B40"
 					item: "immersive_weathering:waxed_rusted_cut_iron"
 					type: "item"
 				}
@@ -457,43 +457,148 @@
 			y: 9.0d
 		}
 		{
+			dependencies: ["0000000001C5CCAF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FB358380"
+			id: "000000007933E76D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000040827441"
+					id: "000000001FE36684"
 					type: "xp"
-					xp: 15
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004E673029"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000C8AFF860"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004317CD26"
+					item: "immersive_weathering:stone_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001895615D"
+					item: "immersive_weathering:vitrified_sand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000CAECE51"
+					item: "immersive_weathering:waxed_exposed_cut_iron"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["00000000A29C65D5"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E331B49D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DD9F3D93"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "0000000052964B02"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000412CFDC"
+					item: "immersive_weathering:waxed_weathered_cut_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000069648202"
+					item: "immersive_weathering:weathered_cut_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000019DEAA5B"
+					item: "immersive_weathering:weathered_plate_iron_stairs"
+					type: "item"
+				}
+			]
+			x: -13.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002804E8DC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DEE5A6AD"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "00000000CAC88AA6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000711B3BE3"
-					item: "immersive_weathering:biomesoplenty/snowblossom_leaf_pile"
+					id: "000000002C22434B"
+					item: "immersive_weathering:malum/soulwood_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006110253C"
-					item: "immersive_weathering:regions_unexplored/socotra_leaf_pile"
+					id: "00000000AE217076"
+					item: "immersive_weathering:spruce_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000024B62F52"
-					item: "immersive_weathering:twilightforest/sorting_leaf_pile"
+					id: "00000000D7FA1C07"
+					item: "minecraft:spruce_log"
 					type: "item"
 				}
 			]
@@ -504,40 +609,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003F933475"
+			id: "000000005095C463"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000239E7769"
+					id: "000000007873ABD9"
 					type: "xp"
-					xp: 23
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000065C6C050"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000050092DA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001A3506E6"
-					item: "immersive_weathering:biomeswevegone/skyris_leaf_pile"
+					id: "00000000F9C736B6"
+					item: "immersive_weathering:biomesoplenty/snowblossom_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D5D4FCC5"
-					item: "immersive_weathering:aether/skyroot_leaf_pile"
+					id: "0000000062A49433"
+					item: "immersive_weathering:regions_unexplored/socotra_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000CD65CE7"
-					item: "immersive_weathering:regions_unexplored/small_oak_leaf_pile"
+					id: "000000004AD2D3A9"
+					item: "immersive_weathering:twilightforest/sorting_leaf_pile"
 					type: "item"
 				}
 			]
@@ -548,40 +658,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C44FE26C"
+			id: "000000008E9357D0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ABEF899C"
+					id: "000000005C9DF60A"
 					type: "xp"
-					xp: 24
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A5A9C0C4"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000042B5BD64"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000164D8232"
-					item: "immersive_weathering:regions_unexplored/silver_birch_leaf_pile"
+					id: "00000000348A31D2"
+					item: "immersive_weathering:biomeswevegone/skyris_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000251946B"
-					item: "immersive_weathering:biomeswevegone/silver_maple_leaf_pile"
+					id: "0000000098A31D3C"
+					item: "immersive_weathering:aether/skyroot_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009F91D2E9"
-					item: "immersive_weathering:tconstruct/sky_slime_leaf_pile"
+					id: "00000000F67628C6"
+					item: "immersive_weathering:regions_unexplored/small_oak_leaf_pile"
 					type: "item"
 				}
 			]
@@ -589,44 +704,48 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["0000000077BF6147"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C7F23D12"
+			id: "000000005F6BAB55"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BA80D2B8"
+					id: "000000003AFE2DD0"
 					type: "xp"
-					xp: 17
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A28ABBF8"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000A78040CC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004447FCEB"
-					item: "minecraft:sand"
+					id: "00000000D6CAFDCE"
+					item: "immersive_weathering:regions_unexplored/silver_birch_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004015523E"
-					item: "immersive_weathering:natures_spirit/saxaul_leaf_pile"
+					id: "000000009042F20B"
+					item: "immersive_weathering:biomeswevegone/silver_maple_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FD868A7D"
-					item: "immersive_weathering:midnight/shadowroot_leaf_pile"
+					id: "0000000063A4E7E6"
+					item: "immersive_weathering:tconstruct/sky_slime_leaf_pile"
 					type: "item"
 				}
 			]
@@ -634,44 +753,49 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["0000000077BF6147"]
+			dependencies: ["00000000085F9E5F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C272043F"
+			id: "000000000F3EFE21"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A3214C10"
+					id: "00000000F4CE3C3F"
 					type: "xp"
-					xp: 13
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F1FBAF8C"
-					table_id: 942458084L
-					type: "random"
+					id: "000000008B90092C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AAA122DE"
-					item: "immersive_weathering:rusted_cut_iron_stairs"
+					id: "00000000FC7FE0A4"
+					item: "minecraft:sand"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C78D1AFE"
-					item: "immersive_weathering:rusted_plate_iron_slab"
+					id: "00000000C95AF9BC"
+					item: "immersive_weathering:natures_spirit/saxaul_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C6365594"
-					item: "immersive_weathering:rusted_plate_iron_stairs"
+					id: "000000007697769C"
+					item: "immersive_weathering:midnight/shadowroot_leaf_pile"
 					type: "item"
 				}
 			]
@@ -682,40 +806,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003F3D0446"
+			id: "00000000EC96AA0F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000AB77A38"
+					id: "000000009ABF7820"
 					type: "xp"
-					xp: 7
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BCBF38FB"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000E131F73C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000021D56FA6"
+					id: "000000008E9DB6A0"
+					item: "immersive_weathering:deep_aether/roseroot_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000066A50E7B"
 					item: "immersive_weathering:thermal/rubberwood_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B5084727"
+					id: "00000000EA7279D3"
 					item: "immersive_weathering:malum/runewood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AD21D8D3"
-					item: "immersive_weathering:rusted_cut_iron_slab"
 					type: "item"
 				}
 			]
@@ -726,40 +855,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000075C9207C"
+			id: "000000003502778E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C0DDBD0D"
+					id: "00000000597E0B57"
 					type: "xp"
-					xp: 21
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008F85E286"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000512AB199"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000130FA20"
+					id: "00000000DD66962E"
+					item: "immersive_weathering:biomeswevegone/ripe_baobab_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000066E5242B"
 					item: "immersive_weathering:biomeswevegone/ripe_orchard_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000040654A3E"
+					id: "00000000BA586A5B"
 					item: "immersive_weathering:biomeswevegone/ripe_yucca_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003AA221C3"
-					item: "immersive_weathering:deep_aether/roseroot_leaf_pile"
 					type: "item"
 				}
 			]
@@ -770,40 +904,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000014BA1807"
+			id: "000000002F056DD1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008A776207"
+					id: "0000000050DF1C95"
 					type: "xp"
-					xp: 14
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000091499C60"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000DAC67456"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000277D2412"
+					id: "00000000832CE9E8"
+					item: "immersive_weathering:regions_unexplored/redwood_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007A736F58"
 					item: "immersive_weathering:biomesoplenty/redwood_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E5AB785A"
+					id: "00000000A518C3B3"
 					item: "immersive_weathering:biomeswevegone/redwood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F932253A"
-					item: "immersive_weathering:biomeswevegone/ripe_baobab_leaf_pile"
 					type: "item"
 				}
 			]
@@ -811,42 +950,48 @@
 			y: 2.0d
 		}
 		{
+			dependencies: ["000000000E4C0864"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000080A1F0E9"
+			id: "00000000B32D6B37"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A7B6E4C3"
+					id: "000000000332893F"
 					type: "xp"
-					xp: 22
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005EE3AE1B"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000056218AC6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D09AFA17"
+					id: "00000000A3752CE0"
+					item: "minecraft:red_sand"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045ED985F"
 					item: "immersive_weathering:biomeswevegone/red_spruce_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F19B95F6"
-					item: "immersive_weathering:regions_unexplored/redwood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001ED7B20A"
+					id: "00000000945DB919"
 					item: "immersive_weathering:natures_spirit/redwood_leaf_pile"
 					type: "item"
 				}
@@ -855,44 +1000,48 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000006D2AA38D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000386F354D"
+			id: "000000008D0F11FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004E6209CC"
+					id: "0000000056973B9D"
 					type: "xp"
-					xp: 17
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005687AC53"
-					table_id: 942458084L
-					type: "random"
+					id: "000000008B9D5F88"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000819F4FCF"
+					id: "000000003A08B52B"
 					item: "immersive_weathering:natures_spirit/red_maple_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F2D11DF5"
-					item: "immersive_weathering:biomeswevegone/red_oak_leaf_pile"
+					id: "00000000F15546DC"
+					item: "immersive_weathering:biomeswevegone/red_maple_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F505A3E8"
-					item: "minecraft:red_sand"
+					id: "00000000BA259CD0"
+					item: "immersive_weathering:biomeswevegone/red_oak_leaf_pile"
 					type: "item"
 				}
 			]
@@ -903,40 +1052,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A8F46F11"
+			id: "000000002169D523"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E340BFAA"
+					id: "00000000D5C36947"
 					type: "xp"
-					xp: 4
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004F883E99"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000F0F24ED3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DAB7E444"
-					item: "immersive_weathering:biomesoplenty/red_maple_leaf_pile"
+					id: "0000000070C038AE"
+					item: "immersive_weathering:biomeswevegone/red_birch_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005CAA69F7"
-					item: "immersive_weathering:biomeswevegone/red_maple_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000047E7629F"
+					id: "000000007DD09155"
 					item: "immersive_weathering:regions_unexplored/red_maple_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000118D65B2"
+					item: "immersive_weathering:biomesoplenty/red_maple_leaf_pile"
 					type: "item"
 				}
 			]
@@ -947,40 +1101,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000064D88D94"
+			id: "00000000F92E319C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E9CFF22E"
+					id: "0000000010B045CE"
 					type: "xp"
-					xp: 22
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009370C1A2"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000F516A704"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000893F1A9F"
+					id: "0000000043CCF82D"
+					item: "immersive_weathering:biomeswevegone/rainbow_eucalyptus_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000097DB1D25"
 					item: "immersive_weathering:twilightforest/rainbow_oak_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C71628DB"
+					id: "0000000068B5FEF6"
 					item: "immersive_weathering:ars_nouveau/red_archwood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007CC7F976"
-					item: "immersive_weathering:biomeswevegone/red_birch_leaf_pile"
 					type: "item"
 				}
 			]
@@ -991,40 +1150,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000010F021C1"
+			id: "000000008DC25FB9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000009C9BBFC"
+					id: "000000005442F5A7"
 					type: "xp"
-					xp: 11
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000795111B1"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000F6878365"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A92E130C"
+					id: "000000007153BC92"
+					item: "immersive_weathering:aether_redux/purple_glacia_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000583CFAAB"
 					item: "immersive_weathering:natures_spirit/purple_wisteria_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A3D8CF95"
+					id: "00000000AB1E4E42"
 					item: "immersive_weathering:biomesoplenty/rainbow_birch_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005E7552DE"
-					item: "immersive_weathering:biomeswevegone/rainbow_eucalyptus_leaf_pile"
 					type: "item"
 				}
 			]
@@ -1032,44 +1196,52 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000006D2AA38D"]
+			dependencies: [
+				"000000004ED9C20F"
+				"000000000E4C0864"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E4BB9C5C"
+			id: "00000000A1F008D8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003D18A25A"
+					id: "00000000DAA2CD5C"
 					type: "xp"
-					xp: 25
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009B570942"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000015A06D40"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000033D32FEA"
+					id: "000000004C85127A"
+					item: "minecraft:polished_blackstone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008FCE89B3"
 					item: "minecraft:prismarine_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A91CF032"
+					id: "0000000034681BF4"
 					item: "immersive_weathering:ars_nouveau/purple_archwood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008A5A6461"
-					item: "immersive_weathering:aether_redux/purple_glacia_leaf_pile"
 					type: "item"
 				}
 			]
@@ -1077,47 +1249,49 @@
 			y: 6.0d
 		}
 		{
-			dependencies: [
-				"0000000023321079"
-				"00000000AA77B81E"
-			]
+			dependencies: ["000000002E1FA30A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000015CEFA8D"
+			id: "00000000C89FCD49"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F09BC738"
+					id: "0000000084DAEF25"
 					type: "xp"
-					xp: 27
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000025BB7FF9"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000772DA681"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003E955338"
+					id: "000000007C427006"
+					item: "immersive_weathering:natures_spirit/pink_wisteria_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000092EF225"
+					item: "immersive_weathering:plate_iron_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000090AF28F6"
 					item: "immersive_weathering:plate_iron_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000286DA32A"
-					item: "minecraft:polished_blackstone_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D1D156C7"
-					item: "immersive_weathering:prismarine_brick_wall"
 					type: "item"
 				}
 			]
@@ -1125,44 +1299,48 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000AA77B81E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000017B8CAA"
+			id: "0000000066C70320"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000044FE3D80"
+					id: "00000000AFECD51A"
 					type: "xp"
-					xp: 10
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E4DED5CA"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000B4959F3E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AFDA603C"
+					id: "00000000603567A5"
+					item: "immersive_weathering:biomeswevegone/pine_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000030F37182"
+					item: "immersive_weathering:biomesoplenty/pine_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000009D0948C"
 					item: "immersive_weathering:regions_unexplored/pink_magnolia_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D2D26EE5"
-					item: "immersive_weathering:natures_spirit/pink_wisteria_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000520F68A"
-					item: "immersive_weathering:plate_iron_slab"
 					type: "item"
 				}
 			]
@@ -1173,40 +1351,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003474C34A"
+			id: "0000000043D3999A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007D0BEB9F"
+					id: "00000000C3885173"
 					type: "xp"
-					xp: 10
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003B735669"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000A4D37CE1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002621CD76"
-					item: "immersive_weathering:biomesoplenty/pine_leaf_pile"
+					id: "00000000A3D5D6D2"
+					item: "immersive_weathering:natures_spirit/part_purple_wisteria_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000034E85990"
+					id: "000000000DD08629"
+					item: "immersive_weathering:natures_spirit/part_white_wisteria_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000B205B28"
 					item: "immersive_weathering:regions_unexplored/pine_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F0F6F87D"
-					item: "immersive_weathering:biomeswevegone/pine_leaf_pile"
 					type: "item"
 				}
 			]
@@ -1217,40 +1400,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000042952E87"
+			id: "0000000028E21E69"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000042A2A854"
+					id: "000000003B8BD0E5"
 					type: "xp"
-					xp: 22
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000110200F5"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000987072C3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000564A52C4"
+					id: "0000000034E2F287"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002E97CCAE"
+					item: "immersive_weathering:natures_spirit/part_blue_wisteria_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C05D9E2"
 					item: "immersive_weathering:natures_spirit/part_pink_wisteria_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005AC41122"
-					item: "immersive_weathering:natures_spirit/part_purple_wisteria_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E03ADEB8"
-					item: "immersive_weathering:natures_spirit/part_white_wisteria_leaf_pile"
 					type: "item"
 				}
 			]
@@ -1261,40 +1449,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009BA11B93"
+			id: "00000000DF9ADF6C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ACDE7DB8"
+					id: "0000000004F60139"
 					type: "xp"
-					xp: 26
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A9307FE0"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000F885229B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006E0BFFD7"
+					id: "00000000DFDEEB0A"
+					item: "immersive_weathering:biomeswevegone/palm_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001B632776"
+					item: "immersive_weathering:natures_spirit/palo_verde_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F1B01FA1"
 					item: "immersive_weathering:biomeswevegone/palo_verde_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000516555A9"
-					item: "minecraft:paper"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000830B89C6"
-					item: "immersive_weathering:natures_spirit/part_blue_wisteria_leaf_pile"
 					type: "item"
 				}
 			]
@@ -1305,40 +1498,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007B287C7E"
+			id: "0000000061C1753A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AFAC3E8F"
+					id: "00000000A24B1CE0"
 					type: "xp"
-					xp: 20
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008D355D22"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000090E7763"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A72E46D5"
+					id: "00000000213EBF7F"
+					item: "immersive_weathering:biomesoplenty/origin_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000950A6396"
 					item: "immersive_weathering:regions_unexplored/palm_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000094CC11DA"
+					id: "000000000874C02D"
 					item: "immersive_weathering:biomesoplenty/palm_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008CDBC213"
-					item: "immersive_weathering:natures_spirit/palo_verde_leaf_pile"
 					type: "item"
 				}
 			]
@@ -1349,128 +1547,129 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B3BA0646"
+			id: "00000000A29C65D5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D8C5D9CE"
+					id: "00000000233D1621"
 					type: "xp"
-					xp: 4
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AF19BE9E"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000C050FB26"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000532BC750"
-					item: "immersive_weathering:waxed_exposed_plate_iron"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004493CDD9"
-					item: "immersive_weathering:waxed_rusted_plate_iron"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D7304590"
-					item: "immersive_weathering:weathered_cut_iron"
-					type: "item"
-				}
-			]
-			x: -14.0d
-			y: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "00000000EC3CD1D6"
+				item: "immersive_weathering:waxed_weathered_plate_iron"
+				type: "item"
+			}]
+			x: -13.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["00000000AA77B81E"]
+			dependencies: ["000000002E1FA30A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004EB5B121"
+			id: "0000000001C5CCAF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006680186D"
+					id: "00000000BE3D83B8"
 					type: "xp"
-					xp: 29
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006A0636D5"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000641D3BDD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002E0BE567"
+					id: "0000000064BBA053"
 					item: "immersive_weathering:cut_iron"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003F9A6845"
+					id: "00000000EB901ED6"
 					item: "immersive_weathering:exposed_cut_iron"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000010BC25A8"
-					item: "immersive_weathering:moss_clump"
+					id: "00000000E19C9D07"
+					item: "immersive_weathering:rusted_cut_iron"
 					type: "item"
 				}
 			]
-			x: -12.0d
-			y: 2.0d
+			x: -14.0d
+			y: 0.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DC750707"
+			id: "0000000045B49D44"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F401B16E"
+					id: "00000000068D39F8"
 					type: "xp"
-					xp: 24
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000402275CA"
-					table_id: 942458084L
-					type: "random"
+					id: "000000007B1357B9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B67C793B"
+					id: "00000000646BFD5F"
 					item: "immersive_weathering:cracked_deepslate_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FFE34188"
+					id: "000000000D66A8ED"
 					item: "immersive_weathering:cracked_deepslate_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000079BE8168"
+					id: "000000001A3324F9"
 					item: "immersive_weathering:cracked_deepslate_tile_slab"
 					type: "item"
 				}
@@ -1479,43 +1678,48 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000023321079"]
+			dependencies: ["000000004ED9C20F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005A73EC82"
+			id: "000000005816702F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000032B7E02E"
+					id: "00000000C8CAC79F"
 					type: "xp"
-					xp: 4
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000045C5E635"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000FD0A1398"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E8E42295"
+					id: "0000000078AFCF53"
 					item: "immersive_weathering:cracked_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005CE0455E"
+					id: "00000000D9820D49"
 					item: "immersive_weathering:cracked_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000072D6E7EA"
+					id: "000000001F947EC1"
 					item: "immersive_weathering:cracked_deepslate_brick_slab"
 					type: "item"
 				}
@@ -1527,40 +1731,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F0E4CFBA"
+			id: "000000002F6ABAB1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A464E8EC"
+					id: "0000000013F8A1D5"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000271982EC"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000FC018139"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DF800CD6"
+					id: "000000006020CFEB"
 					item: "immersive_weathering:biomeswevegone/cypress_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C9CE7EA3"
-					item: "immersive_weathering:natures_spirit/cypress_leaf_pile"
+					id: "000000006C4D679F"
+					item: "immersive_weathering:biomesoplenty/cypress_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008B43EF03"
-					item: "immersive_weathering:biomesoplenty/cypress_leaf_pile"
+					id: "00000000F4FA5950"
+					item: "immersive_weathering:natures_spirit/cypress_leaf_pile"
 					type: "item"
 				}
 			]
@@ -1568,44 +1777,49 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000004EB5B121"]
+			dependencies: ["000000002E1FA30A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008CE769BC"
+			id: "00000000013AE2D0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A2393798"
+					id: "000000008FDE477C"
 					type: "xp"
-					xp: 17
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000919708E"
-					table_id: 942458084L
-					type: "random"
+					id: "000000001444C74C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000022E62F1F"
+					id: "00000000D6C3E9C9"
 					item: "immersive_weathering:aether/crystal_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000072242161"
+					id: "00000000D78AFA25"
 					item: "immersive_weathering:cut_iron_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AAE9CA2D"
-					item: "immersive_weathering:cut_iron_stairs"
+					id: "00000000401C030A"
+					item: "immersive_weathering:regions_unexplored/cypress_leaf_pile"
 					type: "item"
 				}
 			]
@@ -1616,39 +1830,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CAB17E0B"
+			id: "000000002CE87DBD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007E4804DD"
+					id: "00000000E578A051"
 					type: "xp"
-					xp: 3
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000255F2771"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000C2A345A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000090B754C1"
+					id: "000000009E54B918"
 					item: "minecraft:crimson_stem"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E56A371A"
+					id: "00000000A747DDAA"
 					item: "immersive_weathering:deep_aether/cruderoot_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001BD4EDB7"
+					id: "00000000BBF41861"
 					item: "immersive_weathering:aether/crystal_fruit_leaf_pile"
 					type: "item"
 				}
@@ -1660,39 +1879,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000699D4469"
+			id: "00000000D1014B8D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006B94AD71"
+					id: "0000000077882AC9"
 					type: "xp"
-					xp: 15
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A98339CE"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000FBA5C4AA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A22A79E7"
+					id: "000000003E73B7D3"
 					item: "immersive_weathering:cracked_stone_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000028845953"
+					id: "00000000E7CC9E74"
 					item: "immersive_weathering:cracked_stone_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D26F0A2B"
+					id: "0000000029ADEA3E"
 					item: "minecraft:crimson_hyphae"
 					type: "item"
 				}
@@ -1701,43 +1925,51 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000052900D65"]
+			dependencies: [
+				"00000000C53D43FB"
+				"000000000E4C0864"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FD8168E7"
+			id: "00000000614E65E8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000782E279D"
+					id: "000000004C1EFD90"
 					type: "xp"
-					xp: 13
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E378022C"
-					table_id: 942458084L
-					type: "random"
+					id: "000000006C94A6A7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000DA54882"
+					id: "000000001C1920B1"
 					item: "immersive_weathering:cracked_prismarine_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BA9D2661"
+					id: "00000000E3B2BC1A"
 					item: "immersive_weathering:cracked_prismarine_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EB8AEC00"
+					id: "000000008046322F"
 					item: "immersive_weathering:cracked_stone_brick_slab"
 					type: "item"
 				}
@@ -1746,42 +1978,48 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["00000000C53D43FB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000332CE2C"
+			id: "000000009C93B4DF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000012924308"
+					id: "000000004502FFA2"
 					type: "xp"
-					xp: 12
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000343CC60A"
-					table_id: 942458084L
-					type: "random"
+					id: "000000009D0857EB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000008E0BC176"
+					id: "000000002990CAB3"
 					item: "immersive_weathering:cracked_polished_blackstone_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D1EE5C78"
+					id: "000000006913CEC1"
 					item: "immersive_weathering:cracked_polished_blackstone_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000000060B82"
+					id: "0000000029827445"
 					item: "immersive_weathering:cracked_prismarine_brick_slab"
 					type: "item"
 				}
@@ -1793,39 +2031,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005BD87E02"
+			id: "0000000091B06484"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CA229EC8"
+					id: "000000009B5A1A58"
 					type: "xp"
-					xp: 17
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000045F318D1"
-					table_id: 942458084L
-					type: "random"
+					id: "000000007FF59DA0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000064135E03"
+					id: "0000000039BCEE54"
 					item: "immersive_weathering:cracked_nether_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001EA7C6F1"
+					id: "000000004A6FCE22"
 					item: "immersive_weathering:cracked_nether_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008744D8FE"
+					id: "000000006B05AE12"
 					item: "immersive_weathering:cracked_polished_blackstone_brick_slab"
 					type: "item"
 				}
@@ -1834,43 +2077,48 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0000000052900D65"]
+			dependencies: ["00000000C53D43FB"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005A0E7427"
+			id: "000000001E6F3FC1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A01181AB"
+					id: "000000007EC6F205"
 					type: "xp"
-					xp: 2
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000009F68AF9"
-					table_id: 942458084L
-					type: "random"
+					id: "000000008BA1ABED"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000091F43576"
+					id: "00000000C03881A7"
 					item: "immersive_weathering:cracked_end_stone_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000429069DC"
+					id: "00000000C95AEFA1"
 					item: "immersive_weathering:cracked_end_stone_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F8811132"
+					id: "00000000A58C2B7C"
 					item: "immersive_weathering:cracked_nether_brick_slab"
 					type: "item"
 				}
@@ -1879,43 +2127,47 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000052900D65"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000086F42F52"
+			id: "00000000D734A029"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E51500C3"
+					id: "00000000F40E4C9A"
 					type: "xp"
-					xp: 3
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008B58F17A"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000057985BA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000148CF310"
+					id: "00000000C5986E3D"
 					item: "immersive_weathering:cracked_deepslate_tile_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D0E197C7"
+					id: "00000000B1092119"
 					item: "immersive_weathering:cracked_deepslate_tile_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E6FFA5F4"
+					id: "000000003AE17F6C"
 					item: "immersive_weathering:cracked_end_stone_brick_slab"
 					type: "item"
 				}
@@ -1924,42 +2176,48 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["000000004ED9C20F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008A703483"
+			id: "000000005C645849"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000046A32030"
+					id: "000000009E88B28A"
 					type: "xp"
-					xp: 25
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007253D176"
-					table_id: 942458084L
-					type: "random"
+					id: "000000005A763583"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000076B4A837"
+					id: "000000005D4C2C6E"
 					item: "immersive_weathering:natures_spirit/coconut_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AD8BDDCD"
+					id: "0000000021FEB305"
 					item: "immersive_weathering:deep_aether/conberry_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BB0E0721"
+					id: "00000000C07C07D3"
 					item: "immersive_weathering:cracked_brick_slab"
 					type: "item"
 				}
@@ -1971,39 +2229,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D369F090"
+			id: "000000004234F75E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FEB9DA32"
+					id: "000000007541FBFD"
 					type: "xp"
-					xp: 12
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008219BC24"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000085116C5C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001847C6DC"
+					id: "000000004C693CE7"
 					item: "minecraft:cherry_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008BD1F1E1"
+					id: "00000000F2C4AAEF"
 					item: "immersive_weathering:chiseled_prismarine_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000795CD7C9"
+					id: "000000008D2AF3FD"
 					item: "immersive_weathering:biomeswevegone/cika_leaf_pile"
 					type: "item"
 				}
@@ -2015,39 +2278,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C8BFA3ED"
+			id: "0000000084BB7D35"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A982386F"
+					id: "0000000092571638"
 					type: "xp"
-					xp: 19
+					xp: 30
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008438A700"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000BCF1B344"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BABBD02C"
+					id: "000000007FFF2C75"
 					item: "immersive_weathering:charred_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CC2E0F5C"
+					id: "000000005D044A1E"
 					item: "immersive_weathering:charred_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E0305B98"
+					id: "000000003D23391A"
 					item: "immersive_weathering:cherry_leaf_pile"
 					type: "item"
 				}
@@ -2059,39 +2327,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002C8E44BC"
+			id: "000000003BF88A62"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D6B5EB81"
+					id: "00000000E3F08D4C"
 					type: "xp"
-					xp: 11
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000027B08C31"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000678D9AAE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003CEF837B"
+					id: "000000006AE20E10"
 					item: "immersive_weathering:charred_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002F0A6DC6"
+					id: "0000000092D7947C"
 					item: "immersive_weathering:charred_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E62D2888"
+					id: "000000009DCC210B"
 					item: "immersive_weathering:charred_planks"
 					type: "item"
 				}
@@ -2103,39 +2376,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000973D8315"
+			id: "00000000F32258A5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002FD30CC4"
+					id: "0000000059B2A5FF"
 					type: "xp"
-					xp: 8
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CE3FDF3B"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000C4A9944E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000097C3996D"
+					id: "00000000CF35972B"
 					item: "immersive_weathering:twilightforest/canopy_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008735BDE2"
+					id: "00000000E472E3C5"
 					item: "immersive_weathering:natures_spirit/cedar_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CD81E8C6"
+					id: "00000000E08C5F6A"
 					item: "immersive_weathering:charred_fence"
 					type: "item"
 				}
@@ -2147,39 +2425,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000058EA5B97"
+			id: "000000006F450799"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DA19F65E"
+					id: "00000000F7E213F8"
 					type: "xp"
-					xp: 27
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001C71A1E6"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000A99A5B87"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E10A5766"
+					id: "0000000029AB4A3B"
 					item: "minecraft:bubble_coral_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008268D8FD"
+					id: "000000008ECDD2F7"
 					item: "immersive_weathering:malum/budding_soulwood_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C81538E1"
+					id: "000000002FC4D8DC"
 					item: "minecraft:candle"
 					type: "item"
 				}
@@ -2191,39 +2474,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E47EE430"
+			id: "00000000A8E00DF5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005A4D5D8F"
+					id: "000000006885BD0A"
 					type: "xp"
-					xp: 10
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000030EF256E"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000C4183C2F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000062CA8735"
+					id: "000000002D5E889B"
 					item: "immersive_weathering:biomeswevegone/brown_birch_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A1EB0E78"
+					id: "00000000CF0E982E"
 					item: "immersive_weathering:biomeswevegone/brown_oak_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E270EE3A"
+					id: "0000000021024DC0"
 					item: "immersive_weathering:biomeswevegone/brown_zelkova_leaf_pile"
 					type: "item"
 				}
@@ -2232,44 +2520,49 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000E1D6D600"]
+			dependencies: ["0000000098D2B68D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000012463F29"
+			id: "0000000002A0D17E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A2751B3B"
+					id: "00000000F1787D8D"
 					type: "xp"
-					xp: 14
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000089B9C3EC"
-					table_id: 942458084L
-					type: "random"
+					id: "000000005744F77F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000045EC9EFD"
-					item: "immersive_weathering:waxed_iron_door"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E7A6BB93"
-					item: "immersive_weathering:waxed_iron_trapdoor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002BA251A8"
+					id: "000000004D15303F"
 					item: "immersive_weathering:waxed_plate_iron_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C131393"
+					item: "immersive_weathering:waxed_plate_iron_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001BEF7EE6"
+					item: "immersive_weathering:waxed_rusted_cut_iron_slab"
 					type: "item"
 				}
 			]
@@ -2280,39 +2573,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DE57E075"
+			id: "00000000077E274E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000075B84EB6"
+					id: "000000001DA6B9E1"
 					type: "xp"
-					xp: 13
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FA7F1E05"
-					table_id: 942458084L
-					type: "random"
+					id: "000000008056CE74"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000496F2563"
+					id: "00000000E038BDCC"
 					item: "minecraft:brain_coral_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008710197B"
+					id: "000000004CE4D9FC"
 					item: "minecraft:brick"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FC711A6B"
+					id: "000000002CC6403F"
 					item: "immersive_weathering:regions_unexplored/brimwood_leaf_pile"
 					type: "item"
 				}
@@ -2321,480 +2619,537 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"0000000055EDE9F7"
-				"00000000AA51D460"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CC0D913B"
+			id: "00000000C1B32A93"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FE03C6CF"
+					id: "00000000ECF3D9BB"
 					type: "xp"
-					xp: 2
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006274A8D1"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000A8D4BD90"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EE719DFE"
+					id: "000000006B3B9402"
+					item: "immersive_weathering:waxed_iron_bars"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000053425154"
+					item: "immersive_weathering:waxed_iron_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BB85FB73"
+					item: "immersive_weathering:waxed_iron_trapdoor"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000098D2B68D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002D02E093"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000FB9FFED"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000801FD8DB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000114C20E1"
+					item: "immersive_weathering:waxed_exposed_iron_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B132902"
 					item: "immersive_weathering:waxed_exposed_plate_iron_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FB5C6D97"
+					id: "00000000EC542D73"
 					item: "immersive_weathering:waxed_exposed_plate_iron_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C8653553"
-					item: "immersive_weathering:waxed_iron_bars"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 8.0d
+			y: 7.0d
 		}
 		{
+			dependencies: ["000000007933E76D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000391BDDA1"
+			id: "00000000E227719B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000040DDDD1F"
+					id: "00000000E296F4DB"
 					type: "xp"
-					xp: 30
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008A4D980E"
-					table_id: 942458084L
-					type: "random"
+					id: "000000001C27AA3A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001E0389FC"
+					id: "0000000085AC6E7B"
+					item: "immersive_weathering:waxed_exposed_cut_iron_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF7AB598"
 					item: "immersive_weathering:waxed_exposed_iron_bars"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004FF00810"
+					id: "00000000DC18B803"
 					item: "immersive_weathering:waxed_exposed_iron_door"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000355A431"
-					item: "immersive_weathering:waxed_exposed_iron_trapdoor"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 7.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
-				"00000000B1CE3AA9"
-				"00000000E1D6D600"
+				"00000000C53D43FB"
+				"000000009357978F"
+				"0000000098D2B68D"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C314D8DC"
+			id: "0000000058FBCE2A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000036C12F93"
+					id: "0000000006BCC521"
 					type: "xp"
-					xp: 8
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000048307086"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000092DFDF5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DBEF4911"
+					id: "00000000AFBA99FE"
+					item: "immersive_weathering:waxed_cut_iron_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FB773CBD"
 					item: "immersive_weathering:waxed_cut_iron_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AADDBC9F"
+					id: "00000000B34B3D89"
 					item: "immersive_weathering:waxed_exposed_cut_iron_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A6E9017F"
-					item: "immersive_weathering:waxed_exposed_cut_iron_stairs"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 6.0d
+			y: 5.0d
 		}
 		{
-			dependencies: ["00000000B1CE3AA9"]
+			dependencies: ["0000000001C5CCAF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000077596375"
+			id: "000000002A480C5F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000030DBE438"
+					id: "000000005FEBE083"
 					type: "xp"
-					xp: 19
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000904FCEBE"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000C312C983"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000029EEE6A5"
+					id: "000000009BE95D01"
 					item: "minecraft:warped_hyphae"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006E12C19C"
+					id: "0000000021AF3D5D"
 					item: "minecraft:warped_stem"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000098CA744B"
-					item: "immersive_weathering:waxed_cut_iron_slab"
+					id: "00000000CE777315"
+					item: "immersive_weathering:waxed_cut_iron"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 5.0d
+			y: 4.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000A055FDE"
+			id: "00000000C36709A1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002E616347"
+					id: "000000004E12C515"
 					type: "xp"
-					xp: 21
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D9342DE1"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000B5011898"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000ED1B1F3E"
+					id: "000000003380150F"
 					item: "minecraft:tube_coral_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A0962143"
+					id: "00000000EF00000F"
 					item: "immersive_weathering:twilightforest/twilight_oak_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003C9C2069"
+					id: "0000000094DA94B1"
 					item: "immersive_weathering:biomesoplenty/umbran_leaf_pile"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000062778135"
+			id: "0000000059F61C8D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EAF8B372"
+					id: "00000000819182AC"
 					type: "xp"
-					xp: 24
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000631ABAEC"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000024C22C72"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DC332A2B"
+					id: "00000000B51DF572"
 					item: "immersive_weathering:twilightforest/thorn_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000085B2949"
+					id: "00000000B4BEFBC7"
 					item: "immersive_weathering:twilightforest/time_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000088225EDA"
+					id: "000000008BA467EA"
 					item: "immersive_weathering:twilightforest/transformation_leaf_pile"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 3.0d
+			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B5F5A058"
+			id: "00000000DCA5E325"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001D79E46D"
+					id: "00000000D68DA284"
 					type: "xp"
-					xp: 14
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BE4F801A"
-					table_id: 942458084L
-					type: "random"
+					id: "000000003FB43960"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002CD61373"
+					id: "00000000E2EC4F42"
 					item: "immersive_weathering:natures_spirit/sugi_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001CCA849F"
+					id: "00000000E6A9DABD"
 					item: "immersive_weathering:deep_aether/sunroot_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F5014A77"
+					id: "00000000061A789F"
 					item: "immersive_weathering:thin_ice"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 2.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["00000000B1CE3AA9"]
+			dependencies: ["000000007933E76D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000060DAC329"
+			id: "000000006C557936"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004F6133BF"
+					id: "00000000C9DD3F33"
 					type: "xp"
-					xp: 7
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E5577493"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000026A66E93"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A02CB1FD"
+					id: "0000000017681BAD"
 					item: "minecraft:spruce_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001C95EB86"
+					id: "00000000CD772B9D"
 					item: "minecraft:stone_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002DF06CE2"
+					id: "000000006A5C7C0A"
 					item: "immersive_weathering:stone_wall"
 					type: "item"
 				}
 			]
 			x: -9.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000016F44223"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000545ED7CB"
-					type: "xp"
-					xp: 4
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000079593C50"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000081158601"
-					item: "immersive_weathering:malum/soulwood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005CE695D4"
-					item: "immersive_weathering:spruce_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A5BE97AF"
-					item: "minecraft:spruce_log"
-					type: "item"
-				}
-			]
-			x: -9.0d
 			y: 0.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AA77B81E"
+			id: "000000002E1FA30A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CEBEDB85"
+					id: "00000000A61C0AF0"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C12235CE"
-					table_id: 942458084L
-					type: "random"
+					id: "000000003615060C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "0000000036E20BAF"
+				id: "00000000E0F33489"
 				item: "immersive_weathering:plate_iron"
 				type: "item"
 			}]
-			x: -14.0d
+			x: -15.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000678404BD"]
+			dependencies: [
+				"00000000A29C65D5"
+				"00000000E331B49D"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000C769D1A"
+			id: "00000000B91658CD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000097BBAF85"
+					id: "00000000E76950CA"
 					type: "xp"
-					xp: 15
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008960A13C"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000C039FCBE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000009B9A452"
-					item: "immersive_weathering:waxed_weathered_iron_trapdoor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000088BA85F"
+					id: "000000004DEC3429"
 					item: "immersive_weathering:waxed_weathered_plate_iron_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E45F4E1D"
+					id: "00000000282BB850"
 					item: "immersive_weathering:waxed_weathered_plate_iron_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C531E717"
+					item: "immersive_weathering:weathered_cut_iron_slab"
 					type: "item"
 				}
 			]
@@ -2802,222 +3157,248 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["000000000A91362B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000447AC1EB"
+			id: "00000000A381B159"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FF82E0BD"
+					id: "00000000E7DD0EB6"
 					type: "xp"
-					xp: 15
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000319148EB"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000093647635"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B7932704"
-					item: "immersive_weathering:biomeswevegone/green_enchanted_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000088F906E4"
-					item: "immersive_weathering:biomesoplenty/hellbark_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009379C677"
-					item: "immersive_weathering:aether/holiday_leaf_pile"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 9.0d
-		}
-		{
-			dependencies: ["00000000B3BA0646"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002691BBFD"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000051574D5C"
-					type: "xp"
-					xp: 14
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000012E7B2EF"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000032CE04ED"
-					item: "immersive_weathering:weathered_cut_iron_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DE840EEE"
-					item: "immersive_weathering:weathered_plate_iron_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000268ED362"
-					item: "immersive_weathering:weathered_plate_iron_stairs"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["000000004EB5B121"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005926D49C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004BC47468"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003241A6EA"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C568BD9A"
-					item: "immersive_weathering:biomeswevegone/green_apple_skyris_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D4DF13CF"
+					id: "00000000B615CB78"
 					item: "immersive_weathering:ars_nouveau/green_archwood_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000079AC54B1"
+					id: "00000000482A5B49"
 					item: "minecraft:green_dye"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000069D9CD1A"
+					item: "immersive_weathering:biomeswevegone/green_enchanted_leaf_pile"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 8.0d
+			y: 9.0d
 		}
 		{
+			dependencies: ["00000000E331B49D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002C61C6EB"
+			id: "00000000434EBD75"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005D571184"
+					id: "00000000FCAB69DF"
 					type: "xp"
-					xp: 4
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003A750CB9"
-					table_id: 942458084L
-					type: "random"
+					id: "000000004177EC94"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007236F4CB"
+					id: "000000007A24BD98"
+					item: "immersive_weathering:weathered_cut_iron_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A7A84834"
+					item: "immersive_weathering:weathered_plate_iron_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008F431819"
 					item: "immersive_weathering:regions_unexplored/white_magnolia_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000426A37F6"
-					item: "immersive_weathering:biomeswevegone/white_mangrove_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001BD9374B"
-					item: "immersive_weathering:biomeswevegone/white_sakura_leaf_pile"
 					type: "item"
 				}
 			]
 			x: -10.0d
-			y: 6.0d
+			y: 5.0d
 		}
 		{
-			dependencies: ["000000004EB5B121"]
+			dependencies: ["000000000A91362B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BF49CC70"
+			id: "0000000059B07545"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F728AF04"
+					id: "00000000F5541D80"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FFC34B60"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000C38CF458"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B33F0FDD"
-					item: "immersive_weathering:regions_unexplored/golden_larch_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BD3F3638"
+					id: "000000007006C434"
 					item: "immersive_weathering:golden_moss_clump"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F347FD5C"
+					id: "00000000E80FC8FB"
 					item: "immersive_weathering:aether/golden_oak_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002C05BAF0"
+					item: "immersive_weathering:biomeswevegone/green_apple_skyris_leaf_pile"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FDC111A1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000064D8318E"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "000000000A9BE0E0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000049E21891"
+					item: "immersive_weathering:biomeswevegone/white_mangrove_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EA8B991E"
+					item: "immersive_weathering:biomeswevegone/white_sakura_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001E701D9E"
+					item: "immersive_weathering:natures_spirit/white_wisteria_leaf_pile"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["000000007933E76D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C16D017F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000DF0DB1A3"
+					type: "xp"
+					xp: 27
+				}
+				{
+					id: "00000000F478033C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E08A54DF"
+					item: "immersive_weathering:aether_redux/glacia_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D74445E1"
+					item: "minecraft:glass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008AF5474A"
+					item: "immersive_weathering:regions_unexplored/golden_larch_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3028,40 +3409,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F44CC3E6"
+			id: "00000000F973A39E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000052E05A2F"
+					id: "000000005DE5702E"
 					type: "xp"
-					xp: 20
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9AE3434"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000AF8C6F38"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000092D1778"
-					item: "immersive_weathering:natures_spirit/white_wisteria_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007EA0A961"
-					item: "immersive_weathering:biomesoplenty/willow_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000023468EBC"
+					id: "00000000538D53C0"
 					item: "immersive_weathering:biomeswevegone/willow_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000007E356B2"
+					item: "immersive_weathering:regions_unexplored/willow_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000440CAA97"
+					item: "immersive_weathering:biomesoplenty/willow_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3069,44 +3455,48 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["00000000B1CE3AA9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002B435E3E"
+			id: "000000005A069075"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FBF2E5D4"
+					id: "00000000A3F921DA"
 					type: "xp"
-					xp: 7
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000856CC648"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000ECB772A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C54BA979"
+					id: "0000000027EBBA17"
+					item: "immersive_weathering:natures_spirit/frosty_redwood_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F325C9DD"
+					item: "immersive_weathering:natures_spirit/ghaf_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D2A6002A"
 					item: "immersive_weathering:aether_redux/gilded_oak_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009C087DFC"
-					item: "immersive_weathering:aether_redux/glacia_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000201CDD9D"
-					item: "minecraft:glass"
 					type: "item"
 				}
 			]
@@ -3117,40 +3507,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB777DF7"
+			id: "0000000028F6805B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000079A16710"
+					id: "000000002FA65D3C"
 					type: "xp"
-					xp: 18
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000ACAC5619"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000073DA2AF6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000825A0722"
-					item: "immersive_weathering:regions_unexplored/willow_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000034017A5F"
+					id: "00000000DE011713"
 					item: "immersive_weathering:natures_spirit/willow_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000008162B78"
+					id: "000000002ED1B173"
 					item: "immersive_weathering:natures_spirit/wisteria_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A487DB79"
+					item: "immersive_weathering:biomeswevegone/witch_hazel_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3158,44 +3553,49 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000AA51D460"]
+			dependencies: ["000000009357978F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F4EA34A0"
+			id: "000000004CEF19F7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008AB4D85E"
+					id: "0000000040954AC0"
 					type: "xp"
-					xp: 16
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AE64E57D"
-					table_id: 942458084L
-					type: "random"
+					id: "000000009375E4E9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EAA88B81"
+					id: "00000000DF9BC67C"
+					item: "immersive_weathering:biomeswevegone/flowering_yucca_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000052D8FC78"
+					item: "immersive_weathering:natures_spirit/frosty_fir_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F1EFE5D6"
 					item: "immersive_weathering:frosty_glass_pane"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000024F408F9"
-					item: "immersive_weathering:natures_spirit/frosty_redwood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E9E6FA39"
-					item: "immersive_weathering:natures_spirit/ghaf_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3206,40 +3606,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000535B0AAB"
+			id: "00000000974134EB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000053820EDF"
+					id: "00000000711010D6"
 					type: "xp"
-					xp: 13
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000628DB7C9"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000F04132B7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004B63161E"
-					item: "immersive_weathering:biomeswevegone/witch_hazel_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004F56B0E0"
+					id: "000000009B0D013C"
 					item: "immersive_weathering:deep_aether/yagroot_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000073C3F5AA"
+					id: "000000005815B84C"
 					item: "immersive_weathering:ars_elemental/yellow_archwood_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006BD7EBBB"
+					item: "immersive_weathering:natures_spirit/yellow_aspen_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3250,40 +3655,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000081A27D74"
+			id: "000000006F655CBD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AC996DEC"
+					id: "0000000061424859"
 					type: "xp"
-					xp: 26
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F1B16E42"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000D53AE44F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000321B35E9"
+					id: "00000000FD4DC831"
+					item: "immersive_weathering:biomeswevegone/flowering_palo_verde_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009F1A565C"
+					item: "immersive_weathering:deep_aether/flowering_roseroot_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000003A9B2858"
 					item: "immersive_weathering:biomeswevegone/flowering_skyris_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A186E896"
-					item: "immersive_weathering:biomeswevegone/flowering_yucca_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C40C611D"
-					item: "immersive_weathering:natures_spirit/frosty_fir_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3294,439 +3704,180 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B70DDF92"
+			id: "00000000F4F6A006"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DAEA04DA"
+					id: "0000000024960540"
 					type: "xp"
-					xp: 25
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000056FF38C7"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000E1A94DE0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DABA2063"
-					item: "immersive_weathering:biomeswevegone/flowering_orchard_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000442F2F1C"
-					item: "immersive_weathering:biomeswevegone/flowering_palo_verde_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000070A4D55E"
-					item: "immersive_weathering:deep_aether/flowering_roseroot_leaf_pile"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000ECD3075D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007B50030D"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000082C0E6BC"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008544C10B"
-					item: "immersive_weathering:biomeswevegone/flowering_jacaranda_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000028CB973A"
+					id: "00000000CE759532"
 					item: "immersive_weathering:regions_unexplored/flowering_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D5455AD8"
+					id: "00000000544AC20A"
 					item: "immersive_weathering:biomesoplenty/flowering_oak_leaf_pile"
 					type: "item"
 				}
-			]
-			x: -4.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E5A677C0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000059C2AE41"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003453E43A"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
 				{
 					consume_items: false
-					id: "000000002C8A6D0C"
-					item: "immersive_weathering:deep_aether/flowering_blue_roseroot_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001AD6310D"
-					item: "immersive_weathering:biomeswevegone/flowering_indigo_jacaranda_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DF502C07"
-					item: "immersive_weathering:biomeswevegone/flowering_ironwood_leaf_pile"
+					id: "000000002F9B7B5A"
+					item: "immersive_weathering:biomeswevegone/flowering_orchard_leaf_pile"
 					type: "item"
 				}
 			]
 			x: -4.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["0000000023321079"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002F3EEF41"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000079DE4714"
-					type: "xp"
-					xp: 30
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000002256F75"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005D310725"
-					item: "immersive_weathering:flowering_azalea_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D5A8FDD2"
-					item: "minecraft:flowering_azalea_leaves"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B784AC1E"
-					item: "immersive_weathering:biomeswevegone/flowering_baobab_leaf_pile"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000B3BA0646"
-				"00000000E1D6D600"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003B5D894F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000619A87D7"
-					type: "xp"
-					xp: 22
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001C00926D"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B7D79FD8"
-					item: "immersive_weathering:waxed_plate_iron_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BF7359F1"
-					item: "immersive_weathering:waxed_rusted_cut_iron_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003B4C5DF9"
-					item: "immersive_weathering:waxed_rusted_cut_iron_stairs"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AE09DDCB"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000009DEA996"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001476ACD9"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000A57ADDD7"
-					item: "immersive_weathering:waxed_rusted_iron_bars"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EAFD094D"
-					item: "immersive_weathering:waxed_rusted_iron_door"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000060B5E745"
-					item: "immersive_weathering:waxed_rusted_iron_trapdoor"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000B3BA0646"
-				"00000000678404BD"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B755CAD9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E9901B65"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000029919A50"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000EB24BAAB"
-					item: "immersive_weathering:waxed_rusted_plate_iron_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000389951CB"
-					item: "immersive_weathering:waxed_rusted_plate_iron_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009DB46BEE"
-					item: "immersive_weathering:waxed_weathered_cut_iron_slab"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["00000000678404BD"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001A6CD4E8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C0F157EE"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E790C0BA"
-					table_id: 942458084L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009D7B5FA7"
-					item: "immersive_weathering:waxed_weathered_cut_iron_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000098E0D021"
-					item: "immersive_weathering:waxed_weathered_iron_bars"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C527CDC9"
-					item: "immersive_weathering:waxed_weathered_iron_door"
-					type: "item"
-				}
-			]
-			x: -10.0d
 			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A82F4900"
+			id: "000000003AA7F7DE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EAEA8539"
+					id: "000000004D2E3F88"
 					type: "xp"
-					xp: 22
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B27092F7"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000CEE888AE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C6392F0C"
-					item: "immersive_weathering:regions_unexplored/cypress_leaf_pile"
+					id: "000000002EEBFE60"
+					item: "immersive_weathering:biomeswevegone/flowering_indigo_jacaranda_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FBC8F2E2"
-					item: "immersive_weathering:bewitchment/cypress_leaf_pile"
+					id: "00000000661952D9"
+					item: "immersive_weathering:biomeswevegone/flowering_ironwood_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000096CC9C83"
-					item: "immersive_weathering:dark_oak_leaf_pile"
+					id: "00000000E63674FF"
+					item: "immersive_weathering:biomeswevegone/flowering_jacaranda_leaf_pile"
 					type: "item"
 				}
 			]
-			x: -2.0d
-			y: 9.0d
+			x: -4.0d
+			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E3618D4C"
+			id: "0000000032E4D387"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008265CABA"
+					id: "000000002734A861"
 					type: "xp"
-					xp: 12
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000068A653CE"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000AE2A9A16"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000393A457E"
-					item: "immersive_weathering:biomeswevegone/firecracker_leaf_pile"
+					id: "000000003B36B7AF"
+					item: "minecraft:flowering_azalea_leaves"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B2BC47C6"
+					id: "00000000C514E6DD"
+					item: "immersive_weathering:biomeswevegone/flowering_baobab_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006F166458"
+					item: "immersive_weathering:deep_aether/flowering_blue_roseroot_leaf_pile"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000004ED9C20F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000099A79459"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000091933798"
+					type: "xp"
+					xp: 24
+				}
+				{
+					id: "000000000498ACDF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BE499EB4"
 					item: {
 						Count: 1
 						id: "immersive_weathering:flower_crown"
@@ -3738,8 +3889,315 @@
 				}
 				{
 					consume_items: false
-					id: "000000005AB8C1C9"
+					id: "0000000083B3B163"
 					item: "minecraft:flowering_azalea"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B6F3D3DD"
+					item: "immersive_weathering:flowering_azalea_leaf_pile"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000098D2B68D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B6D705ED"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CBFFFD44"
+					type: "xp"
+					xp: 28
+				}
+				{
+					id: "0000000054DCC8C3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000910EBCB1"
+					item: "immersive_weathering:waxed_rusted_cut_iron_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000089B089DD"
+					item: "immersive_weathering:waxed_rusted_iron_bars"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000045702036"
+					item: "immersive_weathering:waxed_rusted_iron_door"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000009D76320D"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006D6E1E8E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FF3C03B5"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000001E3FB43E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000077B86ADE"
+					item: "immersive_weathering:waxed_rusted_iron_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009CA6C710"
+					item: "immersive_weathering:waxed_rusted_plate_iron"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FC121549"
+					item: "immersive_weathering:waxed_rusted_plate_iron_slab"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000A29C65D5"
+				"00000000085F9E5F"
+				"00000000E331B49D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000260F93DD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000744C4D9A"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000FD76EC96"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000CC9804FB"
+					item: "immersive_weathering:waxed_rusted_plate_iron_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000399AF281"
+					item: "immersive_weathering:waxed_weathered_cut_iron_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DED9BD80"
+					item: "immersive_weathering:waxed_weathered_cut_iron_stairs"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C3B10FC3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AE863C72"
+					type: "xp"
+					xp: 29
+				}
+				{
+					id: "00000000303AE02B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000052E7D613"
+					item: "immersive_weathering:waxed_weathered_iron_bars"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000298CE01C"
+					item: "immersive_weathering:waxed_weathered_iron_door"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008998CF5C"
+					item: "immersive_weathering:waxed_weathered_iron_trapdoor"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C700119C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000082C6EB35"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "000000003505D701"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000000C772B92"
+					item: "immersive_weathering:bewitchment/cypress_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000007249F627"
+					item: "immersive_weathering:dark_oak_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000015816540"
+					item: "minecraft:dark_oak_log"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000ED44C7A1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F8574943"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "00000000FA30358C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B9B3BA8B"
+					item: "immersive_weathering:biomesoplenty/fir_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A4BCB167"
+					item: "minecraft:fire_coral_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D36CEB76"
+					item: "immersive_weathering:biomeswevegone/firecracker_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3750,40 +4208,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001DCC4BE8"
+			id: "000000001A156C97"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000018589A1"
+					id: "000000002E15018C"
 					type: "xp"
-					xp: 4
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005B102519"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000153F05BB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000044D9FFA7"
-					item: "immersive_weathering:biomesoplenty/fir_leaf_pile"
+					id: "00000000C663C343"
+					item: "immersive_weathering:aether_redux/fieldsproot_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007EAF073E"
+					id: "00000000FF28B191"
+					item: "immersive_weathering:natures_spirit/fir_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000047797087"
 					item: "immersive_weathering:biomeswevegone/fir_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000039BC35B9"
-					item: "minecraft:fire_coral_block"
 					type: "item"
 				}
 			]
@@ -3791,43 +4254,49 @@
 			y: 8.0d
 		}
 		{
+			dependencies: ["0000000001C5CCAF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002ACA63EC"
+			id: "00000000EC66F5B7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B962E35E"
+					id: "00000000A4BA7A02"
 					type: "xp"
-					xp: 15
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BFDBAF2E"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000C2E5F248"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004E15502A"
-					item: "immersive_weathering:regions_unexplored/eucalyptus_leaf_pile"
+					id: "000000003CC89F01"
+					item: "immersive_weathering:exposed_cut_iron_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001A0F8A38"
-					item: "immersive_weathering:aether_redux/fieldsproot_leaf_pile"
+					id: "000000001C60D9F4"
+					item: "immersive_weathering:exposed_plate_iron_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D21B478A"
-					item: "immersive_weathering:natures_spirit/fir_leaf_pile"
+					id: "000000005403C3B9"
+					item: "immersive_weathering:exposed_plate_iron_stairs"
 					type: "item"
 				}
 			]
@@ -3835,44 +4304,49 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000001A50E668"]
+			dependencies: ["000000009357978F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003AEDCCB9"
+			id: "000000007FAE1CDD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000099773A73"
+					id: "0000000075CE773C"
 					type: "xp"
-					xp: 11
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005853EC90"
-					table_id: 942458084L
-					type: "random"
+					id: "000000001C36203E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000048CF1CB"
-					item: "immersive_weathering:regions_unexplored/enchanted_birch_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000064229630"
+					id: "000000000711A41A"
 					item: "minecraft:end_stone_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008FE24677"
+					id: "000000003D4F5264"
 					item: "immersive_weathering:tconstruct/ender_slime_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FAF90DE9"
+					item: "immersive_weathering:regions_unexplored/eucalyptus_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3883,40 +4357,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000037DCD783"
+			id: "00000000151612F4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E013997E"
+					id: "00000000FA1E306C"
 					type: "xp"
-					xp: 8
+					xp: 22
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009060E5D7"
-					table_id: 942458084L
-					type: "random"
+					id: "000000008BF792CB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B954C1DC"
-					item: "immersive_weathering:deeperdarker/echo_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EE17AB78"
+					id: "0000000052438C38"
 					item: "immersive_weathering:bewitchment/elder_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000021C896F1"
+					id: "00000000B05D7469"
 					item: "immersive_weathering:biomesoplenty/empyreal_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B73AD08B"
+					item: "immersive_weathering:regions_unexplored/enchanted_birch_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3927,40 +4406,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000158D7B20"
+			id: "000000008F9066A1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000F952C86"
+					id: "00000000D2EADF83"
 					type: "xp"
-					xp: 30
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000A4A69DD"
-					table_id: 942458084L
-					type: "random"
+					id: "000000005A7B0548"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DDBBCEEB"
-					item: "immersive_weathering:dimdoors/driftwood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003C29C1C8"
+					id: "000000008040C8EA"
 					item: "immersive_weathering:tconstruct/earth_slime_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009B7B8005"
+					id: "000000008EABF0A9"
 					item: "immersive_weathering:biomeswevegone/ebony_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000429C76FF"
+					item: "immersive_weathering:deeperdarker/echo_leaf_pile"
 					type: "item"
 				}
 			]
@@ -3968,47 +4452,49 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"0000000052900D65"
-				"000000001A50E668"
-			]
+			dependencies: ["00000000AA1CE699"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C0D49610"
+			id: "0000000033EBEB2F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A89E3886"
+					id: "00000000DA6619A3"
 					type: "xp"
-					xp: 19
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007E410E2B"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000448E6787"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A922E7AA"
-					item: "minecraft:deepslate_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B4B51F09"
+					id: "000000005EB37272"
 					item: "minecraft:deepslate_tiles"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005C773D0B"
+					id: "0000000061D9B894"
 					item: "immersive_weathering:bewitchment/dragons_blood_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EA19E617"
+					item: "immersive_weathering:dimdoors/driftwood_leaf_pile"
 					type: "item"
 				}
 			]
@@ -4016,43 +4502,49 @@
 			y: 3.0d
 		}
 		{
+			dependencies: ["00000000AA1CE699"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000411B52CD"
+			id: "000000002C76ABBB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DEBF3D38"
+					id: "000000002AF67BC5"
 					type: "xp"
-					xp: 5
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008B8F03A3"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000D5E6685C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000ECDB61F"
-					item: "immersive_weathering:biomesoplenty/dead_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BE8B345F"
+					id: "000000009879BCCA"
 					item: "immersive_weathering:regions_unexplored/dead_pine_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001B8F1F91"
+					id: "000000003A92784F"
 					item: "immersive_weathering:aether/decorated_holiday_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000078AB5E5"
+					item: "minecraft:deepslate_bricks"
 					type: "item"
 				}
 			]
@@ -4063,39 +4555,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001E351A54"
+			id: "00000000223136A1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009CEC2D23"
+					id: "00000000B54877AB"
 					type: "xp"
-					xp: 27
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000955C8B6E"
-					table_id: 942458084L
-					type: "random"
+					id: "000000006683BA6F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000429CB30D"
-					item: "immersive_weathering:midnight/dark_willow_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AD39AD75"
+					id: "00000000C5221EF8"
 					item: "immersive_weathering:twilightforest/dark_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C32BCD88"
+					id: "000000001083ACE2"
+					item: "immersive_weathering:biomesoplenty/dead_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000308601CA"
 					item: "immersive_weathering:regions_unexplored/dead_leaf_pile"
 					type: "item"
 				}
@@ -4107,40 +4604,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006204C0F4"
+			id: "000000005C87CD26"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008015E7E8"
+					id: "0000000013A54D09"
 					type: "xp"
-					xp: 23
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D6EA1829"
-					table_id: 942458084L
-					type: "random"
+					id: "000000008F9AFF40"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000160C7DA1"
-					item: "minecraft:dark_oak_log"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AFB21E0D"
+					id: "00000000783C9894"
 					item: "minecraft:dark_oak_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006558E7AC"
+					id: "00000000BBE9A2A5"
 					item: "immersive_weathering:dark_prismarine_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006BA6FABC"
+					item: "immersive_weathering:midnight/dark_willow_leaf_pile"
 					type: "item"
 				}
 			]
@@ -4151,39 +4653,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008A1FD956"
+			id: "0000000058204367"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E28862C9"
+					id: "00000000C9AC7AF0"
 					type: "xp"
 					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005F44674B"
-					table_id: 942458084L
-					type: "random"
+					id: "000000000592847B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000009F16361"
+					id: "000000000F0AC197"
 					item: "immersive_weathering:deep_aether/blue_roseroot_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005203F9C7"
+					id: "000000008FE3E7E8"
 					item: "immersive_weathering:biomeswevegone/blue_spruce_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001139A439"
+					id: "00000000BA2AA7D7"
 					item: "immersive_weathering:natures_spirit/blue_wisteria_leaf_pile"
 					type: "item"
 				}
@@ -4195,40 +4702,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000462B59CE"
+			id: "0000000085D19C81"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000008822B7B"
+					id: "00000000929A357B"
 					type: "xp"
-					xp: 6
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C3051EDA"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000084013F7F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006D6C2453"
+					id: "0000000030A89066"
+					item: "immersive_weathering:biomeswevegone/orange_oak_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000376AFFE2"
+					item: "immersive_weathering:biomeswevegone/orange_spruce_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005A338128"
 					item: "immersive_weathering:biomeswevegone/orchard_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003FEAC231"
-					item: "immersive_weathering:biomesoplenty/origin_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E1A629CC"
-					item: "immersive_weathering:biomeswevegone/palm_leaf_pile"
 					type: "item"
 				}
 			]
@@ -4239,39 +4751,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F684FFE1"
+			id: "00000000D08CAF02"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000001A312D"
+					id: "00000000F9FFABBD"
 					type: "xp"
-					xp: 12
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BFECBB4F"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000CC7EB329"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B3C73F6A"
+					id: "000000006964021F"
 					item: "minecraft:black_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BA0E9711"
+					id: "00000000655761DC"
 					item: "immersive_weathering:regions_unexplored/blackwood_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000026C9B697"
+					id: "00000000E01FD0B5"
 					item: "immersive_weathering:aether_redux/blighted_skyroot_leaf_pile"
 					type: "item"
 				}
@@ -4283,40 +4800,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F2311E17"
+			id: "00000000DC1B5D91"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CA34FFD9"
+					id: "000000003B7829E9"
 					type: "xp"
-					xp: 22
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004A48D9C6"
-					table_id: 942458084L
-					type: "random"
+					id: "000000003BC3ABE6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000098A5336"
+					id: "000000008FE21124"
+					item: "immersive_weathering:biomesoplenty/orange_maple_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A6AC109E"
 					item: "immersive_weathering:natures_spirit/orange_maple_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AD3D94EF"
-					item: "immersive_weathering:biomeswevegone/orange_oak_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000EDBDFC9"
-					item: "immersive_weathering:biomeswevegone/orange_spruce_leaf_pile"
+					id: "00000000198C05D1"
+					item: "immersive_weathering:regions_unexplored/orange_maple_leaf_pile"
 					type: "item"
 				}
 			]
@@ -4327,39 +4849,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C534C003"
+			id: "000000006B662FD9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000A42D9CB"
+					id: "0000000059B863C4"
 					type: "xp"
-					xp: 7
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000136C2A6B"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000B057FDF9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000615B5ECB"
+					id: "00000000B823A5E5"
 					item: "immersive_weathering:birch_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000FD8ADE6"
+					id: "00000000FD85561A"
 					item: "minecraft:birch_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F4BD753D"
+					id: "000000003D12669E"
 					item: "minecraft:birch_wood"
 					type: "item"
 				}
@@ -4371,40 +4898,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DFC05090"
+			id: "0000000093A657BB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000055045B6F"
+					id: "00000000DC937348"
 					type: "xp"
-					xp: 25
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000633B9721"
-					table_id: 942458084L
-					type: "random"
+					id: "000000001D11B209"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C37BEEF2"
+					id: "0000000007BD6DF2"
+					item: "minecraft:oak_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002EE66F58"
+					item: "immersive_weathering:natures_spirit/olive_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000044DDCBE3"
 					item: "immersive_weathering:biomeswevegone/orange_birch_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000406EE8AB"
-					item: "immersive_weathering:regions_unexplored/orange_maple_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000529BD562"
-					item: "immersive_weathering:biomesoplenty/orange_maple_leaf_pile"
 					type: "item"
 				}
 			]
@@ -4415,39 +4947,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C5172E8E"
+			id: "00000000EECC6EB4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007DE3955F"
+					id: "00000000947B579A"
 					type: "xp"
-					xp: 7
+					xp: 23
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000813E6A74"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000463E4BEE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BB12838F"
+					id: "000000005DE1C540"
 					item: "immersive_weathering:ars_nouveau/blue_archwood_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AF4E31DE"
+					id: "00000000FE6734A2"
 					item: "immersive_weathering:biomeswevegone/blue_enchanted_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E303BD6B"
+					id: "0000000031F55311"
 					item: "immersive_weathering:regions_unexplored/blue_magnolia_leaf_pile"
 					type: "item"
 				}
@@ -4459,40 +4996,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004D34DB7C"
+			id: "00000000CAB2778C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001CCBC8AD"
+					id: "00000000D0D9002F"
 					type: "xp"
-					xp: 8
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000013F582C2"
-					table_id: 942458084L
-					type: "random"
+					id: "000000009CAF17BD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B33EB953"
+					id: "0000000033741DBB"
+					item: "immersive_weathering:biomesoplenty/null_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001CB509F1"
+					item: "immersive_weathering:oak_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000001033290"
 					item: "minecraft:oak_log"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000065E92B91"
-					item: "minecraft:oak_wood"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000683EE1B7"
-					item: "immersive_weathering:natures_spirit/olive_leaf_pile"
 					type: "item"
 				}
 			]
@@ -4503,39 +5045,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004810B098"
+			id: "00000000D0A9F041"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004612316E"
+					id: "00000000619A303A"
 					type: "xp"
-					xp: 19
+					xp: 22
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000BBFDDA5"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000A44DA912"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E77103A3"
+					id: "000000008981910E"
 					item: "immersive_weathering:aether_redux/blightwillow_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B095A717"
+					id: "00000000C938A397"
 					item: "minecraft:bamboo_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D8B5DA83"
+					id: "0000000021811C4F"
 					item: "immersive_weathering:biomeswevegone/blooming_witch_hazel_leaf_pile"
 					type: "item"
 				}
@@ -4547,40 +5094,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FB4D4625"
+			id: "0000000011DD0033"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D1368B87"
+					id: "000000008BC1C659"
 					type: "xp"
-					xp: 4
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000698107A3"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000B695F89D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F6E502C8"
+					id: "00000000096A88AF"
+					item: "immersive_weathering:mulch_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000183C6B2D"
+					item: "minecraft:nether_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000083E8DA8B"
 					item: "immersive_weathering:nulch_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A397B50F"
-					item: "immersive_weathering:biomesoplenty/null_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D39A30CF"
-					item: "immersive_weathering:oak_leaf_pile"
 					type: "item"
 				}
 			]
@@ -4591,40 +5143,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ED58F8FD"
+			id: "00000000150C0E91"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FC423DBC"
+					id: "0000000060E13480"
 					type: "xp"
-					xp: 15
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008CD83C19"
-					table_id: 942458084L
-					type: "random"
+					id: "000000008A97CBF0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FEAFC258"
+					id: "000000006805A82E"
 					item: "immersive_weathering:regions_unexplored/ashen_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B1E977B0"
-					item: "immersive_weathering:natures_spirit/aspen_leaf_pile"
+					id: "0000000045E590BF"
+					item: "immersive_weathering:biomeswevegone/aspen_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009392978E"
-					item: "immersive_weathering:biomeswevegone/aspen_leaf_pile"
+					id: "00000000BD0812DF"
+					item: "immersive_weathering:natures_spirit/aspen_leaf_pile"
 					type: "item"
 				}
 			]
@@ -4632,44 +5189,49 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000006D2AA38D"]
+			dependencies: ["000000000A91362B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000009C93A57"
+			id: "0000000009AF4D03"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000E9956F7"
+					id: "000000000A683425"
 					type: "xp"
-					xp: 30
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000923D4165"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000B6315388"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000070D16BE4"
+					id: "000000009E4C65BE"
+					item: "immersive_weathering:mossy_stone_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000057741437"
+					item: "immersive_weathering:mossy_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000022225B8D"
 					item: "immersive_weathering:mossy_stone_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000084F82357"
-					item: "immersive_weathering:mulch_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000071C59D12"
-					item: "minecraft:nether_brick"
 					type: "item"
 				}
 			]
@@ -4680,39 +5242,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DC4A95D9"
+			id: "00000000C7AE0299"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005968C9D5"
+					id: "00000000FFEA02AD"
 					type: "xp"
-					xp: 10
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000930A4D53"
-					table_id: 942458084L
-					type: "random"
+					id: "000000003D512B19"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000556439E3"
+					id: "00000000FCF5FD05"
 					item: "immersive_weathering:regions_unexplored/alpha_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000096E2D94F"
+					id: "00000000AFCC5308"
 					item: "immersive_weathering:regions_unexplored/apple_oak_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001AAD60B6"
+					id: "0000000025650F0C"
 					item: "immersive_weathering:biomeswevegone/araucaria_leaf_pile"
 					type: "item"
 				}
@@ -4721,47 +5288,49 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"000000004EB5B121"
-				"000000006D2AA38D"
-			]
+			dependencies: ["000000000A91362B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D01B99E2"
+			id: "00000000B1F3A2F4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000083C19277"
+					id: "000000008315B217"
 					type: "xp"
-					xp: 9
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000088987DCB"
-					table_id: 942458084L
-					type: "random"
+					id: "000000004E76281F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AD98B6DE"
+					id: "000000008F05A821"
+					item: "immersive_weathering:mossy_chiseled_stone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000DE86E61C"
+					item: "minecraft:mossy_cobblestone"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000A9489D2"
 					item: "minecraft:mossy_stone_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000046E848DF"
-					item: "immersive_weathering:mossy_stone_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000BD918CD"
-					item: "immersive_weathering:mossy_stone_stairs"
 					type: "item"
 				}
 			]
@@ -4772,39 +5341,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A3F10E11"
+			id: "00000000E96CFDB4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000F20B287"
+					id: "00000000616959E7"
 					type: "xp"
-					xp: 23
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EC5EB1B8"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000FD97A2A2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000CAF194DE"
+					id: "000000009FFD4AFB"
 					item: "immersive_weathering:biomeswevegone/baobab_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000AFDC429A"
+					id: "0000000051E9DBFF"
 					item: "immersive_weathering:regions_unexplored/baobab_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CE6774CB"
+					id: "00000000630ABE63"
 					item: "immersive_weathering:twilightforest/beanstalk_leaf_pile"
 					type: "item"
 				}
@@ -4813,47 +5387,49 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"000000004EB5B121"
-				"00000000AA51D460"
-			]
+			dependencies: ["000000000A91362B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009396241A"
+			id: "00000000C5A61221"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F4E02F89"
+					id: "00000000F2DE3456"
 					type: "xp"
-					xp: 19
+					xp: 31
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000081B8CE3C"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000052612449"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000605FA913"
+					id: "00000000AF5DFCD0"
+					item: "immersive_weathering:mossy_brick_slab"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000040809B4C"
+					item: "immersive_weathering:mossy_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A45B4B9B"
 					item: "immersive_weathering:mossy_brick_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000014F6A9E3"
-					item: "immersive_weathering:mossy_chiseled_stone_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B1D727B3"
-					item: "minecraft:mossy_cobblestone"
 					type: "item"
 				}
 			]
@@ -4864,39 +5440,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C3DB8ECA"
+			id: "00000000149B531D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D8157F64"
+					id: "00000000B22DF3B8"
 					type: "xp"
-					xp: 27
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009EDFBC12"
-					table_id: 942458084L
-					type: "random"
+					id: "000000006A78A9A2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000032B8D7C6"
+					id: "0000000032A41BFD"
 					item: "immersive_weathering:azalea_flower_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000505170BF"
+					id: "00000000EEC5F959"
 					item: "immersive_weathering:malum/azure_runewood_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E60926C0"
+					id: "00000000D0798138"
 					item: "immersive_weathering:regions_unexplored/bamboo_leaf_pile"
 					type: "item"
 				}
@@ -4906,46 +5487,51 @@
 		}
 		{
 			dependencies: [
-				"000000004EB5B121"
-				"00000000AA51D460"
+				"000000000A91362B"
+				"00000000085F9E5F"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D8B4AB57"
+			id: "00000000D497674A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A7F60F31"
+					id: "00000000071FDC2D"
 					type: "xp"
-					xp: 5
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B1E8A943"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000069EE1B1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BACAFC82"
+					id: "000000007B3CD80A"
+					item: "immersive_weathering:twilightforest/mining_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CCBE511F"
+					item: "immersive_weathering:mortar"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002750FEAB"
 					item: "minecraft:moss_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000A3B89E0"
-					item: "immersive_weathering:mossy_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009E3A6858"
-					item: "immersive_weathering:mossy_brick_stairs"
 					type: "item"
 				}
 			]
@@ -4953,44 +5539,48 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000077BF6147"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000AFA28EE"
+			id: "000000009D68B177"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007F3AD043"
+					id: "00000000E1C66D8C"
 					type: "xp"
-					xp: 11
+					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000189C5B0D"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000481D17B7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F13E1A7D"
+					id: "000000000D4F5DFB"
+					item: "immersive_weathering:regions_unexplored/maple_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F6B5A66C"
+					item: "immersive_weathering:regions_unexplored/mauve_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000082A1D821"
 					item: "immersive_weathering:integrateddynamics/menril_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004762FCEE"
-					item: "immersive_weathering:twilightforest/mining_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000011912F2E"
-					item: "immersive_weathering:mortar"
 					type: "item"
 				}
 			]
@@ -5001,39 +5591,44 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C16DDA77"
+			id: "00000000BA182D51"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C367F777"
+					id: "0000000056FCA98D"
 					type: "xp"
-					xp: 27
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EEDD9C11"
-					table_id: 942458084L
-					type: "random"
+					id: "000000000564B344"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000053D7614D"
+					id: "0000000000DC12D3"
 					item: "immersive_weathering:acacia_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E0008918"
+					id: "00000000A7D8214C"
 					item: "minecraft:acacia_log"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000074DC2DB6"
+					id: "0000000083DD6DCC"
 					item: "minecraft:acacia_wood"
 					type: "item"
 				}
@@ -5045,40 +5640,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000798B9EAC"
+			id: "000000008DD56C48"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E5965ABE"
+					id: "0000000057044236"
 					type: "xp"
-					xp: 31
+					xp: 28
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000836812BC"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000037407A80"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000000B8D1C8"
-					item: "immersive_weathering:regions_unexplored/maple_leaf_pile"
+					id: "0000000066E88869"
+					item: "immersive_weathering:mangrove_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F1E381DC"
+					id: "00000000AD496DB4"
+					item: "immersive_weathering:twilightforest/mangrove_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000082F96177"
 					item: "immersive_weathering:biomeswevegone/maple_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000074900DCE"
-					item: "immersive_weathering:regions_unexplored/mauve_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5089,40 +5689,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000076AF8A5A"
+			id: "000000009641BEBF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FBA018E8"
+					id: "00000000EF243C88"
 					type: "xp"
-					xp: 30
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000462F0BF7"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000005C002B6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000572F8F3C"
+					id: "000000008A6F186F"
+					item: "immersive_weathering:biomeswevegone/mahogany_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F8F9CB71"
+					item: "immersive_weathering:biomesoplenty/mahogany_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000002F2564A"
 					item: "immersive_weathering:midnight/manglewood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000044BCD213"
-					item: "immersive_weathering:twilightforest/mangrove_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DA2A28AA"
-					item: "immersive_weathering:mangrove_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5133,40 +5738,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002B61C0F6"
+			id: "000000008EE6D577"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AEA277B2"
+					id: "00000000F2D1D36A"
 					type: "xp"
-					xp: 29
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000062CE0613"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000CB59FB22"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C2C528D1"
+					id: "0000000096D551C0"
+					item: "immersive_weathering:biomesoplenty/magic_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F4FDDA51"
+					item: "immersive_weathering:regions_unexplored/magnolia_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CF4866DA"
 					item: "immersive_weathering:natures_spirit/mahogany_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B9945140"
-					item: "immersive_weathering:biomeswevegone/mahogany_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000045257B00"
-					item: "immersive_weathering:biomesoplenty/mahogany_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5175,46 +5785,51 @@
 		}
 		{
 			dependencies: [
-				"000000001A50E668"
-				"0000000077BF6147"
+				"00000000AA1CE699"
+				"00000000085F9E5F"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FF6CA763"
+			id: "000000008DB3673E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000098E32413"
+					id: "00000000D883A6D6"
 					type: "xp"
-					xp: 22
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C49307EF"
-					table_id: 942458084L
-					type: "random"
+					id: "0000000087E23DFD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000054D6673B"
+					id: "000000003604A3EA"
+					item: "immersive_weathering:natures_spirit/larch_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000016E06E90"
+					item: "immersive_weathering:regions_unexplored/larch_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000335B7D74"
 					item: "immersive_weathering:loam"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003E2BD71A"
-					item: "immersive_weathering:biomesoplenty/magic_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A1E12176"
-					item: "immersive_weathering:regions_unexplored/magnolia_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5225,40 +5840,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000000025D03"
+			id: "000000009B12A6D4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000338F40C4"
+					id: "0000000086118342"
 					type: "xp"
-					xp: 27
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F4ED106C"
-					table_id: 942458084L
-					type: "random"
+					id: "000000002A1CD3C6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004F2C6AA4"
+					id: "000000000524F4FC"
+					item: "minecraft:jungle_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A683F986"
+					item: "immersive_weathering:bewitchment/juniper_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B75FAAB"
 					item: "immersive_weathering:regions_unexplored/kapok_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C977B958"
-					item: "immersive_weathering:natures_spirit/larch_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000875E949"
-					item: "immersive_weathering:regions_unexplored/larch_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5269,40 +5889,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000023E2A6FC"
+			id: "0000000049D9951E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000062BEEF0F"
+					id: "0000000080B14D51"
 					type: "xp"
-					xp: 10
+					xp: 25
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000068B72A12"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000702F54D2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003F3B24D9"
+					id: "00000000EAA90D92"
+					item: "immersive_weathering:natures_spirit/joshua_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000079F3528E"
+					item: "immersive_weathering:jungle_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BDC85620"
 					item: "minecraft:jungle_log"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B9849FBC"
-					item: "minecraft:jungle_wood"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002EC2C13F"
-					item: "immersive_weathering:bewitchment/juniper_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5313,40 +5938,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003E6AB9CC"
+			id: "0000000038177B8E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ADE83DD9"
+					id: "00000000C97BDDBB"
 					type: "xp"
-					xp: 6
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003932EF04"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000F3365517"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000051FA7BB3"
+					id: "00000000E919071E"
+					item: "immersive_weathering:biomeswevegone/ironwood_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F37EC39"
+					item: "immersive_weathering:biomeswevegone/jacaranda_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A1D8A591"
 					item: "immersive_weathering:biomesoplenty/jacaranda_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008B5EDA63"
-					item: "immersive_weathering:natures_spirit/joshua_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AC2E16CE"
-					item: "immersive_weathering:jungle_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5354,43 +5984,53 @@
 			y: 3.0d
 		}
 		{
+			dependencies: [
+				"0000000001C5CCAF"
+				"00000000085F9E5F"
+				"000000009D76320D"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000FFC8D10"
+			id: "0000000082151AD2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005AB8AAF2"
+					id: "00000000C12AD97B"
 					type: "xp"
-					xp: 11
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000092CB8921"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000FB14C635"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F40D9FC9"
+					id: "00000000B20F2879"
+					item: "immersive_weathering:biomeswevegone/indigo_jacaranda_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002B2DC1B5"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000095353626"
 					item: "minecraft:iron_nugget"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008517A64C"
-					item: "immersive_weathering:biomeswevegone/ironwood_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000EFC6B8E"
-					item: "immersive_weathering:biomeswevegone/jacaranda_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5398,35 +6038,47 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000004EB5B121"
-				"0000000055EDE9F7"
-				"00000000AA51D460"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000527BA591"
+			id: "00000000F0B859BC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003264A29B"
+					id: "00000000E8B2D237"
 					type: "xp"
-					xp: 30
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000022C7A7C"
-					table_id: 942458084L
-					type: "random"
+					id: "000000009B6F7BC6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000005566354"
+					id: "000000001A6FDCAA"
+					item: "immersive_weathering:biomeswevegone/holly_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000109B8878"
+					item: "minecraft:horn_coral_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000036D1A3F7"
 					item: {
 						Count: 1
 						id: "immersive_weathering:ice_sickle"
@@ -5436,18 +6088,6 @@
 					}
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "0000000027190C26"
-					item: "immersive_weathering:biomeswevegone/indigo_jacaranda_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009AEAAEDD"
-					item: "minecraft:iron_ingot"
-					type: "item"
-				}
 			]
 			x: -5.0d
 			y: 1.0d
@@ -5456,40 +6096,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000053F98191"
+			id: "00000000BC588072"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006420A959"
+					id: "00000000B0BB3AF5"
 					type: "xp"
-					xp: 31
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003015B9FF"
-					table_id: 942458084L
-					type: "random"
+					id: "000000002BEF3DE7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000012689D62"
+					id: "000000006E45AFF5"
+					item: "immersive_weathering:biomesoplenty/hellbark_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000071CFF231"
+					item: "immersive_weathering:aether/holiday_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AD9A1BE2"
 					item: "immersive_weathering:biomeswevegone/holly_berry_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005ED9455F"
-					item: "immersive_weathering:biomeswevegone/holly_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006B3527D1"
-					item: "minecraft:horn_coral_block"
 					type: "item"
 				}
 			]
@@ -5500,40 +6145,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FA541354"
+			id: "00000000D9114BD7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000014E81BF9"
+					id: "00000000CBFFFCFB"
 					type: "xp"
-					xp: 22
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000011E0F05B"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000AA981607"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000065D3E540"
-					item: "immersive_weathering:natures_spirit/yellow_aspen_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B7EAD369"
+					id: "0000000036167F28"
 					item: "immersive_weathering:biomeswevegone/yellow_birch_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005F99FB63"
+					id: "0000000090EB0AF0"
 					item: "immersive_weathering:biomesoplenty/yellow_maple_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D4B8B38B"
+					item: "immersive_weathering:natures_spirit/yellow_maple_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5544,40 +6194,45 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A6BCF5F2"
+			id: "00000000F2116539"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000331B1E5"
+					id: "00000000709EB907"
 					type: "xp"
-					xp: 17
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006821E133"
-					table_id: 942458084L
-					type: "random"
+					id: "00000000E984C1F0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DF283221"
-					item: "immersive_weathering:natures_spirit/yellow_maple_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008B9EB54F"
+					id: "000000002B3F4522"
 					item: "immersive_weathering:biomeswevegone/yellow_sakura_leaf_pile"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000080789AD9"
+					id: "00000000A40CFF94"
 					item: "immersive_weathering:biomeswevegone/yellow_spruce_leaf_pile"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF0503B4"
+					item: "immersive_weathering:biomeswevegone/yucca_leaf_pile"
 					type: "item"
 				}
 			]
@@ -5588,37 +6243,34 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CA20485B"
+			id: "00000000127B0A3C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007A2DA674"
+					id: "00000000FB21D876"
 					type: "xp"
-					xp: 6
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A6FA2DA6"
-					table_id: 942458084L
-					type: "random"
+					id: "000000000D5E70BF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_immersive_weathering"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000006A342B14"
-					item: "immersive_weathering:biomeswevegone/yucca_leaf_pile"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000041326779"
-					item: "immersive_weathering:biomeswevegone/zelkova_leaf_pile"
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "000000002B2832A4"
+				item: "immersive_weathering:biomeswevegone/zelkova_leaf_pile"
+				type: "item"
+			}]
 			x: -11.0d
 			y: 2.0d
 		}

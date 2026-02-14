@@ -2,139 +2,1615 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_ae2"
-	group: "00000000DEB299A3"
-	icon: "ae2:monitor"
-	id: "000000001C7E8991"
-	order_index: 119
+	group: "000000008CDEF944"
+	icon: "ae2:semi_dark_monitor"
+	id: "00000000C1EFC0EB"
+	order_index: 118
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"00000000AF12AE17"
-				"000000007CD2F3FA"
-			]
+			dependencies: ["00000000A16F4EEA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000ABB7994"
+			id: "00000000E0F4F69D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000526B43FE"
+					id: "0000000021616868"
 					type: "xp"
-					xp: 3
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003EF2D4E2"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000166383E1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002B0634B1"
+					item: "ae2:cyan_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000042608D8"
+					item: "ae2:gray_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BB5720C3"
+					item: "ae2:green_smart_dense_cable"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000F9678C5F"
+				"00000000B957729C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E94C3693"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C3564E44"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000469BE9A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "heart"
 			tasks: [{
 				consume_items: false
-				id: "0000000012642391"
+				id: "00000000D3AD1FE2"
 				item: "ae2:certus_quartz_dust"
 				type: "item"
 			}]
-			x: -13.0d
-			y: 1.0d
+			x: -6.0d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"000000003B7C5A4D"
-				"00000000878421FA"
-				"0000000077EFCE95"
-				"0000000098CB2BEC"
-			]
+			dependencies: ["00000000A16F4EEA"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000031E29797"
+			id: "00000000453855C5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000082C78CD"
+					id: "00000000F15CED6B"
 					type: "xp"
-					xp: 27
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000183FBFEF"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000050BD588"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E2165BBA"
+					item: "ae2:black_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000086AD8E9D"
+					item: "ae2:blue_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001EEC044D"
+					item: "ae2:brown_smart_dense_cable"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000A16F4EEA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000732BAA5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000021C59250"
+					type: "xp"
+					xp: 26
+				}
+				{
+					id: "000000006CA6C605"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000077D32D5F"
+					item: "ae2:magenta_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D6E952D7"
+					item: "ae2:orange_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008A8AD033"
+					item: "ae2:pink_smart_dense_cable"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"00000000DAF1F74F"
+				"0000000007D60A59"
+				"00000000D9E0E67D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003D943D69"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FC6C4F1E"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "000000004DD370DB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003983BFA6"
-					item: "ae2:lime_glass_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003B62C4C3"
-					item: "ae2:lime_smart_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A2DE3806"
-					item: "ae2:annihilation_plane"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"000000004B1530CE"
-				"00000000577F576E"
-				"0000000019207068"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000199ABC2B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BEBE75F8"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000DED2C9F2"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000BEDCF8F3"
+					id: "000000009F6E7A9E"
 					item: "ae2:light_detector"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001FF91105"
+					id: "00000000C8D18CAD"
 					item: "ae2:light_gray_lumen_paint_ball"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F0655071"
+					id: "0000000067EC1F08"
 					item: "ae2:light_gray_covered_cable"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000A16F4EEA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000084A42F60"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005D199266"
+					type: "xp"
+					xp: 28
+				}
+				{
+					id: "00000000AEAE16A5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BEEBD9F3"
+					item: "ae2:light_blue_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BC01FEA5"
+					item: "ae2:light_gray_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C197F1B8"
+					item: "ae2:lime_smart_dense_cable"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["00000000DE489844"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001E8DDC11"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BC8A2C23"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "0000000076A951C0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "heart"
+			tasks: [{
+				consume_items: false
+				id: "00000000CA3627C1"
+				item: "ae2:monitor"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000A16F4EEA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000EA51BA95"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E632596C"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "0000000055342D7C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000E20E4145"
+				item: "ae2:yellow_smart_dense_cable"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000A16F4EEA"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000913004E9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005D876D91"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000A924B23C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "pentagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000001F71BA65"
+					item: "ae2:purple_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000AD8100A6"
+					item: "ae2:red_smart_dense_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F5FA395B"
+					item: "ae2:white_smart_dense_cable"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000F9678C5F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000004E9BF3D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000798704C2"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "0000000011DE4899"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "00000000030B13FF"
+				item: "ae2:quartz_block"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000AE83F426"
+				"00000000A76EE7B6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000306B3C7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000063FE1B01"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000C51224A1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009B7BD51A"
+					item: "ae2:printed_logic_processor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A05F3E33"
+					item: "ae2:printed_silicon"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000007E7CA9B8"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009585E2E1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000298DB19F"
+					type: "xp"
+					xp: 10
+				}
+				{
+					id: "00000000B34CF058"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "000000000C77F67D"
+				item: "ae2:quartz_pillar"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000A76EE7B6"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E51D2FE7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000085D6E011"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "000000000A4D6044"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003B561021"
+					item: "ae2:fluix_dust"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008EA77C5B"
+					item: "ae2:calculation_processor_press"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000539F0B84"
+					item: "ae2:printed_engineering_processor"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D3AD3EAD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B70032D4"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "00000000E6580B69"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000E04A128D"
+					item: "ae2:pattern_provider"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EFF94CB6"
+					item: "ae2:sky_dust"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003A303141"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000054DD1F7D"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "00000000C3517A57"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000049700D7C"
+					item: "ae2:orange_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002459446A"
+					item: "ae2:pink_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A1E0A85B"
+					item: "ae2:purple_paint_ball"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0000000082638508"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000076261C27"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000026BEBA61"
+					type: "xp"
+					xp: 29
+				}
+				{
+					id: "000000008ADB6636"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000032391221"
+					item: "ae2:red_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000EF1DDA07"
+					item: "ae2:sky_stone_brick"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000214F3810"
+					item: "ae2:sky_stone_small_brick"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000972E4783"
+				"00000000A76EE7B6"
+				"00000000E51D2FE7"
+				"000000007E7CA9B8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A37A6796"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008E5269B1"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000003EDE682B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000006F44DBC4"
+					item: "ae2:smooth_quartz_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000315C17B6"
+					item: "ae2:spatial_pylon"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005EC26D92"
+					item: "ae2:white_paint_ball"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000082899172"
+				"000000003315B83B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001E6A16AD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000CC9F5569"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "000000009DD4E80D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000024D4A775"
+					item: "ae2:wireless_receiver"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000059B672E4"
+					item: "ae2:yellow_paint_ball"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000082899172"
+				"000000000306B3C7"
+				"00000000E51D2FE7"
+				"000000003315B83B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000009E80630E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000091710296"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "00000000CC84A5CD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000045763E6"
+					item: "ae2:spatial_cell_component_2"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000031980146"
+					item: "ae2:annihilation_core"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000CC4526D9"
+					item: "ae2:calculation_processor"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000E94C3693"
+				"00000000F9678C5F"
+				"00000000A76EE7B6"
+				"0000000082899172"
+				"00000000E51D2FE7"
+				"00000000B957729C"
+				"000000003315B83B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000972E4783"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000278D9DEE"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "0000000007CCB917"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000061C9B596"
+					item: "ae2:fluix_glass_cable"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C5D94E8"
+					item: "ae2:formation_core"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A60FAE1B"
+					item: "ae2:quartz_glass"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00000000DE489844"
+				"00000000C2761D90"
+				"000000001E8DDC11"
+				"000000000973DB15"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003E9EEA69"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000064DB7FF5"
+					type: "xp"
+					xp: 21
+				}
+				{
+					id: "00000000A18DE15B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D7783CEB"
+					item: "ae2:storage_monitor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A4C18F9E"
+					item: "ae2:magenta_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E746255D"
+					item: "ae2:nether_quartz_wrench"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"00000000972E4783"
+				"00000000A76EE7B6"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DAF1F74F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C6FB2247"
+					type: "xp"
+					xp: 29
+				}
+				{
+					id: "00000000F08174F6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000ABDF3A65"
+					item: "ae2:energy_acceptor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000C7A5982E"
+					item: "ae2:fluix_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E5D2CE95"
+					item: "ae2:fluix_covered_cable"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"000000009E80630E"
+				"00000000972E4783"
+				"000000003E9EEA69"
+				"00000000B957729C"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CDBBE97A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000059EFE9"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "000000001D1B4F2D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000003BD10A10"
+					item: "ae2:conversion_monitor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000919371EE"
+					item: "ae2:energy_level_emitter"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E4C45CCC"
+					item: "ae2:export_bus"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000003075544"
+				"000000009E80630E"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BFF51375"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003084D15D"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "000000009229B097"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B07B5124"
+					item: "ae2:cyan_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000C3F7134"
+					item: "ae2:dense_energy_cell"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000443F5FF4"
+					item: "ae2:ender_dust"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000082638508"
+				"00000000972E4783"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000007D60A59"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000681AA755"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000007127F89D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002846A4FE"
+					item: "ae2:light_gray_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000677B1ADA"
+					item: "ae2:lime_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000004E7D507"
+					item: "ae2:chest"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000008A1197F2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BDCE789E"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "00000000A9C0E314"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009E3159D8"
+					item: "ae2:gray_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001F43517C"
+					item: "ae2:green_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A710B9BA"
+					item: "ae2:light_blue_paint_ball"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000003075544"
+				"000000009E80630E"
+				"0000000082899172"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C2CA8ECC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000FF500677"
+					type: "xp"
+					xp: 28
+				}
+				{
+					id: "00000000E8C62528"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000808EA77A"
+					item: "ae2:spatial_cell_component_128"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000067778762"
+					item: "ae2:advanced_card"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004C4999E5"
+					item: "ae2:basic_card"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000003075544"
+				"000000009E80630E"
+				"00000000972E4783"
+				"0000000082899172"
+				"00000000B957729C"
+				"000000007E7CA9B8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000FB841409"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000007CC02649"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000E883BED5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000086FA2BB0"
+					item: "ae2:chipped_budding_quartz"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B920A8C6"
+					item: "ae2:chiseled_quartz_block"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000940696BA"
+					item: "ae2:crafting_unit"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"00000000DE489844"
+				"00000000D3AD3EAD"
+				"00000000A6BE3A0F"
+				"000000001E8DDC11"
+				"00000000AF544BDE"
+				"00000000A76EE7B6"
+				"0000000082899172"
+				"000000000973DB15"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000156DA5CE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000E32593FF"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "0000000001267462"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000367AB598"
+					item: "ae2:me_p2p_tunnel"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000015D45FF6"
+					item: "ae2:pattern_access_terminal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000870F9EFE"
+					item: "ae2:pattern_encoding_terminal"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000F9678C5F"
+				"00000000B957729C"
+				"000000007E7CA9B8"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D9E0E67D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000ABC8718A"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "00000000CE4F347E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000005F916BC9"
+					item: "ae2:cable_anchor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000047B9E61C"
+					item: "ae2:quartz_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000542E5E5"
+					item: "ae2:certus_quartz_wrench"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000E0F4F69D"
+				"0000000003075544"
+				"00000000453855C5"
+				"000000000732BAA5"
+				"00000000A16F4EEA"
+				"0000000084A42F60"
+				"00000000C2761D90"
+				"00000000EA51BA95"
+				"0000000024CFCC47"
+				"00000000972E4783"
+				"00000000913004E9"
+				"0000000082899172"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006254E077"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000077DC3652"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "000000002E89CD59"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000009C5F4D4A"
+					item: "ae2:quantum_link"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F58D1F3F"
+					item: "ae2:quantum_ring"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A499F3D2"
+					item: "ae2:storage_bus"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"00000000DE489844"
+				"000000003A303141"
+				"0000000082638508"
+				"000000009E80630E"
+				"000000001E8DDC11"
+				"00000000AF544BDE"
+				"00000000AE83F426"
+				"00000000A76EE7B6"
+				"000000003E9EEA69"
+				"000000000973DB15"
+				"00000000E51D2FE7"
+				"00000000D9E0E67D"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000DD299559"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A2624138"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000990A0AB6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000035422E44"
+					item: "ae2:network_tool"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D40A6331"
+					item: "ae2:not_so_mysterious_cube"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B9EB8C9E"
+					item: "ae2:orange_lumen_paint_ball"
 					type: "item"
 				}
 			]
@@ -143,170 +1619,197 @@
 		}
 		{
 			dependencies: [
-				"00000000B8AD9015"
-				"0000000025D192B2"
+				"000000009E80630E"
+				"00000000972E4783"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000102F5116"
+			id: "00000000BEFAE8B7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C721122F"
+					id: "00000000DD46C9A9"
 					type: "xp"
-					xp: 2
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E9D64359"
-					table_id: 3218300250L
-					type: "random"
+					id: "0000000010F3DA31"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "hexagon"
+			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D6818BD6"
-					item: "ae2:printed_logic_processor"
+					id: "000000004CFEBEB2"
+					item: "ae2:memory_card"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BA048731"
-					item: "ae2:printed_silicon"
+					id: "00000000901D8D79"
+					item: "ae2:meteorite_compass"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E9105BD9"
+					item: "ae2:molecular_assembler"
 					type: "item"
 				}
 			]
-			x: -11.0d
-			y: 2.0d
+			x: -2.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
-				"000000003B7C5A4D"
-				"00000000B8AD9015"
-				"0000000025D192B2"
+				"00000000C2761D90"
+				"00000000972E4783"
+				"0000000082899172"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000098CB2BEC"
+			id: "0000000024CFCC47"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000AA61CA26"
+					id: "0000000006B0BA60"
 					type: "xp"
-					xp: 25
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EAB8DD59"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005EED32A2"
-					item: "ae2:fluix_glass_cable"
+					id: "0000000012D2A149"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000098AB2639"
-					item: "ae2:calculation_processor_press"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001805382A"
-					item: "ae2:printed_engineering_processor"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"00000000F0FE9297"
-				"0000000077EFCE95"
-				"0000000098CB2BEC"
-				"00000000254D1231"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007EF91086"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000037BAE9ED"
-					type: "xp"
-					xp: 31
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009F7C4400"
-					table_id: 3218300250L
-					type: "random"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000057FD026A"
-					item: "ae2:fluid_cell_housing"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009204B019"
+					id: "00000000F4F4670E"
 					item: "ae2:io_port"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004188932A"
+					id: "0000000076B4F789"
+					item: "ae2:cable_interface"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E87FBEE2"
 					item: "ae2:item_cell_housing"
 					type: "item"
 				}
 			]
-			x: -6.0d
-			y: 0.0d
+			x: -4.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["000000005A0BA456"]
+			dependencies: [
+				"0000000082638508"
+				"000000009E80630E"
+				"00000000972E4783"
+				"00000000A76EE7B6"
+				"0000000082899172"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005DA33800"
+			id: "00000000AF544BDE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000692EC22A"
+					id: "00000000AB0B0123"
 					type: "xp"
-					xp: 3
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B7A0CA53"
-					table_id: 3218300250L
-					type: "random"
+					id: "0000000001DA1D0F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "diamond"
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000020E06AE2"
+					item: "ae2:controller"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002A3911C2"
+					item: "ae2:crafting_terminal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000871C2D6B"
+					item: "ae2:fluid_cell_housing"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000001E8DDC11"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000973DB15"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000050DF4F63"
+					type: "xp"
+					xp: 6
+				}
+				{
+					id: "00000000C9C43905"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
 			tasks: [{
 				consume_items: false
-				id: "00000000285A9B2C"
+				id: "00000000E5122585"
 				item: "ae2:dark_monitor"
 				type: "item"
 			}]
@@ -315,2700 +1818,1062 @@
 		}
 		{
 			dependencies: [
-				"000000005DA33800"
-				"00000000F0FE9297"
-				"0000000043B0DB16"
-				"0000000098CB2BEC"
-				"000000005A0BA456"
+				"0000000082638508"
+				"00000000C2CA8ECC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A668BD39"
+			id: "000000003A460EE3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C3261CC6"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000AC10D174"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000095551C3A"
-					item: "ae2:storage_monitor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002B2B185D"
-					item: "ae2:toggle_bus"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000AE7FAD2"
-					item: "ae2:magenta_smart_dense_cable"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["00000000F0FE9297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001CCFE38B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DF202B1C"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000AC5DE318"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000A5204F6C"
-					item: "ae2:magenta_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E13AC5CD"
-					item: "ae2:nether_quartz_wrench"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003FD5CEBB"
-					item: "ae2:orange_smart_dense_cable"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["00000000F0FE9297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000DE5F5A18"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E7F3DE96"
-					type: "xp"
-					xp: 24
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000056E3B7D5"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000041FC5538"
-					item: "ae2:orange_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D3062F5B"
-					item: "ae2:pink_smart_dense_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AA440E4F"
-					item: "ae2:pink_paint_ball"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"00000000AF12AE17"
-				"00000000577F576E"
-				"00000000102F5116"
-				"00000000254D1231"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000878421FA"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000005B136E8B"
-					type: "xp"
-					xp: 27
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000002940DBD3"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000D536138D"
-					item: "ae2:spatial_cell_component_2"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000016B37BD8"
-					item: "ae2:annihilation_core"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E8314FC2"
-					item: "ae2:calculation_processor"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000AF12AE17"
-				"000000000ABB7994"
-				"00000000577F576E"
-				"00000000254D1231"
-				"000000007CD2F3FA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000077EFCE95"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000037B5C826"
-					type: "xp"
-					xp: 15
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005F34CE9B"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000006F4980F2"
-					item: "ae2:fluix_smart_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000071749307"
-					item: "ae2:formation_core"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000088CFC328"
-					item: "ae2:quartz_glass"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000477A8854"
-				"000000003B7C5A4D"
-				"00000000878421FA"
-				"00000000577F576E"
-				"0000000098CB2BEC"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004571884B"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CC54BA96"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A999D923"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004D7E7513"
-					item: "ae2:chest"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E97E1F0A"
-					item: "ae2:controller"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000962FFBA"
-					item: "ae2:crafting_terminal"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"00000000F1A0DC5C"
-				"00000000F0FE9297"
-				"00000000878421FA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003F4B4F64"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D9572B78"
-					type: "xp"
-					xp: 23
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000A4C0C617"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000014FE538D"
-					item: "ae2:cyan_smart_dense_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000005716920D"
-					item: "ae2:cyan_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FB220F67"
-					item: "ae2:dense_energy_cell"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 8.0d
-		}
-		{
-			dependencies: [
-				"00000000A668BD39"
-				"000000003B7C5A4D"
-				"00000000878421FA"
-				"0000000077EFCE95"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001B838B38"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000095DCDF82"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F65CE869"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000B95F7CF6"
-					item: "ae2:formation_plane"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003AB1FC32"
-					item: "ae2:import_bus"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000137D649F"
-					item: "ae2:inverted_toggle_bus"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000F1A0DC5C"
-				"00000000AF12AE17"
-				"00000000878421FA"
-				"0000000098CB2BEC"
-				"00000000254D1231"
-				"000000007CD2F3FA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000005975319E"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B36BA371"
+					id: "00000000CFEADFF5"
 					type: "xp"
 					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DBA31C1B"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000043CFB231"
-					item: "ae2:certus_quartz_wrench"
+					id: "000000006BA0E4D9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C1B5BDBC"
-					item: "ae2:chipped_budding_quartz"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000085D8A65C"
-					item: "ae2:crafting_unit"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"000000002717CC15"
-				"000000005DA33800"
-				"000000003B7C5A4D"
-				"0000000043B0DB16"
-				"0000000045DDA66F"
-				"000000004571884B"
-				"00000000577F576E"
-				"000000005A0BA456"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007F0F129A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000056F3E134"
-					type: "xp"
-					xp: 30
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005A7EAD4C"
-					table_id: 3218300250L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000BB7ED5F1"
-					item: "ae2:me_p2p_tunnel"
+					id: "000000009297E06D"
+					item: "ae2:redstone_card"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004A51617F"
-					item: "ae2:pattern_access_terminal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000068847E72"
-					item: "ae2:pattern_encoding_terminal"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["00000000F0FE9297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006D0D1442"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BD84ED5A"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D30B5182"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000055EFB88B"
-					item: "ae2:gray_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000039182B87"
-					item: "ae2:green_smart_dense_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C0CCD618"
-					item: "ae2:green_paint_ball"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"000000003B7C5A4D"
-				"00000000F0FE9297"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000BA3C6AF2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D15798B9"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001B1B9F37"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000090A4DA00"
-					item: "ae2:ender_dust"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000074F12808"
-					item: "ae2:fluix_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000041842CB6"
-					item: "ae2:gray_smart_dense_cable"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000A668BD39"
-				"00000000AF12AE17"
-				"00000000878421FA"
-				"0000000077EFCE95"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000082CE19B1"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C4CFD261"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CAB7AFA6"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008B7B4E4A"
-					item: "ae2:conversion_monitor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000FC9C686"
-					item: "ae2:energy_level_emitter"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000096D4F4F1"
-					item: "ae2:export_bus"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000F0FE9297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D71946E3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001CFC65C1"
-					type: "xp"
-					xp: 26
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C86FD6D7"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000BE2E2FE7"
-					item: "ae2:black_smart_dense_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000040794D45"
-					item: "ae2:black_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FF8E23F5"
-					item: "ae2:blue_smart_dense_cable"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000F1A0DC5C"
-				"00000000878421FA"
-				"00000000577F576E"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000F9393130"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B82E2117"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003D5B9DE9"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000032314CA5"
-					item: "ae2:spatial_cell_component_128"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E4B1B0F4"
-					item: "ae2:advanced_card"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D1D85F02"
-					item: "ae2:basic_card"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"00000000F1A0DC5C"
-				"00000000AF12AE17"
-				"00000000878421FA"
-				"0000000077EFCE95"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B2E8D0B4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000E7BDF01D"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D4E56BA0"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000AE91F8AD"
-					item: "ae2:matter_cannon"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000DCF49C95"
-					item: "ae2:condenser"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AD85733A"
-					item: "ae2:memory_card"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["000000007CD2F3FA"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000019207068"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CA43B6F2"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EA57872F"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000941933D2"
-					item: "ae2:cable_anchor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001889B5B0"
-					item: "ae2:quartz_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000833C03AA"
-					item: "ae2:quartz_pillar"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"000000004B1530CE"
-				"000000007EAB0C53"
-				"00000000577F576E"
-				"000000003A074752"
-				"000000009BB27898"
-				"00000000254D1231"
-				"0000000002FBF61D"
-				"00000000F1A0DC5C"
-				"000000002717CC15"
-				"00000000A668BD39"
-				"000000001CCFE38B"
-				"00000000DE5F5A18"
-				"00000000F0FE9297"
-				"0000000077EFCE95"
-				"0000000045DDA66F"
-				"000000003F4B4F64"
-				"000000006D0D1442"
-				"00000000BA3C6AF2"
-				"00000000D71946E3"
-				"0000000023097CE7"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003987CBD0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A595F946"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000FBF6148"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000086C28D1A"
-					item: "ae2:quantum_link"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000080A568B8"
-					item: "ae2:quantum_ring"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000023DD9997"
-					item: "ae2:storage_bus"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["00000000F0FE9297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000023097CE7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000000A2C99CA"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000025684F61"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000DCFF708E"
-					item: "ae2:blue_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D88DC9BE"
-					item: "ae2:brown_smart_dense_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D0ED830A"
-					item: "ae2:brown_paint_ball"
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"000000001CCFE38B"
-				"00000000878421FA"
-				"00000000577F576E"
-				"0000000098CB2BEC"
-				"0000000002FBF61D"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000FEFAC647"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000542F3DD7"
-					type: "xp"
-					xp: 22
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000029272548"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000003F6ECB3F"
-					item: "ae2:wireless_access_point"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000060D55555"
-					item: "ae2:magenta_lumen_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C3B32B9E"
-					item: "ae2:magenta_covered_cable"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"000000005DA33800"
-				"000000001CCFE38B"
-				"00000000878421FA"
-				"0000000077EFCE95"
-				"0000000043B0DB16"
-				"000000005975319E"
-				"000000005A0BA456"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000F9D059D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007DD2215E"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000873458EA"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F2ED319A"
-					item: "ae2:meteorite_compass"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A5F99DC5"
-					item: "ae2:molecular_assembler"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000FF92DB8A"
-					item: "ae2:network_tool"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["00000000AF12AE17"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003B7C5A4D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007B163074"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001AE408EA"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [{
-				consume_items: false
-				id: "000000002569F3ED"
-				item: "ae2:fluix_crystal"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"00000000477A8854"
-				"00000000DE5F5A18"
-				"0000000025D192B2"
-				"000000004571884B"
-				"00000000577F576E"
-				"0000000098CB2BEC"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CAEA6710"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000202A3F91"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003AA4A752"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000045A29C60"
-					item: "ae2:not_so_mysterious_cube"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B7994C62"
-					item: "ae2:orange_lumen_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E201CD39"
-					item: "ae2:orange_covered_cable"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["00000000F0FE9297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004B1530CE"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000ECE9DC02"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F70D2196"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000005DC1A3B"
-					item: "ae2:light_gray_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000094A17FB9"
-					item: "ae2:lime_smart_dense_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000054C0183B"
-					item: "ae2:lime_paint_ball"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["00000000F0FE9297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000007EAB0C53"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004D79CB91"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009B78E9D3"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000DF38C011"
-					item: "ae2:light_blue_smart_dense_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A9FDBF6D"
-					item: "ae2:light_blue_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F853B6B5"
-					item: "ae2:light_gray_smart_dense_cable"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000017438020"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001C69ED85"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008A3D1702"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [{
-				consume_items: false
-				id: "0000000040F44348"
-				item: "ae2:sky_dust"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["00000000F0FE9297"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003A074752"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A165A2DD"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000002BF03DA"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000007993CBC2"
-					item: "ae2:purple_smart_dense_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002702C4A9"
-					item: "ae2:purple_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000C2CACC23"
-					item: "ae2:red_smart_dense_cable"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["00000000477A8854"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AD2B2E58"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000085528B52"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C76C2A62"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000048846D3E"
-					item: "ae2:red_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000768DF5BE"
-					item: "ae2:sky_stone_brick"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000688F730A"
-					item: "ae2:sky_stone_small_brick"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 8.0d
-		}
-		{
-			dependencies: [
-				"00000000AF12AE17"
-				"000000003B7C5A4D"
-				"00000000F0FE9297"
-				"0000000077EFCE95"
-				"0000000098CB2BEC"
-				"000000007CD2F3FA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009BB27898"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000004BC7CA32"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000047C78277"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000A320A913"
-					item: "ae2:smooth_quartz_block"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D090483C"
-					item: "ae2:spatial_pylon"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E067FC1F"
-					item: "ae2:white_smart_dense_cable"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"00000000F0FE9297"
-				"00000000B8AD9015"
-				"00000000577F576E"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000002FBF61D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000B8BFF2E3"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BD56053C"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000003658B00A"
-					item: "ae2:white_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000F760FF5"
-					item: "ae2:wireless_receiver"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009B3D7CFE"
-					item: "ae2:yellow_smart_dense_cable"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"000000002717CC15"
-				"00000000AABF9518"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000045DDA66F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F21161D2"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E1F45DE2"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000089321C32"
-					item: "ae2:cable_energy_acceptor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009EA8A1DC"
-					item: "ae2:cable_interface"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E5A1D8D3"
-					item: "ae2:pattern_provider"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"0000000077EFCE95"
-				"0000000098CB2BEC"
-				"00000000BA3C6AF2"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000000B32343D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C357019F"
-					type: "xp"
-					xp: 29
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C28380B8"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001C246270"
-					item: "ae2:purple_glass_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F8685E75"
-					item: "ae2:purple_smart_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E3263EA3"
-					item: "ae2:quantum_entangled_singularity"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"00000000DE5F5A18"
-				"00000000878421FA"
-				"00000000577F576E"
-				"00000000F9393130"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000079096152"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007F51C887"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F74B5473"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000FCAC4E4A"
-					item: "ae2:void_card"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000CCA0707C"
-					item: "ae2:pink_lumen_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000312715D3"
-					item: "ae2:pink_covered_cable"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["00000000477A8854"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000001C3C6EB7"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000069197A11"
-					type: "xp"
-					xp: 28
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000410AD9BF"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008DBC73F0"
+					id: "00000000B75B8B09"
 					item: "ae2:smooth_sky_stone_chest"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000CFFA0BD5"
+					id: "000000008A2265DD"
 					item: "ae2:smooth_sky_stone_slab"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "000000001EA604FE"
-					item: "ae2:smooth_sky_stone_stairs"
-					type: "item"
-				}
 			]
-			x: -4.0d
-			y: 1.0d
+			x: -3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
-				"0000000077EFCE95"
-				"0000000098CB2BEC"
-				"0000000023097CE7"
+				"0000000076261C27"
+				"00000000DAF1F74F"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003A19CD24"
+			id: "0000000030719246"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000716D78FD"
-					type: "xp"
-					xp: 22
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FFD17D06"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000D48CC48C"
-					item: "ae2:blue_glass_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000654B38B5"
-					item: "ae2:blue_smart_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009F2AFEF5"
-					item: "ae2:brown_lumen_paint_ball"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000477A8854"
-				"00000000AD2B2E58"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002939A1AD"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A95CB56A"
+					id: "00000000702DDC67"
 					type: "xp"
 					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000009AD7E80"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000EED589A4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E573B0CC"
-					item: "ae2:smooth_sky_stone_wall"
+					id: "000000006A85378A"
+					item: "ae2:quantum_entangled_singularity"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000227F770E"
-					item: "ae2:sky_stone_brick_slab"
+					id: "000000002E86DB93"
+					item: "ae2:red_lumen_paint_ball"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001D118217"
-					item: "ae2:sky_stone_brick_stairs"
+					id: "0000000031696A37"
+					item: "ae2:red_covered_cable"
 					type: "item"
 				}
 			]
-			x: -4.0d
-			y: 2.0d
+			x: -2.0d
+			y: 9.0d
 		}
 		{
-			dependencies: [
-				"00000000AF12AE17"
-				"0000000077EFCE95"
-				"0000000098CB2BEC"
-				"000000007CD2F3FA"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A396EAAA"
+			id: "00000000DE489844"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005F8E0346"
+					id: "00000000AE60314E"
 					type: "xp"
 					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D9379C7C"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000542785AD"
-					item: "ae2:black_glass_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A586C640"
-					item: "ae2:black_smart_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F65F75D3"
-					item: "ae2:blank_pattern"
+					id: "000000003E96C23B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
 					type: "item"
 				}
 			]
-			x: -1.0d
-			y: 0.0d
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "00000000041A9E43"
+				item: "ae2:semi_dark_monitor"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 4.0d
 		}
 		{
-			dependencies: [
-				"0000000077EFCE95"
-				"0000000098CB2BEC"
-				"00000000F9393130"
-			]
+			dependencies: ["00000000D9E0E67D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009EFF50E7"
+			id: "000000005FF6C38A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000008F064FB"
+					id: "00000000CB32F082"
 					type: "xp"
-					xp: 22
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D14C6BED"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000D85FAA28"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B846EF89"
-					item: "ae2:red_glass_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D9F1DCFD"
-					item: "ae2:red_smart_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000C87527A"
-					item: "ae2:redstone_card"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["0000000019207068"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000F60DF10D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000FCC51658"
-					type: "xp"
-					xp: 23
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CA180B38"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004093CF64"
+					id: "0000000057DCE459"
 					item: "ae2:quartz_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000014E89D7D"
+					id: "000000007320DEC4"
 					item: "ae2:quartz_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005D877F4B"
+					id: "000000000829C0FD"
 					item: "ae2:quartz_brick_wall"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 3.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["0000000019207068"]
+			dependencies: ["000000009585E2E1"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003373A951"
+			id: "0000000086E1DA0D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009F0B63BE"
+					id: "000000007397A83F"
 					type: "xp"
-					xp: 29
+					xp: 26
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004E391B3D"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000060C896D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F723CE74"
+					id: "0000000095538C3F"
 					item: "ae2:quartz_pillar_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B75A11E4"
+					id: "00000000B9F3EB6E"
 					item: "ae2:quartz_pillar_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000001F512B9"
+					id: "00000000501D2964"
 					item: "ae2:quartz_pillar_wall"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 4.0d
+			y: 1.0d
 		}
 		{
-			dependencies: [
-				"000000002717CC15"
-				"00000000AD2B2E58"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D789B75B"
+			id: "00000000F9678C5F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CF98998C"
+					id: "00000000DCAD38CE"
 					type: "xp"
-					xp: 9
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D36C2AA4"
-					table_id: 3218300250L
-					type: "random"
+					id: "000000001F534472"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "00000000016624EA"
+				item: "ae2:certus_quartz_crystal"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000A16F4EEA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006E7DC0AC"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000008ED906F3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				consume_items: false
+				id: "000000000D0D84A8"
+				item: "ae2:fluix_smart_dense_cable"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"0000000076261C27"
+				"0000000082638508"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000F04D348"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000569DABC8"
+					type: "xp"
+					xp: 21
+				}
+				{
+					id: "00000000F32D20EC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002D2E5BEF"
+					id: "00000000D9A50B67"
+					item: "ae2:smooth_sky_stone_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000E7C84B31"
+					item: "ae2:smooth_sky_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000075425A1C"
+					item: "ae2:sky_stone_brick_slab"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0000000076261C27"
+				"00000000A6BE3A0F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000585A2413"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006697729E"
+					type: "xp"
+					xp: 28
+				}
+				{
+					id: "00000000346C3415"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FEF3AEDB"
+					item: "ae2:sky_stone_brick_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000048E1B5D9"
 					item: "ae2:sky_stone_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000DE37CF1"
+					id: "00000000818C7028"
 					item: "ae2:sky_stone_chest"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "0000000039E860FF"
-					item: "ae2:sky_stone_slab"
-					type: "item"
-				}
 			]
-			x: -4.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"00000000AF12AE17"
-				"00000000878421FA"
-				"0000000077EFCE95"
-				"00000000F9393130"
-				"000000007CD2F3FA"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000F551B27A"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009FD497CC"
-					type: "xp"
-					xp: 29
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F328FF6A"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000A0500119"
-					item: "ae2:brown_smart_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002F364AE8"
-					item: "ae2:capacity_card"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000E8B604E7"
-					item: "ae2:cell_workbench"
-					type: "item"
-				}
-			]
-			x: -1.0d
+			x: -3.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000AD2B2E58"]
+			dependencies: ["00000000E94C3693"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000094582E06"
+			id: "00000000AE83F426"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000416DD61F"
+					id: "0000000085F151A4"
 					type: "xp"
-					xp: 8
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C31F6AAB"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005357378D"
-					item: "ae2:sky_stone_small_brick_slab"
+					id: "000000004735085F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B4FAEEC1"
-					item: "ae2:sky_stone_small_brick_stairs"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000271F4ED7"
-					item: "ae2:sky_stone_small_brick_wall"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["000000000ABB7994"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000B8AD9015"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008371461D"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000759DE3E6"
-					table_id: 3218300250L
-					type: "random"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FC372DCB"
-					item: "ae2:quartz_fiber"
+					id: "0000000046F286E1"
+					item: "ae2:silicon_press"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007490F792"
+					id: "000000005FC7648A"
 					item: "ae2:silicon"
 					type: "item"
 				}
 			]
-			x: -12.0d
+			x: -9.0d
 			y: 1.0d
 		}
 		{
+			dependencies: ["00000000B957729C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000025D192B2"
+			id: "00000000A76EE7B6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006121A87D"
+					id: "000000006657DC3C"
 					type: "xp"
-					xp: 27
+					xp: 30
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002B09B0B3"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000849FCB2E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AD92E862"
+					id: "000000007EF01404"
+					item: "ae2:fluix_crystal"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000059BC80B6"
 					item: "ae2:engineering_processor_press"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EDD12603"
+					id: "00000000314D2B51"
 					item: "ae2:logic_processor_press"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "000000003CDAEA3B"
-					item: "ae2:silicon_press"
-					type: "item"
-				}
 			]
-			x: -12.0d
-			y: 2.0d
+			x: -6.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["000000000772F417"]
+			dependencies: ["0000000004E9BF3D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000066E5DF3F"
+			id: "00000000B8EA9949"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005C1D93F8"
+					id: "00000000BF1A8DFD"
 					type: "xp"
-					xp: 20
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000682728EF"
-					table_id: 3218300250L
-					type: "random"
+					id: "0000000097FD5797"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000062CED37A"
+					id: "000000009663AAE5"
 					item: "ae2:quartz_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D1255B21"
+					id: "00000000621A3165"
 					item: "ae2:quartz_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000008BEAB50"
+					id: "000000007A724D1C"
 					item: "ae2:quartz_wall"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 5.0d
+			y: 2.0d
 		}
 		{
+			dependencies: ["00000000B957729C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000772F417"
+			id: "00000000950011CD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CB69854C"
+					id: "0000000016CB8806"
 					type: "xp"
-					xp: 4
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F96DC6DE"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009420B628"
-					item: "ae2:quartz_block"
+					id: "00000000269A4CDB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000008C689819"
-					item: "ae2:cut_quartz_slab"
-					type: "item"
-				}
-			]
-			x: -13.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000AF12AE17"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009D9BF2CD"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C7F916F3"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008D50A216"
-					table_id: 3218300250L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000002BC65D2"
+					id: "00000000A44997E0"
 					item: "ae2:quartz_fixture"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009636DD23"
+					id: "0000000007791AE9"
 					item: "ae2:charged_staff"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C1B3ED75"
+					id: "0000000061C1F5C3"
 					item: "ae2:charger"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 6.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"00000000AF12AE17"
-				"000000003B7C5A4D"
-				"00000000102F5116"
-				"0000000098CB2BEC"
+				"00000000A76EE7B6"
+				"000000000306B3C7"
+				"00000000E51D2FE7"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000577F576E"
+			id: "0000000082899172"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006228B608"
+					id: "00000000E31AB0D9"
 					type: "xp"
-					xp: 5
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000088B259AD"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000D85C1675"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000075D714E1"
+					id: "00000000E8FF1CAE"
 					item: "ae2:engineering_processor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000019264CF7"
-					item: "ae2:fluix_covered_cable"
+					id: "0000000047D388A9"
+					item: "ae2:fluix_pearl"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000028C8311C"
-					item: "ae2:fluix_pearl"
+					id: "00000000AD464303"
+					item: "ae2:logic_processor"
 					type: "item"
 				}
 			]
-			x: -10.0d
-			y: 1.0d
+			x: -6.0d
+			y: 2.0d
 		}
 		{
+			dependencies: ["0000000004E9BF3D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005A0BA456"
+			id: "000000007E7CA9B8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D5E94E32"
+					id: "0000000099CEECCB"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000029EF3465"
-					table_id: 3218300250L
-					type: "random"
+					id: "0000000088DA5A88"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
-			shape: "pentagon"
+			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000CAB85ADF"
-				item: "ae2:monitor"
+				id: "00000000C06315A2"
+				item: "ae2:cut_quartz_block"
 				type: "item"
 			}]
 			x: -10.0d
-			y: 3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
-				"00000000102F5116"
-				"0000000098CB2BEC"
-				"000000007CD2F3FA"
+				"00000000E94C3693"
+				"00000000F9678C5F"
+				"00000000E51D2FE7"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000254D1231"
+			id: "000000003315B83B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D38B761A"
+					id: "00000000C53316D8"
 					type: "xp"
-					xp: 12
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DF1C01D0"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000EB5AE55F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "pentagon"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000333FFF9E"
-					item: "ae2:logic_processor"
+					id: "0000000098A080A4"
+					item: "ae2:printed_calculation_processor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002E59910F"
-					item: "ae2:printed_calculation_processor"
+					id: "00000000B5659C76"
+					item: "ae2:quartz_fiber"
 					type: "item"
 				}
 			]
-			x: -10.0d
-			y: 2.0d
+			x: -6.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"00000000AF12AE17"
-				"00000000878421FA"
-				"0000000077EFCE95"
-				"000000000772F417"
-				"00000000577F576E"
-				"000000007CD2F3FA"
+				"00000000F9678C5F"
+				"000000009E80630E"
+				"00000000972E4783"
+				"0000000004E9BF3D"
+				"0000000082899172"
+				"00000000B957729C"
+				"00000000E51D2FE7"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F1A0DC5C"
+			id: "0000000003075544"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000940CDF61"
+					id: "0000000017E9962E"
 					type: "xp"
-					xp: 18
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000654C89E8"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000948FBD17"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D27E2427"
+					id: "000000006D26E9F1"
 					item: "ae2:spatial_cell_component_16"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BE7254E1"
+					id: "00000000C0ED8EE0"
 					item: "ae2:damaged_budding_quartz"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000327A751B"
+					id: "0000000044A36430"
 					item: "ae2:energy_cell"
 					type: "item"
 				}
 			]
-			x: -8.0d
-			y: 1.0d
+			x: -6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
-				"000000005DA33800"
-				"000000002717CC15"
-				"00000000878421FA"
-				"0000000043B0DB16"
-				"0000000077EFCE95"
-				"000000005A0BA456"
-				"00000000254D1231"
+				"00000000DE489844"
+				"00000000A6BE3A0F"
+				"000000009E80630E"
+				"000000001E8DDC11"
+				"00000000972E4783"
+				"0000000082899172"
+				"000000000973DB15"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000477A8854"
+			id: "0000000082638508"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000065EC5A20"
+					id: "000000007F1E3260"
 					type: "xp"
-					xp: 3
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000665B760F"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000A1F2ADAB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001A91B523"
+					id: "000000006D07C0D4"
 					item: "ae2:terminal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000F198CB7"
+					id: "00000000C94C76CE"
 					item: "ae2:smooth_sky_stone_block"
 					type: "item"
 				}
 			]
-			x: -8.0d
-			y: 2.0d
+			x: -6.0d
+			y: 4.0d
 		}
 		{
-			dependencies: [
-				"00000000878421FA"
-				"0000000077EFCE95"
-				"00000000577F576E"
-				"0000000098CB2BEC"
-			]
+			dependencies: ["00000000D3AD3EAD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F0FE9297"
+			id: "00000000A6BE3A0F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007435364F"
+					id: "00000000155861AF"
 					type: "xp"
-					xp: 19
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003D6BAE58"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000AC55B576"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000412483C6"
+					item: "ae2:cable_pattern_provider"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001821D886"
+					item: "ae2:sky_stone_block"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"000000009E80630E"
+				"00000000972E4783"
+				"0000000082899172"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C2761D90"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000051B44907"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "000000000387DE4B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C58B72AD"
-					item: "ae2:fluix_smart_dense_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000004B70A85"
+					id: "0000000038A11B21"
 					item: "ae2:drive"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000386B6E34"
+					id: "00000000B6FD72C4"
+					item: "ae2:interface"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B7915900"
 					item: "ae2:level_emitter"
 					type: "item"
 				}
 			]
-			x: -8.0d
-			y: 0.0d
+			x: -6.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["000000000772F417"]
+			dependencies: [
+				"0000000076261C27"
+				"00000000A6BE3A0F"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F038472D"
+			id: "00000000B2689FFF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003B5E81C5"
+					id: "000000009D6BCB91"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007B99800D"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "octagon"
-			tasks: [{
-				consume_items: false
-				id: "000000004938F7E8"
-				item: "ae2:chiseled_quartz_block"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["000000005DA33800"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000043B0DB16"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000009750FF97"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000003349EFE9"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000B3512DD3"
-				item: "ae2:semi_dark_monitor"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"000000002717CC15"
-				"0000000077EFCE95"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AEDE289F"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006508320D"
-					type: "xp"
-					xp: 27
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000B40858B"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000BEBE1D97"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006BC52AA4"
-					item: "ae2:sky_stone_stairs"
+					id: "000000007FA75D17"
+					item: "ae2:sky_stone_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000072876407"
-					item: "ae2:sky_stone_tank"
+					id: "00000000EEB6331C"
+					item: "ae2:sky_stone_small_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000073278249"
-					item: "ae2:sky_stone_wall"
+					id: "0000000066B08D9C"
+					item: "ae2:sky_stone_small_brick_stairs"
 					type: "item"
 				}
 			]
-			x: -4.0d
-			y: 5.0d
+			x: -3.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"000000007EF91086"
-				"000000005975319E"
-				"00000000F9393130"
+				"00000000972E4783"
+				"00000000AF544BDE"
+				"00000000C2CA8ECC"
+				"00000000FB841409"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005C369D7B"
+			id: "00000000152D06B3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008CE574FD"
+					id: "000000007FF63DCE"
 					type: "xp"
-					xp: 27
+					xp: 29
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000894E386A"
-					table_id: 3218300250L
-					type: "random"
+					id: "000000008861AA3B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003E03FC52"
+					id: "0000000015606021"
 					item: "ae2:spatial_storage_cell_128"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005F983207"
+					id: "00000000E8EB08BB"
 					item: "ae2:16k_crafting_storage"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002FC2DEBD"
+					id: "000000000AA74F6B"
 					item: "ae2:fluid_storage_cell_16k"
 					type: "item"
 				}
@@ -3018,46 +2883,52 @@
 		}
 		{
 			dependencies: [
-				"000000007EF91086"
-				"00000000F1A0DC5C"
-				"000000004571884B"
+				"0000000003075544"
+				"0000000024CFCC47"
+				"00000000AF544BDE"
+				"0000000007D60A59"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000006B9C41B"
+			id: "00000000E2FB899B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000060C89D37"
+					id: "00000000997E7BAF"
 					type: "xp"
-					xp: 6
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C41DF4EC"
-					table_id: 3218300250L
-					type: "random"
+					id: "0000000074411360"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000224E7BF4"
+					id: "00000000481C6D29"
 					item: "ae2:item_storage_cell_16k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005D27BEBB"
+					id: "0000000003F44C1C"
 					item: "ae2:portable_fluid_cell_16k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000006FBE0ABD"
+					id: "00000000DDE0E9E9"
 					item: "ae2:portable_item_cell_16k"
 					type: "item"
 				}
@@ -3067,97 +2938,106 @@
 		}
 		{
 			dependencies: [
-				"000000000ABB7994"
-				"000000003B7C5A4D"
-				"0000000077EFCE95"
-				"00000000AABF9518"
+				"00000000A37A6796"
+				"00000000972E4783"
+				"0000000082899172"
+				"00000000C2CA8ECC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000595F1A88"
+			id: "00000000245ADDB0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D7A3445A"
+					id: "00000000C229B8B7"
 					type: "xp"
-					xp: 25
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000AAC6E92"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000087B210C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000002E835B9"
-					item: "ae2:tiny_tnt"
+					id: "000000001113CA30"
+					item: "ae2:smooth_quartz_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007F8CD430"
-					item: "ae2:quartz_vibrant_glass"
+					id: "00000000D1CA190A"
+					item: "ae2:smooth_quartz_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E732EFE7"
-					item: "ae2:vibration_chamber"
+					id: "0000000085780C2D"
+					item: "ae2:spatial_anchor"
 					type: "item"
 				}
 			]
-			x: -4.0d
-			y: 8.0d
+			x: -3.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
-				"00000000F1A0DC5C"
-				"000000007EF91086"
-				"0000000077EFCE95"
-				"000000005975319E"
+				"0000000003075544"
+				"00000000972E4783"
+				"00000000FB841409"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000087BA3E"
+			id: "000000007A9C5A36"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001BD3437E"
+					id: "00000000EC058B45"
 					type: "xp"
-					xp: 13
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C0AF287E"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000275AB842"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001E4FEE2A"
+					id: "000000004CA0CA83"
 					item: "ae2:spatial_storage_cell_16"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B733F4CA"
+					id: "00000000B3A7B88D"
 					item: "ae2:1k_crafting_storage"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002DAF71BF"
+					id: "000000003E578109"
 					item: "ae2:fluid_storage_cell_1k"
 					type: "item"
 				}
@@ -3166,143 +3046,158 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["00000000F038472D"]
+			dependencies: ["00000000FB841409"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BB165197"
+			id: "00000000E90C4C22"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C3BFEE23"
+					id: "000000003F341735"
 					type: "xp"
-					xp: 6
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C3DED845"
-					table_id: 3218300250L
-					type: "random"
+					id: "000000009FFD5BCA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007253277B"
+					id: "000000008B42E042"
 					item: "ae2:chiseled_quartz_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EB55FF6F"
+					id: "00000000E275278B"
 					item: "ae2:chiseled_quartz_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000056087BB0"
+					id: "0000000083DF7289"
 					item: "ae2:chiseled_quartz_wall"
 					type: "item"
 				}
 			]
 			x: -1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000E94C3693"
+				"0000000024CFCC47"
+				"00000000972E4783"
+				"0000000082899172"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000046F98A5E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D218C252"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "00000000770536C8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000088E8048C"
+					item: "ae2:spatial_io_port"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000A1445E1E"
+					item: "ae2:tiny_tnt"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BBDD7136"
+					item: "ae2:quartz_vibrant_glass"
+					type: "item"
+				}
+			]
+			x: -3.0d
 			y: 7.0d
 		}
 		{
 			dependencies: [
-				"000000007EF91086"
-				"00000000AF12AE17"
-				"00000000577F576E"
-				"000000007CD2F3FA"
-				"0000000002FBF61D"
+				"0000000003075544"
+				"0000000024CFCC47"
+				"00000000AF544BDE"
+				"0000000007D60A59"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004A4DA176"
+			id: "0000000027F3A72A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EB72195A"
+					id: "0000000069BC788B"
 					type: "xp"
-					xp: 30
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007C1A0EF6"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000C00F8931"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DFB86511"
-					item: "ae2:view_cell"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000005F15BF4"
-					item: "ae2:white_lumen_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000002BC97160"
-					item: "ae2:white_covered_cable"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 9.0d
-		}
-		{
-			dependencies: [
-				"000000007EF91086"
-				"00000000F1A0DC5C"
-				"000000004571884B"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003F224B34"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D2213B32"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B601546B"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000BB57D954"
+					id: "00000000D1D1BA32"
 					item: "ae2:item_storage_cell_1k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000A333BC8"
+					id: "00000000C433A111"
 					item: "ae2:portable_fluid_cell_1k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B1666D39"
+					id: "0000000017849CEE"
 					item: "ae2:portable_item_cell_1k"
 					type: "item"
 				}
@@ -3312,94 +3207,105 @@
 		}
 		{
 			dependencies: [
-				"000000003B7C5A4D"
-				"000000009BB27898"
+				"0000000076261C27"
+				"00000000A6BE3A0F"
+				"00000000972E4783"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000069D2FAD0"
+			id: "00000000A429AE0E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002B5E2E66"
+					id: "00000000DB87C288"
 					type: "xp"
 					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E9A620CF"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000A6A88AFF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000045AA69B6"
-					item: "ae2:fluix_upgrade_smithing_template"
+					id: "000000003437D1BC"
+					item: "ae2:sky_stone_small_brick_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A8C8BADF"
-					item: "ae2:smooth_quartz_slab"
+					id: "000000001C3D6AA0"
+					item: "ae2:sky_stone_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000694BF935"
-					item: "ae2:smooth_quartz_stairs"
+					id: "000000001D923347"
+					item: "ae2:sky_stone_tank"
 					type: "item"
 				}
 			]
-			x: -4.0d
-			y: 6.0d
+			x: -3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
-				"000000007EF91086"
-				"0000000077EFCE95"
-				"000000005975319E"
+				"00000000AF544BDE"
+				"00000000972E4783"
+				"00000000FB841409"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B1EC3952"
+			id: "00000000AE2232D8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D4DE6645"
+					id: "000000005742497B"
 					type: "xp"
-					xp: 8
+					xp: 24
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000236A6070"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000C79D52B6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000043133504"
+					id: "0000000070D16CA9"
 					item: "ae2:256k_crafting_storage"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000061C5ECE2"
+					id: "000000005B414A8F"
 					item: "ae2:fluid_storage_cell_256k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000024A72DE9"
+					id: "00000000AD2AFE85"
 					item: "ae2:item_storage_cell_256k"
 					type: "item"
 				}
@@ -3409,99 +3315,108 @@
 		}
 		{
 			dependencies: [
-				"000000007EF91086"
-				"00000000577F576E"
-				"0000000098CB2BEC"
-				"00000000F9393130"
-				"000000009BB27898"
+				"00000000A37A6796"
+				"00000000A6BE3A0F"
+				"00000000A76EE7B6"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000319B7380"
+			id: "00000000F06A11D6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B8309EE1"
+					id: "0000000002EBE7F2"
+					type: "xp"
+					xp: 25
+				}
+				{
+					id: "00000000B397D797"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000D755B68A"
+					item: "ae2:sky_stone_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009491C84B"
+					item: "ae2:fluix_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005F1C8B26"
+					item: "ae2:smooth_quartz_slab"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0000000003075544"
+				"0000000024CFCC47"
+				"000000009E80630E"
+				"00000000AF544BDE"
+				"00000000972E4783"
+				"0000000007D60A59"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000031B817D8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000090395C3"
 					type: "xp"
 					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A67E6DC8"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000A784000A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DFB007ED"
-					item: "ae2:smooth_quartz_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003E332295"
-					item: "ae2:spatial_anchor"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009B8D63D5"
-					item: "ae2:spatial_io_port"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"00000000F1A0DC5C"
-				"000000007EF91086"
-				"00000000878421FA"
-				"0000000077EFCE95"
-				"000000004571884B"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000FB9F00C5"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F716557C"
-					type: "xp"
-					xp: 24
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B4C7ADC6"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C7916BD0"
+					id: "000000001AF602A5"
 					item: "ae2:portable_fluid_cell_256k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000EC1EF388"
+					id: "0000000004EE85E2"
 					item: "ae2:portable_item_cell_256k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003542E2EB"
+					id: "0000000098459774"
 					item: "ae2:spatial_storage_cell_2"
 					type: "item"
 				}
@@ -3511,95 +3426,104 @@
 		}
 		{
 			dependencies: [
-				"000000003F4B4F64"
-				"00000000577F576E"
-				"000000007CD2F3FA"
+				"00000000BFF51375"
+				"000000007E7CA9B8"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002777365E"
+			id: "00000000C13B116F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000121B952F"
+					id: "00000000A643AB3E"
 					type: "xp"
-					xp: 5
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000001A23A62"
-					table_id: 3218300250L
-					type: "random"
+					id: "000000000FC479EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000321B3BCB"
+					id: "000000001C161D1C"
+					item: "ae2:cut_quartz_stairs"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D4EBFA23"
 					item: "ae2:cut_quartz_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000838DD802"
+					id: "0000000006F9777A"
 					item: "ae2:cyan_lumen_paint_ball"
 					type: "item"
 				}
-				{
-					consume_items: false
-					id: "00000000D3043C5D"
-					item: "ae2:cyan_covered_cable"
-					type: "item"
-				}
 			]
-			x: -2.0d
-			y: 0.0d
+			x: -1.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
-				"000000007EF91086"
-				"0000000077EFCE95"
-				"000000005975319E"
+				"00000000AF544BDE"
+				"00000000972E4783"
+				"00000000FB841409"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D7FED2C7"
+			id: "0000000020187554"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000790E3DD"
+					id: "000000001A288743"
 					type: "xp"
-					xp: 26
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F2244760"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000D6C58982"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C33AEC01"
+					id: "00000000D5076DFE"
 					item: "ae2:4k_crafting_storage"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000031065F2B"
+					id: "000000007767CAE7"
 					item: "ae2:fluid_storage_cell_4k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007E263AAC"
+					id: "00000000E297DB3C"
 					item: "ae2:item_storage_cell_4k"
 					type: "item"
 				}
@@ -3609,89 +3533,108 @@
 		}
 		{
 			dependencies: [
-				"0000000077EFCE95"
-				"0000000098CB2BEC"
+				"0000000082638508"
+				"000000001E6A16AD"
+				"00000000DAF1F74F"
+				"00000000BFF51375"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000757F4D66"
+			id: "000000005E973C35"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D1DC93EF"
+					id: "0000000056C946F5"
 					type: "xp"
-					xp: 14
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C5815B58"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000F3EDAD13"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000F958EF2B"
-					item: "ae2:yellow_glass_cable"
+					id: "00000000528E7C4C"
+					item: "ae2:wireless_terminal"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000400B4D79"
-					item: "ae2:yellow_smart_cable"
+					id: "00000000A9328951"
+					item: "ae2:yellow_lumen_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000071212162"
+					item: "ae2:yellow_covered_cable"
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 1.0d
+			x: -3.0d
+			y: 9.0d
 		}
 		{
 			dependencies: [
-				"00000000F1A0DC5C"
-				"000000007EF91086"
-				"000000004571884B"
-				"000000005975319E"
+				"0000000003075544"
+				"0000000024CFCC47"
+				"00000000AF544BDE"
+				"0000000007D60A59"
+				"00000000FB841409"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000588A2D64"
+			id: "000000006982579B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004BBFCA60"
+					id: "0000000011B2381D"
 					type: "xp"
-					xp: 5
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000FE13AD1"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000DDAD3847"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000059EFD676"
+					id: "00000000DFC01FA9"
 					item: "ae2:portable_fluid_cell_4k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000031AEE662"
+					id: "00000000FB771DB2"
 					item: "ae2:portable_item_cell_4k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009CD32F5D"
+					id: "00000000EC395221"
 					item: "ae2:64k_crafting_storage"
 					type: "item"
 				}
@@ -3701,98 +3644,165 @@
 		}
 		{
 			dependencies: [
-				"00000000F1A0DC5C"
-				"0000000077EFCE95"
-				"00000000577F576E"
-				"000000005975319E"
-				"00000000F9393130"
+				"0000000003075544"
+				"00000000972E4783"
+				"0000000082899172"
+				"00000000C2CA8ECC"
+				"00000000FB841409"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000277E4737"
+			id: "00000000329AF1F9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003A7EE72C"
+					id: "00000000DF509863"
 					type: "xp"
-					xp: 17
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D53F7C85"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000305E8E94"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000094941335"
+					id: "000000006587D4C9"
 					item: "ae2:color_applicator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000983C872C"
+					id: "00000000A15D1492"
 					item: "ae2:crafting_card"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000085372C2E"
+					id: "00000000843537DC"
 					item: "ae2:crafting_accelerator"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 8.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
-				"00000000F1A0DC5C"
-				"000000007EF91086"
-				"0000000077EFCE95"
-				"000000004571884B"
+				"00000000F9678C5F"
+				"00000000A37A6796"
+				"0000000024CFCC47"
+				"00000000A76EE7B6"
+				"00000000DAF1F74F"
+				"00000000B957729C"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002F480D59"
+			id: "000000005531BD29"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005249FB7C"
+					id: "00000000FE3DD31A"
 					type: "xp"
-					xp: 17
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000BFF3BA6"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000ADB04A63"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001DE1E251"
+					id: "000000009FE8D8C4"
+					item: "ae2:vibration_chamber"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000ED0772AD"
+					item: "ae2:view_cell"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000FEBA56C1"
+					item: "ae2:white_lumen_paint_ball"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0000000003075544"
+				"00000000972E4783"
+				"00000000AF544BDE"
+				"0000000007D60A59"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D1546A80"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000006215D6B3"
+					type: "xp"
+					xp: 28
+				}
+				{
+					id: "0000000016040D96"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002649AD8E"
 					item: "ae2:fluid_storage_cell_64k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000033163C5"
+					id: "0000000084766D6A"
 					item: "ae2:item_storage_cell_64k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000035692555"
+					id: "0000000033F7C76F"
 					item: "ae2:portable_fluid_cell_64k"
 					type: "item"
 				}
@@ -3802,152 +3812,109 @@
 		}
 		{
 			dependencies: [
-				"00000000A668BD39"
-				"00000000AF12AE17"
-				"000000005975319E"
-				"00000000BA3C6AF2"
-				"000000007CD2F3FA"
+				"000000003E9EEA69"
+				"00000000DAF1F74F"
+				"00000000B957729C"
+				"000000007E7CA9B8"
+				"00000000FB841409"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000040D21BC8"
+			id: "000000003EA51704"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000078AE93C0"
+					id: "00000000A10F6B95"
 					type: "xp"
-					xp: 17
+					xp: 31
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000098C3F688"
-					table_id: 3218300250L
-					type: "random"
+					id: "000000004EC642F9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000DB3B491"
+					id: "00000000EB3D9EEE"
 					item: "ae2:crafting_monitor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000558A01AF"
+					id: "000000000BB1520B"
 					item: "ae2:crystal_resonance_generator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000061C36DBB"
-					item: "ae2:cut_quartz_stairs"
+					id: "00000000C15B5276"
+					item: "ae2:cut_quartz_slab"
 					type: "item"
 				}
 			]
 			x: -1.0d
-			y: 9.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
-				"00000000AF12AE17"
-				"00000000477A8854"
-				"000000004571884B"
-				"000000003F4B4F64"
-				"00000000BA3C6AF2"
-				"000000007CD2F3FA"
-				"0000000002FBF61D"
+				"0000000003075544"
+				"0000000024CFCC47"
+				"00000000A76EE7B6"
+				"0000000007D60A59"
+				"00000000C2CA8ECC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AB270E0E"
+			id: "00000000C92E4132"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C017893C"
+					id: "000000004E2EFB7C"
 					type: "xp"
-					xp: 14
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000788DF90E"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000D202E1A4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E89745C0"
-					item: "ae2:wireless_booster"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009012EA7D"
-					item: "ae2:wireless_crafting_terminal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000C32A570"
-					item: "ae2:wireless_terminal"
-					type: "item"
-				}
-			]
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000007EF91086"
-				"00000000F1A0DC5C"
-				"000000003B7C5A4D"
-				"000000004571884B"
-				"00000000F9393130"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000075C15D91"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000DC25DDD5"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CE427B53"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000075BEC1E0"
+					id: "000000006A83332D"
 					item: "ae2:portable_item_cell_64k"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DD44A2DB"
+					id: "00000000D4DA3E34"
 					item: "ae2:speed_card"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000D94859D"
+					id: "00000000077777BE"
 					type: "item"
 				}
 			]
@@ -3955,82 +3922,106 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["000000007CD2F3FA"]
+			dependencies: [
+				"0000000003075544"
+				"000000009E80630E"
+				"00000000A76EE7B6"
+				"0000000082899172"
+				"00000000B957729C"
+				"00000000C2CA8ECC"
+				"00000000FB841409"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AF12AE17"
+			id: "00000000D845F2B1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A22CA8AC"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000004DE88E1C"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000061FCA28C"
-					item: "ae2:charged_certus_quartz_crystal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000039B7B3E2"
-					item: "ae2:fluix_dust"
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000BA3C6AF2"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006845409D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000098429AB6"
+					id: "000000008A73F79E"
 					type: "xp"
 					xp: 27
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C7D5859C"
-					table_id: 3218300250L
-					type: "random"
+					id: "000000003682EC32"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C13B3499"
+					id: "00000000AAA3F3EE"
+					item: "ae2:entropy_manipulator"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000005B615E7F"
+					item: "ae2:equal_distribution_card"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002566570C"
+					item: "ae2:flawed_budding_quartz"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000DAF1F74F"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AC15490E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000046CC252E"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "0000000071914468"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000056F4D6D5"
 					item: "ae2:fluix_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002580D0AD"
+					id: "0000000006BA3D7F"
 					item: "ae2:fluix_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A288329B"
+					id: "0000000042470A46"
 					item: {
 						Count: 1
 						id: "ae2:fluix_sword"
@@ -4041,433 +4032,205 @@
 					type: "item"
 				}
 			]
-			x: -2.0d
-			y: 3.0d
+			x: -1.0d
+			y: 9.0d
 		}
 		{
 			dependencies: [
-				"00000000F1A0DC5C"
-				"000000003B7C5A4D"
-				"00000000878421FA"
-				"000000003F4B4F64"
-				"00000000577F576E"
-				"00000000F9393130"
+				"00000000DAF1F74F"
+				"000000008A1197F2"
+				"00000000C2CA8ECC"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000879FC27E"
+			id: "000000009A1926B1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E15ABE2D"
+					id: "00000000F8B44CFE"
 					type: "xp"
-					xp: 22
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A78E2161"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000C94A244A"
-					item: "ae2:energy_card"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000A607D661"
-					item: "ae2:entropy_manipulator"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001B2471D2"
-					item: "ae2:equal_distribution_card"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000AF12AE17"
-				"000000005975319E"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E334344C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000003D85D0CA"
-					type: "xp"
-					xp: 12
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001D2DECC9"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000001DCC4DE7"
-					item: "ae2:flawed_budding_quartz"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000026132D28"
+					id: "00000000CF58F75E"
 					item: {
 						Count: 1
-						id: "ae2:fluix_axe"
+						id: "ftbquests:lootcrate"
 						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000003EF2CA1D"
-					item: {
-						Count: 1
-						id: "ae2:fluix_hoe"
-						tag: {
-							Damage: 0
+							type: "chaos_box_ae2"
 						}
 					}
 					type: "item"
 				}
 			]
-			x: -2.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"000000006D0D1442"
-				"00000000BA3C6AF2"
-				"00000000F9393130"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000016E8EAC4"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000055391CBA"
-					type: "xp"
-					xp: 22
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000009762848F"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000006A265D40"
+					id: "000000008635FFEF"
 					item: "ae2:fluix_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000087D3F451"
+					id: "000000008CD0A9EA"
 					item: "ae2:fuzzy_card"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003736A42C"
+					id: "000000009851A36B"
 					item: "ae2:gray_lumen_paint_ball"
 					type: "item"
 				}
 			]
 			x: -2.0d
-			y: 4.0d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"00000000F038472D"
-				"000000000772F417"
-			]
+			dependencies: ["00000000F9678C5F"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007CD2F3FA"
+			id: "00000000B957729C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C4E53153"
+					id: "0000000062674DF7"
 					type: "xp"
-					xp: 1
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B543A204"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "hexagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000537C6107"
-					item: "ae2:certus_quartz_crystal"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000057EF9BA4"
-					item: "ae2:cut_quartz_block"
+					id: "000000005118FEF5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
 					type: "item"
 				}
 			]
-			x: -11.0d
+			shape: "gear"
+			tasks: [{
+				consume_items: false
+				id: "00000000218E77BD"
+				item: "ae2:charged_certus_quartz_crystal"
+				type: "item"
+			}]
+			x: -7.0d
 			y: 1.0d
 		}
 		{
-			dependencies: ["0000000017438020"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002717CC15"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F6EE7E55"
-					type: "xp"
-					xp: 30
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000EA02C43E"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000356CEB85"
-					item: "ae2:interface"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007BF888D9"
-					item: "ae2:cable_pattern_provider"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000009D704E52"
-					item: "ae2:sky_stone_block"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 3.0d
-		}
-		{
 			dependencies: [
-				"0000000077EFCE95"
-				"00000000577F576E"
-				"000000006D0D1442"
+				"00000000972E4783"
+				"00000000DAF1F74F"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C75BE0F2"
+			id: "00000000A3FF11BB"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002A1FCC73"
+					id: "00000000AC299341"
 					type: "xp"
-					xp: 13
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001F334871"
-					table_id: 3218300250L
-					type: "random"
+					id: "00000000D261A57D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000501956E8"
-					item: "ae2:gray_smart_cable"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D05F458B"
-					item: "ae2:green_lumen_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000001492A1A"
-					item: "ae2:green_covered_cable"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"000000007EAB0C53"
-				"00000000577F576E"
-				"00000000F9393130"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003C8278BC"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000006705CB6"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B0E1AF4A"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004ECE1643"
-					item: "ae2:inverter_card"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000006C4737B6"
-					item: "ae2:light_blue_lumen_paint_ball"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000007D188EBC"
-					item: "ae2:light_blue_covered_cable"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 7.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000AABF9518"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000893F9886"
-					type: "xp"
-					xp: 3
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000AE8111A3"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "00000000EB10B53A"
-				item: "ae2:energy_acceptor"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 5.0d
-		}
-		{
-			dependencies: [
-				"0000000077EFCE95"
-				"00000000BA3C6AF2"
-				"0000000098CB2BEC"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000078821979"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000006F008BF"
-					type: "xp"
-					xp: 22
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000FECBE1CE"
-					table_id: 3218300250L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000008C4F3782"
+					id: "00000000FEEEE7F4"
 					item: "ae2:growth_accelerator"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001EADB9FF"
+					id: "00000000824DA191"
 					item: "ae2:guide"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001FA1A826"
+					id: "00000000A9942BBA"
 					item: "ae2:inscriber"
 					type: "item"
 				}
 			]
 			x: -2.0d
-			y: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"00000000DAF1F74F"
+				"000000008A1197F2"
+				"00000000C2CA8ECC"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000353209B4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F62EA79E"
+					type: "xp"
+					xp: 3
+				}
+				{
+					id: "00000000702E69AB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_ae2"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B9718F85"
+					item: "ae2:inverter_card"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006259D2A6"
+					item: "ae2:light_blue_lumen_paint_ball"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B392A21E"
+					item: "ae2:light_blue_covered_cable"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
 		}
 	]
 	title: "Applied Energistics 2"

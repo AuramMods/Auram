@@ -2,56 +2,50 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_deep_aether"
-	group: "00000000DEB299A3"
-	icon: "deep_aether:skyjade_block"
-	id: "000000007A6CFC60"
+	group: "000000008CDEF944"
+	icon: "deep_aether:nimbus_stone"
+	id: "00000000263CA44F"
 	order_index: 82
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["000000005BC12E4B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AF67D469"
+			id: "00000000A18DD5C9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000975FC7A6"
+					id: "00000000048CD304"
 					type: "xp"
-					xp: 3
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AE328BC8"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000001216B0A9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D52399B0"
-					item: {
-						Count: 1
-						id: "deep_aether:skyjade_boots"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "000000009FF383F4"
+					item: "deep_aether:roseroot_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C9CB7DD1"
-					item: {
-						Count: 1
-						id: "deep_aether:skyjade_chestplate"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "00000000BB0D2CF4"
+					item: "deep_aether:roseroot_trapdoor"
 					type: "item"
 				}
 			]
@@ -59,43 +53,43 @@
 			y: 7.0d
 		}
 		{
+			dependencies: ["000000005BC12E4B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F23A1F97"
+			id: "000000004BAC661A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007836B7B0"
+					id: "000000001DBE5863"
 					type: "xp"
-					xp: 12
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F4AE1F08"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000C1D82DCD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000006DCB2D4"
-					item: "deep_aether:roseroot_wall"
+					id: "000000009184B9D2"
+					item: "deep_aether:roseroot_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000604E64BA"
-					item: {
-						Count: 1
-						id: "deep_aether:skyjade_axe"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "00000000FE8B4EF2"
+					item: "deep_aether:roseroot_slab"
 					type: "item"
 				}
 			]
@@ -103,38 +97,43 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000003C0E9F60"]
+			dependencies: ["000000005BC12E4B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BDC29472"
+			id: "000000004D4B4FE2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B7020F5E"
+					id: "00000000473B266A"
 					type: "xp"
-					xp: 18
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000076A660C5"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000050550787"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000850B3EFF"
-					item: "deep_aether:roseroot_stairs"
+					id: "0000000053C6EB95"
+					item: "deep_aether:roseroot_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008B02B9A3"
-					item: "deep_aether:roseroot_trapdoor"
+					id: "00000000580CD829"
+					item: "deep_aether:roseroot_hanging_sign"
 					type: "item"
 				}
 			]
@@ -142,38 +141,43 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000003C0E9F60"]
+			dependencies: ["000000005BC12E4B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000018957B87"
+			id: "00000000A3C40274"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000081EEAAAA"
+					id: "0000000005AF957D"
 					type: "xp"
-					xp: 4
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005A27A7D9"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000056D7B558"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000325EE86D"
-					item: "deep_aether:roseroot_pressure_plate"
+					id: "0000000067A6EC34"
+					item: "deep_aether:roseroot_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000060E7E31E"
-					item: "deep_aether:roseroot_slab"
+					id: "000000006EDF2E85"
+					item: "deep_aether:roseroot_fence"
 					type: "item"
 				}
 			]
@@ -181,38 +185,46 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000003C0E9F60"]
+			dependencies: [
+				"000000005BC12E4B"
+				"000000001C0BE227"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000070291D1A"
+			id: "0000000029B7B40B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000070949544"
+					id: "00000000330942D8"
 					type: "xp"
-					xp: 16
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E5A5D403"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000000EEBF141"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B0D18263"
-					item: "deep_aether:roseroot_fence_gate"
+					id: "00000000156619F3"
+					item: "deep_aether:roseroot_chest_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001316243A"
-					item: "deep_aether:roseroot_hanging_sign"
+					id: "00000000DEA56FC4"
+					item: "deep_aether:roseroot_button"
 					type: "item"
 				}
 			]
@@ -220,38 +232,43 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000003C0E9F60"]
+			dependencies: ["00000000427DCF7A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD0E42AD"
+			id: "000000009A344155"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006E75DD69"
+					id: "000000005FC9842C"
 					type: "xp"
-					xp: 13
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DA02245C"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000F161FAD7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FC94C54A"
-					item: "deep_aether:roseroot_door"
+					id: "000000009CA7D48D"
+					item: "deep_aether:raw_clorite_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000064471A74"
-					item: "deep_aether:roseroot_fence"
+					id: "0000000070F50BE6"
+					item: "minecraft:red_dye"
 					type: "item"
 				}
 			]
@@ -259,41 +276,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"000000003C0E9F60"
-				"0000000088560BDD"
-			]
+			dependencies: ["00000000427DCF7A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000699E6C1F"
+			id: "000000003F5BC05E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000676BE894"
+					id: "000000004D8D2BC7"
 					type: "xp"
-					xp: 10
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000092A7AF60"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000A0454D83"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000034400A9A"
-					item: "deep_aether:roseroot_chest_boat"
+					id: "00000000124FEB2D"
+					item: "deep_aether:raw_clorite_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000671BC3B4"
-					item: "deep_aether:roseroot_button"
+					id: "00000000E714D6A4"
+					item: "deep_aether:raw_clorite_stairs"
 					type: "item"
 				}
 			]
@@ -301,38 +320,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000003CFD2150"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004BBFC1EB"
+			id: "0000000025FB98BF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005A77069B"
+					id: "000000004B7C288A"
 					type: "xp"
-					xp: 9
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9E4C221"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000006697728E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003F036BED"
-					item: "deep_aether:raw_clorite_wall"
+					id: "00000000ED1F0887"
+					item: "minecraft:purple_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000071CAE5BB"
-					item: "minecraft:red_dye"
+					id: "00000000F0A68915"
+					item: "deep_aether:purple_squash_slice"
 					type: "item"
 				}
 			]
@@ -340,38 +363,43 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000003CFD2150"]
+			dependencies: ["000000009A96F942"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BAAD4643"
+			id: "0000000018FD2C36"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005ED15EF8"
+					id: "000000001231D4F4"
 					type: "xp"
-					xp: 6
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D0DF0E87"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000005BA9315"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000015FAEBFD"
-					item: "deep_aether:raw_clorite_slab"
+					id: "0000000063F667D9"
+					item: "deep_aether:polished_clorite_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000900282BE"
-					item: "deep_aether:raw_clorite_stairs"
+					id: "00000000D9CA14C7"
+					item: "minecraft:pumpkin_pie"
 					type: "item"
 				}
 			]
@@ -379,37 +407,43 @@
 			y: 9.0d
 		}
 		{
+			dependencies: ["000000009A96F942"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000071B839C8"
+			id: "0000000050BB1DCD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C7FC1CAF"
+					id: "0000000049D82A0E"
 					type: "xp"
-					xp: 12
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004FFD8050"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000003D02F1CF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004C1C169E"
-					item: "minecraft:purple_dye"
+					id: "00000000296580D1"
+					item: "deep_aether:polished_clorite"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A22A7AB2"
-					item: "deep_aether:purple_squash_slice"
+					id: "00000000289C032C"
+					item: "deep_aether:polished_clorite_slab"
 					type: "item"
 				}
 			]
@@ -420,133 +454,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000002E6F73"
+			id: "0000000086BA2B03"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007D3D8537"
+					id: "0000000082A39C61"
 					type: "xp"
-					xp: 6
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000B14CBD2"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000D2F1D5FC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AF015294"
-					item: {
-						Count: 1
-						id: "deep_aether:stratus_boots"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000718C5D5A"
-					item: {
-						Count: 1
-						id: "deep_aether:stratus_chestplate"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 7.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000030298398"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000002255246B"
-					type: "xp"
-					xp: 11
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F265429C"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000009B6D2466"
-					item: {
-						Count: 1
-						id: "deep_aether:storm_sword"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000004450169A"
-					item: {
-						Count: 1
-						id: "deep_aether:stratus_axe"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
-			x: -6.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009783F35D"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CA679ADE"
-					type: "xp"
-					xp: 7
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000E8A62F2"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000004F84669D"
+					id: "00000000AC229FD6"
 					item: "deep_aether:squash_seeds"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000004D30B00"
+					id: "0000000067AAE60F"
 					item: {
 						Count: 1
 						id: "deep_aether:storm_bow"
@@ -558,119 +497,132 @@
 				}
 			]
 			x: -6.0d
-			y: 5.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
-				"00000000DEF9FFA1"
-				"0000000051935019"
-				"00000000DF3251E8"
+				"00000000DAC23EFE"
+				"00000000F0767D1A"
+				"0000000073F3AE29"
+				"00000000930B234A"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000020DD1CA3"
+			id: "0000000076ACB577"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DFEC9B8C"
+					id: "00000000FA2F0D20"
 					type: "xp"
-					xp: 14
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000028F16112"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000B3834EF7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E141323A"
-					item: "deep_aether:stratus_smithing_template"
+					id: "000000009D6B4087"
+					item: "deep_aether:stormforged_smithing_template"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004BE3CB3C"
+					id: "00000000F0715829"
 					item: "deep_aether:squall_plate"
 					type: "item"
 				}
 			]
 			x: -6.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
-			dependencies: [
-				"0000000036253F4E"
-				"0000000051935019"
-			]
+			dependencies: ["000000001C0BE227"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009AB12FE0"
+			id: "00000000D407C3ED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000084307ECB"
+					id: "000000001443A021"
 					type: "xp"
-					xp: 7
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006B5E6409"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000FC0CA839"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000005AEADBBA"
+					id: "00000000A8178271"
 					item: "deep_aether:skyjade_chain"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000039716BCF"
-					item: "deep_aether:stormforged_smithing_template"
+					id: "0000000097ABF914"
+					item: "deep_aether:stratus_smithing_template"
 					type: "item"
 				}
 			]
 			x: -6.0d
-			y: 3.0d
+			y: 5.0d
 		}
 		{
-			dependencies: ["0000000036253F4E"]
+			dependencies: ["000000005BC12E4B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002BE022B6"
+			id: "00000000F534CBA8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000973D3770"
+					id: "0000000000327F69"
 					type: "xp"
-					xp: 2
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A82D8489"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000000C9CF7DF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C8D3D614"
+					id: "000000007A2F4445"
 					item: {
 						Count: 1
 						id: "deep_aether:skyjade_shovel"
@@ -682,7 +634,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000001B873E4E"
+					id: "0000000065BDBE26"
 					item: {
 						Count: 1
 						id: "deep_aether:skyjade_sword"
@@ -694,34 +646,39 @@
 				}
 			]
 			x: -6.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["0000000036253F4E"]
+			dependencies: ["000000005BC12E4B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000221A12FC"
+			id: "00000000D7890F62"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004559A9D4"
+					id: "00000000DCE22F4C"
 					type: "xp"
-					xp: 5
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DA41830A"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000006209F5DE"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B6451A87"
+					id: "000000003FC1E81A"
 					item: {
 						Count: 1
 						id: "deep_aether:skyjade_ring"
@@ -733,7 +690,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000CC205898"
+					id: "000000001565F1FE"
 					item: {
 						Count: 1
 						id: "deep_aether:skyjade_shield"
@@ -745,310 +702,38 @@
 				}
 			]
 			x: -6.0d
-			y: 1.0d
-		}
-		{
-			dependencies: [
-				"00000000068B135F"
-				"0000000057B70FD8"
-				"000000003A7FC24F"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006E27D2E9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000087DE4727"
-					type: "xp"
-					xp: 21
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005CC5F7E9"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000005741B825"
-					item: "deep_aether:sunroot_planks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000005AC3F8"
-					item: "deep_aether:yagroot_planks"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001F732963"
+			id: "00000000291E5F76"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000081E5691F"
+					id: "000000001F26226F"
 					type: "xp"
-					xp: 9
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F20E877F"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [{
-				consume_items: false
-				id: "0000000011CD619F"
-				item: "deep_aether:chromatic_aercloud"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 5.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000CB9292BF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000007B6F99A8"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000006423AE4B"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000006D815331"
-					item: "deep_aether:holystone_tiles"
+					id: "00000000AF4FD094"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000061639422"
-					item: "deep_aether:metal_mixture"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"00000000068B135F"
-				"000000003CFD2150"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003C0E9F60"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F9315A3E"
-					type: "xp"
-					xp: 1
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000E164879D"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000061225D44"
-					item: "deep_aether:packed_aether_mud"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000003761CE6"
-					item: "deep_aether:roseroot_planks"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"000000003D782234"
-				"0000000053754BB9"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000547E1BFD"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CF849CA0"
-					type: "xp"
-					xp: 2
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000014EE52A9"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000019F8A2BE"
-					item: "deep_aether:cruderoot_planks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000017D87972"
-					item: "deep_aether:frozen_goldenleaf_berries"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 1.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000451F3C39"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F402A708"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D3DA6664"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000251E63E5"
-					item: "deep_aether:gilded_holystone_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000058DBE2E4"
-					item: "deep_aether:holystone_pillar"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"000000003D782234"
-				"0000000053754BB9"
-				"000000003CFD2150"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000005F4E738"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000008A9B06D0"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D68DD733"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "rounded_square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F1EC0728"
-					item: "deep_aether:clorite"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F5D66ABF"
-					item: "deep_aether:conberry_planks"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["0000000036253F4E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D636A2EF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D5602E3F"
-					type: "xp"
-					xp: 8
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000D09C9101"
-					table_id: 2024001725L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000563CB3D6"
+					id: "00000000985A8B7C"
 					item: {
 						Count: 1
 						id: "deep_aether:skyjade_leggings"
@@ -1060,7 +745,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000002B5D7812"
+					id: "000000005B87DECA"
 					item: {
 						Count: 1
 						id: "deep_aether:skyjade_pickaxe"
@@ -1072,34 +757,42 @@
 				}
 			]
 			x: -6.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["0000000051935019"]
+			dependencies: [
+				"000000005BC12E4B"
+				"000000001C0BE227"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000021270539"
+			id: "00000000D8FA96EE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FBA351E8"
+					id: "000000009FA64B36"
 					type: "xp"
-					xp: 4
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000075088737"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000002C460B5F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002A59A644"
+					id: "0000000004812858"
 					item: {
 						Count: 1
 						id: "deep_aether:skyjade_hoe"
@@ -1111,40 +804,399 @@
 				}
 				{
 					consume_items: false
-					id: "000000001080BDEA"
+					id: "00000000D2B67392"
 					item: "deep_aether:skyjade_lantern"
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 9.0d
+			x: -6.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["0000000036253F4E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F8EA3B82"
+			id: "0000000093DCE396"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005C37D006"
+					id: "00000000C5E0CB00"
 					type: "xp"
-					xp: 19
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000307CDC6E"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000005D728861"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [{
+				consume_items: false
+				id: "000000000E89B004"
+				item: "deep_aether:chromatic_aercloud"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"00000000CC7D89FB"
+				"00000000DF4F697B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005BC12E4B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000001F5E628A"
+					type: "xp"
+					xp: 20
+				}
+				{
+					id: "00000000FB188CE1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000007A37CB4A"
+					item: "deep_aether:roseroot_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000052814FF9"
+					item: "deep_aether:skyjade"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"00000000CC7D89FB"
+				"00000000A11313CA"
+				"00000000C8F7FFDF"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000B3693A2A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A3929AE7"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000003B045730"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000515B870E"
+					item: "deep_aether:sunroot_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006FA8BFF3"
+					item: "deep_aether:yagroot_planks"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 7.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006720028F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000003FF2D72A"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "0000000062E602B0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F500C4B8"
+					item: "deep_aether:metal_mixture"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008FDA4B8E"
+					item: "deep_aether:packed_aether_mud"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000CC96C160"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000427DCF7A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000000EF5CE0A"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "000000009212C5E0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000C523BA2D"
+					item: "deep_aether:polished_aseterite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BC714DAC"
+					item: "deep_aether:raw_clorite"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"000000002F7F267D"
+				"00000000DF4F697B"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000BD738ABE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000F86E7111"
+					type: "xp"
+					xp: 12
+				}
+				{
+					id: "000000002241DA5E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000471AC18D"
+					item: "deep_aether:cruderoot_planks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000012559A17"
+					item: "deep_aether:frozen_goldenleaf_berries"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 1.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000002D225168"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000515ABFD0"
+					type: "xp"
+					xp: 9
+				}
+				{
+					id: "00000000E76CE81D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A2DB03B9"
+					item: "deep_aether:gilded_holystone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000004CDAEA3B"
+					item: "deep_aether:holystone_tiles"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000002F7F267D"
+				"00000000CC96C160"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000003DC317B3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C07D014D"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "000000009B12EB2F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rounded_square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000FFEE1710"
+					item: "deep_aether:blightmoss_holystone_bricks"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000001E5BFB"
+					item: "deep_aether:conberry_planks"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["000000005BC12E4B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E41D3644"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000009642C436"
+					type: "xp"
+					xp: 13
+				}
+				{
+					id: "000000007B857C10"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D6306F67"
+					id: "00000000F3827A68"
 					item: {
 						Count: 1
 						id: "deep_aether:skyjade_gloves"
@@ -1156,10 +1208,116 @@
 				}
 				{
 					consume_items: false
-					id: "00000000AA528074"
+					id: "000000008D627DE1"
 					item: {
 						Count: 1
 						id: "deep_aether:skyjade_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000005BC12E4B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000006D77C1C5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000B67BBEB2"
+					type: "xp"
+					xp: 16
+				}
+				{
+					id: "00000000A2947464"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000B0208883"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000D4F5D23B"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["000000005BC12E4B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000363B8A23"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004526C0BC"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000CA612E73"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008AC07691"
+					item: "deep_aether:roseroot_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000002EB532EB"
+					item: {
+						Count: 1
+						id: "deep_aether:skyjade_axe"
 						tag: {
 							Damage: 0
 						}
@@ -1171,38 +1329,46 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000006E27D2E9"]
+			dependencies: [
+				"000000004C493491"
+				"00000000B3693A2A"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000063C2140B"
+			id: "00000000D73F1CF0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008F9D74AD"
+					id: "000000005C5C786C"
 					type: "xp"
-					xp: 12
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D039C5D1"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000E1FFA3F4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004E9B5637"
-					item: "deep_aether:sunroot_fence_gate"
+					id: "00000000D31B387F"
+					item: "deep_aether:sunroot_chest_boat"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000008913C3C"
-					item: "deep_aether:sunroot_hanging_sign"
+					id: "00000000F510A1E7"
+					item: "deep_aether:sunroot_button"
 					type: "item"
 				}
 			]
@@ -1210,38 +1376,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["000000006E27D2E9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001E7C400A"
+			id: "00000000A89C36B8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BA47D7D7"
+					id: "0000000005FF559E"
 					type: "xp"
-					xp: 16
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006D528286"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000BC8B88E4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A2DBD757"
-					item: "deep_aether:sunroot_door"
+					id: "000000002E0F5023"
+					item: "deep_aether:stripped_sunroot_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002B6E9368"
-					item: "deep_aether:sunroot_fence"
+					id: "00000000D6C7E6C7"
+					item: "deep_aether:stripped_yagroot_wall"
 					type: "item"
 				}
 			]
@@ -1249,41 +1419,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: [
-				"00000000D6EC5FD2"
-				"000000006E27D2E9"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CDB2D437"
+			id: "0000000020504152"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002B0BEE8C"
+					id: "00000000A5627AD3"
 					type: "xp"
-					xp: 6
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000071F5959F"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000B975B979"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007020D7CC"
-					item: "deep_aether:sunroot_chest_boat"
+					id: "00000000F62FA885"
+					item: "deep_aether:stripped_cruderoot_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D38156DF"
-					item: "deep_aether:sunroot_button"
+					id: "0000000014BF6FD1"
+					item: "deep_aether:stripped_roseroot_wall"
 					type: "item"
 				}
 			]
@@ -1294,103 +1465,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008B3B6D8A"
+			id: "000000005995E168"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000690046B7"
+					id: "00000000066CEB44"
 					type: "xp"
-					xp: 15
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A2C79957"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000308AFE77"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FCF819CF"
-					item: "deep_aether:stripped_sunroot_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000BF2AA5BE"
-					item: "deep_aether:stripped_yagroot_wall"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 4.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000004B946231"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000CCB1556D"
-					type: "xp"
-					xp: 14
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000F4D20CB4"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000081CCEF03"
-					item: "deep_aether:stripped_cruderoot_wall"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001F2F038D"
-					item: "deep_aether:stripped_roseroot_wall"
-					type: "item"
-				}
-			]
-			x: -7.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000692B1B07"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000001E3D78B8"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000CED5A812"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000576D918F"
+					id: "00000000F7323CD6"
 					item: {
 						Count: 1
 						id: "deep_aether:stratus_sword"
@@ -1402,39 +1502,44 @@
 				}
 				{
 					consume_items: false
-					id: "0000000011EEFE09"
+					id: "00000000F6F45559"
 					item: "deep_aether:stripped_conberry_wall"
 					type: "item"
 				}
 			]
 			x: -7.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007DA2EAD9"
+			id: "00000000B902BBD8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000091599559"
+					id: "000000007F4C1A7E"
 					type: "xp"
-					xp: 11
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000959FEA5"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000058F8D969"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B72FDB88"
+					id: "00000000DF677AD2"
 					item: {
 						Count: 1
 						id: "deep_aether:stratus_shield"
@@ -1446,7 +1551,7 @@
 				}
 				{
 					consume_items: false
-					id: "000000004C24B7CC"
+					id: "0000000000B7A881"
 					item: {
 						Count: 1
 						id: "deep_aether:stratus_shovel"
@@ -1458,33 +1563,38 @@
 				}
 			]
 			x: -7.0d
-			y: 1.0d
+			y: 3.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000064A6333B"
+			id: "00000000BA859399"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002C8CFDF3"
+					id: "000000008F7C37FC"
 					type: "xp"
-					xp: 7
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DDC64472"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000C934CA8F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000025488551"
+					id: "00000000CC0BA2A0"
 					item: {
 						Count: 1
 						id: "deep_aether:stratus_pickaxe"
@@ -1496,7 +1606,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000073BA5F9C"
+					id: "00000000CD99728B"
 					item: {
 						Count: 1
 						id: "deep_aether:stratus_ring"
@@ -1508,33 +1618,38 @@
 				}
 			]
 			x: -7.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B2898441"
+			id: "0000000063693B3A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000CC1E4C7C"
+					id: "00000000632C199B"
 					type: "xp"
-					xp: 7
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FDBCAAB2"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000B70BE487"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000052494485"
+					id: "000000003936EA73"
 					item: {
 						Count: 1
 						id: "deep_aether:stratus_hoe"
@@ -1546,7 +1661,7 @@
 				}
 				{
 					consume_items: false
-					id: "0000000086C045DC"
+					id: "000000001A778868"
 					item: {
 						Count: 1
 						id: "deep_aether:stratus_leggings"
@@ -1557,34 +1672,39 @@
 					type: "item"
 				}
 			]
-			x: -6.0d
-			y: 9.0d
+			x: -7.0d
+			y: 1.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002E041FE4"
+			id: "000000005148A14B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003E1B1859"
+					id: "0000000046D611E6"
 					type: "xp"
-					xp: 15
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DDB25FE9"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000D3FD95EF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000036659010"
+					id: "00000000041E726B"
 					item: {
 						Count: 1
 						id: "deep_aether:stratus_gloves"
@@ -1596,10 +1716,120 @@
 				}
 				{
 					consume_items: false
-					id: "0000000070A45837"
+					id: "00000000E934A624"
 					item: {
 						Count: 1
 						id: "deep_aether:stratus_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C8580D25"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000643A5B7E"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "0000000032CFE799"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000768A2D99"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000571AB859"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 9.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D02C81E9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000004DEFA12F"
+					type: "xp"
+					xp: 4
+				}
+				{
+					id: "000000005934160B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000F7E65F06"
+					item: {
+						Count: 1
+						id: "deep_aether:storm_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000009135DDDB"
+					item: {
+						Count: 1
+						id: "deep_aether:stratus_axe"
 						tag: {
 							Damage: 0
 						}
@@ -1611,38 +1841,87 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["000000006E27D2E9"]
+			dependencies: ["00000000B3693A2A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007D05F7E3"
+			id: "000000003929BFB7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000947FBE1A"
+					id: "00000000E37B9A78"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A0767A9F"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000001067F75B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001EDDF622"
-					item: "deep_aether:yagroot_trapdoor"
+					id: "00000000163A362E"
+					item: "deep_aether:yagroot_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009669557D"
-					item: "deep_aether:yagroot_wall"
+					id: "00000000C1431235"
+					item: "deep_aether:yagroot_stairs"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00000000B3693A2A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000000CFB8F61"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000A6CA4683"
+					type: "xp"
+					xp: 2
+				}
+				{
+					id: "00000000E9371AA4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000008C090459"
+					item: "deep_aether:yagroot_hanging_sign"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000000C30A9AC"
+					item: "deep_aether:yagroot_pressure_plate"
 					type: "item"
 				}
 			]
@@ -1650,38 +1929,43 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["000000006E27D2E9"]
+			dependencies: ["00000000B3693A2A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000280617D2"
+			id: "000000001EF27B31"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C7601088"
+					id: "00000000788C13EA"
 					type: "xp"
-					xp: 20
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004E1E88D9"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000076528CB3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000058B4990A"
-					item: "deep_aether:yagroot_slab"
+					id: "00000000741D84A8"
+					item: "deep_aether:yagroot_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000034D2BFC1"
-					item: "deep_aether:yagroot_stairs"
+					id: "0000000000BB61E6"
+					item: "deep_aether:yagroot_fence_gate"
 					type: "item"
 				}
 			]
@@ -1689,38 +1973,43 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["000000006E27D2E9"]
+			dependencies: ["00000000B3693A2A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001F7E57EA"
+			id: "000000008BBDDF73"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F75E69CA"
+					id: "00000000FC40C9BD"
 					type: "xp"
-					xp: 1
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C5BC8081"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000DB70BD94"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E0A0DCE5"
-					item: "deep_aether:yagroot_hanging_sign"
+					id: "00000000326C52DD"
+					item: "deep_aether:yagroot_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000058FD3734"
-					item: "deep_aether:yagroot_pressure_plate"
+					id: "00000000CDC0D66A"
+					item: "deep_aether:yagroot_door"
 					type: "item"
 				}
 			]
@@ -1728,38 +2017,43 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["000000006E27D2E9"]
+			dependencies: ["000000004C493491"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000635EDF10"
+			id: "000000009EE4E7E7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002D79AD10"
+					id: "00000000A8595E9A"
 					type: "xp"
-					xp: 14
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CBF88BCF"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000001181B526"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000055FFF324"
-					item: "deep_aether:yagroot_fence"
+					id: "00000000F2E6011E"
+					item: "minecraft:white_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000BEC27FA0"
-					item: "deep_aether:yagroot_fence_gate"
+					id: "00000000A870368E"
+					item: "deep_aether:yagroot_chest_boat"
 					type: "item"
 				}
 			]
@@ -1767,202 +2061,86 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"00000000547E1BFD"
-				"00000000451F3C39"
-			]
+			dependencies: ["000000002D225168"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000623FCE79"
+			id: "000000007A09AB47"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000512FE251"
+					id: "00000000DC01A4E1"
 					type: "xp"
-					xp: 18
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000007E39B0E"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000886CA8E7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000AACAA133"
-					item: "deep_aether:cruderoot_boat"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000075563F08"
+					id: "0000000009BCD34B"
 					item: "deep_aether:gilded_holystone_tiles"
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "0000000096C13A95"
+					item: "deep_aether:holystone_pillar"
+					type: "item"
+				}
 			]
 			x: -9.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
-			dependencies: ["00000000451F3C39"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000019D2A74C"
+			id: "00000000A3B1B47B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003D9E2146"
+					id: "00000000C46BDF45"
 					type: "xp"
-					xp: 3
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C10D0B55"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000005089AB8B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000061DA7666"
-					item: "deep_aether:holystone_pillar_up"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000EBF333C3"
+					id: "00000000730D0E9A"
 					item: "deep_aether:mossy_holystone_bricks"
 					type: "item"
 				}
-			]
-			x: -9.0d
-			y: 7.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D69536A3"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000002B05C9A"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000008116BA8E"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
 				{
 					consume_items: false
-					id: "000000003A8DE1D4"
-					item: "deep_aether:blightmoss_holystone_bricks"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000001B6E5A75"
-					item: "deep_aether:blightmoss_holystone_tiles"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["0000000005F4E738"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D6A718D5"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F4B2E1ED"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000C50039B5"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F20792F3"
-					item: "deep_aether:clorite_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D1228545"
-					item: "deep_aether:conberry_boat"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["0000000036253F4E"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000051935019"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006671FAE4"
-					type: "xp"
-					xp: 16
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000032703947"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000076AB09D0"
-					item: "deep_aether:skyjade_nugget"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000897FD790"
-					item: {
-						Count: 1
-						id: "deep_aether:stormforged_boots"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "0000000085851800"
+					item: "deep_aether:mossy_holystone_tiles"
 					type: "item"
 				}
 			]
@@ -1970,42 +2148,129 @@
 			y: 9.0d
 		}
 		{
+			dependencies: [
+				"000000003DC317B3"
+				"00000000427DCF7A"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DF3251E8"
+			id: "000000009A96F942"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000088D3C46C"
+					id: "00000000266C7F4C"
 					type: "xp"
-					xp: 19
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A33FE688"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000095FFA72B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000B148E4B9"
-					item: {
-						Count: 1
-						id: "deep_aether:stormforged_chestplate"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "0000000001209693"
+					item: "deep_aether:blightmoss_holystone_tiles"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000478B35C2"
+					id: "00000000A28FA96D"
+					item: "deep_aether:clorite"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"000000003DC317B3"
+				"00000000BD738ABE"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000D4E5104C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000056C88F76"
+					type: "xp"
+					xp: 8
+				}
+				{
+					id: "00000000147FACFF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000EA734CAD"
+					item: "deep_aether:conberry_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B4EAB470"
+					item: "deep_aether:cruderoot_boat"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000F0767D1A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000094D32D29"
+					type: "xp"
+					xp: 18
+				}
+				{
+					id: "00000000ED6AF209"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000004DF9E610"
 					item: {
 						Count: 1
 						id: "deep_aether:stormforged_gloves"
@@ -2015,129 +2280,215 @@
 					}
 					type: "item"
 				}
+				{
+					consume_items: false
+					id: "0000000032494047"
+					item: {
+						Count: 1
+						id: "deep_aether:stormforged_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0000000093DCE396"
+				"000000005BC12E4B"
+				"000000006720028F"
+			]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "0000000073F3AE29"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000011B00A96"
+					type: "xp"
+					xp: 5
+				}
+				{
+					id: "0000000074591E1A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002451BB49"
+					item: {
+						Count: 1
+						id: "deep_aether:stormforged_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000482CDA67"
+					item: "deep_aether:stratus_ingot"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000005BC12E4B"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000001C0BE227"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000AD5CC727"
+					type: "xp"
+					xp: 1
+				}
+				{
+					id: "0000000015EDF314"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000044F707FA"
+					item: "deep_aether:roseroot_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000006D6E8220"
+					item: "deep_aether:skyjade_nugget"
+					type: "item"
+				}
 			]
 			x: -10.0d
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"00000000EEF0FB46"
-				"00000000CB9292BF"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000355F4DD9"
+			id: "00000000930B234A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000004175D2FE"
+					id: "000000008DD01544"
 					type: "xp"
-					xp: 10
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000464C9109"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000007E055460"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E7AA864F"
-					item: "deep_aether:mossy_holystone_tiles"
+					id: "000000008BE634CB"
+					item: {
+						Count: 1
+						id: "deep_aether:stormforged_boots"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C0006823"
-					item: "deep_aether:polished_aseterite"
+					id: "00000000FA7552F9"
+					item: {
+						Count: 1
+						id: "deep_aether:stormforged_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 			]
-			x: -9.0d
-			y: 2.0d
+			x: -10.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"0000000005F4E738"
-				"000000003C0E9F60"
+				"000000006720028F"
+				"00000000BD738ABE"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000088560BDD"
+			id: "00000000ABFFF3FD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DD21D22A"
+					id: "00000000D53BAE6A"
 					type: "xp"
-					xp: 19
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B6F0A467"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000D4956AE1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002D99AB2F"
-					item: "deep_aether:polished_clorite"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000286DCEAC"
-					item: "deep_aether:roseroot_boat"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 8.0d
-		}
-		{
-			dependencies: [
-				"000000003C0E9F60"
-				"00000000547E1BFD"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000006C8B0D42"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000025972AE2"
-					type: "xp"
-					xp: 9
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000608EC4DB"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000F4E8A6C9"
+					id: "000000004A7AAC1C"
 					item: "deep_aether:aether_mud_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003174AB4E"
+					id: "000000006476F571"
 					item: "deep_aether:antidote"
 					type: "item"
 				}
@@ -2146,37 +2497,45 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000EEF0FB46"]
+			dependencies: [
+				"00000000427DCF7A"
+				"000000002D225168"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A9D93661"
+			id: "00000000700FB680"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000206DECB9"
+					id: "000000009F2112E7"
 					type: "xp"
-					xp: 11
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003092E2B0"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000D35A97F9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007FE2FD0B"
+					id: "00000000AC257257"
 					item: "deep_aether:aseterite_bricks"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000005D078515"
+					id: "00000000343AF03A"
 					item: "deep_aether:big_holystone_bricks"
 					type: "item"
 				}
@@ -2185,38 +2544,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000006E27D2E9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000046419BE1"
+			id: "00000000F0075937"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C3211135"
+					id: "00000000CA4D90BF"
 					type: "xp"
-					xp: 21
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000037602035"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000072873258"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000001065DCCE"
-					item: "deep_aether:yagroot_button"
+					id: "0000000028EAD4C8"
+					item: "deep_aether:sunroot_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000770BAD3F"
-					item: "deep_aether:yagroot_door"
+					id: "0000000077C83842"
+					item: "minecraft:wheat_seeds"
 					type: "item"
 				}
 			]
@@ -2224,38 +2587,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000005C1317DD"]
+			dependencies: ["00000000B3693A2A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003ED79C5E"
+			id: "00000000CEBBF3AC"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000085FFFECF"
+					id: "000000008EE11D81"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C9D17B1A"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000408131A4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000069D3CCF1"
-					item: "minecraft:white_dye"
+					id: "000000003DF10E68"
+					item: "deep_aether:sunroot_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000091456C34"
-					item: "deep_aether:yagroot_chest_boat"
+					id: "00000000030263EF"
+					item: "deep_aether:sunroot_trapdoor"
 					type: "item"
 				}
 			]
@@ -2263,37 +2631,43 @@
 			y: 1.0d
 		}
 		{
+			dependencies: ["00000000B3693A2A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009B3AD0FB"
+			id: "00000000A4D6D496"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009D6A99DC"
+					id: "0000000014D6C114"
 					type: "xp"
-					xp: 18
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C3F1ADAA"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000006FCE0A4A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000584A3733"
-					item: "deep_aether:sunroot_wall"
+					id: "0000000099EA5007"
+					item: "deep_aether:sunroot_pressure_plate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001166315A"
-					item: "minecraft:wheat_seeds"
+					id: "00000000E284BE81"
+					item: "deep_aether:sunroot_slab"
 					type: "item"
 				}
 			]
@@ -2301,38 +2675,43 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000006E27D2E9"]
+			dependencies: ["00000000B3693A2A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004E1AB37D"
+			id: "000000002BD4976E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006FAF06F0"
+					id: "00000000AA2AB3C7"
 					type: "xp"
 					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009C5394A2"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000720D98EA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000076496EE7"
-					item: "deep_aether:sunroot_stairs"
+					id: "00000000231839A8"
+					item: "deep_aether:sunroot_fence_gate"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002046AF81"
-					item: "deep_aether:sunroot_trapdoor"
+					id: "00000000F338B281"
+					item: "deep_aether:sunroot_hanging_sign"
 					type: "item"
 				}
 			]
@@ -2340,69 +2719,43 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000036253F4E"]
+			dependencies: ["00000000B3693A2A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DD1EF46A"
+			id: "000000008E2E404B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000024B000E4"
+					id: "00000000BD187827"
 					type: "xp"
-					xp: 5
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CC3D84F5"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "gear"
-			tasks: [{
-				consume_items: false
-				id: "0000000000E94569"
-				item: "deep_aether:skyjade_block"
-				type: "item"
-			}]
-			x: -12.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["000000006E27D2E9"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000BD07DD3C"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000F0E3BA0C"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000B0E10B97"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000B0012D43"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009E8403FA"
-					item: "deep_aether:sunroot_pressure_plate"
+					id: "00000000322B1515"
+					item: "deep_aether:sunroot_door"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001F52A040"
-					item: "deep_aether:sunroot_slab"
+					id: "0000000046FAAE94"
+					item: "deep_aether:sunroot_fence"
 					type: "item"
 				}
 			]
@@ -2410,38 +2763,43 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0000000005F4E738"]
+			dependencies: ["000000009A96F942"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003B920F1D"
+			id: "000000005915A71F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EA37A11D"
+					id: "00000000D6C5316E"
 					type: "xp"
-					xp: 12
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E0D272BF"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000052B51690"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D56BBAE2"
-					item: "deep_aether:clorite_stairs"
+					id: "00000000290615FD"
+					item: "deep_aether:clorite_pillar"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000010B89944"
-					item: "deep_aether:clorite_wall"
+					id: "00000000F0C55637"
+					item: "deep_aether:clorite_slab"
 					type: "item"
 				}
 			]
@@ -2449,38 +2807,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000D6A718D5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000873A784B"
+			id: "000000006FC7B791"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000057739F52"
+					id: "000000001743D17E"
 					type: "xp"
-					xp: 4
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003E1B6223"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000000A4F97A2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004C7A6C3B"
-					item: "deep_aether:chiseled_holystone"
+					id: "000000007AA61A0D"
+					item: "minecraft:cake"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C4240752"
-					item: "deep_aether:clorite_pillar"
+					id: "00000000E863902D"
+					item: "deep_aether:chiseled_holystone"
 					type: "item"
 				}
 			]
@@ -2491,34 +2853,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000854A2554"
+			id: "000000001A23C901"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BB5D04B3"
+					id: "00000000FD4185C8"
 					type: "xp"
-					xp: 3
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D0263436"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000037B66F4F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000764D881D"
-					item: "minecraft:brewing_stand"
+					id: "0000000078B0EBE5"
+					item: "deep_aether:blue_squash_slice"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E981F649"
-					item: "minecraft:cake"
+					id: "0000000097BC66A4"
+					item: "minecraft:brewing_stand"
 					type: "item"
 				}
 			]
@@ -2526,37 +2893,43 @@
 			y: 3.0d
 		}
 		{
+			dependencies: ["0000000073F3AE29"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EE98764B"
+			id: "00000000EE70A27E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D93B6A4D"
+					id: "00000000F7019897"
 					type: "xp"
-					xp: 11
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006640E60C"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000003DB739E7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A7EB669F"
-					item: "minecraft:blue_dye"
+					id: "00000000BDD775E0"
+					item: "deep_aether:stratus_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000003D81F69"
-					item: "deep_aether:blue_squash_slice"
+					id: "000000007D61C15E"
+					item: "minecraft:blue_dye"
 					type: "item"
 				}
 			]
@@ -2565,40 +2938,45 @@
 		}
 		{
 			dependencies: [
-				"00000000D6EC5FD2"
-				"00000000D69536A3"
+				"000000009A96F942"
+				"000000005BC12E4B"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CDAA1951"
+			id: "0000000066A730B5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005D63F574"
+					id: "000000003E7DDC90"
 					type: "xp"
-					xp: 19
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000077E82DDF"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000057F26AC7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000672D6558"
+					id: "00000000FC61AE03"
 					item: "deep_aether:blightmoss_holystone_tile_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000075BDEF48"
-					item: "deep_aether:stratus_block"
+					id: "0000000025D7585F"
+					item: "deep_aether:skyjade_block"
 					type: "item"
 				}
 			]
@@ -2606,37 +2984,45 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000D69536A3"]
+			dependencies: [
+				"000000003DC317B3"
+				"000000009A96F942"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001BCACDB5"
+			id: "0000000089DE981B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000532E86CF"
+					id: "0000000052B13A61"
 					type: "xp"
-					xp: 1
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000CB1A745B"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000076C4894C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000073C4599"
+					id: "00000000A863E28C"
 					item: "deep_aether:blightmoss_holystone_tile_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004639A4FB"
+					id: "00000000EE78E5EE"
 					item: "deep_aether:blightmoss_holystone_tile_stairs"
 					type: "item"
 				}
@@ -2645,38 +3031,46 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000005F4E738"]
+			dependencies: [
+				"000000005BC12E4B"
+				"00000000D4E5104C"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FF9E5EF8"
+			id: "000000000903B3ED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B37D0A48"
+					id: "00000000FD872D01"
 					type: "xp"
-					xp: 16
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C942C0E1"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000060864AB0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004F813FFE"
-					item: "deep_aether:conberry_button"
+					id: "00000000FD837EFA"
+					item: "deep_aether:combiner"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000DF0A62A"
-					item: "deep_aether:conberry_door"
+					id: "000000008F4D28F2"
+					item: "deep_aether:conberry_chest_boat"
 					type: "item"
 				}
 			]
@@ -2684,41 +3078,42 @@
 			y: 9.0d
 		}
 		{
-			dependencies: [
-				"0000000036253F4E"
-				"00000000D6A718D5"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006BE2553C"
+			id: "00000000DC324AB2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000092EBB911"
+					id: "00000000E1DF6EEB"
 					type: "xp"
-					xp: 3
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EA443F59"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000245F2297"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000590799FE"
-					item: "deep_aether:combiner"
+					id: "000000002286F38B"
+					item: "deep_aether:cobbled_aseterite_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000057F1D61E"
-					item: "deep_aether:conberry_chest_boat"
+					id: "00000000CDE2C4EA"
+					item: "deep_aether:cobbled_aseterite_wall"
 					type: "item"
 				}
 			]
@@ -2729,34 +3124,39 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FEEDF8DA"
+			id: "000000000423DB63"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B15E3D5E"
+					id: "000000009BBFE32E"
 					type: "xp"
-					xp: 18
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000022CEEE55"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000B2C48653"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000F8E44A3"
-					item: "deep_aether:cobbled_aseterite_stairs"
+					id: "00000000BF172D7A"
+					item: "deep_aether:cloudbloom_carpet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000036EA20C"
-					item: "deep_aether:cobbled_aseterite_wall"
+					id: "00000000F2890B14"
+					item: "deep_aether:cobbled_aseterite_slab"
 					type: "item"
 				}
 			]
@@ -2764,37 +3164,43 @@
 			y: 7.0d
 		}
 		{
+			dependencies: ["000000009A96F942"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000029270941"
+			id: "0000000097CEF268"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000008BA5787"
+					id: "00000000BA876F5B"
 					type: "xp"
-					xp: 19
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C1CCCE86"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000CF24732F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A557379A"
-					item: "deep_aether:cloudbloom_carpet"
+					id: "00000000DF179489"
+					item: "deep_aether:clorite_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000077021B37"
-					item: "deep_aether:cobbled_aseterite_slab"
+					id: "0000000040DA487F"
+					item: "deep_aether:clorite_wall"
 					type: "item"
 				}
 			]
@@ -2802,67 +3208,86 @@
 			y: 6.0d
 		}
 		{
+			dependencies: ["00000000B3693A2A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EEF0FB46"
+			id: "00000000E9C3040A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E08FEF8D"
+					id: "000000006677178D"
 					type: "xp"
 					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DEFE76A5"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "pentagon"
-			tasks: [{
-				consume_items: false
-				id: "0000000019E36A34"
-				item: "deep_aether:aseterite"
-				type: "item"
-			}]
-			x: -13.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["00000000D69536A3"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000002768A8DE"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D7B2EBF4"
-					type: "xp"
-					xp: 5
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000000DF7BAF6"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000A6E65E3A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000009ADD4988"
+					id: "00000000CAE6DA99"
+					item: "deep_aether:yagroot_trapdoor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000B658E71B"
+					item: "deep_aether:yagroot_wall"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["000000003DC317B3"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000C574EA0C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0000000059B7CC21"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "00000000F8E19C6D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000BE12A45B"
 					item: "deep_aether:big_holystone_bricks_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000ED738C0A"
+					id: "0000000080029408"
 					item: "deep_aether:blightmoss_holystone_brick_slab"
 					type: "item"
 				}
@@ -2871,38 +3296,49 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000547E1BFD"]
+			dependencies: [
+				"000000003DC317B3"
+				"000000005BC12E4B"
+				"00000000B3693A2A"
+				"00000000D4E5104C"
+				"00000000BD738ABE"
+			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000010F8BECD"
+			id: "0000000095CCE483"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000144BFF65"
+					id: "0000000020F408D5"
 					type: "xp"
-					xp: 12
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000059B59E7E"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000005D031C23"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000000BDC69A1"
-					item: "deep_aether:cruderoot_button"
+					id: "00000000226A3E64"
+					item: "minecraft:crafting_table"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000999C816C"
-					item: "deep_aether:cruderoot_door"
+					id: "0000000049BB43AC"
+					item: "deep_aether:cruderoot_chest_boat"
 					type: "item"
 				}
 			]
@@ -2910,37 +3346,42 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000A9D93661"]
+			dependencies: ["00000000700FB680"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000891887C"
+			id: "00000000ADAA722E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003558047C"
+					id: "00000000EE6E376D"
 					type: "xp"
-					xp: 17
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000732518C8"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000E2220535"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E247E32C"
+					id: "00000000D7B1C02C"
 					item: "deep_aether:big_holystone_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000319D3BC5"
+					id: "000000000B306463"
 					item: "deep_aether:big_holystone_bricks_stairs"
 					type: "item"
 				}
@@ -2949,44 +3390,42 @@
 			y: 7.0d
 		}
 		{
-			dependencies: [
-				"0000000005F4E738"
-				"00000000623FCE79"
-				"000000006E27D2E9"
-				"000000003C0E9F60"
-				"00000000547E1BFD"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000015F896F6"
+			id: "000000006F070AD3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000096C0F736"
+					id: "00000000FEA5CC0B"
 					type: "xp"
-					xp: 11
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F8650CB1"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000004F00133A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000D022E1F7"
-					item: "minecraft:crafting_table"
+					id: "0000000016B43EB5"
+					item: "deep_aether:cooked_aerglow_fish"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F53C5C8A"
-					item: "deep_aether:cruderoot_chest_boat"
+					id: "000000009BB66AB6"
+					item: "deep_aether:cooked_quail"
 					type: "item"
 				}
 			]
@@ -2994,37 +3433,43 @@
 			y: 5.0d
 		}
 		{
+			dependencies: ["000000003DC317B3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001ADBD49D"
+			id: "00000000B7ADCE73"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002DB43EE5"
+					id: "000000008D2BD7DE"
 					type: "xp"
-					xp: 14
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FDDA3B9F"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000010C04DC5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E073FAD1"
-					item: "deep_aether:cooked_aerglow_fish"
+					id: "00000000725E92F9"
+					item: "deep_aether:conberry_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000000C56397C"
-					item: "deep_aether:cooked_quail"
+					id: "0000000066D02E88"
+					item: "deep_aether:conberry_wall"
 					type: "item"
 				}
 			]
@@ -3032,37 +3477,41 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000D69536A3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F92C445D"
+			id: "00000000C18B2653"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007F8568A7"
+					id: "00000000ECE766D7"
 					type: "xp"
-					xp: 14
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000DBA2679D"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000002A86B488"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E981CAD2"
+					id: "0000000076FECC47"
 					item: "deep_aether:blightmoss_holystone_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000145EE342"
+					id: "00000000A0D8DE9E"
 					item: "deep_aether:blightmoss_holystone_brick_wall"
 					type: "item"
 				}
@@ -3071,38 +3520,43 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["0000000005F4E738"]
+			dependencies: ["000000003DC317B3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E7B81876"
+			id: "00000000A7B03128"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000005A5A4E7"
+					id: "000000002025F77D"
 					type: "xp"
-					xp: 12
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000FF89CE28"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000E63399CC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003AD62B19"
-					item: "deep_aether:conberry_trapdoor"
+					id: "000000003D913D3F"
+					item: "deep_aether:conberry_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B583CBA4"
-					item: "deep_aether:conberry_wall"
+					id: "0000000064ABB05C"
+					item: "deep_aether:conberry_stairs"
 					type: "item"
 				}
 			]
@@ -3110,40 +3564,42 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"00000000A9D93661"
-				"00000000355F4DD9"
-			]
+			dependencies: ["00000000700FB680"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006E1213E1"
+			id: "0000000040DF31E8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DC13A2AE"
+					id: "0000000014DCC81C"
 					type: "xp"
-					xp: 12
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000206947B4"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000FDDC4BA6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000007C3EF74B"
+					id: "0000000041BA3A08"
 					item: "deep_aether:aseterite_bricks_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000F3EA26F1"
+					id: "000000005B6D73BC"
 					item: "deep_aether:aseterite_bricks_stairs"
 					type: "item"
 				}
@@ -3152,38 +3608,43 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000005F4E738"]
+			dependencies: ["000000003DC317B3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000004433B591"
+			id: "00000000C4312915"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B2548DCF"
+					id: "000000003F4D22E9"
 					type: "xp"
-					xp: 2
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000BC802C32"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000C53364BF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000028AE6B59"
-					item: "deep_aether:conberry_slab"
+					id: "00000000761AA8F3"
+					item: "deep_aether:conberry_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000003AEB3451"
-					item: "deep_aether:conberry_stairs"
+					id: "00000000F92DE7C3"
+					item: "deep_aether:conberry_pressure_plate"
 					type: "item"
 				}
 			]
@@ -3194,27 +3655,32 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005D753B1F"
+			id: "000000008DF2D275"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DE62112E"
+					id: "00000000529552C8"
 					type: "xp"
-					xp: 1
+					xp: 12
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D7D63326"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000008DF937B7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C51AF55F"
+					id: "000000007AA982AF"
 					item: {
 						Count: 1
 						id: "deep_aether:afterburner"
@@ -3226,7 +3692,7 @@
 				}
 				{
 					consume_items: false
-					id: "00000000F8FFCB15"
+					id: "00000000EF4BA205"
 					type: "item"
 				}
 			]
@@ -3234,38 +3700,43 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0000000005F4E738"]
+			dependencies: ["000000003DC317B3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000002DFF28A7"
+			id: "00000000F93E8594"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000017A6DCB6"
+					id: "000000007CEF0CD4"
 					type: "xp"
-					xp: 6
+					xp: 20
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006D15EE00"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000AE805469"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000038CA928D"
-					item: "deep_aether:conberry_hanging_sign"
+					id: "0000000071C1DDB3"
+					item: "deep_aether:conberry_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E196EF46"
-					item: "deep_aether:conberry_pressure_plate"
+					id: "00000000C7B4A3F5"
+					item: "deep_aether:conberry_fence_gate"
 					type: "item"
 				}
 			]
@@ -3273,37 +3744,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000EEF0FB46"]
+			dependencies: ["00000000CC96C160"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AC1A45E0"
+			id: "0000000065377D8D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B8145EC2"
+					id: "00000000811CEEE8"
 					type: "xp"
-					xp: 6
+					xp: 17
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000991FC5DC"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000ABB3B495"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EDD07A83"
+					id: "0000000017CD308E"
 					item: "deep_aether:aseterite_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DAFE55FD"
+					id: "00000000FABEE30A"
 					item: "deep_aether:aseterite_wall"
 					type: "item"
 				}
@@ -3312,38 +3788,43 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["0000000005F4E738"]
+			dependencies: ["000000003DC317B3"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F1AEF4B0"
+			id: "00000000765CE4E2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EB72B2F3"
+					id: "0000000053B5C9AF"
 					type: "xp"
-					xp: 1
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E3F3A1DB"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000CA68BDC1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C2D58A89"
-					item: "deep_aether:conberry_fence"
+					id: "00000000E8B5A93B"
+					item: "deep_aether:conberry_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000007AD2BA4B"
-					item: "deep_aether:conberry_fence_gate"
+					id: "000000006E432512"
+					item: "deep_aether:conberry_door"
 					type: "item"
 				}
 			]
@@ -3352,39 +3833,44 @@
 		}
 		{
 			dependencies: [
-				"00000000A9D93661"
-				"00000000EEF0FB46"
+				"00000000CC96C160"
+				"00000000700FB680"
 			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B945FBCF"
+			id: "0000000012AB3C6D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D7DD4CD8"
+					id: "0000000061B4D500"
 					type: "xp"
-					xp: 9
+					xp: 14
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000098A919A8"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000917C884A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000EAE1A27B"
+					id: "00000000B0EADBA9"
 					item: "deep_aether:aseterite_bricks_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000040A43DBC"
+					id: "0000000037863022"
 					item: "deep_aether:aseterite_slab"
 					type: "item"
 				}
@@ -3393,38 +3879,79 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000547E1BFD"]
+			dependencies: ["00000000DAC23EFE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FCDA6838"
+			id: "000000001B3160B5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000791A2ACF"
+					id: "0000000029417DF9"
 					type: "xp"
-					xp: 18
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000071BC67EB"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000897937A1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "00000000EF62301A"
+				item: "deep_aether:light_nimbus_stone"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["00000000BD738ABE"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000AA3BD000"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000D9A6F4E3"
+					type: "xp"
+					xp: 19
+				}
+				{
+					id: "000000003951879A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000592B8771"
-					item: "deep_aether:cruderoot_slab"
+					id: "0000000001441F29"
+					item: "deep_aether:cruderoot_hanging_sign"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000B9E0DBBE"
-					item: "deep_aether:cruderoot_stairs"
+					id: "00000000489F7208"
+					item: "deep_aether:cruderoot_pressure_plate"
 					type: "item"
 				}
 			]
@@ -3432,38 +3959,43 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["00000000547E1BFD"]
+			dependencies: ["00000000BD738ABE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E94D9270"
+			id: "000000000F4A28C2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006AE97602"
+					id: "000000005D20AC55"
 					type: "xp"
-					xp: 17
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D7E2C2BB"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000023FDA6BD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003E2FF468"
-					item: "deep_aether:cruderoot_hanging_sign"
+					id: "000000005DED0D0F"
+					item: "deep_aether:cruderoot_fence"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000781CC564"
-					item: "deep_aether:cruderoot_pressure_plate"
+					id: "000000004AFC3AA6"
+					item: "deep_aether:cruderoot_fence_gate"
 					type: "item"
 				}
 			]
@@ -3471,38 +4003,43 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["00000000547E1BFD"]
+			dependencies: ["00000000BD738ABE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000086BFB0F4"
+			id: "00000000C08E99F2"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000131BEE78"
+					id: "0000000021FD09D6"
 					type: "xp"
-					xp: 9
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004AC16448"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000020F3AF1C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C469D76C"
-					item: "deep_aether:cruderoot_fence"
+					id: "00000000D0F4B426"
+					item: "deep_aether:cruderoot_button"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000073935B6C"
-					item: "deep_aether:cruderoot_fence_gate"
+					id: "00000000DC5EBE49"
+					item: "deep_aether:cruderoot_door"
 					type: "item"
 				}
 			]
@@ -3513,71 +4050,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000036253F4E"
+			id: "0000000077212DBF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000D5BF6E88"
+					id: "0000000093FB9AF9"
 					type: "xp"
-					xp: 12
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C1FDF457"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "heart"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000036AC6220"
-					item: "deep_aether:nimbus_stone"
+					id: "00000000A9951574"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
 					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000045A8FE71"
-					item: "deep_aether:skyjade"
-					type: "item"
-				}
-			]
-			x: -11.0d
-			y: 3.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000028ACF196"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A3FABF37"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "0000000044C03B4C"
-					table_id: 2024001725L
-					type: "random"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E0E31E94"
+					id: "00000000EF373D52"
 					item: "deep_aether:aerglow_blossom_block"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000008D021A1"
+					id: "00000000CACA522E"
 					item: "deep_aether:aether_coarse_dirt"
 					type: "item"
 				}
@@ -3586,37 +4090,42 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000006C8B0D42"]
+			dependencies: ["00000000ABFFF3FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000022DC7E74"
+			id: "000000006B3A5D8D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009D29F742"
+					id: "00000000A0538B6C"
 					type: "xp"
-					xp: 14
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000F977A1C6"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000045BDCBDF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A490B5C2"
+					id: "00000000C6C017C8"
 					item: "deep_aether:aether_mud_bricks_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000034F58282"
+					id: "0000000098CAE07A"
 					item: "deep_aether:aether_mud_bricks_wall"
 					type: "item"
 				}
@@ -3625,37 +4134,42 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000006C8B0D42"]
+			dependencies: ["00000000ABFFF3FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000086DA4DDD"
+			id: "00000000966F230D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E5E840E5"
+					id: "0000000062E1826E"
 					type: "xp"
-					xp: 14
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000033630C2B"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000005BE69549"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FC071331"
+					id: "00000000F023C394"
 					item: "deep_aether:aether_moss_carpet"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000E6F7307E"
+					id: "00000000D81E026F"
 					item: "deep_aether:aether_mud_bricks_slab"
 					type: "item"
 				}
@@ -3664,38 +4178,42 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000CB9292BF"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B365A11E"
+			id: "000000002C93E5C1"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F2BD36A5"
+					id: "00000000F8A8A12B"
 					type: "xp"
-					xp: 18
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A677AF8B"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000BB08F27D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000594C2189"
-					item: "deep_aether:holystone_tile_slab"
+					id: "00000000AD46706D"
+					item: "deep_aether:green_squash_slice"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000004E3FB94F"
-					item: "deep_aether:holystone_tile_stairs"
+					id: "000000007BAAAD25"
+					item: "deep_aether:holystone_pillar_down"
 					type: "item"
 				}
 			]
@@ -3703,75 +4221,41 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["0000000019D2A74C"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000030E120F1"
+			id: "000000005F670EF7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000051D9D9C"
+					id: "00000000C39E5BCA"
 					type: "xp"
-					xp: 20
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E8809DC5"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000FF21ABC4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FCE70E26"
-					item: "deep_aether:green_squash_slice"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "000000000F666B8C"
-					item: "deep_aether:holystone_pillar_down"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 6.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000E82878B0"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000BF982C1C"
-					type: "xp"
-					xp: 19
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000BE2A88D8"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "000000003CD8E5E1"
+					id: "0000000001E69E35"
 					item: "aether_redux:golden_swet_ball"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008673BED8"
+					id: "00000000134DD349"
 					item: {
 						Count: 1
 						id: "deep_aether:gravitite_ring"
@@ -3783,41 +4267,90 @@
 				}
 			]
 			x: -3.0d
-			y: 5.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["00000000623FCE79"]
+			dependencies: ["000000007A09AB47"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000000D0D1ED"
+			id: "000000004CC7D28E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001BFED5AA"
+					id: "000000000948892E"
 					type: "xp"
-					xp: 14
+					xp: 19
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000B37B1BB"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000056F066A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000FB8F03AC"
+					id: "000000003618EA9A"
 					item: "deep_aether:gilded_holystone_tile_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000782EA18E"
+					id: "00000000AAB626AD"
 					item: "deep_aether:gilded_holystone_tile_wall"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["000000002D225168"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000005DFD40FA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000BED259C3"
+					type: "xp"
+					xp: 7
+				}
+				{
+					id: "00000000FFD9C3A9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002AAEC7AE"
+					item: "deep_aether:gilded_holystone_brick_wall"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000BD12CEB2"
+					item: "deep_aether:gilded_holystone_tile_slab"
 					type: "item"
 				}
 			]
@@ -3825,38 +4358,43 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000451F3C39"]
+			dependencies: ["000000002D225168"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000040F631E8"
+			id: "00000000F6C80F5C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C567D199"
+					id: "00000000BFEA7BCC"
 					type: "xp"
-					xp: 9
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000053D9AD40"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000980926C7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004DD141B9"
-					item: "deep_aether:gilded_holystone_brick_wall"
+					id: "000000008D3E8974"
+					item: "deep_aether:gilded_holystone_brick_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000C8A63DDA"
-					item: "deep_aether:gilded_holystone_tile_slab"
+					id: "00000000E0B484D8"
+					item: "deep_aether:gilded_holystone_brick_stairs"
 					type: "item"
 				}
 			]
@@ -3864,38 +4402,43 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000451F3C39"]
+			dependencies: ["00000000ABFFF3FD"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000749FABD"
+			id: "0000000066423CB8"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002E4BCFCC"
+					id: "00000000BD399C04"
 					type: "xp"
-					xp: 14
+					xp: 13
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AD30B1C1"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000E5F0026A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C72CB83E"
-					item: "deep_aether:gilded_holystone_brick_slab"
+					id: "00000000919E1CAC"
+					item: "minecraft:cyan_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000005B9CC9B"
-					item: "deep_aether:gilded_holystone_brick_stairs"
+					id: "00000000D5B2A6EB"
+					item: "deep_aether:enchanted_antidote"
 					type: "item"
 				}
 			]
@@ -3903,38 +4446,43 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["000000006C8B0D42"]
+			dependencies: ["00000000BD738ABE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000953EB450"
+			id: "00000000180AE787"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DFA99F6C"
+					id: "000000000B2C3B97"
 					type: "xp"
-					xp: 21
+					xp: 18
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000075DA0AAD"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000003F3D4173"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C08E2118"
-					item: "minecraft:cyan_dye"
+					id: "000000005CE15F71"
+					item: "deep_aether:cruderoot_trapdoor"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000073FBD288"
-					item: "deep_aether:enchanted_antidote"
+					id: "00000000873F7EAD"
+					item: "deep_aether:cruderoot_wall"
 					type: "item"
 				}
 			]
@@ -3942,38 +4490,43 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["00000000547E1BFD"]
+			dependencies: ["00000000BD738ABE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C444D52B"
+			id: "00000000A1F2D530"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000039FC7D98"
+					id: "00000000A86990C0"
 					type: "xp"
-					xp: 13
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000009D52B33"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000CF9015DA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E73545D5"
-					item: "deep_aether:cruderoot_trapdoor"
+					id: "0000000073748C5E"
+					item: "deep_aether:cruderoot_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000FDE2BC6C"
-					item: "deep_aether:cruderoot_wall"
+					id: "000000005699D0F2"
+					item: "deep_aether:cruderoot_stairs"
 					type: "item"
 				}
 			]
@@ -3981,38 +4534,87 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["00000000547E1BFD"]
+			dependencies: ["000000002D225168"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000142619F6"
+			id: "0000000065C46D39"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E7F76653"
+					id: "000000003FEF6589"
 					type: "xp"
-					xp: 13
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009EAD3794"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000FCA60063"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000052223DF3"
-					item: "deep_aether:moa_fodder"
+					id: "00000000CF5E0350"
+					item: "deep_aether:holystone_tile_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000009371C977"
-					item: "aether:mossy_holystone"
+					id: "00000000952BCA80"
+					item: "deep_aether:holystone_tile_wall"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["000000007A09AB47"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000E15DCC2C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000C941B885"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "000000009496CE24"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					consume_items: false
+					id: "00000000A479070C"
+					item: "deep_aether:holystone_pillar_up"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000001BB72738"
+					item: "deep_aether:holystone_tile_slab"
 					type: "item"
 				}
 			]
@@ -4023,34 +4625,169 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003D782234"
+			id: "000000002F7F267D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000002533A83B"
+					id: "000000002F75D57A"
 					type: "xp"
-					xp: 9
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EE64CCEB"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000070248533"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A0234555"
+					id: "00000000DE255547"
 					item: "deep_aether:stripped_conberry_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000083129EF3"
+					id: "000000003E57084B"
 					item: "deep_aether:stripped_cruderoot_wood"
+					type: "item"
+				}
+			]
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CC7D89FB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000005F19C052"
+					type: "xp"
+					xp: 15
+				}
+				{
+					id: "000000006CFF97FB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000028B2DEE8"
+					item: "deep_aether:stripped_roseroot_wood"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00000000F04CE893"
+					item: "deep_aether:stripped_sunroot_wood"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000B3693A2A"]
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "000000004C493491"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "000000008FE8B2D4"
+					type: "xp"
+					xp: 11
+				}
+				{
+					id: "000000005143A6FD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					consume_items: false
+					id: "000000002C4AE87B"
+					item: "deep_aether:sunroot_boat"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "0000000043AF8A40"
+					item: "deep_aether:yagroot_boat"
+					type: "item"
+				}
+			]
+			x: -10.0d
+			y: 4.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			hide_until_deps_complete: true
+			id: "00000000CC96C160"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "00000000849725EC"
+					type: "xp"
+					xp: 17
+				}
+				{
+					id: "00000000D4702B13"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					consume_items: false
+					id: "0000000043E28F29"
+					item: "deep_aether:aseterite"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "000000008B412777"
+					item: "deep_aether:conberry_wood"
 					type: "item"
 				}
 			]
@@ -4061,204 +4798,38 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000068B135F"
+			id: "00000000DF4F697B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008606B3D2"
+					id: "000000005577F98A"
 					type: "xp"
-					xp: 6
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AE2CE167"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000002400A66A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002860A73D"
-					item: "deep_aether:stripped_roseroot_wood"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000B9524EDA"
-					item: "deep_aether:stripped_sunroot_wood"
-					type: "item"
-				}
-			]
-			x: -12.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000DEF9FFA1"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000D9363964"
-					type: "xp"
-					xp: 17
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005DBBDB51"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
-				{
-					consume_items: false
-					id: "0000000085463047"
-					item: {
-						Count: 1
-						id: "deep_aether:stormforged_helmet"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000AFA11B2D"
-					item: {
-						Count: 1
-						id: "deep_aether:stormforged_leggings"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
-			x: -10.0d
-			y: 0.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000053754BB9"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000C13A34C5"
-					type: "xp"
-					xp: 20
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000005386034C"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000968DE23F"
-					item: "deep_aether:conberry_wood"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "0000000026A861F0"
+					id: "00000000E078A4B6"
 					item: "deep_aether:cruderoot_wood"
 					type: "item"
 				}
-			]
-			x: -12.0d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"0000000036253F4E"
-				"000000006E27D2E9"
-				"000000001F732963"
-				"00000000CB9292BF"
-			]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "00000000D6EC5FD2"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A6CB1480"
-					type: "xp"
-					xp: 13
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000007D9F4EB4"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [
 				{
 					consume_items: false
-					id: "00000000CEADCEC9"
-					item: "deep_aether:stratus_ingot"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000D12FF239"
-					item: "deep_aether:sunroot_boat"
-					type: "item"
-				}
-			]
-			x: -9.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["00000000EEF0FB46"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000003CFD2150"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "000000006C6BCA34"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000076BB90D"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "diamond"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000611F1A2A"
-					item: "deep_aether:raw_clorite"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000F40620BB"
+					id: "000000000FF2AF9D"
 					item: "deep_aether:roseroot_wood"
 					type: "item"
 				}
@@ -4267,140 +4838,120 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000006E27D2E9"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005C1317DD"
+			id: "00000000A11313CA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007F4B5AA9"
+					id: "000000009848DA6D"
 					type: "xp"
-					xp: 10
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002111D429"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "square"
-			tasks: [{
-				consume_items: false
-				id: "0000000080C2C5C2"
-				item: "deep_aether:yagroot_boat"
-				type: "item"
-			}]
-			x: -10.0d
-			y: 2.0d
-		}
-		{
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "0000000057B70FD8"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "0000000014A23FF2"
-					type: "xp"
-					xp: 6
-				}
-				{
-					exclude_from_claim_all: true
-					id: "000000001F324467"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000008DE800D0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [
 				{
 					consume_items: false
-					id: "0000000014CC4644"
+					id: "0000000035191D55"
 					item: "deep_aether:stripped_yagroot_wood"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000A04311EB"
+					id: "00000000F981FD61"
 					item: "deep_aether:sunroot_wood"
 					type: "item"
 				}
 			]
-			x: -12.0d
+			x: -11.0d
 			y: 6.0d
 		}
 		{
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000003A7FC24F"
+			id: "00000000C8F7FFDF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000002D7995B"
+					id: "00000000491AC5BF"
 					type: "xp"
-					xp: 7
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000827C8A18"
-					table_id: 2024001725L
-					type: "random"
+					id: "000000001AB69347"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
 			tasks: [{
 				consume_items: false
-				id: "000000008F51B7D8"
+				id: "0000000013927454"
 				item: "deep_aether:yagroot_wood"
 				type: "item"
 			}]
-			x: -12.0d
+			x: -11.0d
 			y: 7.0d
 		}
 		{
-			dependencies: [
-				"0000000005F4E738"
-				"00000000355F4DD9"
-			]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000044FCFFD9"
+			id: "00000000A30D8C07"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000DB1CCC3F"
+					id: "0000000036101693"
 					type: "xp"
-					xp: 19
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E377C338"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000F5EF971E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000844706D1"
-					item: "deep_aether:polished_aseterite_stairs"
+					id: "00000000FBE909C6"
+					item: "minecraft:orange_dye"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000001C191D79"
-					item: "deep_aether:polished_clorite_slab"
+					id: "00000000289188DF"
+					item: "minecraft:pink_dye"
 					type: "item"
 				}
 			]
@@ -4408,38 +4959,43 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000355F4DD9"]
+			dependencies: ["00000000DAC23EFE"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F895F83A"
+			id: "00000000553B673D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000EF2BB7AA"
+					id: "000000008E05A379"
 					type: "xp"
-					xp: 12
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D77420FD"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000BB8154E3"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000004EB90A07"
-					item: "minecraft:pink_dye"
+					id: "00000000EC9AE910"
+					item: "deep_aether:nimbus_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000002383A173"
-					item: "deep_aether:polished_aseterite_slab"
+					id: "00000000F3DB127D"
+					item: "deep_aether:nimbus_wall"
 					type: "item"
 				}
 			]
@@ -4447,38 +5003,42 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["0000000036253F4E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ED6E8DE3"
+			id: "00000000E9F5A4DA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000000AD81E08"
+					id: "0000000046F46A07"
 					type: "xp"
-					xp: 1
+					xp: 16
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000023ED498E"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000FBF5D887"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000003273F00F"
-					item: "deep_aether:nimbus_wall"
+					id: "00000000FEF0F3B2"
+					item: "deep_aether:music_disc_a_morning_wish"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "000000008FB4E7CF"
-					item: "minecraft:orange_dye"
+					id: "00000000C3C7FCF2"
+					item: "deep_aether:music_disc_nabooru"
 					type: "item"
 				}
 			]
@@ -4486,38 +5046,43 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000036253F4E"]
+			dependencies: ["00000000A3B1B47B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A82BA2B2"
+			id: "000000000498443F"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000029BC5FB0"
+					id: "0000000065C172A7"
 					type: "xp"
-					xp: 8
+					xp: 21
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000005F3E6CBF"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000022DD741B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000C7CEC629"
-					item: "deep_aether:nimbus_slab"
+					id: "000000008715E565"
+					item: "deep_aether:mossy_holystone_tile_wall"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000DC2910CA"
-					item: "deep_aether:nimbus_stairs"
+					id: "0000000040254D9A"
+					item: "deep_aether:muddy_yagroot_roots"
 					type: "item"
 				}
 			]
@@ -4525,37 +5090,43 @@
 			y: 3.0d
 		}
 		{
+			dependencies: ["00000000A3B1B47B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FABBC5A3"
+			id: "000000004974D134"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BF549EDE"
+					id: "00000000C10C319E"
 					type: "xp"
-					xp: 11
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000000D78207"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000B54AB3C4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000E7B12BBA"
-					item: "deep_aether:muddy_yagroot_roots"
+					id: "000000005C4886B3"
+					item: "deep_aether:mossy_holystone_tile_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000045AF1593"
-					item: "deep_aether:music_disc_nabooru"
+					id: "00000000BDF6B88C"
+					item: "deep_aether:mossy_holystone_tile_stairs"
 					type: "item"
 				}
 			]
@@ -4563,37 +5134,43 @@
 			y: 2.0d
 		}
 		{
+			dependencies: ["00000000A3B1B47B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000072254ED0"
+			id: "00000000DB1CDD0B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F0157886"
+					id: "0000000010655BFE"
 					type: "xp"
-					xp: 2
+					xp: 15
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C7D3B40A"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000EA0D4982"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000DEA103A3"
-					item: "deep_aether:mossy_holystone_tile_stairs"
+					id: "0000000061EEDACF"
+					item: "deep_aether:mossy_holystone_brick_stairs"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "0000000024400B79"
-					item: "deep_aether:mossy_holystone_tile_wall"
+					id: "000000001FCB5202"
+					item: "deep_aether:mossy_holystone_brick_wall"
 					type: "item"
 				}
 			]
@@ -4601,41 +5178,43 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"0000000019D2A74C"
-				"00000000355F4DD9"
-			]
+			dependencies: ["00000000A3B1B47B"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000000857D5F4"
+			id: "00000000A20E99C9"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000ED4BABE9"
+					id: "00000000C2707698"
 					type: "xp"
-					xp: 2
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000035AC9CBC"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000D4D6FA1B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "00000000A818FB40"
-					item: "deep_aether:mossy_holystone_brick_wall"
+					id: "000000005C9D49E9"
+					item: "aether:mossy_holystone"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000D36E5035"
-					item: "deep_aether:mossy_holystone_tile_slab"
+					id: "00000000E060E0CF"
+					item: "deep_aether:mossy_holystone_brick_slab"
 					type: "item"
 				}
 			]
@@ -4643,38 +5222,43 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0000000088560BDD"]
+			dependencies: ["00000000427DCF7A"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000035531A6"
+			id: "000000009AC735D6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FB5EACD4"
+					id: "00000000C2A80926"
 					type: "xp"
-					xp: 15
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E20B0161"
-					table_id: 2024001725L
-					type: "random"
+					id: "0000000081E072B2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [
 				{
 					consume_items: false
-					id: "000000002A7DB28A"
-					item: "deep_aether:polished_clorite_stairs"
+					id: "00000000E7BF1DA8"
+					item: "deep_aether:polished_aseterite_slab"
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "00000000519069F1"
-					item: "minecraft:pumpkin_pie"
+					id: "000000001307D0F4"
+					item: "deep_aether:polished_aseterite_stairs"
 					type: "item"
 				}
 			]
@@ -4682,74 +5266,39 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["0000000036253F4E"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000030D2B3E3"
+			id: "00000000DAC23EFE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000001932103B"
+					id: "000000006867B194"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000001D270EE"
-					table_id: 2024001725L
-					type: "random"
+					id: "00000000488CC649"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_deep_aether"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "octagon"
 			tasks: [{
 				consume_items: false
-				id: "000000006228E12C"
-				item: "deep_aether:light_nimbus_stone"
+				id: "00000000672027E1"
+				item: "deep_aether:nimbus_stone"
 				type: "item"
 			}]
-			x: -12.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["0000000019D2A74C"]
-			hide_dependency_lines: true
-			hide_details_until_startable: true
-			hide_until_deps_complete: true
-			id: "000000009AB4CBFF"
-			invisible: true
-			invisible_until_tasks: 1
-			rewards: [
-				{
-					id: "00000000A7F66F0A"
-					type: "xp"
-					xp: 10
-				}
-				{
-					exclude_from_claim_all: true
-					id: "00000000AB5F5E82"
-					table_id: 2024001725L
-					type: "random"
-				}
-			]
-			shape: "circle"
-			tasks: [
-				{
-					consume_items: false
-					id: "00000000D99EB0A8"
-					item: "deep_aether:mossy_holystone_brick_slab"
-					type: "item"
-				}
-				{
-					consume_items: false
-					id: "00000000513B8693"
-					item: "deep_aether:mossy_holystone_brick_stairs"
-					type: "item"
-				}
-			]
-			x: -3.0d
-			y: 9.0d
+			x: -10.0d
+			y: 0.0d
 		}
 	]
 	title: "Deep Aether"

@@ -2,35 +2,40 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_rangedpumps"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "rangedpumps:pump"
-	id: "00000000F7C098F8"
-	order_index: 138
+	id: "000000004446F2D3"
+	order_index: 137
 	quest_links: [ ]
 	quests: [{
 		hide_dependency_lines: true
 		hide_details_until_startable: true
 		hide_until_deps_complete: true
-		id: "0000000027AADDC7"
+		id: "00000000D098378C"
 		invisible: true
 		invisible_until_tasks: 1
 		rewards: [
 			{
-				id: "0000000021E9A3FA"
+				id: "00000000BB1057FE"
 				type: "xp"
-				xp: 8
+				xp: 6
 			}
 			{
-				exclude_from_claim_all: true
-				id: "00000000A0767593"
-				table_id: 4017862370L
-				type: "random"
+				id: "00000000B44C9F44"
+				item: {
+					Count: 1
+					id: "ftbquests:lootcrate"
+					tag: {
+						type: "chaos_box_rangedpumps"
+					}
+				}
+				type: "item"
 			}
 		]
 		shape: "circle"
 		tasks: [{
 			consume_items: false
-			id: "0000000027B8EB5E"
+			id: "000000001A0BD774"
 			item: "rangedpumps:pump"
 			type: "item"
 		}]

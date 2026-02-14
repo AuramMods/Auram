@@ -2,9 +2,9 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_create_oxidized"
-	group: "00000000DEB299A3"
-	icon: "create:exposed_copper_shingle_stairs"
-	id: "000000002FEFAE83"
+	group: "000000008CDEF944"
+	icon: "create:oxidized_copper_tile_stairs"
+	id: "000000004A82200A"
 	order_index: 36
 	quest_links: [ ]
 	quests: [
@@ -12,26 +12,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000074C4258A"
+			id: "00000000DE83C05A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000094BF485C"
+					id: "0000000080C783A1"
 					type: "xp"
-					xp: 8
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000045F78523"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000B660A9A0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000091EB491"
+				id: "000000009FC69DD8"
 				item: "minecraft:exposed_cut_copper_slab"
 				type: "item"
 			}]
@@ -42,26 +47,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000007C6C55DC"
+			id: "0000000055FA2A02"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000068FB30B4"
+					id: "00000000BFF5B28E"
 					type: "xp"
-					xp: 8
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000C1764B8"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000BBD84A70"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E96BB620"
+				id: "00000000FC1DF32D"
 				item: "minecraft:exposed_cut_copper_stairs"
 				type: "item"
 			}]
@@ -72,26 +82,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000047B1398C"
+			id: "0000000029055530"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000487588AF"
+					id: "0000000099FC4FEE"
 					type: "xp"
-					xp: 10
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000001930C6AB"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000554E0AC0"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DAAB49E5"
+				id: "00000000812A428E"
 				item: "create:exposed_copper_tiles"
 				type: "item"
 			}]
@@ -102,26 +117,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000C6B49DED"
+			id: "000000000B95C46D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000075F4AAC2"
+					id: "00000000CFB669BA"
 					type: "xp"
 					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008AF362AF"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000FBD275CF"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D2CBF0A1"
+				id: "00000000BF96717A"
 				item: "minecraft:exposed_cut_copper"
 				type: "item"
 			}]
@@ -132,26 +152,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D961DAB7"
+			id: "0000000099711647"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000302C3E08"
+					id: "00000000493B6633"
 					type: "xp"
-					xp: 6
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000025E1C7BA"
-					table_id: 1409115394L
-					type: "random"
+					id: "000000008528F2C1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000364DD618"
+				id: "00000000030E0B13"
 				item: "create:exposed_copper_tile_slab"
 				type: "item"
 			}]
@@ -162,26 +187,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000092073A86"
+			id: "0000000035D001CD"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000081B4A6BE"
+					id: "000000007610485A"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007C338089"
-					table_id: 1409115394L
-					type: "random"
+					id: "0000000034A9DD1F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000005743AD94"
+				id: "00000000E5E6D09F"
 				item: "create:exposed_copper_tile_stairs"
 				type: "item"
 			}]
@@ -192,26 +222,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000AD83F35B"
+			id: "00000000FD0F6316"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000815006C8"
+					id: "00000000B38D0478"
 					type: "xp"
-					xp: 1
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002C274819"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000601F2D55"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000BBE29E63"
+				id: "000000000D3BDA08"
 				item: "create:exposed_copper_shingle_stairs"
 				type: "item"
 			}]
@@ -222,26 +257,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000090CAF19"
+			id: "0000000031C657BA"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000089ECE2B"
+					id: "0000000025E7E498"
 					type: "xp"
-					xp: 10
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000DB74E2F"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000975DB133"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000049734054"
+				id: "00000000741C465D"
 				item: "create:exposed_copper_shingles"
 				type: "item"
 			}]
@@ -252,26 +292,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000001BC8A409"
+			id: "00000000A6D36B57"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000C9A5DB91"
+					id: "00000000CC98FD08"
 					type: "xp"
-					xp: 7
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000073E18BD2"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000939CD46D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000078B5A83E"
+				id: "000000001EAF7C4F"
 				item: "minecraft:exposed_copper"
 				type: "item"
 			}]
@@ -282,26 +327,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000040C93D57"
+			id: "000000008832D40D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000095C82CC8"
+					id: "000000003F07B0DC"
 					type: "xp"
-					xp: 8
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000039F627CB"
-					table_id: 1409115394L
-					type: "random"
+					id: "0000000011CEF91B"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000890A847A"
+				id: "000000008870FAB5"
 				item: "create:exposed_copper_shingle_slab"
 				type: "item"
 			}]
@@ -312,26 +362,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EC1E5392"
+			id: "000000008CAFBF03"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009B161F43"
+					id: "000000006AB4466B"
 					type: "xp"
-					xp: 4
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000319DEB2C"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000217C603A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000003FF34964"
+				id: "00000000A2E5B908"
 				item: "minecraft:oxidized_copper"
 				type: "item"
 			}]
@@ -342,26 +397,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BC08F530"
+			id: "000000000AC2ACE0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000057144097"
+					id: "00000000E04F8BD0"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AA8AC5C6"
-					table_id: 1409115394L
-					type: "random"
+					id: "000000005FE2A228"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000022BB6DDD"
+				id: "00000000C46D17E7"
 				item: "create:oxidized_copper_shingle_slab"
 				type: "item"
 			}]
@@ -372,26 +432,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B58EBF07"
+			id: "00000000A32EDE52"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000005BAF00"
+					id: "00000000B9728B6A"
 					type: "xp"
-					xp: 3
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000390462B1"
-					table_id: 1409115394L
-					type: "random"
+					id: "000000000D5AB72C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000405CB7CC"
+				id: "00000000790F6195"
 				item: "create:oxidized_copper_shingle_stairs"
 				type: "item"
 			}]
@@ -402,26 +467,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E1EFC4D5"
+			id: "000000003430D08B"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000032B609D9"
+					id: "00000000E4E8505C"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000094C2CCC8"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000E9478FEC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000091F09898"
+				id: "00000000C16BDA76"
 				item: "create:oxidized_copper_shingles"
 				type: "item"
 			}]
@@ -432,26 +502,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F0C109BA"
+			id: "00000000904FC9BE"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BB96F227"
+					id: "00000000B3BBBB0E"
 					type: "xp"
-					xp: 5
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000065C9232A"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000470F3DF4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000B04099B0"
+				id: "00000000EE286196"
 				item: "create:oxidized_copper_tile_slab"
 				type: "item"
 			}]
@@ -462,26 +537,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000078AD88B9"
+			id: "00000000042475A7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000007F151B0F"
+					id: "00000000D57B65AA"
 					type: "xp"
-					xp: 10
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000019325DBB"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000DCE0AC36"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000001D47D903"
+				id: "00000000F084A122"
 				item: "create:oxidized_copper_tile_stairs"
 				type: "item"
 			}]
@@ -492,26 +572,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EF1FCD3B"
+			id: "000000000EA69200"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008FC4EA5C"
+					id: "000000008E6598A0"
 					type: "xp"
-					xp: 9
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000642221A0"
-					table_id: 1409115394L
-					type: "random"
+					id: "000000006347E785"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000A8B79588"
+				id: "00000000AAF2CEEC"
 				item: "create:oxidized_copper_tiles"
 				type: "item"
 			}]
@@ -522,26 +607,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000075561B8B"
+			id: "00000000CFD3AB0D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000BE16A8FA"
+					id: "00000000D66E4F22"
 					type: "xp"
-					xp: 6
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EF4BA5C7"
-					table_id: 1409115394L
-					type: "random"
+					id: "000000003AD2F718"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000086D0CBB8"
+				id: "0000000086D7FCEB"
 				item: "minecraft:oxidized_cut_copper"
 				type: "item"
 			}]
@@ -552,26 +642,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000027A3295A"
+			id: "0000000099C0E811"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000161A437D"
+					id: "000000003C514BA8"
 					type: "xp"
-					xp: 1
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000C1C0A75D"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000F349450E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000008924E20F"
+				id: "0000000056D5F9B9"
 				item: "minecraft:oxidized_cut_copper_slab"
 				type: "item"
 			}]
@@ -582,26 +677,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B1DD663D"
+			id: "00000000C069E7D6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000FCCA9A9B"
+					id: "00000000DC223C6E"
 					type: "xp"
-					xp: 6
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000065FA6E55"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000BE3796E4"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000890F658E"
+				id: "000000005740C113"
 				item: "minecraft:oxidized_cut_copper_stairs"
 				type: "item"
 			}]
@@ -612,26 +712,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000008A3ED42A"
+			id: "000000003CCEAD2A"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E04263AE"
+					id: "00000000750CEFF1"
 					type: "xp"
-					xp: 4
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000704EE1E8"
-					table_id: 1409115394L
-					type: "random"
+					id: "000000008CD29600"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000007BFAD63C"
+				id: "00000000F0A17C5D"
 				item: "minecraft:weathered_copper"
 				type: "item"
 			}]
@@ -642,26 +747,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005A376FFF"
+			id: "00000000F8329B5C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B87C9933"
+					id: "00000000AE379976"
 					type: "xp"
-					xp: 10
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000243AD10"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000D771E82A"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000D9C283A0"
+				id: "00000000BA69131B"
 				item: "create:weathered_copper_shingle_slab"
 				type: "item"
 			}]
@@ -672,26 +782,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CAF429FB"
+			id: "000000009C8E82C3"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000E8827B4D"
+					id: "00000000E6F92583"
 					type: "xp"
-					xp: 8
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002271730B"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000D325D80D"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000F5C37949"
+				id: "000000001E344B79"
 				item: "create:weathered_copper_shingle_stairs"
 				type: "item"
 			}]
@@ -702,26 +817,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000219C6E43"
+			id: "000000009787BD37"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000006A292042"
+					id: "0000000082D59E64"
 					type: "xp"
 					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000044E913DE"
-					table_id: 1409115394L
-					type: "random"
+					id: "0000000028298DBB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000AB6E7B46"
+				id: "00000000E6437AC4"
 				item: "create:weathered_copper_shingles"
 				type: "item"
 			}]
@@ -732,26 +852,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D5883D5E"
+			id: "00000000957E5A96"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000090C094FD"
+					id: "000000007DF2A0A7"
 					type: "xp"
-					xp: 2
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000002C4D00D0"
-					table_id: 1409115394L
-					type: "random"
+					id: "000000001233D726"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000476D12AE"
+				id: "00000000F407C5EF"
 				item: "create:weathered_copper_tile_slab"
 				type: "item"
 			}]
@@ -762,26 +887,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000090F0D4BA"
+			id: "000000001A845D41"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000019568D8B"
+					id: "000000003AF5DFA0"
 					type: "xp"
-					xp: 8
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006010A0EA"
-					table_id: 1409115394L
-					type: "random"
+					id: "0000000031E880A8"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000E6ABAA1A"
+				id: "0000000055E7F20F"
 				item: "create:weathered_copper_tile_stairs"
 				type: "item"
 			}]
@@ -792,26 +922,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000DADDE725"
+			id: "000000000750069C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B16EA59E"
+					id: "00000000E77FB9E6"
 					type: "xp"
-					xp: 6
+					xp: 9
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D08FC57E"
-					table_id: 1409115394L
-					type: "random"
+					id: "000000003CEC3D7C"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000009CDABA26"
+				id: "00000000F59EC4DF"
 				item: "create:weathered_copper_tiles"
 				type: "item"
 			}]
@@ -822,26 +957,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000FF516554"
+			id: "00000000C87B3391"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009752310D"
+					id: "0000000088B3DDD4"
 					type: "xp"
-					xp: 8
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000E5F02E9D"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000285D2042"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000943905F4"
+				id: "0000000022D4F53D"
 				item: "minecraft:weathered_cut_copper"
 				type: "item"
 			}]
@@ -852,26 +992,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000A8F3D65F"
+			id: "00000000A6A1C90E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000079599C52"
+					id: "000000005FB1A37F"
 					type: "xp"
-					xp: 1
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000022FF1F9F"
-					table_id: 1409115394L
-					type: "random"
+					id: "000000002E313082"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000000B8E7A8"
+				id: "000000004FD8ABAB"
 				item: "minecraft:weathered_cut_copper_slab"
 				type: "item"
 			}]
@@ -882,26 +1027,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000005C34043"
+			id: "00000000709492CF"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000043D15D0A"
+					id: "000000001840421A"
 					type: "xp"
-					xp: 8
+					xp: 11
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000B97D039F"
-					table_id: 1409115394L
-					type: "random"
+					id: "00000000EDFAE464"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_create_oxidized"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000030D2ACED"
+				id: "0000000088A095E8"
 				item: "minecraft:weathered_cut_copper_stairs"
 				type: "item"
 			}]

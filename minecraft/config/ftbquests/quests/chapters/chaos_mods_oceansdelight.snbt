@@ -2,37 +2,42 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "chaos_mods_oceansdelight"
-	group: "00000000DEB299A3"
+	group: "000000008CDEF944"
 	icon: "oceansdelight:elder_guardian_slice"
-	id: "000000004AA74E64"
-	order_index: 126
+	id: "0000000069BB7A9F"
+	order_index: 125
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["00000000E5499958"]
+			dependencies: ["00000000E530131D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000009D2C669E"
+			id: "000000006E2F26F0"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000F3A0518E"
+					id: "00000000F196F55E"
 					type: "xp"
-					xp: 8
+					xp: 2
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000298B8ADB"
-					table_id: 3823890230L
-					type: "random"
+					id: "000000007F4E78D5"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000087D15029"
+				id: "00000000CFBFEC41"
 				item: "oceansdelight:cooked_elder_guardian_slice"
 				type: "item"
 			}]
@@ -43,26 +48,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005C241889"
+			id: "000000005C6DBFE5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000003216E0B7"
+					id: "00000000172C7807"
 					type: "xp"
-					xp: 7
+					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000006404F42A"
-					table_id: 3823890230L
-					type: "random"
+					id: "0000000066B070AA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000025025B71"
+				id: "00000000DA0FDA33"
 				item: "oceansdelight:cut_tentacles"
 				type: "item"
 			}]
@@ -70,30 +80,35 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["00000000CC391C84"]
+			dependencies: ["00000000A66A47ED"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000657C31AE"
+			id: "00000000A42C3AB5"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008D2D825D"
+					id: "00000000BBBAA1C9"
 					type: "xp"
-					xp: 9
+					xp: 5
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000000ECE2D4E"
-					table_id: 3823890230L
-					type: "random"
+					id: "000000005FBAFC41"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000737F5EA0"
+				id: "00000000B606112C"
 				item: "oceansdelight:baked_tentacle_on_a_stick"
 				type: "item"
 			}]
@@ -101,30 +116,35 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["000000009D2C669E"]
+			dependencies: ["000000006E2F26F0"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000B29D302B"
+			id: "00000000B5EDDC70"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000069AF445F"
+					id: "00000000B5ABB7CF"
 					type: "xp"
-					xp: 10
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003A46A872"
-					table_id: 3823890230L
-					type: "random"
+					id: "000000005A6CEFE2"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004DDD4151"
+				id: "00000000AEB83C1C"
 				item: "oceansdelight:cabbage_wrapped_elder_guardian"
 				type: "item"
 			}]
@@ -135,26 +155,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000408EABC1"
+			id: "00000000E5876082"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000018ABC482"
+					id: "000000003EDC4469"
 					type: "xp"
 					xp: 10
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D20BC449"
-					table_id: 3823890230L
-					type: "random"
+					id: "000000003E6686DB"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002F72D764"
+				id: "000000003A9617A9"
 				item: "oceansdelight:braised_sea_pickle"
 				type: "item"
 			}]
@@ -162,30 +187,35 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["000000005E42039A"]
+			dependencies: ["00000000970A0C09"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E57B6658"
+			id: "00000000C4D7FB6E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000005D5BC8ED"
+					id: "0000000002B3DFE9"
 					type: "xp"
-					xp: 6
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000A5B05887"
-					table_id: 3823890230L
-					type: "random"
+					id: "00000000024DCA40"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000002028A57A"
+				id: "00000000D08B4EF1"
 				item: "oceansdelight:cooked_stuffed_cod"
 				type: "item"
 			}]
@@ -193,30 +223,35 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["00000000EAA01C34"]
+			dependencies: ["000000000843DBE6"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000BF76EC79"
+			id: "00000000DFF8C454"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000034D068AD"
+					id: "00000000DB18C95B"
 					type: "xp"
-					xp: 7
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000057295266"
-					table_id: 3823890230L
-					type: "random"
+					id: "000000004521DCC1"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000000BCCB57C"
+				id: "000000007ED3D4D6"
 				item: "oceansdelight:cooked_guardian_tail"
 				type: "item"
 			}]
@@ -224,30 +259,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["000000005C241889"]
+			dependencies: ["000000005C6DBFE5"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000ED26C5D2"
+			id: "00000000CD91A82C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000B82EC432"
+					id: "000000008130A885"
 					type: "xp"
-					xp: 4
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000AA816122"
-					table_id: 3823890230L
-					type: "random"
+					id: "00000000DBF52B7E"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "000000004B5C7B15"
+				id: "00000000C58B8AF8"
 				item: "oceansdelight:squid_rings"
 				type: "item"
 			}]
@@ -258,26 +298,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000F33135B6"
+			id: "000000001FF5B4E4"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000887A4DD0"
+					id: "00000000D4C6952B"
 					type: "xp"
-					xp: 8
+					xp: 3
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000D2A5B27D"
-					table_id: 3823890230L
-					type: "random"
+					id: "000000001741DFFC"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000C2F6C833"
+				id: "0000000083DF9A76"
 				item: "oceansdelight:guardian_soup"
 				type: "item"
 			}]
@@ -285,30 +330,35 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["00000000D125E690"]
+			dependencies: ["000000005A069222"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EB938B9B"
+			id: "00000000C8B4BDA7"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000512FA23F"
+					id: "00000000D5DDA4D1"
 					type: "xp"
-					xp: 7
+					xp: 8
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003F5DBF3C"
-					table_id: 3823890230L
-					type: "random"
+					id: "00000000780DB1AA"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000DB67D18A"
+				id: "000000004638B305"
 				item: "oceansdelight:fugu_roll"
 				type: "item"
 			}]
@@ -319,26 +369,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005E42039A"
+			id: "00000000970A0C09"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000009531F11C"
+					id: "000000003D201D15"
 					type: "xp"
-					xp: 2
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "0000000020C027A7"
-					table_id: 3823890230L
-					type: "random"
+					id: "00000000B25121B9"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000CA814311"
+				id: "00000000C4E61198"
 				item: "oceansdelight:stuffed_cod"
 				type: "item"
 			}]
@@ -346,30 +401,35 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00000000E5499958"]
+			dependencies: ["00000000E530131D"]
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000006CB336F2"
+			id: "0000000048E90C7C"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000027CCF566"
+					id: "00000000A207942D"
 					type: "xp"
-					xp: 3
+					xp: 1
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000004CB6A00D"
-					table_id: 3823890230L
-					type: "random"
+					id: "0000000099F07FF6"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "0000000011B06482"
+				id: "0000000033EDD4C0"
 				item: "oceansdelight:elder_guardian_roll"
 				type: "item"
 			}]
@@ -380,26 +440,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000CC391C84"
+			id: "00000000A66A47ED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000069CD7E01"
+					id: "000000004DDD4E03"
 					type: "xp"
-					xp: 7
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000007362ED3E"
-					table_id: 3823890230L
-					type: "random"
+					id: "000000007AA46108"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000D6844DDE"
+				id: "00000000593B1E64"
 				item: "oceansdelight:tentacle_on_a_stick"
 				type: "item"
 			}]
@@ -410,26 +475,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000E5499958"
+			id: "00000000E530131D"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "00000000A0F28636"
+					id: "00000000489D7BFD"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000009776F10F"
-					table_id: 3823890230L
-					type: "random"
+					id: "00000000AA8C01F7"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rounded_square"
 			tasks: [{
 				consume_items: false
-				id: "00000000BD162BE7"
+				id: "0000000045F7CA25"
 				item: "oceansdelight:elder_guardian_slice"
 				type: "item"
 			}]
@@ -440,26 +510,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "000000005018A118"
+			id: "000000007BA49CED"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008638DE31"
+					id: "0000000074F51701"
 					type: "xp"
-					xp: 10
+					xp: 7
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000008FD1C6DA"
-					table_id: 3823890230L
-					type: "random"
+					id: "0000000017800610"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000388594A5"
+				id: "000000005CE36B48"
 				item: "oceansdelight:honey_fried_kelp"
 				type: "item"
 			}]
@@ -470,26 +545,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000D125E690"
+			id: "000000005A069222"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000075C36382"
+					id: "00000000437D1039"
 					type: "xp"
-					xp: 6
+					xp: 4
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000EFF3EFFB"
-					table_id: 3823890230L
-					type: "random"
+					id: "000000000D3F4C2F"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "00000000D9FAEBE2"
+				id: "000000005BBC8E33"
 				item: "oceansdelight:fugu_slice"
 				type: "item"
 			}]
@@ -500,26 +580,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "00000000EAA01C34"
+			id: "000000000843DBE6"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "000000008161C99D"
+					id: "0000000094C6489D"
 					type: "xp"
-					xp: 8
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "00000000151C9054"
-					table_id: 3823890230L
-					type: "random"
+					id: "00000000AE8F0FBD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "square"
 			tasks: [{
 				consume_items: false
-				id: "0000000002E1D7AE"
+				id: "00000000C21FC60A"
 				item: "oceansdelight:guardian_tail"
 				type: "item"
 			}]
@@ -530,26 +615,31 @@
 			hide_dependency_lines: true
 			hide_details_until_startable: true
 			hide_until_deps_complete: true
-			id: "0000000011BFC49A"
+			id: "0000000084806D5E"
 			invisible: true
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					id: "0000000004F7F25A"
+					id: "000000005E2F3455"
 					type: "xp"
-					xp: 9
+					xp: 6
 				}
 				{
-					exclude_from_claim_all: true
-					id: "000000003E21BACA"
-					table_id: 3823890230L
-					type: "random"
+					id: "000000009A71DCFD"
+					item: {
+						Count: 1
+						id: "ftbquests:lootcrate"
+						tag: {
+							type: "chaos_box_oceansdelight"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "circle"
 			tasks: [{
 				consume_items: false
-				id: "00000000834DC4DB"
+				id: "00000000066CBA33"
 				item: "oceansdelight:seagrass_salad"
 				type: "item"
 			}]
