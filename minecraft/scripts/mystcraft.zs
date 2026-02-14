@@ -11,3 +11,10 @@ mods.extendedcrafting.TableCrafting.addShaped("89210c29-e74a-4d1d-99df-90219f1e7
 
 craftingTable.remove(<item:mystcraft:writingdesk>);
 craftingTable.remove(<item:mystcraft:blockinkmixer>);
+
+craftingTable.remove(<item:mystcraft:personal_link_book>);
+craftingTable.addShaped("0efb9164-cbf9-4d29-b682-bd8962d9fb2c", <item:mystcraft:personal_link_book>, [
+	[<item:minecraft:air>, <item:aether:zanite_gemstone>, <item:minecraft:air>], 
+	[<item:minecraft:glowstone_dust>, <item:minecraft:bookshelf>, <item:tinkersjewelry:gem>.withTag({Material: "tconstruct:whitestone"})], 
+	[<item:minecraft:air>, <item:midnight:moonshroom_powder>, <item:minecraft:air>]
+]);
