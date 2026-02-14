@@ -7,7 +7,7 @@ set -eu
 
 SRC_BASE="../minecraft"
 
-DIRS="mods config kubejs scripts"
+DIRS="mods config kubejs scripts defaultconfigs"
 
 for d in $DIRS; do
   # Remove existing destination directory to avoid merge-copy
