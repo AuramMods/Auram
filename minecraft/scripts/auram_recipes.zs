@@ -22,7 +22,7 @@ var d = <item:minecraft:stick>;
 var r = <item:minecraft:string>;
 
 craftingTable.remove(<item:waystones:warp_stone>);
-craftingTable.addShapeless("warper", <item:waystones:warp_stone> * 8, [<tag:items:forge:gems/amethyst>, <tag:items:c:ender_pearls>]);
+craftingTable.addShapeless("warper", <item:waystones:warp_stone> * 8, [<item:minecraft:amethyst_block>, <item:minecraft:ender_pearl>]);
 
 craftingTable.addShaped("bundlesticksfix", <item:auram:bundled_sticks> * 6, [
     [d, r, d],
