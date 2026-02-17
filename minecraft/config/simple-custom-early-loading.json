@@ -11,7 +11,7 @@
       "position": {
         // define which point in the image should be aligned at x, y position on the window
         // Possible values: TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT, CENTER, TOP_CENTER, BOTTOM_CENTER, LEFT_CENTER, RIGHT_CENTER
-        "position_anchor": "CENTER",
+        "position_anchor": "TOP_LEFT",
         // The unit for x, y position PIXELS or PERCENTAGE (percentage of the window values: 0-100)
         // the position unit can also be defined for each coordinate separately position_unit_x, position_unit_y
         "position_unit": "PIXELS",
@@ -19,12 +19,12 @@
         "x": 0,
         "y": 0,
         // The unit for width, height - PIXELS or PERCENTAGE (again, percantage of the window) - can't be defined separately
-        "size_unit": "PERCENTAGE",
+        "size_unit": "PIXELS",
         // The width and height of the image in size_unit
         // if you specify both values, the aspect ratio is not preserved
         // if you specify only one value, the other is calculated to preserve the aspect ratio
-        "width": 100,
-        "height": 100
+        "width": 1920,
+        "height": 1080
       }
     }
   ],
