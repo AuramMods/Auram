@@ -25,13 +25,58 @@ val tome = <item:akashictome:tome>.withTag({RepairCost: 0, "akashictome:data":
     ftbquests: {id: "ftbquests:book", Count: 1}, 
     bigreactors: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "bigreactors:erguide", "akashictome:is_morphing": 1, display: {Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"The Extreme Book\"}]}"}, "akashictome:displayName": {text: "{\"translate\":\"The Extreme Book\"}"}}}, 
     immersiveengineering: {id: "immersiveengineering:manual", Count: 1}, 
+    occultengineering: {id: "occultengineering:encyclopedia_of_souls", Count: 1, tag: {"modonomicon:book_id": "occultengineering:encyclopedia_of_souls"}}, 
+    terramity: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "terramity:terramity_guidebook"}}, 
+    naturesaura: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "naturesaura:book"}}, 
+    modonomicon: {id: "modonomicon:modonomicon", Count: 1, tag: {"modonomicon:book_id": "theurgy:the_hermetica"}}, 
+    cyclic: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "cyclic:guide_book"}},
     bewitchment: {id: "bewitchment:book_of_shadows", Count: 1, tag: {"akashictome:is_morphing": 1, display: {Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"item.bewitchment.book_of_shadows\"}]}"}, "akashictome:displayName": {text: "{\"translate\":\"item.bewitchment.book_of_shadows\"}"}}}, 
     pneumaticcraft: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "pneumaticcraft:book"}}
 }, "akashictome:is_morphing": 1, display: {Name: "{\"text\":\"Book of Holding\"}"}});
 
+val bag = <item:projectred_exploration:purple_backpack>.withTag({backpack_inventory: {item_count: 8, items: [
+    {slot: 0, id: "immersiveengineering:seed", Count: 5}, 
+    {slot: 2, id: "minecraft:clay", Count: 18}, 
+    {slot: 6, id: "minecraft:cake", Count: 1}, 
+    {slot: 8, id: "nomadictents:giant_bedouin", Count: 1, tag: {}}, 
+    {slot: 9, id: "minecraft:bone", Count: 3}, 
+    {slot: 17, id: "nomadictents:golden_mallet", Count: 1, tag: {Damage: 0}}, 
+    {slot: 23, id: "botania:brew_flask", Count: 1, tag: {brewKey: "botania:healing"}}
+]}});
 
 craftingTable.remove(<item:akashictome:tome>);
 craftingTable.addShapeless("tome_of_holding", tome, [
     <tag:items:forge:books>,
     <tag:items:forge:bookshelves>
 ]);
+
+import crafttweaker.forge.api.event.entity.player.PlayerLoggedInEvent;
+import crafttweaker.api.entity.type.player.ServerPlayer;
+import crafttweaker.api.entity.equipment.EquipmentSlot;
+
+val TAG = "ct_first_join_done";
+
+events.register<PlayerLoggedInEvent>(event => {
+    val player = (event.entity as ServerPlayer);
+    val data = player.persistentData;
+
+    if (!(TAG in data)) {
+        data.put(TAG, true);
+        player.updatePersistentData(data);
+
+        // THIS is the correct clear for your player inventory wrapper
+        player.getInventory().clearContent();
+
+        // equip
+        player.setItemSlot(EquipmentSlot.HEAD, <item:minecraft:leather_helmet>);
+        player.setItemSlot(EquipmentSlot.CHEST, <item:minecraft:chainmail_chestplate>);
+        player.setItemSlot(EquipmentSlot.LEGS, <item:butchery:fur_suit_leggings>);
+        player.setItemSlot(EquipmentSlot.FEET, <item:minecraft:leather_boots>);
+        player.setItemSlot(EquipmentSlot.OFFHAND, <item:terramity:flintlock_pistol>);
+
+        // give
+        player.give(tome);
+        player.give(bag);
+        player.give(<item:minecraft:iron_nugget> * 22);
+    }
+});
