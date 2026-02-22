@@ -36,3 +36,5 @@ mods.extendedcrafting.CombinationCrafting.addRecipe("10cfe9d1-f944-4f33-b64a-4aa
 craftingTable.addShapeless("sulfauram", <item:minecraft:gunpowder> * 3, [<item:thermal:niter>, <item:butchery:sulfur>|<item:thermal:sulfur>, <item:minecraft:charcoal>]);
 
 craftingTable.addShapeless("sulfblockauram", <item:minecraft:gunpowder> * 9, [<item:thermal:charcoal_block>, <item:minecraft:blaze_powder>]);
+
+craftingTable.addShapeless("shadowbucket", <item:dreamtinker:liquid_pure_soul_bucket>, [<item:bloodmagic:life_essence_bucket>, <item:crystalcraft_unlimited_java:shadow_diamond_block>])
