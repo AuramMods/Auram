@@ -32,3 +32,7 @@ craftingTable.addShaped("bundlesticksfix", <item:auram:bundled_sticks> * 6, [
 mods.extendedcrafting.CombinationCrafting.addRecipe("10cfe9d1-f944-4f33-b64a-4aa78a19a428", <item:auram:rock_catalyst>, 100000, [
 	<item:crystalcraft_unlimited_java:shadow_diamond_block>, <item:minecraft:chest>, <item:thermal:magenta_rockwool>
 ]);
+
+craftingTable.addShapeless("sulfauram", <item:minecraft:gunpowder> * 3, [<item:thermal:niter>, <item:butchery:sulfur>|<item:thermal:sulfur>, <item:minecraft:charcoal>]);
+
+craftingTable.addShapeless("sulfblockauram", <item:minecraft:gunpowder> * 9, [<item:thermal:charcoal_block>, <item:minecraft:blaze_powder>]);
