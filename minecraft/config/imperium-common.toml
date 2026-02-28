@@ -1,0 +1,230 @@
+
+#Energy conversion settings used by Roh.
+[Energy]
+	#Conversion tax applied to energy/mana/roh conversions.
+	#Range: 0.0 ~ 0.999999
+	TAX = 0.1
+	#How much RF equals 1 mana before tax.
+	#Range: 1.0E-9 ~ 1.0E12
+	RF_PER_MANA = 69.0
+	#How much Roh equals 1 mana before tax.
+	#Range: 1.0E-9 ~ 1.0E12
+	ROH_PER_MANA = 0.058823529411764705
+	#RF capacity of each Roh Energy Tap while accumulating.
+	#Range: > 1
+	ENERGY_TAP_RF_BUFFER_CAPACITY = 1000000
+	#Mana capacity of each Roh Mana Tap while accumulating.
+	#Range: > 1
+	MANA_TAP_MANA_BUFFER_CAPACITY = 1000000
+
+#Matter placement settings.
+[Matter]
+	#Hard cap for how many blocks may be placed in one tick.
+	#Range: 1 ~ 4096
+	MAX_BLOCKS_PER_TICK = 20
+	#Maximum affected blocks allowed for a single operation before it is canceled during Preparing.
+	#Range: > 1
+	MAX_BLOCKS_PER_OPERATION = 100000
+	#Minimum floor for max affected blocks per operation during Preparing.
+	#Range: > 1
+	MIN_BLOCKS_PER_OPERATION = 10000
+
+	#Preparing phase settings.
+	[Matter.Preparing]
+		#Minimum number of plan blocks scanned per tick during Preparing.
+		#Range: 1 ~ 4096
+		PREPARE_MIN_BLOCKS_PER_TICK = 4
+		#Maximum number of plan blocks scanned per tick during Preparing.
+		#Range: 1 ~ 4096
+		PREPARE_MAX_BLOCKS_PER_TICK = 16
+		#Extra Roh charged per scanned volume block during Preparing.
+		#Range: 0.0 ~ 1000000.0
+		PREPARE_SCAN_ROH_PER_BLOCK = 0.1
+		#Base Roh cost for placing one block.
+		#Range: 0.0 ~ 1000000.0
+		PLACE_ROH_COST_PER_BLOCK = 0.25
+		#Base Roh cost for breaking one block before speed bonus.
+		#Range: 0.0 ~ 1000000.0
+		BREAK_BASE_ROH_COST = 1.0
+		#Maximum extra Roh cost added by slow break speed.
+		#Range: 0.0 ~ 1000000.0
+		BREAK_MAX_SPEED_BONUS_ROH_COST = 2.0
+		#Base Roh Core range in blocks (radius). 32 means a 64x64x64 cuboid centered on core.
+		#Range: 1 ~ 1000000
+		BASE_RANGE = 32
+		#Speed multiplier gained per linked Roh Accelerator. Default is tuned so 8 accelerators reaches max block speed cap and 4 is roughly halfway.
+		#Range: 0.0 ~ 100.0
+		ACCELERATOR_SPEED = 5
+		#Preparing scan multiplier gained per linked Roh Accelerator. Default is tuned so 8 accelerators reaches prepare max and 4 is halfway.
+		#Range: 0.0 ~ 100.0
+		ACCELERATOR_PREPARE_CHECKS = 0.375
+		#Roh cost multiplier added per linked Roh Accelerator (1.0 = +100% each).
+		#Range: 0.0 ~ 100.0
+		ACCELERATOR_POWER_COST = 1.0
+		#Range multiplier gained per linked Roh Amplifier (1.0 = +100% base range each).
+		#Range: 0.0 ~ 100.0
+		AMPLIFIER_RANGE = 1.0
+		#Roh cost multiplier added per linked Roh Amplifier (1.0 = +100% each).
+		#Range: 0.0 ~ 100.0
+		AMPLIFIER_POWER_COST = 4.0
+		#Roh cost multiplier added per linked Roh Multiversal Amplifier (5.0 = +500% each).
+		#Range: 0.0 ~ 100.0
+		MULTIVERSAL_AMPLIFIER_POWER_COST = 5.0
+		#Per-amplifier max affected block multiplier during Preparing (4.0 = 4x cap per linked online amplifier).
+		#Range: 1.0 ~ 100.0
+		AMPLIFIER_MAX_BLOCKS_MULTIPLIER = 4.0
+		#Cancel accumulation if no Roh progress is made for this many seconds.
+		#Range: 0.1 ~ 3600.0
+		ACCUMULATION_TIMEOUT_SECONDS = 5.0
+
+	#Sound settings used while applying edits.
+	[Matter.Audio]
+		#Minimum ticks between vanilla block edit sounds (0 disables this cooldown).
+		#Range: 0 ~ 1200
+		EDIT_SOUND_COOLDOWN_TICKS = 1
+		#Minimum ticks between custom edit sounds (0 disables this cooldown).
+		#Range: 0 ~ 1200
+		CUSTOM_EDIT_SOUND_COOLDOWN_TICKS = 20
+		#Chance per applied change to attempt playing a custom edit sound.
+		#Range: 0.0 ~ 1.0
+		CUSTOM_EDIT_SOUND_CHANCE = 0.333
+		#When a custom edit sound plays, chance to use generic category instead of material-specific.
+		#Range: 0.0 ~ 1.0
+		CUSTOM_GENERIC_SOUND_CHANCE = 0.25
+
+	#Visual particle settings for edit haze.
+	[Matter.Visual]
+		#Minimum ash particles spawned when an edit sound plays.
+		#Range: 0 ~ 4096
+		DUST_HAZE_MIN_PARTICLES = 16
+		#Random extra ash particles added on top of minimum.
+		#Range: 0 ~ 4096
+		DUST_HAZE_RANDOM_EXTRA_PARTICLES = 32
+		#Speed factor used for ash haze particles.
+		#Range: 0.0 ~ 10.0
+		DUST_HAZE_SPEED = 0.0025
+		#Default player distance in blocks to render active echo-zone overlays.
+		#Range: 0.0 ~ 10000.0
+		ECHO_OVERLAY_NEARBY_DISTANCE = 10.0
+		#Player distance in blocks to render active echo-zone overlays when holding an activated Echo Wand.
+		#Range: 0.0 ~ 10000.0
+		ECHO_OVERLAY_HELD_DISTANCE = 32.0
+
+	#Dynamic front/sorting controls for procedural placement order.
+	[Matter.Sorting]
+		#How quickly the dynamic front direction phase advances each tick.
+		#Range: 0.0 ~ 10.0
+		DYNAMIC_FRONT_DRIFT_PHASE_STEP = 0.06
+		#How strongly the front direction blends toward the new sampled direction each tick.
+		#Range: 0.0 ~ 1.0
+		DYNAMIC_FRONT_DRIFT_BLEND = 0.22
+		#Base cursor advance over the dynamic front each tick.
+		#Range: 0.0 ~ 1.0
+		DYNAMIC_FRONT_CURSOR_BASE_STEP = 0.0035
+		#Primary spatial noise scale used by default sorters.
+		#Range: 1.0E-6 ~ 1000.0
+		SPATIAL_NOISE_SCALE_PRIMARY = 0.12
+		#Secondary spatial noise scale used by default sorters.
+		#Range: 1.0E-6 ~ 1000.0
+		SPATIAL_NOISE_SCALE_SECONDARY = 0.035
+		#Weight of noise in default spatial sorting (sweep uses 1.0 - this value).
+		#Range: 0.0 ~ 1.0
+		SPATIAL_NOISE_WEIGHT = 0.45
+
+	#Debugging and diagnostic toggles.
+	[Matter.Debugging]
+		#Enable verbose per-block placement trace logging from RohPlacementScheduler.
+		TRACE_BLOCK_FLOW = false
+
+	#Command safety settings.
+	[Matter.Commands]
+		#If true, /roh replace <find> <replace> blocks ore-tagged blocks in <find> only. The replacement block is not restricted.
+		BLOCK_REPLACE_FIND_ORE_TARGETS = true
+		#Block tags treated as ores for /roh replace <find> checks. Use namespace:path values; leading '#' is optional.
+		REPLACE_FIND_ORE_TARGET_TAGS = ["c:ores", "forge:ores"]
+
+		#Enable/disable shared /roh flags globally. Disabled flags are hidden from suggestions and rejected if typed.
+		[Matter.Commands.Flags]
+			#Enable --force on /roh commands that support it.
+			ENABLE_FLAG_FORCE = true
+			#Enable --partial on /roh commands that support it.
+			ENABLE_FLAG_PARTIAL = true
+			#Enable --naive on /roh commands that support it.
+			ENABLE_FLAG_NAIVE = true
+			#Enable -a on /roh commands that support it.
+			ENABLE_FLAG_IGNORE_AIR = true
+			#Enable --bonemeal on /roh commands that support it.
+			ENABLE_FLAG_BONEMEAL = true
+
+		#Enable/disable individual /roh subcommands. Disabled commands are not registered until command reload/server restart.
+		[Matter.Commands.Enabled]
+			#Enable /roh status.
+			ENABLE_STATUS = true
+			#Enable /roh abort.
+			ENABLE_ABORT = true
+			#Enable /roh pos1.
+			ENABLE_POS1 = true
+			#Enable /roh pos2.
+			ENABLE_POS2 = true
+			#Enable /roh shift.
+			ENABLE_SHIFT = true
+			#Enable /roh expand.
+			ENABLE_EXPAND = true
+			#Enable /roh contract.
+			ENABLE_CONTRACT = true
+			#Enable /roh measure.
+			ENABLE_MEASURE = true
+			#Enable /roh set.
+			ENABLE_SET = true
+			#Enable /roh center.
+			ENABLE_CENTER = true
+			#Enable /roh overlay.
+			ENABLE_OVERLAY = true
+			#Enable /roh cyl.
+			ENABLE_CYL = true
+			#Enable /roh hcyl.
+			ENABLE_HCYL = true
+			#Enable /roh sphere.
+			ENABLE_SPHERE = true
+			#Enable /roh hsphere.
+			ENABLE_HSPHERE = true
+			#Enable /roh replace.
+			ENABLE_REPLACE = true
+			#Enable /roh till.
+			ENABLE_TILL = true
+			#Enable /roh reap.
+			ENABLE_REAP = true
+			#Enable /roh sow.
+			ENABLE_SOW = true
+			#Enable /roh replant.
+			ENABLE_REPLANT = true
+			#Enable /roh copy.
+			ENABLE_COPY = true
+			#Enable /roh save.
+			ENABLE_SAVE = true
+			#Enable /roh load.
+			ENABLE_LOAD = true
+			#Enable /roh undo.
+			ENABLE_UNDO = true
+			#Enable /roh cut.
+			ENABLE_CUT = true
+			#Enable /roh paste.
+			ENABLE_PASTE = true
+			#Enable /roh rotate.
+			ENABLE_ROTATE = true
+			#Enable /roh mirror.
+			ENABLE_MIRROR = true
+			#Enable /roh echo.
+			ENABLE_ECHO = true
+			#Enable /roh stack.
+			ENABLE_STACK = true
+
+#Per-player session defaults.
+[Session]
+	#Default blocks per minute used when a new edit session is created.
+	#Range: 0.01 ~ 1.0E7
+	DEFAULT_BLOCKS_PER_MINUTE = 45.0
+	#Maximum undo history entries stored per player session.
+	#Range: 1 ~ 1024
+	MAX_HISTORY_ENTRIES = 16
+
