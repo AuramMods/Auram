@@ -10,12 +10,6 @@
 	#How much Roh equals 1 mana before tax.
 	#Range: 1.0E-9 ~ 1.0E12
 	ROH_PER_MANA = 0.058823529411764705
-	#RF capacity of each Roh Energy Tap while accumulating.
-	#Range: > 1
-	ENERGY_TAP_RF_BUFFER_CAPACITY = 1000000
-	#Mana capacity of each Roh Mana Tap while accumulating.
-	#Range: > 1
-	MANA_TAP_MANA_BUFFER_CAPACITY = 1000000
 
 #Matter placement settings.
 [Matter]
@@ -28,6 +22,11 @@
 	#Minimum floor for max affected blocks per operation during Preparing.
 	#Range: > 1
 	MIN_BLOCKS_PER_OPERATION = 10000
+	#Maximum radius accepted by /roh cyl, /roh hcyl, /roh sphere, and /roh hsphere.
+	#Range: 1 ~ 4096
+	SHAPE_MAX_RADIUS = 256
+	#Allow tools that effectively never lose durability to satisfy Imperium tool requirements.
+	ALLOW_UNBREAKABLE_TOOLS = true
 
 	#Preparing phase settings.
 	[Matter.Preparing]
@@ -49,33 +48,6 @@
 		#Maximum extra Roh cost added by slow break speed.
 		#Range: 0.0 ~ 1000000.0
 		BREAK_MAX_SPEED_BONUS_ROH_COST = 2.0
-		#Base Roh Core range in blocks (radius). 32 means a 64x64x64 cuboid centered on core.
-		#Range: 1 ~ 1000000
-		BASE_RANGE = 32
-		#Speed multiplier gained per linked Roh Accelerator. Default is tuned so 8 accelerators reaches max block speed cap and 4 is roughly halfway.
-		#Range: 0.0 ~ 100.0
-		ACCELERATOR_SPEED = 5
-		#Preparing scan multiplier gained per linked Roh Accelerator. Default is tuned so 8 accelerators reaches prepare max and 4 is halfway.
-		#Range: 0.0 ~ 100.0
-		ACCELERATOR_PREPARE_CHECKS = 0.375
-		#Roh cost multiplier added per linked Roh Accelerator (1.0 = +100% each).
-		#Range: 0.0 ~ 100.0
-		ACCELERATOR_POWER_COST = 1.0
-		#Range multiplier gained per linked Roh Amplifier (1.0 = +100% base range each).
-		#Range: 0.0 ~ 100.0
-		AMPLIFIER_RANGE = 1.0
-		#Roh cost multiplier added per linked Roh Amplifier (1.0 = +100% each).
-		#Range: 0.0 ~ 100.0
-		AMPLIFIER_POWER_COST = 4.0
-		#Roh cost multiplier added per linked Roh Multiversal Amplifier (5.0 = +500% each).
-		#Range: 0.0 ~ 100.0
-		MULTIVERSAL_AMPLIFIER_POWER_COST = 5.0
-		#Per-amplifier max affected block multiplier during Preparing (4.0 = 4x cap per linked online amplifier).
-		#Range: 1.0 ~ 100.0
-		AMPLIFIER_MAX_BLOCKS_MULTIPLIER = 4.0
-		#Cancel accumulation if no Roh progress is made for this many seconds.
-		#Range: 0.1 ~ 3600.0
-		ACCUMULATION_TIMEOUT_SECONDS = 5.0
 
 	#Sound settings used while applying edits.
 	[Matter.Audio]
@@ -91,6 +63,12 @@
 		#When a custom edit sound plays, chance to use generic category instead of material-specific.
 		#Range: 0.0 ~ 1.0
 		CUSTOM_GENERIC_SOUND_CHANCE = 0.25
+		#Pitch shift added to vanilla block break/place sounds during edit playback (-0.3 lowers pitch).
+		#Range: -2.0 ~ 2.0
+		EDIT_SOUND_PITCH_SHIFT = -0.3
+		#Volume for player-started Roh command lifecycle sounds (request/failure/accumulated/complete).
+		#Range: 0.0 ~ 4.0
+		COMMAND_LIFECYCLE_SOUND_VOLUME = 0.5
 
 	#Visual particle settings for edit haze.
 	[Matter.Visual]
@@ -109,6 +87,56 @@
 		#Player distance in blocks to render active echo-zone overlays when holding an activated Echo Wand.
 		#Range: 0.0 ~ 10000.0
 		ECHO_OVERLAY_HELD_DISTANCE = 32.0
+		#Cuboid overlay fill renderer mode. Supported: DEBUG_QUADS, EMISSIVE_SHELL.
+		CUBOID_OVERLAY_RENDER_MODE = "EMISSIVE_SHELL"
+		#Alpha multiplier for cuboid fill in EMISSIVE_SHELL mode. Lower values are more transparent.
+		#Range: 0.0 ~ 4.0
+		CUBOID_EMISSIVE_SHELL_ALPHA_SCALE = 0.9
+		#World-space tile size in blocks for cuboid shell texture repetition in EMISSIVE_SHELL mode.
+		#Range: 0.125 ~ 16.0
+		CUBOID_EMISSIVE_SHELL_TILE_SIZE = 4.0
+		#Minimum opacity factor used by pulsing cuboid overlays (higher = less extreme dimming).
+		#Range: 0.0 ~ 1.0
+		CUBOID_PULSE_OPACITY_MIN = 0.9
+		#Maximum opacity factor used by pulsing cuboid overlays.
+		#Range: 0.0 ~ 1.0
+		CUBOID_PULSE_OPACITY_MAX = 1.0
+		#Minimum hue shift in degrees applied to non-operation cuboid colors by the procedural visual driver.
+		#Range: -180.0 ~ 180.0
+		CUBOID_NOISE_HUE_SHIFT_MIN_DEGREES = -30.0
+		#Maximum hue shift in degrees applied to cuboid colors by the procedural visual driver.
+		#Range: -180.0 ~ 180.0
+		CUBOID_NOISE_HUE_SHIFT_MAX_DEGREES = 30.0
+		#Time speed multiplier for non-operation cuboid hue-shift noise (higher values animate faster).
+		#Range: 0.0 ~ 100.0
+		CUBOID_NOISE_HUE_SHIFT_SPEED = 0.44
+		#Minimum alpha offset applied to non-operation cuboid fill/line opacity by the procedural visual driver.
+		#Range: -1.0 ~ 1.0
+		CUBOID_NOISE_ALPHA_SHIFT_MIN = 0.0
+		#Maximum alpha offset applied to cuboid fill/line opacity by the procedural visual driver.
+		#Range: -1.0 ~ 1.0
+		CUBOID_NOISE_ALPHA_SHIFT_MAX = 0.1
+		#Time speed multiplier for non-operation cuboid alpha-shift noise (higher values animate faster).
+		#Range: 0.0 ~ 100.0
+		CUBOID_NOISE_ALPHA_SHIFT_SPEED = 0.15
+		#Minimum hue shift in degrees applied to active operation cuboids.
+		#Range: -180.0 ~ 180.0
+		CUBOID_ACTIVE_NOISE_HUE_SHIFT_MIN_DEGREES = -90.0
+		#Maximum hue shift in degrees applied to active operation cuboids.
+		#Range: -180.0 ~ 180.0
+		CUBOID_ACTIVE_NOISE_HUE_SHIFT_MAX_DEGREES = 90.0
+		#Time speed multiplier for active operation cuboid hue-shift noise.
+		#Range: 0.0 ~ 100.0
+		CUBOID_ACTIVE_NOISE_HUE_SHIFT_SPEED = 1.1
+		#Minimum alpha offset applied to active operation cuboid fill/line opacity.
+		#Range: -1.0 ~ 1.0
+		CUBOID_ACTIVE_NOISE_ALPHA_SHIFT_MIN = -0.2
+		#Maximum alpha offset applied to active operation cuboid fill/line opacity.
+		#Range: -1.0 ~ 1.0
+		CUBOID_ACTIVE_NOISE_ALPHA_SHIFT_MAX = 0.2
+		#Time speed multiplier for active operation cuboid alpha-shift noise.
+		#Range: 0.0 ~ 100.0
+		CUBOID_ACTIVE_NOISE_ALPHA_SHIFT_SPEED = 0.5
 
 	#Dynamic front/sorting controls for procedural placement order.
 	[Matter.Sorting]
@@ -218,6 +246,63 @@
 			ENABLE_ECHO = true
 			#Enable /roh stack.
 			ENABLE_STACK = true
+
+	#Roh Core network component settings.
+	[Matter.Core]
+		#Base Roh Core range in blocks (radius). 64 means a 128x128x128 cuboid centered on core.
+		#Range: 1 ~ 1000000
+		BASE_RANGE = 64
+		#Cancel accumulation if no Roh progress is made for this many seconds.
+		#Range: 0.1 ~ 3600.0
+		ACCUMULATION_TIMEOUT_SECONDS = 5.0
+
+	#Roh Accelerator network component settings.
+	[Matter.Accelerator]
+		#Speed multiplier gained per linked Roh Accelerator.
+		#Range: 0.0 ~ 100.0
+		ACCELERATOR_SPEED = 4.0
+		#Preparing scan multiplier gained per linked Roh Accelerator.
+		#Range: 0.0 ~ 100.0
+		ACCELERATOR_PREPARE_CHECKS = 0.375
+		#Roh cost multiplier added per linked Roh Accelerator (1.0 = +100% each).
+		#Range: 0.0 ~ 100.0
+		ACCELERATOR_POWER_COST = 1.0
+
+	#Roh Amplifier network component settings.
+	[Matter.Amplifier]
+		#Range multiplier gained per linked Roh Amplifier (1.0 = +100% base range each).
+		#Range: 0.0 ~ 100.0
+		AMPLIFIER_RANGE = 1.0
+		#Roh cost multiplier added per linked Roh Amplifier (1.0 = +100% each).
+		#Range: 0.0 ~ 100.0
+		AMPLIFIER_POWER_COST = 2.0
+		#Roh cost multiplier added per linked Roh Multiversal Amplifier (5.0 = +500% each).
+		#Range: 0.0 ~ 100.0
+		MULTIVERSAL_AMPLIFIER_POWER_COST = 5.0
+		#Per-amplifier max affected block multiplier during Preparing (4.0 = 4x cap per linked online amplifier).
+		#Range: 1.0 ~ 100.0
+		AMPLIFIER_MAX_BLOCKS_MULTIPLIER = 4.0
+
+	#Roh Enhancer network component settings.
+	[Matter.Enhancer]
+		#Maximum Roh efficiency reduction from linked Roh Enhancers (0.5 = up to 50% lower Roh costs).
+		#Range: 0.0 ~ 0.95
+		ENHANCER_MAX_EFFICIENCY_MULTIPLIER = 0.5
+		#Efficiency reduction added per linked Roh Enhancer (0.1 = 10% each).
+		#Range: 0.0 ~ 0.95
+		ENHANCER_EFFICIENCY_PER_BLOCK = 0.1
+
+	#Roh Energy Tap network component settings.
+	[Matter.EnergyTap]
+		#RF capacity of each Roh Energy Tap while accumulating.
+		#Range: > 1
+		ENERGY_TAP_RF_BUFFER_CAPACITY = 1000000
+
+	#Roh Mana Tap network component settings.
+	[Matter.ManaTap]
+		#Mana capacity of each Roh Mana Tap while accumulating.
+		#Range: > 1
+		MANA_TAP_MANA_BUFFER_CAPACITY = 1000000
 
 #Per-player session defaults.
 [Session]
