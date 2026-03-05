@@ -87,12 +87,12 @@
 		#Player distance in blocks to render active echo-zone overlays when holding an activated Echo Wand.
 		#Range: 0.0 ~ 10000.0
 		ECHO_OVERLAY_HELD_DISTANCE = 32.0
-		#Cuboid overlay fill renderer mode. Supported: DEBUG_QUADS, EMISSIVE_SHELL.
+		#Cuboid overlay fill renderer mode. Supported: QUADS, SHELL.
 		CUBOID_OVERLAY_RENDER_MODE = "EMISSIVE_SHELL"
-		#Alpha multiplier for cuboid fill in EMISSIVE_SHELL mode. Lower values are more transparent.
+		#Alpha multiplier for cuboid fill in SHELL mode. Lower values are more transparent.
 		#Range: 0.0 ~ 4.0
 		CUBOID_EMISSIVE_SHELL_ALPHA_SCALE = 0.9
-		#World-space tile size in blocks for cuboid shell texture repetition in EMISSIVE_SHELL mode.
+		#World-space tile size in blocks for cuboid shell texture repetition in SHELL mode.
 		#Range: 0.125 ~ 16.0
 		CUBOID_EMISSIVE_SHELL_TILE_SIZE = 4.0
 		#Minimum opacity factor used by pulsing cuboid overlays (higher = less extreme dimming).
@@ -183,6 +183,10 @@
 			ENABLE_FLAG_IGNORE_AIR = true
 			#Enable --bonemeal on /roh commands that support it.
 			ENABLE_FLAG_BONEMEAL = true
+			#Enable --silk on /roh commands that support it.
+			ENABLE_FLAG_SILK = true
+			#Enable --hydrophobic on /roh commands that support it.
+			ENABLE_FLAG_HYDROPHOBIC = true
 
 		#Enable/disable individual /roh subcommands. Disabled commands are not registered until command reload/server restart.
 		[Matter.Commands.Enabled]
@@ -190,10 +194,6 @@
 			ENABLE_STATUS = true
 			#Enable /roh abort.
 			ENABLE_ABORT = true
-			#Enable /roh pos1.
-			ENABLE_POS1 = true
-			#Enable /roh pos2.
-			ENABLE_POS2 = true
 			#Enable /roh shift.
 			ENABLE_SHIFT = true
 			#Enable /roh expand.
@@ -246,6 +246,36 @@
 			ENABLE_ECHO = true
 			#Enable /roh stack.
 			ENABLE_STACK = true
+			#Enable /roh p1.
+			ENABLE_P1 = true
+			#Enable /roh p2.
+			ENABLE_P2 = true
+			#Enable /roh hp1.
+			ENABLE_HP1 = true
+			#Enable /roh hp2.
+			ENABLE_HP2 = true
+			#Enable /roh clear.
+			ENABLE_CLEAR = true
+			#Enable /roh sp.
+			ENABLE_SP = true
+			#Enable /roh hsp.
+			ENABLE_HSP = true
+			#Enable /roh outset.
+			ENABLE_OUTSET = true
+			#Enable /roh inset.
+			ENABLE_INSET = true
+			#Enable /roh ellipse.
+			ENABLE_ELLIPSE = true
+			#Enable /roh hellipse.
+			ENABLE_HELLIPSE = true
+			#Enable /roh pyramid.
+			ENABLE_PYRAMID = true
+			#Enable /roh hpyramid.
+			ENABLE_HPYRAMID = true
+			#Enable /roh line.
+			ENABLE_LINE = true
+			#Enable /roh wall.
+			ENABLE_WALL = true
 
 	#Roh Core network component settings.
 	[Matter.Core]
@@ -303,6 +333,11 @@
 		#Mana capacity of each Roh Mana Tap while accumulating.
 		#Range: > 1
 		MANA_TAP_MANA_BUFFER_CAPACITY = 1000000
+
+	#Connection Wand behavior settings.
+	[Matter.ConnectionWand]
+		#Enable Burrow mode for the Connection Wand. When disabled, mode cycling skips Burrow and existing Burrow selections fall back to Default.
+		BURROW_MODE_ENABLED = true
 
 #Per-player session defaults.
 [Session]

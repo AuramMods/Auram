@@ -37,4 +37,4 @@ craftingTable.addShapeless("sulfauram", <item:minecraft:gunpowder> * 3, [<item:t
 
 craftingTable.addShapeless("sulfblockauram", <item:minecraft:gunpowder> * 9, [<item:thermal:charcoal_block>, <item:minecraft:blaze_powder>]);
 
-craftingTable.addShapeless("shadowbucket", <item:dreamtinker:liquid_pure_soul_bucket>, [<item:bloodmagic:life_essence_bucket>, <item:crystalcraft_unlimited_java:shadow_diamond_block>])
+craftingTable.addShapeless("shadowbucket", <item:dreamtinker:liquid_pure_soul_bucket>, [<item:bloodmagic:life_essence_bucket>, <item:crystalcraft_unlimited_java:shadow_diamond_block>]);
