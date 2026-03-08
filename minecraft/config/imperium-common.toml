@@ -30,12 +30,6 @@
 
 	#Preparing phase settings.
 	[Matter.Preparing]
-		#Minimum number of plan blocks scanned per tick during Preparing.
-		#Range: 1 ~ 4096
-		PREPARE_MIN_BLOCKS_PER_TICK = 4
-		#Maximum number of plan blocks scanned per tick during Preparing.
-		#Range: 1 ~ 4096
-		PREPARE_MAX_BLOCKS_PER_TICK = 16
 		#Extra Roh charged per scanned volume block during Preparing.
 		#Range: 0.0 ~ 1000000.0
 		PREPARE_SCAN_ROH_PER_BLOCK = 0.1
@@ -291,9 +285,6 @@
 		#Speed multiplier gained per linked Roh Accelerator.
 		#Range: 0.0 ~ 100.0
 		ACCELERATOR_SPEED = 4.0
-		#Preparing scan multiplier gained per linked Roh Accelerator.
-		#Range: 0.0 ~ 100.0
-		ACCELERATOR_PREPARE_CHECKS = 0.375
 		#Roh cost multiplier added per linked Roh Accelerator (1.0 = +100% each).
 		#Range: 0.0 ~ 100.0
 		ACCELERATOR_POWER_COST = 1.0
@@ -338,6 +329,12 @@
 	[Matter.ConnectionWand]
 		#Enable Burrow mode for the Connection Wand. When disabled, mode cycling skips Burrow and existing Burrow selections fall back to Default.
 		BURROW_MODE_ENABLED = true
+
+	#Global scheduler budget settings.
+	[Matter.Scheduler]
+		#Maximum total scheduler work time per server tick shared by preparing/accumulating/applying jobs (0 disables time cap).
+		#Range: 0.0 ~ 100.0
+		MAX_WORK_MILLIS_PER_TICK = 5.0
 
 #Per-player session defaults.
 [Session]
