@@ -35,15 +35,13 @@ val tome = <item:akashictome:tome>.withTag({RepairCost: 0, "akashictome:data":
     pneumaticcraft: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "pneumaticcraft:book"}}
 }, "akashictome:is_morphing": 1, display: {Name: "{\"text\":\"Book of Holding\"}"}});
 
-val bag = <item:projectred_exploration:purple_backpack>.withTag({backpack_inventory: {item_count: 8, items: [
-    {slot: 0, id: "immersiveengineering:seed", Count: 5}, 
-    {slot: 2, id: "minecraft:clay", Count: 18}, 
-    {slot: 6, id: "minecraft:cake", Count: 1}, 
-    {slot: 8, id: "nomadictents:giant_bedouin", Count: 1, tag: {}}, 
-    {slot: 9, id: "minecraft:bone", Count: 3}, 
-    {slot: 17, id: "nomadictents:golden_mallet", Count: 1, tag: {Damage: 0}}, 
-    {slot: 23, id: "botania:brew_flask", Count: 1, tag: {brewKey: "botania:healing"}}
-]}});
+val bag = <item:seminin_cantalari:elmascanta>.withTag({Inventory: {Size: 53, Items: [
+    {Slot: 11, id: "immersiveengineering:seed", Count: 5}, {Slot: 13, id: "minecraft:clay", Count: 18}, 
+    {Slot: 19, id: "minecraft:cake", Count: 1}, 
+    {Slot: 21, id: "nomadictents:giant_bedouin", Count: 1, tag: {}}, 
+    {Slot: 22, id: "minecraft:bone", Count: 3}, 
+    {Slot: 30, id: "nomadictents:golden_mallet", Count: 1, tag: {Damage: 0}}, 
+    {Slot: 38, id: "botania:brew_flask", Count: 1, tag: {brewKey: "botania:healing"}}]}});
 
 craftingTable.remove(<item:akashictome:tome>);
 craftingTable.addShapeless("tome_of_holding", tome, [
@@ -81,3 +79,20 @@ events.register<PlayerLoggedInEvent>(event => {
         player.give(<item:minecraft:iron_nugget> * 22);
     }
 });
+
+craftingTable.remove(<item:projectred_exploration:white_backpack>);
+craftingTable.remove(<item:projectred_exploration:orange_backpack>);
+craftingTable.remove(<item:projectred_exploration:magenta_backpack>);
+craftingTable.remove(<item:projectred_exploration:light_blue_backpack>);
+craftingTable.remove(<item:projectred_exploration:yellow_backpack>);
+craftingTable.remove(<item:projectred_exploration:lime_backpack>);
+craftingTable.remove(<item:projectred_exploration:pink_backpack>);
+craftingTable.remove(<item:projectred_exploration:gray_backpack>);
+craftingTable.remove(<item:projectred_exploration:light_gray_backpack>);
+craftingTable.remove(<item:projectred_exploration:cyan_backpack>);
+craftingTable.remove(<item:projectred_exploration:purple_backpack>);
+craftingTable.remove(<item:projectred_exploration:blue_backpack>);
+craftingTable.remove(<item:projectred_exploration:brown_backpack>);
+craftingTable.remove(<item:projectred_exploration:green_backpack>);
+craftingTable.remove(<item:projectred_exploration:red_backpack>);
+craftingTable.remove(<item:projectred_exploration:black_backpack>);
