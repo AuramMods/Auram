@@ -85,3 +85,24 @@ Run the release integration tests with:
 ```sh
 python3 -B -m unittest discover -s tests -v
 ```
+
+## Mod update checks
+
+Pack updates are distributed through the launcher. `minecraft/config/fml.toml`
+sets `versionCheck = false`, stopping Forge's update requests for all mods that
+register an `updateJSONURL`, including bundled dependencies.
+
+Independent checks are disabled in Distant Horizons, Cyclops Core, Common
+Capabilities, Colossal Chests, Integrated Dynamics, Integrated Crafting,
+Integrated Terminals, and Dynamic Surroundings. Mods Optimizer uses its local
+database instead of downloading database updates. Additional Structures,
+Chunks Fade In, Oculus, Enigmatic Legacy, Majrusz Library, and Immersive
+Engineering also have their update checks/notices disabled in their configs.
+JourneyMap's `checkUpdates` and TT20's `automatic-updater` were already disabled
+and remain so.
+
+AuramCore 1.0.4 cancels KubeJS 2001.6.5-build.16's unconditional startup update
+request, which has no configuration switch. Its script lifecycle still runs.
+The server pack includes the same configs and Auram jar through
+`server_config.conf`. Restart the client/server after installing an update to
+apply the startup settings.
