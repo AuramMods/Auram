@@ -79,6 +79,8 @@ def validate(document: dict, policy: dict) -> None:
     seen = set()
     snapshot = dict(document["files"])
     for transition in document["history"]:
+        if "packIgnoreBefore" in transition and not isinstance(transition["packIgnoreBefore"],str):
+            raise ValueError("Invalid prior client filter")
         identity(transition["target"])
         if transition["target"] != current or current["sha"] in seen:
             raise ValueError("Broken/cyclic distribution history")

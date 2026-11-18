@@ -87,8 +87,10 @@ class PublicationTests(unittest.TestCase):
         self.gh.states['1000']={"tagName":"1000","isDraft":False,"isPrerelease":False,"targetCommitish":"a"*40,"url":"newer"}
         (self.gh.root/'1000').mkdir(); self.gh.latest='1000'
         self.publish(); self.assertEqual(self.gh.latest,'1000')
-        self.gh.states[self.f.base['name']]['targetCommitish']='b'*40
-        with self.assertRaisesRegex(ValueError,'different commit'): self.publish()
+        self.gh.states[self.f.base['name']]['targetCommitish']='main'
+        self.assertTrue(self.publish()['alreadyPublished'])
+        self.gh.states[self.f.base['name']]['tagName']='999'
+        with self.assertRaisesRegex(ValueError,'different release tag'): self.publish()
 
 
 if __name__=='__main__': unittest.main()

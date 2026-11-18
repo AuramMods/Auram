@@ -54,7 +54,15 @@ def verified_envelope(path: Path, public: Path, policy: dict) -> dict:
     with tempfile.TemporaryDirectory() as directory:
         body = Path(directory) / "manifest.json"; signature = Path(directory) / "manifest.sig"
         body.write_bytes(payload); signature.write_text(signed["signature"], encoding="utf-8")
-        subprocess.run(["minisign", "-V", "-p", str(public), "-m", str(body), "-x", str(signature)], check=True, capture_output=True, timeout=30)
+        failure=None
+        keys=[line.strip() for line in public.read_text().splitlines() if line.strip() and not line.startswith('untrusted comment:')]
+        if not keys: raise ValueError('No configured public pack verification keys')
+        for key in keys:
+            try:
+                subprocess.run(["minisign", "-V", "-P", key, "-m", str(body), "-x", str(signature)], check=True, capture_output=True, timeout=30)
+                failure=None; break
+            except subprocess.CalledProcessError as error: failure=error
+        if failure is not None: raise failure
     document = json.loads(payload)
     validate(document, policy)
     return document
@@ -151,7 +159,9 @@ class Builder:
             after = self.snapshot(current["sha"])
             changes = {path:{"before":before.get(path),"after":after.get(path)}
                        for path in sorted(before.keys() | after.keys()) if before.get(path) != after.get(path)}
-            result.append({"target":current,"base":base,"changes":changes})
+            ignore_before=(git(self.root,"show",f"{base['sha']}:.packignore").decode()
+                           if base and git(self.root,"ls-tree",base["sha"],"--",".packignore") else "")
+            result.append({"target":current,"base":base,"changes":changes,"packIgnoreBefore":ignore_before})
             if base is None: break
             current = base
         return result

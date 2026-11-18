@@ -41,6 +41,10 @@ the launcher's `src-tauri/pack.pub`. Do not regenerate an existing release key.
 To rotate, first ship launcher support for the new trust root while retaining
 the old key for existing cached releases; then switch the producer and publish
 new signed distributions. Never silently replace a published release's signer.
+Both verifiers accept concatenated two-line public-key blocks in `pack.pub`.
+Install both old and new public keys in the producer and launcher before changing
+the private signing key. Keep the old public key until legacy signed catalogs no
+longer need it. Fixture tests verify acceptance through retained-key rotation.
 
 The signed catalog contains a full selected inventory and up to 64 verified
 before/after release transitions. Partial ZIP payloads contain only distinct

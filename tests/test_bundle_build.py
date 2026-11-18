@@ -103,5 +103,11 @@ class BundleBuildTests(unittest.TestCase):
         self.commit("Unsupported link"); target=self.release(self.base)
         with self.assertRaisesRegex(ValueError,"Unsupported selected Git entry"): self.build(target)
 
+    def test_retained_public_keys_allow_a_staged_signing_key_rotation(self):
+        self.build(self.base)
+        self.public.write_bytes((ROOT/'distribution/pack.pub').read_bytes()+b'\n'+self.public.read_bytes())
+        document=verified_envelope(self.cache/self.base['name']/'auram-pack.json',self.public,json.loads((ROOT/'distribution/policy.json').read_bytes()))
+        self.assertEqual(document['target'],self.base)
+
 
 if __name__ == "__main__": unittest.main()

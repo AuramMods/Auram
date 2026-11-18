@@ -45,7 +45,7 @@ def verify_local(directory: Path, expected: dict) -> tuple[dict,list[str]]:
 def verify_remote(tag: str, target: dict, run=gh) -> tuple[dict,dict]:
     state=release(tag,run)
     if state is None: raise ValueError("GitHub release disappeared during publication")
-    if state["targetCommitish"] != target["sha"]: raise ValueError("GitHub release identifies a different commit")
+    if state["tagName"] != tag: raise ValueError("GitHub returned a different release tag")
     with tempfile.TemporaryDirectory(prefix="auram-pack-published-") as directory:
         run("release","download",tag,"--dir",directory,"--clobber")
         document,files=verify_local(Path(directory),target)
@@ -60,7 +60,9 @@ def publish(root: Path, tag: str, directory: Path, run=gh) -> dict:
     document,files=verify_local(directory,target)
     existing=release(tag,run)
     if existing is not None:
-        if existing["targetCommitish"] != target["sha"]: raise ValueError("Immutable release tag already belongs to a different commit")
+        # target_commitish is a creation hint and can legitimately be "main".
+        # The fetched Git tag and signed downloadable inventory are authoritative.
+        if existing['tagName'] != tag: raise ValueError('GitHub returned a different release tag')
         if not existing["isDraft"]:
             state,public=verify_remote(tag,target,run)
             if public["files"] != document["files"]: raise ValueError("Published pack inventory disagrees with the tagged source")
