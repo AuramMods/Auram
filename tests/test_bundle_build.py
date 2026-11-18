@@ -12,7 +12,7 @@ import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
-from bundle_build import build, digest, verified_envelope
+from bundle_build import build, digest, verified_envelope, verify_archive
 
 
 class BundleBuildTests(unittest.TestCase):
@@ -108,6 +108,25 @@ class BundleBuildTests(unittest.TestCase):
         self.public.write_bytes((ROOT/'distribution/pack.pub').read_bytes()+b'\n'+self.public.read_bytes())
         document=verified_envelope(self.cache/self.base['name']/'auram-pack.json',self.public,json.loads((ROOT/'distribution/policy.json').read_bytes()))
         self.assertEqual(document['target'],self.base)
+
+    def test_matching_archive_digest_does_not_excuse_invalid_members(self):
+        body = b"correct"
+        oid = hashlib.sha1(f"blob {len(body)}\0".encode() + body).hexdigest()
+        path = self.cache / "malformed.zip"
+        path.parent.mkdir()
+        for name, content, failure in (
+            ("../outside", body, "Unsafe"),
+            (f"objects/{oid}", b"changed", "content verification"),
+        ):
+            with zipfile.ZipFile(path, "w") as archive:
+                archive.writestr(name, content)
+            bundle = {
+                "sha256": digest(path),
+                "size": path.stat().st_size,
+                "members": {oid: {"size": len(body), "sha256": hashlib.sha256(body).hexdigest()}},
+            }
+            with self.assertRaisesRegex(ValueError, failure):
+                verify_archive(path, bundle)
 
 
 if __name__ == "__main__": unittest.main()

@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 
-from bundle_build import digest, tagged, verified_envelope
+from bundle_build import digest, tagged, verified_envelope, verify_archive
 
 REPOSITORY="AuramMods/Auram"
 
@@ -35,7 +35,7 @@ def verify_local(directory: Path, expected: dict) -> tuple[dict,list[str]]:
     for sha,bundle in document["bundles"].items():
         if bundle["url"].startswith(prefix):
             name=f"pack-{sha}.zip"; path=directory/name
-            if path.stat().st_size != bundle["size"] or digest(path) != sha: raise ValueError(f"Bundle failed integrity verification: {name}")
+            verify_archive(path, bundle)
             files.append(name)
     expected_sums="".join(f"{digest(directory/name)}  {name}\n" for name in sorted(files) if name != "SHA256SUMS")
     if (directory/"SHA256SUMS").read_text() != expected_sums: raise ValueError("Published checksum set is incomplete or inconsistent")

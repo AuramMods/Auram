@@ -45,6 +45,36 @@ def digest(path: Path) -> str:
     return h.hexdigest()
 
 
+def verify_archive(path: Path, bundle: dict) -> None:
+    if path.stat().st_size != bundle['size'] or digest(path) != bundle['sha256']:
+        raise ValueError(f'Bundle archive failed integrity verification: {path.name}')
+    seen = set()
+    with zipfile.ZipFile(path) as archive:
+        if len(archive.infolist()) != len(bundle['members']):
+            raise ValueError('Unexpected archive member count')
+        for item in archive.infolist():
+            oid = item.filename.removeprefix('objects/')
+            expected = bundle['members'].get(oid)
+            mode = (item.external_attr >> 16) & 0o170000
+            if (item.filename != f'objects/{oid}' or expected is None or oid in seen
+                    or item.is_dir() or mode not in (0, 0o100000) or item.flag_bits & 1
+                    or item.file_size != expected['size']):
+                raise ValueError('Unsafe or duplicate archive member')
+            seen.add(oid)
+            git_hash = hashlib.sha1(f"blob {expected['size']}\0".encode())
+            sha256 = hashlib.sha256()
+            size = 0
+            with archive.open(item) as stream:
+                for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+                    size += len(chunk)
+                    if size > expected['size']:
+                        raise ValueError('Archive expansion exceeds its declaration')
+                    git_hash.update(chunk)
+                    sha256.update(chunk)
+            if size != expected['size'] or git_hash.hexdigest() != oid or sha256.hexdigest() != expected['sha256']:
+                raise ValueError('Archive member failed content verification')
+
+
 def verified_envelope(path: Path, public: Path, policy: dict) -> dict:
     with path.open('rb') as stream:
         data = stream.read(MAX_METADATA + 1)
@@ -225,6 +255,7 @@ def build(root: Path, tag: str, output: Path, key: Path, previous: Path | None =
         for group in groups:
             sha,bundle=builder.archive(group,output)
             bundle["url"]=f"https://github.com/{REPO}/releases/download/{tag}/pack-{sha}.zip"
+            verify_archive(output/f'pack-{sha}.zip',bundle)
             document["bundles"][sha]=bundle
             for oid in group: document["objects"][oid]=sha
             published.append(f"pack-{sha}.zip")
