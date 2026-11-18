@@ -28,6 +28,7 @@ class FakeGitHub:
             return json.dumps(state)
         tag=args[2]
         if action=="create":
+            if "--verify-tag" not in args: raise AssertionError("Publication must use a preexisting remote tag")
             self.states[tag]={"tagName":tag,"isDraft":True,"isPrerelease":False,"targetCommitish":args[args.index('--target')+1],"url":f"https://github.com/AuramMods/Auram/releases/tag/{tag}"}
             (self.root/tag).mkdir(); return ""
         if action=="upload":
@@ -91,6 +92,33 @@ class PublicationTests(unittest.TestCase):
         self.assertTrue(self.publish()['alreadyPublished'])
         self.gh.states[self.f.base['name']]['tagName']='999'
         with self.assertRaisesRegex(ValueError,'different release tag'): self.publish()
+
+    def test_newer_release_published_during_upload_keeps_latest(self):
+        def publish_during_upload(*args):
+            result = self.gh(*args)
+            if args[1] == 'upload':
+                self.gh.states['1000'] = {"tagName":"1000","isDraft":False,"isPrerelease":False,
+                                          "targetCommitish":"a"*40,"url":"newer"}
+                (self.gh.root/'1000').mkdir()
+                self.gh.latest = '1000'
+            return result
+
+        tag = self.f.base["name"]
+        publish(self.f.root, tag, self.f.cache/tag, publish_during_upload)
+        self.assertEqual(self.gh.latest, '1000')
+
+    def test_every_inherited_archive_must_exist_in_the_published_predecessor(self):
+        self.publish()
+        base = self.f.base
+        self.f.write("minecraft/config/updated.toml", b"new argument")
+        self.f.commit("Update configuration")
+        target = self.f.release(base)
+        self.f.build(target, self.f.cache/base["name"]/"auram-pack.json")
+        with patch("bundle_publish.verify_remote", return_value=({"isDraft": False}, {"bundles": {}})):
+            with self.assertRaisesRegex(ValueError, "does not match the published catalog"):
+                publish(self.f.root, target["name"], self.f.cache/target["name"], self.gh)
+        self.assertNotIn(target["name"], self.gh.states)
+        self.assertFalse(publish(self.f.root, target["name"], self.f.cache/target["name"], self.gh)["alreadyPublished"])
 
 
 if __name__=='__main__': unittest.main()

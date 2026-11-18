@@ -67,23 +67,30 @@ def publish(root: Path, tag: str, directory: Path, run=gh) -> dict:
             state,public=verify_remote(tag,target,run)
             if public["files"] != document["files"]: raise ValueError("Published pack inventory disagrees with the tagged source")
             return {"url":state["url"],"target":target,"alreadyPublished":True}
-    latest=release(None,run)
-    # Count real release build identities; a retry of an older tag never demotes latest.
-    latest_build=int(latest["tagName"]) if latest and latest["tagName"].isdigit() else 0
-    make_latest=tag.isdigit() and int(tag)>=latest_build
-    inherited={bundle['url'].split('/')[-2] for bundle in document['bundles'].values() if bundle['url'].split('/')[-2] != tag}
-    for older in sorted(inherited):
+    inherited = {}
+    for sha, bundle in document["bundles"].items():
+        older = bundle["url"].split("/")[-2]
+        if older != tag:
+            inherited.setdefault(older, {})[sha] = bundle
+    for older, references in sorted(inherited.items()):
         old_target=tagged(root,older)
-        old_state,_=verify_remote(older,old_target,run)
+        old_state, old_document = verify_remote(older, old_target, run)
         if old_state['isDraft']: raise ValueError('An inherited payload belongs to an unpublished predecessor; publish it before this release')
+        if any(old_document["bundles"].get(sha) != bundle for sha, bundle in references.items()):
+            raise ValueError(f"An inherited payload does not match the published catalog for {older}")
     if existing is None:
         with tempfile.TemporaryDirectory() as temporary:
             notes=Path(temporary)/"notes.md"
             notes.write_text(f"Auram pack {tag}\n\nCommit: {target['sha']}\n\nLocally built, signed partial pack payloads and a complete target inventory. Java/Minecraft/Forge runtime data is not included. Fresh snapshots use sparse Git retrieval; older launchers retain schema-1 tag/changelist support.\n",encoding="utf-8")
-            run("release","create",tag,"--target",target["sha"],"--title",f"Auram build {tag}","--notes-file",str(notes),"--draft")
+            run("release","create",tag,"--verify-tag","--target",target["sha"],"--title",f"Auram build {tag}","--notes-file",str(notes),"--draft")
     # Only drafts may replace assets. No workflow is dispatched or awaited.
     run("release","upload",tag,*[str(directory/name) for name in files],"--clobber")
     verify_remote(tag,target,run)
+    # Check after upload and verification, so an older draft doesn't displace
+    # a release that became latest while this draft was being uploaded.
+    latest=release(None,run)
+    latest_build=int(latest["tagName"]) if latest and latest["tagName"].isdigit() else 0
+    make_latest=tag.isdigit() and int(tag)>=latest_build
     run("release","edit",tag,"--draft=false",f"--latest={'true' if make_latest else 'false'}")
     state,_=verify_remote(tag,target,run)
     if state["isDraft"] or state["isPrerelease"]: raise ValueError("Release did not become a public stable distribution")
