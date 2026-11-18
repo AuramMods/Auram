@@ -2,7 +2,8 @@
 
 ## Publishing a pack update
 
-Requires Git, Python 3.10+, and push access to this repository. Commit the pack
+Requires Git, Python 3.10+, Minisign, authenticated GitHub CLI (`gh`), a configured
+local pack signing key, and push access to this repository. Commit the pack
 changes first, then run from the repository root:
 
 ```sh
@@ -16,6 +17,24 @@ and creates one release commit containing `auram.json` and
 that release commit**. It creates an annotated numeric tag such as `139` and
 pushes the current branch and tag together to `origin`, without force. Existing
 `1.x.x` release tags remain valid delta bases.
+
+It then builds signed partial distribution assets **locally** from the exact tag,
+uploads them to a draft GitHub Release, downloads/verifies the complete asset set,
+and publishes it. No GitHub Actions build is used. Older launchers still use the
+same tags and schema-1 changelists. See [local distribution setup and format](distribution/LOCAL_BUILDS.md).
+
+Build only, or backfill/publish an existing version without another commit/tag:
+
+```sh
+python3 scripts/release.py --build-bundles 161
+python3 scripts/release.py --publish-bundles 161
+```
+
+`--signing-key`, `--output`, and `--previous-catalog` configure local inputs.
+`--push-only` retries both Git publication and the asset stage at the original tag.
+Published assets are immutable; retries verify and observe them. An older retry
+does not change the latest release. `--git-only` explicitly retains the original
+Git-only publication operation when no distribution assets are wanted.
 
 Other staged, unstaged, and untracked pack changes stay local until you commit
 them. The release commit includes only its two metadata files. Existing fields

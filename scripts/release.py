@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -130,9 +131,20 @@ def main() -> int:
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--dry-run", action="store_true", help="Preview local committed changes without fetching or releasing")
     mode.add_argument("--push-only", action="store_true", help="Retry publishing the existing committed version and tag")
+    mode.add_argument("--build-bundles", metavar="TAG", help="Build signed partial distribution assets locally for an existing tag")
+    mode.add_argument("--publish-bundles", metavar="TAG", help="Build/verify/publish distribution assets for an existing tag without a new release commit")
+    parser.add_argument("--output", type=Path, help="Local distribution output directory")
+    parser.add_argument("--signing-key", type=Path, help="Private pack signing key outside Git")
+    parser.add_argument("--previous-catalog", type=Path, help="Verified immediate predecessor catalog for immutable payload reuse")
+    parser.add_argument("--git-only", action="store_true", help="Explicit legacy Git tag/changelist publication without distribution assets")
     args = parser.parse_args()
 
     try:
+        if args.build_bundles or args.publish_bundles:
+            fetch_releases(ROOT,args.remote)
+            version=args.build_bundles or args.publish_bundles
+            distribution(args,version,publish=bool(args.publish_bundles))
+            return 0
         if args.push_only:
             version = str(json.loads(git(ROOT, "show", "HEAD:auram.json"))["version"])
         else:
@@ -151,16 +163,52 @@ def main() -> int:
             print(f"Created release commit and tag {version}.", flush=True)
 
         push_release(ROOT, args.remote, version)
+        if not args.git_only:
+            distribution(args,version,publish=True)
         print(f"Published Auram build {version} to {args.remote}.")
         return 0
     except subprocess.CalledProcessError as error:
-        print(f"Git command failed: {' '.join(error.cmd)}", file=sys.stderr)
-        print((error.stderr or error.stdout or b"").decode("utf-8", errors="replace").strip(), file=sys.stderr)
+        print(f"Release command failed: {' '.join(error.cmd)}", file=sys.stderr)
+        detail=error.stderr or error.stdout or ""
+        print((detail.decode("utf-8",errors="replace") if isinstance(detail,bytes) else detail).strip(), file=sys.stderr)
         print("Existing local release files/commits/tags are retained. If only publication failed, resolve the Git error and rerun with --push-only.", file=sys.stderr)
         return 1
     except (OSError, ValueError, KeyError) as error:
         print(f"Release failed: {error}", file=sys.stderr)
         return 1
+
+
+def distribution(args,version: str,publish: bool) -> None:
+    from bundle_build import build, tagged
+    from bundle_contract import safe_path
+    from bundle_publish import gh
+    key=args.signing_key or Path(os.environ.get("AURAM_PACK_SIGNING_KEY_FILE",Path.home()/".config/auram/pack-signing/pack.key"))
+    output=args.output or ROOT/".auram-distribution"/version
+    previous=args.previous_catalog
+    target=tagged(ROOT,version)
+    metadata=json.loads(git(ROOT,'show',f"{target['sha']}:auram.json"))
+    if previous is None and 'changelist' in metadata:
+        safe_path(metadata['changelist'])
+        delta=json.loads(git(ROOT,'show',f"{target['sha']}:{metadata['changelist']}"))
+        base=delta.get('previousVersion')
+        if base:
+            tagged(ROOT,base)
+            cached=ROOT/'.auram-distribution'/'catalogs'/base
+            cached.mkdir(parents=True,exist_ok=True)
+            if (cached/'auram-pack.json').is_file():
+                previous=cached/'auram-pack.json'
+            elif publish:
+                try:
+                    gh('release','download',base,'--pattern','auram-pack.json','--dir',str(cached),'--clobber')
+                    previous=cached/'auram-pack.json'
+                except subprocess.CalledProcessError as error:
+                    message=str(error.stderr).lower()
+                    if not any(text in message for text in ('release not found','no assets match','http 404')): raise
+    info=build(ROOT,version,output,key,previous)
+    print(json.dumps(info,indent=2),flush=True)
+    if publish:
+        from bundle_publish import publish as publish_assets
+        print(json.dumps(publish_assets(ROOT,version,output),indent=2),flush=True)
 
 
 if __name__ == "__main__":

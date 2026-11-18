@@ -58,7 +58,7 @@ class ReleaseTests(unittest.TestCase):
         return self.git("rev-parse", "HEAD")
 
     def release(self, *args, check=True):
-        return self.run_command(sys.executable, "scripts/release.py", *args, check=check)
+        return self.run_command(sys.executable, "scripts/release.py", "--git-only", *args, check=check)
 
     def seed(self):
         self.write("auram.json", json.dumps({"version": "1.0.7", "name": "Auram"}))
