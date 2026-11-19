@@ -1,0 +1,89 @@
+
+#Controls BiblioCraft's creative listings, bundled recipes, placement, and feature actions. Existing saved blocks and items keep their IDs and data.
+[blocks_enabled]
+	bookcase = true
+	armorstand = true
+	potionshelf = true
+	toolrack = true
+	weaponcase = true
+	genericshelf = true
+	wood_label = true
+	writingdesk = true
+	table = true
+	printpress_type_machine = true
+	lamp = true
+	lantern = true
+	cookie_jar = true
+	dinner_plate = true
+	disc_rack = true
+	map_frame = true
+	seat = true
+	redstonebook = true
+	reading_glasses = true
+	tape_measure = true
+	drill = true
+	lock_and_key = true
+	clipboard = true
+	waypoint_compass = true
+	sword_pedestal = true
+	fancy_workbench = true
+	fancy_sign = true
+	big_book = true
+	slotted_book = true
+	desk_bell = true
+	hand_drill = true
+	typewriter = true
+	clock = true
+	painting = true
+	tester_item = true
+	atlas = true
+	death_compass = true
+	furniture_paneler = true
+	plumb_line = true
+	framed_chest = true
+	stockroom_catalog = true
+
+[recipes]
+	#Enable the original Lock and Key crafting recipe.
+	enable_lock_recipe = false
+	enable_recipe_book_crafting = true
+	enable_public_typesetting_books = false
+
+#The per-block Force Fast Render keys are retained for config compatibility with older installs.
+[rendering]
+	force_fast_render_shelf = false
+	force_fast_render_potion_shelf = true
+	force_fast_render_fancy_sign = true
+	force_fast_render_label = true
+	force_fast_render_table = false
+	force_fast_render_case = false
+	force_fast_render_toolrack = false
+	force_fast_render_dinner_plate = false
+	force_fast_render_disc_rack = false
+	#Let stored luminous blocks light up the area around legacy wooden furniture. Restart the world after changing this setting.
+	emit_light = true
+	#Hide block entity contents and animation on this client for renderer troubleshooting.
+	disable_renderers = false
+	#Legacy setting: max render distance (in blocks) for paintings.
+	#Range: 1.0 ~ 512.0
+	painting_render_distance = 64.0
+
+[gameplay]
+	chair_redstone = true
+	#Retained for config compatibility with older installs.
+	check_for_update = true
+	#Range: 1 ~ 64
+	enchanted_plate_max_uses = 3
+	#Range: 1 ~ 500
+	enchantment_cost_multiplier = 10
+	#Range: 1 ~ 200
+	map_update_rate = 10
+	#Range: 0 ~ 7
+	default_big_book_text_scale = 0
+
+[keywords]
+	allowed_books = "book, map, journal, plan, thaumonomicon, necronomicon, lexicon, print, notes, spell, library, tome, encyclopedia"
+	additional_tools = "sprayer, wand, rod, scepter, wrench, screwdriver, meter, handsaw, gun, cutter, scoop, soldering, painter, reader, shovel, grafter, pickaxe, pipette, magnifying, sword, axe, hammer"
+	additional_potions = "essence, mead, bottle, test, element, molecule, can, capsule, cell, catalyst, ambrosia, honey pot, dissipation, vial, juice"
+	additional_discs = "disc, disk"
+
