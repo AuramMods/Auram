@@ -31,7 +31,7 @@
 			
 			# Constrain maximum map zoom-out based on number of explored regions and available memory
 			# Default: true
-			max_zoom_constraint: true
+			max_zoom_constraint: false
 			
 			# Periodically release region data for non-recently-used regions to save memory (units of seconds, 0 disables releasing
 			# Default: 300
@@ -43,7 +43,7 @@
 		# Biome blend
 		# Default: "blend_5x5"
 		# Valid values: "none", "blend_3x3", "blend_5x5", "blend_7x7", "blend_9x9", "blend_11x11", "blend_13x13", "blend_15x15"
-		biome_blend: "blend_5x5"
+		biome_blend: "blend_15x15"
 		
 		# Chunk grid overlay in large map
 		# Default: false
@@ -109,7 +109,7 @@
 		# Blurs minimap
 		# Default: "auto"
 		# Valid values: "auto", "on", "off"
-		blur_mode: "auto"
+		blur_mode: "on"
 		
 		# Adds NWSE compass inside minimap
 		# Default: true
@@ -117,7 +117,7 @@
 		
 		# Enable minimap
 		# Default: false
-		enabled: false
+		enabled: true
 		
 		# Show entities on minimap
 		# Default: true
@@ -134,7 +134,11 @@
 		
 		# Info hidden under minimap
 		# Default: ["ftbchunks:debug"]
-		info_hidden: ["ftbchunks:debug"]
+		info_hidden: [
+			"ftbchunks:game_time"
+			"ftbchunks:real_time"
+			"ftbchunks:debug"
+		]
 		
 		# Info displayed under minimap
 		# Default: ["ftbchunks:player_pos", "ftbchunks:biome", "ftbchunks:zone", "ftbchunks:fps", "ftbchunks:game_time", "ftbchunks:real_time", "ftbchunks:debug"]
@@ -147,7 +151,9 @@
 			"ftbchunks:real_time"
 			"ftbchunks:debug"
 		]
-		info_settings: { }
+		info_settings: {
+			"ftbchunks:zone": "JUST_CLAIMED"
+		}
 		
 		# Entities in minimap will be larger
 		# Default: false
@@ -155,7 +161,7 @@
 		
 		# Minimap will not rotate
 		# Default: true
-		locked_north: true
+		locked_north: false
 		
 		# Show player heads on minimap
 		# Default: true
@@ -189,7 +195,7 @@
 		# Scale of minimap
 		# Default: 1.0
 		# Range: 0.25 ~ 4.0
-		scale: 1.0d
+		scale: 1.6d
 		
 		# Always show player on minimap, even when rotation not locked
 		# Default: true
@@ -217,7 +223,7 @@
 		# Automatically remove death waypoints if closer than this many blocks away (distance of 0 disables removal)
 		# Default: 0
 		# Range: 0 ~ 2147483647
-		death_waypoint_autoremove_distance: 0
+		death_waypoint_autoremove_distance: 16
 		
 		# Enables creation of death waypoints
 		# Default: true

@@ -1,0 +1,46 @@
+
+[skyblock]
+	#Show the current sky on active Sky Blocks. Disable if another renderer is incompatible.
+	renderingEnabled = true
+
+[devnull]
+	#RGB color of the /dev/null contents count in the inventory.
+	#Range: 0 ~ 16777215
+	countColor = 16776960
+
+[tomfoolery]
+	#Disable the Be Silly key on this client.
+	weAreSeriousPeople = true
+	#Allow the Be Silly key to activate while a screen is open.
+	doItWhileTyping = false
+	#Flim-Flam history visibility. 0 hides it, 1 shows it with Alt held, and 2 always shows it.
+	#Range: 0 ~ 2
+	sillyLoreDisplay = 1
+
+[projector]
+	renderHolographicCone = true
+	#Brightness of the holographic cone. Use -1 for world lighting.
+	#Range: -1 ~ 255
+	brightness = -1
+
+[guide]
+	#Squared distance at which Guide markers can render.
+	#Range: 1.0 ~ 262144.0
+	renderDistanceSq = 65536.0
+
+[glasses]
+	#World dimming while wearing Sonic Glasses. Set to 0 for a clear view.
+	#Range: 0.0 ~ 1.0
+	opacity = 0.7
+	#Use the original obsidian texture when dimming the world.
+	useTexture = true
+
+[imaginary]
+	#Visibility change per 1/60 second when imaginary blocks appear or fade.
+	#Range: 1.0E-4 ~ 1.0
+	fadingSpeed = 0.0075
+
+[glyphs]
+	#Include every printable glyph in the creative search tab.
+	showInCreativeSearch = false
+
