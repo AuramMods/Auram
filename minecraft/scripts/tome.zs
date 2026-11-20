@@ -41,6 +41,8 @@ val tome = <item:akashictome:tome>.withTag({RepairCost: 0, "akashictome:data":
     arcanearchives: {id: "arcanearchives:tome_arcana", Count: 1},
     astralsorcery: {id: "astralsorcery:tome", Count: 1},
     enderio: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "enderio:guide"}},
+    bibliocraft: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "bibliocraft:bibliocraft"}},
+    atum: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "atum:atum"}},
     bewitchment: {id: "bewitchment:book_of_shadows", Count: 1, tag: {"akashictome:is_morphing": 1, display: {Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"item.bewitchment.book_of_shadows\"}]}"}, "akashictome:displayName": {text: "{\"translate\":\"item.bewitchment.book_of_shadows\"}"}}}, 
     pneumaticcraft: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "pneumaticcraft:book"}}
 }, "akashictome:is_morphing": 1, display: {Name: "{\"text\":\"Book of Holding\"}"}});
