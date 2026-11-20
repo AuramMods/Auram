@@ -1,5 +1,3 @@
-import crafttweaker.api.data.MapData;
-
 val tome = <item:akashictome:tome>.withTag({RepairCost: 0, "akashictome:data": 
 {
     apotheosis: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "apotheosis:apoth_chronicle", "akashictome:is_morphing": 1, display: {Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"book.apotheosis.name\"}]}"}, "akashictome:displayName": {text: "{\"translate\":\"book.apotheosis.name\"}"}}}, 
@@ -45,15 +43,10 @@ val tome = <item:akashictome:tome>.withTag({RepairCost: 0, "akashictome:data":
     atum: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "atum:atum"}},
     qcraft: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "qcraft:guide"}},
     psychedelicraft: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "psychedelicraft:psychedelicraft"}},
+    biginventory: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "biginventory:big_inventory"}},
     bewitchment: {id: "bewitchment:book_of_shadows", Count: 1, tag: {"akashictome:is_morphing": 1, display: {Name: "{\"translate\":\"akashictome.sudo_name\",\"with\":[{\"color\":\"green\",\"translate\":\"item.bewitchment.book_of_shadows\"}]}"}, "akashictome:displayName": {text: "{\"translate\":\"item.bewitchment.book_of_shadows\"}"}}}, 
     pneumaticcraft: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "pneumaticcraft:book"}}
 }, "akashictome:is_morphing": 1, display: {Name: "{\"text\":\"Book of Holding\"}"}});
-
-val starterTomeTag = new MapData(tome.getOrCreateTag().asMap());
-val starterBooks = new MapData(starterTomeTag["akashictome:data"].asMap());
-starterBooks.remove("enderio");
-starterTomeTag.put("akashictome:data", starterBooks);
-val starterTome = <item:akashictome:tome>.withTag(starterTomeTag);
 
 val bag = <item:seminin_cantalari:elmascanta>.withTag({Inventory: {Size: 53, Items: [
     {Slot: 11, id: "immersiveengineering:seed", Count: 5}, {Slot: 13, id: "minecraft:clay", Count: 18}, 
@@ -94,7 +87,7 @@ events.register<PlayerLoggedInEvent>(event => {
         player.setItemSlot(EquipmentSlot.OFFHAND, <item:terramity:flintlock_pistol>);
 
         // give
-        player.give(starterTome);
+        player.give(tome);
         player.give(bag);
         player.give(<item:minecraft:iron_nugget> * 22);
     }
