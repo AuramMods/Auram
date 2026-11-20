@@ -1,7 +1,6 @@
 import mods.itemstages.ItemStages;
 import mods.recipestages.Recipes;
 import mods.orestages.OreStages;
-import mods.jmapstages.JMapStages;
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.ingredient.type.IIngredientList;
 import crafttweaker.api.ingredient.IIngredient;
@@ -35,9 +34,6 @@ function stageModFilter(modid as string, desc as string, butNot as IIngredient[]
 }
 
 // mods.jadestage.JadeStage.setStage("jade");
-// JMapStages.setWaypointStage("map");
-// JMapStages.setMinimapStage("map");
-// JMapStages.setFullscreenStage("map"); 
 
 // // Completed
 // stageMod("minecraft", "<fade a=0.6 f=1.5 w=0.5><turb a=0.25 f=0.5>An Item");

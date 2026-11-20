@@ -2,7 +2,6 @@ ServerEvents.tick(event => {
   if (event.server.tickCount % 20 !== 0) return;
 
   event.server.players.forEach(player => {
-    applyMapEffect(player);
     applyJadeEffect(player);
   });
 });
@@ -16,18 +15,6 @@ function applyJadeEffect(player) {
     player.stages.add("jade");
   } else if (s && !hasIt) {
     player.stages.remove("jade");
-  }
-}
-
-function applyMapEffect(player) {
-  const targetItem = 'auram:journeymap';
-  const hasIt = checkInventoryIncludingBackpacks(player, targetItem);
-  const s = player.stages.has("map");
-
-  if (!s && hasIt) {
-    player.stages.add("map");
-  } else if (s && !hasIt) {
-    player.stages.remove("map");
   }
 }
 
