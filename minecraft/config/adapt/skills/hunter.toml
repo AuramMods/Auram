@@ -1,0 +1,37 @@
+# Adapt configuration - skill:hunter
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Controls Skill color for the hunter skill.
+skillColor = "&c"
+# XP gain tuning for the hunter skill.
+getXpForAttackingWithTools = true
+# Scaling applied to the hunter skill.
+creeperKillMultiplier = 2.0
+# XP gain tuning for the hunter skill.
+killMaxHealthXPMultiplier = 3.0
+# Cooldown between the hunter skill activations.
+cooldownDelay = 1000
+# XP gain tuning for the hunter skill.
+spawnerMobReductionXpMultiplier = 0.3
+# Controls Kills challenge reward for the hunter skill.
+killsChallengeReward = 500.0
+# Controls Boss kill reward for the hunter skill.
+bossKillReward = 1000.0
+
+# Controls Player preferences for the hunter skill.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

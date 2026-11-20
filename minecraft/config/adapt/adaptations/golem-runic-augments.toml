@@ -1,0 +1,142 @@
+# Adapt configuration - adaptation:golem-runic-augments
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Lets you infuse runes at the Animus Plinth and slot them into your bound golems for speed, carrying, fire, reach, channels, yield and armor.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["golem-animus-binding:2"]
+# Extra rune slots every bound golem you own gets on top of its body's slots, by Runic Augments level from level 1 upward.
+# Effect: Higher values let golems hold more runes.
+extraSlotsByLevel = [0, 1, 1, 2, 2]
+# Highest rune tier your bound golems can use, by Runic Augments level from level 1 upward. Slotted runes above it stay in place but do nothing.
+# Effect: Higher values let golems use stronger runes sooner.
+maxTierByLevel = [1, 1, 2, 2, 3]
+# Rune slots a bound frost golem has before Runic Augments adds extra slots, from 0 to 9.
+# Effect: Higher values let frost golems hold more runes.
+frostSlots = 1
+# Rune slots a bound bone golem has before Runic Augments adds extra slots, from 0 to 9.
+# Effect: Higher values let bone golems hold more runes.
+boneSlots = 2
+# Rune slots a bound copper golem has before Runic Augments adds extra slots, from 0 to 9.
+# Effect: Higher values let copper golems hold more runes.
+copperSlots = 2
+# Rune slots a bound iron golem has before Runic Augments adds extra slots, from 0 to 9.
+# Effect: Higher values let iron golems hold more runes.
+ironSlots = 3
+# Runes a golem body cannot use, as aspect:body entries such as ember:frost.
+# Effect: Listed runes cannot be slotted into that body, and any already slotted do nothing.
+runeBodyBlocks = ["ember:frost"]
+# Fraction added to a golem's movement speed by a Swiftness rune of tier 1, 2 and 3. 0.1 is 10% faster.
+# Effect: Higher values make Swiftness golems move faster.
+swiftnessSpeedByTier = [0.1, 0.2, 0.3]
+# Fraction cut from the time between a golem's work actions by a Swiftness rune of tier 1, 2 and 3. 0.1 is 10% shorter.
+# Effect: Higher values make Swiftness golems work faster.
+swiftnessWorkIntervalByTier = [0.1, 0.2, 0.3]
+# Fraction added to a golem's carry capacity by a Might rune of tier 1, 2 and 3. 0.5 is 50% more.
+# Effect: Higher values let Might golems carry more items.
+mightCarryByTier = [0.5, 1.0, 1.5]
+# Attack damage added to a golem by a Might rune of tier 1, 2 and 3.
+# Effect: Higher values make Might golems hit harder.
+mightAttackByTier = [2.0, 4.0, 6.0]
+# Seconds an Ember rune of tier 1, 2 and 3 sets whatever its golem hits on fire.
+# Effect: Higher values make targets burn longer.
+emberIgniteSecondsByTier = [2, 4, 6]
+# Whether an Ember rune of tier 1, 2 and 3 makes its golem immune to fire damage.
+# Effect: Set a tier to true to protect its golems from fire and burning.
+emberFireImmuneByTier = [false, true, true]
+# Whether an Ember rune of tier 1, 2 and 3 makes its golem immune to lava damage.
+# Effect: Set a tier to true to protect its golems from lava.
+emberLavaImmuneByTier = [false, false, true]
+# Blocks a Tide rune of tier 1, 2 and 3 adds to its golem's work radius, to the range in which a Companion or Guardian golem attacks mobs (up to the skill's leashRadius), and to its follow range.
+# Effect: Higher values let Tide golems work, guard and notice mobs farther away.
+tideRadiusByTier = [4.0, 8.0, 12.0]
+# Whether a Tide rune of tier 1, 2 and 3 lets its golem breathe underwater.
+# Effect: Set a tier to true to protect its golems from drowning and water damage.
+tideWaterBreathingByTier = [false, true, true]
+# Water movement efficiency a Tide rune of tier 1, 2 and 3 adds to its golem. 1.0 moves through water as fast as on land.
+# Effect: Higher values make Tide golems move faster in water.
+tideSwimSpeedByTier = [0.0, 0.0, 1.0]
+# Extra channels an Order rune of tier 1, 2 and 3 gives its golem on top of its one channel.
+# Effect: Higher values let Order golems listen to more channels at once.
+orderChannelsByTier = [1, 2, 3]
+# Fraction cut from the time an Order golem waits before it retries a job it gave up on, by rune tier 1, 2 and 3. 0.5 is half as long.
+# Effect: Higher values make Order golems retry blocked or failed jobs sooner.
+orderReclaimDelayByTier = [0.0, 0.5, 0.75]
+# Chance for each drop of a Harvester, Lumber, Breaker or Angler golem to be doubled by an Entropy rune of tier 1, 2 and 3. 0.05 is 5%.
+# Effect: Higher values give Entropy golems more bonus drops.
+entropyBonusYieldByTier = [0.05, 0.1, 0.15]
+# Weakness level an Entropy rune of tier 1, 2 and 3 puts on whatever its golem hits. 0 applies none.
+# Effect: Higher values weaken targets more.
+entropyWeaknessLevelByTier = [0, 1, 2]
+# Seconds the Weakness from an Entropy rune of tier 1, 2 and 3 lasts.
+# Effect: Higher values keep targets weakened longer.
+entropyWeaknessSecondsByTier = [0, 3, 3]
+# Armor added to a golem by a Bulwark rune of tier 1, 2 and 3.
+# Effect: Higher values make Bulwark golems take less damage.
+bulwarkArmorByTier = [4.0, 8.0, 12.0]
+# Armor toughness added to a golem by a Bulwark rune of tier 1, 2 and 3.
+# Effect: Higher values make Bulwark golems take less damage from strong hits.
+bulwarkToughnessByTier = [0.0, 2.0, 4.0]
+# Knockback resistance added to a golem by a Bulwark rune of tier 1, 2 and 3. 1.0 means no knockback.
+# Effect: Higher values make Bulwark golems harder to push back.
+bulwarkKnockbackResistanceByTier = [0.0, 0.0, 0.5]
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+# Settings for the golem-runic-augments adaptation Blank rune recipe section.
+[blankRuneRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" A ", "ASA", " A "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:blank_rune"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 2
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[blankRuneRecipe.keys]
+A = "AMETHYST_SHARD"
+S = "SMOOTH_STONE"
+

@@ -1,0 +1,98 @@
+# Adapt configuration - adaptation:tame-alphas-command
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Sneak-left-click a target while holding a bone to make your nearby pets focus it.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.55
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Distance/area limit used by the tame-alphas-command adaptation.
+commandRangeBase = 8.0
+# Scaling applied to the tame-alphas-command adaptation.
+commandRangeFactor = 12.0
+# Duration or timing used by the tame-alphas-command adaptation.
+focusTicksBase = 60.0
+# Scaling applied to the tame-alphas-command adaptation.
+focusTicksFactor = 120.0
+# Amplifier of the speed and strength focus buff applied to commanded pets.
+# Effect: Higher values give commanded pets a stronger pursuit buff.
+focusSpeedAmplifier = 0
+# Cooldown in milliseconds between commands.
+# Effect: Higher values reduce how often the pack can be re-commanded.
+commandCooldownMillis = 3000
+# Xp granted each time the pack is commanded.
+xpPerCommand = 12.0
+# Maximum pets commanded per activation, capped internally at 24.
+# Effect: Lower values reduce entity scheduling in very large packs.
+maxPets = 12
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.bone-reserve]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NONE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["NONE", "FOUR", "EIGHT"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.pets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "WOLVES", "CATS", "HORSES"]
+
+[playerPreferences.targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "HOSTILE", "NON_PLAYERS"]
+

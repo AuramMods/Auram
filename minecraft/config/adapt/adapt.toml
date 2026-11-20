@@ -1,0 +1,411 @@
+# Adapt configuration - core-config
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Locale used for Adapt player and operator interfaces.
+# Effect: A supported non-English locale downloads into languages/<locale>.toml when missing. Edit language files directly; missing or invalid entries use built-in English.
+language = "en_US"
+# Enables anonymous bStats usage reporting for Adapt.
+# Effect: Set to false to disable Adapt's bStats submissions entirely. Requires a restart to take effect.
+metrics = true
+# Maximum distinct metrics retained for integration snapshot demand.
+# Effect: Clamped to 1 through 65536. Changes clear cached publications on the next one-second collection cycle.
+integrationSnapshotMaxMetrics = 65536
+# Controls Debug.
+debug = false
+# Checks stable GitHub releases and includes Adapt in shared Volmit update notices.
+# Effect: Enabled by default and hot-reloadable. Disable to stop Adapt checks and notifications; /volmit plugins updates reports the disabled state.
+autoUpdateCheck = true
+# Controls Splash screen.
+splashScreen = true
+# Allows skill xp gain while players are in creative or spectator.
+xpInCreative = false
+# Allows using adaptations in creative mode.
+allowAdaptationsInCreative = false
+# Allows players to customize their skill and adaptation settings.
+# Effect: Disable to force server defaults for every skill and adaptation preference and hide their settings controls. Saved choices are retained, and learning and unlearning remain available. Personal effects and language settings remain available. Hot-reloadable.
+playerSettingsEnabled = true
+# Block type players right-click to open the skills UI.
+adaptActivatorBlock = "BOOKSHELF"
+# Display name used in UI text for the activator block.
+adaptActivatorBlockName = "a Bookshelf"
+# Controls Adapt activator allow vertical faces.
+adaptActivatorAllowVerticalFaces = false
+# Namespaced Bukkit world keys where Adapt gameplay is disabled.
+blacklistedWorlds = ["minecraft:some_world_adapt_should_not_run_in", "example:another_world"]
+# Block names that no Adapt adaptation grows, such as CAVE_VINES and CAVE_VINES_PLANT for glow berries.
+# Effect: Growth Aura, Compost Cascade, Bee Shepherd, Accelerate, Time in a Bottle and Harvester Core tending skip listed blocks, and players cannot enable them in Growth Aura's growables menu. Natural growth and bone meal used by players are unaffected. Unknown names are ignored with a warning. Hot-reloadable.
+blacklistedGrowables = []
+# Hard level cap applied to every skill line.
+# Effect: A skill line that passes the xp for this level is dropped back to the xp of level cap-1 and the player is granted 1 wisdom; level lookups also clamp their search cursor here.
+experienceMaxLevel = 1000
+# Controls Prevent hunter skills when hunger applied.
+preventHunterSkillsWhenHungerApplied = true
+# Level curve mapping skill xp to skill level. Default ADAPT_BALANCED is xp(L) = 100*L^2 + 1200*L, inverted as L(xp) = (sqrt(1440000 + 400*xp) - 1200) / 200.
+# Effect: Every family in the Curves enum is selectable and each one changes xp-per-level for skills, master xp and power; docs/05 - Configuration Math.md lists the formulas.
+xpCurve = "ADAPT_BALANCED"
+# Flat master xp granted for each skill level a player gains.
+# Effect: Clamped to a finite non-negative value. Master xp for skill level i is playerXpPerSkillLevelUpBase + i*playerXpPerSkillLevelUpLevelMultiplier.
+playerXpPerSkillLevelUpBase = 489.0
+# Master xp added per skill level already reached when a skill levels up.
+# Effect: Clamped to a finite non-negative value. Increasing it back-loads master progression toward high skill levels.
+playerXpPerSkillLevelUpLevelMultiplier = 44.0
+# Power granted per master level.
+# Effect: Clamped to a finite non-negative value. Lowering it shrinks how many adaptation levels a player can hold at once.
+powerPerLevel = 0.65
+# Controls Hardcore reset on player death.
+hardcoreResetOnPlayerDeath = false
+# Controls Hardcore no refunds.
+hardcoreNoRefunds = false
+# Grants the configured login bonus message/rewards.
+loginBonus = true
+# Shows the Adapt welcome message when players join.
+welcomeMessage = true
+# Enables Adapt advancement registration and grant flow.
+advancements = true
+# Controls Advancement unlock toasts.
+# Effect: Disable this to suppress Adapt's achievement popup and its client-controlled toast sound while still recording the achievement.
+advancementUnlockToasts = true
+# Volume of Adapt's explicit level-up sounds on every tenth skill level.
+# Effect: Accepts 0.0 to mute these sounds through 1.0 for full volume; this cannot change the Minecraft client's built-in advancement-toast sound volume.
+levelMilestoneSoundVolume = 0.175
+# Controls Use enchantment table particle for active effects.
+useEnchantmentTableParticleForActiveEffects = true
+# Controls Esc closes all guis.
+# Effect: When disabled, Escape returns to the parent Adapt menu until the player reaches the root Skills menu.
+escClosesAllGuis = false
+# Shows Back buttons in Adapt menus that have a parent menu.
+# Effect: When disabled, the buttons are hidden; Escape navigation still follows escClosesAllGuis.
+guiBackButton = true
+# Enables custom model lookups from the models config.
+customModels = true
+# Controls Automatic gradients.
+automaticGradients = false
+# Duration or timing used by this feature.
+learnUnlearnButtonDelayTicks = 14
+# Maximum cap applied to this feature.
+maxRecipeListPrecaution = 25
+# Shows aggregated skill XP gains on the action bar.
+# Effect: Disable this to suppress only the skill XP ticker; XP awards and progression continue normally.
+actionbarNotifyXp = true
+# Milliseconds an aggregated skill XP gain remains visible on the action bar.
+# Effect: Clamped to 100-60000 milliseconds and hot-reloadable. This has no effect while actionbarNotifyXp is disabled.
+actionbarXpDurationMillis = 1500
+# Shows skill-level notifications on the action bar.
+# Effect: Disable this to suppress skill-level text while leaving progression and level-up sounds controlled independently.
+actionbarNotifyLevel = true
+# Shows master-level and maximum-power notifications on the action bar.
+# Effect: Disable this to suppress the account-wide level popup while leaving progression and level-up sounds controlled independently.
+actionbarNotifyMasterLevel = true
+# Milliseconds skill-level and master-level notifications remain visible on the action bar.
+# Effect: Clamped to 100-60000 milliseconds and hot-reloadable. This does not change the XP ticker duration.
+actionbarLevelDurationMillis = 2500
+# Plays sounds caused by skill-level and master-level progression.
+# Effect: Disable this to mute progression sounds without muting adaptation gameplay sounds; effects.soundsEnabled and the player's effects preference remain additional global gates.
+progressionSoundsEnabled = true
+# Controls Unlearn all button.
+unlearnAllButton = false
+# Lists every enabled skill in the skills GUI even when a player has no progress in it.
+# Effect: Display only; use permissions and progression requirements are still enforced.
+guiShowAllSkills = false
+# Controls Verbose.
+verbose = false
+
+# Settings for Value.
+[value]
+# Controls Base value in the value section.
+baseValue = 1.0
+
+# Scaling applied to the value.valueMultipliers section.
+[value.valueMultipliers]
+BEEF = 1.125
+BEETROOT = 1.25
+BLAZE_ROD = 50.0
+CARROT = 1.25
+CHICKEN = 1.13
+COAL_ORE = 1.35
+DIAMOND_ORE = 5.0
+EGG = 1.335
+ENDER_PEARL = 75.0
+FLINT = 1.35
+GHAST_TEAR = 100.0
+GOLD_ORE = 4.0
+IRON_ORE = 1.75
+LAPIS_ORE = 3.5
+LEATHER = 1.5
+MUTTON = 1.125
+NETHER_GOLD_ORE = 4.5
+NETHER_QUARTZ_ORE = 1.11
+PORKCHOP = 1.125
+REDSTONE_ORE = 4.5
+WHEAT = 1.25
+
+# Settings for Gui.
+[gui]
+# Row count for the main skills GUI.
+# Effect: 0 auto-sizes the window to the page contents; 1-6 forces that many rows and pages anything that does not fit.
+skillsGuiRows = 0
+# Skill registry names in the order they should appear in the skills GUI.
+# Effect: Listed skills are placed first in this order; every other skill follows in the normal alphabetical order and unknown names are ignored.
+skillOrder = []
+
+# Skill registry name to Bukkit Material name used as that skill's icon.
+# Effect: Overrides the built-in icon; models.toml entries still win while customModels is enabled, and unknown material names fall back to the built-in icon.
+[gui.skillIcons]
+
+# Adaptation registry name to Bukkit Material name used as that adaptation's icon.
+# Effect: Overrides the built-in icon; models.toml entries still win while customModels is enabled, and unknown material names fall back to the built-in icon.
+[gui.adaptationIcons]
+
+# Skill registry name to the ordered adaptation registry names for that skill.
+# Effect: Listed adaptations are placed first in this order; every other adaptation follows in the normal alphabetical order and unknown names are ignored.
+[gui.adaptationOrder]
+
+# Settings for Effects.
+[effects]
+# Controls Particles enabled in the effects section.
+particlesEnabled = true
+# Controls Sounds enabled in the effects section.
+soundsEnabled = true
+
+# Controls Adaptation particle overrides in the effects.adaptationParticleOverrides section.
+[effects.adaptationParticleOverrides]
+adaptation-name = true
+
+# Controls Skill particle overrides in the effects.skillParticleOverrides section.
+[effects.skillParticleOverrides]
+skill-name = true
+
+# Settings for Farm prevention.
+[farmPrevention]
+# Enables or disables this feature.
+enabled = true
+# Controls Per activity tracking in the farmPrevention section.
+perActivityTracking = true
+# Duration or timing used by the farmPrevention section.
+skillRecoveryMillis = 180000
+# Duration or timing used by the farmPrevention section.
+activityRecoveryMillis = 300000
+# Duration or timing used by the farmPrevention section.
+activityStateTtlMillis = 1800000
+# Controls Skill base pressure in the farmPrevention section.
+skillBasePressure = 0.01
+# XP gain tuning for the farmPrevention section.
+skillXpPressure = 0.0002
+# Controls Skill decay curve in the farmPrevention section.
+skillDecayCurve = 14.0
+# Scaling applied to the farmPrevention section.
+skillFloorMultiplier = 0.08
+# Controls Activity base pressure in the farmPrevention section.
+activityBasePressure = 0.01
+# XP gain tuning for the farmPrevention section.
+activityXpPressure = 0.0003
+# Controls Activity decay curve in the farmPrevention section.
+activityDecayCurve = 9.0
+# Scaling applied to the farmPrevention section.
+activityFloorMultiplier = 0.12
+
+# Settings for Adaptation xp.
+[adaptationXp]
+# Controls Usage baseline enabled in the adaptationXp section.
+usageBaselineEnabled = true
+# XP gain tuning for the adaptationXp section.
+usageBaselineXp = 0.8
+# XP gain tuning for the adaptationXp section.
+usageBaselineXpPerLevel = 0.18
+# Cooldown between the adaptationXp section activations.
+usageBaselineCooldownMillis = 12000
+
+# Settings for Xp integrity.
+[xpIntegrity]
+# Controls Provenance enabled in the xpIntegrity section.
+provenanceEnabled = true
+# Duration or timing used by the xpIntegrity section.
+placedBlockTtlMillis = 86400000
+# Duration or timing used by the xpIntegrity section.
+replaceDenyTtlMillis = 900000
+# Controls Bonemeal tracking enabled in the xpIntegrity section.
+bonemealTrackingEnabled = true
+# Duration or timing used by the xpIntegrity section.
+bonemealTtlMillis = 600000
+# Scaling applied to the xpIntegrity section.
+bonemealHarvestMultiplier = 0.5
+# Controls Novelty enabled in the xpIntegrity section.
+noveltyEnabled = true
+# Controls Spatial cell shift in the xpIntegrity section.
+spatialCellShift = 2
+# Maximum cap applied to the xpIntegrity section.
+spatialCellCap = 256
+# Duration or timing used by the xpIntegrity section.
+spatialCellTtlMillis = 900000
+# Controls Spatial repeat decay in the xpIntegrity section.
+spatialRepeatDecay = 0.3
+# Scaling applied to the xpIntegrity section.
+spatialFloorMultiplier = 0.25
+# Controls Entropy window in the xpIntegrity section.
+entropyWindow = 48
+# Scaling applied to the xpIntegrity section.
+entropyFloorMultiplier = 0.7
+# Controls Adjacency bonus enabled in the xpIntegrity section.
+adjacencyBonusEnabled = true
+# Controls Adjacency bonus max in the xpIntegrity section.
+adjacencyBonusMax = 0.25
+# Controls Adjacency bonus per streak in the xpIntegrity section.
+adjacencyBonusPerStreak = 0.05
+# Controls Stillness enabled in the xpIntegrity section.
+stillnessEnabled = true
+# Duration or timing used by the xpIntegrity section.
+stillnessWindowMillis = 60000
+# Controls Stillness min events in the xpIntegrity section.
+stillnessMinEvents = 20
+# Controls Stillness epsilon in the xpIntegrity section.
+stillnessEpsilon = 0.75
+# Scaling applied to the xpIntegrity section.
+stillnessFloorMultiplier = 0.25
+# Duration or timing used by the xpIntegrity section.
+fieldCycleMillis = 240000
+# Scaling applied to the xpIntegrity section.
+fieldCycleFloorMultiplier = 0.15
+# Controls Pooled payout enabled in the xpIntegrity section.
+pooledPayoutEnabled = true
+# Duration or timing used by the xpIntegrity section.
+pooledWindowMillis = 30000
+# Duration or timing used by the xpIntegrity section.
+pooledIdleFlushMillis = 8000
+# Controls Inspired popup enabled in the xpIntegrity section.
+inspiredPopupEnabled = false
+# Cooldown between the xpIntegrity section activations.
+inspiredCooldownMillis = 300000
+
+# Settings for Xp earning limits.
+[xpEarningLimits]
+# Enables or disables this feature.
+enabled = true
+# XP gain tuning for the xpEarningLimits section.
+skillBurstXp = 10000.0
+# XP gain tuning for the xpEarningLimits section.
+skillXpPerMinute = 6000.0
+# XP gain tuning for the xpEarningLimits section.
+playerBurstXp = 20000.0
+# XP gain tuning for the xpEarningLimits section.
+playerXpPerMinute = 12000.0
+# XP gain tuning for the xpEarningLimits section.
+absoluteBurstXp = 80000.0
+# XP gain tuning for the xpEarningLimits section.
+absoluteXpPerMinute = 48000.0
+# Maximum cap applied to the xpEarningLimits section.
+maximumAllowanceBoost = 4.0
+
+# Settings for Redis.
+[redis]
+# Accelerates fenced player-data handoff between SQL-backed servers over Redis.
+# Effect: Ignored unless sql.enabled is also true; request-correlated transfer snapshots never replace SQL ownership, and the endpoint must be reachable at startup when enabled.
+enabled = false
+# Hostname or address of the Redis server.
+# Effect: Used for both the pub/sub subscriber and the publisher connection.
+host = "127.0.0.1"
+# TCP port the Redis server listens on.
+# Effect: Must match the server; 6379 is the Redis default.
+port = 6379
+# Redis ACL username, or empty for none.
+# Effect: Credentials are only attached to the connection when the username or password is non-empty.
+username = ""
+# Redis password, or empty for none.
+# Effect: Credentials are only attached to the connection when the username or password is non-empty.
+password = ""
+
+# Settings for Sql.
+[sql]
+# Stores player data in a MySQL-compatible database instead of local json files.
+# Effect: When disabled Adapt reads and writes data/players/<uuid>.json; when enabled the settings below must point at reachable InnoDB tables or Adapt fails closed without loading a local fallback.
+enabled = false
+# Hostname or address of the SQL server.
+# Effect: Used to build the jdbc:mysql url; only read while sql.enabled is true.
+host = "localhost"
+# TCP port the SQL server listens on.
+# Effect: Must match the server; 3306 is the MySQL default.
+port = 3306
+# Schema for player profiles, ownership fences, and advancement tables.
+# Effect: The schema must already exist; Adapt creates tables but never the database.
+database = "adapt"
+# SQL account Adapt authenticates with.
+# Effect: The account needs SELECT, INSERT, UPDATE, DELETE, CREATE TABLE, and REFERENCES on the configured database.
+username = "user"
+# Password for the SQL account.
+# Effect: Sent in plain text unless the SQL server enforces TLS.
+password = "password"
+# Connection pool size requested by the advancement database backend.
+# Effect: Only the advancement backend uses it; higher values allow more concurrent advancement queries at the cost of open server connections.
+poolSize = 10
+# Milliseconds allowed for the jdbc connect handshake.
+# Effect: Clamped to 1000-5000; the socket timeout is twice the result but also capped at 5000 so bounded persistence retries finish before shutdown recovery.
+connectionTimeout = 5000
+# Seconds passed to Connection.isValid when probing the SQL link.
+# Effect: Startup and reconnect validation clamp this to 1-5 seconds, and successful probes are reused for five seconds.
+secondsCheckverify = 30
+
+# Settings for Protector support.
+[protectorSupport]
+# Controls Worldguard in the protectorSupport section.
+worldguard = true
+# Controls Griefdefender in the protectorSupport section.
+griefdefender = true
+# Controls Factions claim in the protectorSupport section.
+factionsClaim = false
+# Controls Residence in the protectorSupport section.
+residence = true
+# Controls Chest protect in the protectorSupport section.
+chestProtect = true
+# Controls Griefprevention in the protectorSupport section.
+griefprevention = true
+# Controls Lockette pro in the protectorSupport section.
+lockettePro = true
+
+# Settings for Ability api.
+[abilityApi]
+# Enables or disables this feature.
+enabled = true
+# Controls Use policy failure mode in the abilityApi section.
+usePolicyFailureMode = "deny"
+# Controls Cost provider failure mode in the abilityApi section.
+costProviderFailureMode = "allow"
+# Controls Provider fault limit in the abilityApi section.
+providerFaultLimit = 5
+# Duration or timing used by the abilityApi section.
+slowProviderMillis = 2
+# Duration or timing used by the abilityApi section.
+denyMessageThrottleMillis = 2000
+
+# Settings for Learning economy.
+[learningEconomy]
+# Charges Vault currency when players learn Adaptations.
+# Effect: Vault and an economy provider are optional; without them, normal Knowledge-only learning remains active.
+enabled = false
+# Vault currency charged for each point of Knowledge spent.
+# Effect: The final price is the Adaptation's Knowledge cost multiplied by this value.
+moneyPerKnowledge = 1.0
+# Percentage of the paid Vault cost returned when an Adaptation is unlearned.
+# Effect: Use 0 to disable money refunds or values up to 100 for partial or full refunds.
+refundPercent = 100.0
+
+# Settings for Permission xp multipliers.
+[permissionXpMultipliers]
+# Grants passive XP multipliers to players holding configured permission nodes.
+# Effect: While disabled the node table is ignored and no permissions are registered.
+enabled = false
+# Multiplies every held permission multiplier together instead of using only the highest.
+# Effect: False resolves to the single highest matched node; true returns the product of all matched nodes, so holding 1.5 and 2.0 yields 3.0.
+stack = false
+
+# Permission node to XP multiplier, for example "adapt.xpmultiplier.vip" = 1.5.
+# Effect: With stack off only the highest node a player holds is multiplied into the boost total; with stack on every held node is multiplied together. Values at or below zero are ignored.
+[permissionXpMultipliers.multipliers]
+
+# Controls Adaptation usage conflicts in the adaptationUsageConflicts section.
+[adaptationUsageConflicts]
+
+# Controls Protection overrides in the protectionOverrides section.
+[protectionOverrides]
+
+[protectionOverrides.adaptation-name]
+WorldGuard = true
+

@@ -1,0 +1,100 @@
+# Adapt configuration - adaptation:seaborne-hydro-jet
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Tap sneak while swimming to burst forward on a jet of water. Costs hunger and consumes a charge.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 3
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base forward burst force applied while swimming.
+# Effect: Higher values launch you farther at low levels.
+burstForceBase = 0.9
+# Additional burst force gained across levels.
+# Effect: Higher values launch you much farther at higher levels.
+burstForceFactor = 0.9
+# Base number of stored jet charges.
+# Effect: Higher values allow more consecutive bursts at low levels.
+maxChargesBase = 2
+# Additional stored charges gained across levels.
+# Effect: Higher values allow far more consecutive bursts at higher levels.
+maxChargesFactor = 3.0
+# Milliseconds to regenerate one jet charge.
+# Effect: Lower values refill charges faster.
+chargeRegenMillis = 2500
+# Exhaustion (hunger) cost applied per jet.
+# Effect: Higher values drain hunger faster per burst.
+hungerCost = 2.0
+# Bonus XP granted per jet burst.
+# Effect: Higher values reward jetting with more skill XP.
+jetXp = 6.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.gesture]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "SINGLE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["SINGLE", "DOUBLE"]
+
+[playerPreferences.priority]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "HYDRO"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["HYDRO", "TIDE"]
+
+[playerPreferences.reserve]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NONE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["NONE", "FOUR", "EIGHT"]
+

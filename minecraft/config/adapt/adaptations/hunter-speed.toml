@@ -1,0 +1,96 @@
+# Adapt configuration - adaptation:hunter-speed
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Gain speed when struck, at the cost of hunger.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.4
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 8
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Controls Use consumable for the hunter-speed adaptation.
+useConsumable = false
+# Controls Poison penalty for the hunter-speed adaptation.
+poisonPenalty = true
+# Controls Stack hunger penalty for the hunter-speed adaptation.
+stackHungerPenalty = false
+# Controls Stack poison penalty for the hunter-speed adaptation.
+stackPoisonPenalty = false
+# Controls Stack buff for the hunter-speed adaptation.
+stackBuff = false
+# Controls Base effectby level for the hunter-speed adaptation.
+baseEffectbyLevel = 100
+# Duration or timing used by the hunter-speed adaptation.
+baseHungerDuration = 50
+# Controls Base hunger from level for the hunter-speed adaptation.
+baseHungerFromLevel = 10
+# Controls Base poison from level for the hunter-speed adaptation.
+basePoisonFromLevel = 6
+# Base horizontal speed used for hunter bursts before amplifier scaling.
+# Effect: Higher values increase movement speed while a burst is active.
+baseHorizontalSpeed = 0.13
+# Maximum horizontal speed this adaptation can force.
+# Effect: Acts as a hard cap to prevent runaway momentum.
+maxHorizontalSpeed = 0.32
+# How fast velocity accelerates toward the burst target per tick.
+# Effect: Higher values accelerate faster; lower values feel smoother.
+accelPerTick = 0.045
+# How fast velocity decays when movement input is released.
+# Effect: Higher values reduce carry momentum more aggressively.
+brakePerTick = 0.08
+# Horizontal velocity threshold considered fully stopped.
+# Effect: Higher values stop sooner; lower values preserve tiny momentum longer.
+stopThreshold = 0.01
+# If true, burst velocity is force-cleared when entering invalid states.
+# Effect: Prevents retained speed when state changes skip expected flow.
+hardStopOnInvalidState = true
+# Controls Consumable for the hunter-speed adaptation.
+# Effect: Changing this alters the identifier or text used by the feature.
+consumable = "ROTTEN_FLESH"
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.hunger-reserve]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NONE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["NONE", "FIVE", "TEN", "FIFTEEN"]
+

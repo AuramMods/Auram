@@ -1,0 +1,33 @@
+# Adapt configuration - skill:agility
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Controls Skill color for the agility skill.
+skillColor = "&a"
+# XP gain tuning for the agility skill.
+sprintXpPassive = 0.35
+# XP gain tuning for the agility skill.
+swimXpPassive = 0.4
+# XP gain tuning for the agility skill.
+jumpXpPassive = 0.15
+# XP gain tuning for the agility skill.
+climbXpPassive = 0.4
+# XP gain tuning for the agility skill.
+moveXpPassive = 0.05
+
+# Controls Player preferences for the agility skill.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,57 @@
+# Adapt configuration - adaptation:excavation-treasure-hunter
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Digging sand, gravel, mud, or clay with a shovel can unearth archaeology treasure.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Chance for the excavation-treasure-hunter adaptation to trigger.
+treasureChanceBase = 0.01
+# Chance for the excavation-treasure-hunter adaptation to trigger.
+treasureChanceFactor = 0.05
+# Chance for the excavation-treasure-hunter adaptation to trigger.
+maxTreasureChance = 0.06
+# Weighted loot table entries formatted as MATERIAL:weight:min:max.
+# Effect: Adding entries or raising weights changes which treasures drop and how often.
+lootTable = ["BONE:30:1:2", "FLINT:30:1:2", "CLAY_BALL:15:1:3", "ANGLER_POTTERY_SHERD:6:1:1", "ARMS_UP_POTTERY_SHERD:6:1:1", "SKULL_POTTERY_SHERD:4:1:1", "EMERALD:3:1:1"]
+# XP gain tuning for the excavation-treasure-hunter adaptation.
+xpPerTreasure = 12.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

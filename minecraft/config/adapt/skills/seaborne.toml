@@ -1,0 +1,47 @@
+# Adapt configuration - skill:seaborne
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Cooldown between the seaborne skill activations.
+seaPickleCooldown = 60000
+# Cooldown between XP awards for damaging drowned.
+# Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often.
+drownedDamageXpCooldown = 1500
+# Cooldown between XP awards for trident damage.
+# Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often.
+tridentDamageXpCooldown = 1500
+# XP awarded for catching a fish.
+fishCaughtXp = 250.0
+# XP awarded for reeling in an entity.
+entityCaughtXp = 10.0
+# Cooldown between fishing XP awards.
+# Effect: Higher values reduce AFK fishing XP frequency; lower values reward catches more often.
+fishXpCooldown = 5000
+# XP gain tuning for the seaborne skill.
+tridentxpmultiplier = 4.0
+# XP gain tuning for the seaborne skill.
+damagedrownxpmultiplier = 3.0
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Controls Skill color for the seaborne skill.
+skillColor = "&9"
+# XP gain tuning for the seaborne skill.
+swimXP = 0.4
+# Additional passive swimming XP multiplier for players actively moving in water with Water Breathing or Conduit Power.
+# Effect: 1.0 adds one base swim XP award for 2x total; 0 disables the bonus while retaining the base moving-swimmer award.
+waterBreathingSwimXpBonusMultiplier = 1.0
+
+# Controls Player preferences for the seaborne skill.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

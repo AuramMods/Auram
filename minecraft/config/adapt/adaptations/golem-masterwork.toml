@@ -1,0 +1,81 @@
+# Adapt configuration - adaptation:golem-masterwork
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Infuse a Masterwork Heart at the Animus Plinth and slot it into a golem for an extra rune slot, more health, a second core and stronger runes.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["golem-runic-augments:3", "golem-animus-binding:5"]
+# Masterwork golems you can have at once, by Masterwork level from level 1 upward. Masterworks that are unloaded, packed or shattered count.
+# Effect: Higher values let you designate more masterwork golems.
+maxMasterworksByLevel = [1, 1, 2]
+# Fraction added to a masterwork golem's maximum health. 0.25 is 25% more. Values below 0 load as 0.
+# Effect: Higher values make masterwork golems tougher.
+healthBonusFraction = 0.25
+# Rune slots a masterwork golem has on top of its body's slots and your Runic Augments slots, from 0 to 9.
+# Effect: Higher values let masterwork golems hold more runes.
+extraRuneSlots = 1
+# Masterwork level at which a masterwork golem takes a second core and works both roles.
+# Effect: Lower values unlock the second core sooner.
+dualCoreLevel = 2
+# Masterwork level at which a masterwork golem's runes act one tier higher.
+# Effect: Lower values unlock stronger runes sooner.
+tierUpLevel = 3
+# Fraction added to the numbers of a tier 3 rune in a masterwork golem once its runes act one tier higher, from 0 to 4. 0.25 is 25% more. Values outside that range load as the nearest limit.
+# Effect: Higher values make tier 3 runes in masterwork golems stronger.
+tierThreeBoost = 0.25
+# Chance a masterwork golem drops its Masterwork Heart when it dies, from 0 to 1. A golem that leaves a Shattered Core keeps its Heart instead.
+# Effect: Lower values make a masterwork's death cost its Heart more often.
+heartDeathDropChance = 1.0
+# Ticks between the gold sparkles around your awake masterwork golems, at least 1.
+# Effect: Higher values show the aura less often.
+auraIntervalTicks = 40
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.aura]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

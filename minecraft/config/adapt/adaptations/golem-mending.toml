@@ -1,0 +1,91 @@
+# Adapt configuration - adaptation:golem-mending
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Heal your golems with copper ingots, snow blocks and bone meal, let them mend near you and at home, and rebuild fallen golems from their Shattered Core.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["golem-animus-binding:1"]
+# Fraction added to every heal you give your golems and servants with items, by Golem Mending level from level 1 upward. 0.2 heals 20% more; an iron ingot on a bound iron golem gains this fraction of the vanilla 25.
+# Effect: Higher values make item heals stronger.
+healBonusByLevel = [0.2, 0.4, 0.6, 0.8, 1.0]
+# Health a copper ingot restores to your bound copper golem before the level bonus. Values below 0 load as 0.
+# Effect: Higher values make copper ingots heal more.
+copperIngotHeal = 4.0
+# Health a snow block restores to your bound frost golem before the level bonus. Values below 0 load as 0.
+# Effect: Higher values make snow blocks heal more.
+snowBlockHeal = 2.0
+# Health bone meal restores to your TragOul skeletal servant before the level bonus. Values below 0 load as 0.
+# Effect: Higher values make bone meal heal more.
+boneMealHeal = 2.0
+# Golem Mending level at which your awake golems regenerate while you are near them.
+# Effect: Lower values unlock regeneration near you sooner.
+ownerRegenLevel = 2
+# Health your golems regenerate each regenIntervalSeconds while they are within ownerRegenRadius blocks of you. Values below 0 load as 0.
+# Effect: Higher values heal golems near you faster.
+ownerRegenAmount = 0.5
+# Blocks from you, in the same world, within which your golems regenerate. Values below 0 load as 0.
+# Effect: Higher values let golems farther from you regenerate.
+ownerRegenRadius = 16.0
+# Golem Mending level at which your idle golems regenerate at home.
+# Effect: Lower values unlock regeneration at home sooner.
+homeRegenLevel = 3
+# Health your golems regenerate each regenIntervalSeconds while they are idle, with no job and no target, within homeRegenRadius blocks of their home. When both regenerations apply, only the larger one heals. Values below 0 load as 0.
+# Effect: Higher values heal idle golems at home faster.
+homeRegenAmount = 1.0
+# Blocks from its home within which an idle golem regenerates. Values below 0 load as 0.
+# Effect: Higher values let idle golems regenerate farther from home.
+homeRegenRadius = 4.0
+# Seconds between regeneration heals. Values below 1 load as 1.
+# Effect: Lower values make regeneration heal more often.
+regenIntervalSeconds = 5
+# Golem Mending level at which your bound golems leave a Shattered Core when they die while you are online.
+# Effect: Lower values unlock the Shattered Core sooner.
+shatterLevel = 4
+# Golem Mending level at which a golem rebuilt from its Shattered Core keeps its copper oxidation stage and wax and gains Resistance.
+# Effect: Lower values unlock the reborn bonus sooner.
+rebornLevel = 5
+# Seconds of Resistance a golem rebuilt from its Shattered Core gains at rebornLevel. Values below 0 load as 0, which gives none.
+# Effect: Higher values protect reborn golems longer.
+rebornResistanceSeconds = 10
+# Amplifier of the Resistance a reborn golem gains, where 0 is Resistance I and 1 is Resistance II. Values load between 0 and 255.
+# Effect: Higher values make reborn golems take less damage.
+rebornResistanceAmplifier = 1
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

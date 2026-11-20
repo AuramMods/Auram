@@ -1,0 +1,160 @@
+# Adapt configuration - adaptation:golem-guardian-core
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Golems bound with a Guardian Core defend their home, you or a Guard Node's area, and shield you as the core grows stronger.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["golem-animus-binding:1"]
+# Blocks around a Guardian's guard point within which it attacks hostile mobs, by Guardian Core level from level 1 upward. The guard point is you while the golem follows you, the spot where it was told to stay while it stays, and its home otherwise. Each value, plus the golem's Tide rune bonus, is clamped to 1 up to the skill's leashRadius.
+# Effect: Higher values let Guardians defend a wider area.
+perceptionByLevel = [8, 12, 16, 20, 24]
+# Lets Guardians attack creepers.
+# Effect: Turn on to have Guardians fight creepers, which can explode next to them.
+targetCreepers = false
+# Keeps Guardians from attacking mobs that have a custom name, unless Retaliate sends them after one that hurt you.
+# Effect: Turn off to let Guardians attack named mobs too.
+ignoreNamedMobs = true
+# Guardian Core level at which Guardians pull mobs that target you onto themselves with Intercept.
+# Effect: Lower values unlock Intercept sooner.
+interceptLevel = 2
+# Milliseconds between a Guardian's Intercept checks, at least 500.
+# Effect: Lower values pull mobs off you more often.
+interceptIntervalMillis = 3000
+# Guardian Core level at which Guardians attack whatever hurt you with Retaliate, including players where region protection allows PvP.
+# Effect: Lower values unlock Retaliate sooner.
+retaliateLevel = 3
+# Milliseconds after something hurts you during which your Guardians retaliate against it.
+# Effect: Higher values make Guardians chase attackers longer.
+retaliateWindowMillis = 5000
+# Guardian Core level at which you take less damage near your Guardians with Bulwark Presence.
+# Effect: Lower values unlock Bulwark Presence sooner.
+bulwarkLevel = 4
+# Blocks from one of your awake Guardians within which Bulwark Presence protects you, from 0 to 16.
+# Effect: Higher values protect you farther from your Guardians.
+bulwarkRadius = 4.0
+# Fraction of damage Bulwark Presence removes, from 0 to 1. 0.15 is 15% less. More Guardians nearby do not add to it.
+# Effect: Higher values make you take less damage near your Guardians.
+bulwarkDamageReduction = 0.15
+# Guardian Core level at which badly hurt Guardians gain Resistance with Last Stand.
+# Effect: Lower values unlock Last Stand sooner.
+lastStandLevel = 5
+# Fraction of maximum health, from 0 to 1, that a Guardian must drop below for Last Stand to trigger. 0.2 is 20%.
+# Effect: Higher values trigger Last Stand earlier in a fight.
+lastStandHealthFraction = 0.2
+# Ticks of Resistance that Last Stand gives.
+# Effect: Higher values make Last Stand last longer.
+lastStandTicks = 100
+# Resistance amplifier Last Stand gives. 0 is Resistance I and 1 is Resistance II. Values above 3 count as 3.
+# Effect: Higher values make Last Stand block more damage.
+lastStandAmplifier = 1
+# Milliseconds after Last Stand triggers before it can trigger again on the same Guardian.
+# Effect: Lower values let Last Stand trigger more often.
+lastStandCooldownMillis = 60000
+# Blocks within which frost Guardians shoot, from 1 to 10, the snow golem's throwing range. Frost Guardians attack only mobs this close to them and never chase mobs farther away.
+# Effect: Higher values let frost Guardians shoot mobs farther away.
+sentryRange = 10.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.intercept]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.retaliate-players]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+# Settings for the golem-guardian-core adaptation Guardian core recipe section.
+[guardianCoreRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", "YBY", " Z "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:core/guardian"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[guardianCoreRecipe.keys]
+B = "golemancy:blank_core"
+X = "IRON_SWORD"
+Y = "IRON_INGOT"
+Z = "SHIELD"
+
+# Settings for the golem-guardian-core adaptation Guard node recipe section.
+[guardNodeRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", " B ", "   "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:node/guard"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[guardNodeRecipe.keys]
+B = "golemancy:blank_node"
+X = "IRON_SWORD"
+

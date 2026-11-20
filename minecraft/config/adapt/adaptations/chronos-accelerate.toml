@@ -1,0 +1,129 @@
+# Adapt configuration - adaptation:chronos-accelerate
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Passively accelerate time around you, occasionally growing nearby crops and speeding furnaces and brewing stands.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 5
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.4
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Milliseconds between acceleration pulses.
+# Effect: Lower values pulse more often at more server cost.
+pulseIntervalMillis = 3000
+# Base aura radius in blocks.
+# Effect: Higher values sample blocks from a wider area.
+baseRadius = 4.0
+# Extra aura radius per adaptation level.
+# Effect: Higher values make leveling widen the aura faster.
+radiusPerLevel = 0.8
+# Base number of random blocks sampled per pulse.
+# Effect: Higher values accelerate more blocks at more server cost.
+baseSamplesPerPulse = 3
+# Hard cap on blocks sampled per pulse.
+# Effect: Higher values raise the per pulse work ceiling.
+maxSamplesPerPulse = 8
+# Maximum learned players prepared in one acceleration pass.
+# Effect: Higher values refresh more players immediately; lower values spread owner-thread scheduling across passes.
+maxPlayersPerPass = 512
+# Maximum block-region jobs admitted by one acceleration pass.
+# Effect: Higher values preserve more simultaneous aura pulses; lower values shed work sooner under extreme populations.
+maxSamplesPerPass = 8192
+# Base chance for a sampled crop to advance one growth stage.
+# Effect: Higher values grow crops faster.
+baseGrowChance = 0.3
+# Extra crop growth chance per adaptation level.
+# Effect: Higher values make leveling grow crops faster.
+growChancePerLevel = 0.06
+# Base fraction of total cook or brew time fast-forwarded per pulse hit.
+# Effect: Higher values complete cooks and brews in fewer pulses.
+baseCookBoostFraction = 0.25
+# Extra cook fast-forward fraction per adaptation level.
+# Effect: Higher values make leveling speed cooking faster.
+cookBoostFractionPerLevel = 0.07
+# Hard cap on the cook fast-forward fraction per pulse hit.
+# Effect: Higher values allow nearly instant cooks at high levels.
+maxCookBoostFraction = 0.6
+# XP granted per accelerated block.
+# Effect: Higher values grant more skill XP from the aura.
+xpPerAcceleratedBlock = 1.2
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.brewing]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.crops]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.furnaces]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.radius]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "FULL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FULL", "HALF", "QUARTER"]
+

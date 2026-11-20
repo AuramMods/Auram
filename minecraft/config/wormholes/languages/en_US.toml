@@ -1,0 +1,1704 @@
+# Wormholes — en_US
+#
+# === File editing ===
+# plugins/Wormholes/languages/en_US.toml
+# Edit this file directly. Local changes are preserved; missing or invalid entries use built-in English.
+# /wormholes language server edit en_US
+#
+# === Prefix ===
+# Message prefixes are part of their templates. {prefix} is a portal import code prefix.
+#
+# === Formatting ===
+# Colors use &0-&f; formatting uses &k-&r (&l = bold, &r = reset).
+# Hex colors support &#RRGGBB, &xRRGGBB, &x&R&R&G&G&B&B and [RRGGBB].
+#
+# === Variables ===
+# Keep variable names unchanged and use only the variables belonging to each message.
+#   {access}  Portal access policy
+#   {added}  Messages added by a language update
+#   {address}  Network peer address
+#   {after}  Message value after editing
+#   {allocation}  Pocket space allocation
+#   {amount}  Vault currency travel cost
+#   {argument}  Unexpected command argument
+#   {before}  Message value before editing
+#   {biome}  Biome identifier
+#   {blacklisted}  Blocked players
+#   {block}  Selected block material
+#   {blocks}  Placed blocks affected by rebuilding
+#   {cancel}  Chat input cancellation word
+#   {cells}  Number of open cells in the portal opening
+#   {code}  Server or portal invitation code
+#   {color}  Selected display color
+#   {command}  Command path
+#   {containers}  Nonempty containers affected by rebuilding
+#   {cost}  Portal creation or travel cost
+#   {count}  Number of portals, destinations, or messages
+#   {degrees}  Image rotation in degrees
+#   {depth}  Projection depth
+#   {description}  Message description
+#   {destination}  Travel destination
+#   {detail}  Additional diagnostic details
+#   {diagnostic}  Diagnostic message
+#   {direction}  Travel or facing direction
+#   {door}  Pocket exit door
+#   {duration}  Player-specific update interval
+#   {endpoint}  Wormhole endpoint identifier
+#   {entities}  Affected entity count or entity update interval in ticks
+#   {entity}  Entity update interval in ticks
+#   {error}  Error from the last operation
+#   {facing}  Portal facing direction
+#   {failed}  Number of failed operations
+#   {fallback}  Alternative travel result
+#   {fingerprint}  Public key fingerprint
+#   {free}  Available random destination slots
+#   {grace}  Projection grace period in seconds
+#   {group}  Language editor category
+#   {id}  Object identifier
+#   {incoming}  Incoming travel policy
+#   {item}  Required travel item
+#   {kept}  Local edits kept by a language update
+#   {key}  Message or configuration key
+#   {kind}  Door access type
+#   {label}  Display label
+#   {large_step}  Adjustment amount when shift-clicking
+#   {line}  Line number within a message
+#   {locale}  Language code
+#   {material}  Pocket wall material
+#   {maximum}  Maximum allowed value
+#   {message}  Feedback message
+#   {minimum}  Minimum allowed value
+#   {mode}  Travel or display mode
+#   {name}  Portal or player name
+#   {next}  Next available option
+#   {node}  Network node identifier
+#   {none}  Label for no linked destination
+#   {other}  Linked endpoint identifier
+#   {outgoing}  Outgoing travel policy
+#   {owner}  Portal owner
+#   {page}  Current page number
+#   {pages}  Total number of pages
+#   {parameter}  Command parameter name
+#   {path}  File or directory path
+#   {personal}  Personal language code
+#   {plugin}  Plugin name
+#   {portal}  Portal name or identifier
+#   {prefix}  Beginning of a portal import code
+#   {previous}  Previous pocket size in blocks
+#   {quality}  Projection stream quality
+#   {quantity}  Required item count
+#   {range}  Portal activation range in blocks
+#   {readiness}  Random destination readiness state
+#   {reason}  Reason for an error or decision
+#   {receive}  Projection receiving state
+#   {refresh}  Projection refresh interval in ticks
+#   {remaining}  Time until the next language check
+#   {reserved}  Reserved random destination slots
+#   {resized}  Number of rebuilt pockets
+#   {rotation}  Projection rotation
+#   {route}  Attempted travel route
+#   {rtt}  Network round-trip latency
+#   {seconds}  Time in seconds
+#   {section}  Language editor section
+#   {send}  Projection sending state
+#   {server}  Server name or identifier
+#   {shape}  Shape of the portal opening
+#   {size}  Pocket size in blocks
+#   {skin}  Selected portal skin
+#   {skipped}  Number of skipped operations
+#   {space}  Pocket space identifier
+#   {state}  Current access, link, or network state
+#   {step}  Adjustment amount when clicking
+#   {style}  Display style
+#   {target}  Plugin receiving the language selection
+#   {type}  Object or parameter type
+#   {up}  Direction at the top of the projection
+#   {updated}  Messages changed by a language update
+#   {value}  Current or selected value
+#   {variables}  Allowed message placeholders
+#   {whitelisted}  Allowed players
+#   {world}  World name
+#   {x}  X coordinate
+#   {y}  Y coordinate
+#   {z}  Z coordinate
+
+[director.help]
+no_subcommands = "No subcommands on this page."
+no_description = "No description provided"
+command_group = "Command group. Click to open."
+category = "Category of Commands"
+no_parameters = "No parameters. Click to prefill command."
+parameters_hover = "Hover over the parameters to learn more."
+
+[director.help.navigation]
+back = "Back"
+page = "Page"
+
+[director.help.navigation.parent]
+hover = "Return to parent command group"
+
+[director.help.navigation.previous]
+hover = "Previous page"
+
+[director.help.navigation.next]
+hover = "Next page"
+
+[director.help.parameter]
+required = "This parameter is required."
+optional = "This parameter is optional."
+default = "Defaults to \"{value}\" if undefined."
+type = "This parameter is of type {type}."
+
+[director.runtime.error]
+invalid_origin = "This command cannot be run from this origin."
+unknown_parameter = "Unknown parameter key: {key}"
+unexpected_argument = "Unexpected argument \"{argument}\". Optional parameters must be keyed, e.g. seed=123"
+unclosed_group = "Missing closing \"]\" for parameter {key}"
+conversion_failed = "Cannot convert \"{value}\" into {type} for {parameter}"
+default_parse_failed = "Cannot parse default value for parameter {parameter}"
+missing_argument = "Missing argument \"{parameter}\" ({type})"
+execution_failed = "Failed to execute command {command}: {reason}"
+
+[language.menu]
+your_language = "Your language"
+reset_your_language = "Reset your language"
+server_default = "Server default"
+edit_messages = "Edit language messages"
+use_server_default = "Use server default"
+current = "Current: {locale}"
+current_with_personal = "Current: {locale} (Yours: {personal})"
+your_description = "Change only the messages you see."
+reset_description = "Use the server default language."
+server_description = "Change the server default language"
+edit_description = "Open the per-language message editor."
+select_description = "Click to select this language."
+remove_personal_description = "Remove your personal language choice."
+no_controls = "No language controls are available to you."
+command = "Command: {command}"
+selected = "selected"
+all-volmit-plugins = "all Volmit plugins"
+
+[language.error]
+stopping = "Language selection is unavailable while the plugin is stopping."
+editor-player-only = "Open the language editor in game."
+no-providers = "No Volmit language providers are available."
+numeric-page = "Use a numeric language page."
+personal-player-only = "Player language preferences must be selected in game."
+personal-permission = "You do not have permission to select your language."
+plugin-personal-permission = "You do not have permission to select your language for {plugin}."
+plugin-server-permission = "You do not have permission to change the server language for {plugin}."
+server-locale-required = "Select a locale such as en_US for the server default."
+unavailable-for-all = "Language {locale} is not available for every selected plugin."
+
+[language.usage]
+editor = "Usage: /{command} language server edit [locale]"
+selection = "Usage: /{command} language self [locale|reset] or server [locale]"
+volmit-selection = "Usage: /volmit plugins languages [locale]"
+update = "Usage: /{command} language update"
+
+[language.selection]
+preparing = "Preparing language {locale} for {target}..."
+save-failed = "{plugin}: unable to save the language selection; check the server console."
+english-fallback = "{plugin}: {locale} is unavailable; using English (en_US)."
+personal-selected = "{plugin}: your language is now {locale}."
+server-selected = "{plugin}: server language is now {locale}."
+server-default-selected = "{plugin}: your language now uses the server default."
+
+[language.update]
+checking = "{plugin}: checking the language repository for changes..."
+unchanged = "{plugin}: installed languages already match the repository."
+applied = "{plugin}: updated {locale} ({added} added, {updated} changed, {kept} local edits kept)."
+cooldown = "{plugin}: the language repository was checked recently; try again in {remaining}."
+locale-failed = "{plugin}: {locale} was not updated: {reason}"
+failed = "{plugin}: language update failed: {reason}"
+
+[language.editor]
+title = "{plugin} › {section}"
+loading = "Loading {locale} messages..."
+
+[language.editor.section]
+languages = "Languages"
+search = "Search"
+search-title = "{locale} / Search"
+group-title = "{locale} / {group}"
+
+[language.editor.prompt]
+search = "Search message keys or text. Type cancel to return."
+value = "Type a new value for {key} in chat."
+current = "Current Value: {value}"
+variables = "Variables: {variables}"
+guidance = "Use \\n for new lines, \\\\ for a backslash, or type cancel to return."
+
+[language.editor.input]
+expired = "Language editor input expired."
+too-long = "Editor input must be at most {maximum} characters."
+unable-to-save = "Unable to save: {reason}"
+
+[language.editor.navigation]
+back = "&eBack&r"
+close = "&cClose&r"
+previous-page = "&ePrevious page&r"
+next-page = "&eNext page&r"
+
+[language.editor.search]
+messages = "Search messages"
+messages-lore = "Click to search all messages."
+clear = "Clear search"
+
+[language.editor.message]
+current-value = "&7Current Value:&r"
+variables = "&8{variables}&r"
+edit-plural = "&7Click to edit a plural form.&r"
+edit-lines = "&7Click to edit individual lines.&r"
+edit-chat = "&7Click to edit in chat.&r"
+
+[language.editor.locale]
+open = "&8Click to open this language.&r"
+
+[language.editor.category]
+message-count = "&7{count} messages&r"
+open = "&8Click to open this category.&r"
+
+[language.editor.error]
+no-permission = "You do not have permission to edit {plugin} languages."
+unable-to-edit = "Unable to edit: {reason}"
+
+[language.editor.saved]
+summary = "Saved {locale}. Language selections are unchanged."
+change = "{key}: “{before}” changed to “{after}”."
+
+[language.editor.part]
+line = "Line {line}"
+
+[language.editor.value]
+none = "None"
+empty = "(empty)"
+
+[command]
+unknown = "Unknown command, please use /wormholes for help."
+public_help = ["&8[&6Wormholes&8] &7Portal help: &f/wormholes info", "&8[&6Wormholes&8] &7Use the Portal Wand on a portal to open its destination, view, travel, and access controls."]
+info = ["&8[&6Wormholes&8] &7&lHow to build a Wormhole&r", "&81. &7Get a Portal Wand and Wormhole Runes from your server or an administrator.", "&82. &7Place the runes in any connected shape on one flat surface.", "&7   Any connected shape works: rectangles, lines (3x1), single blocks, L-shapes, crosses.", "&7   The runes must sit flat on one axis-aligned wall, floor, or ceiling.", "&83. &7Hold the Portal Wand and &fleft-click any rune block&7 to form the portal.", "&84. &7Build a SECOND portal somewhere else (any distance, any world).", "&85. &7Open the portal menu with the wand while looking at the portal, or sneak with an empty main hand and right-click a portal block (owner or admin).", "&7   Choose &fDestination&7 and select the other portal. Repeat from the other side.", "&7   Orientation and access controls are grouped into their own simple menus.", "&86. &7Stand within {range} blocks of either portal (current global activation range) — the destination world will project through the frame and walking in teleports you.", "&7Administrators can create supplies with &f/wormholes wand"]
+
+[command.help]
+version = "Show the installed plugin version"
+debug_dump = "Create and optionally upload a diagnostic report"
+debug_dump_upload = "Upload the report to mclo.gs"
+language = "Choose your language or the server default"
+root = "Wormholes command root"
+wand = "Give yourself the portal wand and a wormhole rune"
+"wand.rune" = "Include a wormhole rune (rune=false gives only the wand)"
+door = "Give a survival Dimensional Door item"
+"door.type" = "pair | personal | public | pair_trapdoor | personal_trapdoor | public_trapdoor"
+debug = "Wormholes diagnostic tools"
+debug_toggle = "Toggle verbose console logs and one-second telemetry"
+stats = "Print the live stats-snapshot file path, optionally force a refresh with now=true"
+"stats.now" = "Force-rebuild the snapshot synchronously"
+info = "Show portal building instructions"
+pocket = "Inspect and reshape pocket dimensions"
+"pocket.info" = "Show the size, materials, and bounds of the pocket you are standing in"
+"pocket.resize" = "Rebuild the pocket you are standing in at a new size or material"
+"pocket.resize.size" = "New room edge in blocks, or 0 to keep the current size"
+"pocket.resize.material" = "New wall, floor, and ceiling block, or keep"
+"pocket.resize.door" = "New exit door block, or keep"
+"pocket.resize.confirm" = "Required when the change would destroy or move anything"
+"pocket.resizeall" = "Rebuild every existing pocket at a new size or material"
+admin = "Destructive Wormholes maintenance commands"
+"admin.delete_portals" = "Delete every local portal and saved portal link"
+"admin.delete_everything" = "Reset Wormholes data, config, trust, identity, and network state"
+"admin.freeze" = "Freeze all portal projections in place for a number of seconds (seconds=0 resumes)"
+"admin.freeze.seconds" = "How long to hold the frozen frame (5-300, 0 resumes now)"
+"admin.flush" = "Revert every observer's projected blocks to ground truth and rebuild them"
+network = "Cross-server wormhole network"
+"network.import" = "Same as /wh server import; accepts a server or portal code"
+"network.import.code" = "Server or portal code from the other server's export"
+"network.status" = "Show peer connection status"
+"network.doctor" = "Explain why network peers are not connecting"
+server = "Cross-server travel: connect to, list, and exchange linked servers"
+"server.connect" = "Transfer yourself to a linked server (shorthand: /wh server \\<name>)"
+"server.connect.name" = "Linked server name (see /wh server list)"
+"server.export" = "Export this server as a code other servers can import"
+"server.import" = "Import a server (WHS2.) or portal (WHP6.) code exported by another server"
+"server.import.code" = "Code from the other server's export"
+"server.list" = "List linked servers and their connection state"
+"server.remove" = "Forget a linked server (deletes its route and trusted key)"
+"server.remove.name" = "Linked server name to forget"
+
+[command.error]
+no_permission = "&8[&6Wormholes&8] &cYou do not have permission."
+no_permission_use = "&8[&6Wormholes&8] &cYou do not have permission to use that command."
+only_players = "&8[&6Wormholes&8] &cOnly players can receive items."
+
+[command.debug]
+enabled = "Debug logging enabled."
+disabled = "Debug logging disabled."
+
+[command.wand]
+granted_wand = "&8[&6Wormholes&8] &aPortal Wand granted."
+granted_starter = ["&8[&6Wormholes&8] &aPortal Wand and 1 Wormhole Rune granted.", "&8[&6Wormholes&8] &7Build TWO wormhole-rune shapes (any connected shape on one flat surface), link them, and stand within {range} blocks to see the projection.", "&8[&6Wormholes&8] &7Run &f/wormholes info&7 for the full step-by-step."]
+
+[command.door]
+unavailable = "&8[&6Wormholes&8] &cDimensional Doors are unavailable."
+unknown_type = "&8[&6Wormholes&8] &cUnknown door type. Use pair, personal, public, pair_trapdoor, personal_trapdoor, or public_trapdoor."
+empty_type = "Door type cannot be empty"
+granted = "&8[&6Wormholes&8] &aGranted a &f{type}&a dimensional door item."
+
+[command.pocket]
+not_inside = "&8[&6Wormholes&8] &cStand inside a pocket dimension to run this."
+info = ["&8[&6Wormholes&8] &7Pocket &f{space}", "&8[&6Wormholes&8] &7Size &f{size}&7 blocks, walls &f{material}&7, exit door &f{door}", "&8[&6Wormholes&8] &7Bounds &f{minimum}&7 to &f{maximum}"]
+invalid_size = "&8[&6Wormholes&8] &cPocket size must be between {minimum} and {maximum} blocks."
+invalid_shell_material = "&8[&6Wormholes&8] &c{material} cannot be a pocket wall. Use a solid block that does not fall."
+invalid_door_material = "&8[&6Wormholes&8] &c{material} cannot be a pocket exit door. Use a door that opens by hand; iron doors are rejected."
+unchanged = "&8[&6Wormholes&8] &eThat pocket already has this size and these materials."
+containers_not_empty = "&8[&6Wormholes&8] &cPocket resize stopped: &f{containers}&c non-empty containers would be destroyed. Empty them before retrying; &fconfirm=true&c cannot override this safety check."
+confirm_required = ["&8[&6Wormholes&8] &cRebuilding at {size} blocks would destroy &f{blocks}&c placed blocks and move &f{entities}&c entities.", "&8[&6Wormholes&8] &7Blocks outside the new walls are destroyed; displaced entities are moved to the entry.", "&8[&6Wormholes&8] &7Run the same command with &fconfirm=true&7 to go ahead."]
+resized = "&8[&6Wormholes&8] &aPocket rebuilt at &f{size}&a blocks (was &f{previous}&a), walls &f{material}&a, exit door &f{door}."
+failed = "&8[&6Wormholes&8] &cThe pocket could not be rebuilt. Check the console."
+world_unavailable = "&8[&6Wormholes&8] &cThe pocket dimension is not loaded."
+does_not_fit = "&8[&6Wormholes&8] &cA {size} block room does not fit the pocket dimension build height."
+bulk_started = "&8[&6Wormholes&8] &7Rebuilding &f{count}&7 pockets."
+bulk_finished = "&8[&6Wormholes&8] &aRebuilt &f{resized}&a, skipped &f{skipped}&a, failed &f{failed}."
+
+[command.stats]
+unavailable = "&8[&6Wormholes&8] &cStats snapshot writer is unavailable."
+refreshed = "&8[&6Wormholes&8] &aSnapshot refreshed."
+path = ["&8[&6Wormholes&8] &7Snapshot file: &f{path}", "&8[&6Wormholes&8] &8Tail this file to share live network/view state. The file is overwritten in place each interval."]
+
+[command.admin]
+delete_failed = "&8[&6Wormholes&8] &cFailed to delete all portals. Check console for the full stacktrace."
+delete_schedule_failed = "&8[&6Wormholes&8] &cCould not schedule the portal reset."
+reset_failed = "&8[&6Wormholes&8] &cFailed to reset Wormholes. Check console for the full stacktrace."
+reset_schedule_failed = "&8[&6Wormholes&8] &cCould not schedule the Wormholes reset."
+projection_frozen = "&8[&6Wormholes&8] &aFroze all portal projections in place for &f{seconds}&a seconds. They resume automatically."
+projection_resumed = "&8[&6Wormholes&8] &aPortal projections resumed."
+projection_failed = "&8[&6Wormholes&8] &cFailed to update portal projections. Check console for the full stacktrace."
+projection_schedule_failed = "&8[&6Wormholes&8] &cCould not schedule the projection update."
+
+[command.admin.deleted_portals]
+one = "&8[&6Wormholes&8] &aDeleted &f{count}&a portal and cleared local portal links."
+other = "&8[&6Wormholes&8] &aDeleted &f{count}&a portals and cleared local portal links."
+
+[command.admin.reset_everything]
+one = "&8[&6Wormholes&8] &aWormholes reset to default state. Deleted &f{count}&a portal, closed network connections, and regenerated default config files."
+other = "&8[&6Wormholes&8] &aWormholes reset to default state. Deleted &f{count}&a portals, closed network connections, and regenerated default config files."
+
+[command.admin.projection_flushed]
+one = "&8[&6Wormholes&8] &aFlushed &f{count}&a projection observer; clients are rebuilding from ground truth."
+other = "&8[&6Wormholes&8] &aFlushed &f{count}&a projection observers; clients are rebuilding from ground truth."
+
+[network]
+not_initialized = "&8[&6Wormholes&8] &cNetworking is not initialized."
+
+[network.status]
+disabled = "&8[&6Wormholes&8] &7Networking is &cdisabled&7 (wormholes.toml)."
+not_running = "&8[&6Wormholes&8] &cNetworking is enabled but not running. Check the identity store and network port."
+listening = "&8[&6Wormholes&8] &7This server: &f{server}&7 listening on &f{address}"
+outbound_only = "&8[&6Wormholes&8] &7This server: &f{server}&7 outbound-only Boat mode"
+public_key = "&8[&6Wormholes&8] &8Public key: {fingerprint}"
+no_routes = "&8[&6Wormholes&8] &7No peer routes linked yet."
+peer = "&8[&6Wormholes&8] &f{server}&7 {state} &7{address}{rtt}"
+last_attempt = "&8[&6Wormholes&8] &8  last attempt: {error}"
+
+[network.doctor]
+clear = "&8[&6Wormholes&8] &aNo network setup issues detected."
+header = "&8[&6Wormholes&8] &eNetwork doctor:"
+line = "&8[&6Wormholes&8] &7- {diagnostic}"
+
+[network.code]
+building = "&8Building portal code..."
+copy = "&6&l[Copy portal code: {portal}]&r"
+copy_hover = "&7Click to copy. Paste it on the other server:\nportal menu > Import, or /wh server import \\<code>"
+fingerprint = "&8Contains this server's address and public key fingerprint {fingerprint}."
+too_long = "&eThis code is too long to paste into chat - use /wh server import \\<code> on the other server instead."
+invalid = "&cInvalid portal code. Codes start with {prefix} - if pasted into chat it may have been truncated; try /wh server import \\<code>. Codes from older plugin versions must be re-exported."
+same_server = "&cThat code is from this server."
+same_identity = "&cThat code resolved to this server identity ({server}). Re-export from the other server after both servers restart with their own Wormholes identity."
+linked = "&aLinked &f{portal}&7 -> &f{destination}&a on &f{server}&a. It opens once the servers connect."
+route_saved = "&aSaved route to {server} with public key {fingerprint}. '{portal}' will appear in gateway Link menus once connected."
+check_status = "&8Check /wh network status for the connection state."
+using_address = "&7Using {address} in this portal code; the public address auto-detects and self-corrects over the signed handshake if it changes."
+
+[server]
+unknown = "&8[&6Wormholes&8] &cUnknown server '&f{server}&c'. Import its code first or see /wh server list."
+removed = "&8[&6Wormholes&8] &aRemoved server &f{server}&a and its trusted key."
+name_empty = "Server name cannot be empty"
+
+[server.code]
+copy = "&6&l[Copy server code: {server}]&r"
+copy_hover = "&7Click to copy. Paste it on the other server:\n/wh server import \\<code>"
+raw = "&7Server code: &f{code}"
+saved = "&aSaved server &f{server}&a with public key {fingerprint}. Connect with &f/wh server {server}&a."
+
+[server.connect]
+sending = "&8[&6Wormholes&8] &aSending you to &f{server}&a..."
+not_ready = "&8[&6Wormholes&8] &c{server} is not reachable right now. Check /wh network status."
+failed = "&8[&6Wormholes&8] &cCould not transfer you to {server}. Check the console and /wh network status."
+only_players = "&8[&6Wormholes&8] &cOnly players can connect to another server."
+
+[server.list]
+header = "&8[&6Wormholes&8] &7Linked servers:"
+empty = "&8[&6Wormholes&8] &7No servers linked yet. Use &f/wh server import \\<code>&7."
+entry = "&8[&6Wormholes&8] &f{server}&7 {state} &8{address}"
+
+[item]
+portal_wand = ["&6&lPortal Wand&r"]
+portal_rune = ["&6&lPortal Rune&r"]
+wormhole_rune = ["&6&lWormhole Rune&r"]
+
+[item.door]
+entangled_pair = ["&6Entangled Door Pair", "&7Contains two automatically linked Wormhole Doors.", "&7Use it to unpack endpoints A and B."]
+paired = ["&6Wormhole Door {endpoint}", "&7Automatically linked to endpoint {other}.", "&7Open the door and physically cross its threshold."]
+personal = ["&bPersonal Dimension Door", "&7Each traveler enters their own persistent dimension.", "&7The same traveler always reaches the same place."]
+public = ["&6Public Dimension Door", "&7Every traveler enters this door's shared dimension.", "&7Breaking and moving it preserves the shared destination."]
+return = ["&aDimensional Exit Door", "&7Returns travelers from this pocket dimension.", "&7This door is bound to its pocket."]
+skin = ["&6Dimensional Door Skin", "&7Combine a dimensional door with a player-operable door."]
+entangled_pair_recipe = ["&6Entangled Door Pair", "&7Contains two automatically linked Wormhole Doors."]
+personal_recipe = ["&bPersonal Dimension Door", "&7Each traveler enters their own persistent dimension."]
+public_recipe = ["&6Public Dimension Door", "&7Every traveler enters this door's shared dimension."]
+entangled_trapdoor_pair = ["&6Entangled Trapdoor Pair", "&7Contains two automatically linked Wormhole Trapdoors.", "&7Use it to unpack endpoints A and B."]
+paired_trapdoor = ["&6Wormhole Trapdoor {endpoint}", "&7Automatically linked to endpoint {other}.", "&7Open the trapdoor and drop through it."]
+personal_trapdoor = ["&bPersonal Dimension Trapdoor", "&7Each traveler enters their own persistent dimension.", "&7The same traveler always reaches the same place."]
+public_trapdoor = ["&6Public Dimension Trapdoor", "&7Every traveler enters this trapdoor's shared dimension.", "&7Breaking and moving it preserves the shared destination."]
+trapdoor_skin = ["&6Dimensional Trapdoor Skin", "&7Combine a dimensional trapdoor with a hand-openable trapdoor."]
+entangled_trapdoor_pair_recipe = ["&6Entangled Trapdoor Pair", "&7Contains two automatically linked Wormhole Trapdoors."]
+personal_trapdoor_recipe = ["&bPersonal Dimension Trapdoor", "&7Each traveler enters their own persistent dimension."]
+public_trapdoor_recipe = ["&6Public Dimension Trapdoor", "&7Every traveler enters this trapdoor's shared dimension."]
+
+[portal]
+deleted = "&c{portal} Deleted"
+
+[portal.form]
+rtp_unsupported = "&cRandom teleport portals cannot be formed from runes."
+forming = "&bForming portal... {type} runes must connect on one flat wall, floor, or ceiling."
+must_be_flat = "&cPortal must lie flat on one wall, floor, or ceiling."
+interrupted = "&cPortal formation was interrupted; the reserved runes were restored."
+rune_placed = "&bRune placed. Build any connected shape on one flat surface, then left-click any rune with the Portal Wand."
+opened = "&aPortal opened. Hold the wand and CLICK the portal to configure."
+
+[portal.travel]
+cooldown = "&6Portal cooling down"
+access_denied = "&cPortal access denied"
+cost_insufficient = "&cYou need {quantity}x {item} to use this portal."
+cost_vault_insufficient = "&cYou need {amount} to use this portal."
+cost_vault_unavailable = "&cThis portal's economy cost is unavailable."
+cost_transaction_failed = "&cThe portal could not process your travel cost."
+destination_unavailable = "&cPortal destination unavailable"
+arrival_denied = "&cThe destination portal refused your arrival."
+arrival_returned = "&cThe destination portal refused your arrival; returning you to {server}"
+arrival_failed = "&cPortal arrival could not be placed; you remain at the destination spawn"
+transfer_cooldown = "&6Cross-server portal cooling down: {seconds}s"
+destination_unreachable = "&cDestination server unreachable"
+destination_unreachable_detail = "&cDestination server unreachable: {reason}"
+transfer_blocked = "&cPortal transfer blocked: {reason}"
+transfer_blocked_retry = "&cPortal transfer blocked: {reason} (retry in {seconds}s)"
+transfer_holding = "&6Linking to the destination server..."
+transfer_interrupted = "&cPortal transfer interrupted: you moved away from the portal."
+transfer_source_unavailable = "&cPortal transfer interrupted: the source portal is no longer available."
+
+[portal.edit]
+denied = "&cOnly the portal owner or an administrator can edit this portal."
+
+[portal.menu]
+destination = ["&6&lDestination&r", "&7Choose a portal to link to.", "&7Currently linked: {destination}", "", "&8Click to open the destination picker."]
+"destination.local" = ["&6{portal}", "&7at {x}, {y}, {z} in {world} Facing {direction}"]
+"destination.remote" = ["&6{portal}", "&7on server &f{server}", "&7at {x}, {y}, {z} in {world} Facing {direction}", "&b{state}"]
+"destination.sort" = ["&e&lSort: &f&l{mode}&r", "&7Change the destination ordering.", "&eLeft click"]
+"destination.sort_smart" = "Smart"
+"destination.sort_name" = "Name"
+"destination.sort_world" = "World"
+"destination.sort_distance" = "Distance"
+"destination.previous_page" = ["&e&lPrevious Page&r", "&7Show the previous destinations.", "&eLeft click"]
+"destination.next_page" = ["&e&lNext Page&r", "&7Show the next destinations.", "&eLeft click"]
+"destination.page" = ["&b&lPage {page}/{pages}&r", "&7{count} destinations"]
+"destination.empty" = ["&7No destinations are available to link."]
+gateway_destination = ["&6&lPair & Destination&r", "&7Pair another server or choose a gateway.", "&7Currently linked: {destination}", "", "&8Click to open the pairing hub."]
+rtp_destination = ["&6&lRandom Destination&r", "&7Configure where and when this portal rerolls.", "&7Rotation: &b{rotation}", "", "&8Click to open random teleport settings."]
+rename = ["&a&lRename Portal&r", "&7Change the name shown on links and menus.", "&7Current: &f{portal}", "", "&8Click to type a new name."]
+delete = ["&c&lDelete Portal&r", "&7Permanently removes this portal.", "", "&c&nShift + Left Click to confirm&r"]
+advanced_settings = ["&3&lAdvanced Stream Tuning&r", "&7Direct controls for diagnostics and unusual links.", "&7Changing one value marks Stream Quality as Custom."]
+back_settings = ["&e&lBack to Settings&r", "&7Return to portal settings."]
+extensions = ["&b&lMore settings&r", "&7Rules, access, networks, and other feature settings.", "&eLeft-click"]
+stream_quality = ["&b&lStream Quality: {quality}&r", "&7One control for remote view range and cadence.", "", "&7Depth &b{depth}&7  Entities &b{entities}t", "&7Refresh &b{refresh}t&7  Grace &b{grace}s", "", "&8Click: cycle quality.", "&8Shift-click: advanced tuning."]
+orientation = ["&9&lOrientation&r", "&7Facing: &9{facing}", "&7Up: &6{up}", "", "&8Click for facing, flip, and rotation."]
+orientation_placard = ["&9&lPortal Orientation&r", "&7Facing: &9{facing}", "&7Screen up: &6{up}"]
+network_number = ["&b&l{label} &f&l{value}&r", "&7{description}", "", "&7Currently: &b{value}", "", "&8Left click: +{step}", "&8Right click: -{step}", "&8Shift-left: +{large_step}", "&8Shift-right: -{large_step}"]
+fallback_block = ["&b&lFallback Block&r", "&7Block shown beyond streamed depth.", "", "&7Currently: &f{block}", "", "&8Left: enter a block state.", "&8Right: reset to air."]
+blackout = ["&b&lBlackout Background&r", "&7Seal the projection's far and side boundaries with solid concrete so the local world never shows through.", "", "&7Currently: &f{state} &8({color})", "", "&8Left: toggle on/off.", "&8Right: choose a color."]
+activation_range = ["&b&lActivation Range &f&l{value}&r", "&7Distance in blocks at which this portal starts projecting for nearby players.", "", "&7Currently: &b{value}", "", "&8Left click: +{step}", "&8Right click: -{step}", "&8Shift-left: +{large_step}", "&8Shift-right: -{large_step}", "&8Below 8 resets to Global."]
+render_mode = ["&b&lRender Mode &f&l{mode}&r", "&7How much of the destination volume this portal projects.", "", "&7Mode: &f{mode}", "", "&8PanOptic renders the full destination volume.", "&8Venticular keeps visible surfaces and omits hidden destination geometry.", "", "&8Left: cycle mode."]
+ambient_particles = ["&b&lAmbient Particles&r", "&7Decorative dust that drifts around this portal.", "", "&7Style: &f{style} &8({color})", "", "&8Left: cycle style.", "&8Right: choose a color."]
+aperture_shape = ["&b&lAperture Shape&r", "&7The outline of the opening inside the frame.", "", "&7Shape: &f{shape}", "&7Open cells: &f{cells}", "", "&8Left: next shape.", "&8Right: rotate 45 degrees.", "&8Shift-right: reset to full."]
+"aperture_shape.label" = "Aperture Shape"
+"aperture_shape.too_small" = "&c{shape} leaves no open cell in this frame."
+"aperture_shape.invalid" = "&8[&6Wormholes&8] &cCould not read the shape: {reason}"
+"aperture_shape.current" = "&8[&6Wormholes&8] &f{portal}&7 aperture shape: &f{shape}&7 ({cells} open cells)"
+"aperture_shape.set" = "&8[&6Wormholes&8] &f{portal}&a aperture shape set to &f{shape}&a ({cells} open cells)."
+surface_skin = ["&b&lSurface Skin&r", "&7Cover the portal aperture with a rendered block or fluid pane.", "", "&7Skin: &f{skin}", "", "&8Left: clear the skin.", "&8Right: open skin options."]
+"surface_skin.placard" = ["&6&lSurface Skin&r", "&7Right-click the portal with a block or bucket to apply a skin.", "", "&7Skin: &f{skin}"]
+"surface_skin.glass" = ["&b&lGlass Skin&r", "&7A clear glass window over the aperture.", "", "&8Click to apply glass."]
+"surface_skin.clear" = ["&c&lClear Skin&r", "&7Remove the skin and restore projections.", "", "&8Click to remove the skin."]
+settings_placard_gateway = ["&b&lPortal Settings&r", "&7Access and transfer controls.", "&7Plus projection view tuning.", "", "&7Larger depth / shorter ticks =", "&7richer view, more bandwidth."]
+public_look_label = ["&b&lPublic Look Label: &f&l{state}&r", "&7Show this portal's name when nearby players look at it.", "&7When Off, the route label remains portal-tool only.", "", "&eLeft click to toggle"]
+mode_placard = ["&e&lPortal Mode&r", "&7Current: &e{mode}", "", "&7Portal: basic linked portal.", "&7Wormhole: portal with viewport.", "&7Gateway: cross-server gateway.", "&7RTP: configurable random destinations.", "&7Mirror: reflect this side, no travel."]
+mode_opener = ["&e&lMode&r", "&7{description}", "", "&7Currently: &e{mode}", "", "&8Click to change mode."]
+direction = ["&9&lDirection&r", "&7Change the portal facing direction.", "", "&7Currently facing: &9{direction}", "", "&8Click then look, left click to apply."]
+flip_face = ["&b&lFlip Face&r", "&7Reverse the portal face direction.", "&7Screen rotation stays aligned.", "", "&7Currently rolling up: &b{up}", "", "&8Click to flip."]
+rotate_counterclockwise = ["&6&lRotate Counterclockwise&r", "&7Roll the portal viewport 90 degrees", "&7without changing the face.", "", "&7Currently rolling up: &6{up}", "", "&8Click to rotate."]
+rotate_clockwise = ["&6&lRotate Clockwise&r", "&7Roll the portal viewport 90 degrees", "&7without changing the face.", "", "&7Currently rolling up: &6{up}", "", "&8Click to rotate."]
+back = ["&e&lBack&r", "&7Return to the portal menu."]
+settings_gateway = ["&b&lSettings&r", "&7Permissions, transfers,", "&7and projection view tuning.", "", "&7Access: &6{access}", "&7Send &b{send}&7  Receive &b{receive}", "&7Depth &b{depth}&7  Entity &b{entity}t", "", "&8Click to open settings."]
+settings_sync = ["&b&lSettings Sync {state}&r", "&7When On, this portal's settings", "&7(depth, ticks, projection, permissions,", "&7transfers) sync to all linked peers.", "", "&7Currently: &b{state}", "", "&8Click to toggle."]
+permission = ["&6&lAccess {mode}&r", "&7{description}", "&7Node: &f{node}", "", "&7Currently: &6{mode}", "", "&8Click to toggle whitelist / blacklist.", "&8Operators always bypass."]
+
+[portal.menu.travel]
+managed = ["&6&lTravel: {direction}&r", "&7Managed dimensional portal direction.", "&7{detail}"]
+mirror = ["&c&lTravel: Mirror Locked&r", "&7Mirror mode is visual only.", "&7Entities cannot enter or leave through it."]
+standard = ["&b&lTravel: {mode}&r", "&7Controls travel through this portal.", "", "&7Outgoing: &b{outgoing}&7  Incoming: &b{incoming}", "", "&8Click to cycle travel direction."]
+
+[portal.menu.gateway]
+choose = ["&6&lChoose Destination&r", "&7Choose from discovered local and remote gateways.", "", "&8Click to open the destination list."]
+unpaired = ["&6&lGateway Pairing&r", "&7Status: &cNot paired"]
+paired = ["&6&lGateway Pairing&r", "&7Destination: &6{destination}"]
+server = "&7Server: &f{server}"
+link = "&7Link: &b{state}"
+export = ["&6&lCreate Invite&r", "&7Create a signed gateway code for another server.", "", "&8Click to copy a fresh code."]
+import = ["&b&lUse Invite&r", "&7Paste a signed code from another gateway.", "", "&8Click, then paste the code in chat."]
+
+[portal.menu.blackout_color]
+placard = ["&6&lBlackout Color&r", "&7Concrete color used for the blackout shell.", "", "&7Currently: &f{color}"]
+option = ["&b&l{color}&r", "", "&8Click to select."]
+
+[portal.menu.ambient_color]
+placard = ["&6&lAmbient Color&r", "&7Color of the ambient dust particles.", "", "&7Currently: &f{color}"]
+channel = ["&b&l{label} &f&l{value}&r", "", "&8Left click: +{step}", "&8Right click: -{step}", "&8Shift-left: +{large_step}", "&8Shift-right: -{large_step}"]
+option = ["&b&l{color}&r", "", "&8Click to select."]
+
+[portal.menu.placard]
+rtp = ["&6&l{portal}&r", "&7Type: &e{type}", "&7Facing: &9{facing}", "&7Allocation: &b{allocation}", "&7Rotation: &b{rotation}", "", "&8Operators bypass white/blacklist."]
+linked = ["&6&l{portal}&r", "&7Type: &e{type}", "&7Facing: &9{facing}", "&7Linked to: &6{destination}", "", "&8Operators bypass white/blacklist."]
+unlinked = ["&6&l{portal}&r", "&7Type: &e{type}", "&7Facing: &9{facing}", "&7Linked to: &c{none}", "", "&8Operators bypass white/blacklist."]
+
+[portal.menu.cost]
+opener = ["&6&lTravel Cost&r", "&7Require an exact item or currency", "&7when a player uses this portal.", "", "&7Mode: &f{mode}", "&7Cost: &f{cost}", "", "&8Click to configure."]
+placard = ["&6&lTravel Cost&r", "&7Players must pay before this portal", "&7allows them to travel.", "", "&7Mode: &f{mode}", "&7Cost: &f{cost}"]
+mode_free = ["&a&lFree&r", "&7No payment is required.", "", "&8Click to make travel free."]
+mode_vanilla = ["&b&lVanilla Item&r", "&7Consume an exact matching item.", "", "&8Click, hold the item, then press Drop."]
+mode_vault = ["&a&lEconomy&r", "&7Withdraw currency through an economy provider.", "", "&8Click to enter an amount."]
+mode_vault_unavailable = ["&c&lEconomy Unavailable&r", "&7An economy provider is required.", "", "&8Enable an economy provider to use this mode."]
+free_detail = ["&a&lNo Cost&r", "&7Travel through this portal is free."]
+secondary_empty = ["&8&lNo Additional Setting&r"]
+item = ["&b&l{item}&r", "&7This exact item is required for travel.", "&7The selection item is never consumed.", "", "&8Left: select another held item.", "&8Right: clear the cost."]
+quantity = ["&b&lQuantity {quantity}&r", "&7How many exact matching items", "&7are consumed per traversal.", "", "&8Left click: +1", "&8Right click: -1", "&8Shift-left: +8", "&8Shift-right: -8", "&8Maximum: {maximum}"]
+vault_amount = ["&a&l{amount}&r", "&7Currency withdrawn per traversal.", "", "&8Left: enter another amount.", "&8Right: clear the cost."]
+
+[portal.menu.projection]
+on = ["&6&lProjection On&r", "&7Show this portal's live view.", "&7Destination or mirror imagery is visible.", "", "&7Currently: &bProjection On&r", "", "&8Click to toggle On / Off."]
+off = ["&8&lProjection Off&r", "&7The frame stays empty.", "&7No destination view, no mirror.", "", "&7Currently: &bProjection Off&r", "", "&8Click to toggle On / Off."]
+
+[portal.menu.mode_option]
+selected = ["&e&l{mode}&r", "&7{description}", "", "&aCurrently Selected"]
+available = ["&e&l{mode}&r", "&7{description}", "", "&7Click to select"]
+
+[portal.menu.mirror]
+selected = ["&e&lMirror&r", "&7Reflect the local world back.", "&7See yourself looking through the frame.", "&7No travel while mirrored.", "", "&aCurrently Selected"]
+available = ["&e&lMirror&r", "&7Reflect the local world back.", "&7See yourself looking through the frame.", "&7No travel while mirrored.", "", "&7Left click to select"]
+rotation = "&7Image rotation: &b{degrees} degrees"
+rotate_clockwise = "&8Right click: rotate clockwise."
+rotate_counterclockwise = "&8Shift + right click: rotate counterclockwise."
+flip = ["&7Wall mirrors flip in 180 degree steps", "&7so reflected entities stay aligned.", "&8Right click: flip the reflected image."]
+
+[portal.prompt]
+invite = "&bPaste the portal invite in chat (or '{cancel}'):"
+block_state = "&bEnter a block state for this portal's network view edge, or '{cancel}':"
+name = "&bType the new portal name in chat (or '{cancel}'):"
+cost_item = "&bHold the exact cost item in your main hand, then press Drop. The item will not leave your inventory."
+cost_vault = "&bEnter the currency amount per traversal (or '{cancel}'):"
+direction = ["&8[&6Wormholes&8] &7Look in a direction then left click to apply.", "&8[&6Wormholes&8] &7Shift-Left click to cancel."]
+
+[portal.input]
+cancel = "cancel"
+
+[portal.rtp]
+editor_title = "RTP: {portal}"
+
+[portal.rtp.notice]
+setting_rejected = "Could not apply that setting: {reason}"
+applied = "Random destination settings applied."
+reset_defaults = "Random teleport settings reset to defaults."
+editor_refreshed = "Settings changed; the editor was refreshed."
+runtime_unavailable = "Random teleport runtime is unavailable."
+reroll_failed = "Manual reroll failed; see the server log."
+reroll_preparing = "Preparing a new random destination."
+reroll_unavailable = "Reroll is unavailable while the route is preparing or in use."
+pool_rebuilding = "Rebuilding the private destination pool."
+pool_failed = "Pool rebuild failed; see the server log."
+not_ready = "&eThe portal is still stabilizing its destination."
+traversal_failed = "&cThe portal could not stabilize; try again."
+
+[portal.rtp.rotation]
+private = "Private every {duration}"
+
+[portal.notice]
+dimensional_link_managed = "This dimensional portal keeps its generated link."
+not_rtp = "This portal is no longer in random teleport mode."
+region_unavailable = "The portal region is unavailable; try again."
+travel_managed = "Dimensional portal travel is managed automatically."
+travel_mirror_locked = "Mirror mode never allows travel."
+travel_changed = "Travel {mode}"
+stream_quality_changed = "Stream Quality {quality}"
+network_value_changed = "{label} {value}"
+fallback_set = "Fallback set to {block}"
+fallback_reset = "Fallback reset to {block}"
+managed_mode = "Managed dimensional portals stay in portal mode."
+projection_receiver_inactive = "The End arrival stays visually inactive."
+projection_changed = "Projections: {mode}"
+settings_sync_changed = "Settings Sync {state}"
+access_changed = "Access {mode}"
+cost_item_set = "Travel now requires {item}."
+cost_item_invalid = "That item could not be saved as a travel cost."
+cost_cleared = "Travel cost cleared."
+cost_quantity_changed = "Travel cost quantity: {quantity}"
+cost_vault_changed = "Currency travel cost: {amount}"
+cost_vault_invalid = "Enter a positive currency amount no greater than {maximum}."
+cost_vault_unavailable = "An economy provider must be available before selecting this cost."
+mirror_select_first = "Choose Mirror before rotating the image."
+mirror_rotation_changed = "Mirror Rotation {degrees} degrees"
+rtp_cannot_link = "Random teleport portals do not link to destinations."
+
+[portal.label]
+public_look_label = "Public Look Label"
+activation_global = "Global ({range})"
+
+[portal.label.travel]
+both = "Both Ways"
+outbound = "Outbound Only"
+inbound = "Inbound Only"
+locked = "Locked"
+arrival = "Arrival Only"
+departure = "Departure Only"
+dimensional_both = "Both linked halves stay active."
+dimensional_return_disabled = "The return path stays disabled."
+
+[portal.label.cost]
+free = "Free"
+vanilla = "Vanilla Item"
+vault = "Economy"
+
+[portal.label.quality]
+standard = "Standard"
+performance = "Performance"
+balanced = "Balanced"
+cinematic = "Cinematic"
+custom = "Custom"
+
+[portal.label.mode]
+portal = "Portal"
+wormhole = "Wormhole"
+gateway = "Gateway"
+rtp = "RTP"
+mirror = "Mirror"
+
+[portal.label.direction]
+up = "Up"
+down = "Down"
+north = "North"
+south = "South"
+east = "East"
+west = "West"
+
+[portal.label.allocation]
+shared = "Shared"
+per_player = "Per-player"
+
+[portal.label.permission]
+whitelist = "Whitelist"
+blacklist = "Blacklist"
+
+[portal.label.network]
+direct = "Direct"
+sideband = "Sideband"
+reconnecting = "Reconnecting"
+
+[portal.label.ambient]
+red = "Red"
+green = "Green"
+blue = "Blue"
+
+[portal.label.ambient_style]
+sparks = "Sparks"
+outline = "Outline"
+corners = "Corners"
+off = "Off"
+
+[portal.label.skin]
+none = "None"
+
+[portal.mode]
+changed = "&a{portal} mode set to {mode}."
+
+[portal.mode.description]
+portal = "Basic linkable portal."
+wormhole = "Linkable portal with viewport projection."
+gateway = "Reserved for cross-network linking."
+rtp = "Local random teleport portal."
+mirror = "Reflect the local world back with travel locked."
+
+[portal.permission.description]
+whitelist = "Players need the node to use this portal."
+blacklist = "Players with the node are blocked."
+
+[portal.network.label]
+capture_radius = "Capture Radius"
+full_refresh = "Full Refresh"
+entity_update = "Entity Update"
+view_grace = "View Grace"
+blackout = "Blackout Background"
+blackout_color = "Blackout Color"
+activation_range = "Activation Range"
+render_mode = "Render Mode"
+ambient_style = "Ambient Particles"
+ambient_color = "Ambient Color"
+surface_skin = "Surface Skin"
+
+[portal.network.description]
+capture_radius = "Blocks streamed around the destination portal."
+full_refresh = "Ticks between full block refreshes."
+entity_update = "Ticks between entity updates."
+view_grace = "Seconds to keep a warm stream after looking away."
+
+[portal.direction]
+cancelled = "&8[&6Wormholes&8] &7Cancelled"
+set = "&8[&6Wormholes&8] &7Direction set"
+
+[portal.setting]
+notification = "&a{portal}: &r{message}"
+
+[portal.link]
+linked = "&a{portal} linked to {destination}."
+linked_remote = "&a{portal} linked to {destination} on {server}."
+unlinked = "&e{portal} unlinked from {destination}."
+
+[portal.orientation]
+face_flipped = "&a{portal} face flipped to {direction}."
+rotated_counterclockwise = "&a{portal} rolled counterclockwise."
+rotated_clockwise = "&a{portal} rolled clockwise."
+direction_changed = "&a{portal}'s direction changed to {direction}."
+
+[door.transit]
+shutdown = "Dimensional Doors shut down before the transit completed."
+message = "&8[&6Wormholes&8] &7{message}"
+link_not_placed = "The linked Wormhole Door has not been placed yet."
+link_unavailable = "The linked Wormhole Door is unavailable or obstructed."
+nested_pocket = "A pocket door cannot open another pocket from inside the shared void dimension."
+pocket_not_ready = "The pocket dimension is not ready."
+pocket_allocation_failed = "The pocket dimension could not be allocated."
+safe_return_not_found = "A safe return route could not be found on this side of the door."
+pocket_prepare_failed = "The pocket could not be prepared safely."
+return_ticket_save_failed = "A safe return route could not be saved."
+pocket_entry_unsafe = "The pocket entry is not safe."
+pocket_entry_chunk_failed = "The pocket dimension could not load its entry chunk."
+no_return_route = "You do not have a return route stored for this pocket."
+return_unavailable = "Your return door is unavailable or obstructed on its corresponding face."
+return_world_unloaded = "Your return world is not loaded."
+return_point_obstructed = "Your saved return point is obstructed."
+return_chunk_failed = "Your saved return chunk could not be loaded."
+closed = "The dimensional door closed before transit completed."
+cycle_consumed = "This door's open cycle was already used. Close and reopen the door."
+source_missing = "The dimensional door is no longer there."
+source_close_failed = "The source door could not close safely."
+source_region_unavailable = "The source door region is unavailable."
+start_failed = "The dimensional transit could not start."
+cancelled = "The dimensional transit was cancelled."
+
+[door.craft]
+one_at_a_time = "&8[&6Wormholes&8] &7Craft dimensional doors one at a time so each receives a unique identity."
+
+[door.pair]
+unpack_failed = "&8[&6Wormholes&8] &7The door pair could not be unpacked; the kit was not consumed."
+unpacked = "&8[&6Wormholes&8] &7The entangled pair separated into linked Wormhole Doors A and B."
+missing = "&8[&6Wormholes&8] &7That paired door has no registered partner identity."
+
+[door.legacy]
+combine = "&8[&6Wormholes&8] &7Combine this legacy dimensional door with a wooden door before placing it."
+
+[door.place]
+already_placed = "&8[&6Wormholes&8] &7That dimensional door is already placed, or its state could not be saved."
+
+[door.break]
+exit_anchored = "&8[&6Wormholes&8] &7The dimensional exit is anchored to this pocket."
+support = "&8[&6Wormholes&8] &7Break the dimensional door before removing its support block."
+
+[door.disable]
+warning = "&8[&6Wormholes&8] &7Dimensional Doors are being disabled. Leave through the pocket return door now."
+
+[door.rescue]
+cancelled = "&8[&6Wormholes&8] &7Your emergency ejection was cancelled; the route was kept."
+failed = "&8[&6Wormholes&8] &7{route} {fallback} You remain protected at one heart."
+
+[door.rescue.reason]
+no_route = "The pocket has no saved return route."
+return_world_unavailable = "The saved return world is unavailable."
+return_point_obstructed = "The saved return point is obstructed."
+return_chunk_failed = "The saved return chunk could not be loaded."
+start_failed = "The emergency ejection could not start."
+
+[door.rescue.fallback]
+no_world = "No non-pocket fallback world is loaded."
+obstructed = "The fallback spawn is obstructed."
+chunk_failed = "The fallback spawn could not be loaded."
+schedule_failed = "The fallback ejection could not be scheduled."
+
+[door.access]
+unknown_player = "Unknown ({id})"
+edit_denied = "&cOnly the door owner or an administrator can edit this door."
+unavailable = "&cThis dimensional door has no access record."
+save_failed = "&cThat door access change could not be saved."
+player_not_found = "&cNo player named {name} could be found."
+owner_always = "&7The door owner always has access."
+already_listed = "&7{name} is already listed for this door."
+added = "&a{name} was added to this door's list."
+removed = "&a{name} was removed from this door's list."
+state_changed = "&a{name} is now {state} for this door."
+prompt_player = "&bType the player name to list for this door (or '{cancel}'):"
+denied = "&cThis dimensional door refuses you."
+transit_denied = "You do not have access to this dimensional door."
+
+[door.access.label]
+neutral = "Neutral"
+whitelist = "Whitelist"
+blacklist = "Blacklist"
+
+[door.access.kind]
+pair = "Entangled"
+personal = "Personal"
+public = "Public"
+return = "Exit"
+
+[door.open_state]
+open = "Open"
+closed = "Closed"
+
+[door.menu.access]
+title = "Door Access: {kind}"
+placard = ["&6&l{kind} Dimensional Door&r", "&7Owner: &f{owner}", "&7Whitelisted: &a{whitelisted}", "&7Blacklisted: &c{blacklisted}", "&7Listed players: &b{count}", "&8Owners and administrators edit this door."]
+add_player = ["&a&lAdd Player&r", "&7Type a player name in chat to list them.", "", "&8Click to add a player."]
+open_state = ["&b&lOpenState: &f&l{state}", "&7The portal follows this block's physical state.", "&7Active state: &f{state}&7.", "", "&8Next: {next}. Click to switch."]
+entry = ["&f{name}", "&7State: &b{state}", "", "&8Left click: whitelist. Right click: blacklist.", "&8Middle click or shift + left click: remove."]
+
+[wand.selection]
+corner_a = "&bCorner A set. Right-click the opposite corner."
+corner_b = "&bCorner B set. Left-click the opposite corner."
+not_flat = "&cSelection must be one block thick. Re-click a corner to flatten it."
+too_large = "&cSelection too large: {count} cells (max {maximum})."
+opening = "&bOpening portal..."
+open_failed = "&cThe portal could not be opened here."
+
+[wand.selection.selected]
+one = "&bSelected {count} cell. Left-click the glass pane to open the portal."
+other = "&bSelected {count} cells. Left-click the glass pane to open the portal."
+
+[label]
+none = "None"
+on = "On"
+off = "Off"
+ready = "Ready"
+preparing = "Preparing"
+open = "Open"
+closed = "Closed"
+
+[rtp.overview]
+destination = ["&e&lDestination & Area&r", "&7World, center, and radius.", "&eLeft click"]
+landing = ["&e&lLanding Rules&r", "&7Surface and height behavior.", "&eLeft click"]
+routing = ["&e&lRotation & Pool&r", "&7Sharing, rotation, and leases.", "&eLeft click"]
+effects = ["&e&lEffects&r", "&7Projection rim and portal sound.", "&eLeft click"]
+reset_defaults = ["&e&lReset To Defaults&r", "&7Immediately restore this portal's random teleport settings to their defaults.", "&eLeft click"]
+
+[rtp.navigation]
+back_portal = ["&e&lBack to Portal&r", "&7Return to the portal menu.", "&eLeft click"]
+overview = ["&e&lOverview&r", "&7Return to the RTP overview.", "&eLeft click"]
+back_category = ["&e&lBack&r", "&7Return to the previous category.", "&eLeft click"]
+
+[rtp.destination]
+header = ["&b&lDestination & Area&r", "&7Every option uses a normal left click."]
+world_current = ["&a&l{world}&r", "&7Current target world.", "&aSelected"]
+world_available = ["&b&l{world}&r", "&7Use this loaded world.", "&eLeft click to select"]
+previous_worlds = ["&e&lPrevious Worlds&r", "&7Show the previous page.", "&eLeft click"]
+next_worlds = ["&e&lNext Worlds&r", "&7Show the next page.", "&eLeft click"]
+biome_link = ["&e&lTarget Biome &f&l{value}&r", "&7Prefer landing in a chosen biome.", "&eLeft click"]
+center_portal_selected = ["&a&lPortal-relative Center&r", "&7Center the annulus on this portal.", "&aSelected"]
+center_portal_available = ["&b&lPortal-relative Center&r", "&7Center the annulus on this portal.", "&eLeft click to select"]
+center_custom_selected = ["&a&lCustom Center&r", "&7Use editable X and Z coordinates.", "&aSelected"]
+center_custom_available = ["&b&lCustom Center&r", "&7Use editable X and Z coordinates.", "&eLeft click to select"]
+reset_center = ["&e&lReset Center / Target&r", "&7Use the source world and portal center.", "&eLeft click"]
+
+[rtp.biome]
+any_label = "Any"
+unavailable_label = "Unavailable"
+header = ["&b&lTarget Biome&r", "&7The search prefers this biome and falls back to any safe spot when it cannot be found nearby."]
+any_selected = ["&a&lAny Biome&r", "&7No biome preference.", "&aSelected"]
+any_available = ["&b&lAny Biome&r", "&7Clear the biome preference.", "&eLeft click to select"]
+current = ["&a&l{biome}&r", "&7{key}", "&aSelected"]
+available = ["&b&l{biome}&r", "&7{key}", "&eLeft click to select"]
+empty = ["&7No biomes are available for the target world."]
+previous = ["&e&lPrevious Biomes&r", "&7Show the previous page.", "&eLeft click"]
+next = ["&e&lNext Biomes&r", "&7Show the next page.", "&eLeft click"]
+
+[rtp.numeric]
+link = ["&e&l{label} &f&l{value}&r", "&7Open clear decrease/increase controls.", "&eLeft click"]
+target_unavailable = ["&b&lTarget World Unavailable&r", "&7Load the target world before editing this value."]
+value = ["&b&l{value}&r", "&7Current draft value."]
+adjust = ["&e&l{direction}{step}&r", "&7Adjust the draft by {direction}{step}.", "&eLeft click"]
+header = ["&b&l{label}&r", "&7{description}"]
+center_x = "Center X"
+center_z = "Center Z"
+minimum_radius = "Minimum Radius"
+maximum_radius = "Maximum Radius"
+lower_y = "Lower Y"
+upper_y = "Upper Y"
+preferred_y = "Preferred Y"
+cycle = "Cycle Duration"
+private_rotation = "Private Rotation Time"
+lease = "Idle Lease Grace"
+release = "Private Release"
+
+[rtp.numeric.description]
+center = "Move the custom center on this axis."
+minimum_radius = "Inner edge of the destination annulus."
+maximum_radius = "Outer edge of the destination annulus."
+y = "Legal feet-height search bound."
+cycle = "Time between shared timed rotations."
+private_rotation = "Maximum age of each player's prepared destination."
+lease = "Keep prepared destinations warm briefly after everyone leaves."
+release = "Delay before an unused private reservation releases."
+
+[rtp.landing]
+header = ["&b&lLanding Rules&r", "&7Choose surface or preferred-height behavior and its safety mode."]
+surface_selected = ["&a&lSurface&r", "&7SAFE avoids water and tree tops. UNSAFE uses the topmost surface.", "&aSelected"]
+surface_available = ["&b&lSurface&r", "&7SAFE avoids water and tree tops. UNSAFE uses the topmost surface.", "&eLeft click to select"]
+preferred_selected = ["&a&lPreferred / Exact Height&r", "&7SAFE searches outward. UNSAFE uses the exact preferred Y.", "&aSelected"]
+preferred_available = ["&b&lPreferred / Exact Height&r", "&7SAFE searches outward. UNSAFE uses the exact preferred Y.", "&eLeft click to select"]
+safe_policy = ["&b&lLanding Safety: &f&l{mode}&r", "&7SAFE rejects water, hazards, trees, collisions, and unsupported ground.", "&7UNSAFE accepts the selected surface or exact preferred Y as-is.", "&eLeft click to toggle"]
+
+[rtp.routing]
+header = ["&b&lRotation & Pool&r", "&7Choose modes directly, then apply the batch once."]
+shared_selected = ["&a&lShared Destination&r", "&7Everyone sees and uses the same route.", "&aSelected"]
+shared_available = ["&b&lShared Destination&r", "&7Everyone sees and uses the same route.", "&eLeft click to select"]
+private_selected = ["&a&lPer-player Destinations&r", "&7Each player receives a private reservation.", "&aSelected"]
+private_available = ["&b&lPer-player Destinations&r", "&7Each player receives a private reservation.", "&eLeft click to select"]
+static_selected = ["&a&lStatic&r", "&7Keep the same destination.", "&aSelected"]
+static_available = ["&b&lStatic&r", "&7Keep the same destination.", "&eLeft click to select"]
+timed_selected = ["&a&lTimed&r", "&7Rotate after the configured duration.", "&aSelected"]
+timed_available = ["&b&lTimed&r", "&7Rotate after the configured duration.", "&eLeft click to select"]
+trip_selected = ["&a&lAfter Every Trip&r", "&7Promote a prepared replacement after use.", "&aSelected"]
+trip_available = ["&b&lAfter Every Trip&r", "&7Promote a prepared replacement after use.", "&eLeft click to select"]
+manual_reroll = ["&e&lManual Reroll&r", "&7{description}", "&eLeft click"]
+rebuild_pool = ["&e&lRebuild Pool&r", "&7{description}", "&eLeft click"]
+action_confirm = "Open a separate confirmation screen."
+
+[rtp.effects]
+header = ["&b&lEffects&r", "&7Presentation changes do not regenerate destinations."]
+rim_on_selected = ["&a&lReadiness Rim On&r", "&7Show private readiness around the portal rim.", "&aSelected"]
+rim_on_available = ["&b&lReadiness Rim On&r", "&7Show private readiness around the portal rim.", "&eLeft click to select"]
+rim_off_selected = ["&a&lReadiness Rim Off&r", "&7Hide the readiness rim.", "&aSelected"]
+rim_off_available = ["&b&lReadiness Rim Off&r", "&7Hide the readiness rim.", "&eLeft click to select"]
+sound_on_selected = ["&a&lPortal Sounds On&r", "&7Play this RTP portal's effects and travel sounds.", "&aSelected"]
+sound_on_available = ["&b&lPortal Sounds On&r", "&7Play this RTP portal's effects and travel sounds.", "&eLeft click to select"]
+sound_off_selected = ["&a&lPortal Sounds Off&r", "&7Mute this RTP portal; particles remain enabled.", "&aSelected"]
+sound_off_available = ["&b&lPortal Sounds Off&r", "&7Mute this RTP portal; particles remain enabled.", "&eLeft click to select"]
+
+[rtp.confirm]
+reroll = ["&b&lReroll Shared Route?&r", "&7The current projection stays online until the replacement is ready."]
+rebuild = ["&b&lRebuild Private Pool?&r", "&7Existing reservations stay intact while free candidates rebuild."]
+confirm = ["&e&lConfirm&r", "&7Run the action now.", "&eLeft click"]
+cancel = ["&e&lCancel&r", "&7Return without changing runtime state.", "&eLeft click"]
+
+[rtp.status]
+ready = "Ready"
+warming = "Warming"
+rerolling = "Rerolling"
+backoff = "Retry Backoff"
+world_unavailable = "Target World Unavailable"
+integration_failed = "Access Integration Failed"
+failed = "Failed"
+idle = "Idle"
+header = ["&6&lRandom Destination Status&r", "&7State: {state}"]
+retry = "&7Retry in: &c{duration}"
+active = "&7Active: {readiness}"
+standby = "&7Standby: {readiness}"
+rotation = "&7Draft rotation: &b{rotation}"
+pool = "&7Free: &b{free}&7  Reserved: &b{reserved}"
+target_missing = "&cTarget world is not loaded."
+access_failed = "&cDestination access checks failed closed."
+
+[rtp.rotation]
+static = "Static"
+timed = "Timed"
+trip = "After Every Trip"
+
+[rtp.duration]
+hours = "{value}h"
+minutes = "{value}m"
+seconds = "{value}s"
+decimal_seconds = "{value}s"
+
+[rules]
+route_card = "{portal} > {destination} | {amount} | {state}"
+
+[rules.denied]
+default = "This portal refused you."
+entity_class = "Only {mode} may use this portal."
+key = "You need the key for {portal}."
+time = "{portal} is closed right now."
+cooldown = "Wait {seconds}s before using {portal} again."
+charges = "{portal} has no charges left."
+cost = "You cannot pay {amount} to use {portal}."
+
+[rules.warmup]
+countdown = "Hold still: {seconds}s"
+cancelled = "Warmup cancelled."
+
+[rules.route]
+unlisted = "Unknown"
+free = "Free"
+ready = "Ready"
+cooldown = "{seconds}s"
+
+[rules.command]
+exported = "Exported {portal} rules to template {name}."
+imported = "Applied template {name} to {portal}."
+templates = "Rule templates: {value}"
+no_templates = "No rule templates are saved."
+template_missing = "There is no rule template named {name}."
+template_invalid = "Template {name} is invalid: {reason}"
+portal_missing = "There is no portal named {name}."
+portal_ambiguous = "{count} portals are named {name}; rename one."
+not_in_portal = "Stand in a portal or name one with the portal option."
+key_given = "You received a key for {portal}."
+failed = "Could not finish: {reason}"
+
+[rules.command.help]
+rules = "Traversal rules: templates, keys and per-portal profiles"
+export = "Write a portal's rules to a template file"
+"export.name" = "Template name to write"
+"export.portal" = "Portal name, or the portal you are standing in"
+import = "Apply a template to the portal you are standing in"
+"import.name" = "Template name to read"
+"import.portal" = "Portal name, or the portal you are standing in"
+apply = "Apply a template to a named portal from anywhere"
+"apply.name" = "Template name to read"
+"apply.portal" = "Portal name to apply the template to"
+list = "List saved rule templates"
+key = "Give yourself a key for a portal"
+"key.portal" = "Portal name to mint the key for"
+"key.uses" = "How many crossings the key allows, 0 for unlimited"
+
+[rules.menu]
+entry = ["&6Rules", "&7Who may pass, what it costs, what happens next."]
+cooldown = ["&6Cooldown: {seconds}s", "&7Left and right click to change, shift for 10s steps."]
+warmup = ["&6Warmup: {seconds}s", "&7Left and right click to change, shift for 10s steps."]
+group = ["&6Cooldown group: {value}", "&7Click to type a group name."]
+pushback = ["&6Pushback: {value}", "&7Left and right click to change the value."]
+sound = ["&6Refusal volume: {value}", "&7Left and right click to change the value."]
+charges = ["&6Charges: {count}", "&7Left and right click to change the pool size."]
+default_outcome = ["&6Default: {mode}", "&7Click to switch between allow and deny."]
+rules = ["&6Rules ({count})", "&7Click to open the rule list."]
+rule = ["&6{name}", "&7{value} &8- shift click removes the rule."]
+add_rule = ["&aAdd a rule", "&7Click to type a rule id."]
+line = ["&f{value}", "&7Shift click removes this line."]
+add_line = ["&aAdd a line", "&7Click and type kind=PERMISSION;node=group.vip."]
+templates = ["&6Templates", "&7Click to apply a saved template."]
+template = ["&f{name}", "&7Click to apply this template."]
+back = ["&7Back", "&8To the previous page."]
+page = ["&7Page {page} of {pages}", "&8Click to turn the page."]
+
+[rules.prompt]
+group = "&bType the cooldown group name (or \"{cancel}\"):"
+rule_id = "&bType an id for the new rule (or \"{cancel}\"):"
+line = "&bType a rule line, for example kind=PERMISSION;node=group.vip (or \"{cancel}\"):"
+
+[rules.notice]
+rule_added = "Added rule {name}."
+rule_removed = "Removed rule {name}."
+invalid = "That could not be applied: {reason}"
+applied = "Applied template {name}."
+
+[access.denied]
+role = "&cYou are not allowed to use {portal}."
+claim = "&cA land claim blocks {portal}."
+limit = "&cYou already own {count} portals; the limit is {maximum}."
+
+[access.construct]
+denied = "&cYou cannot build a portal here: {reason}."
+
+[access.claim]
+reason = "{plugin} protects this ground"
+failure = "{plugin} could not be asked"
+
+[access.transfer]
+done = "&8[&6Wormholes&8] &a{portal} now belongs to {name}."
+
+[access.key]
+set = "&aPermission key for {portal} is now {key}."
+taken = "&cPermission key {key} is already used."
+invalid = "&cPermission keys use a-z, 0-9, dot, dash, and underscore, up to 64 characters."
+
+[access.player]
+not_found = "&cNo player named {name}."
+
+[access.portal]
+not_found = "&8[&6Wormholes&8] &cNo portal named {portal}."
+ambiguous = "&8[&6Wormholes&8] &c{count} portals match {portal}; use the portal id."
+
+[access.role]
+changed = "&a{name} is now {state} on {portal}."
+removed = "&a{name} no longer has a role on {portal}."
+owner_always = "&7The owner always has full access."
+
+[access.listed]
+changed = "&a{portal} is now {state} in the public directory."
+
+[access.group]
+added = "&a{portal} now grants access to {node}."
+cleared = "&a{portal} no longer grants access by group."
+
+[access.limits]
+report = "&8[&6Wormholes&8] &7{name} owns {count} portals; the limit is {maximum}."
+unlimited = "&8[&6Wormholes&8] &7{name} owns {count} portals and has no limit."
+
+[access.prompt]
+player = "&7Type a player name in chat, or {cancel} to stop."
+key = "&7Type the new permission key in chat, or {cancel} to stop."
+group = "&7Type a permission node in chat, or {cancel} to stop."
+
+[access.label]
+owner = "Owner"
+co_owner = "Co-owner"
+user = "Trusted"
+denied = "Denied"
+listed = "Listed"
+unlisted = "Hidden"
+
+[access.menu]
+entry = ["&b&lAccess&r", "&7Roles, groups, and the permission key."]
+placard = ["&b&lAccess: {portal}&r", "&7Owner: &f{owner}", "&7Roles: &f{count}", "&7Key: &f{key}"]
+add = ["&a&lAdd a player&r", "&7Type a name in chat to give them a role."]
+role = ["&f&l{name}&r", "&7Role: &f{state}", "&7Left or right click to change the role.", "&7Shift-left click to remove it."]
+groups = ["&e&lAllowed groups&r", "&7{count} permission nodes grant access.", "&7Left click to add one, right click to clear."]
+key = ["&b&lPermission key&r", "&7{key}", "&7Left click to change it."]
+listed = ["&b&lPublic directory&r", "&7{state}", "&7Left click to toggle."]
+
+[access.command.help]
+access = "Portal access lists, ownership, and limits"
+transfer = "Give a portal to another player"
+"transfer.portal" = "Portal name or id"
+"transfer.player" = "Name of the new owner"
+key = "Set the stable permission key of a portal"
+"key.portal" = "Portal name or id"
+"key.key" = "New permission key"
+limits = "Show how many portals a player owns and may own"
+"limits.player" = "Player to inspect; defaults to you"
+
+[nexus]
+dialed = "&8[&6Wormholes&8] &a{portal} dialed to {address}: &f{destination}"
+created = "&8[&6Wormholes&8] &aCreated network {name}."
+deleted = "&8[&6Wormholes&8] &aDeleted network {name}."
+joined = "&8[&6Wormholes&8] &a{portal} joined {name} at address {address}."
+left = "&8[&6Wormholes&8] &a{portal} left {name}."
+
+[nexus.dial]
+unknown = "&8[&6Wormholes&8] &cNo portal at address {address}."
+none = "&8[&6Wormholes&8] &c{portal} is not on a network."
+debounced = "&8[&6Wormholes&8] &7Dialing too fast; wait a moment."
+managed = "&8[&6Wormholes&8] &c{portal} is a managed portal and cannot be dialed."
+
+[nexus.address]
+taken = "&8[&6Wormholes&8] &cAddress {address} is already used in {name}."
+set = "&8[&6Wormholes&8] &a{portal} answers to {address}."
+invalid = "&8[&6Wormholes&8] &cAddresses use only these characters: {value}"
+
+[nexus.network]
+unknown = "&8[&6Wormholes&8] &cNo network named {name}."
+exists = "&8[&6Wormholes&8] &cA network named {name} already exists."
+full = "&8[&6Wormholes&8] &c{name} already holds {count} portals."
+limit = "&8[&6Wormholes&8] &cYou already own {count} networks."
+
+[nexus.portal]
+unknown = "&8[&6Wormholes&8] &cNo portal named {portal}."
+not_member = "&8[&6Wormholes&8] &c{portal} is not a member of {name}."
+
+[nexus.visibility]
+set = "&8[&6Wormholes&8] &a{name} is now {value}."
+
+[nexus.hub]
+set = "&8[&6Wormholes&8] &a{portal} is the hub of {name}."
+
+[nexus.list]
+empty = "&8[&6Wormholes&8] &7No networks yet."
+entry = "&7{name} &8- &f{count} portals&7, {value}, owner &f{owner}"
+
+[nexus.info]
+header = "&6{name} &8- &f{count} portals&7, {value}, {mode}"
+member = "&e{address} &f{portal} &7in {world} &8{state}"
+
+[nexus.doctor]
+header = "&8[&6Wormholes&8] &6Link doctor: {count} findings."
+clean = "&8[&6Wormholes&8] &aNo link problems found."
+oneway = "&e{portal} -> {destination} has no return link."
+dangling = "&c{portal} points at a missing destination."
+unloaded = "&e{portal} points into unloaded world {world}."
+offline = "&c{portal} points at {server}, offline for {count} days."
+
+[nexus.redstone]
+set = "&8[&6Wormholes&8] &a{portal} redstone: {value}."
+
+[nexus.reciprocal]
+paired = "&8[&6Wormholes&8] &a{portal} and {destination} now link both ways."
+denied = "&8[&6Wormholes&8] &cYou cannot manage both {portal} and {destination}."
+
+[nexus.prompt]
+network_name = "&bType the network name in chat (or '{cancel}'):"
+address = "&bType the new address in chat (or '{cancel}'):"
+
+[nexus.menu]
+entry = ["&b&lNetwork&r", "&7Networks, addresses, dialing, destination policy, redstone.", "&7Network: &f{name}", "&7Address: &f{address}", "&eLeft-click"]
+placard = ["&b&lNetwork: {name}&r", "&7Address: &f{address}", "&7Members: &f{count}"]
+join = ["&a&lJoin a network&r", "&7Add this portal to a network and give it an address.", "&eLeft-click"]
+leave = ["&c&lLeave {name}&r", "&7Remove this portal and its address from the network.", "&eLeft-click"]
+create = ["&a&lCreate a network&r", "&7Name a new network and put this portal in it.", "&eLeft-click"]
+address = ["&e&lAddress: {address}&r", "&7Short code other portals dial to reach this one.", "&eLeft-click to retype. &eRight-click to reroll."]
+visibility = ["&e&lVisibility: {value}&r", "&7Public networks list for everyone; members-only lists for members; hidden never lists.", "&eLeft-click to cycle"]
+topology = ["&e&lTopology: {value}&r", "&7Mesh dials any member; hub routes through one portal; chain and ring dial neighbours.", "&eLeft-click to cycle"]
+reciprocal = ["&e&lReturn link: {state}&r", "&7Keep the destination pointing back at this portal.", "&eLeft-click to toggle"]
+policy = ["&e&lDestinations: {mode}&r", "&7{count} entries. Ordered, weighted, scheduled, per-player, or return.", "&eLeft-click to cycle the mode. &eRight-click to clear."]
+redstone = ["&e&lRedstone: {value}&r", "&7What a rising edge next to the frame does, and what a comparator reads.", "&eLeft-click for the action. &eRight-click for comparator output."]
+dial = ["&b&lDial&r", "&7Point this portal at another address on its network.", "&eLeft-click"]
+dial_entry = ["&e{address} &f{portal}", "&7{world}", "&b{state}"]
+link_and_return = ["&d&lLink and return&r", "&7Also point {destination} back at {portal}.", "&eLeft-click"]
+
+[atlas]
+title = "&8Atlas &7- &f{count} portals"
+row = "&f{portal} &8| &7{destination} &8| &b{state}"
+empty = "&8[&6Wormholes&8] &7No portals discovered yet."
+disabled = "&8[&6Wormholes&8] &cThe atlas is turned off on this server."
+only_players = "&8[&6Wormholes&8] &cOnly players have an atlas."
+no_permission = "&8[&6Wormholes&8] &cYou do not have permission to open the atlas."
+usage = ["&8[&6Wormholes&8] &7/atlas &8- &7open your portal list", "&8[&6Wormholes&8] &7/atlas favorites &8- &7only pinned portals", "&8[&6Wormholes&8] &7/atlas recents &8- &7portals you used lately", "&8[&6Wormholes&8] &7/atlas guide \\<portal> &8- &7show a bearing; /atlas guide off stops it"]
+
+[atlas.favorite]
+added = "&8[&6Wormholes&8] &aPinned {portal}."
+removed = "&8[&6Wormholes&8] &aUnpinned {portal}."
+full = "&8[&6Wormholes&8] &cYou already pinned {count} portals."
+
+[atlas.guide]
+bearing = "&b{portal} &f{value}"
+set = "&8[&6Wormholes&8] &aGuiding to {portal}."
+cleared = "&8[&6Wormholes&8] &aGuide off."
+unknown = "&8[&6Wormholes&8] &cNo portal named {portal} in your atlas."
+
+[atlas.menu]
+row = ["&6{portal}", "&7{world} &8- &f{destination}", "&b{state}", "", "&eLeft-click to dial. &eRight-click to pin. &eShift-left-click to guide."]
+favorites = ["&d&lPinned only: {state}&r", "&7Show only the portals you pinned.", "&eLeft-click"]
+recents = ["&b&lRecent only: {state}&r", "&7Show only the portals you used lately.", "&eLeft-click"]
+guide = ["&a&lGuide: {portal}&r", "&7Show a bearing to the guided portal on the action bar.", "&eLeft-click to stop guiding"]
+
+[doorview]
+disabled = "&8[&6Wormholes&8] &cDoor projection is disabled in wormholes.toml."
+
+[doorview.toggle]
+inherit = "&8[&6Wormholes&8] &7Projection for this door: &finherit&7."
+on = "&8[&6Wormholes&8] &aProjection for this door: on."
+off = "&8[&6Wormholes&8] &eProjection for this door: off."
+
+[doorview.state]
+inherit = "inherit"
+on = "on"
+off = "off"
+
+[doorview.menu]
+projection = ["&b&lProjection: {state}&r", "&7Show the destination through this doorway.", "&eLeft-click to cycle"]
+
+[pockets.template]
+list = "&8[&6Wormholes&8] &7Templates (&f{count}&7): &f{value}"
+applied = "&8[&6Wormholes&8] &aApplied template &f{name}&a to pocket &f{space}&a."
+missing = "&8[&6Wormholes&8] &cThere is no pocket template named &f{name}&c."
+
+[pockets.confirm]
+overwrite = ["&8[&6Wormholes&8] &cThis replaces everything inside pocket &f{space}&c.", "&8[&6Wormholes&8] &7Run the same command with &fconfirm=true&7 to go ahead."]
+
+[pockets.rules]
+set = "&8[&6Wormholes&8] &a{key} &7= &f{value}"
+invalid = "&8[&6Wormholes&8] &cUnknown pocket rule &f{key}&c."
+
+[pockets.roster]
+added = "&8[&6Wormholes&8] &a{name}&a joined the pocket roster as &f{value}&a."
+removed = "&8[&6Wormholes&8] &e{name}&e left the pocket roster."
+role = "&8[&6Wormholes&8] &a{name}&a is now &f{value}&a in this pocket."
+missing = "&8[&6Wormholes&8] &c{name}&c is not on this pocket roster."
+
+[pockets.room]
+added = "&8[&6Wormholes&8] &aAdded room &f{count}&a to pocket &f{space}&a."
+limit = "&8[&6Wormholes&8] &cThis pocket already has its maximum of &f{count}&c rooms."
+blocked = "&8[&6Wormholes&8] &cPlace the door on an interior wall."
+
+[pockets.instance]
+reset = "&8[&6Wormholes&8] &aPocket instance &f{space}&a was reset."
+none = "&8[&6Wormholes&8] &cThis pocket is not an instance."
+
+[pockets.snapshot]
+saved = "&8[&6Wormholes&8] &aSaved snapshot &f{name}&a of pocket &f{space}&a."
+restored = "&8[&6Wormholes&8] &aRestored snapshot &f{name}&a into pocket &f{space}&a."
+missing = "&8[&6Wormholes&8] &cThis pocket has no snapshot named &f{name}&c."
+
+[pockets.denied]
+build = "&8[&6Wormholes&8] &cYou are not a builder in this pocket."
+pvp = "&8[&6Wormholes&8] &cFighting is turned off in this pocket."
+
+[mesh]
+pending = "&8[&6Wormholes&8] &e{server}&7 wants to join through &f{name}&7: /wh network accept {server}"
+accepted = "&8[&6Wormholes&8] &aAccepted &f{server}&a into the network."
+rejected = "&8[&6Wormholes&8] &cRejected &f{server}&c and discarded its introduction."
+tombstoned = "&8[&6Wormholes&8] &f{server}&7 was removed network-wide."
+disabled = "&8[&6Wormholes&8] &7Mesh federation is &cdisabled&7 ([network.mesh] enabled = false)."
+
+[mesh.introductions]
+none = "&8[&6Wormholes&8] &7No introductions are waiting for approval."
+unknown = "&8[&6Wormholes&8] &c{server} is not waiting for approval."
+
+[mesh.members]
+none = "&8[&6Wormholes&8] &7No network members are known yet."
+row = "&8[&6Wormholes&8] &f{server}&7 {state} &8{fingerprint}"
+
+[mesh.versions]
+none = "&8[&6Wormholes&8] &7No peers have linked yet."
+row = "&8[&6Wormholes&8] &f{server}&7: protocol &f{value}&7, plugin &f{name}&7, capabilities &f{state}"
+reduced = "&8[&6Wormholes&8] &e{server}&7 links with reduced capability: &f{reason}"
+
+[mesh.drain]
+on = "&8[&6Wormholes&8] &eDrain mode on: this server refuses new arrivals until drain is turned off."
+off = "&8[&6Wormholes&8] &aDrain mode off: this server accepts arrivals again."
+state = "&8[&6Wormholes&8] &7Drain mode is {state}."
+invalid = "&8[&6Wormholes&8] &cDrain state must be on or off, got {value}."
+
+[mesh.queue]
+position = "&7Waiting for a free server: position &f{count}&7, &f{seconds}&7s"
+timeout = "&cNo destination server had room in time."
+
+[mesh.policy]
+none = "&cNo destination is available right now."
+set = "&8[&6Wormholes&8] &aPolicy on &f{portal}&a: {value}"
+cleared = "&8[&6Wormholes&8] &7Policy cleared on &f{portal}&7; it links to its plain destination again."
+portal_unknown = "&8[&6Wormholes&8] &cNo local portal named {portal}."
+invalid = "&8[&6Wormholes&8] &cInvalid policy: {reason}"
+
+[mesh.command.help]
+members = "List every network member with link state and key fingerprint"
+pending = "List introduced servers waiting for approval"
+accept = "Trust an introduced server and save its route"
+reject = "Discard an introduced server's pending introduction"
+versions = "Show each peer's protocol, plugin version and capability set"
+drain = "Take this server out of destination rotation or put it back"
+policy = "Set or clear a gateway's destination policy"
+
+[mesh.command.param.accept]
+server = "Introduced server name (see /wh network pending)"
+
+[mesh.command.param.reject]
+server = "Introduced server name to reject"
+
+[mesh.command.param.drain]
+state = "on or off; omit to show the current state"
+
+[mesh.command.param.policy]
+portal = "Local portal name or id"
+candidates = "Comma-separated server:portal[:weight] entries; empty clears the policy"
+strategy = "FIRST_AVAILABLE, LEAST_LOADED, ROUND_ROBIN, STICKY or NEAREST"
+headroom = "Free player slots a candidate must report"
+tps = "Minimum TPS a candidate must report; 0 ignores TPS"
+queue = "Hold travelers when every candidate is full"
+
+[transit]
+bounced = "{portal} pushed you back."
+
+[transit.denied]
+membrane = "{portal} can only be entered from the front."
+convoy_size = "Your rig has {count} entities; the limit is {value}."
+convoy_fit = "Your rig does not fit through {portal}."
+convoy_member = "Part of your rig may not use {portal}."
+
+[transit.convoy]
+waiting = "Bring your whole rig through {portal}."
+failed = "Convoy transfer failed: {reason}."
+
+[transit.menu]
+entry = ["&b&lTransit&r", "&7Momentum, orientation, membrane, bounce, and cues.", "&eLeft-click"]
+momentum = ["&6&lMomentum: {mode}&r", "&7Factor {value}. How exit speed is derived from entry speed.", "&eLeft-click to cycle the mode", "&eRight-click to set the factor"]
+orientation = ["&6&lOrientation: {mode}&r", "&7Which way travelers face when they arrive.", "&eLeft-click to cycle"]
+membrane = ["&6&lMembrane: {state}&r", "&7Only the front side lets travelers in; the back side pushes them away.", "&eLeft-click to toggle"]
+bounce = ["&6&lBounce: {state}&r", "&7Reflect travelers instead of moving them.", "&eLeft-click to toggle"]
+prompt = "&bType the new value in chat (or '{cancel}'):"
+profile = ["&6&lTransition cues&r", "&7Threshold {mode}", "&7Arrival {state}", "&eLeft-click: threshold effect, Right-click: arrival sound", "&eShift + Left-click: mask ticks"]
+scale = ["&6&lTraveller scale: {mode}&r", "&7Size range {value}. Maps travel between portals of different sizes.", "&eLeft-click to cycle the mode", "&eRight-click: minimum, Shift + Right-click: maximum"]
+gravity = ["&6&lDirectional gravity: {state}&r", "&7Modded travelers rotate their floor, movement, and model with the portal.", "&eLeft-click to toggle"]
+
+[transit.gravity]
+current = "&8[&6Wormholes&8] &f{portal}&7 directional gravity: &f{state}"
+reset = "&8[&6Wormholes&8] &aRestored world gravity for {name}."
+client_required = "&8[&6Wormholes&8] &cThis portal requires the Wormholes client mod for directional gravity."
+
+[transit.scale]
+current = "&8[&6Wormholes&8] &f{portal}&7 traveller scale: &f{mode}&7 ({value})"
+set = "&8[&6Wormholes&8] &f{portal}&a traveller scale set to &f{mode}&a ({value})."
+invalid = "&8[&6Wormholes&8] &cCould not read the traveller scale: {reason}"
+reset = "&8[&6Wormholes&8] &aRestored the default size of {count} entities."
+reset_radius = "&8[&6Wormholes&8] &ctarget=all needs a radius from 1 to {value}."
+reset_player = "&8[&6Wormholes&8] &cNo online player named {name}."
+
+[fidelity.menu]
+entry = ["&b&lFidelity&r", "&7Atmosphere, acoustics, detail and block entities for this portal.", "&eLeft-click"]
+placard = ["&b&lProjection fidelity&r", "&7Per-portal channels layered on the projection."]
+atmosphere = "&bAtmosphere: &f{mode}"
+acoustics = "&bAcoustics: &f{mode}"
+lod = "&bDetail: &f{mode}"
+block_entities = "&bBlock entities: &f{state}"
+hint = ["&8Click to cycle.", "&8Shift-click to use the server default."]
+back = ["&e&lBack&r", "&7Return to the portal menu."]
+default = "default"
+
+[fidelity.bedrock]
+profile = "Bedrock profile active for {count} viewers"
+
+[ops.console]
+started = "Metrics endpoint listening on {value}."
+no_token = "Metrics endpoint refused to start: set [ops.console] token."
+failed = "Metrics endpoint could not bind {value}: {reason}"
+
+[ops.webmap]
+published = "Published {count} portal markers to {name}."
+
+[ops.backup]
+created = "&8[&6Wormholes&8] &aBackup &f{id}&a written to &f{path}&a."
+restored = "&8[&6Wormholes&8] &aRestored &f{count}&a portals from &f{id}&a."
+dry_run = "&8[&6Wormholes&8] &7Dry run: &f{count}&7 portals would change."
+list_row = "&8[&6Wormholes&8] &f{id} &8| &f{count}&7 portals &8| &7{path}"
+list_empty = "&8[&6Wormholes&8] &7No backups under &f{path}&7."
+not_found = "&8[&6Wormholes&8] &cNo backup matches &f{id}&c."
+confirm_required = "&8[&6Wormholes&8] &cRun this again with &fconfirm=true&c to apply it, or &fdry=true&c to see the plan."
+failed = "&8[&6Wormholes&8] &cBackup operation failed: &f{reason}"
+signature_broken = "&8[&6Wormholes&8] &cRefusing &f{id}&c: its signature does not match its contents."
+signature_untrusted = "&8[&6Wormholes&8] &cRefusing &f{id}&c: signed by &f{fingerprint}&c, which this server does not trust. Add &fallow-unsigned=true&c to apply it anyway."
+signature_ok = "&8[&6Wormholes&8] &7Signed by &f{name}&7 (&f{fingerprint}&7)."
+reload_required = "&8[&6Wormholes&8] &7Portal files replaced. Run &f/wormholes reload&7 to load them."
+
+[ops.import]
+report = "&8[&6Wormholes&8] &f{name}&7: &f{count}&7 portals imported, &f{value}&7 skipped."
+skipped_row = "&8[&6Wormholes&8] &7{portal}&8: &f{reason}"
+not_detected = "&8[&6Wormholes&8] &cNo {name} data found under &f{path}&c."
+
+[ops.portals]
+row = "&8[&6Wormholes&8] &f{portal} &8| &7{world} &8| &7{state} &8| &7{destination}"
+page = "&8[&6Wormholes&8] &7Page &f{page}&7/&f{pages}"
+empty = "&8[&6Wormholes&8] &7No portals match those filters."
+not_found = "&8[&6Wormholes&8] &cNo portal matches &f{name}&c."
+ambiguous = "&8[&6Wormholes&8] &c{count} portals match &f{name}&c; use the id."
+info = ["&8[&6Wormholes&8] &7Portal &f{portal} &8| &7{id}", "&8[&6Wormholes&8] &7World &f{world}&7 at &f{value}", "&8[&6Wormholes&8] &7State &f{state}&7, destination &f{destination}&7, owner &f{owner}"]
+teleported = "&8[&6Wormholes&8] &aTeleported to &f{portal}&a."
+teleport_unsafe = "&8[&6Wormholes&8] &eNo safe landing near &f{portal}&e; using the portal centre."
+retargeted = "&8[&6Wormholes&8] &a&f{portal}&a now points at &f{destination}&a."
+unlinked = "&8[&6Wormholes&8] &a&f{portal}&a is now unlinked."
+pruned = "&8[&6Wormholes&8] &aPruned &f{count}&a orphaned links."
+prune_dry_run = "&8[&6Wormholes&8] &7Dry run: &f{count}&7 orphaned links would be pruned."
+renamed_server = "&8[&6Wormholes&8] &aRewrote &f{count}&a gateway links from &f{name}&a to &f{server}&a."
+
+[ops.command.help]
+backup = "Create, list, restore, and exchange portal backups"
+"backup.now" = "Write a backup of the portal data now"
+"backup.list" = "List the backups on disk"
+"backup.restore" = "Restore portal files from a backup (dry=true shows the plan)"
+"backup.restore.id" = "Backup id from /wormholes admin backup list"
+"backup.restore.dry" = "Report what would change without writing anything"
+"backup.restore.world_map" = "World renames as old=new,old=new"
+"backup.restore.owner_map" = "Owner renames as old-uuid=new-uuid,old-uuid=new-uuid"
+"backup.restore.confirm" = "Required to write files when dry=false"
+"backup.allow_unsigned" = "Apply a bundle that no trusted key signed"
+"backup.export" = "Write a bundle to a file you can move between servers"
+"backup.export.file" = "Destination file; blank writes into the backups folder"
+"backup.import" = "Import a bundle exported from another server"
+"backup.import.file" = "Bundle file to read"
+"backup.import.dry" = "Report what would change without writing anything"
+"backup.import.world_map" = "World renames as old=new,old=new"
+"backup.import.owner_map" = "Owner renames as old-uuid=new-uuid,old-uuid=new-uuid"
+"backup.import.confirm" = "Required to write files when dry=false"
+"backup.import_from" = "Import portals from another portal plugin's files"
+"backup.import_from.source" = "stargate, advancedportals, multiverse, betterportals, or essentials"
+"backup.import_from.dry" = "Report what would be created without creating anything"
+"backup.import_from.frame" = "Frame size as width,height for sources without a frame"
+portals = "List, inspect, and bulk-edit portals"
+"portals.list" = "List portals with optional filters"
+"portals.list.world" = "Only portals in this world"
+"portals.list.type" = "Only portals of this type: portal, wormhole, gateway, or rtp"
+"portals.list.owner" = "Only portals owned by this player name or uuid"
+"portals.list.state" = "Only portals in this state: open, closed, linked, or unlinked"
+"portals.list.page" = "Page number"
+"portals.find" = "Find portals whose name contains the text"
+"portals.find.name" = "Text to search for"
+"portals.info" = "Show one portal's world, state, destination, and owner"
+"portals.info.portal" = "Portal name or id"
+"portals.tp" = "Teleport to a portal, landing on safe ground"
+"portals.tp.portal" = "Portal name or id"
+"portals.retarget" = "Point a portal at another local portal"
+"portals.retarget.portal" = "Portal name or id to change"
+"portals.retarget.destination" = "Portal name or id to point at"
+"portals.unlink" = "Remove a portal's destination"
+"portals.unlink.portal" = "Portal name or id"
+"portals.prune" = "Remove links whose destination no longer exists"
+"portals.prune.dry" = "Report what would be pruned without changing anything"
+"portals.prune.confirm" = "Required to prune when dry=false"
+"portals.rename_server" = "Rewrite cross-server links from one server name to another"
+"portals.rename_server.old" = "Server name stored in the links today"
+"portals.rename_server.new" = "Server name to store instead"
+"portals.rename_server.confirm" = "Required to rewrite the links"
+"portals.shape" = "Show or set the aperture shape of a portal"
+"portals.shape.portal" = "Portal name or id"
+"portals.shape.shape" = "Shape text such as circle, flower(petals=7) or full; omit to show the current shape"
+"portals.scale" = "Show or set the traveller scale rule of a portal"
+"portals.scale.portal" = "Portal name or id"
+"portals.scale.mode" = "off, motion or ratio; omit every value to show the current rule"
+"portals.scale.min" = "Smallest size factor a ratio crossing may reach (0.0625-16)"
+"portals.scale.max" = "Largest size factor a ratio crossing may reach (0.0625-16)"
+scale = "Restore the default size of travellers scaled by portals"
+"scale.reset" = "Remove the portal scale from a player or from every entity nearby"
+"scale.reset.target" = "self, a player name, or all"
+"scale.reset.radius" = "Search radius in blocks when target=all (1-256)"
+
+[clientview.command]
+header = "&6ClientView &7runtime {state}, configured {mode}, {count} sessions"
+row = "&e{name} &7{state} &8| &7{value}"
+none = "&7No player has a ClientView session."
+enabled = "&aClientView is offered again. Configured: {mode}."
+disabled = "&cClientView is off. Every session returned to vanilla projection."
+reset = "&aRestarting the ClientView stream for {name}."
+no_session = "&c{name} has no active ClientView session."
+player_missing = "&cNo online player is named {name}."
+
+[clientview.command.help]
+clientview = "ClientView sessions for players running the Wormholes mod"
+status = "List every ClientView session"
+on = "Offer ClientView to modded clients again"
+off = "Return every ClientView player to vanilla projection"
+reset = "Restart one player's ClientView stream"
+"reset.player" = "Online player name"
+
+[menu.native.title]
+portal = "Portal"
+mode = "Portal Mode"
+orientation = "Orientation"
+gateway = "Gateway Pairing"
+settings = "Settings"
+advanced = "Advanced Stream Tuning"
+blackout = "Blackout Color"
+ambient = "Ambient Color"
+skin = "Surface Skin"
+cost = "Travel Cost"
+extensions = "More Settings"
+destinations = "Destinations"
+select = "Choose a Portal"
+rtp = "Random Teleport"
+rtp_destination = "Random Destination"
+rtp_biome = "Target Biome"
+rtp_landing = "Landing"
+rtp_routing = "Routing"
+rtp_effects = "Effects"
+network = "Network"
+dial = "Dial"
+rules = "Rules"
+rules_list = "Rule List"
+rule = "Rule"
+templates = "Rule Templates"
+access = "Access"
+transit = "Transit"
+fidelity = "Fidelity"
+atlas = "Atlas"
+door = "Door Access"
+language = "Language"
+
+[menu.native.context]
+portal = "{portal} - {type}"
+door = "{kind} door"
+network = "{name}"
+
+[menu.native.chrome]
+back = "Back"
+close = "Close"
+apply = "Apply"
+confirm = "Confirm"
+cancel = "Cancel"
+previous_page = "Previous page"
+next_page = "Next page"
+page = "Page {page} / {pages}"
+use_held_item = "Use held item"
+aim = "Aim"
+timeout = "The server did not answer."
+
+[menu.native.action]
+rotate = "Rotate"
+rotate_clockwise = "Rotate clockwise"
+rotate_counterclockwise = "Rotate counterclockwise"
+reset = "Reset"
+clear = "Clear"
+colors = "Colors"
+advanced = "Advanced"
+reroll = "Reroll"
+remove = "Remove"
+favorite = "Favorite"
+guide = "Guide"
+whitelist = "Whitelist"
+blacklist = "Blacklist"
+use_default = "Use server default"
+
+[menu.native.confirm]
+delete_portal = ["Delete {portal}?", "This removes the portal and unlinks portals that lead to it.", "This cannot be undone."]
+"delete_portal.accept" = "Delete"
+rtp_reset = ["Reset {portal}?", "Every random teleport setting returns to its default."]
+"rtp_reset.accept" = "Reset"
+rules_template = ["Load {name}?", "The template replaces every rule on this portal."]
+"rules_template.accept" = "Load"
+nexus_leave = ["Leave {name}?", "This portal stops dialing and receiving through the network."]
+"nexus_leave.accept" = "Leave"
+
+[menu.native.feedback]
+refreshed = "The menu changed and was refreshed."
+unavailable = "That option is not available right now."
+invalid_value = "That value is not allowed."
+save_failed = "The change could not be saved."
+timeout = "The server took too long to answer."
+
+[menu.native.placeholder]
+name = "Portal name"
+code = "Invite code"
+block_state = "Block state, for example minecraft:glass"
+amount = "Amount"
+player = "Player name"
+key = "Permission key"
+group = "Group name"
+network = "Network name"
+address = "Address"
+rule_id = "Rule id"
+line = "Rule line"
+factor = "Factor"
+sound = "Sound id"
+ticks = "Ticks"
+scale = "Scale"
+search = "Search"
+
+[menu.native.transit]
+factor = "Momentum factor"
+threshold_effect = "Threshold effect"
+arrival_sound = "Arrival sound"
+mask_ticks = "Mask ticks"
+scale_min = "Minimum scale"
+scale_max = "Maximum scale"
+
+[menu.native.nexus]
+comparator = "Comparator output"
+
+[menu.native.list]
+page = ["&b&lPage {page}/{pages}&r", "&7{count} entries"]

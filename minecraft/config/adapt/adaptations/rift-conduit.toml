@@ -1,0 +1,100 @@
+# Adapt configuration - adaptation:rift-conduit
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Bind two containers with paired taglocks; items placed in one flow to the other, and cross dimensions at max level.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 8
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 4
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 8
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base number of items moved per flow before level scaling.
+# Effect: Higher values move more items each time a linked container is closed, up to a hard 1152-item limit.
+throughputBase = 48.0
+# Additional items moved per flow granted at max level, scaling with level.
+# Effect: Higher values widen the gap between low-level and max-level throughput.
+throughputFactor = 336.0
+# Base binding range in blocks before level scaling.
+# Effect: Higher values allow linking containers that are further apart, up to a hard 512-block limit.
+rangeBase = 24.0
+# Additional binding range in blocks granted at max level, scaling with level.
+# Effect: Higher values let higher levels link containers much further apart.
+rangeFactor = 200.0
+# Allows binding across different worlds once the adaptation reaches max level.
+# Effect: True lets a max-level link ignore world and distance limits; false keeps every link same-world.
+crossDimensionAtMax = true
+# Skill XP granted when a new link is formed.
+# Effect: Higher values grant more skill XP per link created.
+xpOnLink = 30.0
+# Skill XP granted per item flowed between linked containers.
+# Effect: Higher values grant more skill XP as items move through the conduit.
+xpPerFlow = 0.4
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.flow]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.items]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "BLOCKS", "FOOD"]
+
+[playerPreferences.linking]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

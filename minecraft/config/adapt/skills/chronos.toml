@@ -1,0 +1,84 @@
+# Adapt configuration - skill:chronos
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Controls Skill color for the chronos skill.
+skillColor = "&b"
+# Minimum threshold required for the chronos skill.
+minimumMovementForActiveCheck = 0.35
+# XP gain tuning for the chronos skill.
+distancePerBonusXP = 5.0
+# XP gain tuning for the chronos skill.
+activeMovementXP = 3.5
+# XP gain tuning for the chronos skill.
+activeMovementXPCapPerTick = 6.0
+# Chronos XP multiplier while a clock is held in the offhand.
+# Effect: Takes precedence over the inventory multiplier; 1.0 disables the offhand bonus.
+clockOffhandXpMultiplier = 3.0
+# Chronos XP multiplier while a clock is stored in the player's inventory.
+# Effect: Applies when no clock is in the offhand; 1.0 disables the inventory bonus.
+clockInventoryXpMultiplier = 2.0
+# Controls Position history size for the chronos skill.
+positionHistorySize = 12
+# Controls Afk min action types for the chronos skill.
+afkMinActionTypes = 3
+# Scaling applied to the chronos skill.
+afkPenaltyMultiplier = 0.03
+# XP gain tuning for the chronos skill.
+passiveActiveXP = 0.4
+# Controls Activity window for the chronos skill.
+activityWindow = 15000
+# Controls Activity types for bonus for the chronos skill.
+activityTypesForBonus = 4
+# Scaling applied to the chronos skill.
+activityBonusMultiplier = 1.5
+# Scaling applied to the chronos skill.
+nightActivityMultiplier = 1.3
+# Chronos XP granted when the player successfully enters a bed.
+# Effect: The clock multiplier is applied to this burst; failed bed entries never grant XP.
+sleepXP = 150.0
+# Cooldown between the chronos skill activations.
+sleepCooldown = 30000
+# Base Chronos XP granted for applying a Speed potion to the user or another player.
+# Effect: The potion-strength, repetition, and clock multipliers are applied to this amount.
+speedPotionBaseXP = 120.0
+# Scaling applied to the chronos skill.
+speedPotionLevelMultiplier = 1.5
+# Minimum milliseconds between Speed potion rewards from the same player.
+# Effect: Prevents duplicate or rapid-fire potion events from granting repeated XP.
+speedPotionRewardCooldown = 1000
+# Controls Speed potion diminishing decay for the chronos skill.
+speedPotionDiminishingDecay = 0.15
+# Controls Speed potion diminishing floor for the chronos skill.
+speedPotionDiminishingFloor = 0.25
+# Controls Speed potion reset window for the chronos skill.
+speedPotionResetWindow = 300000
+# XP gain tuning for the chronos skill.
+enderPearlThrowXP = 35.0
+# XP gain tuning for the chronos skill.
+enderPearlTeleportXP = 15.0
+# Cooldown between the chronos skill activations.
+enderPearlCooldown = 10000
+# XP gain tuning for the chronos skill.
+survivalXPPerMinute = 3.0
+# Controls Survival streak bonus per hour for the chronos skill.
+survivalStreakBonusPerHour = 0.2
+# Maximum cap applied to the chronos skill.
+survivalStreakHourCap = 5
+
+# Controls Player preferences for the chronos skill.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

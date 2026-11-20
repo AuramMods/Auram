@@ -1,0 +1,29 @@
+# Adapt configuration - skill:blocking
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Controls Skill color for the blocking skill.
+skillColor = "&8"
+# XP gain tuning for the blocking skill.
+xpOnBlockedAttack = 25.0
+# Cooldown between the blocking skill activations.
+cooldownDelay = 1500
+# XP gain tuning for the blocking skill.
+passiveXpForUsingShield = 0
+
+# Controls Player preferences for the blocking skill.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

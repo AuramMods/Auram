@@ -1,0 +1,88 @@
+# Adapt configuration - adaptation:rift-ender-taglock
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Tag entities into ender pearls and throw those pearls to reposition the tagged target.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 7
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.95
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 7
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Cooldown between the rift-ender-taglock adaptation activations.
+throwCooldownTicksBase = 30.0
+# Cooldown between the rift-ender-taglock adaptation activations.
+throwCooldownTicksFactor = 14.0
+# How long the thrower's vanilla pearl teleport stays suppressed after a taglocked pearl lands.
+# Effect: Backstop only; the suppression is armed on impact and consumed by the teleport that follows it in the same tick, so this only needs to survive that hand-off. Clamped to 50-2000ms.
+suppressPearlTeleportWindowMillis = 250
+# Minimum threshold required for the rift-ender-taglock adaptation.
+largeWidthThreshold = 1.3
+# Minimum threshold required for the rift-ender-taglock adaptation.
+largeHeightThreshold = 2.35
+# XP gain tuning for the rift-ender-taglock adaptation.
+xpOnTag = 8.0
+# XP gain tuning for the rift-ender-taglock adaptation.
+xpOnThrow = 5.0
+# Controls Damage sender for the rift-ender-taglock adaptation.
+# Effect: True damages the thrower like a normal pearl; false damages the taglocked target instead.
+damageSender = true
+# XP gain tuning for the rift-ender-taglock adaptation.
+xpOnTeleport = 14.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.confirm]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "HOSTILES", "ANIMALS", "PLAYERS"]
+

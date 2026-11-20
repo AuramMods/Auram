@@ -1,0 +1,78 @@
+# Adapt configuration - adaptation:chronos-pocket-watch
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Sneak while airborne to fall in slow motion, with a level scaled time budget per airtime.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.35
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 3
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base seconds of slow falling sustainable per airtime.
+# Effect: Higher values let the player drift longer each fall.
+baseBudgetSeconds = 2.0
+# Extra sustain seconds per adaptation level.
+# Effect: Higher values make leveling extend the drift budget faster.
+budgetSecondsPerLevel = 1.0
+# Duration in ticks of each refreshing slow falling pulse.
+# Effect: Higher values leave slow falling lingering longer after sneaking stops.
+pulseDurationTicks = 15
+# Minimum fall distance in blocks before the slow fall kicks in.
+# Effect: Lower values start the slow fall earlier in the drop.
+minFallDistance = 1.5
+# Requires a clock anywhere in the inventory for the slow fall to apply.
+# Effect: False removes the item requirement entirely.
+requireClock = true
+# XP granted per slow fall pulse.
+# Effect: Higher values grant more skill XP while drifting.
+xpPerPulse = 0.3
+# Maximum learned players processed per pulse pass.
+# Effect: Higher values refresh more players immediately; lower values spread owner-thread scheduling across passes.
+maxPlayersPerPass = 512
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.require-sneak]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

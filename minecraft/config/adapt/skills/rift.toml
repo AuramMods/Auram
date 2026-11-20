@@ -1,0 +1,39 @@
+# Adapt configuration - skill:rift
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Controls Skill color for the rift skill.
+skillColor = "&5"
+# XP gain tuning for the rift skill.
+destroyEndCrystalXP = 250.0
+# XP gain tuning for the rift skill.
+damageEndermanXPMultiplier = 4.0
+# XP gain tuning for the rift skill.
+damageEndermiteXPMultiplier = 2.0
+# XP gain tuning for the rift skill.
+damageEnderdragonXPMultiplier = 8.0
+# XP gain tuning for the rift skill.
+throwEnderpearlXP = 65.0
+# XP gain tuning for the rift skill.
+throwEnderEyeXP = 30.0
+# XP gain tuning for the rift skill.
+teleportXP = 15.0
+# Cooldown between the rift skill activations.
+teleportXPCooldown = 60000.0
+
+# Controls Player preferences for the rift skill.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

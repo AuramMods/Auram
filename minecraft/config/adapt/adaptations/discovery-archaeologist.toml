@@ -1,0 +1,66 @@
+# Adapt configuration - adaptation:discovery-archaeologist
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Brushing suspicious blocks has a chance to grant bonus archaeology loot.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.8
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 6
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Chance for the discovery-archaeologist adaptation to trigger.
+bonusRollChanceBase = 0.12
+# Chance for the discovery-archaeologist adaptation to trigger.
+bonusRollChanceFactor = 0.43
+# Chance for the discovery-archaeologist adaptation to trigger.
+maxBonusRollChance = 0.72
+# Chance for the discovery-archaeologist adaptation to trigger.
+rareRewardChanceBase = 0.04
+# Chance for the discovery-archaeologist adaptation to trigger.
+rareRewardChanceFactor = 0.24
+# Chance for the discovery-archaeologist adaptation to trigger.
+maxRareRewardChance = 0.3
+# Cooldown between the discovery-archaeologist adaptation activations.
+cooldownMillisBase = 1600.0
+# Cooldown between the discovery-archaeologist adaptation activations.
+cooldownMillisFactor = 1250.0
+# XP gain tuning for the discovery-archaeologist adaptation.
+xpPerReward = 10.0
+# XP gain tuning for the discovery-archaeologist adaptation.
+rewardValueXpMultiplier = 0.45
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

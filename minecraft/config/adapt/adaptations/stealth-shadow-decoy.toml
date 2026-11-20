@@ -1,0 +1,135 @@
+# Adapt configuration - adaptation:stealth-shadow-decoy
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Stopping sneak spawns a short-lived shadow decoy that pulls your current aggro.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.72
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base cooldown after creating a decoy, in milliseconds.
+# Effect: Higher values mean longer time between activations.
+cooldownMillisBase = 18000.0
+# How much cooldown is reduced by leveling.
+# Effect: Higher values reduce cooldown more at higher levels.
+cooldownMillisFactor = 12000.0
+# Base active duration in ticks.
+# Effect: Higher values keep decoys active longer.
+decoyTicksBase = 60.0
+# Duration scaling from level, in ticks.
+# Effect: Higher values extend duration more per level.
+decoyTicksFactor = 80.0
+# Base aggro redirect radius.
+# Effect: Higher values pull aggro from farther away.
+decoyRadiusBase = 8.0
+# Aggro radius scaling from level.
+# Effect: Higher values expand pull range more per level.
+decoyRadiusFactor = 10.0
+# Visual eye height used for fake player facing.
+# Effect: Adjust if head rotation appears too high or too low.
+decoyEyeHeight = 1.62
+# Delay before removing the skinned fake player from tab list, in ticks.
+# Effect: The default two seconds lets clients resolve the owner's skin before the entry is hidden; negative values keep it listed.
+tabListRemoveDelayTicks = 40
+# Refresh duration for owner invisibility while a decoy is active.
+# Effect: Higher values keep invisibility active longer between refreshes.
+ownerInvisibilityRefreshTicks = 30
+# Amplifier for the temporary invisibility effect.
+# Effect: Most servers should leave this at 0.
+ownerInvisibilityAmplifier = 0
+# Smoke particles emitted around the invisible owner each tick while decoy is active.
+# Effect: Higher values create a stronger visible trail.
+ownerTrailParticles = 5
+# Horizontal spread for owner smoke trail.
+# Effect: Higher values make the trail wider.
+ownerTrailHorizontalSpread = 0.18
+# Vertical spread for owner smoke trail.
+# Effect: Higher values make the trail taller.
+ownerTrailVerticalSpread = 0.05
+# Particle speed for owner smoke trail.
+# Effect: Higher values make trail movement more turbulent.
+ownerTrailSpeed = 0.01
+# Milliseconds between owner trail particle bursts while decoy is active.
+# Effect: Lower values make the owner trail denser; higher values reduce particle cost.
+ownerTrailIntervalMillis = 75
+# How often owner equipment-hide packets are resent while invisible, in milliseconds.
+# Effect: Lower values keep visuals tighter for joining viewers, higher values reduce packet traffic.
+ownerEquipmentHideResendMillis = 250
+# Milliseconds between aggro redirect scans while a decoy is active.
+# Effect: Lower values pull mobs more aggressively; higher values reduce nearby-entity scan cost.
+aggroRedirectIntervalMillis = 150
+# Maximum mobs dispatched by each decoy aggro scan.
+# Effect: Caps scheduler pressure in dense farms while preserving frequent nearby redirects.
+maxAggroEntitiesPerScan = 32
+# Maximum players sent fake-decoy and equipment packets for one decoy.
+# Effect: Bounds packet fanout in very dense hubs; tracked viewers beyond the cap rely on the armor-stand fallback state.
+maxPacketViewers = 64
+# Maximum newly tracked viewers initialized during each decoy refresh.
+# Effect: Spreads join and tracking bursts across ticks instead of producing one large packet spike.
+maxViewerAddsPerRefresh = 8
+# Maximum viewer-facing rotations sent during each decoy refresh.
+# Effect: Bounds look packet work while keeping the fake player responsive to nearby viewers.
+maxViewerLookUpdatesPerRefresh = 16
+# Horizontal knockback applied when the decoy is hit.
+# Effect: Higher values make the decoy react more dramatically when struck.
+decoyHitKnockback = 0.28
+# Vertical lift applied when the decoy is hit.
+# Effect: Higher values make impacts pop the decoy upward more.
+decoyHitLift = 0.08
+# Swing ray distance used to detect decoy hits.
+# Effect: Higher values make swings connect from farther away.
+decoySwingDetectionReach = 4.5
+# Bitmask for visible skin layers on the fake player decoy.
+# Effect: 127 enables all standard skin layers (hat, jacket, sleeves, pants).
+decoySkinLayerMask = 127
+# Experience granted on each decoy spawn.
+# Effect: Higher values level the adaptation faster.
+xpOnDecoy = 18.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.gesture]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "RELEASE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["RELEASE", "DOUBLE", "ARMED_RELEASE"]
+

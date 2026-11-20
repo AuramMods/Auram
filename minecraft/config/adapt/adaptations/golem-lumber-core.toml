@@ -1,0 +1,125 @@
+# Adapt configuration - adaptation:golem-lumber-core
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Golems bound with a Lumber Core fell natural trees in a Lumber Node's area from the top down and collect the logs, then replant, sweep leaves and fell bigger trees as the core grows stronger.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["golem-node-weaving:1"]
+# Logs a Lumber golem fells per second once it reaches a tree, by Lumber Core level from level 1 upward. Swiftness runes and Copper Frame's Static Overdrive raise it. Values load between 0.05 and 64.
+# Effect: Higher values fell trees faster.
+logsPerSecondByLevel = [1.0, 1.5, 2.0, 3.0, 4.0]
+# Most logs a tree can have for a copper golem, or any body other than iron, to fell it, by Lumber Core level from level 1 upward. Values below 1 count as 1.
+# Effect: Higher values let copper golems fell bigger trees.
+copperTreeCapByLevel = [24, 32, 48, 64, 96]
+# Most logs a tree can have for an iron golem to fell it, by Lumber Core level from level 1 upward. Values below 1 count as 1.
+# Effect: Higher values let iron golems fell bigger trees.
+ironTreeCapByLevel = [64, 96, 128, 192, 256]
+# Lumber Core level that unlocks replanting from carried saplings, the home chest, or eligible matching drops around the felled tree. Empty stumps receive another attempt every five seconds for up to five minutes.
+# Effect: Lower values unlock replanting sooner.
+replantLevel = 2
+# Lumber Core level at which Lumber golems break the leaves a felled tree leaves behind once they start to decay, and collect their saplings, sticks and apples.
+# Effect: Lower values unlock Leaf Sweep sooner.
+leafSweepLevel = 3
+# Lumber Core level at which Lumber golems fell mega trees: trees with a trunk wider than one block, such as a 2x2 spruce, jungle, dark oak or pale oak, and trees whose trunks are joined by roots or branches.
+# Effect: Lower values unlock mega trees sooner.
+megaTreeLevel = 4
+# Lumber Core level at which Lumber golems fell huge crimson and warped fungi with their wart blocks and shroomlights, and replant fungus on nylium.
+# Effect: Lower values unlock nether fungi sooner.
+netherLevel = 5
+# Golemancy work XP paid for each log or stem a Lumber golem fells. Leaves, wart blocks, shroomlights and replanting pay none. Values below 0 count as 0.
+# Effect: Higher values pay more XP for felling.
+workXpPerLog = 0.6
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.leaf-sweep]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+# Settings for the golem-lumber-core adaptation Lumber core recipe section.
+[lumberCoreRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", "YBY", " Z "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:core/lumber"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[lumberCoreRecipe.keys]
+B = "golemancy:blank_core"
+X = "IRON_AXE"
+Y = "#logs"
+Z = "#saplings"
+
+# Settings for the golem-lumber-core adaptation Lumber node recipe section.
+[lumberNodeRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", " B ", "   "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:node/lumber"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[lumberNodeRecipe.keys]
+B = "golemancy:blank_node"
+X = "IRON_AXE"
+

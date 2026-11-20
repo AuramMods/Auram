@@ -1,0 +1,111 @@
+# Adapt configuration - skill:kinetics
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Controls Skill color for the kinetics skill.
+skillColor = "&6"
+# Cooldown between the kinetics skill activations.
+cooldownDelay = 1000
+# XP gain tuning for the kinetics skill.
+smashHitXp = 12.0
+# XP gain tuning for the kinetics skill.
+plainMaceHitXp = 3.0
+# XP gain tuning for the kinetics skill.
+spearJabXp = 6.0
+# XP gain tuning for the kinetics skill.
+spearChargeXp = 12.0
+# XP gain tuning for the kinetics skill.
+mountedChargeXp = 14.0
+# Distance/area limit used by the kinetics skill.
+sweetRangeMin = 3.0
+# Distance/area limit used by the kinetics skill.
+sweetRangeMax = 6.0
+# Controls Charge min speed for the kinetics skill.
+chargeMinSpeed = 0.18
+# Duration or timing used by the kinetics skill.
+lungeChargeWindowMs = 1200
+# XP gain tuning for the kinetics skill.
+breakFallXpPerBlock = 1.2
+# Maximum cap applied to the kinetics skill.
+breakFallCap = 25.0
+# XP gain tuning for the kinetics skill.
+bounceXp = 4.0
+# Controls Bounce chain bonus for the kinetics skill.
+bounceChainBonus = 2.0
+# Duration or timing used by the kinetics skill.
+bounceChainWindowMs = 4000
+# Maximum cap applied to the kinetics skill.
+bounceCap = 20.0
+# XP gain tuning for the kinetics skill.
+launchXp = 4.0
+# Controls Launch min delta y for the kinetics skill.
+launchMinDeltaY = 0.6
+# Minimum delay in milliseconds between bounce or launch rewards.
+# Effect: Higher values reduce repeated motion rewards from rapid mechanisms.
+motionRewardCooldownMs = 1000
+# Minimum horizontal travel in blocks between bounce or launch rewards.
+# Effect: Higher values require players to traverse farther before motion rewards rearm.
+motionRewardMinDistance = 1.5
+# XP gain tuning for the kinetics skill.
+kbDealtBaseXp = 3.0
+# XP gain tuning for the kinetics skill.
+kbTakenBaseXp = 1.5
+# Controls Kb min magnitude for the kinetics skill.
+kbMinMagnitude = 0.25
+# XP gain tuning for the kinetics skill.
+kbXpCap = 12.0
+# Cooldown between the kinetics skill activations.
+kbCooldownMs = 750
+# Scaling applied to the kinetics skill.
+selfKnockbackFactor = 0.35
+# XP gain tuning for the kinetics skill.
+levitationReceiveXp = 5.0
+# XP gain tuning for the kinetics skill.
+levitationApplyXp = 5.0
+# XP gain tuning for the kinetics skill.
+levitationPulseXp = 0.8
+# XP gain tuning for the kinetics skill.
+levitationXpCap = 15.0
+# Cooldown between the kinetics skill activations.
+levitationCooldownMs = 1500
+# XP gain tuning for the kinetics skill.
+anvilBaseXp = 20.0
+# Scaling applied to the kinetics skill.
+anvilFallFactor = 6.0
+# Scaling applied to the kinetics skill.
+anvilHealthFactor = 0.6
+# Scaling applied to the kinetics skill.
+anvilKillBonusMultiplier = 1.5
+# Maximum cap applied to the kinetics skill.
+anvilPerEventCap = 250.0
+# Cooldown between the kinetics skill activations.
+anvilCooldownMs = 4000
+# Cooldown between the kinetics skill activations.
+anvilLocationCooldownMs = 8000
+# Distance/area limit used by the kinetics skill.
+anvilShareRadius = 8.0
+# Scaling applied to the kinetics skill.
+anvilShareFactor = 0.35
+# Duration or timing used by the kinetics skill.
+anvilLedgerTtlMs = 120000
+# Controls Anvil advancement min fall for the kinetics skill.
+anvilAdvancementMinFall = 8.0
+# Controls Anvil drop reward for the kinetics skill.
+anvilDropReward = 500.0
+
+# Controls Player preferences for the kinetics skill.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

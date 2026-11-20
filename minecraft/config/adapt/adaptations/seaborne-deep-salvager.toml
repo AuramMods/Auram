@@ -1,0 +1,100 @@
+# Adapt configuration - adaptation:seaborne-deep-salvager
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Underwater containers privately glow within range and reward bonus treasure the first time you open them submerged.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 4
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base block range that underwater containers shimmer within.
+# Effect: Higher values reveal containers from farther away at low levels.
+detectionRangeBase = 4.0
+# Additional shimmer detection range gained across levels.
+# Effect: Higher values greatly extend detection range at higher levels.
+detectionRangeFactor = 5.0
+# Base number of bonus treasure rolls added when salvaging a container.
+# Effect: Higher values grant more bonus loot at low levels.
+bonusRollsBase = 1
+# Additional bonus treasure rolls gained across levels.
+# Effect: Higher values grant far more bonus loot at higher levels.
+bonusRollsFactor = 3.0
+# Bonus XP granted per bonus treasure item salvaged.
+# Effect: Higher values reward salvaging with more skill XP.
+salvageXp = 12.0
+# Cooldown between underwater container shimmer scans per player.
+# Effect: Higher values reduce scan frequency and scanning cost.
+shimmerScanCooldownMillis = 3000
+# Enables the underwater container shimmer locator scan.
+# Effect: Set to false to disable shimmer scanning entirely while keeping bonus loot.
+enableShimmer = true
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.color]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "AQUA"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["AQUA", "GOLD", "PURPLE"]
+
+[playerPreferences.container-types]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "CHESTS", "BARRELS"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.outlines]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

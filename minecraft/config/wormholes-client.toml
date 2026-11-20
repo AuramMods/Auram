@@ -1,0 +1,31 @@
+# Wormholes client settings. ClientView streams destination sections and renders them through the portal opening.
+# Read once when the game starts.
+
+# Portal renderer: native uses ClientView; block-packets uses the server's standard block and entity packets. Restart the game after changing it.
+renderer = "native"
+# Shared memory budget in MiB for received portal sections, plates and cached brick content. Updates that would exceed it are refused.
+max-plate-memory-mb = 256
+# Memory budget in MiB for destination worlds kept loaded behind portals on servers with seamless crossing. Closed destinations beyond it are released, oldest first.
+resident-level-memory-mb = 512
+# Batch block writes for plate-based ClientView. The dedicated portal renderer does not write projected blocks into local chunks.
+bulk-write = false
+# Edge hysteresis in blocks for plate-based ClientView. The dedicated renderer clips to the portal opening instead.
+hysteresis-blocks = 0.25
+# Maximum chunk sections changed per tick for plate-based ClientView. 0 applies all changes; dedicated rendering streams sections progressively.
+sections-per-tick = 0
+# Show detailed ClientView metrics on the F3 debug screen alongside the connection status.
+show-debug-overlay = false
+# Distance in blocks from a portal plane within which that portal's destination time and weather take over the sky. 0 keeps the local sky.
+atmosphere-dominance-blocks = 2.5
+# Enable client mirror views when the server allows them.
+client-mirror = true
+# Show nested mirrors and portals through their own destinations when the server streams them.
+client-recursion = true
+# Show your own reflection in mirrors drawn by this client.
+self-reflection = true
+# Mesh subdivisions per block along the edge of shaped portals, 1 to 16. Higher values give a smoother edge. Very large shaped portals use fewer.
+portal-shape-subdivisions = 8
+# Width in blocks of a band inside the edge of shaped portals tinted with the destination's fog color, 0 to 2. 0 disables the band.
+portal-edge-feather = 0.0
+# Seconds over which the camera tilt left over from crossing a twisted or upside-down portal pair eases back to level, 0 to 2. 0 levels the camera at once.
+camera-roll-ease-seconds = 0.35

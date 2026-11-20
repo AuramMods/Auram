@@ -1,0 +1,148 @@
+# Adapt configuration - adaptation:golem-gatherer-core
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Golems bound with a Gatherer Core pick up dropped items around their home or a Collection Node and deliver them, and store experience orbs as essence as the core grows stronger.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["golem-node-weaving:1"]
+# Blocks around a Gatherer's home within which it picks up dropped items when none of your Collection Nodes serve it, by Gatherer Core level from level 1 upward. A Tide rune adds its bonus. Values above 64 count as 64.
+# Effect: Higher values let Gatherers collect items farther from home.
+pickupRadiusByLevel = [4, 6, 8, 10, 12]
+# Experience points a Gatherer can store as essence, by Gatherer Core level from level 1 upward. 0 means it absorbs no experience orbs.
+# Effect: Higher values let Gatherers store more experience for you to withdraw.
+essenceCapByLevel = [0, 500, 1500, 1500, 1500]
+# Gatherer Core level at which Gatherers pull nearby items toward themselves with Magnet.
+# Effect: Lower values unlock Magnet sooner.
+magnetLevel = 4
+# Blocks around a Gatherer within which Magnet pulls items toward it, from 0 to 16.
+# Effect: Higher values pull items from farther away.
+magnetRadius = 3.0
+# Gatherer Core level at which Gatherers pick up items next to them at once.
+# Effect: Lower values unlock instant pickup sooner.
+instantPickupLevel = 5
+# Blocks around a Gatherer within which it picks up items and absorbs experience orbs at once, from 0 to 4.
+# Effect: Higher values let Gatherers grab items without walking to them from farther away.
+instantPickupRadius = 1.5
+# Gatherer Core level at which Gatherers carry more items.
+# Effect: Lower values unlock the carry bonus sooner.
+carryBonusLevel = 5
+# Fraction added to a Gatherer's carry capacity from carryBonusLevel. 0.5 is 50% more.
+# Effect: Higher values let Gatherers carry more items per trip.
+carryBonusFraction = 0.5
+# Seconds after an item drops during which Gatherers leave it alone when another player threw it, from 0 to 600. Items another player owns are never picked up.
+# Effect: Higher values give other players longer to pick up the items they threw.
+foreignItemSeconds = 30
+# Blocks around the spot where a player died within which Gatherers pick up nothing, from 0 to 64.
+# Effect: Higher values keep Gatherers farther from death drops.
+deathSiteRadius = 8.0
+# Seconds after a player dies during which Gatherers leave items and experience orbs near that spot alone, from 0 to 3600. 0 turns the protection off.
+# Effect: Higher values protect death drops longer.
+deathSiteSeconds = 300
+# Golemancy work XP a Gatherer earns you for each item stack it picks up.
+# Effect: Higher values make gathering level Golemancy faster.
+workXpPerStack = 0.5
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.absorb-orbs]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.magnet]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+# Settings for the golem-gatherer-core adaptation Gatherer core recipe section.
+[gathererCoreRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", "YBY", " Z "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:core/gatherer"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[gathererCoreRecipe.keys]
+B = "golemancy:blank_core"
+X = "BUNDLE"
+Y = "STRING"
+Z = "HOPPER"
+
+# Settings for the golem-gatherer-core adaptation Collection node recipe section.
+[collectionNodeRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", " B ", "   "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:node/collection"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[collectionNodeRecipe.keys]
+B = "golemancy:blank_node"
+X = "BUNDLE"
+

@@ -1,0 +1,76 @@
+# Adapt configuration - adaptation:sword-duelists-focus
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Bonus damage and damage reduction while exactly one hostile is engaged with you.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 5
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.68
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 5
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Controls Bonus damage base for the sword-duelists-focus adaptation.
+bonusDamageBase = 0.1
+# Scaling applied to the sword-duelists-focus adaptation.
+bonusDamageFactor = 0.35
+# Controls Reduction base for the sword-duelists-focus adaptation.
+reductionBase = 0.08
+# Scaling applied to the sword-duelists-focus adaptation.
+reductionFactor = 0.3
+# Maximum cap applied to the sword-duelists-focus adaptation.
+# Effect: Caps damage reduction at the requested maximum.
+maxReduction = 0.4
+# Radius in blocks used to detect engaged hostiles.
+# Effect: Higher values count hostiles from farther away when deciding if you are in a duel.
+engageRadius = 7.0
+# Ticks the current dueling threat glows after it attacks you.
+# Effect: Higher values keep the defensive focus notification visible longer.
+threatGlowTicks = 30
+# XP gain tuning for the sword-duelists-focus adaptation.
+xpPerFocusedHit = 4.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.threat-glow]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

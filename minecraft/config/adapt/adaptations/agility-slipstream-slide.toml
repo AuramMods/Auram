@@ -1,0 +1,104 @@
+# Adapt configuration - adaptation:agility-slipstream-slide
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Tap sneak while sprinting to enter a fixed prone pose and slide with reduced ground friction, keeping momentum under 1-block gaps.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.55
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 4
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base horizontal slide velocity in blocks per tick before level scaling.
+# Effect: Higher values launch a longer slide; lower values keep it short.
+slideForceBase = 0.5
+# Additional slide velocity in blocks per tick granted at max level.
+# Effect: Higher values widen the slide-distance gain from leveling.
+slideForceFactor = 0.45
+# Cooldown between slides in milliseconds at level 0 before scaling.
+# Effect: Higher values slow slide frequency across all levels.
+cooldownMillisBase = 4000.0
+# Cooldown reduction in milliseconds applied at max level.
+# Effect: Higher values make leveling shorten the slide cooldown more.
+cooldownMillisReduction = 2500.0
+# Minimum slide cooldown in milliseconds after all reductions.
+# Effect: Higher values keep a hard floor under slide spam.
+cooldownMillisFloor = 1300
+# Base slide prone-pose duration in ticks before level scaling.
+# Effect: Higher values keep the crawl pose longer per slide.
+slideTicksBase = 14.0
+# Additional slide prone-pose duration in ticks granted at max level.
+# Effect: Higher values extend the low-pose window when leveled.
+slideTicksFactor = 10.0
+# Fraction of ground friction removed while the slide is active.
+# Effect: Higher values preserve more horizontal momentum during the prone slide.
+slideFrictionReduction = 0.9
+# Saturation/hunger cost paid per slide.
+# Effect: Higher values make sliding drain stamina faster.
+hungerCost = 1.8
+# Slowness amplifier applied to mobs slid through at max level.
+# Effect: Higher values slow struck mobs harder; only active at max level.
+slowAmplifier = 1
+# Duration in ticks of the max-level slow applied to mobs slid through.
+# Effect: Higher values keep slid mobs slowed longer.
+slowDurationTicks = 40
+# Experience granted per successful slide.
+# Effect: Higher values reward sliding with more skill xp.
+xpPerSlide = 3.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.control]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "TAP"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["TAP", "HOLD"]
+
+[playerPreferences.duration]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "FULL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FULL", "HALF", "QUARTER"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,166 @@
+# Adapt configuration - adaptation:ranged-trajectory-sight
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Preview ranged projectile flight while sneaking or drawing your shot.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.75
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Controls Segments base for the ranged-trajectory-sight adaptation.
+segmentsBase = 18.0
+# Scaling applied to the ranged-trajectory-sight adaptation.
+segmentsFactor = 26.0
+# Controls Velocity base for the ranged-trajectory-sight adaptation.
+velocityBase = 1.0
+# Scaling applied to the ranged-trajectory-sight adaptation.
+velocityFactor = 0.18
+# Controls Gravity step for the ranged-trajectory-sight adaptation.
+gravityStep = 0.05
+# Scaling applied to the ranged-trajectory-sight adaptation.
+dragFactor = 0.99
+# Drag factor used for lighter thrown projectiles (snowballs, eggs, pearls).
+# Effect: Higher values keep thrown arcs flatter and longer; lower values make them lose speed faster.
+lightProjectileDragFactor = 0.99
+# Drag factor used for heavier thrown projectiles (potions, experience bottles).
+# Effect: Higher values keep heavier throws moving faster; lower values shorten their travel.
+heavyProjectileDragFactor = 0.99
+# Gravity step used for lighter thrown projectiles (snowballs, eggs, pearls).
+# Effect: Higher values produce steeper arcs for light projectiles.
+lightProjectileGravityStep = 0.03
+# Gravity step used for heavier thrown projectiles (potions, experience bottles).
+# Effect: Higher values cause potions and bottles to drop faster.
+heavyProjectileGravityStep = 0.05
+# Controls Crossbow velocity for the ranged-trajectory-sight adaptation.
+crossbowVelocity = 3.15
+# Launch velocity used for trident previews while sneaking.
+# Effect: Higher values extend trident prediction distance.
+tridentVelocity = 2.5
+# Launch velocity used for light thrown projectile previews.
+# Effect: Higher values extend snowball, egg, and pearl prediction distance.
+thrownProjectileVelocity = 1.5
+# Launch velocity used for potion and experience bottle previews.
+# Effect: Higher values extend heavy throw prediction distance.
+thrownPotionVelocity = 0.5
+# Duration or timing used by the ranged-trajectory-sight adaptation.
+sneakPreviewChargeTicks = 16.0
+# Distance in blocks between trajectory preview dots.
+# Effect: Lower values draw a denser, more continuous line at higher particle cost.
+previewPointSpacing = 0.7
+# Radius of the ring marker drawn where the shot would land.
+# Effect: Higher values draw a larger, more visible impact ring.
+impactRingRadius = 0.35
+# Minimum distance from the player's eye before preview particles are shown.
+# Effect: Higher values keep particles out of your sightline and reduce visual obstruction.
+minPreviewDistanceFromEye = 1.6
+# Offset forward from the eye where trajectory simulation begins.
+# Effect: Higher values start the preview further from your face.
+previewStartOffset = 0.55
+# Highlights the predicted hit target entity with per-player glow.
+# Effect: Enable to glow whichever entity the preview would hit first.
+glowPredictedTarget = true
+# Minimum milliseconds between preview renders for a player when aim and context have not changed.
+# Effect: Lower values make previews smoother but increase CPU and ray-trace load.
+previewRenderIntervalMillis = 75
+# Milliseconds between owner-local active aiming refreshes, clamped between 75 and 100.
+# Effect: Lower values request smoother previews; the server scheduler resolves this range to two ticks on standard 20 TPS timing.
+activeSessionIntervalMillis = 100
+# Yaw delta in degrees required to force a preview recompute before the normal render interval.
+# Effect: Lower values react to small camera turns; higher values reduce recompute frequency.
+previewYawDeltaDegrees = 1.2
+# Movement distance squared required to force a preview recompute before the normal render interval.
+# Effect: Lower values recompute more while strafing; higher values reduce recomputes while moving.
+previewPositionDeltaSquared = 0.0125
+# Lowest number of simulation segments used when rendering a trajectory.
+# Effect: Higher values preserve long previews under load; lower values cut work more aggressively.
+minimumRenderedSegments = 8
+# Hard cap on simulation segments used for rendering.
+# Effect: Lower values reduce ray-trace workload; higher values produce longer and more precise previews.
+maxRenderedSegments = 36
+# Ticker load percentage at which trajectory segments are scaled down.
+# Effect: Lower values engage load-shedding sooner; higher values preserve preview fidelity longer.
+previewHighLoadPercent = 42.0
+# Segment scale applied once high-load shedding is active.
+# Effect: Lower values reduce trajectory compute cost more aggressively during load spikes.
+previewHighLoadSegmentScale = 0.7
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.impact-marker]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.preview-trigger]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "BOTH"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["BOTH", "DRAWING", "SNEAKING"]
+
+[playerPreferences.target-glow]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.trajectory-trail]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,70 @@
+# Adapt configuration - adaptation:unarmed-second-wind
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Bare-hand kills restore hunger and grant a short regeneration burst.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base hunger points restored per bare-hand kill.
+# Effect: Higher values restore more food per kill.
+foodRestoreBase = 1.0
+# Additional hunger points restored at max level.
+# Effect: Higher values restore more food per kill as levels increase.
+foodRestoreFactor = 4.0
+# Saturation restored per bare-hand kill.
+# Effect: Higher values keep the hunger bar full for longer.
+saturationRestore = 1.5
+# Base regeneration duration in ticks per bare-hand kill.
+# Effect: Higher values keep the regen burst active longer.
+regenDurationTicksBase = 40.0
+# Additional regeneration duration ticks granted at max level.
+# Effect: Higher values keep the regen burst active longer as levels increase.
+regenDurationTicksFactor = 80.0
+# Regeneration amplifier applied by the burst.
+# Effect: Higher values heal faster during the burst.
+regenAmplifier = 0
+# Cooldown in milliseconds between second wind triggers.
+# Effect: Higher values prevent rapid kill-chains from spamming the heal.
+cooldownMillis = 3000
+# XP granted per second wind trigger.
+# Effect: Higher values speed up unarmed skill progression from kills.
+xpPerSecondWind = 18.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

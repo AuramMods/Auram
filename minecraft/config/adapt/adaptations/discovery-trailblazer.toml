@@ -1,0 +1,71 @@
+# Adapt configuration - adaptation:discovery-trailblazer
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Your first visit to each biome or structure type grants a skill-XP burst and brief speed.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 2
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.3
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 3
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# XP gain tuning for the discovery-trailblazer adaptation.
+firstVisitXpBase = 40.0
+# XP gain tuning for the discovery-trailblazer adaptation.
+firstVisitXpFactor = 160.0
+# Multiplier applied to the reward when the first visit is a structure type instead of a biome.
+# Effect: Higher values make structure discoveries pay more than biome discoveries.
+structureXpMultiplier = 2.5
+# Duration or timing used by the discovery-trailblazer adaptation.
+speedDurationTicksBase = 80.0
+# Scaling applied to the discovery-trailblazer adaptation.
+speedDurationTicksFactor = 120.0
+# Speed tier granted on a fresh discovery (0 grants +20% movement speed, each tier adds another +20%).
+# Effect: Higher values grant a stronger speed burst.
+speedAmplifier = 1
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.speed-burst]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

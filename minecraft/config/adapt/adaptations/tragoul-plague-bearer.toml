@@ -1,0 +1,98 @@
+# Adapt configuration - adaptation:tragoul-plague-bearer
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Mobs that die poisoned or withered by you spread an amplified affliction to nearby damageable mobs.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.72
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Exclude passive and neutral mobs from spreading poison and wither.
+# Effect: When enabled, protected mobs cannot receive secondary infections. Direct attacks and directly applied effects are unchanged.
+ignorePassiveMobs = false
+# Spread radius at adaptation level one.
+# Effect: Higher values infect eligible mobs further from the corpse at low levels.
+spreadRadiusStart = 8.0
+# Spread radius at maximum adaptation level.
+# Effect: Higher values increase the maximum plague reach up to the runtime ceiling.
+spreadRadiusEnd = 20.0
+# Spread effect duration in ticks before level scaling.
+# Effect: Higher values keep infected mobs afflicted longer.
+spreadDurationTicksBase = 80.0
+# Additional spread effect duration ticks granted at max level.
+# Effect: Higher values increase level-scaled duration growth.
+spreadDurationTicksFactor = 120.0
+# Maximum plague generations a single affliction can chain through.
+# Effect: Caps chain length to prevent infinite plague cascades.
+maxGenerations = 3
+# Maximum eligible mobs infected per death.
+# Effect: Caps per-death work to protect server performance.
+maxSpreadTargets = 6
+# Potion amplifier levels added when the affliction spreads.
+# Effect: Higher values make propagated poison and wither effects stronger.
+amplifierBonus = 1
+# Window in milliseconds during which an affliction mark is considered fresh at death.
+# Effect: Higher values let older poisons still spread on death.
+afflictionFreshnessMillis = 15000
+# XP granted per mob infected by the spread.
+# Effect: Higher values accelerate skill progression from this adaptation.
+xpPerInfection = 6.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.ignore-passive]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "UNDEAD", "ARTHROPODS", "NON_PLAYERS"]
+

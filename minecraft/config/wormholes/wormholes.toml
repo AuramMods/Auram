@@ -1,0 +1,628 @@
+# Wormholes settings. Changes hot-reload.
+
+# Default language for players without an override. Missing official translations download into plugins/Wormholes/languages/<locale>.toml when selected. Blank or invalid locale names use en_US.
+language = "en_US"
+# Send anonymous usage metrics to bStats. Changes apply automatically while the server is running.
+metrics = true
+# Comma-separated official or custom fallback locales in priority order. Missing, blank, or invalid translations then use languages/en_US.toml and finally built-in English. English selection ignores this list.
+language-fallbacks = ""
+# Configuration format.
+schema = 3
+# Visual profile: auto, performance, balanced, or cinematic.
+quality = "auto"
+# Checks GitHub releases and includes Wormholes in the shared Volmit update notice. Does not download or install updates.
+update-notifications = true
+
+# Gameplay settings. Changes hot-reload.
+[main]
+# Compatibility override for portal particles. Prefer the top-level quality profile.
+enable-particles = true
+# Replace vanilla Nether and End portals with auto-linking Wormholes portals.
+replace-nether-and-end-portals = true
+# Let players and entities travel back up through the End arrival portal to the Overworld End portal it was converted from, and show the Overworld through it. False keeps End travel one way: the arrival portal only receives and the vanilla exit fountain is the way back. The End exit fountain stays vanilla either way.
+two-way-end-portals = true
+# Enable the complete Dimensional Doors survival feature set.
+dimensional-doors-enabled = true
+# Edge length in blocks of a newly created pocket room, walls included, between 8 and 128. Existing pockets keep the size they were built at; change those with /wormholes pocket resize.
+pocket-room-size = 16
+# Block a newly created pocket room's walls, floor, and ceiling are built from. Must be a solid, non-falling block. Existing pockets keep their own material.
+pocket-shell-material = "SMOOTH_STONE"
+# Door a newly created pocket room's exit is built from. Must be a hand-operable door, so iron doors are rejected. Existing pockets keep their own door.
+pocket-return-door-material = "CRIMSON_DOOR"
+portal-collapse-speed = 0.91
+# Enable console debug with one-second projection, network, peer, handoff, and failure summaries plus access-denial details. Use /wormholes debug toggle for a temporary session.
+verbose-logging = false
+debug-rendering = false
+teleport-cooldown-millis = 1000
+# Scales rejected-traversal push velocity. 0 removes knockback, 1 preserves normal strength, and 4 is the maximum.
+portal-pushback-multiplier = 1.0
+# Scales portal, traversal, and dimensional-door sound volume. 0 mutes these sounds, 1 preserves normal volume, and 4 is the maximum.
+portal-sound-volume-multiplier = 1.0
+# Allow other plugins to price or veto a portal traversal through the Wormholes traversal API. When false, no cost provider is called and neither traversal event fires.
+traversal-api-enabled = true
+# What to do when a third-party traversal cost provider throws or misbehaves: allow (treat it as a refusal to charge and let this traversal through free) or deny (reject this traversal attempt).
+traversal-api-provider-failure-policy = "allow"
+# Failures before a misbehaving traversal cost provider is disabled for this session. 0 disables quarantine.
+traversal-api-provider-fault-limit = 5
+# Warn when a single traversal cost provider call takes at least this many milliseconds. 0 disables the warning.
+traversal-api-slow-provider-millis = 5
+# Prepare destination chunk packets during approach and send them after a successful local teleport, continuing across ticks within the configured limits.
+chunk-pre-send-enabled = true
+# Destination chunk radius prepared and sent for local arrivals, clamped to the client's view distance.
+chunk-pre-send-radius-chunks = 3
+# Maximum destination chunks processed per arrival delivery tick. Remaining chunks continue on later ticks.
+chunk-pre-send-max-chunks = 32
+# Microseconds available per delivery tick and per global packet preparation window before work continues on a later tick.
+chunk-pre-send-budget-micros = 2000
+arrival-prewarm-on-interest = true
+arrival-warm-radius-chunks = 4
+arrival-warm-max-radius-chunks = 10
+arrival-warm-hold-millis = 5000
+arrival-warm-throttle-millis = 1000
+arrival-transition-mask = true
+arrival-transition-mask-ticks = 25
+# Raise the server's per-player chunk streaming limits at startup and when the tuner settings change so destination geometry can reach the client before arrival. Only ever raises; a higher server value is left alone. Disabling the tuner stops further changes without restoring earlier rates.
+chunk-send-rate-tuner = true
+# Target per-player chunk send rate in chunks per second. Paper's compiled default is 75. Zero or negative means unlimited, and anything above 10000 is treated as unlimited.
+chunk-send-rate-target = 1000.0
+# Target per-player chunk load rate in chunks per second. Paper's compiled default is 100. Zero or negative means unlimited, and anything above 10000 is treated as unlimited.
+chunk-load-rate-target = 1000.0
+# Fabric, Forge and NeoForge singleplayer only: keep portals, atlas discoveries, Nexus networks, rule templates, backups, and network identity in config/wormholes in the game folder, shared by every singleplayer world, instead of in each world's save folder. Dimensional doors and pocket rooms always stay with their world. Takes effect the next time a world is opened.
+shared-singleplayer-store = false
+
+# Cross-server networking. Portal codes discover peers automatically.
+[network]
+# Enable cross-server portals.
+enabled = false
+listen-enabled = true
+# Optional raw-stream port. Without forwarding, Wormholes uses the game-port sideband.
+listen-port = 8901
+trust-on-first-use = true
+entity-transfer-deny-types = ""
+advertise-host-override = ""
+# Public Minecraft host for transfers and game-port sideband; blank uses the advertised host.
+game-host-override = ""
+# Public Minecraft port, including NAT mappings; zero uses server.properties server-port.
+game-port-override = 0
+# Private Minecraft host; blank uses a concrete server bind address, or detects LAN for a wildcard bind.
+private-game-host-override = ""
+# Private Minecraft port; zero uses server.properties server-port.
+private-game-port-override = 0
+server-name = ""
+transfer-mode = "auto"
+# Destination server names routed through the proxy when transfer-mode is auto.
+proxy-servers = []
+handoff-timeout-ms = 5000
+auto-accept-transfers = true
+# Wormholes version policy for peer links: "compatible" links any protocol-21 peer and reports reduced capability,
+# "exact" requires identical Wormholes versions.
+plugin-version-policy = "compatible"
+# Persist the remote portal directory to mesh/directory.json so linked portals show as stale after a restart instead of vanishing.
+directory-cache-enabled = true
+
+[network.transport]
+compression-enabled = true
+compression-level = 3
+compression-dict-train-bytes = 10485760
+compression-dict-target-size = 65536
+compression-retrain-interval-sec = 600
+uds-enabled = true
+uds-dir = ""
+
+[network.view]
+entity-delta-enabled = true
+entity-rate-near-range = 16.0
+entity-rate-mid-range = 64.0
+entity-rate-far-range = 128.0
+entity-rate-near-hz = 20.0
+entity-rate-mid-hz = 10.0
+entity-rate-far-hz = 4.0
+entity-rate-very-far-hz = 1.0
+
+[network.stats]
+enabled = true
+interval-sec = 10
+path-override = ""
+
+[network.replication]
+hash-probe-interval-sec = 30
+hash-probe-chunks-per-tick = 16
+diff-window-size = 32
+resync-timeout-sec = 5
+max-queued-diffs-per-peer = 4096
+capture-snapshot-interval-ticks = 100
+capture-max-queued-diffs-per-chunk = 256
+capture-light-enabled = true
+# Capture block-entity appearance (signs, banners, heads, pots, bells, spawners) in cross-server replication streams.
+# Container contents never cross; the projection block-entity layer consumes this payload.
+capture-block-entity-enabled = true
+
+# Signed peer federation: linked servers introduce each other and the whole network converges from one pasted code.
+[network.mesh]
+# Accept and flood signed peer announcements.
+enabled = true
+# Who may introduce new peers: "trusted" (any trusted peer), "allowlist" (introducer-allowlist only), "manual" (introductions are ignored).
+introducers = "trusted"
+# Peer names allowed to introduce when introducers = "allowlist".
+introducer-allowlist = []
+# Trust introduced peers on their first handshake instead of holding them in quarantine for /wh network accept.
+auto-accept-introductions = false
+announce-interval-sec = 60
+announce-rate-limit-per-source-per-min = 30
+tombstone-ttl-days = 30
+
+# Load beacons and gateway destination policy: candidate selection, failover, queueing.
+[network.policy]
+beacon-interval-sec = 5
+beacon-stale-sec = 20
+# Hold travelers at a gateway while every policy candidate is full instead of bouncing them.
+queue-enabled = true
+# Longest hold before a queued traveler is released (1-29 s; the in-flight limit is 30 s).
+queue-max-wait-sec = 25
+
+# Wormholes proxy module (Velocity or BungeeCord): backends enroll over a plugin channel instead of pasting codes.
+[network.proxy]
+# Use the proxy module channel when the Wormholes jar is installed on the Velocity or BungeeCord proxy.
+enabled = false
+channel = "wormholes:proxy"
+# Shared secret for the enrollment channel, copied from secret.txt in the proxy's Wormholes data folder.
+# Clients can send on this channel too, so frames are signed with it; the module stays off while it is blank.
+secret = ""
+
+# Advanced projection compatibility overrides.
+[projection]
+range = 48.0
+refresh-interval-ticks = 1
+near-plane-padding = 2.0
+# How far (in blocks) the projected image extends outward past the portal aperture edges.
+# Raise this if real blocks bleed through at the rim of the projection; each +0.25 widens the rendered window by a quarter block on every side.
+aperture-padding-blocks = 0.75
+frustum-culling-ratio = 0.2
+# Angular guard band around Venticular occlusion silhouettes, in degrees.
+# Higher values reveal hidden blocks earlier while the observer moves, reducing edge bleed at the cost of sending more geometry.
+# Set to 0 for exact geometric culling without movement compensation.
+occlusion-reveal-margin-degrees = 1.0
+depth-blocks = 64
+recursive-portal-depth = 3
+stable-cell-resample-interval-ticks = 4
+client-view-distance-cap = true
+foveated-unrendering = false
+observer-interest-dot = -0.2
+side-grace-dot = 0.12
+max-projectors-per-tick = 24
+max-portals-per-observer-tick = 4
+# Soft projection frame budget in microseconds per execution thread and manager tick, including final claim flushing.
+# Recent observer costs predict whether more block work fits; large geometry scans yield at the deadline while committed views and entity updates remain available.
+# Pending scans continue between scheduled refresh ticks without starting unrelated refreshes early.
+# Finalization and required cleanup can exceed the budget. Set to 0 for unlimited frame time.
+max-frame-micros = 30000
+# Maximum player-owner reconciliation frames admitted per tick across normal projection and surface skins.
+# Existing observer state has priority while a rotating share remains available for discovery.
+max-new-observer-scans-per-tick = 64
+interest-grace-ticks = 5
+# Number of complete startup projection sends after a view is created.
+# One pass establishes the client view; raise this only to diagnose a packet intermediary that loses initial block changes.
+initial-resend-passes = 1
+# Hard ceiling on how many candidate block positions a single portal may scan in one pass.
+# Budget fitting removes lateral padding first so normal close-range views keep their configured depth;
+# depth is shortened only when the aperture-aligned scan still exceeds this ceiling.
+# An aperture that cannot fit even at zero depth stays empty instead of exceeding the ceiling.
+# Set to 0 to disable the ceiling (not recommended: the through-portal scan can then cost millions of cells).
+max-projected-cells = 250000
+# Build the portal-scoped projection stage (destination sampling, block-state transform, buried-cell culling) once per portal and share it between every observer.
+# Off falls back to per-observer sampling for every cell.
+shared-plate = true
+# Total memory the shared view plates may hold; the oldest plate is evicted first.
+plate-max-bytes = 33554432
+# Worker threads that build shared view plates from region snapshots and remote views.
+plate-workers = 2
+# Keep already-sent projected cells in place when they leave the projection cone behind a local wall or turn hidden behind nearer destination blocks, so nobody can see them.
+# Held cells cost no packets; they revert to the real blocks when the portal closes, the local wall changes, the destination changes, another portal's projection covers the cells in front of them, or the observer crosses the portal plane.
+hold-invisible-claims = true
+# Upper bound on held cells per portal and observer; the oldest held cells revert first once it is exceeded.
+max-held-cells-per-portal = 65536
+# Horizontal camera field of view, in degrees, that gives a portal full refresh priority when the per-observer portal budget is scarce; the vertical extent follows a 16:9 screen.
+# Portals just outside the view and portals already scanned from the observer's current position refresh at reduced priority; portals behind the camera keep what they already show and refresh only when starved.
+gaze-fov-degrees = 110.0
+# Ticks of head-turn prediction: a portal about to enter the camera cone at the current turn speed is treated as already in view.
+gaze-lookahead-ticks = 3
+# A portal that has not refreshed for this many ticks is refreshed next regardless of where the observer looks.
+gaze-max-starve-ticks = 20
+# Finish a projection pass (occlusion filtering and commit) in the same tick its geometry scan completes when frame budget remains.
+finish-in-slot = true
+# Keep a world-level cache of 16x16x16 block sections that every projector reads instead of querying the world block by block.
+# Buried-cell culling is computed once per cached section, and unloaded chunks load asynchronously instead of on the server thread.
+# Off reads the live world for every sample. Folia servers always use region snapshots instead.
+section-cache = true
+# Memory the section cache may hold, in megabytes; the least recently read sections are evicted first.
+section-cache-max-mb = 64
+# Chunks the section cache may capture per server tick.
+# Sections that do not fit the budget are read from the live world until a later tick captures them.
+section-cache-chunks-per-tick = 16
+# Ticks before a cached section is captured again on its next read.
+# Tracked block changes refresh sections immediately; this interval bounds how long changes that raise no block event stay stale.
+section-cache-ttl-ticks = 200
+# Build shared view plates for random-teleport portals, keyed by the destination route.
+# Off samples random-teleport destinations per observer for every cell.
+rtp-plates = true
+# Most blocks a shared view plate extends past the aperture sideways, capped by each portal's own lateral pad.
+# Cells outside the plate are sampled per observer.
+plate-lateral-clamp-blocks = 40
+# Destination chunks copied per tick while a shared view plate is captured for building off the main thread.
+plate-capture-chunks-per-tick = 8
+# Destination chunks copied per tick for plates a ClientView client is waiting on to show a portal for the first time.
+# Drawn from its own budget, so it never slows the captures plate-capture-chunks-per-tick paces.
+plate-urgent-capture-chunks-per-tick = 32
+# Server tick time, in milliseconds, that projections try to leave free. 0 turns the governor off and max-frame-micros alone limits projection work each tick.
+# When on (Paper and Purpur only), the per-tick projection budget shrinks while the previous tick left less free time than this and grows back while it left more.
+# A chunk load that a projection pass triggers cannot be interrupted, so a single tick can still exceed the budget.
+tick-headroom-target-millis = 0
+# Smallest per-tick projection budget, in microseconds, the tick headroom governor may shrink to. Never above max-frame-micros.
+tick-headroom-min-frame-micros = 5000
+
+# Dimensional Door crafting. Changes hot-reload and are re-sent to every online
+# player's recipe book.
+# On Paper and Spigot the shape and ingredients below define each recipe; a recipe
+# that fails to parse is logged and falls back to its shipped shape.
+# On Forge, NeoForge and Fabric the recipes are data files under
+# data/wormholes/recipes (1.20.1) or data/wormholes/recipe (26.x) that a datapack can
+# replace or remove; there only the enabled switches below apply.
+[recipes]
+
+[recipes.pair-kit]
+# Whether this product can be crafted at all. False removes its recipe from the server.
+enabled = true
+# Paper and Spigot only. Crafting grid, rows separated by |, a space for an empty slot. At most 3 rows of 3.
+shape = "EDE|ORO| D "
+# Paper and Spigot only. Slot symbols, as symbol=material pairs separated by commas. A material may be a block name, several names separated by /, or one of #doors, #trapdoors, #any-trapdoors, #wormhole-rune.
+ingredients = "E=ENDER_EYE, D=#doors, O=OBSIDIAN, R=#wormhole-rune"
+
+[recipes.personal-door]
+# Whether this product can be crafted at all. False removes its recipe from the server.
+enabled = true
+# Paper and Spigot only. Crafting grid, rows separated by |, a space for an empty slot. At most 3 rows of 3.
+shape = " R |CDE"
+# Paper and Spigot only. Slot symbols, as symbol=material pairs separated by commas. A material may be a block name, several names separated by /, or one of #doors, #trapdoors, #any-trapdoors, #wormhole-rune.
+ingredients = "R=#wormhole-rune, C=RECOVERY_COMPASS, D=#doors, E=ENDER_CHEST"
+
+[recipes.public-door]
+# Whether this product can be crafted at all. False removes its recipe from the server.
+enabled = true
+# Paper and Spigot only. Crafting grid, rows separated by |, a space for an empty slot. At most 3 rows of 3.
+shape = "RDR| E | L "
+# Paper and Spigot only. Slot symbols, as symbol=material pairs separated by commas. A material may be a block name, several names separated by /, or one of #doors, #trapdoors, #any-trapdoors, #wormhole-rune.
+ingredients = "R=#wormhole-rune, D=#doors, E=ENDER_CHEST, L=LODESTONE"
+
+[recipes.trapdoor-pair-kit]
+# Whether this product can be crafted at all. False removes its recipe from the server.
+enabled = true
+# Paper and Spigot only. Crafting grid, rows separated by |, a space for an empty slot. At most 3 rows of 3.
+shape = "EDE|ORO| D "
+# Paper and Spigot only. Slot symbols, as symbol=material pairs separated by commas. A material may be a block name, several names separated by /, or one of #doors, #trapdoors, #any-trapdoors, #wormhole-rune.
+ingredients = "E=ENDER_EYE, D=#trapdoors, O=OBSIDIAN, R=#wormhole-rune"
+
+[recipes.personal-trapdoor]
+# Whether this product can be crafted at all. False removes its recipe from the server.
+enabled = true
+# Paper and Spigot only. Crafting grid, rows separated by |, a space for an empty slot. At most 3 rows of 3.
+shape = " R |CDE"
+# Paper and Spigot only. Slot symbols, as symbol=material pairs separated by commas. A material may be a block name, several names separated by /, or one of #doors, #trapdoors, #any-trapdoors, #wormhole-rune.
+ingredients = "R=#wormhole-rune, C=RECOVERY_COMPASS, D=#trapdoors, E=ENDER_CHEST"
+
+[recipes.public-trapdoor]
+# Whether this product can be crafted at all. False removes its recipe from the server.
+enabled = true
+# Paper and Spigot only. Crafting grid, rows separated by |, a space for an empty slot. At most 3 rows of 3.
+shape = "RDR| E | L "
+# Paper and Spigot only. Slot symbols, as symbol=material pairs separated by commas. A material may be a block name, several names separated by /, or one of #doors, #trapdoors, #any-trapdoors, #wormhole-rune.
+ingredients = "R=#wormhole-rune, D=#trapdoors, E=ENDER_CHEST, L=LODESTONE"
+
+[recipes.door-skin]
+# Whether this reskin recipe exists. False removes it from the server.
+enabled = true
+
+[recipes.trapdoor-skin]
+# Whether this reskin recipe exists. False removes it from the server.
+enabled = true
+
+# Advanced visual compatibility overrides.
+[render]
+# Send destination-world lighting with projected blocks.
+lighting-fidelity = false
+# Show destination-side entities inside portal projections.
+entity-spoofing = true
+lighting-refresh-interval-ticks = 4
+lighting-max-sections-per-pass = 2
+adaptive-lighting = true
+entity-update-interval-ticks = 1
+entity-spoof-range = 48.0
+entity-candidate-cache-ticks = 3
+max-spoofed-entities = 24
+capture-zone-radius = 8.0
+# Project sign text, banner patterns, heads, decorated pots, bells and spawner mob types through the aperture.
+block-entities = true
+# Block-entity data packets sent per observer per tick.
+block-entity-budget-per-tick = 64
+# Block-entity types (minecraft namespace implied) whose appearance is projected.
+block-entity-types = ["sign", "hanging_sign", "banner", "skull", "decorated_pot", "bell", "spawner"]
+# Send container contents with projected block entities. Contents never cross while this is false.
+block-entity-containers = false
+# Ticks between RTP readiness rim particle refreshes while the rim colour is unchanged. Colour and phase changes refresh at once.
+rtp-rim-interval-ticks = 5
+# Smallest per-axis change in a projected entity's velocity that sends a new velocity packet. Stopping always sends.
+entity-velocity-epsilon = 0.005
+# Ticks between ambient spark bursts on portals using the sparks style. Each burst carries the sparks of every skipped tick, so the average density stays the same.
+# 1 sends a burst every ambient step (every tick on Bukkit, every 5 ticks on Fabric, Forge and NeoForge); higher values send fewer particle packets.
+ambient-particle-interval-ticks = 1
+
+# Dimensional Door presentation. Changes hot-reload.
+[doors]
+# Project the destination through active Dimensional Door and trapdoor apertures for standard projection. Native ClientView always shows active apertures with a resolved destination.
+projection-enabled = false
+# Most door apertures projected at once across the server. Frame portals are never starved by doors.
+projection-max-active = 64
+# How close a player has to be for a door aperture to start projecting, in blocks.
+projection-range = 24
+# How far the view reaches past a door aperture, in blocks.
+projection-depth-blocks = 24
+# Attendance rotation length for door apertures, in passes. Higher spreads the presence checks over more ticks.
+projection-attendance-slots = 20
+# Hide the animated veil and opaque backing pane during standard door projection. Native ClientView always hides both surfaces while projecting.
+projection-hide-backing = true
+
+# Pocket dimension templates, rosters, and instancing. Changes hot-reload.
+[pockets]
+# Folder under the plugin data directory holding vanilla structure files (.nbt) usable as pocket templates.
+templates-dir = "pockets/templates"
+# Template pasted into a pocket the first time it is provisioned. Empty leaves the plain cube.
+default-template = ""
+# Most rooms one pocket may grow to, laid out on a 3x3 grid inside its own slot.
+rooms-per-pocket-max = 9
+# When an instanced pocket is wiped and re-pasted: on-empty, timer, or manual.
+instance-reset = "on-empty"
+# Seconds an empty instance survives before the timer policy resets it.
+instance-reset-seconds = 600
+# Live instances kept before the oldest empty one is evicted.
+instance-max-live = 64
+# Whether new pockets let mobs spawn.
+rules-default-mobs = false
+# Whether new pockets allow player-versus-player damage.
+rules-default-pvp = false
+# Whether new pockets keep inventory and levels on death.
+rules-default-keep-inventory = true
+# Fixed client time inside new pockets, in ticks. -1 follows the pocket world.
+rules-default-fixed-time = -1
+# Who may build in new pockets: everyone, builders, or owner.
+rules-default-build = "builders"
+
+# Traversal rules engine defaults. Changes hot-reload.
+[rules]
+# Horizontal distance in blocks a traveler may drift during a warmup before it cancels.
+warmup-cancel-move-blocks = 0.5
+# Cancel a warmup when the traveler takes damage.
+warmup-cancel-on-damage = true
+# Upper clamp for a portal's warmup in seconds.
+warmup-max-seconds = 30
+# Upper clamp for a portal's cooldown in seconds.
+cooldown-max-seconds = 3600
+# Show the route card (name, destination, price, cooldown, refusal reason) on the action bar near portals.
+route-card-enabled = true
+# Distance in blocks from the aperture plane at which the route card appears.
+route-card-range = 6.0
+# Route card refresh cadence in ticks per player.
+route-card-interval-ticks = 10
+# Cache lifetime in milliseconds for expensive conditions such as PlaceholderAPI and advancements.
+expensive-condition-cache-millis = 1000
+# Allow rule effects that run a console command. The rule author must hold wormholes.admin.
+command-effects-console-allowed = true
+# Seconds between charge pool regeneration ticks.
+charges-regen-interval-seconds = 60
+
+# Portal access lists, ownership, claims, and limits. Changes hot-reload.
+[access]
+# Keep honoring wormholes.portal.<sanitized portal name> as an alias for the stable permission key. Turn this off once every node has been renamed to the key shown in the Access menu.
+legacy-name-node-enabled = true
+# Run the land-claim placement policy when a portal is built with the wand, a rune, or a replaced vanilla portal.
+claim-check-on-construct = true
+# Run the land-claim placement policy on the destination cells when a portal is linked.
+claim-check-on-link = true
+# Run the land-claim placement policy when a traveler uses a portal. Off by default; results are cached per portal and player for five seconds.
+claim-check-on-use = false
+# A portal that already stands keeps working when its claim plugin is installed but cannot be asked. Building and linking still fail closed in that case.
+grandfather-existing-portals = true
+# Portals a player may own without a wormholes.limit.<n> permission. 0 is unlimited.
+portal-limit-default = 0
+# Consult the wormholes-create, wormholes-use, wormholes-link, and wormholes-arrive WorldGuard region flags. They are registered while WorldGuard is still loading; turn this off, or run a setup where Wormholes loaded after WorldGuard closed its flag registry, and the adapter reads the built-in build and interact flags instead.
+worldguard-flags-enabled = true
+# Claim plugins consulted, in order, as a comma-separated list. Known adapters: worldguard, griefprevention, towny, lands, plotsquared. Remove one to stop consulting it.
+claim-adapters = "worldguard,griefprevention,towny,lands,plotsquared"
+
+# Portal networks, addresses, and dialing. Changes hot-reload.
+[nexus]
+# Characters used when a portal is given an automatic network address. Ambiguous glyphs are left out on purpose.
+address-alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
+# Characters per automatic network address.
+address-length = 4
+# Shortest interval between projection swaps while a player cycles through addresses.
+dial-debounce-millis = 400
+# A manual dial reverts to the portal's default address after this many idle seconds. 0 keeps the dialed address.
+dial-hold-seconds = 120
+# Tick cadence of the scheduled and timed destination task.
+scheduler-interval-ticks = 20
+# Networks a player may create. Holders of wormholes.admin.nexus are unlimited.
+max-networks-per-player = 4
+# Portals one network may contain.
+max-members-per-network = 256
+# Let redstone next to a portal frame open, close, lock, and dial it, and drive comparator output.
+redstone-enabled = true
+
+# Player-facing portal atlas. Changes hot-reload.
+[atlas]
+# Enable /atlas, portal discovery, favorites, recents, and the guide bearing.
+enabled = true
+# Portals outside a public network appear in a player's atlas only after that player stood at them.
+discovery-required = true
+# Distance in blocks from a portal aperture that counts as a visit.
+discovery-radius = 6.0
+# Show portal coordinates in the atlas list.
+show-coordinates = false
+# Portals kept in a player's recent list.
+recent-limit = 10
+# Portals a player may pin as favorites.
+favorites-limit = 27
+# Show an action-bar bearing to the portal a player is guiding to.
+guide-enabled = true
+
+# Portal physics, convoy traversal, and traversal cues. Changes hot-reload.
+[transit]
+# Momentum policy for portals that set none of their own: preserve, scale, clamp, zero, or impulse.
+momentum-default = "preserve"
+# Speed ceiling in blocks per tick applied by the clamp and scale momentum policies.
+momentum-max-speed = 4.0
+# Orientation policy for portals that set none of their own: frame (existing behaviour), look, snap, or mirror.
+orientation-default = "frame"
+# Arrive upright through exits that point up or down instead of carrying the look rigidly through the portal pair.
+gravity-flip-enabled = false
+# Projectiles and dropped items keep their velocity and arc through local tunnels without a reentry cooldown.
+object-transit-continuous = true
+# Move vehicles, passengers, and leashed mobs through a portal as one rig, or refuse the whole rig.
+convoy-enabled = true
+# Largest rig (vehicle, riders, leashed mobs) a portal moves as a unit.
+convoy-max-entities = 16
+# Allow rigs through cross-server gateways when the peer negotiates convoy support.
+convoy-cross-server-enabled = true
+# Seconds a cross-server rig transfer may wait for the destination before the source restores the rig. Keep under 30.
+convoy-cross-server-timeout-sec = 20
+# Play threshold and arrival cues (sound and particles only).
+cinematics-enabled = true
+# Size the arrival darkness mask by how many destination chunks still need to stream instead of using the fixed tick count.
+arrival-mask-adaptive = true
+# Shortest adaptive arrival mask in ticks when any destination chunk is still missing.
+arrival-mask-min-ticks = 5
+
+# Destination atmosphere through the aperture. Changes hot-reload.
+[atmosphere]
+# Per-portal atmosphere default: off, tint, tint_light or full.
+mode-default = "off"
+# Retint the biome of chunk sections the view volume dominates so grass, foliage, water and fog take the destination colour.
+biome-tint = false
+# Fraction of a chunk section's 4x4x4 biome cells the view must cover before that section is retinted.
+biome-dominance = 0.6
+# Promote destination sky-light rebasing to portals whose atmosphere mode is tint_light or full, even when render.lighting-fidelity is off. False is the hard off switch.
+sky-light = false
+# Give the blackout far shell a destination-derived block (end stone, netherrack, sky-tinted glass) on portals in full atmosphere mode.
+fog-plate = true
+# Relay destination rain and snow as particles inside the view volume and dim projected sky light while it storms.
+weather = true
+
+# Sound transport through the aperture. Changes hot-reload.
+[acoustics]
+# Per-portal acoustics default: off, ambient, ambient_events or full.
+profile-default = "ambient"
+# Destination radius in blocks around the far aperture sampled for sound events.
+radius = 24.0
+# Relayed sounds per second per observer.
+rate-cap-per-observer = 8
+
+# Projection level of detail and dissolve. Changes hot-reload.
+[lod]
+# Depth in blocks beyond which same-material runs along the view axis are merged.
+distance-blocks = 32
+# Collapse runs along the view axis past distance-blocks; every second slab reuses the previous slab's samples.
+merge-runs = true
+# Depth in blocks beyond which flowers, grass, fences and panes are skipped.
+detail-cutoff-blocks = 48
+# Ticks over which a new view is admitted near-to-far and a retiring view is released far-to-near.
+dissolve-ticks = 8
+
+# Bedrock and Geyser client degradation profile. Changes hot-reload.
+[bedrock]
+# Detect Bedrock viewers through the Floodgate API when present, otherwise through the client brand and UUID shape.
+enabled = true
+# Send BlockDisplay-based blackout shells, surface skins and name labels to Bedrock viewers.
+display-entities = false
+# Send projected light overlays to Bedrock viewers.
+lighting-fidelity = false
+# Maximum projected entities per portal for a Bedrock viewer.
+entity-cap = 8
+
+# Operator console, backups, importers, and web-map markers. Changes hot-reload.
+[ops]
+
+# Read-only HTTP metrics endpoint. Off by default; it refuses to start without a token.
+[ops.console]
+# Serve OpenMetrics at /metrics and a JSON snapshot at /snapshot.
+enabled = false
+# Bind address. Loopback keeps the endpoint off the network; use 0.0.0.0 only behind a firewall.
+bind = "127.0.0.1"
+port = 8905
+# Bearer token required on every request. An empty token keeps the endpoint down.
+token = ""
+# Minutes of in-memory 1 Hz history kept per metric.
+history-minutes = 30
+
+# Scheduled portal backups under plugins/Wormholes/backups.
+[ops.backup]
+enabled = true
+# Minutes between scheduled backups.
+interval-minutes = 60
+# Scheduled backups kept before the oldest is deleted.
+retain = 24
+
+# Portal markers published to Dynmap, BlueMap, Pl3xMap, and squaremap when one is installed.
+[ops.webmap]
+enabled = true
+# Draw a line between a portal and its local destination.
+link-lines = true
+# Skip portals whose owner marked them unlisted.
+respect-listed = true
+
+# Cross-dimension coordinate scaling and world-group pairing for vanilla portal replacement.
+# Changes hot-reload and apply to portals built after the reload.
+[dimensional]
+# Per-world scales as world-key:scale. A trip maps dest = src * (source scale / destination scale).
+scales = ["minecraft:the_nether:8.0"]
+# World groups as comma-separated world names. Portals pair only inside a group; a world listed alone with itself disables its portals.
+groups = []
+
+# ClientView: clients running the Wormholes mod receive portal plates and sweep them locally instead of server-side block packets. Changes hot-reload.
+[client-view]
+# Offer ClientView to clients running the Wormholes mod. Off keeps every client on the vanilla projection path.
+enabled = true
+# Negotiate during the configuration phase where the platform allows it, so the first frame after join is already ClientView.
+configuration-handshake = true
+# Extra milliseconds to wait for HELLO from a modded-brand client, 0 to 5000. Vanilla brands never wait.
+hello-grace-millis = 100
+# Frame split size in KiB, 64 to 1024.
+max-frame-kb = 512
+# Unacknowledged frame groups before the lane pauses sending to that client, 0 to 255. 0 never pauses.
+ack-window-frames = 8
+# Send brick hash manifests and honour BRICK_MISS so repeated bricks cost 12 bytes.
+brick-cache = true
+# Ship destination light nibbles inside bricks.
+destination-light = true
+# Stream one 20 Hz entity frame per attended portal shared by all attending observers.
+entity-frames = true
+# Hand plates over by reference on memory connections such as singleplayer.
+zero-copy = true
+# Stream the standby RTP plate while the portal is attended. Off keeps the next destination hidden until traversal.
+standby-prestream = false
+# Accept VIEW_STATS telemetry from clients for /wormholes clientview.
+view-stats = true
+# Let modded clients draw mirror portals from their own loaded chunks, so mirror plates are never built or streamed for them.
+client-mirror = true
+# Stream nested mirror and portal destination views. Native rendering supports up to three nested steps and sixteen nested views per primary view.
+client-recursion = true
+# Fabric, Forge and NeoForge servers only: let clients running the Wormholes mod walk through portals with no teleport, respawn or loading screen, with destination chunks and entities streamed ahead. Off keeps prepared travel.
+seamless-travel = true
+# Fabric, Forge and NeoForge servers only: portal destinations streamed ahead per seamless player, 1 to 4.
+remote-view-routes = 2
+# Fabric, Forge and NeoForge servers only: destination chunk columns streamed per seamless player per tick, 1 to 64. The client's own acknowledgement can lower it further.
+remote-view-chunks-per-tick = 8
+# Fabric, Forge and NeoForge servers only: destination bytes streamed per seamless player per tick, 16384 to 2097152.
+remote-view-bytes-per-tick = 196608
+
+# Player menus. Changes hot-reload.
+[menus]
+# Show native menu screens to players running the Wormholes client mod. Players without the mod always get chest menus.
+native-screens = true

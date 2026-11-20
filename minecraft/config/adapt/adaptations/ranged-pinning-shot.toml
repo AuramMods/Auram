@@ -1,0 +1,96 @@
+# Adapt configuration - adaptation:ranged-pinning-shot
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Projectiles can pin targets with heavy slowness.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.74
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 6
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Controls Dampen velocity on proc for the ranged-pinning-shot adaptation.
+dampenVelocityOnProc = true
+# Chance for the ranged-pinning-shot adaptation to trigger.
+procChanceBase = 0.12
+# Chance for the ranged-pinning-shot adaptation to trigger.
+procChanceFactor = 0.42
+# Chance for the ranged-pinning-shot adaptation to trigger.
+maxProcChance = 0.65
+# Duration or timing used by the ranged-pinning-shot adaptation.
+durationTicksBase = 30.0
+# Scaling applied to the ranged-pinning-shot adaptation.
+durationTicksFactor = 90.0
+# Controls Amplifier base for the ranged-pinning-shot adaptation.
+amplifierBase = 1.0
+# Scaling applied to the ranged-pinning-shot adaptation.
+amplifierFactor = 2.0
+# Cooldown between the ranged-pinning-shot adaptation activations.
+reapplyCooldownMillisBase = 5000.0
+# Cooldown between the ranged-pinning-shot adaptation activations.
+reapplyCooldownMillisFactor = 2800.0
+# Scaling applied to the ranged-pinning-shot adaptation.
+horizontalVelocityFactor = 0.15
+# Minimum threshold required for the ranged-pinning-shot adaptation.
+cleanupThreshold = 128
+# Duration or timing used by the ranged-pinning-shot adaptation.
+entryTtlMillis = 60000
+# XP gain tuning for the ranged-pinning-shot adaptation.
+xpOnProc = 12.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.dampen-velocity]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.require-sneak]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
