@@ -24,14 +24,40 @@ in vec2 uv;
 uniform sampler2D colortex0; // Scene color
 
 #if DEBUG_VIEW == DEBUG_VIEW_SAMPLER
-uniform sampler2D DEBUG_SAMPLER;
+uniform sampler2D colortex1;
+uniform sampler2D colortex2;
+uniform sampler2D colortex3;
+uniform sampler2D colortex4;
+uniform sampler2D colortex5;
+uniform sampler2D colortex6;
+uniform sampler2D colortex7;
+uniform sampler2D colortex8;
+uniform sampler2D colortex9;
+uniform sampler2D colortex10;
+uniform sampler2D colortex11;
+uniform sampler2D colortex12;
+uniform sampler2D colortex13;
+uniform sampler2D colortex14;
+// Distance View with a LOD mod declares colortex15 in lod_mod_support.glsl.
+#if !defined DISTANCE_VIEW || !defined LOD_MOD_ACTIVE
+uniform sampler2D colortex15;
+#endif
+uniform sampler2D depthtex1;
+uniform sampler2D depthtex2;
+uniform sampler2D shadowtex1;
+uniform sampler2D shadowcolor0;
+uniform sampler2D shadowcolor1;
 #endif
 
 uniform float viewHeight;
 uniform float frameTimeCounter;
 
-#ifdef COLORED_LIGHTS
+#if defined COLORED_LIGHTS || DEBUG_VIEW == DEBUG_VIEW_SAMPLER
 uniform sampler2D shadowtex0;
+#endif
+
+#if defined DISTANCE_VIEW || DEBUG_VIEW == DEBUG_VIEW_SAMPLER
+uniform sampler2D depthtex0;
 #endif
 
 #include "/include/utility/bicubic.glsl"
@@ -40,8 +66,6 @@ uniform sampler2D shadowtex0;
 #include "/include/utility/text_rendering.glsl"
 
 #ifdef DISTANCE_VIEW
-uniform sampler2D depthtex0;
-
 uniform mat4 gbufferModelView;
 uniform mat4 gbufferModelViewInverse;
 uniform mat4 gbufferProjection;
@@ -294,9 +318,10 @@ void shade_final() {
     fragment_color = dither_8bit(fragment_color, bayer16(vec2(texel)));
 
 #if DEBUG_VIEW == DEBUG_VIEW_SAMPLER
-    if (clamp(texel, ivec2(0), ivec2(textureSize(DEBUG_SAMPLER, 0))) == texel) {
-        fragment_color = texelFetch(DEBUG_SAMPLER, texel, 0).rgb;
-        fragment_color = display_eotf(fragment_color);
+    ivec2 debug_size = textureSize(DEBUG_SAMPLER, 0);
+    if (all(greaterThanEqual(texel, ivec2(0))) && all(lessThan(texel, debug_size))) {
+        vec3 sample_color = texelFetch(DEBUG_SAMPLER, texel, 0).rgb;
+        fragment_color = display_eotf(max(sample_color, vec3(0.0)));
     }
 #elif DEBUG_VIEW == DEBUG_VIEW_WEATHER
     debug_weather(fragment_color);
