@@ -678,9 +678,11 @@ const float wetnessHalflife         = 70.0;
 #endif
 
 // Water shadows in the Nether only voxelize terrain. They never shade a surface.
-#if defined WATER_CAUSTICS && !defined WORLD_NETHER \
+#ifdef WATER_CAUSTICS
+#if !defined WORLD_NETHER \
     && (defined PROGRAM_SHADOW_WATER || defined PROGRAM_SHADOW_FALLBACK)
   #define SHADOW_WATER_CAUSTICS
+#endif
 #endif
 
 // Apple Silicon (macOS) compatibility
