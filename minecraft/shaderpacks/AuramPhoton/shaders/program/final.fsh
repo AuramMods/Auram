@@ -44,6 +44,7 @@ uniform sampler2D colortex15;
 #endif
 uniform sampler2D depthtex1;
 uniform sampler2D depthtex2;
+uniform sampler2D shadowtex0;
 uniform sampler2D shadowtex1;
 uniform sampler2D shadowcolor0;
 uniform sampler2D shadowcolor1;
@@ -51,10 +52,6 @@ uniform sampler2D shadowcolor1;
 
 uniform float viewHeight;
 uniform float frameTimeCounter;
-
-#if defined COLORED_LIGHTS || DEBUG_VIEW == DEBUG_VIEW_SAMPLER
-uniform sampler2D shadowtex0;
-#endif
 
 #if defined DISTANCE_VIEW || DEBUG_VIEW == DEBUG_VIEW_SAMPLER
 uniform sampler2D depthtex0;
@@ -353,13 +350,6 @@ void shade_final() {
     fragment_color = depth == 1.0
         ? vec3(1.0)
         : vec3(clamp01(dist * rcp(DISTANCE_VIEW_MAX_DISTANCE)));
-#endif
-
-#if defined COLORED_LIGHTS && (defined WORLD_NETHER || !defined SHADOW)
-    // Must sample shadowtex0 so that the shadow map is rendered
-    if (uv.x < 0.0) {
-        fragment_color = texture(shadowtex0, uv).rgb;
-    }
 #endif
 }
 
