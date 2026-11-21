@@ -33,8 +33,14 @@ abstract class IrisDistantHorizonsMixin {
     @Redirect(method = "loadExternalShaderpack", at = @At(
             value = "NEW", target = "net/irisshaders/iris/shaderpack/ShaderPack"))
     private static ShaderPack auramPhoton$rememberPack(
-            Path root, Map<String, String> options, ImmutableList<StringPair> defines
+            Path root, Map<String, String> options, ImmutableList<StringPair> defines, String packName
     ) throws IOException {
+        if (auramPhoton$isAuramPhoton(packName)) {
+            defines = ImmutableList.<StringPair>builder()
+                    .addAll(defines)
+                    .add(new StringPair("AURAM_PHOTON_LPV_BACKEND", ""))
+                    .build();
+        }
         ShaderPack pack = new ShaderPack(root, options, defines);
         auramPhoton$loadedPack = new WeakReference<>(pack);
         auramPhoton$root = root;
@@ -43,12 +49,17 @@ abstract class IrisDistantHorizonsMixin {
         return pack;
     }
 
+    @Unique
+    private static boolean auramPhoton$isAuramPhoton(String name) {
+        return "AuramPhoton".equals(name) || "AuramPhoton.zip".equals(name);
+    }
+
     @Inject(method = "createPipeline", at = @At("HEAD"))
     private static void auramPhoton$refreshDistantHorizons(
             NamespacedId dimension, CallbackInfoReturnable<WorldRenderingPipeline> callback
     ) {
         if (currentPack == null || auramPhoton$loadedPack == null || currentPack != auramPhoton$loadedPack.get()
-                || !("AuramPhoton".equals(currentPackName) || "AuramPhoton.zip".equals(currentPackName))) {
+                || !auramPhoton$isAuramPhoton(currentPackName)) {
             return;
         }
 

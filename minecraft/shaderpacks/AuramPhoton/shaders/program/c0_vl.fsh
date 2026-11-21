@@ -117,8 +117,7 @@ uniform float time_midnight;
 #include "/include/utility/space_conversion.glsl"
 
 #if defined LPV_VL && defined COLORED_LIGHTS
-uniform sampler3D light_sampler_a;
-uniform sampler3D light_sampler_b;
+#include "/include/lighting/lpv/light_samplers.glsl"
 
 #include "/include/fog/lpv_fog.glsl"
 #endif

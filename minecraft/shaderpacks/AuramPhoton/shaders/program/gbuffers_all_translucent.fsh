@@ -70,8 +70,7 @@ uniform sampler2D colortex8; // Cloud shadow map
 uniform sampler2D depthtex1;
 
 #ifdef COLORED_LIGHTS
-uniform sampler3D light_sampler_a;
-uniform sampler3D light_sampler_b;
+#include "/include/lighting/lpv/light_samplers.glsl"
 #endif
 
 #ifdef SHADOW

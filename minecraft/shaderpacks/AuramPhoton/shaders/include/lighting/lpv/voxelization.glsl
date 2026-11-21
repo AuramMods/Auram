@@ -128,12 +128,14 @@ ivec4 get_voxel_write(uint block_id) {
     return ivec4(0);
 }
 
+#ifndef AURAM_PHOTON_RASTER_LPV
 void update_voxel_map(uint block_id) {
     ivec4 voxel = get_voxel_write(block_id);
     if (voxel.w != 0 && all(lessThan(voxel.xyz, voxel_volume_size))) {
         imageStore(voxel_img, voxel.xyz, uvec4(uint(voxel.w), 0u, 0u, 0u));
     }
 }
+#endif
 #endif
 
 #endif // INCLUDE_LIGHTING_LPV_VOXELIZATION

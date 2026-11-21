@@ -24,7 +24,7 @@ in vec2 uv;
 flat in uint material_mask;
 flat in vec3 tint;
 
-#ifdef WATER_CAUSTICS
+#ifdef SHADOW_WATER_CAUSTICS
 in vec3 scene_pos;
 #endif
 
@@ -108,7 +108,7 @@ vec3 biome_water_coeff(vec3 biome_water_color) {
 }
 
 float get_water_caustics() {
-#ifndef WATER_CAUSTICS
+#ifndef SHADOW_WATER_CAUSTICS
     return 1.0;
 #else
     // TBN matrix for a face pointing directly upwards

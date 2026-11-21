@@ -4,11 +4,15 @@
 #include "voxelization.glsl"
 
 vec3 read_lpv_linear(vec3 pos) {
+#ifdef AURAM_PHOTON_RASTER_LPV
+    return texture(auram_photon_light, pos).rgb;
+#else
     if ((frameCounter & 1) == 0) {
         return texture(light_sampler_a, pos).rgb;
     } else {
         return texture(light_sampler_b, pos).rgb;
     }
+#endif
 }
 
 float lpv_distance_fade(vec3 scene_pos) {

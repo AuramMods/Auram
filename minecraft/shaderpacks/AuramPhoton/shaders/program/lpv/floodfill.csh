@@ -56,3 +56,8 @@ void main() {
 #ifndef COLORED_LIGHTS
 #error "This program should be disabled if colored lights are disabled"
 #endif
+
+// Register the separately compiled companion stage in Oculus's include graph.
+#if 0
+#include "/program/lpv/raster_transport.fsh"
+#endif

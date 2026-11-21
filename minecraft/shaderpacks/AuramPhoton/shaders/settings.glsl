@@ -677,6 +677,12 @@ const float wetnessHalflife         = 70.0;
   #define ATMOSPHERE_SATURATION_BOOST_INTENSITY 0.0
 #endif
 
+// Water shadows in the Nether only voxelize terrain. They never shade a surface.
+#if defined WATER_CAUSTICS && !defined WORLD_NETHER \
+    && (defined PROGRAM_SHADOW_WATER || defined PROGRAM_SHADOW_FALLBACK)
+  #define SHADOW_WATER_CAUSTICS
+#endif
+
 // Apple Silicon (macOS) compatibility
 // macOS exposes OpenGL 4.1 core on top of Metal: no compute shaders, no image
 // load/store and 16 texture units per program, some of which Iris reserves.
@@ -688,8 +694,13 @@ const float wetnessHalflife         = 70.0;
 #if defined MC_OS_MAC || defined FORCE_APPLE_COMPAT
   #define APPLE_COMPAT
 
-  // Voxel colored lighting needs compute shaders and image load/store
-  #undef COLORED_LIGHTS
+  #ifdef AURAM_PHOTON_LPV_BACKEND
+    #if defined COLORED_LIGHTS && !defined VOXY
+      #define AURAM_PHOTON_RASTER_LPV
+    #endif
+  #else
+    #undef COLORED_LIGHTS
+  #endif
 
   // deferred shading is split into separate raster passes, see program/d4_split.glsl
 #endif

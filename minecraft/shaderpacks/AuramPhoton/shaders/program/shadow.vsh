@@ -16,7 +16,7 @@ out vec2 uv;
 flat out uint material_mask;
 flat out vec3 tint;
 
-#ifdef WATER_CAUSTICS
+#ifdef SHADOW_WATER_CAUSTICS
 out vec3 scene_pos;
 #endif
 
@@ -65,7 +65,11 @@ uniform float biome_temperature;
 uniform float biome_humidity;
 
 #ifdef COLORED_LIGHTS
+#ifdef AURAM_PHOTON_RASTER_LPV
+flat out ivec4 auram_photon_voxel;
+#else
 writeonly uniform uimage3D voxel_img;
+#endif
 
 uniform int renderStage;
 #endif
@@ -87,7 +91,11 @@ void main() {
     tint = gl_Color.rgb;
 
 #if defined COLORED_LIGHTS && !defined PROGRAM_SHADOW_ENTITIES
+#ifdef AURAM_PHOTON_RASTER_LPV
+    auram_photon_voxel = get_voxel_write(material_mask);
+#else
     update_voxel_map(material_mask);
+#endif
 #endif
 
 #if defined WORLD_NETHER
@@ -112,7 +120,7 @@ void main() {
     );
     pos = pos - cameraPosition;
 
-#ifdef WATER_CAUSTICS
+#ifdef SHADOW_WATER_CAUSTICS
     scene_pos = pos;
 #endif
 
