@@ -7,6 +7,10 @@
 
 #define SSAO_MAX_RADIUS_SCREEN 0.05
 
+vec2 ssao_depth_texel_center(ivec2 texel) {
+    return (vec2(texel) + 0.5) / (view_res * taau_render_scale);
+}
+
 vec2 get_ssao_sample_offset(int step_index, vec2 dither) {
     float a = (float(step_index) + dither.x) * rcp(float(SSAO_STEPS));
 
@@ -61,6 +65,10 @@ float compute_ssao(
 
         if (depth == 1.0 || depth < hand_depth || depth == position_screen.z) {
             continue;
+        }
+
+        if (taau_render_scale != 1.0) {
+            sample_uv = ssao_depth_texel_center(texel);
         }
 
         vec3 offset_view

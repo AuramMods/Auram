@@ -160,7 +160,18 @@ void main() {
     ao = vec2(1.0, 0.0);
     bent_normal = view_normal;
 #elif SHADER_AO == SHADER_AO_SSAO
-    ao.x = compute_ssao(screen_pos, view_pos, view_normal, dither);
+    vec3 ssao_screen_pos = screen_pos;
+    vec3 ssao_view_pos = view_pos;
+    if (taau_render_scale != 1.0) {
+        // Reconstruct the ray origin at the center of the texel that supplied its depth.
+        ssao_screen_pos.xy = ssao_depth_texel_center(view_texel);
+        ssao_view_pos = screen_to_view_space(
+            combined_projection_matrix_inverse,
+            ssao_screen_pos,
+            true
+        );
+    }
+    ao.x = compute_ssao(ssao_screen_pos, ssao_view_pos, view_normal, dither);
     ao.y = 0.0;
     bent_normal = view_normal;
 #elif SHADER_AO == SHADER_AO_GTAO
