@@ -310,14 +310,16 @@ void main() {
             + normal_tangent.xy * rcp(max(view_distance, 1.0))
                 * min(layer_dist, 8.0) * (0.1 * REFRACTION_INTENSITY);
 
+        vec2 refracted_depth_uv = refracted_uv * taau_render_scale;
+
         // Make sure the refracted fragment is behind the fragment position
 #ifdef COMPOSITE_PACKED_DEPTH
         // Match the depth texture's nearest-filtered, clamp-to-edge lookup.
         ivec2 size = textureSize(colortex15, 0);
-        ivec2 refracted_texel = clamp(ivec2(floor(refracted_uv * vec2(size))), ivec2(0), size - 1);
+        ivec2 refracted_texel = clamp(ivec2(floor(refracted_depth_uv * vec2(size))), ivec2(0), size - 1);
         float depth_refracted = texelFetch(colortex15, refracted_texel, 0).g;
 #else
-        float depth_refracted = texture(depthtex1, refracted_uv).x;
+        float depth_refracted = texture(depthtex1, refracted_depth_uv).x;
 #endif
         refracted_uv
             = mix(refracted_uv, uv, float(depth_refracted < front_depth));
