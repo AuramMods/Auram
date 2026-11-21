@@ -297,29 +297,21 @@ void shade_final() {
 #endif
 
 #ifdef DISTANCE_VIEW
+    vec2 pixel_pos = uv * view_res;
     float depth
-        = texelFetch(depthtex0, ivec2(uv * view_res * taau_render_scale), 0).x;
+        = texelFetch(depthtex0, ivec2(pixel_pos * taau_render_scale), 0).x;
 
-    vec3 position_screen = vec3(uv, depth);
-    vec3 position_view
-        = screen_to_view_space(gbufferProjectionInverse, position_screen, true);
-
-    bool is_sky = depth == 1.0;
-
+    bool is_lod = false;
 #ifdef LOD_MOD_ACTIVE
-    float depth_lod = texelFetch(lod_depth_tex, texel, 0).x;
-    bool is_lod = is_lod_terrain(depth, depth_lod);
-
-    if (is_lod) {
-        position_view = screen_to_view_space(
-            dhProjectionInverse,
-            vec3(uv, depth_lod),
-            true
-        );
+    if (depth >= 1.0) {
+        ivec2 lod_texel = ivec2(pixel_pos * lod_depth_tex_scale);
+        float lod_depth = texelFetch(lod_depth_tex, lod_texel, 0).x;
+        is_lod = is_lod_terrain(depth, lod_depth);
+        if (is_lod) depth = lod_depth;
     }
-
-    is_sky = is_sky && depth_lod == 1.0;
 #endif
+
+    vec3 position_view = screen_to_view_space(vec3(uv, depth), true, is_lod);
 
 #if DISTANCE_VIEW_METHOD == DISTANCE_VIEW_DISTANCE
     float dist = length(position_view);
@@ -327,7 +319,7 @@ void shade_final() {
     float dist = -position_view.z;
 #endif
 
-    fragment_color = is_sky
+    fragment_color = depth == 1.0
         ? vec3(1.0)
         : vec3(clamp01(dist * rcp(DISTANCE_VIEW_MAX_DISTANCE)));
 #endif
