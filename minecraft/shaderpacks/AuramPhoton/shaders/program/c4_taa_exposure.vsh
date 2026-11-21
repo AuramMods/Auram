@@ -16,7 +16,8 @@ out vec2 uv;
 flat out float exposure;
 
 #if DEBUG_VIEW == DEBUG_VIEW_HISTOGRAM
-flat out vec4[HISTOGRAM_BINS / 4] histogram_pdf;
+#include "/include/post_processing/exposure_histogram_debug.glsl"
+flat out uvec4[histogram_debug_vector_count] histogram_bars;
 flat out float histogram_selected_bin;
 #endif
 
@@ -175,8 +176,15 @@ void main() {
 
 #if AUTO_EXPOSURE == AUTO_EXPOSURE_HISTOGRAM \
     && DEBUG_VIEW == DEBUG_VIEW_HISTOGRAM
+    for (int i = 0; i < histogram_debug_vector_count; ++i) {
+        histogram_bars[i] = uvec4(0u);
+    }
     for (int i = 0; i < HISTOGRAM_BINS; ++i) {
-        histogram_pdf[i >> 2][i & 3] = pdf[i];
+        uint height = uint(ceil(clamp01(pdf[i]) * histogram_debug_height));
+        int vector_index = i / histogram_bars_per_vector;
+        int word_index = (i / histogram_bars_per_word) % 4;
+        int shift = (i % histogram_bars_per_word) * histogram_bar_bits;
+        histogram_bars[vector_index][word_index] |= height << shift;
     }
     histogram_selected_bin = get_bin_from_luminance(luminance);
 #endif

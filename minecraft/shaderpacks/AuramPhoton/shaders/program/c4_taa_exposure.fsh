@@ -21,7 +21,8 @@ in vec2 uv;
 flat in float exposure;
 
 #if DEBUG_VIEW == DEBUG_VIEW_HISTOGRAM
-flat in vec4[HISTOGRAM_BINS / 4] histogram_pdf;
+#include "/include/post_processing/exposure_histogram_debug.glsl"
+flat in uvec4[histogram_debug_vector_count] histogram_bars;
 flat in float histogram_selected_bin;
 #endif
 
@@ -247,7 +248,7 @@ vec3 neighborhood_clipping(
     && DEBUG_VIEW == DEBUG_VIEW_HISTOGRAM
 void draw_histogram(ivec2 texel) {
     const int width = 512;
-    const int height = 256;
+    const int height = histogram_debug_height;
 
     const vec3 white = vec3(1.0);
     const vec3 black = vec3(0.0);
@@ -257,10 +258,13 @@ void draw_histogram(ivec2 texel) {
 
     if (all(lessThan(texel, ivec2(width, height)))) {
         int index = int(HISTOGRAM_BINS * coord.x);
-        float threshold = coord.y;
+        int vector_index = index / histogram_bars_per_vector;
+        int word_index = (index / histogram_bars_per_word) % 4;
+        int shift = (index % histogram_bars_per_word) * histogram_bar_bits;
+        uint bar_height = (histogram_bars[vector_index][word_index] >> shift)
+            & histogram_bar_mask;
 
-        result.rgb
-            = histogram_pdf[index >> 2][index & 3] > threshold ? black : white;
+        result.rgb = uint(texel.y) < bar_height ? black : white;
 
         float median = max0(1.0 - abs(index - histogram_selected_bin));
         result.rgb = mix(result.rgb, red, median) / exposure;
