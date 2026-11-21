@@ -76,7 +76,7 @@ void main() {
     // Calculate circle of confusion
     float focus = DOF_FOCUS < 0.0
         ? centerDepthSmooth
-        : view_to_screen_space_depth(gbufferProjection, DOF_FOCUS);
+        : view_to_screen_space_depth(gbufferProjection, max(near, DOF_FOCUS));
     vec2 CoC = min(abs(depth - focus), 0.1) * (DOF_INTENSITY * 0.2 / 1.37)
         * vec2(1.0, aspectRatio) * gbufferProjection[1][1];
 
