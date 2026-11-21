@@ -16,6 +16,11 @@ version in that instance. Both builds use the same shader pack, Oculus version,
 and Embeddium version. DH upgrades can migrate the world's LOD database. Test the
 migration on a copy of the instance and world.
 
+Add `-PauramCorePriority` when building the DH 3.3.3 companion for Auram with
+AuramCore 1.0.25. This loads AuramCore's existing player-chunk tracker before
+its legacy DH target check and reuses its scheduling policy on the new DH
+queue. Omit the flag for a standalone shader test without AuramCore.
+
 Oculus and DH each manage their own depth attachments during framebuffer recreation. The companion keeps DH targets out of Oculus’s vanilla depth rebinding, so a resize cannot leave Minecraft’s stencil texture attached beside DH’s depth texture. On DH 2.4.5-b, the companion also updates the viewport for the first draw after a resize and releases the color and depth textures DH replaces. DH 3.3.3 handles viewport dimensions and replaced depth textures in its renderer. During pipeline teardown the companion releases Oculus’s DH generic shader and opaque-depth copy after Oculus removes its overrides.
 
 DH generic objects support both direct and instanced draws through Oculus. On macOS the built-in DH shaders read their cube geometry from the original vertex and index data embedded in the vertex shader. This avoids a driver fault when fetching the position buffer. The direct draw submits the same triangle order with a non-indexed draw call. The instanced draw keeps DH’s per-box attribute data and original indices. The 3.3.3 build applies this fix at the new OpenGL renderer and restores the macOS generic rendering path.

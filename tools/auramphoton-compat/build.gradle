@@ -12,9 +12,15 @@ def dhRenderer = dh333Jar.isPresent() ? 'dh333' : 'dh245'
 def dhVersion = dh333Jar.isPresent() ? '3.3.3' : '2.4.5-b'
 def dhJar = dh333Jar.isPresent() ? file(dh333Jar.get()) : new File(mods, 'DistantHorizons-2.4.5-b-1.20.1-fabric-forge.jar')
 def dhMixins = "auramphoton_compat-${dhRenderer}.mixins.json"
+def auramCorePriority = dh333Jar.isPresent() && providers.gradleProperty('auramCorePriority').isPresent()
+def mixinConfigs = ['auramphoton_compat.mixins.json', dhMixins]
 
 sourceSets.main.java.srcDir("src/${dhRenderer}/java")
 sourceSets.main.resources.srcDir("src/${dhRenderer}/resources")
+if (auramCorePriority) {
+    sourceSets.main.resources.srcDir('src/dh333AuramCore/resources')
+    mixinConfigs.add('auramphoton_auramcore-dh333.mixins.json')
+}
 
 dependencies {
     compileOnly files(
@@ -74,6 +80,6 @@ jar {
         archiveClassifier = dhRenderer
     }
     manifest {
-        attributes 'MixinConfigs': "auramphoton_compat.mixins.json,${dhMixins}"
+        attributes 'MixinConfigs': mixinConfigs.join(',')
     }
 }
