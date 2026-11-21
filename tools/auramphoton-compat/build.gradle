@@ -7,6 +7,14 @@ version = '0.1.0'
 
 def libraries = file(providers.gradleProperty('prismLibraries').get())
 def mods = file(providers.gradleProperty('auramMods').get())
+def dh333Jar = providers.gradleProperty('distantHorizons333Jar')
+def dhRenderer = dh333Jar.isPresent() ? 'dh333' : 'dh245'
+def dhVersion = dh333Jar.isPresent() ? '3.3.3' : '2.4.5-b'
+def dhJar = dh333Jar.isPresent() ? file(dh333Jar.get()) : new File(mods, 'DistantHorizons-2.4.5-b-1.20.1-fabric-forge.jar')
+def dhMixins = "auramphoton_compat-${dhRenderer}.mixins.json"
+
+sourceSets.main.java.srcDir("src/${dhRenderer}/java")
+sourceSets.main.resources.srcDir("src/${dhRenderer}/resources")
 
 dependencies {
     compileOnly files(
@@ -22,8 +30,15 @@ dependencies {
         new File(libraries, 'org/lwjgl/lwjgl-opengl/3.3.1/lwjgl-opengl-3.3.1.jar'),
         new File(mods, 'embeddium-0.3.31+mc1.20.1.jar'),
         new File(mods, 'oculus-mc1.20.1-1.8.0.jar'),
-        new File(mods, 'DistantHorizons-2.4.5-b-1.20.1-fabric-forge.jar')
+        dhJar
     )
+}
+
+tasks.named('processResources') {
+    inputs.property('dhVersion', dhVersion)
+    filesMatching('META-INF/mods.toml') {
+        expand(dhVersion: dhVersion)
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -55,7 +70,10 @@ if (providers.gradleProperty('macosMetal').isPresent()) {
 }
 
 jar {
+    if (dh333Jar.isPresent()) {
+        archiveClassifier = dhRenderer
+    }
     manifest {
-        attributes 'MixinConfigs': 'auramphoton_compat.mixins.json'
+        attributes 'MixinConfigs': "auramphoton_compat.mixins.json,${dhMixins}"
     }
 }
