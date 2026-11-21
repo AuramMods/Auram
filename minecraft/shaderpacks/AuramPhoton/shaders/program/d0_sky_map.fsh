@@ -125,6 +125,9 @@ uniform float biome_may_snow;
 
 #include "/include/sky/projection.glsl"
 #include "/include/sky/sky.glsl"
+#ifdef AURAM_PHOTON_RASTER_LPV
+#include "/include/lighting/lpv/light_colors.glsl"
+#endif
 
 void main() {
 #if defined WORLD_OVERWORLD
@@ -146,6 +149,12 @@ void main() {
                 sky_map = ambient_color;
                 break;
         }
+#ifdef AURAM_PHOTON_RASTER_LPV
+        int light_index = texel.y - lpv_handheld_palette_row;
+        if (light_index >= 0 && light_index < 48) {
+            sky_map = lpv_light_colors[light_index];
+        }
+#endif
     } else { // Draw sky map
         vec3 ray_dir = unproject_sky(uv);
 

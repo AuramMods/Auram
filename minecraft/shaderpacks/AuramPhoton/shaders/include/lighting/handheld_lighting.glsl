@@ -1,7 +1,9 @@
 #ifndef INCLUDE_LIGHTING_HANDHELD_LIGHTING
 #define INCLUDE_LIGHTING_HANDHELD_LIGHTING
 
-#ifdef COLORED_LIGHTS
+#if defined AURAM_PHOTON_RASTER_LPV
+#include "/include/lighting/lpv/light_colors.glsl"
+#elif defined COLORED_LIGHTS
 uniform sampler2D light_data_sampler;
 #endif
 
@@ -19,12 +21,21 @@ vec3 get_handheld_light_color(int held_item_id, int held_item_light_value) {
     bool is_emitter = 10032 <= held_item_id && held_item_id < 10080;
 
     if (is_emitter) {
+#ifdef AURAM_PHOTON_RASTER_LPV
+        // Share the sky sampler already bound by the raster lighting passes.
+        return texelFetch(
+            colortex4,
+            ivec2(textureSize(colortex4, 0).x - 1, lpv_handheld_palette_row + held_item_id - 10032),
+            0
+        ).rgb;
+#else
         return texelFetch(
                    light_data_sampler,
                    ivec2(int(held_item_id) - 10032, 0),
                    0
         )
             .rgb;
+#endif
     } else {
         return vec3(0.0);
     }
