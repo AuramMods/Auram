@@ -45,10 +45,11 @@ uniform int frameCounter;
 #include "/include/lighting/lpv/floodfill.glsl"
 
 void main() {
+    ivec3 pos = ivec3(gl_GlobalInvocationID);
     if ((frameCounter & 1) == 0) {
-        update_lpv(light_img_a, light_sampler_b);
+        imageStore(light_img_a, pos, evaluate_lpv_voxel(light_sampler_b, pos));
     } else {
-        update_lpv(light_img_b, light_sampler_a);
+        imageStore(light_img_b, pos, evaluate_lpv_voxel(light_sampler_a, pos));
     }
 }
 

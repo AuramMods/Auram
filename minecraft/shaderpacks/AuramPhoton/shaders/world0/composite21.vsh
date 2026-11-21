@@ -1,4 +1,4 @@
 #version 400 compatibility
 #define WORLD_OVERWORLD
 #define vsh
-#include "/program/c21_fxaa.vsh"
+#include "/program/c20_motion_blur.vsh"

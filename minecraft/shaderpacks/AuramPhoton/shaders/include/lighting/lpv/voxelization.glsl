@@ -85,7 +85,7 @@ bool is_corner(vec3 pos, float tolerance) {
     ));
 }
 
-void update_voxel_map(uint block_id) {
+ivec4 get_voxel_write(uint block_id) {
     vec3 model_pos = gl_Vertex.xyz + at_midBlock * rcp(64.0);
     vec3 view_pos = transform(gl_ModelViewMatrix, model_pos);
     vec3 scene_pos = transform(shadowModelViewInverse, view_pos);
@@ -123,7 +123,15 @@ void update_voxel_map(uint block_id) {
         = (vertex_at_grid_corner) ? block_id : clamp(block_id + 128u, 0u, 255u);
 
     if (is_voxelized && is_inside_voxel_volume(voxel_pos)) {
-        imageStore(voxel_img, ivec3(voxel_pos), uvec4(block_id, 0u, 0u, 0u));
+        return ivec4(ivec3(voxel_pos), int(block_id));
+    }
+    return ivec4(0);
+}
+
+void update_voxel_map(uint block_id) {
+    ivec4 voxel = get_voxel_write(block_id);
+    if (voxel.w != 0 && all(lessThan(voxel.xyz, voxel_volume_size))) {
+        imageStore(voxel_img, voxel.xyz, uvec4(uint(voxel.w), 0u, 0u, 0u));
     }
 }
 #endif

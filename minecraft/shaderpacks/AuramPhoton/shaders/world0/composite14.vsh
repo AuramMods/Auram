@@ -1,7 +1,4 @@
 #version 400 compatibility
 #define WORLD_OVERWORLD
-#define BLOOM_TILE_INDEX 4
 #define vsh
-#include "/program/c14_c18_bloom_upsample.vsh"
-
-
+#include "/program/c13_bloom_gaussian_1.vsh"

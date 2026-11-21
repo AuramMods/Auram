@@ -16,7 +16,19 @@ const int colortex11Format = RGBA16F;        // full res    | clouds history (al
 const int colortex12Format = RGB16F;         // full res    | clouds pixel age, apparent distance, indirect scattering (always)
 const int colortex13Format = RGBA16F;        // full res    | rendered translucent layer (translucent -> c1)
 const int colortex14Format = RG16F;          // quarter res | ambient occlusion history data (always)
-const int colortex15Format = R32F;           // full res    | LoD combined depth buffer (d1 -> c2)
+*/
+
+#if defined WORLD_OVERWORLD && defined APPLE_COMPAT && defined DISTANT_HORIZONS
+/*
+const int colortex15Format = RGBA32F; // combined depth (deferred), then packed depth (composite)
+*/
+#else
+/*
+const int colortex15Format = R32F; // LoD combined depth (deferred)
+*/
+#endif
+
+/*
 
 const bool colortex0Clear  = true;
 const bool colortex1Clear  = false;

@@ -11,7 +11,9 @@
 
 #include "/include/global.glsl"
 
-layout(location = 0) out vec3 fragment_color;
+layout(location = 0) out vec4 final_color;
+
+vec3 fragment_color;
 
 in vec2 uv;
 
@@ -267,7 +269,7 @@ void draw_iris_required_error_message() {
     end_text(fragment_color);
 }
 
-void main() {
+void shade_final() {
 #if defined COLORED_LIGHTS && !defined IS_IRIS
     draw_iris_required_error_message();
     return;
@@ -336,6 +338,14 @@ void main() {
         fragment_color = texture(shadowtex0, uv).rgb;
     }
 #endif
+}
+
+void main() {
+    shade_final();
+
+    // Minecraft composites this target over the window. Write opaque alpha
+    // explicitly since drivers can leave it at zero for a three-component output.
+    final_color = vec4(fragment_color, 1.0);
 }
 
 #include "/include/buffers.glsl"

@@ -133,6 +133,15 @@ uniform float time_midnight;
 #include "/include/fog/simple_fog.glsl"
 #include "/include/misc/lightning_flash.glsl"
 #include "/include/misc/lod_mod_support.glsl"
+
+#if defined WORLD_OVERWORLD && defined APPLE_COMPAT && defined DISTANT_HORIZONS
+#define COMPOSITE_PACKED_DEPTH
+
+// The first component is the unmodified DH front depth used by SSR.
+#undef lod_depth_tex_shading
+#define lod_depth_tex_shading colortex15
+#endif
+
 #include "/include/misc/material_masks.glsl"
 #include "/include/utility/color.glsl"
 #include "/include/utility/encoding.glsl"
@@ -209,8 +218,14 @@ void main() {
 
     // Sample textures
 
+#ifdef COMPOSITE_PACKED_DEPTH
+    vec4 depths = texelFetch(colortex15, texel, 0);
+    float front_depth = depths.b;
+    float back_depth = depths.g;
+#else
     float front_depth = texelFetch(depthtex0, texel, 0).x;
     float back_depth = texelFetch(depthtex1, texel, 0).x;
+#endif
 
     vec4 refraction_data = texelFetch(colortex3, texel, 0);
     vec4 translucent_color = texelFetch(colortex13, texel, 0);
@@ -223,8 +238,13 @@ void main() {
     // LoD mod support
 
 #ifdef LOD_MOD_ACTIVE
+#ifdef COMPOSITE_PACKED_DEPTH
+    float front_depth_lod = depths.r;
+    float back_depth_lod = depths.a;
+#else
     float front_depth_lod = texelFetch(lod_depth_tex, texel, 0).x;
     float back_depth_lod = texelFetch(lod_depth_tex_solid, texel, 0).x;
+#endif
 
     bool front_is_lod_terrain = is_lod_terrain(front_depth, front_depth_lod);
     bool back_is_lod_terrain = is_lod_terrain(back_depth, back_depth_lod);
@@ -290,7 +310,14 @@ void main() {
                 * min(layer_dist, 8.0) * (0.1 * REFRACTION_INTENSITY);
 
         // Make sure the refracted fragment is behind the fragment position
+#ifdef COMPOSITE_PACKED_DEPTH
+        // Match the depth texture's nearest-filtered, clamp-to-edge lookup.
+        ivec2 size = textureSize(colortex15, 0);
+        ivec2 refracted_texel = clamp(ivec2(floor(refracted_uv * vec2(size))), ivec2(0), size - 1);
+        float depth_refracted = texelFetch(colortex15, refracted_texel, 0).g;
+#else
         float depth_refracted = texture(depthtex1, refracted_uv).x;
+#endif
         refracted_uv
             = mix(refracted_uv, uv, float(depth_refracted < front_depth));
     }
