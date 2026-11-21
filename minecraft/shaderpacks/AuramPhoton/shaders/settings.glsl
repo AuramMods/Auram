@@ -693,9 +693,13 @@ const float wetnessHalflife         = 70.0;
 // (set FORCE_APPLE_COMPAT=true in the shader pack's .txt config file)
 //#define FORCE_APPLE_COMPAT
 
-#if defined MC_OS_MAC || defined FORCE_APPLE_COMPAT
+#ifdef FORCE_APPLE_COMPAT
   #define APPLE_COMPAT
+#elif defined MC_OS_MAC
+  #define APPLE_COMPAT
+#endif
 
+#ifdef APPLE_COMPAT
   #ifdef AURAM_PHOTON_LPV_BACKEND
     #if defined COLORED_LIGHTS && !defined VOXY
       #define AURAM_PHOTON_RASTER_LPV
