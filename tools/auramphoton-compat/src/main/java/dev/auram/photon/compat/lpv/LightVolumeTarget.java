@@ -19,6 +19,7 @@ record LightVolumeTarget(int texture, int framebuffer) implements AutoCloseable 
 
     private static LightVolumeTarget allocate(int width, int height, int depth, boolean integer) {
         int target = depth == 0 ? GL_TEXTURE_2D : GL_TEXTURE_3D;
+        boolean rgbVolume = depth > 0 && "Apple".equals(glGetString(GL_VENDOR));
         int oldTexture = glGetInteger(depth == 0 ? GL_TEXTURE_BINDING_2D : GL_TEXTURE_BINDING_3D);
         int oldDraw = glGetInteger(GL_DRAW_FRAMEBUFFER_BINDING);
         int oldUnpack = glGetInteger(GL_PIXEL_UNPACK_BUFFER_BINDING);
@@ -36,15 +37,21 @@ record LightVolumeTarget(int texture, int framebuffer) implements AutoCloseable 
                         (ByteBuffer) null);
             } else {
                 glTexParameteri(target, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-                glTexImage3D(target, 0, integer ? GL_R8UI : GL_RGBA16F, width, height, depth, 0,
-                        integer ? GL_RED_INTEGER : GL_RGBA, integer ? GL_UNSIGNED_BYTE : GL_HALF_FLOAT,
-                        (ByteBuffer) null);
+                // Every light-volume reader samples RGB. Apple's driver can render to RGB16F.
+                glTexImage3D(target, 0, rgbVolume ? GL_RGB16F : GL_RGBA16F, width, height, depth, 0,
+                        rgbVolume ? GL_RGB : GL_RGBA, GL_HALF_FLOAT, (ByteBuffer) null);
             }
 
             glBindFramebuffer(GL_DRAW_FRAMEBUFFER, result.framebuffer);
             glFramebufferTexture(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, result.texture, 0);
             glDrawBuffer(GL_COLOR_ATTACHMENT0);
             int status = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
+            if (rgbVolume && status != GL_FRAMEBUFFER_COMPLETE) {
+                // OpenGL 4.1 makes RGB16F texture storage available. Layered rendering to it is optional.
+                glTexImage3D(target, 0, GL_RGBA16F, width, height, depth, 0, GL_RGBA, GL_HALF_FLOAT,
+                        (ByteBuffer) null);
+                status = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
+            }
             if (status != GL_FRAMEBUFFER_COMPLETE) {
                 throw new IllegalStateException("AuramPhoton LPV framebuffer for " + width + "×" + height + "×"
                         + depth + " is incomplete (OpenGL 0x" + Integer.toHexString(status) + ")");
