@@ -39,12 +39,20 @@ uniform float time_noon;
 uniform float eye_skylight;
 
 uniform vec2 view_pixel_size;
+uniform vec2 view_res;
 
 #include "/include/post_processing/tonemap_operators.glsl"
-#include "/include/utility/bicubic.glsl"
+#include "/include/post_processing/bloom_atlas.glsl"
+#include "/include/post_processing/bloom_sampling.glsl"
 #include "/include/utility/color.glsl"
 
 vec3 get_bloom() {
+    if (bloom_small_atlas(view_res)) {
+        vec4 edges = bloom_tile_edges(0, view_res);
+        vec2 uv_src = mix(edges.xy, edges.zw, uv) * view_pixel_size;
+        return sample_bloom_tile(colortex0, uv_src, bloom_tile_centers(edges, view_pixel_size));
+    }
+
     // Upsample last bloom tile. 
 
     vec2 pad_amount = 6.0 * view_pixel_size;

@@ -12,9 +12,7 @@
 
 #include "/include/global.glsl"
 
-#define bloom_tile_scale(i) 0.5 * exp2(-(i))
-#define bloom_tile_offset(i) \
-    vec2(1.0 - exp2(-(i)), float((i) & 1) * (1.0 - 0.5 * exp2(-(i))))
+#include "/include/post_processing/bloom_atlas.glsl"
 
 layout(location = 0) out vec3 bloom_tile;
 
@@ -23,9 +21,9 @@ layout(location = 0) out vec3 bloom_tile;
 in vec2 uv;
 
 uniform vec2 view_pixel_size;
+uniform vec2 view_res;
 
 const float tile_scale = bloom_tile_scale(BLOOM_TILE_INDEX);
-const vec2 tile_offset = bloom_tile_offset(BLOOM_TILE_INDEX);
 
 const float src_tile_scale = bloom_tile_scale(BLOOM_TILE_INDEX + 1);
 const vec2 src_tile_offset = bloom_tile_offset(BLOOM_TILE_INDEX + 1);
@@ -33,16 +31,27 @@ const vec2 src_tile_offset = bloom_tile_offset(BLOOM_TILE_INDEX + 1);
 uniform sampler2D colortex0;
 #define SRC_SAMPLER colortex0
 
-#include "/include/utility/bicubic.glsl"
+#include "/include/post_processing/bloom_sampling.glsl"
 
 void main() {
     ivec2 texel = ivec2(gl_FragCoord.xy);
+
+    const float src_weight = mix(0.25, 0.90, 0.5 * BLOOM_SPREAD);
+    if (bloom_small_atlas(view_res)) {
+        bloom_tile = texelFetch(SRC_SAMPLER, texel, 0).rgb;
+        if (BLOOM_TILE_INDEX < bloom_last_tile(view_res.x)) {
+            vec4 edges = bloom_tile_edges(BLOOM_TILE_INDEX + 1, view_res);
+            vec2 uv_src = mix(edges.xy, edges.zw, uv) * view_pixel_size;
+            vec3 source = sample_bloom_tile(SRC_SAMPLER, uv_src, bloom_tile_centers(edges, view_pixel_size));
+            bloom_tile = bloom_tile * (1.0 - src_weight) + source * src_weight;
+        }
+        return;
+    }
 
     vec2 pad_amount = 3.0 * view_pixel_size * rcp(tile_scale);
     vec2 uv_src = clamp(uv, pad_amount, 1.0 - pad_amount) * src_tile_scale
         + src_tile_offset;
 
-    const float src_weight = mix(0.25, 0.90, 0.5 * BLOOM_SPREAD);
     bloom_tile = texelFetch(SRC_SAMPLER, texel, 0).rgb * (1.0 - src_weight); // Destination tile.
     bloom_tile += BLOOM_UPSAMPLING_FILTER(SRC_SAMPLER, uv_src).rgb * src_weight; // Source tile.
 }

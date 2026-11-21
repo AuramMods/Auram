@@ -10,6 +10,7 @@
 */
 
 #include "/include/global.glsl"
+#include "/include/post_processing/bloom_atlas.glsl"
 
 layout(location = 0) out vec3 bloom_tiles;
 
@@ -22,7 +23,9 @@ uniform sampler2D colortex0;
 uniform vec2 view_res;
 
 void main() {
-    int tile_index = int(-log2(1.0 - uv.x));
+    int tile_index = bloom_small_atlas(view_res)
+        ? bloom_tile_at_x(gl_FragCoord.x, view_res.x)
+        : int(-log2(1.0 - uv.x));
 
     if ((tile_index & 1) == 1) {
         bloom_tiles = texelFetch(colortex0, ivec2(gl_FragCoord.xy), 0).rgb;

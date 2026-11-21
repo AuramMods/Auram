@@ -12,9 +12,7 @@
 
 #include "/include/global.glsl"
 
-#define bloom_tile_scale(i) 0.5 * exp2(-(i))
-#define bloom_tile_offset(i) \
-    vec2(1.0 - exp2(-(i)), float((i) & 1) * (1.0 - 0.5 * exp2(-(i))))
+#include "/include/post_processing/bloom_atlas.glsl"
 
 layout(location = 0) out vec3 bloom_tile;
 
@@ -23,9 +21,7 @@ layout(location = 0) out vec3 bloom_tile;
 in vec2 uv;
 
 uniform vec2 view_pixel_size;
-
-const float tile_scale = bloom_tile_scale(BLOOM_TILE_INDEX);
-const vec2 tile_offset = bloom_tile_offset(BLOOM_TILE_INDEX);
+uniform vec2 view_res;
 
 #if BLOOM_TILE_INDEX == 0
 // Initial tile reads TAA output directly
@@ -41,91 +37,44 @@ uniform sampler2D colortex0;
 #define SRC_SAMPLER colortex0
 #endif
 
+vec3 bloom_tap(vec2 uv_src, vec2 offset, vec4 centers, bool bounded) {
+    vec2 coord = uv_src + offset * view_pixel_size;
+    if (bounded) coord = clamp(coord, centers.xy, centers.zw);
+    return textureLod(SRC_SAMPLER, coord, 0).rgb;
+}
+
+vec3 downsample_bloom(vec2 uv_src, vec4 centers, bool bounded) {
+    // 6x6 downsampling filter made from overlapping 4x4 box kernels.
+    vec3 color = bloom_tap(uv_src, vec2( 0.0,  0.0), centers, bounded) * 0.125;
+    color += bloom_tap(uv_src, vec2( 1.0,  1.0), centers, bounded) * 0.125;
+    color += bloom_tap(uv_src, vec2(-1.0,  1.0), centers, bounded) * 0.125;
+    color += bloom_tap(uv_src, vec2( 1.0, -1.0), centers, bounded) * 0.125;
+    color += bloom_tap(uv_src, vec2(-1.0, -1.0), centers, bounded) * 0.125;
+    color += bloom_tap(uv_src, vec2( 2.0,  0.0), centers, bounded) * 0.0625;
+    color += bloom_tap(uv_src, vec2(-2.0,  0.0), centers, bounded) * 0.0625;
+    color += bloom_tap(uv_src, vec2( 0.0,  2.0), centers, bounded) * 0.0625;
+    color += bloom_tap(uv_src, vec2( 0.0, -2.0), centers, bounded) * 0.0625;
+    color += bloom_tap(uv_src, vec2( 2.0,  2.0), centers, bounded) * 0.03125;
+    color += bloom_tap(uv_src, vec2(-2.0,  2.0), centers, bounded) * 0.03125;
+    color += bloom_tap(uv_src, vec2( 2.0, -2.0), centers, bounded) * 0.03125;
+    color += bloom_tap(uv_src, vec2(-2.0, -2.0), centers, bounded) * 0.03125;
+    return color;
+}
+
 void main() {
+    if (bloom_small_atlas(view_res)) {
+#if BLOOM_TILE_INDEX == 0
+        vec4 edges = vec4(0.0, 0.0, view_res);
+#else
+        vec4 edges = bloom_tile_edges(BLOOM_TILE_INDEX - 1, view_res);
+#endif
+        vec2 uv_src = mix(edges.xy, edges.zw, uv) * view_pixel_size;
+        bloom_tile = downsample_bloom(uv_src, bloom_tile_centers(edges, view_pixel_size), true);
+        return;
+    }
+
     vec2 pad_amount = 3.0 * view_pixel_size * rcp(src_tile_scale);
     vec2 uv_src = clamp(uv, pad_amount, 1.0 - pad_amount) * src_tile_scale
         + src_tile_offset;
-
-    // 6x6 downsampling filter made from overlapping 4x4 box kernels
-    // As described in "Next Generation Post-Processing in Call of Duty Advanced
-    // Warfare"
-    bloom_tile
-        = textureLod(SRC_SAMPLER, uv_src + vec2(0.0, 0.0) * view_pixel_size, 0)
-              .rgb
-        * 0.125;
-
-    bloom_tile
-        += textureLod(SRC_SAMPLER, uv_src + vec2(1.0, 1.0) * view_pixel_size, 0)
-               .rgb
-        * 0.125;
-    bloom_tile += textureLod(
-                      SRC_SAMPLER,
-                      uv_src + vec2(-1.0, 1.0) * view_pixel_size,
-                      0
-                  )
-                      .rgb
-        * 0.125;
-    bloom_tile += textureLod(
-                      SRC_SAMPLER,
-                      uv_src + vec2(1.0, -1.0) * view_pixel_size,
-                      0
-                  )
-                      .rgb
-        * 0.125;
-    bloom_tile += textureLod(
-                      SRC_SAMPLER,
-                      uv_src + vec2(-1.0, -1.0) * view_pixel_size,
-                      0
-                  )
-                      .rgb
-        * 0.125;
-
-    bloom_tile
-        += textureLod(SRC_SAMPLER, uv_src + vec2(2.0, 0.0) * view_pixel_size, 0)
-               .rgb
-        * 0.0625;
-    bloom_tile += textureLod(
-                      SRC_SAMPLER,
-                      uv_src + vec2(-2.0, 0.0) * view_pixel_size,
-                      0
-                  )
-                      .rgb
-        * 0.0625;
-    bloom_tile
-        += textureLod(SRC_SAMPLER, uv_src + vec2(0.0, 2.0) * view_pixel_size, 0)
-               .rgb
-        * 0.0625;
-    bloom_tile += textureLod(
-                      SRC_SAMPLER,
-                      uv_src + vec2(0.0, -2.0) * view_pixel_size,
-                      0
-                  )
-                      .rgb
-        * 0.0625;
-
-    bloom_tile
-        += textureLod(SRC_SAMPLER, uv_src + vec2(2.0, 2.0) * view_pixel_size, 0)
-               .rgb
-        * 0.03125;
-    bloom_tile += textureLod(
-                      SRC_SAMPLER,
-                      uv_src + vec2(-2.0, 2.0) * view_pixel_size,
-                      0
-                  )
-                      .rgb
-        * 0.03125;
-    bloom_tile += textureLod(
-                      SRC_SAMPLER,
-                      uv_src + vec2(2.0, -2.0) * view_pixel_size,
-                      0
-                  )
-                      .rgb
-        * 0.03125;
-    bloom_tile += textureLod(
-                      SRC_SAMPLER,
-                      uv_src + vec2(-2.0, -2.0) * view_pixel_size,
-                      0
-                  )
-                      .rgb
-        * 0.03125;
+    bloom_tile = downsample_bloom(uv_src, vec4(0.0), false);
 }

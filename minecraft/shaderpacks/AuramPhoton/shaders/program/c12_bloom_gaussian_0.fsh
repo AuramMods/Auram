@@ -11,9 +11,7 @@
 
 #include "/include/global.glsl"
 
-#define bloom_tile_scale(i) 0.5 * exp2(-(i))
-#define bloom_tile_offset(i) \
-    vec2(1.0 - exp2(-(i)), float((i) & 1) * (1.0 - 0.5 * exp2(-(i))))
+#include "/include/post_processing/bloom_atlas.glsl"
 
 layout(location = 0) out vec3 bloom_tiles;
 
@@ -25,10 +23,14 @@ uniform sampler2D colortex0;
 
 uniform vec2 view_res;
 
-const float[5] binomial_weights_9
-    = float[5](0.2734375, 0.21875, 0.109375, 0.03125, 0.00390625);
+#include "/include/post_processing/bloom_gaussian.glsl"
 
 void main() {
+    if (bloom_small_atlas(view_res)) {
+        bloom_tiles = bloom_blur_small_tile(colortex0, view_res, gl_FragCoord.xy, ivec2(1, 0));
+        return;
+    }
+
     ivec2 texel = ivec2(gl_FragCoord.xy);
 
     // Calculate the bounds of the tile containing the fragment

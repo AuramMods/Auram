@@ -14,7 +14,7 @@ vec4 bicubic_weights(float v) {
     return vec4(x, y, z, w) * (1.0 / 6.0);
 }
 
-vec4 bicubic_filter_lod(sampler2D sampler, vec2 coord, int lod) {
+vec4 bicubic_filter_bounded(sampler2D sampler, vec2 coord, int lod, vec4 centers, bool bounded) {
     vec2 res = textureSize(sampler, lod);
     vec2 view_pixel_size = 1.0 / res;
 
@@ -32,6 +32,7 @@ vec4 bicubic_filter_lod(sampler2D sampler, vec2 coord, int lod) {
     vec4 offset = c + vec4(x_weights.yw, y_weights.yw) / s;
 
     offset *= view_pixel_size.xxyy;
+    if (bounded) offset = clamp(offset, centers.xxyy, centers.zzww);
 
     vec4 sample0 = textureLod(sampler, offset.xz, lod);
     vec4 sample1 = textureLod(sampler, offset.yz, lod);
@@ -42,6 +43,10 @@ vec4 bicubic_filter_lod(sampler2D sampler, vec2 coord, int lod) {
     float sy = s.z / (s.z + s.w);
 
     return mix(mix(sample3, sample2, sx), mix(sample1, sample0, sx), sy);
+}
+
+vec4 bicubic_filter_lod(sampler2D sampler, vec2 coord, int lod) {
+    return bicubic_filter_bounded(sampler, coord, lod, vec4(0.0), false);
 }
 
 vec4 bicubic_filter(sampler2D sampler, vec2 coord) {
