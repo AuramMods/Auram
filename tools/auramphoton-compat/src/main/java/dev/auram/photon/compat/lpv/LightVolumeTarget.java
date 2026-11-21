@@ -5,6 +5,26 @@ import java.nio.ByteBuffer;
 import static org.lwjgl.opengl.GL41C.*;
 
 record LightVolumeTarget(int texture, int framebuffer) implements AutoCloseable {
+    static LightVolumeTarget rectangle(int texture) {
+        int saved = glGetInteger(GL_DRAW_FRAMEBUFFER_BINDING);
+        int framebuffer = glGenFramebuffers();
+        glBindFramebuffer(GL_DRAW_FRAMEBUFFER, framebuffer);
+        try {
+            glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_RECTANGLE, texture, 0);
+            glDrawBuffer(GL_COLOR_ATTACHMENT0);
+            int status = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
+            if (status != GL_FRAMEBUFFER_COMPLETE) {
+                throw new IllegalStateException("AuramPhoton shared rectangle framebuffer status 0x" + Integer.toHexString(status));
+            }
+            return new LightVolumeTarget(texture, framebuffer);
+        } catch (RuntimeException | Error e) {
+            glDeleteFramebuffers(framebuffer);
+            throw e;
+        } finally {
+            glBindFramebuffer(GL_DRAW_FRAMEBUFFER, saved);
+        }
+    }
+
     static LightVolumeTarget volume(int side) {
         return allocate(side, side, side, false);
     }

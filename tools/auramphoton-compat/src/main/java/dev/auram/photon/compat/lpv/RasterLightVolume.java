@@ -14,10 +14,14 @@ import net.irisshaders.iris.uniforms.MatrixUniforms;
 import org.joml.Matrix4f;
 import org.joml.Matrix4fc;
 
+import java.io.IOException;
+
 import static org.lwjgl.opengl.GL41C.*;
 
 public final class RasterLightVolume implements AutoCloseable {
     private static RasterLightVolume active;
+    // Iris constructs the pipeline on the render thread. Its constructor mixin claims this allocation.
+    private static PreparedMetal prepared;
 
     private final IrisRenderingPipeline pipeline;
     private final int side;
@@ -30,6 +34,7 @@ public final class RasterLightVolume implements AutoCloseable {
     private final float[] drawMatrix = new float[16];
     private final float[] viewMatrix = new float[16];
     private final float[] camera = new float[3];
+    private final MetalLightVolume metal;
     private LightVolumeTarget occupancy;
     private LightVolumeTarget palette;
     private int fullscreenVao;
@@ -48,25 +53,71 @@ public final class RasterLightVolume implements AutoCloseable {
     private boolean capturing;
     private boolean capturedTerrain;
 
-    private RasterLightVolume(IrisRenderingPipeline pipeline, int side) {
+    private RasterLightVolume(IrisRenderingPipeline pipeline, int side, MetalLightVolume metal) {
         this.pipeline = pipeline;
         this.side = side;
-        atlasColumns = (int) Math.ceil(Math.sqrt(side));
+        this.metal = metal;
+        atlasColumns = atlasColumns(side);
         atlasWidth = atlasColumns * side;
-        atlasHeight = ((side + atlasColumns - 1) / atlasColumns) * side;
+        atlasHeight = atlasHeight(side, atlasColumns);
+    }
+
+    private static int atlasColumns(int side) {
+        return (int) Math.ceil(Math.sqrt(side));
+    }
+
+    private static int atlasHeight(int side, int columns) {
+        return ((side + columns - 1) / columns) * side;
+    }
+
+    public static boolean usesRasterVolume(ProgramSet set) {
+        return set.getShadow().flatMap(ProgramSource::getVertexSource)
+                .filter(source -> source.contains("auram_photon_voxel")).isPresent();
+    }
+
+    private static int volumeSide(ProgramSet set) {
+        return Integer.parseInt(set.getPack().getShaderPackOptions().getOptionValues()
+                .getStringValueOrDefault("VOXEL_VOLUME_SIZE"));
+    }
+
+    public static IrisRenderingPipeline createMetalPipeline(ProgramSet rasterPrograms, ProgramSet metalPrograms) {
+        MetalLightVolume allocation;
+        try {
+            int side = volumeSide(metalPrograms);
+            int columns = atlasColumns(side);
+            ShaderPackSourceAccess sources = (ShaderPackSourceAccess) metalPrograms.getPack();
+            String reprojectionSource = readSource(sources, "/program/lpv/raster_metadata.fsh");
+            allocation = MetalLightVolume.create(side, columns, columns * side, atlasHeight(side, columns), reprojectionSource);
+        } catch (IOException | RuntimeException | LinkageError error) {
+            Iris.logger.warn("AuramPhoton Metal setup failed. Using OpenGL colored lighting. {}", error.toString());
+            return new IrisRenderingPipeline(rasterPrograms);
+        }
+
+        PreparedMetal before = prepared;
+        PreparedMetal current = new PreparedMetal(metalPrograms, allocation);
+        prepared = current;
+        try {
+            return new IrisRenderingPipeline(metalPrograms);
+        } finally {
+            boolean unclaimed = prepared == current;
+            prepared = before;
+            if (unclaimed) allocation.close();
+        }
     }
 
     public static RasterLightVolume create(IrisRenderingPipeline pipeline, ProgramSet set) {
-        boolean usesRasterVolume = set.getShadow().flatMap(ProgramSource::getVertexSource)
-                .filter(source -> source.contains("auram_photon_voxel")).isPresent();
-        if (!usesRasterVolume) return null;
-
-        int side = Integer.parseInt(set.getPack().getShaderPackOptions().getOptionValues()
-                .getStringValueOrDefault("VOXEL_VOLUME_SIZE"));
-        RasterLightVolume volume = new RasterLightVolume(pipeline, side);
+        if (!usesRasterVolume(set)) return null;
+        int side = volumeSide(set);
+        MetalLightVolume metal = null;
+        if (prepared != null && prepared.programs() == set) {
+            metal = prepared.allocation();
+            prepared = null;
+        }
+        RasterLightVolume volume = new RasterLightVolume(pipeline, side, metal);
         try {
             volume.initialize(set);
-            Iris.logger.info("Initialized AuramPhoton raster colored lighting at " + side + "³");
+            Iris.logger.info("Initialized AuramPhoton " + (volume.metal == null ? "raster" : "Metal")
+                    + " colored lighting at " + side + "³");
             return volume;
         } catch (RuntimeException | Error failure) {
             volume.close();
@@ -76,9 +127,13 @@ public final class RasterLightVolume implements AutoCloseable {
 
     private void initialize(ProgramSet set) {
         ShaderPackSourceAccess sources = (ShaderPackSourceAccess) set.getPack();
-        String transportSource = readSource(sources, "/program/lpv/raster_transport.fsh");
         String paletteSource = readSource(sources, "/program/lpv/raster_palette.fsh");
-        transportProgram = LightVolumeShaders.transport(transportSource, atlasColumns);
+        if (metal != null) {
+            transportProgram = metal.reprojectionProgram();
+        } else {
+            transportProgram = LightVolumeShaders.transport(readSource(sources, "/program/lpv/raster_transport.fsh"),
+                    atlasColumns);
+        }
         transportCameraLocation = glGetUniformLocation(transportProgram, "cameraPosition");
         transportViewInverseLocation = glGetUniformLocation(transportProgram, "gbufferModelViewInverse");
 
@@ -87,16 +142,24 @@ public final class RasterLightVolume implements AutoCloseable {
         MatrixUniforms.addMatrixUniforms(builder, set.getPackDirectives());
         transportUniforms = builder.buildUniforms();
 
-        occupancy = LightVolumeTarget.occupancy(atlasWidth, atlasHeight);
-        lights[0] = LightVolumeTarget.volume(side);
-        lights[1] = LightVolumeTarget.volume(side);
-        palette = LightVolumeTarget.palette();
+        if (metal != null) {
+            occupancy = metal.occupancy();
+            lights[0] = metal.light(0);
+            lights[1] = metal.light(1);
+            palette = metal.palette();
+        } else {
+            occupancy = LightVolumeTarget.occupancy(atlasWidth, atlasHeight);
+            lights[0] = LightVolumeTarget.volume(side);
+            lights[1] = LightVolumeTarget.volume(side);
+            palette = LightVolumeTarget.palette();
+        }
         fullscreenVao = glGenVertexArrays();
 
         int paletteProgram = LightVolumeShaders.palette(paletteSource);
         try (DrawState draw = new DrawState(fullscreenVao, false)) {
             for (LightVolumeTarget light : lights) {
-                draw.bind(light.framebuffer(), paletteProgram, side, side);
+                draw.bind(light.framebuffer(), paletteProgram, metal == null ? side : atlasWidth,
+                        metal == null ? side : atlasHeight);
                 glClearBufferfv(GL_COLOR, 0, new float[4]);
             }
             draw.bind(palette.framebuffer(), paletteProgram, 48, 2);
@@ -116,8 +179,8 @@ public final class RasterLightVolume implements AutoCloseable {
         active = volume;
     }
 
-    public static int activeTexture() {
-        return active == null ? 0 : active.lights[active.published].texture();
+    public static int activeTexture(boolean metal) {
+        return active != null && (active.metal != null) == metal ? active.lights[active.published].texture() : 0;
     }
 
     public static void beginShadowCapture() {
@@ -199,6 +262,15 @@ public final class RasterLightVolume implements AutoCloseable {
     private void propagate() {
         capturing = false;
         int next = published ^ 1;
+        if (metal != null) {
+            try (DrawState draw = new DrawState(fullscreenVao, false)) {
+                draw.bind(metal.reprojection().framebuffer(), transportProgram, 4, 1);
+                glDrawArrays(GL_TRIANGLES, 0, 3);
+            }
+            metal.propagate(published);
+            published = next;
+            return;
+        }
         int activeUnit = glGetInteger(GL_ACTIVE_TEXTURE);
         try (DrawState draw = new DrawState(fullscreenVao, false);
                 TextureBinding previous = TextureBinding.bind(0, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, lights[published].texture());
@@ -229,16 +301,22 @@ public final class RasterLightVolume implements AutoCloseable {
         }
     }
 
+    private record PreparedMetal(ProgramSet programs, MetalLightVolume allocation) {}
+
     @Override
     public void close() {
         if (active == this) active = null;
-        if (occupancy != null) occupancy.close();
-        for (LightVolumeTarget light : lights) {
-            if (light != null) light.close();
+        if (metal != null) {
+            metal.close();
+        } else {
+            if (occupancy != null) occupancy.close();
+            for (LightVolumeTarget light : lights) {
+                if (light != null) light.close();
+            }
+            if (palette != null) palette.close();
+            if (transportProgram != 0) glDeleteProgram(transportProgram);
         }
-        if (palette != null) palette.close();
         if (fullscreenVao != 0) glDeleteVertexArrays(fullscreenVao);
         if (occupancyProgram != 0) glDeleteProgram(occupancyProgram);
-        if (transportProgram != 0) glDeleteProgram(transportProgram);
     }
 }

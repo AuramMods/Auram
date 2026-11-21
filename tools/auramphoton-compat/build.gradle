@@ -31,6 +31,29 @@ tasks.withType(JavaCompile).configureEach {
     options.compilerArgs += '-proc:none'
 }
 
+if (providers.gradleProperty('macosMetal').isPresent()) {
+    def jniHeaders = file(new File(System.getProperty('java.home'), 'include'))
+    def source = file('src/main/native/MetalLightVolume.m')
+    def binary = layout.buildDirectory.file('native/macos-arm64/libauramphoton-metal.dylib')
+    def compileMacosMetal = tasks.register('compileMacosMetal', Exec) {
+        inputs.file(source)
+        outputs.file(binary)
+        doFirst {
+            binary.get().asFile.parentFile.mkdirs()
+        }
+        commandLine 'xcrun', 'clang', '-arch', 'arm64', '-mmacosx-version-min=11.0',
+            '-dynamiclib', '-O2', '-fobjc-arc',
+            '-I', jniHeaders, '-I', new File(jniHeaders, 'darwin'),
+            '-framework', 'Foundation', '-framework', 'Metal', '-framework', 'IOSurface',
+            '-framework', 'OpenGL', source, '-o', binary.get().asFile
+    }
+    tasks.named('processResources') {
+        from(compileMacosMetal) {
+            into 'dev/auram/photon/compat/lpv'
+        }
+    }
+}
+
 jar {
     manifest {
         attributes 'MixinConfigs': 'auramphoton_compat.mixins.json'

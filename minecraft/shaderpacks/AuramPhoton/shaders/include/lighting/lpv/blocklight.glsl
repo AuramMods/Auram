@@ -5,7 +5,26 @@
 
 vec3 read_lpv_linear(vec3 pos) {
 #ifdef AURAM_PHOTON_RASTER_LPV
+#ifdef AURAM_PHOTON_METAL_LPV
+    const int side = VOXEL_VOLUME_SIZE;
+    const int columns = int(ceil(sqrt(float(side))));
+    vec3 center = clamp(pos * float(side), vec3(0.5), vec3(float(side) - 0.5));
+    // Apple's native 3D texture filter rounds each coordinate to 1/256 texel.
+    center = floor(center * 256.0 + 0.5) * (1.0 / 256.0);
+    float z = center.z - 0.5;
+    int low = int(z);
+    int high = min(low + 1, side - 1);
+    ivec2 lowTile = ivec2(low % columns, low / columns) * side;
+    ivec2 highTile = ivec2(high % columns, high / columns) * side;
+    vec3 a = texture(auram_photon_metal_light, vec2(lowTile) + center.xy).rgb;
+    vec3 b = texture(auram_photon_metal_light, vec2(highTile) + center.xy).rgb;
+    vec3 rgb = mix(a, b, fract(z));
+    uvec3 exponents = floatBitsToUint(rgb) & uvec3(0x7f800000u);
+    vec3 halfStep = uintBitsToFloat(max(exponents, uvec3(113u << 23u)) - uvec3(10u << 23u));
+    return roundEven(rgb / halfStep) * halfStep;
+#else
     return texture(auram_photon_light, pos).rgb;
+#endif
 #else
     if ((frameCounter & 1) == 0) {
         return texture(light_sampler_a, pos).rgb;

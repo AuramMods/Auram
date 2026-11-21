@@ -2,11 +2,15 @@ package dev.auram.photon.compat.mixin;
 
 import com.google.common.collect.ImmutableList;
 import dev.auram.photon.compat.DistantHorizonsState;
+import dev.auram.photon.compat.lpv.MetalLightVolume;
+import dev.auram.photon.compat.lpv.RasterLightVolume;
 import net.irisshaders.iris.Iris;
 import net.irisshaders.iris.helpers.StringPair;
+import net.irisshaders.iris.pipeline.IrisRenderingPipeline;
 import net.irisshaders.iris.pipeline.WorldRenderingPipeline;
 import net.irisshaders.iris.shaderpack.ShaderPack;
 import net.irisshaders.iris.shaderpack.materialmap.NamespacedId;
+import net.irisshaders.iris.shaderpack.programs.ProgramSet;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -54,14 +58,17 @@ abstract class IrisDistantHorizonsMixin {
         return "AuramPhoton".equals(name) || "AuramPhoton.zip".equals(name);
     }
 
+    @Unique
+    private static boolean auramPhoton$hasLoadedPack() {
+        return currentPack != null && auramPhoton$loadedPack != null && currentPack == auramPhoton$loadedPack.get()
+                && auramPhoton$isAuramPhoton(currentPackName);
+    }
+
     @Inject(method = "createPipeline", at = @At("HEAD"))
     private static void auramPhoton$refreshDistantHorizons(
             NamespacedId dimension, CallbackInfoReturnable<WorldRenderingPipeline> callback
     ) {
-        if (currentPack == null || auramPhoton$loadedPack == null || currentPack != auramPhoton$loadedPack.get()
-                || !auramPhoton$isAuramPhoton(currentPackName)) {
-            return;
-        }
+        if (!auramPhoton$hasLoadedPack()) return;
 
         // DH can finish initialization after Oculus constructs the ShaderPack.
         // Reuse its open source path and saved options before the pipeline reads it.
@@ -91,5 +98,26 @@ abstract class IrisDistantHorizonsMixin {
         } catch (IOException | IllegalStateException e) {
             Iris.logger.error("Failed to refresh AuramPhoton after Distant Horizons changed state", e);
         }
+    }
+
+    @Redirect(method = "createPipeline", at = @At(
+            value = "NEW", target = "net/irisshaders/iris/pipeline/IrisRenderingPipeline"))
+    private static IrisRenderingPipeline auramPhoton$chooseLightVolume(ProgramSet programs, NamespacedId dimension) {
+        if (!MetalLightVolume.requested() || !auramPhoton$hasLoadedPack() || !RasterLightVolume.usesRasterVolume(programs)) {
+            return new IrisRenderingPipeline(programs);
+        }
+
+        ProgramSet metalPrograms;
+        try {
+            ImmutableList<StringPair> environment = ImmutableList.<StringPair>builder()
+                    .addAll(auramPhoton$defines)
+                    .add(new StringPair("AURAM_PHOTON_METAL_LPV", ""))
+                    .build();
+            metalPrograms = new ShaderPack(auramPhoton$root, auramPhoton$options, environment).getProgramSet(dimension);
+        } catch (IOException | RuntimeException error) {
+            Iris.logger.warn("AuramPhoton Metal shader preparation failed. Using OpenGL colored lighting. {}", error.toString());
+            return new IrisRenderingPipeline(programs);
+        }
+        return RasterLightVolume.createMetalPipeline(programs, metalPrograms);
     }
 }

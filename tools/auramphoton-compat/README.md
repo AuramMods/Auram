@@ -16,3 +16,11 @@ DH generic objects support both direct and instanced draws through Oculus. On ma
 Oculus sometimes preprocesses the pack before Distant Horizons exposes its enabled state. The module reconciles the pack's shader environment with the live DH configuration immediately before Oculus builds a dimension pipeline. It reuses the existing pack root and shader options, including when the shader pack is loaded from a ZIP.
 
 Install the module for AuramPhoton's macOS Colored Lights setting. It replays the Embeddium shadow terrain vertices as points into a 2D integer atlas indexed by voxel coordinates, uses the pack's emission and tint palette, and performs the same incremental propagation through a pair of layered light textures. Shader reloads and dimension changes recreate the volume with the selected world pipeline. The Windows path uses Photon's compute shaders by default. The shader's `FORCE_APPLE_COMPAT` option selects the raster passes for cross-driver comparisons.
+
+## Experimental Metal colored-light transport
+
+On Apple Silicon, append `-PmacosMetal` to the build command to bundle the native library using Xcode's Clang. Install that jar with the matching AuramPhoton shader pack, and add `-Dauramphoton.metal=true` to the client JVM arguments. The Metal path uses the same occupied voxels, emission and tint palette, volume settings, and previous-frame camera reprojection. It uses one shared rectangle texture for the current light volume.
+
+The companion attempts to load Metal, attach the shared surfaces, and compile the reprojection stage before choosing that shader variant. If setup fails, the client logs the cause and initializes the OpenGL colored-light path for the same shader options. Omit the JVM argument to use the usual backend. The build command without `-PmacosMetal` works without Xcode and produces a portable jar.
+
+The companion fixes the Distant Horizons 2.4.5-b polygon mode query. OpenGL writes both face modes. The companion supplies space for both values and preserves DH's existing restore behavior.

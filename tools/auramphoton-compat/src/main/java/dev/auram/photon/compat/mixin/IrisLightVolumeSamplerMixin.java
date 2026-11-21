@@ -16,8 +16,13 @@ abstract class IrisLightVolumeSamplerMixin {
     @Inject(method = "addCustomTextures", at = @At("HEAD"))
     private static void auramPhoton$addLightVolume(SamplerHolder samplers,
             Object2ObjectMap<String, TextureAccess> textures, CallbackInfo callback) {
+        if (samplers.hasSampler("auram_photon_metal_light")) {
+            samplers.addDynamicSampler(TextureType.TEXTURE_RECTANGLE, () -> RasterLightVolume.activeTexture(true), null,
+                    "auram_photon_metal_light");
+        }
         if (samplers.hasSampler("auram_photon_light")) {
-            samplers.addDynamicSampler(TextureType.TEXTURE_3D, RasterLightVolume::activeTexture, null, "auram_photon_light");
+            samplers.addDynamicSampler(TextureType.TEXTURE_3D, () -> RasterLightVolume.activeTexture(false), null,
+                    "auram_photon_light");
         }
     }
 }

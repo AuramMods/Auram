@@ -59,5 +59,9 @@ void main() {
 
 // Register the separately compiled companion stage in Oculus's include graph.
 #if 0
+#ifdef AURAM_PHOTON_METAL_LPV
+#include "/program/lpv/raster_metadata.fsh"
+#else
 #include "/program/lpv/raster_transport.fsh"
+#endif
 #endif
