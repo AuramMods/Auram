@@ -9,7 +9,7 @@ gradle jar -PprismLibraries="/path/to/PrismLauncher/libraries" \
 
 The output is under `build/libs`. For isolated validation, use it with Forge 47.4.10, Embeddium 0.3.31, Oculus 1.8.0, and optionally Distant Horizons 2.4.5-b. Use the `AuramPhoton` folder or `AuramPhoton.zip` as the shader pack.
 
-Oculus and DH each manage their own depth attachments during framebuffer recreation. The companion keeps DH targets out of Oculus’s vanilla depth rebinding, so a resize cannot leave Minecraft’s stencil texture attached beside DH’s depth texture.
+Oculus and DH each manage their own depth attachments during framebuffer recreation. The companion keeps DH targets out of Oculus’s vanilla depth rebinding, so a resize cannot leave Minecraft’s stencil texture attached beside DH’s depth texture. The companion also updates the DH viewport for the first draw after a resize and releases the color and depth textures DH replaces.
 
 Oculus sometimes preprocesses the pack before Distant Horizons exposes its enabled state. The module reconciles the pack's shader environment with the live DH configuration immediately before Oculus builds a dimension pipeline. It reuses the existing pack root and shader options, including when the shader pack is loaded from a ZIP.
 
