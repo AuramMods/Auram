@@ -205,6 +205,7 @@ const bool colortex11MipmapEnabled = true;
 #include "/include/surface/rain_puddles.glsl"
 #include "/include/utility/bicubic.glsl"
 #include "/include/utility/color.glsl"
+#include "/include/fog/warp_mist.glsl"
 #include "/include/utility/encoding.glsl"
 #include "/include/utility/space_conversion.glsl"
 
@@ -765,4 +766,11 @@ void main() {
         fragment_color = purkinje_shift(fragment_color, light_levels);
 #endif // D4_NEEDS(D4_PASS_COMPOSE)
     }
+
+#if D4_NEEDS(D4_PASS_COMPOSE) && defined DISTANT_HORIZONS && defined AURAM_PHOTON_DH_WARP_MIST
+    // Fog DH geometry and its sky background before shading nearer translucent layers.
+    if (auramWarpMist > 0.0 && (is_lod || depth == 1.0)) {
+        fragment_color = mix(fragment_color, warp_mist_color(), auramWarpMist);
+    }
+#endif
 }

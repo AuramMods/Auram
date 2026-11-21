@@ -22,6 +22,8 @@ DH generic objects support both direct and instanced draws through Oculus. On ma
 
 Oculus sometimes preprocesses the pack before Distant Horizons exposes its enabled state. The module reconciles the pack's shader environment with the live DH configuration immediately before Oculus builds a dimension pipeline. It reuses the existing pack root and shader options, including when the shader pack is loaded from a ZIP.
 
+With Thaumaturge installed, AuramPhoton reads its live Warp Mist strength and applies the mist to DH terrain, water, and the sky behind them. It honors the player's saved DH fog setting while Oculus handles the shader pipeline. Nearby vanilla terrain retains its usual shading.
+
 Install the module for AuramPhoton's macOS Colored Lights setting. It replays the Embeddium shadow terrain vertices as points into a 2D integer atlas indexed by voxel coordinates, uses the pack's emission and tint palette, and performs the same incremental propagation through a pair of layered light textures. Shader reloads and dimension changes recreate the volume with the selected world pipeline. The Windows path uses Photon's compute shaders by default. The shader's `FORCE_APPLE_COMPAT` option selects the raster passes for cross-driver comparisons.
 
 ## Experimental Metal colored-light transport

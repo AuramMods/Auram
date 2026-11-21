@@ -144,6 +144,7 @@ uniform float time_midnight;
 
 #include "/include/misc/material_masks.glsl"
 #include "/include/utility/color.glsl"
+#include "/include/fog/warp_mist.glsl"
 #include "/include/utility/encoding.glsl"
 #include "/include/utility/fast_math.glsl"
 #include "/include/utility/space_conversion.glsl"
@@ -406,6 +407,12 @@ void main() {
                         direction_world
                     )
                 );
+
+#if defined DISTANT_HORIZONS && defined AURAM_PHOTON_DH_WARP_MIST
+                if (auramWarpMist > 0.0) {
+                    water_color.rgb = mix(water_color.rgb, warp_mist_color() * water_color.a, auramWarpMist);
+                }
+#endif
 
 #ifdef VOXY
                 // Account for darkening by alpha of water surface

@@ -2,6 +2,7 @@ package dev.auram.photon.compat.mixin;
 
 import com.google.common.collect.ImmutableList;
 import dev.auram.photon.compat.DistantHorizonsState;
+import dev.auram.photon.compat.WarpMistState;
 import dev.auram.photon.compat.lpv.MetalLightVolume;
 import dev.auram.photon.compat.lpv.RasterLightVolume;
 import net.irisshaders.iris.Iris;
@@ -40,10 +41,13 @@ abstract class IrisDistantHorizonsMixin {
             Path root, Map<String, String> options, ImmutableList<StringPair> defines, String packName
     ) throws IOException {
         if (auramPhoton$isAuramPhoton(packName)) {
-            defines = ImmutableList.<StringPair>builder()
+            ImmutableList.Builder<StringPair> auramDefines = ImmutableList.<StringPair>builder()
                     .addAll(defines)
-                    .add(new StringPair("AURAM_PHOTON_LPV_BACKEND", ""))
-                    .build();
+                    .add(new StringPair("AURAM_PHOTON_LPV_BACKEND", ""));
+            if (WarpMistState.available()) {
+                auramDefines.add(new StringPair("AURAM_PHOTON_DH_WARP_MIST", ""));
+            }
+            defines = auramDefines.build();
         }
         ShaderPack pack = new ShaderPack(root, options, defines);
         auramPhoton$loadedPack = new WeakReference<>(pack);
