@@ -40,30 +40,33 @@ const float K = 12.5; // Light-meter calibration constant
 const float sensitivity = 100.0; // ISO
 const float calibration = exp2(AUTO_EXPOSURE_BIAS) * K / sensitivity / 1.2;
 
-const float min_luminance
-    = get_luminance_from_exposure(get_exposure_from_ev_100(AUTO_EXPOSURE_MIN));
-const float max_luminance
-    = get_luminance_from_exposure(get_exposure_from_ev_100(AUTO_EXPOSURE_MAX));
+const float min_luminance = get_luminance_from_exposure(
+    get_exposure_from_ev_100(min(AUTO_EXPOSURE_MIN, AUTO_EXPOSURE_MAX))
+);
+const float max_luminance = get_luminance_from_exposure(
+    get_exposure_from_ev_100(max(AUTO_EXPOSURE_MIN, AUTO_EXPOSURE_MAX))
+);
 const float min_log_luminance = log2(min_luminance);
 const float max_log_luminance = log2(max_luminance);
 
 #ifdef MANUAL_EXPOSURE_USE_SCREEN_BRIGHTNESS
 float manual_exposure_value
-    = mix(min_luminance, max_luminance, screenBrightness);
+    = mix(AUTO_EXPOSURE_MIN, AUTO_EXPOSURE_MAX, screenBrightness);
 #else
 const float manual_exposure_value = MANUAL_EXPOSURE_VALUE;
 #endif
 
 float get_bin_from_luminance(float luminance) {
+    const float log_luminance_range
+        = max_log_luminance - min_log_luminance;
+    if (luminance <= min_luminance || log_luminance_range == 0.0) {
+        return 0.0;
+    }
+
     const float bin_count = HISTOGRAM_BINS;
-    const float rcp_log_luminance_range
-        = 1.0 / (max_log_luminance - min_log_luminance);
+    const float rcp_log_luminance_range = 1.0 / log_luminance_range;
     const float scaled_min_log_luminance
         = min_log_luminance * rcp_log_luminance_range;
-
-    if (luminance <= min_luminance) {
-        return 0.0; // Avoid taking log of 0
-    }
 
     float log_luminance = clamp01(
         log2(luminance) * rcp_log_luminance_range - scaled_min_log_luminance
@@ -103,7 +106,7 @@ void build_histogram(out float[HISTOGRAM_BINS] pdf) {
             float bin = get_bin_from_luminance(luminance);
 
             uint bin0 = uint(bin);
-            uint bin1 = bin0 + 1;
+            uint bin1 = min(bin0 + 1u, uint(HISTOGRAM_BINS - 1));
 
             float weight1 = fract(bin);
             float weight0 = 1.0 - weight1;
