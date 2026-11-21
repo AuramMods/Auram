@@ -719,7 +719,13 @@ void main() {
     // Refraction data
 
 #if defined PROGRAM_GBUFFERS_WATER
-    refraction_data.xy = split_2x8(normal_tangent.x * 0.5 + 0.5);
-    refraction_data.zw = split_2x8(normal_tangent.y * 0.5 + 0.5);
+    if (REFRACTION != REFRACTION_WATER_ONLY || is_water) {
+        refraction_data = vec4(
+            split_2x8(normal_tangent.x * 0.5 + 0.5),
+            split_2x8(normal_tangent.y * 0.5 + 0.5)
+        );
+    } else {
+        refraction_data = vec4(0.0);
+    }
 #endif
 }
