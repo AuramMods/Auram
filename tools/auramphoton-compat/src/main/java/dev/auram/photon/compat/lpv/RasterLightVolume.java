@@ -21,6 +21,9 @@ public final class RasterLightVolume implements AutoCloseable {
 
     private final IrisRenderingPipeline pipeline;
     private final int side;
+    private final int atlasColumns;
+    private final int atlasWidth;
+    private final int atlasHeight;
     private final LightVolumeTarget[] lights = new LightVolumeTarget[2];
     private final Matrix4f shadowInverse = new Matrix4f();
     private final float[] shadowMatrix = new float[16];
@@ -48,6 +51,9 @@ public final class RasterLightVolume implements AutoCloseable {
     private RasterLightVolume(IrisRenderingPipeline pipeline, int side) {
         this.pipeline = pipeline;
         this.side = side;
+        atlasColumns = (int) Math.ceil(Math.sqrt(side));
+        atlasWidth = atlasColumns * side;
+        atlasHeight = ((side + atlasColumns - 1) / atlasColumns) * side;
     }
 
     public static RasterLightVolume create(IrisRenderingPipeline pipeline, ProgramSet set) {
@@ -72,7 +78,7 @@ public final class RasterLightVolume implements AutoCloseable {
         ShaderPackSourceAccess sources = (ShaderPackSourceAccess) set.getPack();
         String transportSource = readSource(sources, "/program/lpv/raster_transport.fsh");
         String paletteSource = readSource(sources, "/program/lpv/raster_palette.fsh");
-        transportProgram = LightVolumeShaders.transport(transportSource);
+        transportProgram = LightVolumeShaders.transport(transportSource, atlasColumns);
         transportCameraLocation = glGetUniformLocation(transportProgram, "cameraPosition");
         transportViewInverseLocation = glGetUniformLocation(transportProgram, "gbufferModelViewInverse");
 
@@ -81,9 +87,9 @@ public final class RasterLightVolume implements AutoCloseable {
         MatrixUniforms.addMatrixUniforms(builder, set.getPackDirectives());
         transportUniforms = builder.buildUniforms();
 
-        occupancy = LightVolumeTarget.volume(side, true);
-        lights[0] = LightVolumeTarget.volume(side, false);
-        lights[1] = LightVolumeTarget.volume(side, false);
+        occupancy = LightVolumeTarget.occupancy(atlasWidth, atlasHeight);
+        lights[0] = LightVolumeTarget.volume(side);
+        lights[1] = LightVolumeTarget.volume(side);
         palette = LightVolumeTarget.palette();
         fullscreenVao = glGenVertexArrays();
 
@@ -132,9 +138,9 @@ public final class RasterLightVolume implements AutoCloseable {
         }
     }
 
-    public static void replayTerrain(int mode, long counts, int type, long indices, int draws, long baseVertices) {
+    public static void replayTerrain(long counts, int type, long indices, int draws, long baseVertices) {
         if (active != null && active.capturing && active.occupancyProgram != 0 && draws > 0) {
-            active.replay(mode, counts, type, indices, draws, baseVertices);
+            active.replay(counts, type, indices, draws, baseVertices);
         }
     }
 
@@ -142,7 +148,7 @@ public final class RasterLightVolume implements AutoCloseable {
         capturing = false;
         shadowInverse.set(ShadowRenderer.MODELVIEW).invert().get(shadowMatrix);
         try (DrawState draw = new DrawState(0, false)) {
-            draw.bind(occupancy.framebuffer(), transportProgram, side, side);
+            draw.bind(occupancy.framebuffer(), transportProgram, atlasWidth, atlasHeight);
             glClearBufferuiv(GL_COLOR, 0, new int[4]);
             transportUniforms.update();
             ProgramUniforms.clearActiveUniforms();
@@ -159,7 +165,7 @@ public final class RasterLightVolume implements AutoCloseable {
         if (occupancyProgram == 0) {
             // Oculus first patches its terrain programs at the start of the terrain pass.
             String source = pipeline.getSodiumTerrainPipeline().getShadowVertexShaderSource().orElseThrow();
-            occupancyProgram = LightVolumeShaders.occupancy(source, side);
+            occupancyProgram = LightVolumeShaders.occupancy(source, side, atlasColumns, atlasWidth, atlasHeight);
             modelViewLocation = glGetUniformLocation(occupancyProgram, "iris_ModelViewMatrix");
             regionOffsetLocation = glGetUniformLocation(occupancyProgram, "u_RegionOffset");
             shadowInverseLocation = glGetUniformLocation(occupancyProgram, "shadowModelViewInverse");
@@ -178,10 +184,11 @@ public final class RasterLightVolume implements AutoCloseable {
         glProgramUniform3fv(occupancyProgram, cameraLocation, camera);
     }
 
-    private void replay(int mode, long counts, int type, long indices, int draws, long baseVertices) {
+    private void replay(long counts, int type, long indices, int draws, long baseVertices) {
         try (DrawState draw = new DrawState(0, true)) {
-            draw.bind(occupancy.framebuffer(), occupancyProgram, side, side);
-            nglMultiDrawElementsBaseVertex(mode, counts, type, indices, draws, baseVertices);
+            draw.bind(occupancy.framebuffer(), occupancyProgram, atlasWidth, atlasHeight);
+            // Each vertex records its classified voxel. Point draws write it directly into the atlas.
+            nglMultiDrawElementsBaseVertex(GL_POINTS, counts, type, indices, draws, baseVertices);
         }
         if (!capturedTerrain) {
             capturedTerrain = true;
@@ -195,7 +202,7 @@ public final class RasterLightVolume implements AutoCloseable {
         int activeUnit = glGetInteger(GL_ACTIVE_TEXTURE);
         try (DrawState draw = new DrawState(fullscreenVao, false);
                 TextureBinding previous = TextureBinding.bind(0, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, lights[published].texture());
-                TextureBinding blocks = TextureBinding.bind(1, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, occupancy.texture());
+                TextureBinding blocks = TextureBinding.bind(1, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, occupancy.texture());
                 TextureBinding colors = TextureBinding.bind(2, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, palette.texture())) {
             draw.bind(lights[next].framebuffer(), transportProgram, side, side);
             glDrawArraysInstanced(GL_TRIANGLES, 0, 3, side);

@@ -99,7 +99,12 @@ vec4 evaluate_lpv_voxel(sampler3D light_sampler, ivec3 pos) {
         - current_center + previous_center
     );
 
+#ifdef LPV_VOXEL_ATLAS
+    ivec2 tile = ivec2(pos.z % voxel_atlas_columns, pos.z / voxel_atlas_columns);
+    uint block_id = texelFetch(voxel_sampler, pos.xy + tile * voxel_volume_size.xy, 0).x;
+#else
     uint block_id = texelFetch(voxel_sampler, pos, 0).x;
+#endif
     bool transparent = block_id == 0u || block_id >= 128u;
     block_id = block_id & 127u;
     vec3 light_avg = gather_light(light_sampler, previous_pos);

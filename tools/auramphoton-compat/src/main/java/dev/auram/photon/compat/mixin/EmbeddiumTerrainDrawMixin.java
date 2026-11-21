@@ -12,6 +12,6 @@ abstract class EmbeddiumTerrainDrawMixin {
             target = "Lorg/lwjgl/opengl/GL32C;nglMultiDrawElementsBaseVertex(IJIJIJ)V"))
     private void auramPhoton$captureShadowTerrain(int mode, long counts, int type, long indices, int draws, long baseVertices) {
         GL32C.nglMultiDrawElementsBaseVertex(mode, counts, type, indices, draws, baseVertices);
-        RasterLightVolume.replayTerrain(mode, counts, type, indices, draws, baseVertices);
+        RasterLightVolume.replayTerrain(counts, type, indices, draws, baseVertices);
     }
 }

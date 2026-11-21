@@ -5,8 +5,12 @@ import java.nio.ByteBuffer;
 import static org.lwjgl.opengl.GL41C.*;
 
 record LightVolumeTarget(int texture, int framebuffer) implements AutoCloseable {
-    static LightVolumeTarget volume(int side, boolean integer) {
-        return allocate(side, side, side, integer);
+    static LightVolumeTarget volume(int side) {
+        return allocate(side, side, side, false);
+    }
+
+    static LightVolumeTarget occupancy(int width, int height) {
+        return allocate(width, height, 0, true);
     }
 
     static LightVolumeTarget palette() {
@@ -27,7 +31,9 @@ record LightVolumeTarget(int texture, int framebuffer) implements AutoCloseable 
             glTexParameteri(target, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
             glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
             if (depth == 0) {
-                glTexImage2D(target, 0, GL_RGBA16F, width, height, 0, GL_RGBA, GL_HALF_FLOAT, (ByteBuffer) null);
+                glTexImage2D(target, 0, integer ? GL_R8UI : GL_RGBA16F, width, height, 0,
+                        integer ? GL_RED_INTEGER : GL_RGBA, integer ? GL_UNSIGNED_BYTE : GL_HALF_FLOAT,
+                        (ByteBuffer) null);
             } else {
                 glTexParameteri(target, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
                 glTexImage3D(target, 0, integer ? GL_R8UI : GL_RGBA16F, width, height, depth, 0,

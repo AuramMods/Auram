@@ -31,47 +31,56 @@ final class LightVolumeShaders {
             }
             """;
 
-    private static final String VOXEL_POINTS = VERSION + """
-            layout(triangles) in;
-            layout(points, max_vertices = 3) out;
-            flat in ivec4 auram_photon_voxel[];
-            flat out uint material;
+    private static final String OCCUPANCY_VERTEX = """
+            flat out uint auram_photon_material;
             uniform int volume_side;
+            uniform int atlas_columns;
+            uniform vec2 atlas_size;
+
             void main() {
-                for (int i = 0; i < 3; ++i) {
-                    ivec4 voxel = auram_photon_voxel[i];
-                    if (voxel.w == 0 || any(lessThan(voxel.xyz, ivec3(0)))
-                            || any(greaterThanEqual(voxel.xyz, ivec3(volume_side)))) continue;
-                    vec2 ndc = (vec2(voxel.xy) + 0.5) * (2.0 / float(volume_side)) - 1.0;
-                    gl_Position = vec4(ndc, 0, 1);
-                    gl_PointSize = 1.0;
-                    gl_Layer = voxel.z;
-                    material = uint(voxel.w);
-                    EmitVertex();
-                    EndPrimitive();
+                auram_photon_shadow_vertex();
+                ivec4 voxel = auram_photon_voxel;
+                if (voxel.w == 0 || any(lessThan(voxel.xyz, ivec3(0)))
+                        || any(greaterThanEqual(voxel.xyz, ivec3(volume_side)))) {
+                    gl_Position = vec4(-2, -2, -2, 1);
+                    return;
                 }
+
+                ivec2 tile = ivec2(voxel.z % atlas_columns, voxel.z / atlas_columns);
+                vec2 pixel = vec2(voxel.xy + tile * volume_side) + 0.5;
+                gl_Position = vec4(2.0 * pixel / atlas_size - 1.0, 0, 1);
+                gl_PointSize = 1.0;
+                auram_photon_material = uint(voxel.w);
             }
             """;
 
     private static final String VOXEL_MATERIAL = VERSION + """
-            flat in uint material;
+            flat in uint auram_photon_material;
             layout(location = 0) out uint occupancy;
-            void main() { occupancy = material; }
+            void main() { occupancy = auram_photon_material; }
             """;
 
     private LightVolumeShaders() {}
 
-    static int occupancy(String vertex, int side) {
-        int program = link("occupancy", vertex, VOXEL_POINTS, VOXEL_MATERIAL, true);
+    static int occupancy(String vertex, int side, int columns, int width, int height) {
+        // Keep Oculus's attribute decoding and Photon voxel classification in the replay.
+        int versionEnd = vertex.indexOf('\n') + 1;
+        String voxelVertex = vertex.substring(0, versionEnd)
+                + "#define main auram_photon_shadow_vertex\n"
+                + vertex.substring(versionEnd) + "\n#undef main\n" + OCCUPANCY_VERTEX;
+        int program = link("occupancy", voxelVertex, null, VOXEL_MATERIAL, true);
         glProgramUniform1i(program, glGetUniformLocation(program, "volume_side"), side);
+        glProgramUniform1i(program, glGetUniformLocation(program, "atlas_columns"), columns);
+        glProgramUniform2f(program, glGetUniformLocation(program, "atlas_size"), width, height);
         return program;
     }
 
-    static int transport(String fragment) {
+    static int transport(String fragment, int columns) {
         int program = link("transport", FULLSCREEN_VERTEX, VOLUME_LAYERS, VERSION + fragment, false);
         glProgramUniform1i(program, glGetUniformLocation(program, "previous_light"), 0);
         glProgramUniform1i(program, glGetUniformLocation(program, "voxel_sampler"), 1);
         glProgramUniform1i(program, glGetUniformLocation(program, "light_data_sampler"), 2);
+        glProgramUniform1i(program, glGetUniformLocation(program, "voxel_atlas_columns"), columns);
         return program;
     }
 
