@@ -77,21 +77,25 @@ vec3 max_of(vec3 a, vec3 b, vec3 c, vec3 d, vec3 f) {
 vec3 cas_filter(sampler2D sampler, ivec2 texel, const float sharpness) {
 #ifndef CAS
     return display_eotf(texelFetch(sampler, texel, 0).rgb);
-#endif
+#else
+    ivec2 last_texel = textureSize(sampler, 0) - 1;
+    texel = clamp(texel, ivec2(0), last_texel);
+    ivec2 lower = max(texel - 1, ivec2(0));
+    ivec2 upper = min(texel + 1, last_texel);
 
     // Fetch 3x3 neighborhood
     // a b c
     // d e f
     // g h i
-    vec3 a = texelFetch(sampler, texel + ivec2(-1, -1), 0).rgb;
-    vec3 b = texelFetch(sampler, texel + ivec2(0, -1), 0).rgb;
-    vec3 c = texelFetch(sampler, texel + ivec2(1, -1), 0).rgb;
-    vec3 d = texelFetch(sampler, texel + ivec2(-1, 0), 0).rgb;
+    vec3 a = texelFetch(sampler, lower, 0).rgb;
+    vec3 b = texelFetch(sampler, ivec2(texel.x, lower.y), 0).rgb;
+    vec3 c = texelFetch(sampler, ivec2(upper.x, lower.y), 0).rgb;
+    vec3 d = texelFetch(sampler, ivec2(lower.x, texel.y), 0).rgb;
     vec3 e = texelFetch(sampler, texel, 0).rgb;
-    vec3 f = texelFetch(sampler, texel + ivec2(1, 0), 0).rgb;
-    vec3 g = texelFetch(sampler, texel + ivec2(-1, 1), 0).rgb;
-    vec3 h = texelFetch(sampler, texel + ivec2(0, 1), 0).rgb;
-    vec3 i = texelFetch(sampler, texel + ivec2(1, 1), 0).rgb;
+    vec3 f = texelFetch(sampler, ivec2(upper.x, texel.y), 0).rgb;
+    vec3 g = texelFetch(sampler, ivec2(lower.x, upper.y), 0).rgb;
+    vec3 h = texelFetch(sampler, ivec2(texel.x, upper.y), 0).rgb;
+    vec3 i = texelFetch(sampler, upper, 0).rgb;
 
     // Convert to sRGB before performing CAS
     a = display_eotf(a);
@@ -112,7 +116,8 @@ vec3 cas_filter(sampler2D sampler, ivec2 texel, const float sharpness) {
     max_color += max_of(max_color, a, c, g, i);
 
     // Smooth minimum distance to the signal limit divided by smooth max
-    vec3 w = clamp01(min(min_color, 2.0 - max_color) / max_color);
+    vec3 signal_max = mix(max_color, vec3(1.0), equal(max_color, vec3(0.0)));
+    vec3 w = clamp01(min(min_color, 2.0 - max_color) / signal_max);
     w = 1.0 - sqr(1.0 - w); // Shaping amount of sharpening
     w *= -1.0 / mix(8.0, 5.0, sharpness);
 
@@ -122,6 +127,7 @@ vec3 cas_filter(sampler2D sampler, ivec2 texel, const float sharpness) {
     // 0 w 0
     vec3 weight_sum = 1.0 + 4.0 * w;
     return clamp01((b + d + f + h) * w + e) / weight_sum;
+#endif
 }
 
 void draw_iris_required_error_message() {
