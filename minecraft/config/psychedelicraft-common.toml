@@ -1,0 +1,264 @@
+
+[worldGeneration]
+	#Add the original crop and drug trades to the native novice farmer pool.
+	farmerDrugDeals = true
+	#Add mod supplies to the five original native village chest profiles.
+	villageChests = true
+	#Add mod supplies to dungeon and abandoned mineshaft chests.
+	dungeonChests = true
+
+	[worldGeneration.cannabis]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.hop]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.tobacco]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.coffea]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.coca]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.belladonna]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.jimsonweed]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.tomato]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.peyote]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.morning_glory]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+	[worldGeneration.juniper]
+		enabled = true
+		#Additional biome ids or #biome tags. All included selectors must match; built-in defaults remain enabled.
+		included = []
+		#Any matching biome id or #biome tag prevents generation.
+		excluded = []
+
+[balancing]
+	#Show empty and filled rift jars in the creative catalog.
+	enableRiftJars = false
+	#One-in-N chance per player tick to spawn a nearby Reality Rift. Zero disables random spawning.
+	#Range: > 0
+	randomTicksUntilRiftSpawn = 216000
+	enableHarmonium = false
+	#Hide molotovs in the creative catalog, matching the accepted setting.
+	disableMolotovs = false
+	#Ticks at maximum heat to finish a wooden drying-table batch.
+	#Range: > 1
+	dryingTableTickDuration = 19200
+	#Ticks at maximum heat to finish an iron drying-table batch.
+	#Range: > 1
+	ironDryingTableTickDuration = 14400
+	#Range: > 1
+	slurryHardeningTime = 36000
+
+	[balancing.messageDistortion]
+		#Distort locally displayed chat according to active alcohol/kava, cannabis and Zero effects.
+		incoming = true
+		#Distort chat before signing and sending it. Commands remain unchanged.
+		outgoing = true
+
+	[balancing.fluidAttributes]
+		#Range: 1 ~ 1073741823
+		flowerExtractDistillationTicks = 1200
+
+		[balancing.fluidAttributes.wheatHop]
+			#Range: > 1
+			ticksPerFermentation = 36000
+			#Range: > 1
+			ticksPerDistillation = 72000
+			#Range: > 1
+			ticksPerMaturation = 120000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.wheat]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.potato]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.tomato]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.redGrapes]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.rice]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.juniper]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.honey]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.sugarCane]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.corn]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.apple]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.pineapple]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.banana]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.milk]
+			#Range: > 1
+			ticksPerFermentation = 48000
+			#Range: > 1
+			ticksPerDistillation = 48000
+			#Range: > 1
+			ticksPerMaturation = 36000
+			#Range: > 1
+			ticksUntilAcetification = 36000
+
+		[balancing.fluidAttributes.agave]
+			#Range: > 1
+			ticksPerFermentation = 36000
+			#Range: > 1
+			ticksPerDistillation = 96000
+			#Range: > 1
+			ticksPerMaturation = 48000
+			#Range: > 1
+			ticksUntilAcetification = 108000
+
