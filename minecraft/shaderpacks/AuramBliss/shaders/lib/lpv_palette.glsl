@@ -120,6 +120,22 @@ uvec2 blissLpvMaterial(int blockId) {
         mixWeight = 0.8;
     }
 
+    if (blockId >= BLOCK_THAUMATURGE_CRYSTAL_AER && blockId <= BLOCK_THAUMATURGE_CRYSTAL_VITIUM) {
+        // Match Thaumaturge's CrystalBlockColors in palette ID order.
+        const vec3 crystalColors[7] = vec3[7](
+            vec3(255.0, 255.0, 126.0), // Aer
+            vec3(255.0,  90.0,   1.0), // Ignis
+            vec3( 60.0, 212.0, 252.0), // Aqua
+            vec3( 86.0, 192.0,   0.0), // Terra
+            vec3(213.0, 212.0, 236.0), // Ordo
+            vec3( 64.0,  64.0,  64.0), // Perditio
+            vec3(128.0,   0.0, 128.0)  // Vitium
+        );
+        lightColor = crystalColors[blockId - BLOCK_THAUMATURGE_CRYSTAL_AER] / 255.0;
+        lightRange = 7.0;
+        mixWeight = 0.6;
+    }
+
     #ifdef LPV_COLORED_CANDLES
         if (blockId >= BLOCK_CANDLES_PLAIN_LIT_1 && blockId <= BLOCK_CANDLES_YELLOW_LIT_4) {
             switch (blockId) {
