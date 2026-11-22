@@ -34,6 +34,14 @@ Apple OpenGL linked and drew the integer palette for 2,048 IDs with default, can
 
 The companion replays Oculus’s shadow entity batch from the vertex buffer’s real position and ID attributes. It preserves the loader’s render phase and applies Bliss’s existing light classification. A 64³ native test with DH observed eight Blaze voxels, one dropped sea-lantern voxel and one beacon voxel in the current occupancy target, with GL error 0.
 
+## Native cached shoreline and Windows source coverage
+
+The [isolated replay and probes](../tools/aurambliss-qa/README.md) measured the cached shoreline with the companion and DH 3.3.3 at 854 × 480. All 409,920 packed pixels matched the three source depth textures. Where vanilla opaque depth was clear, the probe counted 55,105 DH opaque pixels and 55,920 pixels with nearer DH translucent depth. The recorded GL error was 0.
+
+Oculus 1.8.0 exported and glslang linked 777 candidate graphics programs and 24 active compute stages across NVIDIA, AMD and Intel environments. The matrix covered Overworld, Nether and End, default settings, feature-heavy compute, forced compatibility, and NVIDIA samples without DH. Forced compatibility declared zero custom images. The Windows verification used transformed GLSL.
+
+The control inventory lists 408 options. `Snowy_Winter` is reserved in the upstream menu and its implementation is commented out. `Exposure_Speed` has a declaration with no active reference in the pinned source. The inventory preserves their original identifiers and shows the source for other controls.
+
 ## Rendering coverage to establish
 
 | Area | Runtime observation |
