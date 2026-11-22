@@ -1,0 +1,20 @@
+snapshot pack=AuramBliss dimension=minecraft:overworld
+capture overworld
+server gamemode spectator @p
+server execute in minecraft:the_nether run tp @p 0 78 0 0 0
+wait 8
+snapshot pack=AuramBliss dimension=minecraft:the_nether
+capture nether
+server execute in minecraft:the_end run tp @p 0 75 0 0 10
+wait 8
+snapshot pack=AuramBliss dimension=minecraft:the_end
+capture end
+server execute in minecraft:overworld run tp @p 0 96 0 0 25
+wait 5
+snapshot pack=AuramBliss dimension=minecraft:overworld
+leave
+snapshot dimension=none
+enter
+wait 15
+snapshot pack=AuramBliss dimension=minecraft:overworld
+capture reentry

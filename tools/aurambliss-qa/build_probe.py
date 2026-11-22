@@ -17,6 +17,7 @@ def build(instance, output):
         instance / "minecraft/mods/oculus-mc1.20.1-1.8.0.jar",
         libraries / "org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar",
         libraries / "org/lwjgl/lwjgl/3.3.1/lwjgl-3.3.1.jar",
+        libraries / "org/lwjgl/lwjgl-glfw/3.3.1/lwjgl-glfw-3.3.1.jar",
         libraries / "org/lwjgl/lwjgl-opengl/3.3.1/lwjgl-opengl-3.3.1.jar",
     ]
     config = {
@@ -24,7 +25,7 @@ def build(instance, output):
         "minVersion": "0.8",
         "package": "dev.auram.bliss.test",
         "compatibilityLevel": "JAVA_17",
-        "client": ["DepthProbe", "LightProbe", "EntityFixture", "PerfFrameProbe", "PerfVolumeProbe"],
+        "client": ["DepthProbe", "LightProbe", "EntityFixture", "PerfFrameProbe", "PerfVolumeProbe", "LifecycleProbe"],
         "injectors": {"defaultRequire": 1},
     }
     metadata = """modLoader="lowcodefml"

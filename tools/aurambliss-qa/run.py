@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import locale
 import os
 import platform
 from pathlib import Path
@@ -18,7 +19,7 @@ CLIENT_REVISION = "1.20.1-20230612.114412"
 ASM_EXPORT = "java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED"
 RENDER_ERROR = re.compile(
     r"Failed to create shader rendering pipeline|A fatal error has been detected|"
-    r"MixinTransformerError|Mod Loading has failed"
+    r"MixinTransformerError|Mod Loading has failed|QA_COMMAND_ERROR"
 )
 
 
@@ -27,6 +28,8 @@ def parse_args():
     parser.add_argument("instance", type=Path, help="PrismLauncher instance directory")
     parser.add_argument("world", type=Path, help="Existing test save to copy")
     parser.add_argument("--shader", type=Path, required=True, help="Shader directory or ZIP")
+    parser.add_argument("--additional-shader", type=Path, action="append", default=[])
+    parser.add_argument("--lifecycle", type=Path, help="File with one lifecycle command per line")
     parser.add_argument("--java", type=Path, required=True, help="Native Java 17 executable")
     parser.add_argument("--prism", type=Path, help="PrismLauncher data directory")
     parser.add_argument("--work", type=Path, help="New work directory for the copy and logs")
@@ -89,6 +92,12 @@ def prepare(args, work):
         shutil.copytree(args.shader, shader, dirs_exist_ok=True, copy_function=copy_file)
     else:
         copy_file(args.shader, shader)
+    for source in args.additional_shader:
+        target = shader.parent / source.name
+        if source.is_dir():
+            shutil.copytree(source, target, dirs_exist_ok=True, copy_function=copy_file)
+        else:
+            copy_file(source, target)
     shader_options = shader.with_name(shader.name + ".txt")
     if args.options:
         copy_file(args.options, shader_options)
@@ -177,13 +186,23 @@ def launch_command(args, work, game):
 
 def observe(args, command, work, game):
     (work / "launch-arguments.json").write_text(json.dumps(command, indent=2) + "\n")
+    argfile = work / "java-arguments.txt"
+    argfile.write_text("\n".join('"' + arg.replace("\\", "\\\\").replace('"', '\\"') + '"'
+                                 for arg in command[1:]) + "\n",
+                       encoding=locale.getpreferredencoding(False))
     log = work / "console.log"
     ready_at = None
     readback_requested = False
     entity_fixture_requested = False
+    steps = args.lifecycle.read_text().splitlines() if args.lifecycle else []
+    steps = [step.strip() for step in steps if step.strip() and not step.lstrip().startswith("#")]
+    step_index = 0
+    step_started = False
+    next_step_at = 0
+    command_count = 0
     deadline = time.monotonic() + args.timeout
     with log.open("w") as output:
-        child = subprocess.Popen(command, cwd=game, stdout=output, stderr=subprocess.STDOUT)
+        child = subprocess.Popen([command[0], f"@{argfile}"], cwd=game, stdout=output, stderr=subprocess.STDOUT)
         try:
             while time.monotonic() < deadline:
                 trace = log.read_text(errors="replace")
@@ -205,6 +224,37 @@ def observe(args, command, work, game):
                     else:
                         ready_at = time.monotonic()
                 if ready_at is not None and time.monotonic() - ready_at >= args.seconds:
+                    if step_index < len(steps):
+                        if step_started:
+                            if trace.count("\nQA_COMMAND ") > command_count:
+                                step = steps[step_index]
+                                if step.startswith("snapshot"):
+                                    state_line = next(row for row in reversed(trace.splitlines()) if row.startswith("QA_STATE "))
+                                    state = dict(token.split("=", 1) for token in state_line.split()[1:])
+                                    expected = dict(token.split("=", 1) for token in step.split()[1:])
+                                    expected.update(visible="0", focused="0", gl="0")
+                                    for key, value in expected.items():
+                                        if value == "positive" and int(state[key]) > 0:
+                                            continue
+                                        if state[key] != value:
+                                            raise RuntimeError(f"Expected {key}={value}, got {state_line} in {log}")
+                                step_index += 1
+                                step_started = False
+                                next_step_at = time.monotonic() + 2
+                        elif time.monotonic() >= next_step_at and steps[step_index].startswith("wait "):
+                            next_step_at = time.monotonic() + float(steps[step_index].split()[1])
+                            step_index += 1
+                        elif time.monotonic() >= next_step_at:
+                            command_count = trace.count("\nQA_COMMAND ")
+                            update = game / "bliss-lifecycle-command.pending"
+                            update.write_text(steps[step_index] + "\n")
+                            update.replace(game / "bliss-lifecycle-command")
+                            step_started = True
+                        time.sleep(0.5)
+                        continue
+                    if steps:
+                        (work / "lifecycle.log").write_text("\n".join(line for line in trace.splitlines()
+                            if line.startswith(("QA_STATE ", "QA_COMMAND "))) + "\n")
                     if args.readback:
                         if not readback_requested:
                             (game / f"bliss-read-{args.readback}").touch()
@@ -218,7 +268,7 @@ def observe(args, command, work, game):
                     print(f"Observed {args.seconds} seconds in world. See {log}")
                     return
                 time.sleep(0.5)
-            raise TimeoutError(f"Client startup timed out. See {log}")
+            raise TimeoutError(f"Client replay timed out. See {log}")
         finally:
             if child.poll() is None:
                 child.terminate()

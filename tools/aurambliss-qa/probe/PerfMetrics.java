@@ -1,4 +1,4 @@
-package dev.auram.bliss.test;
+package dev.auram.bliss.qa;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

@@ -1,5 +1,7 @@
 package dev.auram.bliss.test;
 
+import dev.auram.bliss.qa.PerfMetrics;
+
 import net.irisshaders.iris.pipeline.IrisRenderingPipeline;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
