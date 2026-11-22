@@ -791,9 +791,20 @@ option.BOX_LINE_WIDTH           = Line Width
 
 # Distant Horizons
 
-option.DH_OVERDRAW_DISTANCE     = Overdraw Distance
-option.DH_OVERDRAW_FADE_LENGTH  = Overdraw Fade Length
-option.NOISE_ON_DH_TERRAIN      = Noise on DH Terrain
+option.DH_OVERDRAW_DISTANCE            = DH Overdraw
+option.DH_OVERDRAW_DISTANCE.comment    = How far Distant Horizons terrain and water extend into the regular chunk render distance. Unlabeled values are in blocks, with 16 blocks per chunk.
+value.DH_OVERDRAW_DISTANCE.0.0         = 0 chunks
+value.DH_OVERDRAW_DISTANCE.16.0        = 1 chunk
+value.DH_OVERDRAW_DISTANCE.32.0        = 2 chunks
+value.DH_OVERDRAW_DISTANCE.48.0        = 3 chunks
+value.DH_OVERDRAW_DISTANCE.64.0        = 4 chunks
+value.DH_OVERDRAW_DISTANCE.80.0        = 5 chunks
+value.DH_OVERDRAW_DISTANCE.96.0        = 6 chunks
+value.DH_OVERDRAW_DISTANCE.112.0       = 7 chunks
+value.DH_OVERDRAW_DISTANCE.128.0       = 8 chunks
+option.DH_OVERDRAW_FADE_LENGTH         = Overdraw Fade Length
+option.DH_OVERDRAW_FADE_LENGTH.comment = Width of the dithered transition in blocks. Set to 0 for a hard cutoff.
+option.NOISE_ON_DH_TERRAIN              = Noise on DH Terrain
 
 # Photonics
 
