@@ -69,10 +69,24 @@ final class LightVolumeShaders {
                 + "#define main auram_photon_shadow_vertex\n"
                 + vertex.substring(versionEnd) + "\n#undef main\n" + OCCUPANCY_VERTEX;
         int program = link("occupancy", voxelVertex, null, VOXEL_MATERIAL, true);
+        setVoxelAtlas(program, side, columns, width, height);
+        return program;
+    }
+
+    static int blissEntityOccupancy(String vertex, int position, int entity, int side, int columns, int width, int height) {
+        String voxelVertex = VERSION + "#define main auram_photon_shadow_vertex\n"
+                + "#define BLISS_POSITION_ATTRIBUTE " + position + "\n"
+                + "#define BLISS_ENTITY_ATTRIBUTE " + entity + "\n"
+                + vertex + "\n#undef main\n" + OCCUPANCY_VERTEX;
+        int program = link("entity occupancy", voxelVertex, null, VOXEL_MATERIAL, false);
+        setVoxelAtlas(program, side, columns, width, height);
+        return program;
+    }
+
+    private static void setVoxelAtlas(int program, int side, int columns, int width, int height) {
         glProgramUniform1i(program, glGetUniformLocation(program, "volume_side"), side);
         glProgramUniform1i(program, glGetUniformLocation(program, "atlas_columns"), columns);
         glProgramUniform2f(program, glGetUniformLocation(program, "atlas_size"), width, height);
-        return program;
     }
 
     static int transport(String fragment, int columns) {

@@ -4,8 +4,14 @@
         vec3 lightColor = vec3(0.0);
         float lightRange = 0.0;
 
-        uvec2 blockData = texelFetch(texBlockData, itemId, 0).rg;
-        vec4 lightColorRange = unpackUnorm4x8(blockData.r);
+        #ifdef BLISS_RASTER_LPV
+            if (itemId < 0 || itemId >= 2048) return vec3(0.0);
+            int side = int(LpvSize);
+            vec4 lightColorRange = texelFetch(auram_bliss_light, ivec3(itemId % side, itemId / side, side), 0);
+        #else
+            uvec2 blockData = texelFetch(texBlockData, itemId, 0).rg;
+            vec4 lightColorRange = unpackUnorm4x8(blockData.r);
+        #endif
         lightColor = srgbToLinear(lightColorRange.rgb);
         lightRange = lightColorRange.a * 255.0;
 
@@ -30,7 +36,7 @@ vec3 doBlockLightLighting(
     
     vec3 blockLight = lightColor * lightmapCurve; //;
     
-    #if defined IS_LPV_ENABLED && defined MC_GL_EXT_shader_image_load_store
+    #ifdef IS_LPV_ENABLED
         vec4 lpvSample = SampleLpvLinear(lpvPos);
         vec3 lpvBlockLight = GetLpvBlockLight(lpvSample);
 

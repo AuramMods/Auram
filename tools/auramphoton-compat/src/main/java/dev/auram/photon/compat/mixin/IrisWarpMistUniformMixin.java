@@ -16,6 +16,7 @@ abstract class IrisWarpMistUniformMixin {
     private static void auramPhoton$addWarpMistUniform(DynamicUniformHolder uniforms, FogMode mode, CallbackInfo callback) {
         if (WarpMistState.available()) {
             uniforms.uniform1f(UniformUpdateFrequency.PER_FRAME, "auramWarpMist", WarpMistState::intensity);
+            uniforms.uniform1f(UniformUpdateFrequency.PER_FRAME, "auramBlissNearWarpMist", WarpMistState::visibleIntensity);
         }
     }
 }

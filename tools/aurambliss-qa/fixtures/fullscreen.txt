@@ -1,0 +1,9 @@
+snapshot pack=AuramBliss fullscreen=0 lod=positive pbr=on
+fullscreen Auram QA Display
+wait 4
+snapshot pack=AuramBliss fullscreen=1 size=1920x1080 lod=positive pbr=on
+capture fullscreen
+fullscreen off
+wait 4
+snapshot pack=AuramBliss fullscreen=0 size=854x480 lod=positive pbr=on
+capture windowed

@@ -1,3 +1,8 @@
+#ifdef BLISS_RASTER_LPV
+    ivec4 auram_photon_voxel = ivec4(0);
+    #include "/lib/lpv_unpack.glsl"
+#endif
+
 ivec3 GetVoxelIndex(const in vec3 playerPos) {
 	vec3 cameraOffset = fract(cameraPosition);
 	return ivec3(floor(playerPos + cameraOffset) + VoxelSize3/2u);
@@ -7,7 +12,11 @@ void SetVoxelBlock(const in vec3 playerPos, const in uint blockId) {
 	ivec3 voxelPos = GetVoxelIndex(playerPos);
 	if (clamp(voxelPos, ivec3(0), ivec3(VoxelSize-1u)) != voxelPos) return;
 
-	imageStore(imgVoxelMask, voxelPos, uvec4(blockId));
+    #ifdef BLISS_RASTER_LPV
+        auram_photon_voxel = ivec4(voxelPos, int(blockId));
+    #else
+        imageStore(imgVoxelMask, voxelPos, uvec4(blockId));
+    #endif
 }
 
 void PopulateShadowVoxel(const in vec3 playerPos) {
@@ -39,8 +48,13 @@ void PopulateShadowVoxel(const in vec3 playerPos) {
 			}
 			else if (currentRenderedItemId > 0 && currentRenderedItemId < 1200) {
 				if (entityId != ENTITY_ITEM_FRAME && entityId != ENTITY_PLAYER) {
-		            uint blockDataR = texelFetch(texBlockData, currentRenderedItemId, 0).r;
-		            float lightRange = unpackUnorm4x8(blockDataR).a * 255.0;
+                    #ifdef BLISS_RASTER_LPV
+                        uint blockDataR = texelFetch(auram_bliss_palette, ivec2(currentRenderedItemId, 0), 0).r;
+                        float lightRange = blissUnpackMaterial(blockDataR).a * 255.0;
+                    #else
+                        uint blockDataR = texelFetch(texBlockData, currentRenderedItemId, 0).r;
+                        float lightRange = unpackUnorm4x8(blockDataR).a * 255.0;
+                    #endif
 
 		            if (lightRange > 0.0)
 						voxelId = uint(currentRenderedItemId);

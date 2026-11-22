@@ -15,7 +15,12 @@ import net.irisshaders.iris.uniforms.MatrixUniforms;
 import org.joml.Matrix4f;
 import org.joml.Matrix4fc;
 
+import org.lwjgl.system.MemoryUtil;
+
 import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.lwjgl.opengl.GL41C.*;
 
@@ -26,6 +31,7 @@ public final class RasterLightVolume implements AutoCloseable {
 
     private final IrisRenderingPipeline pipeline;
     private final int side;
+    private final boolean bliss;
     private final int atlasColumns;
     private final int atlasWidth;
     private final int atlasHeight;
@@ -40,6 +46,13 @@ public final class RasterLightVolume implements AutoCloseable {
     private LightVolumeTarget palette;
     private int fullscreenVao;
     private int occupancyProgram;
+    private String entityVoxelSource;
+    private boolean blissRawEntityPosition;
+    private final float[] chunkOffset = new float[3];
+    private final Map<Integer, Integer> entityChunkOffsets = new HashMap<>();
+    private final Map<EntityAttributes, EntityReplay> entityPrograms = new HashMap<>();
+    private boolean capturedBlissEntityDraw;
+    private boolean capturingBlissEntityBatch;
     private int transportProgram;
     private int modelViewLocation;
     private int regionOffsetLocation;
@@ -54,9 +67,10 @@ public final class RasterLightVolume implements AutoCloseable {
     private boolean capturing;
     private boolean capturedTerrain;
 
-    private RasterLightVolume(IrisRenderingPipeline pipeline, int side, MetalLightVolume metal) {
+    private RasterLightVolume(IrisRenderingPipeline pipeline, int side, MetalLightVolume metal, boolean bliss) {
         this.pipeline = pipeline;
         this.side = side;
+        this.bliss = bliss;
         this.metal = metal;
         atlasColumns = atlasColumns(side);
         atlasWidth = atlasColumns * side;
@@ -108,16 +122,21 @@ public final class RasterLightVolume implements AutoCloseable {
 
     public static RasterLightVolume create(IrisRenderingPipeline pipeline, ProgramSet set) {
         if (!usesRasterVolume(set)) return null;
-        int side = volumeSide(set);
+        boolean bliss = set.getShadow().flatMap(ProgramSource::getVertexSource)
+                .filter(source -> source.contains("blissUnpackMaterial"))
+                .isPresent();
+        int side = bliss ? 1 << Integer.parseInt(set.getPack().getShaderPackOptions()
+                .getOptionValues().getStringValueOrDefault("LPV_SIZE")) : volumeSide(set);
         MetalLightVolume metal = null;
         if (prepared != null && prepared.programs() == set) {
             metal = prepared.allocation();
             prepared = null;
         }
-        RasterLightVolume volume = new RasterLightVolume(pipeline, side, metal);
+        RasterLightVolume volume = new RasterLightVolume(pipeline, side, metal, bliss);
         try {
             volume.initialize(set);
-            Iris.logger.info("Initialized AuramPhoton " + (volume.metal == null ? "raster" : "Metal")
+            Iris.logger.info("Initialized " + (bliss ? "AuramBliss " : "AuramPhoton ")
+                    + (volume.metal == null ? "raster" : "Metal")
                     + " colored lighting at " + side + "³");
             return volume;
         } catch (RuntimeException | Error failure) {
@@ -128,12 +147,13 @@ public final class RasterLightVolume implements AutoCloseable {
 
     private void initialize(ProgramSet set) {
         ShaderPackSourceAccess sources = (ShaderPackSourceAccess) set.getPack();
-        String paletteSource = readSource(sources, "/program/lpv/raster_palette.fsh");
+        String paletteSource = readSource(sources, bliss
+                ? "/dimensions/compat/lpv_palette.fsh" : "/program/lpv/raster_palette.fsh");
         if (metal != null) {
             transportProgram = metal.reprojectionProgram();
         } else {
-            transportProgram = LightVolumeShaders.transport(readSource(sources, "/program/lpv/raster_transport.fsh"),
-                    atlasColumns);
+            String transportPath = bliss ? "/dimensions/compat/lpv_transport.fsh" : "/program/lpv/raster_transport.fsh";
+            transportProgram = LightVolumeShaders.transport(readSource(sources, transportPath), atlasColumns);
         }
         transportCameraLocation = glGetUniformLocation(transportProgram, "cameraPosition");
         transportViewInverseLocation = glGetUniformLocation(transportProgram, "gbufferModelViewInverse");
@@ -148,6 +168,11 @@ public final class RasterLightVolume implements AutoCloseable {
             lights[0] = metal.light(0);
             lights[1] = metal.light(1);
             palette = metal.palette();
+        } else if (bliss) {
+            occupancy = LightVolumeTarget.blissOccupancy(atlasWidth, atlasHeight);
+            lights[0] = LightVolumeTarget.blissVolume(side);
+            lights[1] = LightVolumeTarget.blissVolume(side);
+            palette = LightVolumeTarget.blissPalette();
         } else {
             occupancy = LightVolumeTarget.occupancy(atlasWidth, atlasHeight);
             lights[0] = LightVolumeTarget.volume(side);
@@ -163,10 +188,62 @@ public final class RasterLightVolume implements AutoCloseable {
                         metal == null ? side : atlasHeight);
                 glClearBufferfv(GL_COLOR, 0, new float[4]);
             }
-            draw.bind(palette.framebuffer(), paletteProgram, 48, 2);
+            draw.bind(palette.framebuffer(), paletteProgram, bliss ? 2048 : 48, bliss ? 1 : 2);
             glDrawArrays(GL_TRIANGLES, 0, 3);
         } finally {
             glDeleteProgram(paletteProgram);
+        }
+        if (bliss) {
+            uploadBlissHandheldPalette();
+            if (set.getPack().getShaderPackOptions().getOptionValues().getBooleanValueOrDefault("LPV_ENTITY_LIGHTS")) {
+                initializeBlissEntityReplay(sources, set);
+            }
+        }
+    }
+
+    private void initializeBlissEntityReplay(ShaderPackSourceAccess sources, ProgramSet set) {
+        entityVoxelSource = readSource(sources, "/dimensions/compat/lpv_entities.vsh");
+        blissRawEntityPosition = set.getShadow().flatMap(ProgramSource::getVertexSource)
+                .filter(source -> source.contains("vec3 playerpos = gl_Vertex.xyz")).isPresent();
+    }
+
+    private EntityReplay linkEntityReplay(EntityAttributes attributes) {
+        int program = LightVolumeShaders.blissEntityOccupancy(entityVoxelSource,
+                attributes.position(), attributes.entity(), side, atlasColumns, atlasWidth, atlasHeight);
+        glProgramUniform1i(program, glGetUniformLocation(program, "blissRawPosition"), blissRawEntityPosition ? 1 : 0);
+        return new EntityReplay(program, glGetUniformLocation(program, "iris_ModelViewMat"),
+                glGetUniformLocation(program, "iris_ChunkOffset"), glGetUniformLocation(program, "shadowModelViewInverse"),
+                glGetUniformLocation(program, "cameraPosition"), glGetUniformLocation(program, "blissRenderStage"));
+    }
+
+    private void uploadBlissHandheldPalette() {
+        int activeUnit = glGetInteger(GL_ACTIVE_TEXTURE);
+        int packBuffer = glGetInteger(GL_PIXEL_PACK_BUFFER_BINDING);
+        int unpackBuffer = glGetInteger(GL_PIXEL_UNPACK_BUFFER_BINDING);
+        ByteBuffer slice = MemoryUtil.memCalloc(side * side * 4);
+        try {
+            glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
+            glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
+            int[] materials = new int[4096];
+            try (TextureBinding binding = TextureBinding.bind(0, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, palette.texture())) {
+                glGetTexImage(GL_TEXTURE_2D, 0, GL_RG_INTEGER, GL_UNSIGNED_INT, materials);
+            }
+            for (int index = 0; index < 2048; index++) {
+                int emission = materials[index * 2];
+                for (int channel = 0; channel < 4; channel++) {
+                    slice.put(index * 4 + channel, (byte) (emission >>> (channel * 8)));
+                }
+            }
+            for (LightVolumeTarget light : lights) {
+                try (TextureBinding binding = TextureBinding.bind(0, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, light.texture())) {
+                    glTexSubImage3D(GL_TEXTURE_3D, 0, 0, 0, side, side, side, 1, GL_RGBA, GL_UNSIGNED_BYTE, slice);
+                }
+            }
+        } finally {
+            MemoryUtil.memFree(slice);
+            glBindBuffer(GL_PIXEL_PACK_BUFFER, packBuffer);
+            glBindBuffer(GL_PIXEL_UNPACK_BUFFER, unpackBuffer);
+            glActiveTexture(activeUnit);
         }
     }
 
@@ -182,6 +259,10 @@ public final class RasterLightVolume implements AutoCloseable {
 
     public static int activeTexture(boolean metal) {
         return active != null && (active.metal != null) == metal ? active.lights[active.published].texture() : 0;
+    }
+
+    public static int activeBlissTexture() {
+        return active != null && active.bliss ? active.lights[active.published].texture() : 0;
     }
 
     public static void beginShadowCapture() {
@@ -208,8 +289,56 @@ public final class RasterLightVolume implements AutoCloseable {
         }
     }
 
+    public static void captureBlissEntityBatch(boolean capture) {
+        if (active != null && active.entityVoxelSource != null) active.capturingBlissEntityBatch = capture;
+    }
+
+    public static boolean isCapturingBlissEntities() {
+        return active != null && active.capturingBlissEntityBatch;
+    }
+
+    public static void replayBlissEntities(int count, int type, int position, int entity, Matrix4fc modelView) {
+        active.replayEntities(count, type, new EntityAttributes(position, entity), modelView);
+    }
+
+    private void replayEntities(int count, int type, EntityAttributes attributes, Matrix4fc modelView) {
+        int shader = glGetInteger(GL_CURRENT_PROGRAM);
+        if (shader == 0) return;
+
+        EntityReplay replay = entityPrograms.computeIfAbsent(attributes, this::linkEntityReplay);
+        glProgramUniformMatrix4fv(replay.program(), replay.modelView(), false, modelView.get(drawMatrix));
+        glProgramUniformMatrix4fv(replay.program(), replay.shadowInverse(), false, shadowMatrix);
+        glProgramUniform3fv(replay.program(), replay.camera(), camera);
+        glProgramUniform1i(replay.program(), replay.renderStage(), GbufferPrograms.getCurrentPhase().ordinal());
+        int location = entityChunkOffsets.computeIfAbsent(shader, glProgram -> glGetUniformLocation(glProgram, "iris_ChunkOffset"));
+        if (location < 0) {
+            glProgramUniform3f(replay.program(), replay.chunkOffset(), 0, 0, 0);
+        } else {
+            glGetUniformfv(shader, location, chunkOffset);
+            glProgramUniform3fv(replay.program(), replay.chunkOffset(), chunkOffset);
+        }
+
+        int activeUnit = glGetInteger(GL_ACTIVE_TEXTURE);
+        try (DrawState draw = new DrawState(0, true);
+                TextureBinding material = TextureBinding.bind(0, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, palette.texture())) {
+            draw.bind(occupancy.framebuffer(), replay.program(), atlasWidth, atlasHeight);
+            glDrawElements(GL_POINTS, count, type, 0L);
+        } finally {
+            glActiveTexture(activeUnit);
+        }
+        if (!capturedBlissEntityDraw) {
+            capturedBlissEntityDraw = true;
+            Iris.logger.info("Captured AuramBliss voxel occupancy from an Oculus shadow entity draw");
+        }
+    }
+
+    private record EntityAttributes(int position, int entity) {}
+    private record EntityReplay(int program, int modelView, int chunkOffset, int shadowInverse, int camera,
+            int renderStage) {}
+
     private void begin() {
         capturing = false;
+        capturingBlissEntityBatch = false;
         shadowInverse.set(ShadowRenderer.MODELVIEW).invert().get(shadowMatrix);
         try (DrawState draw = new DrawState(0, false)) {
             draw.bind(occupancy.framebuffer(), transportProgram, atlasWidth, atlasHeight);
@@ -249,14 +378,20 @@ public final class RasterLightVolume implements AutoCloseable {
     }
 
     private void replay(long counts, int type, long indices, int draws, long baseVertices) {
-        try (DrawState draw = new DrawState(0, true)) {
+        int activeUnit = bliss ? glGetInteger(GL_ACTIVE_TEXTURE) : 0;
+        try (DrawState draw = new DrawState(0, true);
+                TextureBinding material = bliss ? TextureBinding.bind(0, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D,
+                        palette.texture()) : null) {
             draw.bind(occupancy.framebuffer(), occupancyProgram, atlasWidth, atlasHeight);
             // Each vertex records its classified voxel. Point draws write it directly into the atlas.
             nglMultiDrawElementsBaseVertex(GL_POINTS, counts, type, indices, draws, baseVertices);
+        } finally {
+            if (bliss) glActiveTexture(activeUnit);
         }
         if (!capturedTerrain) {
             capturedTerrain = true;
-            Iris.logger.info("Captured AuramPhoton voxel occupancy from the Embeddium shadow terrain pass");
+            Iris.logger.info("Captured " + (bliss ? "AuramBliss" : "AuramPhoton")
+                    + " voxel occupancy from the Embeddium shadow terrain pass");
         }
     }
 
@@ -319,5 +454,6 @@ public final class RasterLightVolume implements AutoCloseable {
         }
         if (fullscreenVao != 0) glDeleteVertexArrays(fullscreenVao);
         if (occupancyProgram != 0) glDeleteProgram(occupancyProgram);
+        for (EntityReplay replay : entityPrograms.values()) glDeleteProgram(replay.program());
     }
 }

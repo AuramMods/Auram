@@ -71,21 +71,17 @@ float linearizeDepthFast(const in float depth, const in float near, const in flo
     return (near * far) / (depth * (near - far) + far);
 }
 
-#define IS_LPV_ENABLED
-
 #if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED
 	
 	flat varying float exposure;
 
-	#ifdef IS_LPV_ENABLED
+	#if defined IS_LPV_ENABLED && !defined BLISS_RASTER_LPV
 		#extension GL_ARB_shader_image_load_store: enable
 		#extension GL_ARB_shading_language_packing: enable
 	#endif
 
 	#ifdef IS_LPV_ENABLED
-		uniform usampler1D texBlockData;
-		uniform sampler3D texLpv1;
-		uniform sampler3D texLpv2;
+		#include "/lib/lpv_samplers.glsl"
 	#endif
 
 	// #ifdef IS_LPV_ENABLED
@@ -143,7 +139,6 @@ float invLinZ (float lindepth){
 	// uniform int dhRenderDistance;
 	#define TIMEOFDAYFOG
 	#include "/lib/lightning_stuff.glsl"
-	#define CLOUDS_INTERSECT_TERRAIN
 	#include "/lib/volumetricClouds.glsl"
 	#include "/lib/overworld_fog.glsl"
 #endif
@@ -316,7 +311,7 @@ void waterVolumetrics(inout vec3 inColor, vec3 rayStart, vec3 rayEnd, float estE
 		vL += (light - light * exp(-waterCoefs * dd * rayLength)) / waterCoefs * absorbance;
 		absorbance *= exp(-waterCoefs * dd * rayLength);
 
-		#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT
+		#if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
 			vL += LPV_FOG_ILLUMINATION(progressW-cameraPosition, dd, 1.0);
 		#endif
 
@@ -414,7 +409,11 @@ void main() {
 	#ifdef OVERWORLD_SHADER
 		float atmosphereAlpha = 1.0;
 		vec4 VolumetricFog = GetVolumetricFog(viewPos0, vec2(noise_2,noise_1), directLightColor, indirectLightColor, averageSkyCol_Clouds/30.0, atmosphereAlpha);
-		VolumetricClouds.a *= atmosphereAlpha;
+		#ifdef CLOUDS_INTERSECT_TERRAIN
+			VolumetricClouds.a *= atmosphereAlpha;
+		#else
+			VolumetricFog.a *= atmosphereAlpha;
+		#endif
 	#endif
 	
 	#if defined NETHER_SHADER || defined END_SHADER
@@ -444,6 +443,10 @@ void main() {
 	}
 
 	#if defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
-		gl_FragData[1] = vec4(VolumetricClouds.a,0.0,0.0,0.0);
+        float cloudTransmittance = VolumetricClouds.a;
+        #ifdef BLISS_COMPAT
+            cloudTransmittance = roundEven(clamp(cloudTransmittance, 0.0, 1.0) * 65535.0) / 65535.0;
+        #endif
+        gl_FragData[1] = vec4(cloudTransmittance, 0.0, 0.0, 0.0);
 	#endif
 }

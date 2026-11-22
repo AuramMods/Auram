@@ -360,6 +360,7 @@ uniform int moonPhase;
 ////////////////////////////////////////
 
 #define VOLUMETRIC_CLOUDS
+#define CLOUDS_INTERSECT_TERRAIN
 #define CLOUDS_QUALITY 0.5 // [0.1 0.125 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.9 1.0]
 
 #define Cloud_Speed 1.0 // [0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 10.0]
@@ -743,6 +744,16 @@ const vec3 aerochrome_color = mix(vec3(1.0, 0.0, 0.0), vec3(0.715, 0.303, 0.631)
 // ----- FLOODFILL [LPV] SETTINGS ----- //
 ///////////////////////////////////////////
 
+//#define FORCE_BLISS_COMPAT
+#ifdef FORCE_BLISS_COMPAT
+    #define BLISS_COMPAT
+#elif defined MC_OS_MAC || defined AURAM_BLISS_AUTO_COMPAT
+    #define BLISS_COMPAT
+#endif
+#if defined BLISS_COMPAT && defined DISTANT_HORIZONS
+    #define BLISS_PACKED_DH_DEPTH
+#endif
+
 //#define LPV_ENABLED
 #define LPV_SIZE 7 // [6 7 8]
 #define LPV_SATURATION 100 // [0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180 185 190 195 200]
@@ -759,11 +770,17 @@ const vec3 aerochrome_color = mix(vec3(1.0, 0.0, 0.0), vec3(0.715, 0.303, 0.631)
 //#define LPV_NOSHADOW_HACK
 
 #ifdef LPV_ENABLED
-	#ifdef IRIS_FEATURE_CUSTOM_IMAGES
-		#define IS_LPV_ENABLED
-
-		const float voxelDistance = 64.0;
-	#endif
+    #ifdef BLISS_COMPAT
+        #ifdef AURAM_BLISS_LPV_BACKEND
+            #define BLISS_RASTER_LPV
+            #define IS_LPV_ENABLED
+        #endif
+    #elif defined IRIS_FEATURE_CUSTOM_IMAGES && defined IRIS_FEATURE_COMPUTE_SHADERS
+        #define IS_LPV_ENABLED
+    #endif
+    #ifdef IS_LPV_ENABLED
+        const float voxelDistance = 64.0;
+    #endif
 #endif
 
 

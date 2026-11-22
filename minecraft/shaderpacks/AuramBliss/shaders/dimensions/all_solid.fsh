@@ -560,7 +560,12 @@ void main() {
 		
 		gl_FragData[0] = vec4(encodeVec2(Albedo.x,data1.x),	encodeVec2(Albedo.y,data1.y),	encodeVec2(Albedo.z,data1.z),	encodeVec2(data1.w,Albedo.w));
 
-		gl_FragData[2] = vec4(FlatNormals * 0.5 + 0.5, VanillaAO);	
+        vec4 normalAndAO = vec4(FlatNormals * 0.5 + 0.5, VanillaAO);
+        #ifdef BLISS_COMPAT
+            // Keep the original G-buffer precision before the lighting preparation pass packs it.
+            normalAndAO = roundEven(clamp(normalAndAO, 0.0, 1.0) * 255.0) / 255.0;
+        #endif
+        gl_FragData[2] = normalAndAO;
 	#endif
 	
 }

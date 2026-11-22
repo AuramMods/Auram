@@ -20,7 +20,8 @@ public final class AstralConstellationPass {
 
     public static void enter() {
         String pack = Iris.getCurrentPackName();
-        if ((!"AuramPhoton".equals(pack) && !"AuramPhoton.zip".equals(pack))
+        if ((!"AuramPhoton".equals(pack) && !"AuramPhoton.zip".equals(pack)
+                && !"AuramBliss".equals(pack) && !"AuramBliss.zip".equals(pack))
                 || ShadowRenderingState.areShadowsCurrentlyBeingRendered()) {
             return;
         }

@@ -6,6 +6,8 @@ profile.QUALITY=Quality
 profile.PERFORMANCE=Performance
 
 screen.Misc_Settings = §cDebugging§r/Experimental Settings
+option.FORCE_BLISS_COMPAT = Force compatibility rendering
+option.FORCE_BLISS_COMPAT.comment = Uses the macOS rendering path on other platforms for comparison.
 screen.Sun_and_Moon_Colors = Sun/Moon Colors
 option.sunPathRotation = Sun Angle
 option.sun_illuminance = Sun Illuminance
@@ -737,3 +739,5 @@ option.TOGGLE_VL_FOG = Toggle Volumetric Fog
 option.TOGGLE_VL_FOG.comment = one big button to just turn all the fog off.
 
 option.TRANSLUCENT_COLORED_SHADOWS.comment = §bWhat is this?§r This effect allows translucent things like stained glass to color the sunlight as it passes through it. §aPERFORMANCE COST:§r medium
+option.CLOUDS_INTERSECT_TERRAIN=Volumetric Clouds Intersect Terrain
+option.CLOUDS_INTERSECT_TERRAIN.comment=March clouds against terrain depth. Turn this off to draw clouds behind terrain.

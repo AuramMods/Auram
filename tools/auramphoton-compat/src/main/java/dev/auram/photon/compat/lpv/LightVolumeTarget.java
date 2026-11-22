@@ -26,47 +26,56 @@ record LightVolumeTarget(int texture, int framebuffer) implements AutoCloseable 
     }
 
     static LightVolumeTarget volume(int side) {
-        return allocate(side, side, side, false);
+        boolean rgb = "Apple".equals(glGetString(GL_VENDOR));
+        return allocate(side, side, side, rgb ? GL_RGB16F : GL_RGBA16F, rgb ? GL_RGB : GL_RGBA, GL_HALF_FLOAT, true);
+    }
+
+    static LightVolumeTarget blissVolume(int side) {
+        return allocate(side, side, side + 1, GL_RGBA8, GL_RGBA, GL_UNSIGNED_BYTE, true);
     }
 
     static LightVolumeTarget occupancy(int width, int height) {
-        return allocate(width, height, 0, true);
+        return allocate(width, height, 0, GL_R8UI, GL_RED_INTEGER, GL_UNSIGNED_BYTE, false);
+    }
+
+    static LightVolumeTarget blissOccupancy(int width, int height) {
+        return allocate(width, height, 0, GL_R16UI, GL_RED_INTEGER, GL_UNSIGNED_SHORT, false);
     }
 
     static LightVolumeTarget palette() {
-        return allocate(48, 2, 0, false);
+        return allocate(48, 2, 0, GL_RGBA16F, GL_RGBA, GL_HALF_FLOAT, true);
     }
 
-    private static LightVolumeTarget allocate(int width, int height, int depth, boolean integer) {
+    static LightVolumeTarget blissPalette() {
+        return allocate(2048, 1, 0, GL_RG32UI, GL_RG_INTEGER, GL_UNSIGNED_INT, false);
+    }
+
+    private static LightVolumeTarget allocate(int width, int height, int depth, int internalFormat, int format,
+            int type, boolean linear) {
         int target = depth == 0 ? GL_TEXTURE_2D : GL_TEXTURE_3D;
-        boolean rgbVolume = depth > 0 && "Apple".equals(glGetString(GL_VENDOR));
         int oldTexture = glGetInteger(depth == 0 ? GL_TEXTURE_BINDING_2D : GL_TEXTURE_BINDING_3D);
         int oldDraw = glGetInteger(GL_DRAW_FRAMEBUFFER_BINDING);
         int oldUnpack = glGetInteger(GL_PIXEL_UNPACK_BUFFER_BINDING);
         LightVolumeTarget result = new LightVolumeTarget(glGenTextures(), glGenFramebuffers());
         try {
             glBindTexture(target, result.texture);
-            glTexParameteri(target, GL_TEXTURE_MIN_FILTER, integer ? GL_NEAREST : GL_LINEAR);
-            glTexParameteri(target, GL_TEXTURE_MAG_FILTER, integer ? GL_NEAREST : GL_LINEAR);
+            glTexParameteri(target, GL_TEXTURE_MIN_FILTER, linear ? GL_LINEAR : GL_NEAREST);
+            glTexParameteri(target, GL_TEXTURE_MAG_FILTER, linear ? GL_LINEAR : GL_NEAREST);
             glTexParameteri(target, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
             glTexParameteri(target, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
             glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
             if (depth == 0) {
-                glTexImage2D(target, 0, integer ? GL_R8UI : GL_RGBA16F, width, height, 0,
-                        integer ? GL_RED_INTEGER : GL_RGBA, integer ? GL_UNSIGNED_BYTE : GL_HALF_FLOAT,
-                        (ByteBuffer) null);
+                glTexImage2D(target, 0, internalFormat, width, height, 0, format, type, (ByteBuffer) null);
             } else {
                 glTexParameteri(target, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-                // Every light-volume reader samples RGB. Apple's driver can render to RGB16F.
-                glTexImage3D(target, 0, rgbVolume ? GL_RGB16F : GL_RGBA16F, width, height, depth, 0,
-                        rgbVolume ? GL_RGB : GL_RGBA, GL_HALF_FLOAT, (ByteBuffer) null);
+                glTexImage3D(target, 0, internalFormat, width, height, depth, 0, format, type, (ByteBuffer) null);
             }
 
             glBindFramebuffer(GL_DRAW_FRAMEBUFFER, result.framebuffer);
             glFramebufferTexture(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, result.texture, 0);
             glDrawBuffer(GL_COLOR_ATTACHMENT0);
             int status = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
-            if (rgbVolume && status != GL_FRAMEBUFFER_COMPLETE) {
+            if (internalFormat == GL_RGB16F && status != GL_FRAMEBUFFER_COMPLETE) {
                 // OpenGL 4.1 makes RGB16F texture storage available. Layered rendering to it is optional.
                 glTexImage3D(target, 0, GL_RGBA16F, width, height, depth, 0, GL_RGBA, GL_HALF_FLOAT,
                         (ByteBuffer) null);
