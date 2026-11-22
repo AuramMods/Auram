@@ -3,17 +3,17 @@
 
 #include "voxelization.glsl"
 
-bool is_emitter(uint block_id) { return 32u <= block_id && block_id < 80u; }
-
 bool is_translucent(uint block_id) { return 80u <= block_id && block_id < 96u; }
 
 vec3 get_emitted_light(uint block_id) {
-    if (is_emitter(block_id)) {
-        return texelFetch(light_data_sampler, ivec2(int(block_id) - 32, 0), 0)
-            .rgb;
-    } else {
+    if (!is_lpv_emitter(block_id)) {
         return vec3(0.0);
     }
+
+    ivec2 texel = is_lpv_crystal_emitter(block_id)
+        ? ivec2(lpv_crystal_palette_column + int(block_id - lpv_crystal_first_id), 1)
+        : ivec2(int(block_id) - 32, 0);
+    return texelFetch(light_data_sampler, texel, 0).rgb;
 }
 
 vec3 get_tint(uint block_id, bool is_transparent) {

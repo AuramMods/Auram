@@ -1,6 +1,8 @@
 #if !defined INCLUDE_LIGHTING_LPV_VOXELIZATION
 #define INCLUDE_LIGHTING_LPV_VOXELIZATION
 
+#include "palette_layout.glsl"
+
 const ivec3 voxel_volume_size = ivec3(VOXEL_VOLUME_SIZE);
 
 #ifdef COLORED_LIGHTS
@@ -66,7 +68,7 @@ bool is_voxelized(uint block_id, bool vertex_at_grid_corner) {
         block_id == 30u || // Transparent wood objects
         block_id == 80u; // Miscellaneous transparent
 
-    bool is_light_emitting_block = 32u <= block_id && block_id < 80u;
+    bool is_light_emitting_block = is_lpv_emitter(block_id);
 
     return (vertex_at_grid_corner || is_light_emitting_block) && is_terrain
         && !is_transparent_block;

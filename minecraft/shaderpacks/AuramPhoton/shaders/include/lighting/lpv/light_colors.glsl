@@ -1,9 +1,12 @@
 #if !defined INCLUDE_LIGHTING_LPV_LIGHT_COLORS
 #define INCLUDE_LIGHTING_LPV_LIGHT_COLORS
 
+#include "palette_layout.glsl"
+
 // The last column of colortex4 stores lighting metadata. Rows 0–11 are
 // reserved for the direct, ambient, and spherical-harmonic sky colors.
 const int lpv_handheld_palette_row = 32;
+const float lpv_redstone_torch_strength = 5.0;
 
 const vec3[48] lpv_light_colors = vec3[48](
     vec3(1.00, 1.00, 1.00) * 12.0, // Strong white light
@@ -12,7 +15,7 @@ const vec3[48] lpv_light_colors = vec3[48](
     vec3(1.00, 0.55, 0.27) * 14.0, // Strong golden light
     vec3(1.00, 0.57, 0.30) * 8.0, // Medium golden light
     vec3(1.00, 0.57, 0.30) * 6.0, // Weak golden light
-    vec3(1.00, 0.18, 0.10) * 5.0, // Redstone components
+    vec3(1.00, 0.18, 0.10) * lpv_redstone_torch_strength, // Redstone components
     vec3(1.00, 0.38, 0.10) * 7.0, // Lava
     vec3(1.00, 0.45, 0.10) * 9.0, // Medium orange light
     vec3(1.00, 0.63, 0.15) * 4.0, // Brewing stand
@@ -75,5 +78,28 @@ const vec3[16] tint_color = vec3[16](
     vec3(0.3, 0.3, 0.3), // Gray
     vec3(0.7, 0.7, 0.7) // Light gray
 );
+
+// Match Thaumaturge's CrystalBlockColors RGB values in block ID order.
+const vec3[lpv_crystal_count] lpv_crystal_colors = vec3[lpv_crystal_count](
+    vec3(255.0, 255.0, 126.0), // Aer
+    vec3(255.0,  90.0,   1.0), // Ignis
+    vec3( 60.0, 212.0, 252.0), // Aqua
+    vec3( 86.0, 192.0,   0.0), // Terra
+    vec3(213.0, 212.0, 236.0), // Ordo
+    vec3( 64.0,  64.0,  64.0), // Perditio
+    vec3(128.0,   0.0, 128.0)  // Vitium
+);
+
+vec3 get_lpv_tint_or_crystal_color(int column) {
+    if (column < lpv_crystal_palette_column) {
+        return tint_color[column];
+    }
+
+    int crystal_index = column - lpv_crystal_palette_column;
+    if (crystal_index < lpv_crystal_count) {
+        return lpv_crystal_colors[crystal_index] * (lpv_redstone_torch_strength / 255.0);
+    }
+    return vec3(0.0);
+}
 
 #endif // INCLUDE_LIGHTING_LPV_LIGHT_COLORS
