@@ -1,2 +1,0 @@
-doSolidBlockCheck = false;
-storeToAllFaces = true;
