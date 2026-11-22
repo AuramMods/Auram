@@ -1,6 +1,6 @@
 #version 120
 #include "/lib/settings.glsl"
-#ifdef IS_LPV_ENABLED
+#if defined IS_LPV_ENABLED && !defined BLISS_RASTER_LPV
 	#extension GL_ARB_explicit_attrib_location: enable
 	#extension GL_ARB_shader_image_load_store: enable
 	#extension GL_ARB_shading_language_packing : enable
@@ -26,7 +26,11 @@ Read the terms of modification and sharing before changing something below pleas
 	attribute vec3 vaPosition;
 
 	#ifdef LPV_ENTITY_LIGHTS
-		uniform usampler1D texBlockData;
+        #ifdef BLISS_RASTER_LPV
+            uniform usampler2D auram_bliss_palette;
+        #else
+            uniform usampler1D texBlockData;
+        #endif
 	#endif
 
 	uniform mat4 shadowModelViewInverse;
@@ -46,7 +50,7 @@ Read the terms of modification and sharing before changing something below pleas
 
 
 void main() {
-	#if defined IS_LPV_ENABLED && defined MC_GL_EXT_shader_image_load_store
+	#ifdef IS_LPV_ENABLED
 		#ifdef LPV_NOSHADOW_HACK
 			vec3 playerpos = gl_Vertex.xyz;
 		#else

@@ -15,3 +15,8 @@ void main() {
         imageStore(imgBlockData, blockId, uvec4(material, 0u, 0u));
     #endif
 }
+
+// Register the companion source with Oculus's include graph.
+#if 0
+    #include "/dimensions/compat/lpv_palette.fsh"
+#endif

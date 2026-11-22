@@ -10,9 +10,15 @@ float lpvCurve(float values) {
 vec4 SampleLpvLinear(const in vec3 lpvPos) {
     vec3 texcoord = lpvPos / LpvSize3;
 
-    vec4 lpvSample = (frameCounter % 2) == 0
-        ? textureLod(texLpv1, texcoord, 0)
-        : textureLod(texLpv2, texcoord, 0);
+    #ifdef BLISS_RASTER_LPV
+        // The last slice holds the handheld material colors.
+        float z = clamp(lpvPos.z, 0.5, float(LpvSize) - 0.5) / float(LpvSize + 1u);
+        vec4 lpvSample = textureLod(auram_bliss_light, vec3(texcoord.xy, z), 0);
+    #else
+        vec4 lpvSample = (frameCounter % 2) == 0
+            ? textureLod(texLpv1, texcoord, 0)
+            : textureLod(texLpv2, texcoord, 0);
+    #endif
 
     vec3 hsv = RgbToHsv(lpvSample.rgb);
     hsv.z = lpvCurve(hsv.b) * LpvBlockSkyRange.x;

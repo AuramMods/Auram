@@ -71,21 +71,17 @@ float linearizeDepthFast(const in float depth, const in float near, const in flo
     return (near * far) / (depth * (near - far) + far);
 }
 
-#define IS_LPV_ENABLED
-
 #if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED
 	
 	flat varying float exposure;
 
-	#ifdef IS_LPV_ENABLED
+	#if defined IS_LPV_ENABLED && !defined BLISS_RASTER_LPV
 		#extension GL_ARB_shader_image_load_store: enable
 		#extension GL_ARB_shading_language_packing: enable
 	#endif
 
 	#ifdef IS_LPV_ENABLED
-		uniform usampler1D texBlockData;
-		uniform sampler3D texLpv1;
-		uniform sampler3D texLpv2;
+		#include "/lib/lpv_samplers.glsl"
 	#endif
 
 	// #ifdef IS_LPV_ENABLED
@@ -316,7 +312,7 @@ void waterVolumetrics(inout vec3 inColor, vec3 rayStart, vec3 rayEnd, float estE
 		vL += (light - light * exp(-waterCoefs * dd * rayLength)) / waterCoefs * absorbance;
 		absorbance *= exp(-waterCoefs * dd * rayLength);
 
-		#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT
+		#if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
 			vL += LPV_FOG_ILLUMINATION(progressW-cameraPosition, dd, 1.0);
 		#endif
 

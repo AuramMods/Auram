@@ -4,7 +4,7 @@
 // 	#undef IS_LPV_ENABLED
 // #endifs
 
-#ifdef IS_LPV_ENABLED
+#if defined IS_LPV_ENABLED && !defined BLISS_RASTER_LPV
 	#extension GL_ARB_shader_image_load_store: enable
 	#extension GL_ARB_shading_language_packing: enable
 #endif
@@ -83,9 +83,7 @@ uniform sampler2D colortex14;
 uniform sampler2D colortex15; // flat normals(rgb), vanillaAO(alpha)
 
 #ifdef IS_LPV_ENABLED
-	uniform usampler1D texBlockData;
-	uniform sampler3D texLpv1;
-	uniform sampler3D texLpv2;
+	#include "/lib/lpv_samplers.glsl"
 #endif
 
 

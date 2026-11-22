@@ -49,6 +49,9 @@ abstract class IrisDistantHorizonsMixin {
                 auramDefines.add(new StringPair("AURAM_PHOTON_DH_WARP_MIST", ""));
             }
             defines = auramDefines.build();
+        } else if ("AuramBliss".equals(packName) || "AuramBliss.zip".equals(packName)) {
+            defines = ImmutableList.<StringPair>builder().addAll(defines)
+                    .add(new StringPair("AURAM_BLISS_LPV_BACKEND", "")).build();
         }
         ShaderPack pack = new ShaderPack(root, options, defines);
         auramPhoton$loadedPack = new WeakReference<>(pack);

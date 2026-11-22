@@ -163,3 +163,8 @@ void main() {
             imageStore(imgLpv2, imgCoord, lightValue);
     #endif
 }
+
+// Register the companion source with Oculus's include graph.
+#if 0
+    #include "/dimensions/compat/lpv_transport.fsh"
+#endif
