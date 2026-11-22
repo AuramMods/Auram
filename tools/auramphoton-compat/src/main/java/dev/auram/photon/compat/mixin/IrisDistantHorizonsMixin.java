@@ -12,6 +12,8 @@ import net.irisshaders.iris.pipeline.WorldRenderingPipeline;
 import net.irisshaders.iris.shaderpack.ShaderPack;
 import net.irisshaders.iris.shaderpack.materialmap.NamespacedId;
 import net.irisshaders.iris.shaderpack.programs.ProgramSet;
+import org.lwjgl.opengl.GL;
+import org.lwjgl.opengl.GL20C;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -49,9 +51,15 @@ abstract class IrisDistantHorizonsMixin {
                 auramDefines.add(new StringPair("AURAM_PHOTON_DH_WARP_MIST", ""));
             }
             defines = auramDefines.build();
-        } else if ("AuramBliss".equals(packName) || "AuramBliss.zip".equals(packName)) {
-            defines = ImmutableList.<StringPair>builder().addAll(defines)
-                    .add(new StringPair("AURAM_BLISS_LPV_BACKEND", "")).build();
+        } else if (auramPhoton$isAuramBliss(packName)) {
+            ImmutableList.Builder<StringPair> auramDefines = ImmutableList.<StringPair>builder()
+                    .addAll(defines)
+                    .add(new StringPair("AURAM_BLISS_LPV_BACKEND", ""));
+            if (GL.getCapabilities().glDispatchCompute == 0 || GL.getCapabilities().glClearTexImage == 0
+                    || GL20C.glGetInteger(GL20C.GL_MAX_TEXTURE_IMAGE_UNITS) < 32) {
+                auramDefines.add(new StringPair("AURAM_BLISS_AUTO_COMPAT", ""));
+            }
+            defines = auramDefines.build();
         }
         ShaderPack pack = new ShaderPack(root, options, defines);
         auramPhoton$loadedPack = new WeakReference<>(pack);
@@ -67,9 +75,14 @@ abstract class IrisDistantHorizonsMixin {
     }
 
     @Unique
+    private static boolean auramPhoton$isAuramBliss(String name) {
+        return "AuramBliss".equals(name) || "AuramBliss.zip".equals(name);
+    }
+
+    @Unique
     private static boolean auramPhoton$hasLoadedPack() {
         return currentPack != null && auramPhoton$loadedPack != null && currentPack == auramPhoton$loadedPack.get()
-                && auramPhoton$isAuramPhoton(currentPackName);
+                && (auramPhoton$isAuramPhoton(currentPackName) || auramPhoton$isAuramBliss(currentPackName));
     }
 
     @Inject(method = "createPipeline", at = @At("HEAD"))
@@ -102,16 +115,17 @@ abstract class IrisDistantHorizonsMixin {
             currentPack = rebuilt;
             auramPhoton$loadedPack = new WeakReference<>(rebuilt);
             auramPhoton$defines = environment;
-            Iris.logger.info("Rebuilt AuramPhoton shader source with Distant Horizons rendering " + renderingEnabled);
+            Iris.logger.info("Rebuilt " + currentPackName + " shader source with Distant Horizons rendering " + renderingEnabled);
         } catch (IOException | IllegalStateException e) {
-            Iris.logger.error("Failed to refresh AuramPhoton after Distant Horizons changed state", e);
+            Iris.logger.error("Failed to refresh " + currentPackName + " after Distant Horizons changed state", e);
         }
     }
 
     @Redirect(method = "createPipeline", at = @At(
             value = "NEW", target = "net/irisshaders/iris/pipeline/IrisRenderingPipeline"))
     private static IrisRenderingPipeline auramPhoton$chooseLightVolume(ProgramSet programs, NamespacedId dimension) {
-        if (!MetalLightVolume.requested() || !auramPhoton$hasLoadedPack() || !RasterLightVolume.usesRasterVolume(programs)) {
+        if (!MetalLightVolume.requested() || !auramPhoton$isAuramPhoton(currentPackName)
+                || !auramPhoton$hasLoadedPack() || !RasterLightVolume.usesRasterVolume(programs)) {
             return new IrisRenderingPipeline(programs);
         }
 

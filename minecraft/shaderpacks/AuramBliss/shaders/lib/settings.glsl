@@ -746,7 +746,7 @@ const vec3 aerochrome_color = mix(vec3(1.0, 0.0, 0.0), vec3(0.715, 0.303, 0.631)
 //#define FORCE_BLISS_COMPAT
 #ifdef FORCE_BLISS_COMPAT
     #define BLISS_COMPAT
-#elif defined MC_OS_MAC
+#elif defined MC_OS_MAC || defined AURAM_BLISS_AUTO_COMPAT
     #define BLISS_COMPAT
 #endif
 #if defined BLISS_COMPAT && defined DISTANT_HORIZONS
