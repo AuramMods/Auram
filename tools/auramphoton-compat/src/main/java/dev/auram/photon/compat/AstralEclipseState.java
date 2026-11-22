@@ -14,6 +14,10 @@ public final class AstralEclipseState {
 
     private AstralEclipseState() {}
 
+    public static boolean available() {
+        return BINDINGS != null;
+    }
+
     public static void clear() {
         solarProgress = 0.0f;
         lunarCoverage = 0.0f;

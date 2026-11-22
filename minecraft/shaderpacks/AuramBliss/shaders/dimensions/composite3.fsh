@@ -227,6 +227,8 @@ void ApplyDistortion(inout vec2 Texcoord, vec2 TangentNormals, float lineardista
 uniform int dhRenderDistance;
 uniform float eyeAltitude;
 
+#include "/lib/auram_warp_mist.glsl"
+
 void main() {
   /* DRAWBUFFERS:73 */
 
@@ -356,6 +358,21 @@ void main() {
   // apply block breaking effect.
   if(albedo.a > 0.01 && !isWater && TranslucentShader.a <= 0.0 && !isEntity) color = mix(color*6.0, color, luma(albedo.rgb)) * albedo.rgb;
 
+  #ifdef AURAM_BLISS_WARP_MIST
+    vec3 mistColor = toLinear(max(fogColor, vec3(0.0)));
+    #ifdef DISTANT_HORIZONS
+      bool distantFront = DH_depth0 > 0.0 && DH_depth0 < 1.0
+        && (z >= 1.0 || linearizeDepthFast(DH_depth0, dhNearPlane, dhFarPlane) < linearizeDepthFast(z, near, farPlane));
+      bool distantOpaque = z2 >= 1.0
+        || (DH_depth1 > 0.0 && DH_depth1 < 1.0
+        && linearizeDepthFast(DH_depth1, dhNearPlane, dhFarPlane) < linearizeDepthFast(z2, near, farPlane));
+      if (distantOpaque) color = mix(color, mistColor, auramWarpMist);
+      if (distantFront) {
+        TranslucentShader.rgb = mix(TranslucentShader.rgb, mistColor * TranslucentShader.a * 0.1, auramWarpMist);
+      }
+    #endif
+  #endif
+
   if (TranslucentShader.a > 0.0){
     #ifdef Glass_Tint
       if(!isWater) color *= mix(normalize(albedo.rgb+0.0001)*0.9+0.1, vec3(1.0), max(fog, min(max(0.1-albedo.a,0.0) * 1000.0,1.0))) ;
@@ -368,6 +385,14 @@ void main() {
     color *= (1.0-TranslucentShader.a);
     color += TranslucentShader.rgb*10.0; 
   }
+
+#ifdef AURAM_BLISS_WARP_MIST
+  if (auramBlissNearWarpMist > 0.0 && z < 1.0 && isEyeInWater == 0) {
+    float nearMist = mix(farPlane * 0.75, 2.0, auramBlissNearWarpMist);
+    float farMist = mix(farPlane, 12.0, auramBlissNearWarpMist);
+    color = mix(color, mistColor, smoothstep(nearMist, farMist, max(linearDistance_cylinder, abs(p3.y))));
+  }
+#endif
 
 ////// --------------- VARIOUS FOG EFFECTS (behind volumetric fog)
 //////////// blindness, nightvision, liquid fogs and misc fogs

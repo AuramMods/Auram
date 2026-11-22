@@ -17,23 +17,24 @@ public final class WarpMistState {
     }
 
     public static float intensity() {
-        if (!available()) return 0.0f;
-
-        float intensity;
-        try {
-            intensity = (float) VISIBLE_INTENSITY.invokeExact();
-        } catch (RuntimeException | Error failure) {
-            throw failure;
-        } catch (Throwable failure) {
-            throw new IllegalStateException("Could not read Thaumaturge Warp Mist", failure);
-        }
-
+        float intensity = visibleIntensity();
         // Oculus disables DH's native fog draw through the API while its shader pipeline owns the scene.
         if (intensity <= 0.0f || !DistantHorizonsState.renderingEnabled()
                 || !DhApi.Delayed.configs.graphics().fog().enableDhFog().getTrueValue()) {
             return 0.0f;
         }
         return intensity;
+    }
+
+    public static float visibleIntensity() {
+        if (!available()) return 0.0f;
+        try {
+            return (float) VISIBLE_INTENSITY.invokeExact();
+        } catch (RuntimeException | Error failure) {
+            throw failure;
+        } catch (Throwable failure) {
+            throw new IllegalStateException("Could not read Thaumaturge Warp Mist", failure);
+        }
     }
 
     private static MethodHandle findVisibleIntensity() {

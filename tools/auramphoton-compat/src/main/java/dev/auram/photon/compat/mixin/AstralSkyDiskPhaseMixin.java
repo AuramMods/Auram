@@ -57,7 +57,8 @@ abstract class AstralSkyDiskPhaseMixin {
     @Unique
     private static WorldRenderingPipeline auramPhoton$customSkyPipeline() {
         String packName = Iris.getCurrentPackName();
-        if (!"AuramPhoton".equals(packName) && !"AuramPhoton.zip".equals(packName)) {
+        if (!"AuramPhoton".equals(packName) && !"AuramPhoton.zip".equals(packName)
+                && !"AuramBliss".equals(packName) && !"AuramBliss.zip".equals(packName)) {
             return null;
         }
 

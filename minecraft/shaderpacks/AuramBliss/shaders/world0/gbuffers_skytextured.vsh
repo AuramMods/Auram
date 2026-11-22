@@ -1,7 +1,7 @@
 #version 120
 #include "/lib/settings.glsl"
 
-#if RESOURCEPACK_SKY != 0
+#if RESOURCEPACK_SKY != 0 || defined AURAM_BLISS_ASTRAL_SKY
 	#include "/lib/res_params.glsl"
 	/*
 	!! DO NOT REMOVE !!
@@ -27,7 +27,7 @@
 void main() {
 	gl_Position = ftransform();
 	
-	#if RESOURCEPACK_SKY != 0
+	#if RESOURCEPACK_SKY != 0 || defined AURAM_BLISS_ASTRAL_SKY
 		texcoord = (gl_TextureMatrix[0] * gl_MultiTexCoord0).st;
 		color = gl_Color;
 		#ifdef TAA_UPSCALING

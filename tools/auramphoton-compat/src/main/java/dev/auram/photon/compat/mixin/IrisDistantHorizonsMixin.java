@@ -3,6 +3,7 @@ package dev.auram.photon.compat.mixin;
 import com.google.common.collect.ImmutableList;
 import dev.auram.photon.compat.DistantHorizonsState;
 import dev.auram.photon.compat.WarpMistState;
+import dev.auram.photon.compat.AstralEclipseState;
 import dev.auram.photon.compat.lpv.MetalLightVolume;
 import dev.auram.photon.compat.lpv.RasterLightVolume;
 import net.irisshaders.iris.Iris;
@@ -55,6 +56,8 @@ abstract class IrisDistantHorizonsMixin {
             ImmutableList.Builder<StringPair> auramDefines = ImmutableList.<StringPair>builder()
                     .addAll(defines)
                     .add(new StringPair("AURAM_BLISS_LPV_BACKEND", ""));
+            if (WarpMistState.available()) auramDefines.add(new StringPair("AURAM_BLISS_WARP_MIST", ""));
+            if (AstralEclipseState.available()) auramDefines.add(new StringPair("AURAM_BLISS_ASTRAL_SKY", ""));
             if (GL.getCapabilities().glDispatchCompute == 0 || GL.getCapabilities().glClearTexImage == 0
                     || GL20C.glGetInteger(GL20C.GL_MAX_TEXTURE_IMAGE_UNITS) < 32) {
                 auramDefines.add(new StringPair("AURAM_BLISS_AUTO_COMPAT", ""));

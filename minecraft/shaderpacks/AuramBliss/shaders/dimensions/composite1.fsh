@@ -165,6 +165,7 @@ vec3 toScreenSpace(vec3 p) {
 #include "/lib/Shadow_Params.glsl"
 #include "/lib/Shadows.glsl"
 #include "/lib/stars.glsl"
+#include "/lib/auram_astral_sky.glsl"
 
 #ifdef OVERWORLD_SHADER
 	
@@ -970,8 +971,15 @@ void main() {
 				Background += stars(orbitstar) * 10.0 * clamp(-unsigned_WsunVec.y*2.0,0.0,1.0);
 
 				#if !defined ambientLight_only && (RESOURCEPACK_SKY == 1 || RESOURCEPACK_SKY == 0)
-					Background += drawSun(dot(lightCol.a * WsunVec, feetPlayerPos_normalized),0, DirectLightColor,vec3(0.0));
-					Background += drawMoon(feetPlayerPos_normalized,  lightCol.a * WsunVec, DirectLightColor*20, Background); 
+					vec3 sunDirection = lightCol.a * WsunVec;
+					vec3 solarDisk = drawSun(dot(sunDirection, feetPlayerPos_normalized), 0.0, DirectLightColor, vec3(0.0));
+					vec3 lunarLight = DirectLightColor * 20.0;
+					#ifdef AURAM_BLISS_ASTRAL_SKY
+						solarDisk = blissEclipseDisk(solarDisk, feetPlayerPos_normalized, sunDirection, DirectLightColor);
+						lunarLight *= blissLunarTint();
+					#endif
+					Background += solarDisk;
+					Background += drawMoon(feetPlayerPos_normalized, sunDirection, lunarLight, Background);
 				#endif
 
 				Background *= atmosphereGround;
@@ -990,6 +998,8 @@ void main() {
 			#endif
 
 			Background += resourcePackskyBox;
+		#elif defined OVERWORLD_SHADER && defined AURAM_BLISS_ASTRAL_SKY
+			Background += toLinear(texture2D(colortex10, texcoord).rgb * 5.0) * 15.0;
 		#endif
 
 		#if defined OVERWORLD_SHADER && defined VOLUMETRIC_CLOUDS && !defined CLOUDS_INTERSECT_TERRAIN
@@ -1001,6 +1011,9 @@ void main() {
 
 	} else {
 
+		#if defined OVERWORLD_SHADER && defined AURAM_BLISS_ASTRAL_SKY
+			DirectLightColor *= blissSolarVisibility() * blissLunarTint();
+		#endif
 		feetPlayerPos += gbufferModelViewInverse[3].xyz;
 
 	////////////////////////////////////////////////////////////////////////////////////////////
