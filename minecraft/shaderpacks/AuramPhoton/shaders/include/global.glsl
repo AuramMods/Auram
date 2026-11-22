@@ -85,6 +85,9 @@ const float hand_depth = 0.56;
 
 #if defined TAA && defined TAAU
 const float taau_render_scale = TAAU_RENDER_SCALE;
+#if defined AURAM_PHOTON_EXPOSURE_METER && AUTO_EXPOSURE == AUTO_EXPOSURE_SIMPLE
+#define AURAM_SIMPLE_EXPOSURE_METER
+#endif
 #else
 const float taau_render_scale = 1.0;
 #endif

@@ -43,7 +43,8 @@ abstract class IrisDistantHorizonsMixin {
         if (auramPhoton$isAuramPhoton(packName)) {
             ImmutableList.Builder<StringPair> auramDefines = ImmutableList.<StringPair>builder()
                     .addAll(defines)
-                    .add(new StringPair("AURAM_PHOTON_LPV_BACKEND", ""));
+                    .add(new StringPair("AURAM_PHOTON_LPV_BACKEND", ""))
+                    .add(new StringPair("AURAM_PHOTON_EXPOSURE_METER", ""));
             if (WarpMistState.available()) {
                 auramDefines.add(new StringPair("AURAM_PHOTON_DH_WARP_MIST", ""));
             }

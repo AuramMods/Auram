@@ -1,4 +1,4 @@
-package dev.auram.photon.compat.lpv;
+package dev.auram.photon.compat.gl;
 
 import org.lwjgl.system.MemoryStack;
 
@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 
 import static org.lwjgl.opengl.GL41C.*;
 
-final class DrawState implements AutoCloseable {
+public final class DrawState implements AutoCloseable {
     private static final int[] CAPABILITIES = {
             GL_BLEND, GL_CULL_FACE, GL_DEPTH_TEST, GL_SCISSOR_TEST, GL_STENCIL_TEST,
             GL_RASTERIZER_DISCARD, GL_COLOR_LOGIC_OP
@@ -20,7 +20,7 @@ final class DrawState implements AutoCloseable {
     private final boolean[] enabled = new boolean[CAPABILITIES.length];
     private final boolean changedPointSize;
 
-    DrawState(int vao, boolean points) {
+    public DrawState(int vao, boolean points) {
         this.vao = vao == 0 ? -1 : glGetInteger(GL_VERTEX_ARRAY_BINDING);
         changedPointSize = points && !glIsEnabled(GL_PROGRAM_POINT_SIZE);
         glGetFloati_v(GL_VIEWPORT, 0, viewport);
@@ -46,7 +46,7 @@ final class DrawState implements AutoCloseable {
         if (vao != 0) glBindVertexArray(vao);
     }
 
-    void bind(int target, int shader, int width, int height) {
+    public void bind(int target, int shader, int width, int height) {
         glBindFramebuffer(GL_DRAW_FRAMEBUFFER, target);
         glUseProgram(shader);
         glViewportIndexedf(0, 0, 0, width, height);

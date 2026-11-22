@@ -1,5 +1,6 @@
 package dev.auram.photon.compat.lpv;
 
+import dev.auram.photon.compat.gl.DrawState;
 import dev.auram.photon.compat.mixin.ShaderPackSourceAccess;
 import net.irisshaders.iris.Iris;
 import net.irisshaders.iris.gl.program.ProgramUniforms;

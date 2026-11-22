@@ -79,12 +79,10 @@ uniform vec2 taa_offset;
     1.0 // Increases ghosting but reduces flickering caused by aggressive
         // clipping
 
-/*
-(needed by vertex stage for auto exposure)
-#if AUTO_EXPOSURE != AUTO_EXPOSURE_OFF
+// Keep the original scene mip setup when the companion meter is inactive.
+#ifndef AURAM_SIMPLE_EXPOSURE_METER
 const bool colortex0MipmapEnabled = true;
 #endif
- */
 
 vec3 min_of(vec3 a, vec3 b, vec3 c, vec3 d, vec3 f) {
     return min(a, min(b, min(c, min(d, f))));
