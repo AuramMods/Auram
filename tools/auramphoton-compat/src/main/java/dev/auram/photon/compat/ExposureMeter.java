@@ -95,7 +95,7 @@ public final class ExposureMeter implements AutoCloseable {
             }
 
             int id = program.getProgramId();
-            draw.bind(atlas.framebuffer, id, columns, rows);
+            draw.bind(atlas.framebuffers[0], id, columns, rows);
             glBindTexture(GL_TEXTURE_2D, useAlt ? scene.getAltTexture() : scene.getMainTexture());
             glBindSampler(unit, sampler);
             glUniform1i(sourceLocation, unit);
@@ -106,8 +106,7 @@ public final class ExposureMeter implements AutoCloseable {
             glUniform1f(weightLocation, ((float) columns * rows) / ((float) width * height));
             glDrawArrays(GL_TRIANGLES, 0, 3);
 
-            glBindTexture(GL_TEXTURE_2D, atlas.texture);
-            glGenerateMipmap(GL_TEXTURE_2D);
+            atlas.reduce();
         } finally {
             glBindSampler(unit, previousSampler);
             glBindTexture(GL_TEXTURE_2D, previousTexture);
@@ -129,23 +128,31 @@ public final class ExposureMeter implements AutoCloseable {
         }
     }
 
-    private record Atlas(int texture, int framebuffer, int width, int height) implements AutoCloseable {
+
+    private record Atlas(int texture, int[] framebuffers, int width, int height) implements AutoCloseable {
         static Atlas allocate(int width, int height) {
             int unpack = glGetInteger(GL_PIXEL_UNPACK_BUFFER_BINDING);
-            Atlas next = new Atlas(glGenTextures(), glGenFramebuffers(), width, height);
+            int levels = 32 - Integer.numberOfLeadingZeros(Math.max(width, height));
+            Atlas next = new Atlas(glGenTextures(), new int[levels], width, height);
             try {
                 glBindTexture(GL_TEXTURE_2D, next.texture);
                 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_NEAREST);
                 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 31 - Integer.numberOfLeadingZeros(Math.max(width, height)));
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, levels - 1);
                 glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0);
-                glTexImage2D(GL_TEXTURE_2D, 0, GL_R32F, width, height, 0, GL_RED, GL_FLOAT, (ByteBuffer) null);
-                glBindFramebuffer(GL_DRAW_FRAMEBUFFER, next.framebuffer);
-                glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, next.texture, 0);
-                glDrawBuffer(GL_COLOR_ATTACHMENT0);
-                int status = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
-                if (status != GL_FRAMEBUFFER_COMPLETE) {
-                    throw new IllegalStateException("AuramPhoton exposure atlas framebuffer: 0x" + Integer.toHexString(status));
+                glGenFramebuffers(next.framebuffers);
+                for (int level = 0; level < levels; level++) {
+                    int levelWidth = Math.max(1, width >> level);
+                    int levelHeight = Math.max(1, height >> level);
+                    glTexImage2D(GL_TEXTURE_2D, level, GL_R32F, levelWidth, levelHeight, 0,
+                            GL_RED, GL_FLOAT, (ByteBuffer) null);
+                    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, next.framebuffers[level]);
+                    glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, next.texture, level);
+                    glDrawBuffer(GL_COLOR_ATTACHMENT0);
+                    int status = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
+                    if (status != GL_FRAMEBUFFER_COMPLETE) {
+                        throw new IllegalStateException("AuramPhoton exposure atlas framebuffer: 0x" + Integer.toHexString(status));
+                    }
                 }
                 return next;
             } catch (RuntimeException | Error failure) {
@@ -156,9 +163,30 @@ public final class ExposureMeter implements AutoCloseable {
             }
         }
 
+        // Each step averages one 2x2 group per destination pixel. A one-pixel axis stays unchanged.
+        private void reduce() {
+            int previousReadFramebuffer = glGetInteger(GL_READ_FRAMEBUFFER_BINDING);
+            try {
+                int sourceWidth = width;
+                int sourceHeight = height;
+                for (int level = 1; level < framebuffers.length; level++) {
+                    int destinationWidth = Math.max(1, sourceWidth / 2);
+                    int destinationHeight = Math.max(1, sourceHeight / 2);
+                    glBindFramebuffer(GL_READ_FRAMEBUFFER, framebuffers[level - 1]);
+                    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, framebuffers[level]);
+                    glBlitFramebuffer(0, 0, sourceWidth, sourceHeight, 0, 0, destinationWidth, destinationHeight,
+                            GL_COLOR_BUFFER_BIT, GL_LINEAR);
+                    sourceWidth = destinationWidth;
+                    sourceHeight = destinationHeight;
+                }
+            } finally {
+                glBindFramebuffer(GL_READ_FRAMEBUFFER, previousReadFramebuffer);
+            }
+        }
+
         @Override
         public void close() {
-            glDeleteFramebuffers(framebuffer);
+            glDeleteFramebuffers(framebuffers);
             glDeleteTextures(texture);
         }
     }
