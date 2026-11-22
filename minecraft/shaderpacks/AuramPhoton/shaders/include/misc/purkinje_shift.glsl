@@ -27,6 +27,9 @@ vec3 purkinje_shift(vec3 rgb, vec2 light_levels) {
 
     vec3 xyz = rgb * rec2020_to_xyz;
 
+    // The chromaticity ratio is undefined at X = 0, including black.
+    if (xyz.x == 0.0) return max0(rgb);
+
     vec3 scotopic_luminance
         = xyz * (1.33 * (1.0 + (xyz.y + xyz.z) / xyz.x) - 1.68);
 
