@@ -13,7 +13,8 @@ const float clouds_cumulus_congestus_top_radius
     = clouds_cumulus_congestus_radius + clouds_cumulus_congestus_thickness;
 const float clouds_cumulus_congestus_distance = 30000.0;
 const float clouds_cumulus_congestus_end_distance = 50000.0;
-float clouds_cumulus_congestus_extinction_coeff = 0.08;
+float clouds_cumulus_congestus_extinction_coeff
+    = 0.08 * CLOUDS_CUMULUS_CONGESTUS_DENSITY;
 float clouds_cumulus_congestus_scattering_coeff
     = clouds_cumulus_congestus_extinction_coeff * (1.0 - 0.2 * rainStrength);
 

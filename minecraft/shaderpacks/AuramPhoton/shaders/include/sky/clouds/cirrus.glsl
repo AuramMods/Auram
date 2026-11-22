@@ -39,7 +39,7 @@ float clouds_cirrus_density(vec2 coord, float altitude_fraction) {
 
     vec2 detail_coord = coord;
 
-    float detail_amplitude = 0.2;
+    float detail_amplitude = 0.2 * CLOUDS_CIRRUS_DETAIL_STRENGTH;
     float detail_frequency = 0.00002;
     float curl_strength = 0.1 * CLOUDS_CIRRUS_CURL_STRENGTH;
 
