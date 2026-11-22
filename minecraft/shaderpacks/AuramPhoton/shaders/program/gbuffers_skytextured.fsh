@@ -47,7 +47,6 @@ const float moon_luminance = 10.0;
 
 void main() {
     vec2 new_uv = uv;
-    vec2 offset;
 
     if (renderStage == MC_RENDER_STAGE_CUSTOM_SKY) {
 #ifdef CUSTOM_SKY
@@ -63,13 +62,13 @@ void main() {
         // NB: not using renderStage to distinguish sun and moon because it's
         // broken in Iris for Minecraft 1.21.4
 
+#ifdef VANILLA_SUN
         // Cut out the sun itself (discard the halo around it)
+        vec2 offset = uv * 2.0 - 1.0;
         if (max_of(abs(offset)) > 0.25) {
             discard;
         }
-        offset = uv * 2.0 - 1.0;
 
-#ifdef VANILLA_SUN
         frag_color = texture(gtexture, new_uv).rgb;
         frag_color = srgb_eotf_inv(frag_color) * rec709_to_working_color;
         frag_color *= dot(frag_color, luminance_weights)
