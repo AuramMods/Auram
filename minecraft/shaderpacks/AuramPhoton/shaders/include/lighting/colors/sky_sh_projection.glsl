@@ -46,6 +46,10 @@ uniform float time_midnight;
 
 void sample_sky_sh(int index, float skylight_boost, out vec3 radiance, out mat3 coefficients) {
     vec3 direction = uniform_hemisphere_sample(vec3(0.0, 1.0, 0.0), r2(index));
-    radiance = textureLod(colortex4, project_sky(direction), 0.0).rgb * skylight_boost;
+    vec2 sky_uv = project_sky(direction);
+#ifdef AURAM_GROUND_SKY_MAP
+    sky_uv.y += 0.5;
+#endif
+    radiance = textureLod(colortex4, sky_uv, 0.0).rgb * skylight_boost;
     coefficients = sh_coeff_order_2(direction);
 }

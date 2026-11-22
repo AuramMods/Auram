@@ -52,6 +52,10 @@
 
 #include "/settings.glsl"
 
+#if defined SH_SKYLIGHT && AURORA_GROUND_LIGHTING >= 0
+#define AURAM_GROUND_SKY_MAP
+#endif
+
 // Photonics shorthand, 'PHOTONICS' is always defined by Photonics when it's
 // installed
 #if defined PHOTONICS && defined PHOTONICS_ENABLED

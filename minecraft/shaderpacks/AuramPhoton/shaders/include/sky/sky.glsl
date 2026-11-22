@@ -198,11 +198,13 @@ vec3 draw_sky(
 vec4 get_clouds_and_aurora(
     vec3 ray_dir,
     vec3 clear_sky,
+    ivec2 sky_texel,
+    float aurora_gain,
     out float clouds_apparent_distance
 ) {
     clouds_apparent_distance = 1e6;
 
-    ivec2 texel = ivec2(gl_FragCoord.xy);
+    ivec2 texel = sky_texel;
     texel.x = texel.x % (sky_map_res.x - 4);
 
     float dither = interleaved_gradient_noise(vec2(texel));
@@ -225,7 +227,7 @@ vec4 get_clouds_and_aurora(
 
     // Aurora
 
-    vec3 aurora = draw_aurora(ray_dir, dither);
+    vec3 aurora = draw_aurora(ray_dir, dither) * aurora_gain;
 
     vec4 clouds_and_aurora = vec4(
         result.scattering.xyz + aurora * result.transmittance,
@@ -244,7 +246,7 @@ vec4 get_clouds_and_aurora(
     return clouds_and_aurora;
 }
 
-vec3 draw_sky(vec3 ray_dir) {
+vec3 draw_sky(vec3 ray_dir, ivec2 sky_texel, float aurora_gain) {
     vec3 atmosphere = atmosphere_scattering(
         ray_dir,
         sun_color,
@@ -255,7 +257,9 @@ vec3 draw_sky(vec3 ray_dir) {
     );
     float clouds_apparent_distance;
     vec4 clouds_and_aurora
-        = get_clouds_and_aurora(ray_dir, atmosphere, clouds_apparent_distance);
+        = get_clouds_and_aurora(
+            ray_dir, atmosphere, sky_texel, aurora_gain, clouds_apparent_distance
+        );
     return draw_sky(
         ray_dir,
         atmosphere,

@@ -13,13 +13,13 @@
 
 out vec2 uv;
 
-flat out vec3 ambient_color;
+flat out vec3 ambient_color_vertex;
 flat out vec3 light_color;
 
 #if defined WORLD_OVERWORLD
 flat out vec3 sun_color;
 flat out vec3 moon_color;
-flat out vec3 sky_color;
+flat out vec3 sky_color_vertex;
 
 // literally saves 2 locations, enough to make macOS work
 // adding literally anything else here will break it again. beward.
@@ -113,7 +113,7 @@ vec3 get_ambient_color() {
         vec3(0.0, 1.0, -0.8)
     ); // don't point direcly upwards to avoid the sun halo when the sun path
        // rotation is 0
-    sky_color = atmosphere_scattering(
+    sky_color_vertex = atmosphere_scattering(
         sky_dir,
         sun_color,
         sun_dir,
@@ -121,10 +121,10 @@ vec3 get_ambient_color() {
         moon_dir,
         false
     );
-    sky_color = tau * sky_color * 1.13;
-    sky_color = mix(sky_color, tau * get_weather_color(), rainStrength);
+    sky_color_vertex = tau * sky_color_vertex * 1.13;
+    sky_color_vertex = mix(sky_color_vertex, tau * get_weather_color(), rainStrength);
 
-    return sky_color;
+    return sky_color_vertex;
 }
 #endif
 
@@ -132,7 +132,7 @@ void main() {
     uv = gl_MultiTexCoord0.xy;
 
     light_color = get_light_color();
-    ambient_color = get_ambient_color();
+    ambient_color_vertex = get_ambient_color();
 
 #if defined WORLD_OVERWORLD
     float aurora_amount = get_aurora_amount();
@@ -151,8 +151,12 @@ void main() {
     // Aurora clouds influence
     vec3 aurora_lighting
         = mix(aurora_colors[0], aurora_colors[1], 0.25) * aurora_amount;
-    sky_color += AURORA_CLOUD_LIGHTING * aurora_lighting;
-    ambient_color += AURORA_CLOUD_LIGHTING * aurora_lighting;
+    sky_color_vertex += AURORA_CLOUD_LIGHTING * aurora_lighting;
+#ifndef AURAM_GROUND_SKY_MAP
+    const float ground_gain = AURORA_GROUND_LIGHTING >= 0.0
+        ? AURORA_GROUND_LIGHTING : AURORA_CLOUD_LIGHTING;
+    ambient_color_vertex += ground_gain * aurora_lighting;
+#endif
 #endif
 
     gl_Position = vec4(gl_Vertex.xy * 2.0 - 1.0, 0.0, 1.0);

@@ -27,6 +27,9 @@ vec2 project_sky(vec3 direction) {
     coord.x = coord.x * mul + add;
 
     coord.x *= 191.0 / 192.0;
+#ifdef AURAM_GROUND_SKY_MAP
+    coord.y *= 0.5;
+#endif
 
     return coord;
 }
