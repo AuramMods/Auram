@@ -50,6 +50,11 @@ uniform vec2 taa_offset;
 void main() {
     ivec2 texel = ivec2(gl_FragCoord.xy);
 
+    if (DOF_INTENSITY == 0.0) {
+        scene_color = texelFetch(colortex0, texel, 0).rgb;
+        return;
+    }
+
     float depth = texelFetch(depthtex0, texel, 0).x;
 
 #ifdef LOD_MOD_ACTIVE
