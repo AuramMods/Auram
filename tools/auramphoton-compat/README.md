@@ -21,6 +21,12 @@ AuramCore 1.0.25. This loads AuramCore's existing player-chunk tracker before
 its legacy DH target check and reuses its scheduling policy on the new DH
 queue. Omit the flag for a standalone shader test without AuramCore.
 
+The DH 3.3.3 build uses Forge's generated Minecraft 1.20.1 SRG client jar in the
+Prism libraries directory. In singleplayer, the companion refreshes DH's beacon
+data when Minecraft publishes a changed beam or removes its block. Smooth Chunk
+Save can keep its normal disk-save interval, and glass tint updates can refresh
+the beam even when DH skips rebuilding unchanged terrain.
+
 The companion initializes Minecraft's two field-of-view interpolation values at the neutral multiplier. The first world draw can run before the first camera tick. Initializing the values gives vanilla terrain, Oculus and Distant Horizons the configured projection from that first draw.
 
 Oculus and DH each manage their own depth attachments during framebuffer recreation. The companion keeps DH targets out of Oculus’s vanilla depth rebinding, so a resize cannot leave Minecraft’s stencil texture attached beside DH’s depth texture. On DH 2.4.5-b, the companion also updates the viewport for the first draw after a resize and releases the color and depth textures DH replaces. DH 3.3.3 handles viewport dimensions and replaced depth textures in its renderer. During pipeline teardown the companion releases Oculus’s DH generic shader and opaque-depth copy after Oculus removes its overrides.

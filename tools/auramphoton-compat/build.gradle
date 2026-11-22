@@ -38,6 +38,10 @@ dependencies {
         new File(mods, 'oculus-mc1.20.1-1.8.0.jar'),
         dhJar
     )
+    if (dh333Jar.isPresent()) {
+        compileOnly files(new File(libraries,
+            'net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-srg.jar'))
+    }
 }
 
 tasks.named('processResources') {
