@@ -81,6 +81,7 @@ void main() {
 #ifdef VANILLA_MOON
         frag_color
             = texture(gtexture, new_uv).rgb * vec3(MOON_R, MOON_G, MOON_B);
+        frag_color *= tint;
 
         frag_color = srgb_eotf_inv(frag_color) * rec709_to_working_color;
         frag_color *= sunlight_color * moon_luminance;
