@@ -116,11 +116,15 @@ vec3 sss_approx(
     float shadow
 ) {
     // Blur-based SSS
-    float sss = 0.06 * sss_scale * pi;
-    vec3 sheen = 0.8 * rcp(albedo + eps) * henyey_greenstein_phase(-LoV, 0.5)
+    vec3 sss = vec3(0.06 * sss_scale * pi);
+#ifdef SSS_SHEEN
+    vec3 sheen = (0.8 * SSS_INTENSITY) * rcp(albedo + eps)
+        * henyey_greenstein_phase(-LoV, 0.5)
         * linear_step(-0.8, -0.2, -LoV) * shadow;
+    sss += sheen * sheen_amount;
+#endif
 
-    return sss + sheen * sheen_amount;
+    return sss;
 }
 #endif
 
