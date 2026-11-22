@@ -170,7 +170,6 @@ vec3 toScreenSpace(vec3 p) {
 	
 	#define CLOUDSHADOWSONLY
 	#include "/lib/volumetricClouds.glsl"
-	#define CLOUDS_INTERSECT_TERRAIN
 #endif
 
 

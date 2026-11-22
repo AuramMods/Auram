@@ -98,7 +98,6 @@ uniform int dhRenderDistance;
 #include "/lib/sky_gradient.glsl"
 #include "/lib/res_params.glsl"
 
-#define CLOUDS_INTERSECT_TERRAIN
 uniform float eyeAltitude;
 #include "/lib/volumetricClouds.glsl"
 

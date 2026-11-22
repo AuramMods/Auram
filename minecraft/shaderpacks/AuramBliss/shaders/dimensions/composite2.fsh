@@ -139,7 +139,6 @@ float invLinZ (float lindepth){
 	// uniform int dhRenderDistance;
 	#define TIMEOFDAYFOG
 	#include "/lib/lightning_stuff.glsl"
-	#define CLOUDS_INTERSECT_TERRAIN
 	#include "/lib/volumetricClouds.glsl"
 	#include "/lib/overworld_fog.glsl"
 #endif
@@ -410,7 +409,11 @@ void main() {
 	#ifdef OVERWORLD_SHADER
 		float atmosphereAlpha = 1.0;
 		vec4 VolumetricFog = GetVolumetricFog(viewPos0, vec2(noise_2,noise_1), directLightColor, indirectLightColor, averageSkyCol_Clouds/30.0, atmosphereAlpha);
-		VolumetricClouds.a *= atmosphereAlpha;
+		#ifdef CLOUDS_INTERSECT_TERRAIN
+			VolumetricClouds.a *= atmosphereAlpha;
+		#else
+			VolumetricFog.a *= atmosphereAlpha;
+		#endif
 	#endif
 	
 	#if defined NETHER_SHADER || defined END_SHADER
