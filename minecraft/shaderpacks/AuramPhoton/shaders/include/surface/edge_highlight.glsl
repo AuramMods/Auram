@@ -24,8 +24,14 @@ float edge_highlight_check(
     sample_pos
         = view_to_screen_space(combined_projection_matrix, sample_pos, true);
 
+    if (sample_pos != clamp01(sample_pos)) return 0.0;
+
     // Sample depth and gbuffer data
     ivec2 texel = ivec2(sample_pos.xy * view_res * taau_render_scale);
+    // TAAU draws only the pixels whose centers lie inside the scaled quad.
+    if (any(greaterThanEqual(vec2(texel) + 0.5, view_res * taau_render_scale))) {
+        return 0.0;
+    }
     float sample_depth = texelFetch(combined_depth_tex, texel, 0).x;
     float sample_data = texelFetch(colortex1, texel, 0).z;
 
@@ -45,8 +51,7 @@ float edge_highlight_check(
         && dot(sample_normal, normalize(offset)) > 0.01
     );
 
-    return (depth_edge + normal_edge) * float(clamp01(sample_pos) == sample_pos)
-        * float(
+    return (depth_edge + normal_edge) * float(
                has_edge_highlight(sample_normal) || center_depth < sample_depth
         );
 }
