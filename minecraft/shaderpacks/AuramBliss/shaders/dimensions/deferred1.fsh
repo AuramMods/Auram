@@ -42,6 +42,10 @@ vec2 decodeVec2(float a){
 //////////////////////////////VOID MAIN//////////////////////////////
 //////////////////////////////VOID MAIN//////////////////////////////
 
+#ifdef BLISS_PACKED_DH_DEPTH
+    #include "/lib/packed_dh_depth.glsl"
+#endif
+
 void main() {
 /* RENDERTARGETS:4,12 */
 	vec3 oldTex = texelFetch2D(colortex4, ivec2(gl_FragCoord.xy), 0).xyz;
@@ -50,7 +54,11 @@ void main() {
 	#ifdef DISTANT_HORIZONS
     	float QuarterResDepth = texelFetch2D(dhDepthTex, ivec2(gl_FragCoord.xy*4), 0).x;
 		QuarterResDepth = DH_linZ(QuarterResDepth);
-   		gl_FragData[1].a = QuarterResDepth*QuarterResDepth*65000.0;
+        #ifdef BLISS_PACKED_DH_DEPTH
+            gl_FragData[1] = vec4(0.0, 0.0, 0.0, blissEncodeMixedDepth(QuarterResDepth));
+        #else
+            gl_FragData[1].a = QuarterResDepth*QuarterResDepth*65000.0;
+        #endif
 	#endif
 	
 	newTex = linZ(newTex);

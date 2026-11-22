@@ -14,6 +14,14 @@ A disposable Overworld save ran with Minecraft 1.20.1, Forge 47.4.10, Oculus 1.8
 | Default, with DH 3.3.3 | Oculus fell back while building Overworld `composite2`, whose fragment body is `dimensions/composite1.fsh`. Apple OpenGL linked the exported program with 16 active samplers. Oculus reserves units 1 and 2 in composite programs and uses `GL_MAX_TEXTURE_IMAGE_UNITS` as its allocation ceiling. The bind of `depthtex0` threw `No more available texture units`. |
 | LPV enabled at 64³, without DH | Oculus fell back in `GlImage.setup` when LWJGL called the unavailable `glClearTexImage` entry point. This happens before compiling a compute program or performing voxel writes. |
 
+## Depth packing on Apple OpenGL
+
+The compatibility path stores vanilla opaque, DH opaque, and DH translucent depth in the three unused color channels of colortex12. Its alpha channel keeps the upstream mixed-depth encoding at binary16 precision. The main opaque lighting pass reads the packed depths for screen-space rays and water reconstruction. The Windows default path uses the original depth samplers. The **Force compatibility rendering** option selects the packed path on Windows.
+
+The Apple OpenGL linker reflected 13 samplers for the patched Overworld lighting pass, down from 16. A hidden client with active DH and a depth readback at 854 × 480 found all 409,920 pixels matched the three source textures exactly in the current RGBA32F target. The readback saw one DH-only opaque pixel, no nearer translucent pixels and GL error 0. This forest scene establishes the packing result. Shoreline coverage remains open.
+
+The combination of colored shadows and resource-pack sky still exceeds Oculus's texture unit limit in this cycle. LPV still requires its compatibility renderer.
+
 ## Rendering coverage to establish
 
 | Area | Runtime observation |

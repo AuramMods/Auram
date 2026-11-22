@@ -771,6 +771,16 @@ const vec3 aerochrome_color = mix(vec3(1.0, 0.0, 0.0), vec3(0.715, 0.303, 0.631)
 // ----- DEBUG SETTINGS ----- //
 ////////////////////////////////
 
+//#define FORCE_BLISS_COMPAT
+#ifdef FORCE_BLISS_COMPAT
+    #define BLISS_COMPAT
+#elif defined MC_OS_MAC
+    #define BLISS_COMPAT
+#endif
+#if defined BLISS_COMPAT && defined DISTANT_HORIZONS
+    #define BLISS_PACKED_DH_DEPTH
+#endif
+
 #define debug_OFF 0
 #define debug_SHADOWMAP 1
 #define debug_NORMALS 2

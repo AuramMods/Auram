@@ -411,11 +411,15 @@ vec2 SSRT_Shadows(vec3 viewPos, bool depthCheck, vec3 lightDir, float noise, boo
 
 	for (int i = 0; i < int(steps); i++) {
 		
-		float samplePos = convertHandDepth_2(texture2D(depthtex1, screenPos.xy).x, hand);
-		
-		#ifdef DISTANT_HORIZONS
-			if(depthCheck) samplePos = texture2D(dhDepthTex1, screenPos.xy).x;
-		#endif
+        #ifdef BLISS_PACKED_DH_DEPTH
+            vec2 opaqueDepths = texture2D(colortex12, screenPos.xy).rg;
+            float samplePos = depthCheck ? opaqueDepths.g : convertHandDepth_2(opaqueDepths.r, hand);
+        #else
+            float samplePos = convertHandDepth_2(texture2D(depthtex1, screenPos.xy).x, hand);
+            #ifdef DISTANT_HORIZONS
+                if (depthCheck) samplePos = texture2D(dhDepthTex1, screenPos.xy).x;
+            #endif
+        #endif
 
 		if(samplePos < screenPos.z && (samplePos <= max(minZ,maxZ) && samplePos >= min(minZ,maxZ))){
 
@@ -763,15 +767,26 @@ void main() {
 		float noise_2 = R2_dither();
 
 		float z0 = texture2D(depthtex0,texcoord).x;
-		float z = texture2D(depthtex1,texcoord).x;
+        #ifdef BLISS_PACKED_DH_DEPTH
+            vec4 packedDepth = texture2D(colortex12, texcoord);
+            float z = packedDepth.r;
+        #else
+            float z = texture2D(depthtex1, texcoord).x;
+        #endif
 		float swappedDepth = z;
 
 		bool isDHrange = z >= 1.0;
 
 		#ifdef DISTANT_HORIZONS
-			float DH_mixedLinearZ = sqrt(texture2D(colortex12,texcoord).a/65000.0);
-			float DH_depth0 = texture2D(dhDepthTex,texcoord).x;
-			float DH_depth1 = texture2D(dhDepthTex1,texcoord).x;
+            #ifdef BLISS_PACKED_DH_DEPTH
+                float DH_mixedLinearZ = sqrt(packedDepth.a / 65000.0);
+                float DH_depth0 = packedDepth.b;
+                float DH_depth1 = packedDepth.g;
+            #else
+                float DH_mixedLinearZ = sqrt(texture2D(colortex12, texcoord).a / 65000.0);
+                float DH_depth0 = texture2D(dhDepthTex, texcoord).x;
+                float DH_depth1 = texture2D(dhDepthTex1, texcoord).x;
+            #endif
 
 			float depthOpaque = z;
 			float depthOpaqueL = linearizeDepthFast(depthOpaque, near, farPlane);

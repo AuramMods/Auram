@@ -368,6 +368,10 @@ float sampleDepth(sampler2D depthTex, vec2 texcoord, bool hand){
 
 
 
+#ifdef BLISS_PACKED_DH_DEPTH
+    #include "/lib/packed_dh_depth.glsl"
+#endif
+
 /* RENDERTARGETS:3,14,12*/
 
 void main() {
@@ -377,6 +381,9 @@ void main() {
 	vec2 texcoord = gl_FragCoord.xy*texelSize;
 
 	float z = texture2D(depthtex1,texcoord).x;
+    #ifdef BLISS_PACKED_DH_DEPTH
+        float vanillaOpaqueDepth = z;
+    #endif
 
 	#ifdef DISTANT_HORIZONS
 		float DH_depth1 = texture2D(dhDepthTex1,texcoord).x;
@@ -415,7 +422,7 @@ void main() {
 	vec3 viewPos = toScreenSpace_DH(texcoord/RENDER_SCALE - TAA_Offset*texelSize*0.5, z, DH_depth1);
 	
 
-	#if defined DENOISE_SSS_AND_SSAO && indirect_effect == 1
+	#if defined BLISS_PACKED_DH_DEPTH || (defined DENOISE_SSS_AND_SSAO && indirect_effect == 1)
 		float depth = z;
 
 		#ifdef DISTANT_HORIZONS
@@ -431,12 +438,15 @@ void main() {
 		    depth = depth / dhFarPlane;
 		#endif
 
-		if(depth < 1.0)
-    		gl_FragData[2] = vec4(vec3(0.0), depth * depth * 65000.0);
-		else
-			gl_FragData[2] = vec4(vec3(0.0), 65000.0);
+        #ifdef BLISS_PACKED_DH_DEPTH
+            gl_FragData[2] = vec4(vanillaOpaqueDepth, DH_depth1,
+                texture2D(dhDepthTex, texcoord).x, blissEncodeMixedDepth(depth));
+        #else
+            gl_FragData[2] = vec4(0.0, 0.0, 0.0, depth < 1.0 ? depth * depth * 65000.0 : 65000.0);
+        #endif
+    #endif
 
-
+    #if defined DENOISE_SSS_AND_SSAO && indirect_effect == 1
 		vec3 FlatNormals = texture2D(colortex15,texcoord).rgb * 2.0 - 1.0;
 		
 		if(z >= 1.0){
@@ -451,7 +461,6 @@ void main() {
 	#else
 		vec2 SSAO_SSS = vec2(1.0,0.0);
 	#endif
-
 
 #ifdef OVERWORLD_SHADER
 	float SpecularTex = texture2D(colortex8,texcoord).z;
