@@ -19,6 +19,8 @@ import org.lwjgl.system.MemoryUtil;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.lwjgl.opengl.GL41C.*;
 
@@ -44,6 +46,13 @@ public final class RasterLightVolume implements AutoCloseable {
     private LightVolumeTarget palette;
     private int fullscreenVao;
     private int occupancyProgram;
+    private String entityVoxelSource;
+    private boolean blissRawEntityPosition;
+    private final float[] chunkOffset = new float[3];
+    private final Map<Integer, Integer> entityChunkOffsets = new HashMap<>();
+    private final Map<EntityAttributes, EntityReplay> entityPrograms = new HashMap<>();
+    private boolean capturedBlissEntityDraw;
+    private boolean capturingBlissEntityBatch;
     private int transportProgram;
     private int modelViewLocation;
     private int regionOffsetLocation;
@@ -184,7 +193,27 @@ public final class RasterLightVolume implements AutoCloseable {
         } finally {
             glDeleteProgram(paletteProgram);
         }
-        if (bliss) uploadBlissHandheldPalette();
+        if (bliss) {
+            uploadBlissHandheldPalette();
+            if (set.getPack().getShaderPackOptions().getOptionValues().getBooleanValueOrDefault("LPV_ENTITY_LIGHTS")) {
+                initializeBlissEntityReplay(sources, set);
+            }
+        }
+    }
+
+    private void initializeBlissEntityReplay(ShaderPackSourceAccess sources, ProgramSet set) {
+        entityVoxelSource = readSource(sources, "/dimensions/compat/lpv_entities.vsh");
+        blissRawEntityPosition = set.getShadow().flatMap(ProgramSource::getVertexSource)
+                .filter(source -> source.contains("vec3 playerpos = gl_Vertex.xyz")).isPresent();
+    }
+
+    private EntityReplay linkEntityReplay(EntityAttributes attributes) {
+        int program = LightVolumeShaders.blissEntityOccupancy(entityVoxelSource,
+                attributes.position(), attributes.entity(), side, atlasColumns, atlasWidth, atlasHeight);
+        glProgramUniform1i(program, glGetUniformLocation(program, "blissRawPosition"), blissRawEntityPosition ? 1 : 0);
+        return new EntityReplay(program, glGetUniformLocation(program, "iris_ModelViewMat"),
+                glGetUniformLocation(program, "iris_ChunkOffset"), glGetUniformLocation(program, "shadowModelViewInverse"),
+                glGetUniformLocation(program, "cameraPosition"), glGetUniformLocation(program, "blissRenderStage"));
     }
 
     private void uploadBlissHandheldPalette() {
@@ -260,8 +289,56 @@ public final class RasterLightVolume implements AutoCloseable {
         }
     }
 
+    public static void captureBlissEntityBatch(boolean capture) {
+        if (active != null && active.entityVoxelSource != null) active.capturingBlissEntityBatch = capture;
+    }
+
+    public static boolean isCapturingBlissEntities() {
+        return active != null && active.capturingBlissEntityBatch;
+    }
+
+    public static void replayBlissEntities(int count, int type, int position, int entity, Matrix4fc modelView) {
+        active.replayEntities(count, type, new EntityAttributes(position, entity), modelView);
+    }
+
+    private void replayEntities(int count, int type, EntityAttributes attributes, Matrix4fc modelView) {
+        int shader = glGetInteger(GL_CURRENT_PROGRAM);
+        if (shader == 0) return;
+
+        EntityReplay replay = entityPrograms.computeIfAbsent(attributes, this::linkEntityReplay);
+        glProgramUniformMatrix4fv(replay.program(), replay.modelView(), false, modelView.get(drawMatrix));
+        glProgramUniformMatrix4fv(replay.program(), replay.shadowInverse(), false, shadowMatrix);
+        glProgramUniform3fv(replay.program(), replay.camera(), camera);
+        glProgramUniform1i(replay.program(), replay.renderStage(), GbufferPrograms.getCurrentPhase().ordinal());
+        int location = entityChunkOffsets.computeIfAbsent(shader, glProgram -> glGetUniformLocation(glProgram, "iris_ChunkOffset"));
+        if (location < 0) {
+            glProgramUniform3f(replay.program(), replay.chunkOffset(), 0, 0, 0);
+        } else {
+            glGetUniformfv(shader, location, chunkOffset);
+            glProgramUniform3fv(replay.program(), replay.chunkOffset(), chunkOffset);
+        }
+
+        int activeUnit = glGetInteger(GL_ACTIVE_TEXTURE);
+        try (DrawState draw = new DrawState(0, true);
+                TextureBinding material = TextureBinding.bind(0, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, palette.texture())) {
+            draw.bind(occupancy.framebuffer(), replay.program(), atlasWidth, atlasHeight);
+            glDrawElements(GL_POINTS, count, type, 0L);
+        } finally {
+            glActiveTexture(activeUnit);
+        }
+        if (!capturedBlissEntityDraw) {
+            capturedBlissEntityDraw = true;
+            Iris.logger.info("Captured AuramBliss voxel occupancy from an Oculus shadow entity draw");
+        }
+    }
+
+    private record EntityAttributes(int position, int entity) {}
+    private record EntityReplay(int program, int modelView, int chunkOffset, int shadowInverse, int camera,
+            int renderStage) {}
+
     private void begin() {
         capturing = false;
+        capturingBlissEntityBatch = false;
         shadowInverse.set(ShadowRenderer.MODELVIEW).invert().get(shadowMatrix);
         try (DrawState draw = new DrawState(0, false)) {
             draw.bind(occupancy.framebuffer(), transportProgram, atlasWidth, atlasHeight);
@@ -377,5 +454,6 @@ public final class RasterLightVolume implements AutoCloseable {
         }
         if (fullscreenVao != 0) glDeleteVertexArrays(fullscreenVao);
         if (occupancyProgram != 0) glDeleteProgram(occupancyProgram);
+        for (EntityReplay replay : entityPrograms.values()) glDeleteProgram(replay.program());
     }
 }

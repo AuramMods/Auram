@@ -18,6 +18,18 @@ abstract class IrisShadowLightVolumeMixin {
     }
 
     @Inject(method = "renderShadows", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;m_109911_()V"))
+    private void auramBliss$startEntityBatch(CallbackInfo callback) {
+        RasterLightVolume.captureBlissEntityBatch(true);
+    }
+
+    @Inject(method = "renderShadows", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;m_109911_()V", shift = At.Shift.AFTER))
+    private void auramBliss$finishEntityBatch(CallbackInfo callback) {
+        RasterLightVolume.captureBlissEntityBatch(false);
+    }
+
+    @Inject(method = "renderShadows", at = @At(value = "INVOKE",
             target = "Lnet/irisshaders/iris/shadows/ShadowCompositeRenderer;renderAll()V"))
     private void auramPhoton$propagateLights(CallbackInfo callback) {
         RasterLightVolume.finishShadowCapture();

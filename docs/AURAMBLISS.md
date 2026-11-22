@@ -30,7 +30,9 @@ Native hidden Overworld launches with translucent colored shadows, resource-pack
 
 For compatibility rendering the Forge companion replays Embeddium's shadow terrain into a 16-bit voxel-ID target. Layered fragment draws propagate Bliss's original RGB and sky attenuation through its integer material palette into a pair of RGBA8 volumes. The extra slice stores the handheld colors, allowing all lighting readers to use one sampler. The default Windows compute stages keep their image-backed material and transport path.
 
-Apple OpenGL linked and drew the integer palette for 2,048 IDs with default, candle, and adjusted saturation and redstone settings. The native 64³ client initialized and captured terrain both with and without DH. With DH, colored lighting, volumetric fog illumination, colored candles, colored shadows, resource-pack sky, 65% TAA upscaling and DOF mode 5 enabled, readback found 6,803 lit volume cells, 11 cells at or above 235/255 in one channel, 189 emitting palette entries, and GL error 0. Entity and block-entity voxel capture, larger volumes and compute-path coverage follow separately.
+Apple OpenGL linked and drew the integer palette for 2,048 IDs with default, candle, and adjusted saturation and redstone settings. The native 64³ client initialized and captured terrain both with and without DH. With DH, colored lighting, volumetric fog illumination, colored candles, colored shadows, resource-pack sky, 65% TAA upscaling and DOF mode 5 enabled, readback found 6,803 lit volume cells, 11 cells at or above 235/255 in one channel, 189 emitting palette entries, and GL error 0. Larger volumes and compute-path coverage follow separately.
+
+The companion replays Oculus’s shadow entity batch from the vertex buffer’s real position and ID attributes. It preserves the loader’s render phase and applies Bliss’s existing light classification. A 64³ native test with DH observed eight Blaze voxels, one dropped sea-lantern voxel and one beacon voxel in the current occupancy target, with GL error 0.
 
 ## Rendering coverage to establish
 
