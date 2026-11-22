@@ -64,12 +64,13 @@ events.register<PlayerLoggedInEvent>(event => {
     val player = (event.entity as ServerPlayer);
     val data = player.persistentData;
 
-    if (!(TAG in data)) {
+    // The entity tag also persists when Forge's PlayerPersisted compound is absent on first login.
+    if (!(TAG in data) && player.addTag(TAG)) {
         data.put(TAG, true);
         player.updatePersistentData(data);
 
-        // THIS is the correct clear for your player inventory wrapper
-        player.getInventory().clearContent();
+        val inventory = player.getInventory();
+        inventory.clearContent();
 
         // equip
         player.setItemSlot(EquipmentSlot.HEAD, <item:minecraft:leather_helmet>);
@@ -78,16 +79,16 @@ events.register<PlayerLoggedInEvent>(event => {
         player.setItemSlot(EquipmentSlot.FEET, <item:minecraft:leather_boots>);
         player.setItemSlot(EquipmentSlot.OFFHAND, <item:terramity:flintlock_pistol>);
 
-        // give
-        player.give(tome);
-        player.give(<item:immersiveengineering:seed> * 5);
-        player.give(<item:minecraft:clay> * 18);
-        player.give(<item:minecraft:cake>);
-        player.give(<item:nomadictents:giant_bedouin>);
-        player.give(<item:minecraft:bone> * 3);
-        player.give(<item:nomadictents:golden_mallet>.withTag({Damage: 0}));
-        player.give(<item:botania:brew_flask>.withTag({brewKey: "botania:healing"}));
-        player.give(<item:minecraft:iron_nugget> * 22);
+        // Slots 0–8 are the hotbar. Slots 9–35 are the main inventory.
+        inventory.setItem(0, tome.copy());
+        inventory.setItem(9, <item:immersiveengineering:seed> * 5);
+        inventory.setItem(10, <item:minecraft:clay> * 18);
+        inventory.setItem(11, <item:minecraft:cake>.copy());
+        inventory.setItem(12, <item:nomadictents:giant_bedouin>.copy());
+        inventory.setItem(13, <item:minecraft:bone> * 3);
+        inventory.setItem(14, <item:nomadictents:golden_mallet>.withTag({Damage: 0}));
+        inventory.setItem(15, <item:botania:brew_flask>.withTag({brewKey: "botania:healing"}));
+        inventory.setItem(16, <item:minecraft:iron_nugget> * 22);
     }
 });
 
