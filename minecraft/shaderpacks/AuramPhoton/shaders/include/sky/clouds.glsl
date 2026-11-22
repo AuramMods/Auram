@@ -82,6 +82,9 @@ CloudsResult draw_clouds(
             distance_fade
         );
 
+        if (distance_fade == 0.0) {
+            result.is_congestus = result_cu_con.is_congestus;
+        }
         result = blend_layers(result, result_cu_con);
         if (result.transmittance < 1e-3) {
             return result;

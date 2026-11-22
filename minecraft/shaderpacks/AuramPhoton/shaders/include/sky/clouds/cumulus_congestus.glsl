@@ -4,6 +4,7 @@
 // Alternative 1st layer: distant cumulus congestus clouds
 
 #include "common.glsl"
+#include "congestus_wind.glsl"
 
 const float clouds_cumulus_congestus_radius
     = planet_radius + CLOUDS_CUMULUS_CONGESTUS_ALTITUDE;
@@ -35,9 +36,7 @@ float clouds_cumulus_congestus_altitude_shaping(
 }
 
 float clouds_cumulus_congestus_density(vec3 pos) {
-    const float wind_angle = CLOUDS_CUMULUS_WIND_ANGLE * degree;
-    const vec2 wind_velocity
-        = CLOUDS_CUMULUS_WIND_SPEED * vec2(cos(wind_angle), sin(wind_angle));
+    vec2 wind_velocity = clouds_cumulus_congestus_wind_velocity;
 
     float r = length(pos);
     if (r < clouds_cumulus_congestus_radius
@@ -390,7 +389,8 @@ CloudsResult draw_cumulus_congestus_clouds(
     return CloudsResult(
         vec4(clouds_scattering, scattering.y),
         clouds_transmittance,
-        apparent_distance
+        apparent_distance,
+        distance_weight_sum > 0.0
     );
 }
 

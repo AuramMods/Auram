@@ -309,7 +309,8 @@ CloudsResult draw_cirrus_clouds(
     return CloudsResult(
         vec4(clouds_scattering, scattering.y),
         view_transmittance,
-        distance_to_sphere
+        distance_to_sphere,
+        false
     );
 }
 

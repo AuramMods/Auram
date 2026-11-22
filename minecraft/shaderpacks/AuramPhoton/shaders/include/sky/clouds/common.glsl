@@ -18,9 +18,10 @@ struct CloudsResult {
     vec4 scattering; // w = ambient scattering, for lightning flashes
     float transmittance;
     float apparent_distance;
+    bool is_congestus;
 };
 
-const CloudsResult clouds_not_hit = CloudsResult(vec4(0.0), 1.0, 1e5);
+const CloudsResult clouds_not_hit = CloudsResult(vec4(0.0), 1.0, 1e5, false);
 
 // ----
 
@@ -138,7 +139,8 @@ CloudsResult blend_layers(CloudsResult old, CloudsResult new) {
     return CloudsResult(
         scattering_in_front + transmittance_in_front * scattering_behind,
         old.transmittance * new.transmittance,
-        min(old.apparent_distance, new.apparent_distance)
+        min(old.apparent_distance, new.apparent_distance),
+        new_in_front ? new.is_congestus : old.is_congestus
     );
 }
 

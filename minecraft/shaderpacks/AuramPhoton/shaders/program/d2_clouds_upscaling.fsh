@@ -83,6 +83,7 @@ uniform bool world_age_changed;
 #include "/include/utility/geometry.glsl"
 #include "/include/utility/random.glsl"
 #include "/include/utility/space_conversion.glsl"
+#include "/include/sky/clouds/congestus_wind.glsl"
 
 vec4 min_of(vec4 a, vec4 b, vec4 c, vec4 d, vec4 e) {
     return min(a, min(b, min(c, min(d, e))));
@@ -132,7 +133,7 @@ float texture_min_4x4(sampler2D s, vec2 coord) {
     );
 }
 
-vec3 reproject_clouds(vec2 uv, float distance_to_cloud) {
+vec3 reproject_clouds(vec2 uv, float distance_to_cloud, bool is_congestus) {
     const float planet_radius = 6371e3;
     const float clouds_cumulus_radius = planet_radius + CLOUDS_CUMULUS_ALTITUDE;
     const float clouds_altocumulus_radius
@@ -173,7 +174,9 @@ vec3 reproject_clouds(vec2 uv, float distance_to_cloud) {
         + CLOUDS_SCALE * cloud_pos;
     float r = length(air_cloud_pos);
 
-    if (r < clouds_altocumulus_radius) {
+    if (is_congestus) {
+        velocity = vec3(clouds_cumulus_congestus_wind_velocity, 0.0).xzy;
+    } else if (r < clouds_altocumulus_radius) {
         velocity = clouds_cumulus_velocity;
     } else if (r < clouds_cirrus_radius) {
         velocity = clouds_altocumulus_velocity;
@@ -252,7 +255,8 @@ void main() {
 #define uv_clamped uv
 #endif
 
-    float apparent_distance = current_data.x;
+    bool is_congestus = clouds_cumulus_congestus_wind_override && current_data.x < 0.0;
+    float apparent_distance = is_congestus ? -current_data.x : current_data.x;
     float ambient_scattering = current_data.y;
 
     // Find the closest cloud distance between the current frame and a 4x4 area
@@ -276,7 +280,8 @@ void main() {
     }
 
     // Reproject clouds
-    vec2 previous_uv = reproject_clouds(uv, closest_distance).xy;
+    float reproject_distance = is_congestus ? apparent_distance : closest_distance;
+    vec2 previous_uv = reproject_clouds(uv, reproject_distance, is_congestus).xy;
 
 #ifdef TAAU
     vec2 previous_uv_clamped = clamp(

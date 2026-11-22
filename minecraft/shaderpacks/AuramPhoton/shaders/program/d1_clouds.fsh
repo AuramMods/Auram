@@ -221,6 +221,10 @@ void main() {
     clouds.xyz = result.scattering.xyz;
     clouds.w = result.transmittance;
     clouds_data.x = result.apparent_distance * rcp(CLOUDS_SCALE);
+    // The sign carries the front layer to the temporal pass.
+    if (clouds_cumulus_congestus_wind_override && result.is_congestus) {
+        clouds_data.x = -clouds_data.x;
+    }
     clouds_data.y = result.scattering.w;
 #else
     clouds = vec4(0.0, 0.0, 0.0, 1.0);
