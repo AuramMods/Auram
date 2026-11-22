@@ -40,6 +40,7 @@ uniform int renderStage;
 uniform vec3 view_sun_dir;
 
 #include "/include/sky/atmosphere.glsl"
+#include "/include/sky/astral_eclipse.glsl"
 #include "/include/utility/color.glsl"
 
 const float vanilla_sun_luminance = 10.0;
@@ -63,6 +64,16 @@ void main() {
         // broken in Iris for Minecraft 1.21.4
 
 #ifdef VANILLA_SUN
+        if (auramAstralSolarProgress > 0.0 && renderStage == MC_RENDER_STAGE_SUN) {
+            // Astral supplies the atlas UVs for the current eclipse tile.
+            vec3 corona = texture(gtexture, new_uv).rgb;
+            if (all(equal(corona, vec3(0.0)))) discard;
+            corona = srgb_eotf_inv(corona) * rec709_to_working_color;
+            frag_color = corona * dot(corona, luminance_weights)
+                * (sunlight_color * vanilla_sun_luminance) * sun_color / astral_solar_visibility();
+            return;
+        }
+
         // Cut out the sun itself (discard the halo around it)
         vec2 offset = uv * 2.0 - 1.0;
         if (max_of(abs(offset)) > 0.25) {

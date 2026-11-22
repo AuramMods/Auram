@@ -2,6 +2,7 @@
 #define INCLUDE_LIGHTING_COLORS_LIGHT_COLOR
 
 #include "/include/sky/atmosphere.glsl"
+#include "/include/sky/astral_eclipse.glsl"
 #include "/include/utility/color.glsl"
 
 uniform float moon_phase_brightness;
@@ -16,7 +17,7 @@ float get_sun_exposure() {
     float daytime_mul
         = 1.0 + 0.5 * (time_sunset + time_sunrise) + 40.0 * blue_hour;
 
-    return base_scale * daytime_mul;
+    return base_scale * daytime_mul * astral_solar_visibility();
 }
 
 vec3 get_sun_tint() {
@@ -54,9 +55,7 @@ float get_moon_exposure() {
 }
 
 vec3 get_moon_tint() {
-    const vec3 base_tint = from_srgb(vec3(MOON_R, MOON_G, MOON_B));
-
-    return base_tint;
+    return from_srgb(vec3(MOON_R, MOON_G, MOON_B) * astral_lunar_tint());
 }
 
 vec3 get_light_color() {

@@ -43,8 +43,25 @@ vec3 draw_sun(vec3 ray_dir) {
     vec3 limb_darkening
         = pow(vec3(1.0 - sqr(1.0 - center_to_edge)), 0.5 * alpha);
 
-    return sun_luminance * sun_color * step(0.0, center_to_edge)
-        * limb_darkening;
+    vec3 disk = sun_luminance * sun_color * limb_darkening;
+    if (auramAstralSolarProgress == 0.0 || nu < cos(2.0 * sun_angular_radius)) {
+        return disk;
+    }
+
+    // Astral's occulting disk travels across the sun during the event.
+    float transit = 2.0 * auramAstralSolarProgress - 1.0;
+    vec3 tangent = abs(sun_dir.y) < 0.999
+        ? normalize(vec3(sun_dir.z, 0.0, -sun_dir.x)) : vec3(1.0, 0.0, 0.0);
+    float offset = transit * 2.0 * sun_angular_radius;
+    vec3 occulting_dir = cos(offset) * sun_dir + sin(offset) * tangent;
+    float occulting_dist = fast_acos(clamp(dot(ray_dir, occulting_dir), -1.0, 1.0));
+    float visible_disk = smoothstep(0.994, 1.006, occulting_dist / sun_angular_radius);
+
+    // Keep a narrow corona at totality, independent of the dimmed sunlight.
+    float radial = fast_acos(clamp(nu, -1.0, 1.0)) / sun_angular_radius;
+    float corona = smoothstep(0.97, 1.03, radial) * exp(-14.0 * max0(radial - 1.03));
+    corona *= sqr(sqr(1.0 - abs(transit)));
+    return (disk * visible_disk + 0.008 * sun_luminance * sun_color * corona) / astral_solar_visibility();
 }
 
 vec4 draw_moon(vec3 ray_dir) {
@@ -97,6 +114,10 @@ vec4 draw_moon(vec3 ray_dir) {
                      0.5 * glow_color * (0.1 + 0.1 * edge_glow))
         * (0.2 + 0.8 * moon_texture);
     color = moon_luminance * sqr(color);
+    if (auramAstralLunarCoverage > 0.0) {
+        color = ((color * working_to_display_color) * srgb_eotf_inv(astral_lunar_tint()))
+            * display_to_working_color;
+    }
     return vec4(color, 1.0);
 }
 
