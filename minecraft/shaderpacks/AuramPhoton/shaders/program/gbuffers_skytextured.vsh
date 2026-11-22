@@ -13,6 +13,7 @@
 
 out vec2 uv;
 out vec3 view_pos;
+out vec4 vertex_color;
 
 #if MC_VERSION >= 260100
 out vec2 uv_mid;
@@ -52,7 +53,8 @@ void main() {
 
     uv = mat2(gl_TextureMatrix[0]) * gl_MultiTexCoord0.xy
         + gl_TextureMatrix[0][3].xy;
-    tint = gl_Color.rgb;
+    vertex_color = gl_Color;
+    tint = vertex_color.rgb;
 
 #if MC_VERSION >= 260100
     uv_mid = mat2(gl_TextureMatrix[0]) * mc_midTexCoord

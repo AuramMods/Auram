@@ -11,12 +11,13 @@
 
 #include "/include/global.glsl"
 
-layout(location = 0) out vec3 frag_color;
+layout(location = 0) out vec4 frag_color;
 
 /* RENDERTARGETS: 0 */
 
 in vec2 uv;
 in vec3 view_pos;
+in vec4 vertex_color;
 
 #if MC_VERSION >= 260100
 in vec2 uv_mid;
@@ -36,6 +37,7 @@ uniform sampler2D noisetex;
 uniform int moonPhase;
 uniform float rainStrength;
 uniform int renderStage;
+uniform int auramAstralConstellation;
 
 uniform vec3 view_sun_dir;
 
@@ -48,14 +50,23 @@ const float moon_luminance = 10.0;
 
 void main() {
     vec2 new_uv = uv;
+    frag_color.a = 1.0;
+
+    if (auramAstralConstellation != 0) {
+        // Astral supplies the texture, vertex tint, and blend state for its overlay.
+        vec4 star = texture(gtexture, new_uv) * vertex_color;
+        if (star.a <= 0.0) discard;
+        frag_color = vec4(srgb_eotf_inv(star.rgb) * rec709_to_working_color, star.a);
+        return;
+    }
 
     if (renderStage == MC_RENDER_STAGE_CUSTOM_SKY) {
 #ifdef CUSTOM_SKY
-        frag_color = texture(gtexture, new_uv).rgb;
-        frag_color = srgb_eotf_inv(frag_color) * rec709_to_working_color;
-        frag_color *= CUSTOM_SKY_BRIGHTNESS;
+        frag_color.rgb = texture(gtexture, new_uv).rgb;
+        frag_color.rgb = srgb_eotf_inv(frag_color.rgb) * rec709_to_working_color;
+        frag_color.rgb *= CUSTOM_SKY_BRIGHTNESS;
 #else
-        frag_color = vec3(0.0);
+        frag_color.rgb = vec3(0.0);
 #endif
     } else if (dot(view_pos, view_sun_dir) > 0.0) {
         // Sun
@@ -69,7 +80,7 @@ void main() {
             vec3 corona = texture(gtexture, new_uv).rgb;
             if (all(equal(corona, vec3(0.0)))) discard;
             corona = srgb_eotf_inv(corona) * rec709_to_working_color;
-            frag_color = corona * dot(corona, luminance_weights)
+            frag_color.rgb = corona * dot(corona, luminance_weights)
                 * (sunlight_color * vanilla_sun_luminance) * sun_color / astral_solar_visibility();
             return;
         }
@@ -80,24 +91,24 @@ void main() {
             discard;
         }
 
-        frag_color = texture(gtexture, new_uv).rgb;
-        frag_color = srgb_eotf_inv(frag_color) * rec709_to_working_color;
-        frag_color *= dot(frag_color, luminance_weights)
+        frag_color.rgb = texture(gtexture, new_uv).rgb;
+        frag_color.rgb = srgb_eotf_inv(frag_color.rgb) * rec709_to_working_color;
+        frag_color.rgb *= dot(frag_color.rgb, luminance_weights)
             * (sunlight_color * vanilla_sun_luminance) * sun_color;
 #else
-        frag_color = vec3(0.0);
+        frag_color.rgb = vec3(0.0);
 #endif
     } else {
         // Moon
 #ifdef VANILLA_MOON
-        frag_color
+        frag_color.rgb
             = texture(gtexture, new_uv).rgb * vec3(MOON_R, MOON_G, MOON_B);
-        frag_color *= tint;
+        frag_color.rgb *= tint;
 
-        frag_color = srgb_eotf_inv(frag_color) * rec709_to_working_color;
-        frag_color *= sunlight_color * moon_luminance;
+        frag_color.rgb = srgb_eotf_inv(frag_color.rgb) * rec709_to_working_color;
+        frag_color.rgb *= sunlight_color * moon_luminance;
 #else
-        frag_color = vec3(0.0);
+        frag_color.rgb = vec3(0.0);
 #endif
     }
 }
