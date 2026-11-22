@@ -72,8 +72,11 @@ kernel void propagateLight(texture2d<float, access::read> previous [[texture(0)]
     uint material = blocks.read(pixel).x;
     bool transparent = material == 0 || material >= 128;
     material &= 127;
-    bool emits = material >= 32 && material < 80;
-    float3 emission = emits ? palette.read(uint2(material - 32, 0)).rgb : float3(0);
+    // See palette_layout.glsl for the crystal material IDs and palette columns.
+    bool crystal = material >= 97 && material < 104;
+    bool emits = (material >= 32 && material < 80) || crystal;
+    uint2 lightPixel = crystal ? uint2(16 + material - 97, 1) : uint2(material - 32, 0);
+    float3 emission = emits ? palette.read(lightPixel).rgb : float3(0);
     float3 rgb = emission * emission;
     if (incoming) {
         int3 pos = previousPosition(reprojection, voxel);

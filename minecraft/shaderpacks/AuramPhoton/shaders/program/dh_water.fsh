@@ -151,6 +151,7 @@ uniform vec4 entityColor;
 #include "/include/lighting/diffuse_lighting.glsl"
 #include "/include/lighting/shadows/pcss.glsl"
 #include "/include/lighting/specular_lighting.glsl"
+#include "/include/misc/dh_overdraw.glsl"
 #include "/include/misc/lod_mod_support.glsl"
 #include "/include/surface/material.glsl"
 #include "/include/surface/water_normal.glsl"
@@ -174,21 +175,7 @@ void main() {
     }
 #endif
 
-    // Overdraw fade
-
-    float dh_fade_start_distance
-        = max0(far - DH_OVERDRAW_DISTANCE - DH_OVERDRAW_FADE_LENGTH);
-    float dh_fade_end_distance = max0(far - DH_OVERDRAW_DISTANCE);
-    float view_distance = length(scene_pos);
-
-    float dither = interleaved_gradient_noise(gl_FragCoord.xy, frameCounter);
-    float fade = smoothstep(
-        dh_fade_start_distance,
-        dh_fade_end_distance,
-        view_distance
-    );
-
-    if (dither > fade) {
+    if (!render_dh_overdraw(scene_pos, far, frameCounter)) {
         discard;
         return;
     }

@@ -35,7 +35,7 @@ flat in uint material_mask;
 uniform vec2 view_pixel_size;
 uniform int frameCounter;
 
-#include "/include/utility/dithering.glsl"
+#include "/include/misc/dh_overdraw.glsl"
 #include "/include/utility/encoding.glsl"
 
 // ------------
@@ -65,21 +65,7 @@ void main() {
     }
 #endif
 
-    // Overdraw fade
-
-    float dh_fade_start_distance
-        = max0(far - DH_OVERDRAW_DISTANCE - DH_OVERDRAW_FADE_LENGTH);
-    float dh_fade_end_distance = max0(far - DH_OVERDRAW_DISTANCE);
-    float view_distance = length(scene_pos);
-
-    float dither = interleaved_gradient_noise(gl_FragCoord.xy, frameCounter);
-    float fade = smoothstep(
-        dh_fade_start_distance,
-        dh_fade_end_distance,
-        view_distance
-    );
-
-    if (dither > fade) {
+    if (!render_dh_overdraw(scene_pos, far, frameCounter)) {
         discard;
         return;
     }

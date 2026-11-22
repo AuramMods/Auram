@@ -48,14 +48,6 @@ val tome = <item:akashictome:tome>.withTag({RepairCost: 0, "akashictome:data":
     pneumaticcraft: {id: "patchouli:guide_book", Count: 1, tag: {"patchouli:book": "pneumaticcraft:book"}}
 }, "akashictome:is_morphing": 1, display: {Name: "{\"text\":\"Book of Holding\"}"}});
 
-val bag = <item:seminin_cantalari:elmascanta>.withTag({Inventory: {Size: 53, Items: [
-    {Slot: 11, id: "immersiveengineering:seed", Count: 5}, {Slot: 13, id: "minecraft:clay", Count: 18}, 
-    {Slot: 19, id: "minecraft:cake", Count: 1}, 
-    {Slot: 21, id: "nomadictents:giant_bedouin", Count: 1, tag: {}}, 
-    {Slot: 22, id: "minecraft:bone", Count: 3}, 
-    {Slot: 30, id: "nomadictents:golden_mallet", Count: 1, tag: {Damage: 0}}, 
-    {Slot: 38, id: "botania:brew_flask", Count: 1, tag: {brewKey: "botania:healing"}}]}});
-
 craftingTable.remove(<item:akashictome:tome>);
 craftingTable.addShapeless("tome_of_holding", tome, [
     <tag:items:forge:books>,
@@ -88,7 +80,13 @@ events.register<PlayerLoggedInEvent>(event => {
 
         // give
         player.give(tome);
-        player.give(bag);
+        player.give(<item:immersiveengineering:seed> * 5);
+        player.give(<item:minecraft:clay> * 18);
+        player.give(<item:minecraft:cake>);
+        player.give(<item:nomadictents:giant_bedouin>);
+        player.give(<item:minecraft:bone> * 3);
+        player.give(<item:nomadictents:golden_mallet>.withTag({Damage: 0}));
+        player.give(<item:botania:brew_flask>.withTag({brewKey: "botania:healing"}));
         player.give(<item:minecraft:iron_nugget> * 22);
     }
 });

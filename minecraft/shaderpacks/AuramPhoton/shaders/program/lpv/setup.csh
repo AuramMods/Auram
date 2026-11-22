@@ -24,12 +24,12 @@ void main() {
     imageStore(
         light_data_img,
         ivec2(index, 0),
-        vec4(lpv_light_colors[clamp(index, 0u, 47u)], 0.0)
+        vec4(lpv_light_colors[index], 0.0)
     );
     imageStore(
         light_data_img,
         ivec2(index, 1),
-        vec4(tint_color[clamp(index, 0u, 15u)], 0.0)
+        vec4(get_lpv_tint_or_crystal_color(index), 0.0)
     );
 }
 
