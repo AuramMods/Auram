@@ -198,6 +198,8 @@ const float wetnessHalflife         = 70.0;
 
 // Clouds
 
+  #define DH_NATIVE_CLOUDS 0 // [0 1]
+
   #define CLOUDS_TEMPORAL_UPSCALING 4 // [1 2 3 4]
   #define CLOUDS_AERIAL_PERSPECTIVE_BOOST 1 // [0 1 2 3 4]
   #define CLOUDS_ACCUMULATION_LIMIT 20
