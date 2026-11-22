@@ -63,7 +63,7 @@ static id<MTLTexture> sharedTexture(id<MTLDevice> device, CGLContextObj context,
     return texture;
 }
 
-JNIEXPORT jlong JNICALL Java_dev_auram_photon_compat_lpv_MetalLightVolume_createNative(
+JNIEXPORT jlong JNICALL Java_dev_auram_photon_compat_lpv_MetalLightVolume_createNativeWithTileReset(
         JNIEnv *env, jclass type, jstring kernel, jint side, jint columns, jint width, jint height, jintArray names) {
     (void)type;
     @autoreleasepool {
@@ -194,6 +194,7 @@ JNIEXPORT void JNICALL Java_dev_auram_photon_compat_lpv_MetalLightVolume_propaga
         [planner setComputePipelineState:state.planner];
         [planner setBytes:&side length:sizeof(side) atIndex:0];
         [planner setBuffer:state.flags[published] offset:0 atIndex:2];
+        [planner setBuffer:state.flags[next] offset:0 atIndex:3];
         [planner setBytes:projection length:sizeof projection atIndex:4];
         [planner setBuffer:state.schedule offset:0 atIndex:5];
         [planner dispatchThreads:MTLSizeMake(side / 8, side / 8, side / 4) threadsPerThreadgroup:MTLSizeMake(8, 4, 4)];

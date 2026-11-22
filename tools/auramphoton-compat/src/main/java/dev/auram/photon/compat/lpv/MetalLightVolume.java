@@ -69,7 +69,7 @@ public final class MetalLightVolume implements AutoCloseable {
         long handle = 0;
         int program = 0;
         try {
-            handle = createNative(kernel, side, columns, width, height, textures);
+            handle = createNativeWithTileReset(kernel, side, columns, width, height, textures);
             if (handle == 0) throw new IllegalStateException("AuramPhoton could not create the Metal light volume");
             for (int i = 0; i < textures.length; i++) {
                 targets[i] = LightVolumeTarget.rectangle(textures[i]);
@@ -130,7 +130,7 @@ public final class MetalLightVolume implements AutoCloseable {
         destroyNative(handle);
     }
 
-    private static native long createNative(String kernel, int side, int columns, int width, int height, int[] textures);
+    private static native long createNativeWithTileReset(String kernel, int side, int columns, int width, int height, int[] textures);
     private static native void propagateNative(long handle, int previous, float[] trace);
     private static native void destroyNative(long handle);
 }

@@ -41,10 +41,14 @@ uint lightCanReach(constant Reprojection &params, device const uint *history, ui
 
 kernel void scheduleTiles(constant uint &side [[buffer(0)]],
                           device const uint *history [[buffer(2)]],
+                          device uint *destination [[buffer(3)]],
                           constant Reprojection &params [[buffer(4)]],
                           device uint *scheduled [[buffer(5)]],
                           uint3 group [[thread_position_in_grid]]) {
-    scheduled[activityIndex(group, side)] = lightCanReach(params, history, group, side);
+    uint tile = activityIndex(group, side);
+    // Save the old destination state before propagation rebuilds the flag.
+    scheduled[tile] = lightCanReach(params, history, group, side) | (destination[tile] << 1u);
+    destination[tile] = 0u;
 }
 
 kernel void propagateLight(texture2d<float, access::read> previous [[texture(0)]],
@@ -53,23 +57,16 @@ kernel void propagateLight(texture2d<float, access::read> previous [[texture(0)]
                            texture2d<float, access::write> next [[texture(4)]],
                            constant uint &side [[buffer(0)]],
                            constant uint &columns [[buffer(1)]],
-                           device uint *destination [[buffer(3)]],
+                           device atomic_uint *destination [[buffer(3)]],
                            constant Reprojection &reprojection [[buffer(4)]],
                            device const uint *scheduled [[buffer(5)]],
                            uint3 voxel [[thread_position_in_grid]],
                            uint3 group [[threadgroup_position_in_grid]],
-                           uint lane [[thread_index_in_threadgroup]],
                            uint simdLane [[thread_index_in_simdgroup]]) {
     uint tile = activityIndex(group, side);
-    threadgroup uint incoming;
-    threadgroup uint written;
-    threadgroup atomic_uint hasLight;
-    if (lane == 0) {
-        incoming = scheduled[tile];
-        written = destination[tile];
-        atomic_store_explicit(&hasLight, 0u, memory_order_relaxed);
-    }
-    threadgroup_barrier(mem_flags::mem_threadgroup);
+    uint work = scheduled[tile];
+    bool incoming = (work & 1u) != 0;
+    bool written = (work & 2u) != 0;
 
     uint2 pixel = atlasPixel(voxel, side, columns);
     uint material = blocks.read(pixel).x;
@@ -78,7 +75,7 @@ kernel void propagateLight(texture2d<float, access::read> previous [[texture(0)]
     bool emits = material >= 32 && material < 80;
     float3 emission = emits ? palette.read(uint2(material - 32, 0)).rgb : float3(0);
     float3 rgb = emission * emission;
-    if (incoming != 0) {
+    if (incoming) {
         int3 pos = previousPosition(reprojection, voxel);
         if (all(pos >= int3(0)) && all(pos < int3(side))) {
             constexpr int3 offsets[6] = {int3(1, 0, 0), int3(0, 1, 0), int3(0, 0, 1),
@@ -93,9 +90,10 @@ kernel void propagateLight(texture2d<float, access::read> previous [[texture(0)]
             rgb += average * (tint * tint);
         }
     }
-    if (written != 0 || incoming != 0 || emits) next.write(float4(rgb, 0), pixel);
+    if (written || incoming || emits) next.write(float4(rgb, 0), pixel);
     bool hasSimdLight = simd_any(any(rgb != float3(0)));
-    if (simdLane == 0 && hasSimdLight) atomic_fetch_or_explicit(&hasLight, 1u, memory_order_relaxed);
-    threadgroup_barrier(mem_flags::mem_threadgroup);
-    if (lane == 0) destination[tile] = atomic_load_explicit(&hasLight, memory_order_relaxed);
+    // The planner cleared the flag. Every writer publishes the same value.
+    if (simdLane == 0 && hasSimdLight) {
+        atomic_store_explicit(&destination[tile], 1u, memory_order_relaxed);
+    }
 }
