@@ -18,38 +18,75 @@ A disposable Overworld save ran with Minecraft 1.20.1, Forge 47.4.10, Oculus 1.8
 
 The compatibility path stores vanilla opaque, DH opaque, and DH translucent depth in the three unused color channels of colortex12. Its alpha channel keeps the upstream mixed-depth encoding at binary16 precision. The main opaque lighting pass reads the packed depths for screen-space rays and water reconstruction. The Windows default path uses the original depth samplers. The **Force compatibility rendering** option selects the packed path on Windows.
 
-The Apple OpenGL linker reflected 13 samplers for the patched Overworld lighting pass, down from 16. A hidden client with active DH and a depth readback at 854 × 480 found all 409,920 pixels matched the three source textures exactly in the current RGBA32F target. The readback saw one DH-only opaque pixel, no nearer translucent pixels and GL error 0. This forest scene establishes the packing result. Shoreline coverage remains open.
+The Apple OpenGL linker reflected 13 samplers for the patched Overworld lighting pass, down from 16. A hidden client with active DH and a depth readback at 854 × 480 found all 409,920 pixels matched the three source textures exactly in the current RGBA32F target. The readback saw one DH-only opaque pixel, no nearer translucent pixels and GL error 0. The shoreline, underwater, and full-client counts are recorded below.
 
 ## Feature-heavy sampler coverage
 
 Oculus 1.8.0 also occupies unit 0 for the default color target even if the linked program has no color-target-0 sampler. On the 16-unit Apple context this leaves 13 active user samplers for that program. The front depth and translucency flags now travel with the existing lighting guide. Normal, AO and specular values share one RGBA16 target with eight bits per original component. The preparation pass writes the shared inputs before opaque lighting and the packed channels become available for subsequent passes.
 
-Native hidden Overworld launches with translucent colored shadows, resource-pack sky mode 1, DH shadows, 65% TAA upscaling and DOF mode 5 entered the world with and without DH. The packed lighting program linked with 13 active samplers in both cases. The initial duplicate-uniform experiment also hit a HotSpot C2 compiler crash after Oculus had fallen back. The successful repeat used native Temurin Java 17. LPV coverage follows separately.
+Native hidden Overworld launches with translucent colored shadows, resource-pack sky mode 1, DH shadows, 65% TAA upscaling and DOF mode 5 entered the world with and without DH. The packed lighting program linked with 13 active samplers in both cases. The initial duplicate-uniform experiment also hit a HotSpot C2 compiler crash after Oculus had fallen back. The successful repeat used native Temurin Java 17. The raster LPV extends that combination with colored block and entity lights.
 
 ## Raster LPV terrain
 
 For compatibility rendering the Forge companion replays Embeddium's shadow terrain into a 16-bit voxel-ID target. Layered fragment draws propagate Bliss's original RGB and sky attenuation through its integer material palette into a pair of RGBA8 volumes. The extra slice stores the handheld colors, allowing all lighting readers to use one sampler. The default Windows compute stages keep their image-backed material and transport path.
 
-Apple OpenGL linked and drew the integer palette for 2,048 IDs with default, candle, and adjusted saturation and redstone settings. The native 64³ client initialized and captured terrain both with and without DH. With DH, colored lighting, volumetric fog illumination, colored candles, colored shadows, resource-pack sky, 65% TAA upscaling and DOF mode 5 enabled, readback found 6,803 lit volume cells, 11 cells at or above 235/255 in one channel, 189 emitting palette entries, and GL error 0. Larger volumes and compute-path coverage follow separately.
+Apple OpenGL linked and drew the integer palette for 2,048 IDs with default, candle, and adjusted saturation and redstone settings. The native 64³ client initialized and captured terrain both with and without DH. With DH, colored lighting, volumetric fog illumination, colored candles, colored shadows, resource-pack sky, 65% TAA upscaling and DOF mode 5 enabled, readback found 6,803 lit volume cells, 11 cells at or above 235/255 in one channel, 189 emitting palette entries, and GL error 0. Native timings for 64³, 128³ and 256³ are recorded below.
 
 The companion replays Oculus’s shadow entity batch from the vertex buffer’s real position and ID attributes. It preserves the loader’s render phase and applies Bliss’s existing light classification. A 64³ native test with DH observed eight Blaze voxels, one dropped sea-lantern voxel and one beacon voxel in the current occupancy target, with GL error 0.
 
-## Native cached shoreline and Windows source coverage
+## Native validation
 
-The [isolated replay and probes](../tools/aurambliss-qa/README.md) measured the cached shoreline with the companion and DH 3.3.3 at 854 × 480. All 409,920 packed pixels matched the three source depth textures. Where vanilla opaque depth was clear, the probe counted 55,105 DH opaque pixels and 55,920 pixels with nearer DH translucent depth. The recorded GL error was 0.
+The [isolated replay and probes](../tools/aurambliss-qa/README.md) ran with native Temurin 17 on an Apple M4 Max using OpenGL 4.1 Metal 91.7. All measured window snapshots reported GLFW visibility and focus at zero. The full Auram build 336 client loaded Forge 47.4.10, Oculus 1.8.0, Embeddium 0.3.31, DH 3.3.3 and AuramCore 1.0.25.
 
-Oculus 1.8.0 exported and glslang linked 777 candidate graphics programs and 24 active compute stages across NVIDIA, AMD and Intel environments. The matrix covered Overworld, Nether and End, default settings, feature-heavy compute, forced compatibility, and NVIDIA samples without DH. Forced compatibility declared zero custom images. The Windows verification used transformed GLSL.
-
-The control inventory lists 408 options. `Snowy_Winter` is reserved in the upstream menu and its implementation is commented out. `Exposure_Speed` has a declaration with no active reference in the pinned source. The inventory preserves their original identifiers and shows the source for other controls.
-
-## Rendering coverage to establish
-
-| Area | Runtime observation |
+| Scene | Result |
 | --- | --- |
-| Two shipped profile selections | Compare the default AgX and legacy Hejl tone curves at fixed exposure. Verify the shader GUI exposes the two profile selections and carries through existing instance options. |
-| Deferred geometry and materials | Trace the solid and translucent G-buffers, normals, labPBR and particle paths. Compare lit terrain, entities, the held item, alpha layers, POM and emissive surfaces. |
-| Sky and weather | Compare sun and moon, shadows, clouds, skybox modes, weather, lightning, seasonal tint and fog in a fixed camera scene. |
-| Floodfill colored lighting | Compare seed IDs, occlusion, tint, texture update timing, camera-cell shifts and light falloff at all three volume sizes. Cover terrain, entities, held lights, candles, redstone and optional volumetric fog illumination. |
-| Distant Horizons | Read opaque and translucent LOD depths and inspect texture ownership during reload. Compare shoreline and underwater occlusion, shadows, noise, AO, SSS, screen-space reflection, overdraw and cloud or fog overlap. |
-| Post-processing | Exercise TAA and its render-scale options, DOF modes, bloom, exposure, tonemapping and debug views in matched scenes. |
-| Dimensions and pack integration | Exercise Overworld, Nether, End and the shader's wildcard mappings, with Auram's resource packs, Astral Sorcery sky effects and Thaumaturge Warp Mist where applicable. |
+| Cached shoreline, 854 × 480 | 55,105 DH opaque pixels and 55,920 nearer DH translucent pixels where vanilla opaque terrain was absent. All 409,920 packed pixels matched the three sampled source textures. |
+| Fresh DH database, 854 × 480 | With `FEATURES` generation enabled, DH reported about 127 chunks per second during the middle of the run. The new database held 1,751 FullData rows. The probe counted 54,525 DH-only opaque and 56,161 nearer translucent pixels. All 409,920 packed pixels matched. |
+| Underwater, 854 × 480 | Confirmed a submerged camera from Minecraft’s actual fluid state. The packed depth matched at all 409,920 pixels, including 13,738 DH opaque pixels beyond the vanilla opaque surface. |
+| Full client, 1280 × 720 | With 65% TAA upscaling and 128³ LPV, the client rendered the shoreline, toggled Warp Mist, switched both tone curves, entered the Aether and returned. The loaded resource pack reported labPBR. The probe matched all 389,376 active pixels in the 832 × 468 render viewport after return. |
+| Fullscreen | A virtual 1920 × 1080 display attached successfully. The client returned to 854 × 480 windowed rendering. DH and labPBR remained active and the window stayed hidden and unfocused. |
+| Resize and reload | The heavy combination resized to 1040 × 584, changed GUI scale, reloaded resources and toggled DH off and on. Photon and BSL both rendered before switching back to Bliss. The probe matched all 256,880 active pixels after the 65% viewport resize. |
+| Astral Sorcery | The replay scheduled real solar and lunar events from Astral’s calendar. Bliss observed 50% solar progression and 100% lunar coverage through live uniforms. The replay captured the sky before and at peak coverage. |
+
+All texture and lifecycle probes in the table reported GL error zero. The stock pack keeps DH rendering off in its common configuration. Turn on DH rendering to use the shader’s LOD paths.
+
+## Feature parity matrix
+
+| Feature | Implementation and coverage |
+| --- | --- |
+| Presets and settings | The AgX default and legacy Hejl profile both render at runtime. The generated inventory lists 408 menu controls and maps the controls to shader references and applicable scenes. Upstream reserved `Snowy_Winter` and unused `Exposure_Speed` retain their imported IDs. |
+| Geometry and materials | The normal, AO and labPBR channels carry their packed values on the compatibility path. Native replay loaded labPBR with parallax occlusion mapping enabled. Oculus’s translucent entity and block passes follow the existing shader menu switch. |
+| Shadow, light, and fog | The translucent colored-shadow, opaque-shadow, entity and terrain paths execute together. LPV retains the palette-scale, size, falloff, occlusion, hand-light and fog controls. Native readback compared palette entries and observed live terrain, held-light inputs and real entity capture. |
+| Water, reflection, and DH | Retains the original DH terrain, water, shadow, reflection and fog branches. Native replay measured actual opaque and translucent attachments across a shoreline and the opaque attachment underwater. The source matrix linked all three dimension programs with default DH AO, SSS, screen-space reflections, noise and overdraw prevention, plus heavy DH shadows. |
+| Sky, weather, and climate | The two cloud terrain modes work with DH and native OpenGL. Astral’s resource-pack sky geometry and procedural eclipses feed Bliss’s original sky, sun and moon paths. Warp Mist covers vanilla distance-based fog as well as the DH opaque and translucent layers. Weather and seasonal parameters remain public, with source-level coverage. |
+| Post-processing and dimensions | Tested 65% TAA upscaling, DOF mode 5, both tone curves, Overworld, Nether, End, the Aether wildcard, and world re-entry. On the matched default midday scene, the average absolute RGB-channel difference from the upstream framebuffer was 2.98 / 2.36 / 2.22 on the 0–255 scale. Clouds and temporal sampling contribute to frame variation. |
+
+The compatibility path stores 8-bit pairs in a 16-bit channel, which changes auxiliary surface quantization from the separate original buffers. It preserves the material channels and layout. The upstream profile, source audit, and PNG comparisons give an A/B reference for reports.
+
+## Frame-time measurements
+
+All measurements use 90 frames at 854 × 480, an eight-chunk vanilla view and a 90 FPS cap. Heap is the high-water value of the Java heap across the sampling window. Cold and cached results use the same 128³ shoreline route, moving 22 blocks in X, −8 in Z and turning 32°. The reference route uses the pinned release and no DH, since the original does not load with DH or LPV on the test Apple driver.
+
+| Scene | Median / p95 / p99 frame ms | LPV GPU median / p95 ms | Heap GiB |
+| --- | ---: | ---: | ---: |
+| Pinned default, no DH, matched moving view | 11.50 / 15.07 / 22.33 | — | 0.77 |
+| AuramBliss default, no DH, matched moving view | 11.75 / 12.80 / 15.67 | — | 0.94 |
+| Cached DH, 128³ LPV, matched moving view | 11.56 / 13.37 / 18.21 | 0.93 / 1.02 | 1.67 |
+| Cold DH, 128³ LPV, matched moving view | 11.45 / 13.44 / 16.18 | 0.98 / 1.01 | 1.61 |
+| Static 64³ LPV, no DH | 13.99 / 28.10 / 57.99 | 0.28 / 0.52 | 1.43 |
+| Static 128³ LPV, no DH | 13.85 / 20.85 / 39.80 | 1.02 / 1.08 | 1.34 |
+| Static 256³ LPV, no DH | 19.60 / 28.48 / 43.25 | 2.80 / 3.18 | 1.48 |
+
+The M4 Max target for this isolated replay is under 25 ms median, under 33.3 ms p95 and under 4 ms p95 for GPU propagation. Every sample set met those targets. The 256³ volume and isolated startup can exceed the 33.3 ms budget at p99. Isolated shader reloads measured roughly 2.2 seconds, and full-client tone curve reloads measured 2.5–2.6 seconds with DH, labPBR and 128³ LPV.
+
+## Packaged client
+
+An archive of the candidate Minecraft tree included the shader files and companion JAR from the pack. The SHA-256 of `auramphoton-compat-0.1.0-dh333.jar` was `22ac4db7979d1e30b036ee3ccd025b94c80eaef38bb89a1c4acc1850a7670c99` in both the prepared archive and the disposable client.
+
+The 1280 × 720 heavy launch used 128³ LPV and 65% TAA upscaling. The probe observed 13,170 DH-only opaque pixels and 4,044 nearer DH translucent pixels in the active viewport and verified all 389,376 packed depth pixels with GL error zero. The full-pack 90-frame sample measured 30.70 / 44.95 / 162.03 ms at median / p95 / p99. GPU propagation measured 1.22 / 1.85 / 2.64 ms, with 9.43 GiB peak sampled Java heap. The sample starts shortly after the full client enters the world.
+
+The first fresh-copy launch encountered an `ArrayIndexOutOfBoundsException` in fastutil during the initial loading overlay before Oculus loaded the shader. The repeated launch used the same pack files and completed the renderer and depth replay above.
+
+## Windows coverage
+
+Oculus 1.8.0 generated and glslang linked 821 graphics programs and 24 compute stages across 11 NVIDIA, AMD and Intel cases. This enumerated Overworld, Nether and End, native compute selection, forced compatibility, default settings and no-DH samples. Every compute case declared four images. Forced compatibility declared zero images. The heavy runs enabled colored shadows, volumetric LPV, terrain-independent clouds, translucent entities, POM, 65% TAA upscaling and DOF 5. Native Windows hardware remains untested. The same disposable client replay accepts a native Windows Java executable and can be repeated with the forced compatibility switch.
