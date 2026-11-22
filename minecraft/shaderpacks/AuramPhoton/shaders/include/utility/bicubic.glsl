@@ -79,7 +79,13 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-vec4 catmull_rom_filter(sampler2D sampler, vec2 coord, out float confidence) {
+vec4 catmull_rom_filter(
+    sampler2D sampler,
+    vec2 coord,
+    vec2 first_center,
+    vec2 last_center,
+    out float confidence
+) {
     vec2 res = textureSize(sampler, 0);
     vec2 view_pixel_size = 1.0 / res;
 
@@ -115,9 +121,10 @@ vec4 catmull_rom_filter(sampler2D sampler, vec2 coord, out float confidence) {
     vec2 tex_pos_3 = tex_pos_1 + 2.0;
     vec2 tex_pos_12 = tex_pos_1 + offset12;
 
-    tex_pos_0 *= view_pixel_size;
-    tex_pos_3 *= view_pixel_size;
-    tex_pos_12 *= view_pixel_size;
+    // Keep the filter weights and clamp each read to the rendered rectangle.
+    tex_pos_0 = clamp(tex_pos_0 * view_pixel_size, first_center, last_center);
+    tex_pos_3 = clamp(tex_pos_3 * view_pixel_size, first_center, last_center);
+    tex_pos_12 = clamp(tex_pos_12 * view_pixel_size, first_center, last_center);
 
     vec4 result = vec4(0.0);
     result
@@ -146,11 +153,6 @@ vec4 catmull_rom_filter(sampler2D sampler, vec2 coord, out float confidence) {
         * max_of(vec4(w0.y, w1.y, w2.y, w3.y));
 
     return result;
-}
-
-vec4 catmull_rom_filter(sampler2D sampler, vec2 coord) {
-    float confidence;
-    return catmull_rom_filter(sampler, coord, confidence);
 }
 
 // Approximation from Siggraph 2016 SMAA presentation

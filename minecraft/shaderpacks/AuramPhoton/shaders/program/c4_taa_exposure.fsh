@@ -62,6 +62,7 @@ uniform vec2 taa_offset;
 #define TEMPORAL_REPROJECTION
 
 #include "/include/misc/lod_mod_support.glsl"
+#include "/include/post_processing/taa_bounds.glsl"
 #include "/include/utility/bicubic.glsl"
 #include "/include/utility/color.glsl"
 #include "/include/utility/space_conversion.glsl"
@@ -100,11 +101,13 @@ vec3 reinhard_inverse(vec3 rgb) { return rgb / (1.0 - rgb); }
 
 // Estimates the closest fragment in a 5x5 radius with 5 samples in a cross
 // pattern Improves reprojection for objects in motion
-vec3 get_closest_fragment(sampler2D depth_sampler, ivec2 texel0) {
-    ivec2 texel1 = texel0 + ivec2(-2, -2);
-    ivec2 texel2 = texel0 + ivec2(2, -2);
-    ivec2 texel3 = texel0 + ivec2(-2, 2);
-    ivec2 texel4 = texel0 + ivec2(2, 2);
+vec3 get_closest_fragment(sampler2D depth_sampler, ivec2 texel0, ivec2 last) {
+    ivec2 lower = max(texel0 - 2, ivec2(0));
+    ivec2 upper = min(texel0 + 2, last);
+    ivec2 texel1 = lower;
+    ivec2 texel2 = ivec2(upper.x, lower.y);
+    ivec2 texel3 = ivec2(lower.x, upper.y);
+    ivec2 texel4 = upper;
 
     float depth0 = texelFetch(depth_sampler, texel0, 0).x;
     float depth1 = texelFetch(depth_sampler, texel1, 0).x;
@@ -166,6 +169,7 @@ float get_flicker_reduction(
 
 vec3 neighborhood_clipping(
     ivec2 texel,
+    ivec2 last,
     vec3 current_color,
     vec3 history_color,
     float distance_factor
@@ -176,15 +180,17 @@ vec3 neighborhood_clipping(
     // a b c
     // d e f
     // g h i
-    vec3 a = texelFetch(colortex0, texel + ivec2(-1, 1), 0).rgb;
-    vec3 b = texelFetch(colortex0, texel + ivec2(0, 1), 0).rgb;
-    vec3 c = texelFetch(colortex0, texel + ivec2(1, 1), 0).rgb;
-    vec3 d = texelFetch(colortex0, texel + ivec2(-1, 0), 0).rgb;
+    ivec2 lower = max(texel - 1, ivec2(0));
+    ivec2 upper = min(texel + 1, last);
+    vec3 a = texelFetch(colortex0, ivec2(lower.x, upper.y), 0).rgb;
+    vec3 b = texelFetch(colortex0, ivec2(texel.x, upper.y), 0).rgb;
+    vec3 c = texelFetch(colortex0, upper, 0).rgb;
+    vec3 d = texelFetch(colortex0, ivec2(lower.x, texel.y), 0).rgb;
     vec3 e = current_color;
-    vec3 f = texelFetch(colortex0, texel + ivec2(1, 0), 0).rgb;
-    vec3 g = texelFetch(colortex0, texel + ivec2(-1, -1), 0).rgb;
-    vec3 h = texelFetch(colortex0, texel + ivec2(0, -1), 0).rgb;
-    vec3 i = texelFetch(colortex0, texel + ivec2(1, -1), 0).rgb;
+    vec3 f = texelFetch(colortex0, ivec2(upper.x, texel.y), 0).rgb;
+    vec3 g = texelFetch(colortex0, lower, 0).rgb;
+    vec3 h = texelFetch(colortex0, ivec2(texel.x, lower.y), 0).rgb;
+    vec3 i = texelFetch(colortex0, ivec2(upper.x, lower.y), 0).rgb;
 
     // Convert to YCoCg
     // Clipping in a luminance-chrominance color space is superior because the
@@ -271,16 +277,15 @@ void draw_histogram(ivec2 texel) {
 #endif
 
 void main() {
-    ivec2 texel = ivec2(gl_FragCoord.xy * taau_render_scale);
+    ivec2 last = taa_last_rendered_texel(view_res);
+    ivec2 texel = min(ivec2(gl_FragCoord.xy * taau_render_scale), last);
 
 #ifdef TAA
+    vec3 closest = get_closest_fragment(depthtex0, texel, last);
 #ifndef LOD_MOD_ACTIVE
-    vec3 closest = get_closest_fragment(depthtex0, texel);
-
     const bool is_lod = false;
 #else
-    vec3 closest = get_closest_fragment(depthtex0, texel);
-    vec3 closest_lod = get_closest_fragment(lod_depth_tex, texel);
+    vec3 closest_lod = get_closest_fragment(lod_depth_tex, texel, last);
 
     bool is_lod = is_lod_terrain(closest.z, closest_lod.z);
 
@@ -300,9 +305,11 @@ void main() {
         = catmull_rom_filter_fast_rgb(colortex5, previous_uv, 0.6);
     history_color = max0(history_color); // Eliminate NaNs in the history
 
-    float pixel_age = texelFetch(colortex5, ivec2(previous_uv * view_res), 0).a;
-    pixel_age
-        = max0(pixel_age * float(clamp01(previous_uv) == previous_uv) + 1.0);
+    float pixel_age = 1.0;
+    if (clamp01(previous_uv) == previous_uv) {
+        ivec2 previous_texel = min(ivec2(previous_uv * view_res), ivec2(view_res) - 1);
+        pixel_age = max0(texelFetch(colortex5, previous_texel, 0).a + 1.0);
+    }
 
     // Distance factor to favour responsiveness closer to the camera and image
     // stability further away
@@ -325,6 +332,7 @@ void main() {
 
     history_color = neighborhood_clipping(
         texel,
+        last,
         current_color,
         history_color,
         distance_factor
@@ -333,22 +341,27 @@ void main() {
     // Temporal upscaling
     vec2 pos = clamp01(uv + 0.5 * taa_offset * rcp(taau_render_scale))
         * taau_render_scale;
+    vec2 first_center = 0.5 * view_pixel_size;
+    vec2 last_center = (vec2(last) + 0.5) * view_pixel_size;
+    vec2 sample_pos = clamp(pos, first_center, last_center);
 
     float confidence; // Confidence-of-quality factor, see "A Survey of Temporal
                       // Antialiasing Techniques" section 5.1
-    vec3 current_color = catmull_rom_filter(colortex0, pos, confidence).rgb;
+    vec3 current_color = catmull_rom_filter(
+        colortex0, pos, first_center, last_center, confidence
+    ).rgb;
 
     if (min_of(current_color) < 0.0) {
         // Fix negatives arising around very dark objects
-        current_color = texture(colortex0, pos).rgb;
+        current_color = texture(colortex0, sample_pos).rgb;
     }
 
     current_color = reinhard(current_color);
     history_color = reinhard(history_color);
 
     // Interpolate AABB bounds across pixels
-    vec3 min_color = texture(colortex1, pos).rgb * 2.0 - 1.0;
-    vec3 max_color = texture(colortex2, pos).rgb * 2.0 - 1.0;
+    vec3 min_color = texture(colortex1, sample_pos).rgb * 2.0 - 1.0;
+    vec3 max_color = texture(colortex2, sample_pos).rgb * 2.0 - 1.0;
 
     bool history_clipped;
     history_color = rgb_to_ycocg(history_color);

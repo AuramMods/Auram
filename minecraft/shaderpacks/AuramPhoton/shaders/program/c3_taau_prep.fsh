@@ -19,7 +19,9 @@ layout(location = 1) out vec3 max_color;
 in vec2 uv;
 
 uniform sampler2D colortex0;
+uniform vec2 view_res;
 
+#include "/include/post_processing/taa_bounds.glsl"
 #include "/include/utility/color.glsl"
 
 vec3 min_of(vec3 a, vec3 b, vec3 c, vec3 d, vec3 f) {
@@ -36,20 +38,23 @@ vec3 reinhard(vec3 rgb) { return rgb / (rgb + 1.0); }
 
 void main() {
     ivec2 texel = ivec2(gl_FragCoord.xy);
+    ivec2 last = taa_last_rendered_texel(view_res);
+    ivec2 lower = max(texel - 1, ivec2(0));
+    ivec2 upper = min(texel + 1, last);
 
     // Fetch 3x3 neighborhood
     // a b c
     // d e f
     // g h i
-    vec3 a = texelFetch(colortex0, texel + ivec2(-1, 1), 0).rgb;
-    vec3 b = texelFetch(colortex0, texel + ivec2(0, 1), 0).rgb;
-    vec3 c = texelFetch(colortex0, texel + ivec2(1, 1), 0).rgb;
-    vec3 d = texelFetch(colortex0, texel + ivec2(-1, 0), 0).rgb;
+    vec3 a = texelFetch(colortex0, ivec2(lower.x, upper.y), 0).rgb;
+    vec3 b = texelFetch(colortex0, ivec2(texel.x, upper.y), 0).rgb;
+    vec3 c = texelFetch(colortex0, upper, 0).rgb;
+    vec3 d = texelFetch(colortex0, ivec2(lower.x, texel.y), 0).rgb;
     vec3 e = texelFetch(colortex0, texel, 0).rgb;
-    vec3 f = texelFetch(colortex0, texel + ivec2(1, 0), 0).rgb;
-    vec3 g = texelFetch(colortex0, texel + ivec2(-1, -1), 0).rgb;
-    vec3 h = texelFetch(colortex0, texel + ivec2(0, -1), 0).rgb;
-    vec3 i = texelFetch(colortex0, texel + ivec2(1, -1), 0).rgb;
+    vec3 f = texelFetch(colortex0, ivec2(upper.x, texel.y), 0).rgb;
+    vec3 g = texelFetch(colortex0, lower, 0).rgb;
+    vec3 h = texelFetch(colortex0, ivec2(texel.x, lower.y), 0).rgb;
+    vec3 i = texelFetch(colortex0, ivec2(upper.x, lower.y), 0).rgb;
 
     // Convert to YCoCg
     a = rgb_to_ycocg(reinhard(a));
