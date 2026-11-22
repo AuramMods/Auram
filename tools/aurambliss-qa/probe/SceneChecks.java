@@ -8,6 +8,9 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.Executor;
 import javax.imageio.ImageIO;
+import net.minecraft.client.Minecraft;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.Level;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.system.MemoryUtil;
@@ -62,6 +65,41 @@ public final class SceneChecks {
             client.getClass().getMethod("m_91320_", screen).invoke(client, title);
             client.getClass().getMethod("m_91152_", screen).invoke(client, title);
         }
+    }
+
+    public static void mist(String setting) throws ReflectiveOperationException {
+        var modState = Class.forName("com.leclowndu93150.thaumaturge.client.warp.WarpFogState");
+        modState.getMethod(setting.equals("on") ? "startMist" : "reset").invoke(null);
+    }
+
+    public static CompletableFuture<Void> eclipse(String kind) throws ReflectiveOperationException {
+        var level = Minecraft.m_91087_().f_91073_;
+        var sky = Class.forName("hellfirepvp.astralsorcery.common.constellation.level.LevelSkyHandler");
+        var context = ((Optional<?>) sky.getMethod("getContext", Level.class).invoke(null, level)).orElseThrow();
+        var handler = context.getClass().getMethod("getCelestialEventHandler").invoke(context);
+        boolean solar = kind.equals("solar");
+        var event = handler.getClass().getMethod(solar ? "getSolarEclipse" : "getLunarEclipse").invoke(handler);
+        var tick = event.getClass().getMethod("tick", Level.class, RandomSource.class, context.getClass());
+        var active = event.getClass().getMethod("isActiveNow");
+        var seed = (long) event.getClass().getMethod("getSeedModifier").invoke(event);
+        var random = context.getClass().getMethod("getRandom", long.class);
+        long previous = level.m_46468_();
+        long selected = 0;
+        try {
+            for (int day = 2; day <= 70; day++) {
+                long time = day * 24000L + (solar ? 6000 : 18000);
+                level.m_104746_(time);
+                tick.invoke(event, level, random.invoke(context, seed), context);
+                if ((boolean) active.invoke(event)) {
+                    selected = time;
+                    break;
+                }
+            }
+        } finally {
+            level.m_104746_(previous);
+        }
+        if (selected == 0) throw new IllegalStateException("No " + kind + " eclipse found in Astral's calendar");
+        return command("time set " + selected);
     }
 
     public static void fullscreen(String display) throws ReflectiveOperationException {

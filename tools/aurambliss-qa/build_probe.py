@@ -19,13 +19,17 @@ def build(instance, output):
         libraries / "org/lwjgl/lwjgl/3.3.1/lwjgl-3.3.1.jar",
         libraries / "org/lwjgl/lwjgl-glfw/3.3.1/lwjgl-glfw-3.3.1.jar",
         libraries / "org/lwjgl/lwjgl-opengl/3.3.1/lwjgl-opengl-3.3.1.jar",
+        libraries / "com/google/guava/guava/31.1-jre/guava-31.1-jre.jar",
+        libraries / "it/unimi/dsi/fastutil/8.5.9/fastutil-8.5.9.jar",
+        libraries / "net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-srg.jar",
     ]
     config = {
         "required": True,
         "minVersion": "0.8",
         "package": "dev.auram.bliss.test",
         "compatibilityLevel": "JAVA_17",
-        "client": ["DepthProbe", "LightProbe", "EntityFixture", "PerfFrameProbe", "PerfVolumeProbe", "LifecycleProbe"],
+        "client": ["DepthProbe", "LightProbe", "EntityFixture", "PerfFrameProbe", "PerfVolumeProbe", "LifecycleProbe",
+                   "AuditDefines"],
         "injectors": {"defaultRequire": 1},
     }
     metadata = """modLoader="lowcodefml"

@@ -37,11 +37,14 @@ def parse_args():
     parser.add_argument("--dh", default="3.3.3")
     parser.add_argument("--installer", type=Path, help="Forge installer used by the Prism instance")
     parser.add_argument("--options", type=Path, help="Shader properties fixture")
+    parser.add_argument("--resource-pack", type=Path, action="append", default=[], help="Resource pack for the disposable client")
     parser.add_argument("--dh-config", type=Path, help="Distant Horizons config fixture")
+    parser.add_argument("--cold-dh", action="store_true", help="Copy the save without its existing DH databases")
     parser.add_argument("--companion", type=Path, help="Compatibility JAR built from this branch")
     parser.add_argument("--probe", type=Path, action="append", default=[], help="Test-only Forge JAR")
     parser.add_argument("--readback", choices=("depth", "light", "entities", "perf"),
                         help="Ask the AuramBliss test probe to sample live textures")
+    parser.add_argument("--camera-motion", help="Benchmark displacement and turn as dx,dz,yaw over 90 frames")
     parser.add_argument("--no-dh", action="store_true")
     parser.add_argument("--force-compat", action="store_true", help="Use the macOS rendering path")
     parser.add_argument("--full", action="store_true", help="Copy the complete Minecraft pack")
@@ -114,12 +117,26 @@ def prepare(args, work):
     if profile.exists():
         resource_settings = [line for line in profile.read_text().splitlines()
                              if line.startswith(("resourcePacks:", "incompatibleResourcePacks:"))]
+    if args.resource_pack:
+        resources = game / "resourcepacks"
+        resources.mkdir(exist_ok=True)
+        selected = next((json.loads(line.partition(":")[2]) for line in resource_settings if line.startswith("resourcePacks:")), [])
+        for source in args.resource_pack:
+            if source.is_dir():
+                shutil.copytree(source, resources / source.name, dirs_exist_ok=True, copy_function=copy_file)
+            else:
+                copy_file(source, resources / source.name)
+            if f"file/{source.name}" not in selected:
+                selected.append(f"file/{source.name}")
+        resource_settings = [line for line in resource_settings if not line.startswith("resourcePacks:")]
+        resource_settings.append("resourcePacks:" + json.dumps(selected))
     profile.write_text(
         "version:3465\nrenderDistance:8\nsimulationDistance:5\nmaxFps:90\nenableVsync:false\nfullscreen:false\n"
         "pauseOnLostFocus:false\nsoundCategory_master:0.0\nnarrator:0\nonboardAccessibility:false\ntutorialStep:none\n"
         + "\n".join(resource_settings) + "\n"
     )
-    shutil.copytree(args.world, game / "saves/ShaderLab", copy_function=copy_file)
+    cache_filter = shutil.ignore_patterns("DistantHorizons.sqlite*") if args.cold_dh else None
+    shutil.copytree(args.world, game / "saves/ShaderLab", copy_function=copy_file, ignore=cache_filter)
     return game
 
 
@@ -257,6 +274,8 @@ def observe(args, command, work, game):
                             if line.startswith(("QA_STATE ", "QA_COMMAND "))) + "\n")
                     if args.readback:
                         if not readback_requested:
+                            if args.camera_motion:
+                                (game / "bliss-perf-motion").write_text(args.camera_motion)
                             (game / f"bliss-read-{args.readback}").touch()
                             readback_requested = True
                         events = [json.loads(row.removeprefix("QA_EVT ")) for row in trace.splitlines()

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import net.minecraft.client.Minecraft;
 
 import static org.lwjgl.opengl.GL41C.*;
 
@@ -18,6 +19,7 @@ public final class PerfMetrics {
     private static long previousFrame;
     private static long heapHighWater;
     private static int volumeQuery;
+    private static CameraMotion motion;
 
     private PerfMetrics() {}
 
@@ -29,6 +31,11 @@ public final class PerfMetrics {
             previousFrame = now;
             heapHighWater = 0;
             for (int i = 0; i < 8; i++) idle.add(glGenQueries());
+            Path requested = Path.of("bliss-perf-motion");
+            if (Files.isRegularFile(requested)) {
+                motion = CameraMotion.start(Files.readString(requested));
+                Files.delete(requested);
+            }
             return;
         }
         while (!pending.isEmpty() && glGetQueryObjecti(pending.peek(), GL_QUERY_RESULT_AVAILABLE) != 0) {
@@ -42,13 +49,30 @@ public final class PerfMetrics {
         heapHighWater = Math.max(heapHighWater, heap.totalMemory() - heap.freeMemory());
         if (frameTimes.size() >= FRAME_COUNT) {
             System.out.printf(java.util.Locale.ROOT,
-                    "QA_EVT {\"event\":\"frame_timing\",\"status\":\"info\",\"context\":{\"frame\":%s,\"lpvGpu\":%s,\"heapHighWaterBytes\":%d,\"gl\":%d}}%n",
-                    quantiles(frameTimes), quantiles(volumeTimes), heapHighWater, glGetError());
+                    "QA_EVT {\"event\":\"frame_timing\",\"status\":\"info\",\"context\":{\"frame\":%s,\"lpvGpu\":%s,\"heapHighWaterBytes\":%d,\"movingCamera\":%b,\"gl\":%d}}%n",
+                    quantiles(frameTimes), quantiles(volumeTimes), heapHighWater, motion != null, glGetError());
             measuring = false;
+            motion = null;
             while (!idle.isEmpty()) glDeleteQueries(idle.remove());
             while (!pending.isEmpty()) glDeleteQueries(pending.remove());
             frameTimes.clear();
             volumeTimes.clear();
+        } else if (motion != null) {
+            motion.advance((float) frameTimes.size() / (FRAME_COUNT - 1));
+        }
+    }
+
+    private record CameraMotion(double x, double y, double z, float yaw, float pitch, double dx, double dz, float turn) {
+        private static CameraMotion start(String setting) {
+            var player = Minecraft.m_91087_().f_91074_;
+            String[] motion = setting.trim().split(",");
+            return new CameraMotion(player.m_20185_(), player.m_20186_(), player.m_20189_(),
+                    player.m_146908_(), player.m_146909_(), Double.parseDouble(motion[0]), Double.parseDouble(motion[1]),
+                    Float.parseFloat(motion[2]));
+        }
+
+        private void advance(float progress) {
+            Minecraft.m_91087_().f_91074_.m_7678_(x + dx * progress, y, z + dz * progress, yaw + turn * progress, pitch);
         }
     }
 

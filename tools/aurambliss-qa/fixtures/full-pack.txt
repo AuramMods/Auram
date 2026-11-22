@@ -1,0 +1,22 @@
+snapshot pack=AuramBliss dimension=minecraft:overworld pbr=on lod=positive light=positive
+server gamerule doDaylightCycle false
+server weather clear
+server time set 6000
+wait 4
+capture shoreline
+mist on
+wait 5
+capture shoreline_mist
+mist off
+option TONEMAP=ToneMap_Hejl2015
+wait 5
+capture shoreline_hejl
+option TONEMAP=ToneMap_AgX_minimal
+server gamemode spectator @p
+server execute in aether:the_aether run tp @p 0 92 0 0 15
+wait 12
+snapshot pack=AuramBliss dimension=aether:the_aether pbr=on
+capture aether
+server execute in minecraft:overworld run tp @p 3.5 79 -22.5
+wait 10
+snapshot pack=AuramBliss dimension=minecraft:overworld lod=positive pbr=on

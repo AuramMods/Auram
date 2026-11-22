@@ -1,0 +1,19 @@
+server gamerule doDaylightCycle false
+server weather clear
+server execute at @p run tp @p ~ ~ ~ 0 -80
+server time set 6000
+wait 4
+snapshot solar=0 lunar=0 pack=AuramBliss
+capture sun
+eclipse solar
+wait 5
+snapshot solar=positive pack=AuramBliss
+capture solar_eclipse
+server time set 18000
+wait 4
+snapshot solar=0 lunar=0 pack=AuramBliss
+capture moon
+eclipse lunar
+wait 5
+snapshot lunar=positive pack=AuramBliss
+capture lunar_eclipse
