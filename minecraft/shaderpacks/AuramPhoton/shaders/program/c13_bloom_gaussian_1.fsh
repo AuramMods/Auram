@@ -60,13 +60,11 @@ void main() {
         ivec2 closest_bounds_max
             = ivec2(view_res * (closest_offset + closest_scale) - 1);
 
-        // Clamp to closest tile
-        bloom_tiles = texelFetch(
-                          colortex0,
-                          clamp(texel, closest_bounds_min, closest_bounds_max),
-                          0
-        )
-                          .rgb;
+        // Padding can point to a tile smaller than the one-pixel inset.
+        ivec2 last_texel = ivec2(view_res) - 1;
+        closest_bounds_min = min(closest_bounds_min, last_texel);
+        closest_bounds_max = clamp(closest_bounds_max, closest_bounds_min, last_texel);
+        bloom_tiles = texelFetch(colortex0, clamp(texel, closest_bounds_min, closest_bounds_max), 0).rgb;
 
         return;
     }
@@ -78,9 +76,10 @@ void main() {
 
     for (int i = -4; i <= 4; ++i) {
         ivec2 pos = texel + ivec2(0, i);
-        float weight = binomial_weights_9[abs(i)]
-            * float(clamp(pos.y, bounds_min.y + 2, bounds_max.y - 2) == pos.y);
-        bloom_tiles += texelFetch(colortex0, pos, 0).rgb * weight;
+        ivec2 tap = pos;
+        tap.y = clamp(pos.y, bounds_min.y + 2, bounds_max.y - 2);
+        float weight = binomial_weights_9[abs(i)] * float(tap.y == pos.y);
+        bloom_tiles += texelFetch(colortex0, tap, 0).rgb * weight;
         weight_sum += weight;
     }
 
