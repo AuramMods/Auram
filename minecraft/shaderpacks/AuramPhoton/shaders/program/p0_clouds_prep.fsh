@@ -93,14 +93,11 @@ const vec3 sky_color = vec3(0.0);
 #include "/include/sky/clouds/coverage_map.glsl"
 
 void main() {
-    // Cloud shadow map
+    fragment_color = vec3(1.0, 1.0, 0.0);
 
-#ifdef CLOUD_SHADOWS
-#ifndef BLOCKY_CLOUDS
+    // Crepuscular rays use the map independently of surface cloud shadows.
+#if !defined BLOCKY_CLOUDS && (defined CLOUD_SHADOWS || defined CREPUSCULAR_RAYS)
     fragment_color.xy = render_cloud_shadow_map(uv);
-#else
-    fragment_color.xy = vec2(1.0);
-#endif
 #endif
 
     // Cumulus coverage map

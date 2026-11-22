@@ -60,7 +60,7 @@ float get_cloud_shadows(sampler2D cloud_shadow_map, vec3 scene_pos) {
 #endif
 }
 
-#if defined PROGRAM_PREPARE && defined CLOUD_SHADOWS
+#if defined PROGRAM_PREPARE && !defined BLOCKY_CLOUDS && (defined CLOUD_SHADOWS || defined CREPUSCULAR_RAYS)
 #include "/include/sky/clouds/altocumulus.glsl"
 #include "/include/sky/clouds/cirrus.glsl"
 #include "/include/sky/clouds/cumulus.glsl"
