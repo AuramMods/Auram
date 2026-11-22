@@ -48,19 +48,22 @@ void main() {
 
     // Detecting where to apply AA
 
-    // Fetch 3x3 neighborhood
+    // Replicate the outer texels for integer taps, like the filtered samples.
+    ivec2 lower = max(texel - 1, ivec2(0));
+    ivec2 upper = min(texel + 1, textureSize(colortex0, 0) - 1);
+
     // a b c
     // d e f
     // g h i
-    vec3 a = texelFetch(colortex0, texel + ivec2(-1, 1), 0).rgb;
-    vec3 b = texelFetch(colortex0, texel + ivec2(0, 1), 0).rgb;
-    vec3 c = texelFetch(colortex0, texel + ivec2(1, 1), 0).rgb;
-    vec3 d = texelFetch(colortex0, texel + ivec2(-1, 0), 0).rgb;
+    vec3 a = texelFetch(colortex0, ivec2(lower.x, upper.y), 0).rgb;
+    vec3 b = texelFetch(colortex0, ivec2(texel.x, upper.y), 0).rgb;
+    vec3 c = texelFetch(colortex0, upper, 0).rgb;
+    vec3 d = texelFetch(colortex0, ivec2(lower.x, texel.y), 0).rgb;
     vec3 e = texelFetch(colortex0, texel, 0).rgb;
-    vec3 f = texelFetch(colortex0, texel + ivec2(1, 0), 0).rgb;
-    vec3 g = texelFetch(colortex0, texel + ivec2(-1, -1), 0).rgb;
-    vec3 h = texelFetch(colortex0, texel + ivec2(0, -1), 0).rgb;
-    vec3 i = texelFetch(colortex0, texel + ivec2(1, -1), 0).rgb;
+    vec3 f = texelFetch(colortex0, ivec2(upper.x, texel.y), 0).rgb;
+    vec3 g = texelFetch(colortex0, lower, 0).rgb;
+    vec3 h = texelFetch(colortex0, ivec2(texel.x, lower.y), 0).rgb;
+    vec3 i = texelFetch(colortex0, ivec2(upper.x, lower.y), 0).rgb;
 
     // Luma at the current fragment
     float luma = get_luma(e);
