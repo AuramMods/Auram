@@ -444,6 +444,10 @@ void main() {
 	}
 
 	#if defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
-		gl_FragData[1] = vec4(VolumetricClouds.a,0.0,0.0,0.0);
+        float cloudTransmittance = VolumetricClouds.a;
+        #ifdef BLISS_COMPAT
+            cloudTransmittance = roundEven(clamp(cloudTransmittance, 0.0, 1.0) * 65535.0) / 65535.0;
+        #endif
+        gl_FragData[1] = vec4(cloudTransmittance, 0.0, 0.0, 0.0);
 	#endif
 }

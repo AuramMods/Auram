@@ -411,7 +411,7 @@ vec2 SSRT_Shadows(vec3 viewPos, bool depthCheck, vec3 lightDir, float noise, boo
 
 	for (int i = 0; i < int(steps); i++) {
 		
-        #ifdef BLISS_PACKED_DH_DEPTH
+        #ifdef BLISS_COMPAT
             vec2 opaqueDepths = texture2D(colortex12, screenPos.xy).rg;
             float samplePos = depthCheck ? opaqueDepths.g : convertHandDepth_2(opaqueDepths.r, hand);
         #else
@@ -567,11 +567,13 @@ void BilateralUpscale_REUSE_Z(sampler2D tex1, sampler2D tex2, sampler2D depth, v
 
 			ivec2 radius = getRadius[i];
 
-			#ifdef DISTANT_HORIZONS
-				float offsetDepth = sqrt(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling,0).a/65000.0);
-			#else
-				float offsetDepth = ld(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).r);
-			#endif
+            #if defined BLISS_COMPAT && !(defined DISTANT_HORIZONS && defined DH_AMBIENT_OCCLUSION)
+                float offsetDepth = ld(abs(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).b));
+            #elif defined DISTANT_HORIZONS
+                float offsetDepth = sqrt(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).a / 65000.0);
+            #else
+                float offsetDepth = ld(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).r);
+            #endif
 
 			float EDGES = abs(offsetDepth - referenceDepth) < diffThreshold ? 1.0 : 1e-5;
 
@@ -766,11 +768,14 @@ void main() {
 		float noise = fract(R2_samples(seed).y + bnoise.y);
 		float noise_2 = R2_dither();
 
-		float z0 = texture2D(depthtex0,texcoord).x;
-        #ifdef BLISS_PACKED_DH_DEPTH
-            vec4 packedDepth = texture2D(colortex12, texcoord);
+        #ifdef BLISS_COMPAT
+            vec4 packedDepth = texelFetch2D(colortex12, ivec2(gl_FragCoord.xy), 0);
+            vec2 frontData = texelFetch2D(colortex14, ivec2(gl_FragCoord.xy), 0).ba;
+            float frontDepth = frontData.x;
+            float z0 = abs(frontDepth);
             float z = packedDepth.r;
         #else
+            float z0 = texture2D(depthtex0, texcoord).x;
             float z = texture2D(depthtex1, texcoord).x;
         #endif
 		float swappedDepth = z;
@@ -834,10 +839,15 @@ void main() {
 
 	////// --------------- UNPACK MISC --------------- //////
 	
-		vec4 SpecularTex = texture2D(colortex8,texcoord);
-		float LabSSS = clamp((-65.0 + SpecularTex.z * 255.0) / 190.0 ,0.0,1.0);	
-
-		vec4 normalAndAO = texture2D(colortex15,texcoord);
+        #ifdef BLISS_COMPAT
+            vec4 material = round(texture2D(colortex15, texcoord) * 65535.0);
+            vec4 SpecularTex = mod(material, 256.0) / 255.0;
+            vec4 normalAndAO = floor(material / 256.0) / 255.0;
+        #else
+            vec4 SpecularTex = texture2D(colortex8, texcoord);
+            vec4 normalAndAO = texture2D(colortex15, texcoord);
+        #endif
+        float LabSSS = clamp((-65.0 + SpecularTex.z * 255.0) / 190.0, 0.0, 1.0);
 		vec3 FlatNormals = normalAndAO.rgb * 2.0 - 1.0;
 		vec3 slopednormal = normal;
 
@@ -863,9 +873,14 @@ void main() {
 		// 0.9 = entity mask
 		// 0.8 = reflective entities
 		// 0.7 = reflective blocks
-  		float translucentMasks = texture2D(colortex7, texcoord).a;
-
-		bool isWater = translucentMasks > 0.99;
+        #ifdef BLISS_COMPAT
+            bool isWater = (floatBitsToUint(frontDepth) & 0x80000000u) != 0u;
+            bool hasTranslucency = frontData.y >= 2.0;
+        #else
+            float translucentMask = texture2D(colortex7, texcoord).a;
+            bool isWater = translucentMask > 0.99;
+            bool hasTranslucency = translucentMask > 0.0;
+        #endif
 		// bool isReflectiveEntity = abs(translucentMasks - 0.8) < 0.01;
 		// bool isReflective = abs(translucentMasks - 0.7) < 0.01 || isWater || isReflectiveEntity;
 		// bool isEntity = abs(translucentMasks - 0.9) < 0.01 || isReflectiveEntity;
@@ -1000,6 +1015,8 @@ void main() {
 		
 		#if defined DISTANT_HORIZONS && defined DH_AMBIENT_OCCLUSION
 			BilateralUpscale_REUSE_Z(colortex3,	colortex14, colortex12, gl_FragCoord.xy-1.5, DH_mixedLinearZ, SSAO_SSS, filteredShadow, hand);
+        #elif defined BLISS_COMPAT
+            BilateralUpscale_REUSE_Z(colortex3, colortex14, colortex14, gl_FragCoord.xy - 1.5, ld(z0), SSAO_SSS, filteredShadow, hand);
 		#else
 			BilateralUpscale_REUSE_Z(colortex3,	colortex14, depthtex0, gl_FragCoord.xy-1.5, ld(z0), SSAO_SSS, filteredShadow, hand);
 		#endif
@@ -1337,11 +1354,15 @@ void main() {
   	  gl_FragData[0].rgb = mix(gl_FragData[0].rgb, borderFogColor, fog);
   	#endif
 
-	if(translucentMasks > 0.0){
+	if(hasTranslucency){
 		#ifdef DISTANT_HORIZONS
 			vec4 vlBehingTranslucents = BilateralUpscale_VLFOG(colortex13, colortex12, gl_FragCoord.xy - 1.5, sqrt(texture2D(colortex12,texcoord).a/65000.0));
     	#else
-    		vec4 vlBehingTranslucents = BilateralUpscale_VLFOG(colortex13, depthtex1, gl_FragCoord.xy - 1.5, ld(z));
+            #ifdef BLISS_COMPAT
+                vec4 vlBehingTranslucents = BilateralUpscale_VLFOG(colortex13, colortex12, gl_FragCoord.xy - 1.5, ld(z));
+            #else
+                vec4 vlBehingTranslucents = BilateralUpscale_VLFOG(colortex13, depthtex1, gl_FragCoord.xy - 1.5, ld(z));
+            #endif
     	#endif
 
     	gl_FragData[0].rgb = gl_FragData[0].rgb * vlBehingTranslucents.a + vlBehingTranslucents.rgb;

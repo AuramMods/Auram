@@ -20,7 +20,11 @@ The compatibility path stores vanilla opaque, DH opaque, and DH translucent dept
 
 The Apple OpenGL linker reflected 13 samplers for the patched Overworld lighting pass, down from 16. A hidden client with active DH and a depth readback at 854 × 480 found all 409,920 pixels matched the three source textures exactly in the current RGBA32F target. The readback saw one DH-only opaque pixel, no nearer translucent pixels and GL error 0. This forest scene establishes the packing result. Shoreline coverage remains open.
 
-The combination of colored shadows and resource-pack sky still exceeds Oculus's texture unit limit in this cycle. LPV still requires its compatibility renderer.
+## Feature-heavy sampler coverage
+
+Oculus 1.8.0 also occupies unit 0 for the default color target even if the linked program has no color-target-0 sampler. On the 16-unit Apple context this leaves 13 active user samplers for that program. The front depth and translucency flags now travel with the existing lighting guide. Normal, AO and specular values share one RGBA16 target with eight bits per original component. The preparation pass writes the shared inputs before opaque lighting and the packed channels become available for subsequent passes.
+
+Native hidden Overworld launches with translucent colored shadows, resource-pack sky mode 1, DH shadows, 65% TAA upscaling and DOF mode 5 entered the world with and without DH. The packed lighting program linked with 13 active samplers in both cases. The initial duplicate-uniform experiment also hit a HotSpot C2 compiler crash after Oculus had fallen back. The successful repeat used native Temurin Java 17. LPV coverage follows separately.
 
 ## Rendering coverage to establish
 

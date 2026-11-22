@@ -864,7 +864,11 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
 		gl_FragData[0].rgb = Direct_lighting * 0.1;
 	#endif
 
-	gl_FragData[3].a = clamp(lightmap.y,0.0,1.0);
+    float translucentSkylight = clamp(lightmap.y, 0.0, 1.0);
+    #ifdef BLISS_COMPAT
+        translucentSkylight = roundEven(translucentSkylight * 65535.0) / 65535.0;
+    #endif
+    gl_FragData[3].a = translucentSkylight;
 
 }
 }

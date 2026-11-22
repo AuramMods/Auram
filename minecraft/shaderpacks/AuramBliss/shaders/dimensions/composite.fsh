@@ -21,7 +21,10 @@ uniform sampler2D depthtex1;
 uniform sampler2D colortex1;
 uniform sampler2D colortex3; // Noise
 uniform sampler2D colortex6; // Noise
-uniform sampler2D colortex8; // Noise
+uniform sampler2D colortex8; // Specular
+#ifdef BLISS_COMPAT
+    uniform sampler2D colortex7;
+#endif
 uniform sampler2D colortex14; // Noise
 uniform sampler2D colortex12; // Noise
 uniform sampler2D colortex15; // Noise
@@ -372,7 +375,11 @@ float sampleDepth(sampler2D depthTex, vec2 texcoord, bool hand){
     #include "/lib/packed_dh_depth.glsl"
 #endif
 
-/* RENDERTARGETS:3,14,12*/
+#ifdef BLISS_COMPAT
+    /* RENDERTARGETS:3,14,12,15 */
+#else
+    /* RENDERTARGETS:3,14,12 */
+#endif
 
 void main() {
 
@@ -381,7 +388,7 @@ void main() {
 	vec2 texcoord = gl_FragCoord.xy*texelSize;
 
 	float z = texture2D(depthtex1,texcoord).x;
-    #ifdef BLISS_PACKED_DH_DEPTH
+    #ifdef BLISS_COMPAT
         float vanillaOpaqueDepth = z;
     #endif
 
@@ -404,6 +411,20 @@ void main() {
 
 
 	gl_FragData[1] = vec4(0.0,0.0,0.0, texture2D(colortex14,floor(gl_FragCoord.xy)/VL_RENDER_RESOLUTION*texelSize+0.5*texelSize).a);
+
+    #ifdef BLISS_COMPAT
+        float frontDepth = texture2D(depthtex0, texcoord).x;
+        float translucentMask = texture2D(colortex7, texcoord).a;
+        bool isWater = translucentMask > 0.99;
+        if (translucentMask > 0.0) gl_FragData[1].a += 2.0;
+        gl_FragData[1].b = uintBitsToFloat(floatBitsToUint(frontDepth) | (isWater ? 0x80000000u : 0u));
+        #ifndef DISTANT_HORIZONS
+            gl_FragData[2] = vec4(vanillaOpaqueDepth, 0.0, 0.0, 0.0);
+        #endif
+        vec4 normalsAndAO = texture2D(colortex15, texcoord);
+        vec4 specular = texture2D(colortex8, texcoord);
+        gl_FragData[3] = (round(normalsAndAO * 255.0) * 256.0 + round(specular * 255.0)) / 65535.0;
+    #endif
 
 
 	// bool lightningBolt = abs(dataUnpacked1.w-0.5) <0.01;
@@ -441,7 +462,7 @@ void main() {
         #ifdef BLISS_PACKED_DH_DEPTH
             gl_FragData[2] = vec4(vanillaOpaqueDepth, DH_depth1,
                 texture2D(dhDepthTex, texcoord).x, blissEncodeMixedDepth(depth));
-        #else
+        #elif !defined BLISS_COMPAT
             gl_FragData[2] = vec4(0.0, 0.0, 0.0, depth < 1.0 ? depth * depth * 65000.0 : 65000.0);
         #endif
     #endif
@@ -457,6 +478,9 @@ void main() {
 
 		if(swappedDepth >= 1.0) SSAO_SSS = vec2(1.0,0.0);
 
+        #ifdef BLISS_COMPAT
+            SSAO_SSS = roundEven(clamp(SSAO_SSS, 0.0, 1.0) * 65535.0) / 65535.0;
+        #endif
 		gl_FragData[1].xy = SSAO_SSS;
 	#else
 		vec2 SSAO_SSS = vec2(1.0,0.0);
