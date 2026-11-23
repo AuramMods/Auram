@@ -295,14 +295,14 @@ vec4 renderLayer(
 
 	// Altostratus uses one sample across its five-block thickness.
 	float halfThickness = layer == 2 ? 2.5 : 0.0;
-	vec2 interval = cloudRayInterval(rayDirection.y, minHeight - halfThickness, maxHeight + halfThickness, traceDistance);
-	float rayLength = interval.y - interval.x;
+	vec2 interval = cloudRayInterval(rayDirection.y, minHeight - halfThickness, maxHeight + halfThickness, maxCloudTraceDistance);
+	float rayEnd = min(interval.y, traceDistance);
+	float rayLength = rayEnd - interval.x;
 	if (rayLength <= 0.0) return vec4(COLOR, TOTAL_EXTINCTION);
 
 	int steps = layer == 2 ? 1 : quality;
 	float mult = rayLength / float(steps);
-	vec3 dV_view = rayDirection * mult;
-	vec3 rayProgress = cameraPosition + rayDirection * interval.x + dV_view * dither.y;
+	vec3 rayProgress = cameraPosition + rayDirection * interval.x + (rayDirection * mult) * dither.y;
 
 	if (layer == 2) {
 		float altostratus = GetAltostratusDensity(rayProgress);
@@ -332,6 +332,15 @@ vec4 renderLayer(
 		return vec4(COLOR, TOTAL_EXTINCTION);
 	}
 
+	// Take closer samples on long rays that enter the layer near the camera.
+	// Use the unclipped layer distance to keep those samples aligned over terrain and sky.
+	float openLength = interval.y - interval.x;
+	float nearBias = (1.0 - smoothstep(0.0, 64.0, interval.x)) * smoothstep(128.0, 512.0, openLength);
+	float sampleRange = mix(rayLength, openLength, nearBias);
+	float inverseSteps = 1.0 / float(steps);
+	float firstBoundary = interval.x + mix(inverseSteps, inverseSteps * inverseSteps * inverseSteps, nearBias) * sampleRange;
+	rayProgress = cameraPosition + rayDirection * mix(interval.x, min(firstBoundary, rayEnd), dither.y);
+
 	float skylightOcclusion = 1.0;
 	#if defined CloudLayer1 && defined CloudLayer0
 		if (layer == 0 && LAYER1_DENSITY > 0.0) {
@@ -342,7 +351,14 @@ vec4 renderLayer(
 	#endif
 
 	float depthMoment = 0.0;
-	for (int i = 0; i < steps; i++) {
+	float stepStart = interval.x;
+	for (int i = 0; i < steps && stepStart < rayEnd; i++) {
+		float t = float(i + 1) * inverseSteps;
+		float boundary = interval.x + mix(t, t * t * t, nearBias) * sampleRange;
+		float stepEnd = i == steps - 1 ? rayEnd : min(rayEnd, boundary);
+		float stepLength = stepEnd - stepStart;
+		float sampleDistance = stepStart + stepLength * dither.y;
+		rayProgress = cameraPosition + rayDirection * sampleDistance;
 		float cumulus = GetCumulusDensity(layer, rayProgress, 1, minHeight, maxHeight);
 		float fadedDensity = cloudDensity * pow(clamp((rayProgress.y - minHeight)/25,0.0,1.0),2.0);
 		float CumulusWithDensity = cloudDensity * cumulus;
@@ -372,15 +388,15 @@ vec4 renderLayer(
 			float skyScatter = clamp(((maxHeight - rayProgress.y) / 100.0),0.0,1.0); // linear gradient from bottom to top of cloud layer
 			vec3 lighting = DoCloudLighting(CumulusWithDensity, skyLightCol * skylightOcclusion, skyScatter, directLight, sunScatter, sunMultiScatter, distantfog);
 
-			float transmittance = exp(-mult * muE);
+			float transmittance = exp(-stepLength * muE);
 			float opacity = (1.0 - transmittance) * TOTAL_EXTINCTION;
 			COLOR += max(lighting * opacity, 0.0);
-			depthMoment += (interval.x + (float(i) + dither.y) * mult) * opacity;
+			depthMoment += sampleDistance * opacity;
 			TOTAL_EXTINCTION *= transmittance;
 
 			if (TOTAL_EXTINCTION < 1e-5) break;
 		}
-		rayProgress += dV_view;
+		stepStart = stepEnd;
 	}
 
 	if (TOTAL_EXTINCTION < 1.0) layerDistance = depthMoment / (1.0 - TOTAL_EXTINCTION);
@@ -433,13 +449,18 @@ vec4 renderClouds(
 	vec3 directScattering = LightColor * mieDay * 3.14 ;
 	vec3 directMultiScattering = LightColor * mieDayMulti * 3.14 * 2.0;
 
-	// use this to blend into the atmosphere's ground.
+	// Fade out the ground-view horizon lighting as the camera enters the cloud.
+	float horizonFadeStrength = heightRelativeToClouds;
+	#ifdef CloudLayer0
+		float heightAboveCloudBase = cameraPosition.y - LAYER0_minHEIGHT;
+		horizonFadeStrength = 1.0 - smoothstep(-8.0, 12.0, heightAboveCloudBase);
+	#endif
 	vec3 approxdistance = dV_view;
 	#ifdef SKY_GROUND
-		float distantfog = mix(1.0, max(1.0 - clamp(exp2(pow(abs(approxdistance.y),mix(1.5, 4.0, rainStrength)) * -mix(100.0, 35.0, rainStrength)),0.0,1.0),0.0), heightRelativeToClouds);
+		float distantfog = mix(1.0, max(1.0 - clamp(exp2(pow(abs(approxdistance.y),mix(1.5, 4.0, rainStrength)) * -mix(100.0, 35.0, rainStrength)),0.0,1.0),0.0), horizonFadeStrength);
 	#else
 		float distantfog = 1.0;
-		float distantfog2 = mix(1.0, max(1.0 - clamp(exp(pow(abs(approxdistance.y),1.5) * -35.0),0.0,1.0),0.0), heightRelativeToClouds);
+		float distantfog2 = mix(1.0, max(1.0 - clamp(exp(pow(abs(approxdistance.y),1.5) * -35.0),0.0,1.0),0.0), horizonFadeStrength);
 	#endif
 	
 	// terrible fake rayleigh scattering
