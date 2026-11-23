@@ -40,7 +40,8 @@ float LAYER2_HEIGHT = max(CloudLayer2_height, LAYER1_maxHEIGHT);
 
 float LAYER0_COVERAGE = mix(dailyWeatherParams0.x, Rain_coverage, rainStrength);
 float LAYER1_COVERAGE = mix(dailyWeatherParams0.y, 0.0, rainStrength);
-float LAYER2_COVERAGE = mix(dailyWeatherParams0.z, 1.5, rainStrength);
+// Keep texture in the high cloud layer during precipitation.
+float LAYER2_COVERAGE = mix(dailyWeatherParams0.z, 0.9, rainStrength);
 
 float LAYER0_DENSITY = mix(dailyWeatherParams1.x,1.0,rainStrength);
 float LAYER1_DENSITY = mix(dailyWeatherParams1.y,0.0,rainStrength);
@@ -255,6 +256,8 @@ vec3 DoCloudLighting(
 	return directLight + indirectLight;
 }
 
+const float maxCloudTraceDistance = 16384.0;
+
 // Intersect the forward ray with the cloud layer before dividing it into steps.
 vec2 cloudRayInterval(float rayY, float minHeight, float maxHeight, float traceDistance) {
 	float origin = cameraPosition.y;
@@ -304,8 +307,6 @@ vec4 renderLayer(
 		float AltoWithDensity = altostratus * cloudDensity;
 		
 		if(altostratus > 1e-5){
-			float muE = altostratus * cloudDensity;
-
 			float directLight = 0.0;
 			for (int j = 0; j < 2; j++){
 				
@@ -318,8 +319,11 @@ vec4 renderLayer(
 
 			vec3 lighting = DoCloudLighting(AltoWithDensity, skyLightCol, 0.5, directLight, sunScatter, sunMultiScatter, distantfog);
 
-			COLOR += max(lighting - lighting*exp(-mult*muE),0.0) * TOTAL_EXTINCTION;
-			TOTAL_EXTINCTION *= max(exp(-mult*muE),0.0);
+			// Fade the distant cloud into the sky before the ray limit can produce a hard edge.
+			float fadeStart = mix(0.5, 0.0, rainStrength) * maxCloudTraceDistance;
+			float visibility = 1.0 - smoothstep(fadeStart, maxCloudTraceDistance, interval.x);
+			float opacity = (1.0 - exp(-mult * AltoWithDensity)) * visibility;
+			return vec4(max(lighting * opacity, 0.0), 1.0 - opacity);
 		}
 		return vec4(COLOR, TOTAL_EXTINCTION);
 	}
@@ -399,7 +403,7 @@ vec4 renderClouds(
 
 	// Retain cloud curvature while keeping ray distances in world units.
 	vec3 dV_view = normalize(viewPos + vec3(0.0, 0.025 * heightRelativeToClouds, 0.0));
-	float traceDistance = 16384.0;
+	float traceDistance = maxCloudTraceDistance;
 	#ifdef CLOUDS_INTERSECT_TERRAIN
 		#ifdef DISTANT_HORIZONS
 			float geometryLimit = dhRenderDistance + 16 * 32;
