@@ -5266,6 +5266,10 @@ description = ["Controls Skill color for the discovery skill."]
 label = "Show Particles"
 description = ["Controls Show particles for the discovery skill."]
 
+[config.fields.skills.discovery.forceDiscoveryParticles]
+label = "Force Discovery Particles"
+description = ["Sends new-discovery particles forced, so they show on reduced particle settings and are never thinned under load.", "Effect: True forces them and false treats them as ambient effects."]
+
 [config.fields.skills.discovery.discoverBiomeXP]
 label = "Discover Biome XP"
 description = ["XP gain tuning for the discovery skill."]
@@ -10629,6 +10633,10 @@ description = ["Minimum final damage required before any deferral happens.", "Ef
 [config.fields.adaptations.chronos-borrowed-time.paybackPulses]
 label = "Payback Pulses"
 description = ["Number of one second pulses the deferred damage is paid back over.", "Effect: Higher values spread payback thinner over a longer window."]
+
+[config.fields.adaptations.chronos-borrowed-time.xpPerDeferredDamage]
+label = "Xp Per Deferred Damage"
+description = ["Chronos XP granted per point of damage deferred.", "Effect: Higher values make every deferred hit teach more Chronos; 0 disables the reward."]
 
 [config.fields.adaptations.chronos-deja-vu.playerPreferences]
 label = "Player Preferences"
@@ -22144,7 +22152,7 @@ description = ["Maximum distance at which drawing a bow can lock onto a creature
 
 [config.fields.adaptations.ranged-heartseeker.lockTimeoutMillis]
 label = "Lock Timeout Millis"
-description = ["Milliseconds a lock stays valid after acquiring it before the shot.", "Effect: Higher values let players hold a draw longer without losing the lock."]
+description = ["Milliseconds a lock stays valid after acquiring it; it never expires while the bow is still drawn.", "Effect: Higher values keep a lock longer after the player lowers the bow."]
 
 [config.fields.adaptations.ranged-heartseeker.turnDegreesPerTick]
 label = "Turn Degrees Per Tick"
@@ -29702,13 +29710,19 @@ lore_cost_hunger = "Hunger cost per pulse"
 
 [discovery.insight]
 name = "Insight"
-description = "Inspect creatures through Gloss. Look at a creature to reveal its species, movement, defenses, and detection range alongside its health, attack, and armor."
+description = "Look at a creature to reveal its health, armor, and attack. Higher levels add its effects, movement, defenses, and detection range, then nearby creatures."
 lore1 = "Detection Range"
 speed = "Speed"
 jump = "Jump"
 attack = "Attack"
 stat = "{label} {value}"
 stable_hand = "Stable Hand enhanced"
+armor = "Armor"
+effects = "Effects"
+wild = "Untamed"
+yours = "Yours"
+tamed = "Tamed"
+tamed_by = "Tamed by {owner}"
 lore = ["Detection Range"]
 
 [discovery.trailblazer]
@@ -31274,6 +31288,13 @@ required_by_dependents = "Unlearn {dependents} first; they require {adaptation}.
 [gui.skill]
 title = "{skill} {progress} ({xp}XP {nextLevel})"
 
+[gui.client]
+catalog_changed = "Adapt changed while this screen was open. Try again."
+unavailable = "That adaptation is not available to you."
+no_change = "Nothing changed."
+preference_saved = "Setting saved."
+preference_denied = "That setting cannot be changed right now."
+
 [items.backpack]
 name = "Backpack"
 usage1 = "Right-click to open"
@@ -32616,10 +32637,10 @@ lore = ["Prevent enderman attacks while sneaking", "Prevent all enderman attacks
 [stealth.silent_step]
 name = "Stealth"
 description = "Core concealment for backstabs, Cutpurse, and Assassinate. Sneaking uses observer awareness; invisibility or an active Shadow Decoy always counts as undetected."
-lore1 = "Mob Detection Suppression Radius"
+lore1 = "Bonus Mob Detection Suppression Radius"
 lore2 = "Mob Backstab Damage Bonus"
 lore3 = "Player Backstab Damage Bonus"
-lore = ["Mob Detection Suppression Radius", "Mob Backstab Damage Bonus", "Player Backstab Damage Bonus"]
+lore = ["Bonus Mob Detection Suppression Radius", "Mob Backstab Damage Bonus", "Player Backstab Damage Bonus"]
 
 [stealth.shadow_decoy]
 name = "Shadow Decoy"
@@ -33201,6 +33222,7 @@ lore = ["Max Absorption", "Absorption Per Pulse", "Combat Lockout"]
 
 [command.help]
 version = "Show the installed plugin version"
+show_client_ui_status = "Show whether a player uses the Adapt client UI"
 debug_dump = "Create and optionally upload a diagnostic report"
 debug_upload = "Upload the report to mclo.gs"
 adapt_debug_command = "Adapt Debug Command"
@@ -33271,6 +33293,8 @@ amount_from_1_to_64_defaults_to_1 = "Amount from 1 to 64, defaults to 1"
 
 [command.runtime]
 missing_permission = "You lack the permission '{permission}'."
+client_ui_absent = "{player} uses the chest and action bar UI (no Adapt client negotiated)."
+client_ui_negotiated = "{player} uses the Adapt client UI: protocol {version}, capabilities {capabilities}."
 player_required_from_console = "You must specify a player when using this command from console."
 player_required_from_console_short = "You must specify a player from console."
 player_only_or_reference = "You must be a player to use this command, or reference a player."

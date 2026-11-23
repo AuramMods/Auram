@@ -34,8 +34,8 @@ ignorePassiveMobs = false
 # Maximum distance at which drawing a bow can lock onto a creature.
 # Effect: Higher values allow locking targets from further away.
 lockRange = 32.0
-# Milliseconds a lock stays valid after acquiring it before the shot.
-# Effect: Higher values let players hold a draw longer without losing the lock.
+# Milliseconds a lock stays valid after acquiring it; it never expires while the bow is still drawn.
+# Effect: Higher values keep a lock longer after the player lowers the bow.
 lockTimeoutMillis = 6000
 # Maximum degrees the arrow turns toward its target per tick.
 # Effect: Higher values make the curve tighter; lower values produce a broader natural arc.
