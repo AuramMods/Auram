@@ -52,7 +52,11 @@ float cloudVol(in vec3 pos, float maxDistance ){
 
 	FogDensities(medium_gradientFog, cloudyFog, rainyFog, maxDistance, dailyWeatherParams0.a, dailyWeatherParams1.a);
 
-	return uniformFog + medium_gradientFog + cloudyFog + rainyFog;
+	float fogDensity = uniformFog + medium_gradientFog + cloudyFog + rainyFog;
+	#ifdef AETHER_SHADER
+		fogDensity *= AETHER_FOG_DENSITY_SCALE;
+	#endif
+	return fogDensity;
 }
 
 float phaseRayleigh(float cosTheta) {
@@ -298,6 +302,10 @@ vec4 GetVolumetricFog(
 
 			// just air
 			vec2 airCoef = exp2(-max(progressW.y-SEA_LEVEL,0.0)/vec2(8.0e3, 1.2e3)*vec2(6.,7.0)) * (24.0 * atmosphereMult) * Haze_amount * cloudPlaneCutoff;
+
+			#ifdef AETHER_SHADER
+				airCoef *= AETHER_FOG_DENSITY_SCALE;
+			#endif
 
 			// Pbr for air, yolo mix between mie and rayleigh for water droplets
 			vec3 rL = rC*airCoef.x;

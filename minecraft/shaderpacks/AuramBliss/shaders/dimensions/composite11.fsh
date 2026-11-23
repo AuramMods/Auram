@@ -152,6 +152,9 @@ void main() {
   	VL_abs = clamp((1.0-VL_abs)*BLOOMY_FOG*0.75*(1.0+rainStrength) * (1.0-purkinje*0.3),0.0,1.0)*clamp(1.0-pow(cdist(texcoord.xy),15.0),0.0,1.0);
 	
 	col = (mix(col, bloom, VL_abs) + bloom * lightScat) * exposure.rgb;
+	#ifdef AETHER_SHADER
+		col *= 1.10;
+	#endif
 	
   	float lum = dot(col, vec3(0.15,0.3,0.55));
 	float lum2 = dot(col, vec3(0.85,0.7,0.45));

@@ -409,11 +409,16 @@ void main() {
       cavefogCol *= 1.0-pow(1.0-pow(1.0 - max(1.0 - linearDistance/far,0.0),2.0),CaveFogFallOff);
       cavefogCol *= exp(-7.0*clamp(normalize(np3).y*0.5+0.5,0.0,1.0)) * 0.999 + 0.001;
 
+      float caveFogAmount = caveDetection;
+      #ifdef AETHER_SHADER
+        caveFogAmount *= AETHER_FOG_DENSITY_SCALE;
+      #endif
+
       #ifdef CAVE_FOG_DARKEN_SKY 
   	    float skyhole = pow(clamp(1.0-pow(max(np3.y - 0.6,0.0)*5.0,2.0),0.0,1.0),2);
-        color.rgb = mix(color.rgb + cavefogCol * caveDetection, cavefogCol, z >= 1.0 ? skyhole * caveDetection : 0.0);
+        color.rgb = mix(color.rgb + cavefogCol * caveFogAmount, cavefogCol, z >= 1.0 ? skyhole * caveFogAmount : 0.0);
       #else
-        color.rgb += cavefogCol * caveDetection;
+        color.rgb += cavefogCol * caveFogAmount;
       #endif
     }
 #endif
