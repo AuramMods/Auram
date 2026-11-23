@@ -8,7 +8,7 @@
 vec4 draw_crepuscular_rays(
     sampler2D cloud_shadow_map,
     vec3 ray_direction_world,
-    bool is_terrain,
+    float terrain_distance,
     float dither
 ) {
     const uint step_count_horizon = CREPUSCULAR_RAYS_STEPS_HORIZON;
@@ -44,25 +44,14 @@ vec4 draw_crepuscular_rays(
                      volume_outer_radius
                  )
         * rcp(CLOUDS_SCALE);
-    bool planet_intersected
-        = intersect_sphere(
-              ray_direction_world.y,
-              r,
-              min(r - 10.0, planet_radius)
-          )
-              .y
-        >= 0.0;
-
-    if (
-        dists.y < 0.0 // volume not intersected
-                      //|| planet_intersected && r < clouds_cumulus_radius //
-                      // planet blocking clouds
-        || is_terrain // terrain blocking clouds
-    ) {
+    float ray_length = min(
+        cloud_ray_end(dists.y, terrain_distance) - dists.x,
+        max_ray_length
+    );
+    if (ray_length <= 0.0) {
         return vec4(vec3(0.0), 1.0);
     }
 
-    float ray_length = clamp(dists.y - dists.x, 0.0, max_ray_length);
     float step_length = ray_length * rcp(float(step_count));
 
     // Transform to shadow view space

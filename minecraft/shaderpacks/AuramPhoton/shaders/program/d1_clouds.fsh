@@ -238,7 +238,7 @@ void main() {
     vec4 crepuscular_rays = draw_crepuscular_rays(
         colortex8,
         ray_dir,
-        distance_to_terrain > 0.0,
+        distance_to_terrain * rcp(CLOUDS_SCALE),
         dither
     );
     clouds *= crepuscular_rays.w;

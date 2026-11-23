@@ -245,17 +245,17 @@ CloudsResult draw_cirrus_clouds(
           )
               .y
         >= 0.0;
-    bool terrain_intersected = distance_to_terrain >= 0.0
-        && r < clouds_cirrus_radius && distance_to_terrain < dists.y;
+    float distance_to_sphere = (r < clouds_cirrus_radius) ? dists.y : dists.x;
+    bool terrain_intersected
+        = distance_to_terrain >= 0.0 && distance_to_terrain <= distance_to_sphere;
 
-    if (dists.y < 0.0 // sphere not intersected
+    if (distance_to_sphere < 0.0 // sphere not intersected
         || planet_intersected
             && r < clouds_cirrus_radius // planet blocking clouds
         || terrain_intersected) {
         return clouds_not_hit;
     }
 
-    float distance_to_sphere = (r < clouds_cirrus_radius) ? dists.y : dists.x;
     vec3 sphere_pos = air_viewer_pos + ray_dir * distance_to_sphere;
 
     // ------------------

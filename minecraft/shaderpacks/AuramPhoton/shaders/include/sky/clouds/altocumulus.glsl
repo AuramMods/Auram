@@ -241,21 +241,19 @@ CloudsResult draw_altocumulus_clouds(
           )
               .y
         >= 0.0;
-    bool terrain_intersected = distance_to_terrain >= 0.0
-        && r < clouds_altocumulus_radius && distance_to_terrain < dists.x;
+    float ray_length = min(
+        cloud_ray_end(dists.y, distance_to_terrain) - dists.x,
+        max_ray_length
+    );
 
     if (
-        dists.y < 0.0 // volume not intersected
+        ray_length <= 0.0 // volume not visible
         || planet_intersected
             && r < clouds_altocumulus_radius // planet blocking clouds
-        || terrain_intersected // terrain blocking clouds
     ) {
         return clouds_not_hit;
     }
 
-    float ray_length
-        = (distance_to_terrain >= 0.0) ? distance_to_terrain : dists.y;
-    ray_length = clamp(ray_length - dists.x, 0.0, max_ray_length);
     float step_length = ray_length * rcp(float(primary_steps));
 
     vec3 ray_step = ray_dir * step_length;

@@ -240,14 +240,13 @@ CloudsResult draw_cumulus_congestus_clouds(
               .y
         >= 0.0;
 
-    if (dists.y < 0.0
+    float ray_length = cloud_ray_end(dists.y, distance_to_terrain) - dists.x;
+    if (ray_length <= 0.0
         || planet_intersected
-            && length(air_viewer_pos) < clouds_cumulus_congestus_radius
-        || distance_to_terrain > 0.0) {
+            && length(air_viewer_pos) < clouds_cumulus_congestus_radius) {
         return clouds_not_hit;
     }
 
-    float ray_length = dists.y - dists.x;
     float step_length = ray_length * rcp(float(primary_steps));
 
     vec3 ray_step = ray_dir * step_length;

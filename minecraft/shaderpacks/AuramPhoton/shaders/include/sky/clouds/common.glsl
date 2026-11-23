@@ -23,6 +23,11 @@ struct CloudsResult {
 
 const CloudsResult clouds_not_hit = CloudsResult(vec4(0.0), 1.0, 1e5, false);
 
+float cloud_ray_end(float volume_exit, float terrain_distance) {
+    // Terrain only clips the ray where it intersects the visible volume.
+    return terrain_distance >= 0.0 ? min(volume_exit, terrain_distance) : volume_exit;
+}
+
 // ----
 
 // from https://iquilezles.org/articles/gradientnoise/
