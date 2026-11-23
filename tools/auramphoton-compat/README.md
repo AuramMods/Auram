@@ -21,6 +21,17 @@ AuramCore 1.0.25. This loads AuramCore's existing player-chunk tracker before
 its legacy DH target check and reuses its scheduling policy on the new DH
 queue. Omit the flag for a standalone shader test without AuramCore.
 
+The DH 3.3.3 companion accepts `-Dauram.dh.trace=true` for integrated
+`INTERNAL_SERVER` generation. It logs an active dimension at most once every
+ten seconds. The log separates queued batches, fresh and existing FULL chunks,
+and completion of LOD source data. The pool counters count native admission
+checks across the client. Foreground and capacity counters belong to each
+dimension. LOD source completion precedes rendering and database updates.
+
+Use `-Dauram.dh.overworldBatches=2` to try a two-batch limit in the integrated
+Overworld. A zero value uses DH's normal capacity. The cap only defers new
+groups. Already admitted requests and tickets follow DH's normal lifecycle.
+
 The DH 3.3.3 build uses Forge's generated Minecraft 1.20.1 SRG client jar in the
 Prism libraries directory. In singleplayer, the companion refreshes DH's beacon
 data when Minecraft publishes a changed beam or removes its block. Smooth Chunk
