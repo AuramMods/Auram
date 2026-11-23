@@ -100,6 +100,9 @@ uniform int dhRenderDistance;
 
 uniform float eyeAltitude;
 #include "/lib/volumetricClouds.glsl"
+#ifdef ATUM_SHADER
+	#include "/lib/atum_atmosphere.glsl"
+#endif
 
 
 
@@ -139,6 +142,9 @@ void main() {
 
 		float cloudDistance;
 		vec4 VolumetricClouds = renderClouds(normalize(viewPos), -1.0, vec2(R2_dither(), blueNoise()), sunColor/80.0, averageSkyCol/30.0, cloudDistance);
+		#ifdef ATUM_SHADER
+			VolumetricClouds.rgb = tintAtumAtmosphere(VolumetricClouds.rgb);
+		#endif
 
 		gl_FragData[0] = VolumetricClouds;
 	#else

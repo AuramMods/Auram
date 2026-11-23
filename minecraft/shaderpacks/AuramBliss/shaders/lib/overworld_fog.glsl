@@ -12,6 +12,12 @@ float densityAtPosFog(in vec3 pos){
 	return mix(xy.r,xy.g, f.y);
 }
 
+#ifdef ATUM_SHADER
+    #include "/lib/atum_atmosphere.glsl"
+    #ifdef ATUM_SMOKE
+        #include "/lib/atum_smoke.glsl"
+    #endif
+#endif
 
 float cloudVol(in vec3 pos, float maxDistance ){
 	
@@ -74,7 +80,11 @@ vec4 GetVolumetricFog(
 	inout float atmosphereAlpha
 ){
 	#ifndef TOGGLE_VL_FOG
-		return vec4(cloud.rgb, 1.0);
+		#ifdef ATUM_SHADER
+			return vec4(tintAtumAtmosphere(cloud.rgb), 1.0);
+		#else
+			return vec4(cloud.rgb, 1.0);
+		#endif
 	#endif
 	
 	/// -------------  RAYMARCHING STUFF ------------- \\\
@@ -89,6 +99,9 @@ vec4 GetVolumetricFog(
 
 	vec3 worldDirection = mat3(gbufferModelViewInverse) * viewDirection;
 	vec3 worldOrigin = gbufferModelViewInverse[3].xyz + cameraPosition;
+	#if defined ATUM_SHADER && defined ATUM_SMOKE
+		vec2 smokeInterval = atumSmokeInterval(worldOrigin.y, worldDirection.y, rayEnd);
+	#endif
 	vec3 shadowDirection = diagonal3(shadowProjection) * (mat3(shadowModelView) * worldDirection);
 	vec3 shadowOrigin = toShadowSpaceProjected(vec3(0.0));
 
@@ -102,6 +115,9 @@ vec4 GetVolumetricFog(
 	/// -------------  COLOR/LIGHTING STUFF ------------- \\\
 	
 	vec3 color = vec3(0.0);
+	#if defined ATUM_SHADER && defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT
+		vec3 localLight = vec3(0.0);
+	#endif
 	float totalAbsorbance = 1.0;
 	float fogAbsorbance = 1.0;
 	float atmosphereAbsorbance = 1.0;
@@ -173,6 +189,9 @@ vec4 GetVolumetricFog(
 		float sampleDistance = stepStart + stepLength * dither.x;
 		float beforeCloud = cloud.a < 1.0 ? clamp((cloudDistance - stepStart) / stepLength, 0.0, 1.0) : 1.0;
 		bool crossesCloud = !cloudAdded && cloud.a < 1.0 && cloudDistance <= stepEnd;
+		#if defined ATUM_SHADER && defined ATUM_SMOKE
+			float smokeDepth = atumSmokeOpticalDepth(worldOrigin, worldDirection, smokeInterval, stepStart, stepEnd, dither.x) * inACave;
+		#endif
 		stepStart = stepEnd;
 		stepBoundary = (stepBoundary + fogStepScale) * stepRatio - fogStepScale;
 
@@ -224,6 +243,9 @@ vec4 GetVolumetricFog(
 		//------------------------------------
 			float fogDensity = densityVol;
 			float fogOpticalDepth = fogDensity * stepLength / 8.0;
+			#if defined ATUM_SHADER && defined ATUM_SMOKE
+				fogOpticalDepth += smokeDepth;
+			#endif
 			float fogVolumeCoeff = exp(-fogOpticalDepth);
 			float fogToCloud = beforeCloud == 1.0 ? fogVolumeCoeff : exp(-fogOpticalDepth * beforeCloud);
 
@@ -280,7 +302,12 @@ vec4 GetVolumetricFog(
 		//------ LPV FOG EFFECT
 		//------------------------------------
 			#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT 
-				color += LPV_FOG_ILLUMINATION(progressW-cameraPosition, 1.0, stepLength / 8.0) * TorchBrightness_autoAdjust * totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
+				vec3 voxelLight = LPV_FOG_ILLUMINATION(progressW-cameraPosition, 1.0, stepLength / 8.0) * TorchBrightness_autoAdjust * totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
+				#ifdef ATUM_SHADER
+					localLight += voxelLight;
+				#else
+					color += voxelLight;
+				#endif
 			#endif
 		//------------------------------------
 		//------ STUPID RENDER CLOUDS AS FOG EFFECT
@@ -346,6 +373,12 @@ vec4 GetVolumetricFog(
 		#endif
 	}
 	if (!cloudAdded) color += cloud.rgb * atmosphereAbsorbance * totalAbsorbance;
+	#ifdef ATUM_SHADER
+		color = tintAtumAtmosphere(color);
+		#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT
+			color += localLight;
+		#endif
+	#endif
 	atmosphereAlpha = atmosphereAbsorbance;
 	return vec4(color, totalAbsorbance);
 }
