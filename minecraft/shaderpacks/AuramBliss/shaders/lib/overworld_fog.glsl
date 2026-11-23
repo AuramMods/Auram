@@ -63,7 +63,10 @@ float fogPhase(float lightPoint){
 
 uniform ivec2 eyeBrightness;
 vec4 GetVolumetricFog(
-	vec3 viewPosition,
+	vec3 viewDirection,
+	float surfaceDistance,
+	vec4 cloud,
+	float cloudDistance,
 	vec2 dither,
 	vec3 LightColor,
 	vec3 AmbientColor,
@@ -71,42 +74,30 @@ vec4 GetVolumetricFog(
 	inout float atmosphereAlpha
 ){
 	#ifndef TOGGLE_VL_FOG
-		return vec4(0.0,0.0,0.0,1.0);
+		return vec4(cloud.rgb, 1.0);
 	#endif
 	
 	/// -------------  RAYMARCHING STUFF ------------- \\\
 
 	int SAMPLECOUNT = VL_SAMPLES;
-
-	//project pixel position into projected shadowmap space
-	vec3 wpos = mat3(gbufferModelViewInverse) * viewPosition + gbufferModelViewInverse[3].xyz;
-	vec3 fragposition = mat3(shadowModelView) * wpos + shadowModelView[3].xyz;
-	fragposition = diagonal3(shadowProjection) * fragposition + shadowProjection[3].xyz;
-
-	//project view origin into projected shadowmap space
-	vec3 start = toShadowSpaceProjected(vec3(0.0));
-
-	//rayvector into projected shadow map space
-	//we can use a projected vector because its orthographic projection
-	//however we still have to send it to curved shadow map space every step
-	vec3 dV = fragposition - start;
-	vec3 dVWorld = wpos - gbufferModelViewInverse[3].xyz;
-
 	#ifdef DISTANT_HORIZONS
-		float maxLength = min(length(dVWorld), max(far, dhRenderDistance))/length(dVWorld);
+		float fogRange = max(far, float(dhRenderDistance));
 	#else
-		float maxLength = min(length(dVWorld), far)/length(dVWorld);
+		float fogRange = far;
 	#endif
-	
-	dV *= maxLength;
-	dVWorld *= maxLength;
+	float rayEnd = surfaceDistance >= 0.0 ? min(surfaceDistance, fogRange) : fogRange;
 
-	float dL_alternate = length(dVWorld);
-	float dL = dL_alternate/8.0;
+	vec3 worldDirection = mat3(gbufferModelViewInverse) * viewDirection;
+	vec3 worldOrigin = gbufferModelViewInverse[3].xyz + cameraPosition;
+	vec3 shadowDirection = diagonal3(shadowProjection) * (mat3(shadowModelView) * worldDirection);
+	vec3 shadowOrigin = toShadowSpaceProjected(vec3(0.0));
 
-	vec3 progress = start.xyz;
-	vec3 progressW = vec3(0.0);
-	float expFactor = 11.0;
+	// Keep sample boundaries independent of terrain, clipping just the last step at the surface.
+	const float fogStepScale = 16.0;
+	float stepRatio = pow(1.0 + fogRange / fogStepScale, 1.0 / float(SAMPLECOUNT));
+	float stepBoundary = fogStepScale * (stepRatio - 1.0);
+	float stepStart = 0.0;
+	bool cloudAdded = false;
 
 	/// -------------  COLOR/LIGHTING STUFF ------------- \\\
 	
@@ -116,12 +107,12 @@ vec4 GetVolumetricFog(
 	float atmosphereAbsorbance = 1.0;
 
 	vec3 WsunVec = mat3(gbufferModelViewInverse) * sunVec;
-	float SdotV = dot(sunVec, normalize(viewPosition))*lightCol.a;
+	float SdotV = dot(sunVec, viewDirection)*lightCol.a;
 
 	///// ----- fog lighting
 	//Mie phase + somewhat simulates multiple scattering (Horizon zero down cloud approx)
 	float sunPhase = fogPhase(SdotV) * 5.0;
-	float skyPhase = pow(clamp(normalize(wpos).y*0.5+0.5,0.0,1.0),4.0)*5.0;
+	float skyPhase = pow(clamp(worldDirection.y*0.5+0.5,0.0,1.0),4.0)*5.0;
 	float rayL = phaseRayleigh(SdotV);
 
 	vec3 rC = vec3(sky_coefficientRayleighR*1e-6, sky_coefficientRayleighG*1e-5, sky_coefficientRayleighB*1e-5) ;
@@ -176,11 +167,17 @@ vec4 GetVolumetricFog(
 	// SkyLightColor *= lightLevelZero*0.9 + 0.1;
 
 	for (int i = 0; i < SAMPLECOUNT; i++) {
-		float d = (pow(expFactor, float(i+dither.x)/float(SAMPLECOUNT))/expFactor - 1.0/expFactor)/(1-1.0/expFactor);
-		float dd = pow(expFactor, float(i+dither.x)/float(SAMPLECOUNT)) * log(expFactor) / float(SAMPLECOUNT)/(expFactor-1.0);
-		
-		progress = start.xyz + d*dV;
-		progressW = gbufferModelViewInverse[3].xyz + cameraPosition + d*dVWorld;
+		if (stepStart >= rayEnd) break;
+		float stepEnd = i == SAMPLECOUNT - 1 ? rayEnd : min(rayEnd, stepBoundary);
+		float stepLength = stepEnd - stepStart;
+		float sampleDistance = stepStart + stepLength * dither.x;
+		float beforeCloud = cloud.a < 1.0 ? clamp((cloudDistance - stepStart) / stepLength, 0.0, 1.0) : 1.0;
+		bool crossesCloud = !cloudAdded && cloud.a < 1.0 && cloudDistance <= stepEnd;
+		stepStart = stepEnd;
+		stepBoundary = (stepBoundary + fogStepScale) * stepRatio - fogStepScale;
+
+		vec3 progress = shadowOrigin + sampleDistance * shadowDirection;
+		vec3 progressW = worldOrigin + sampleDistance * worldDirection;
 
 		//------------------------------------
 		//------ SAMPLE SHADOWS FOR FOG EFFECTS
@@ -216,7 +213,7 @@ vec4 GetVolumetricFog(
 			#endif
 
 		#ifdef PER_BIOME_ENVIRONMENT
-			float maxDistance = inBiome * min(max(1.0 -  length(d*dVWorld.xz)/(32*8),0.0)*2.0,1.0);
+			float maxDistance = inBiome * min(max(1.0 -  sampleDistance * length(worldDirection.xz)/(32*8),0.0)*2.0,1.0);
 			float densityVol = cloudVol(progressW, maxDistance) * inACave;
 		#else
 			float densityVol = cloudVol(progressW, 0.0) * inACave;
@@ -226,7 +223,9 @@ vec4 GetVolumetricFog(
 		//------ MAIN FOG EFFECT
 		//------------------------------------
 			float fogDensity = densityVol;
-			float fogVolumeCoeff = exp(-fogDensity*dd*dL); // this is like beer-lambert law or something
+			float fogOpticalDepth = fogDensity * stepLength / 8.0;
+			float fogVolumeCoeff = exp(-fogOpticalDepth);
+			float fogToCloud = beforeCloud == 1.0 ? fogVolumeCoeff : exp(-fogOpticalDepth * beforeCloud);
 
 			#ifdef PER_BIOME_ENVIRONMENT
 				vec3 indirectLight = mix(skyLightPhased, biomeIndirect, maxDistance);
@@ -239,10 +238,11 @@ vec4 GetVolumetricFog(
 			vec3 Lightning = Iris_Lightningflash_VLfog(progressW-cameraPosition, lightningBoltPosition.xyz);
 			vec3 lighting = DirectLight + indirectLight * (lightLevelZero*0.99 + 0.01) + Lightning;
 
-			color += (lighting - lighting * fogVolumeCoeff) * fogAbsorbance;
+			color += lighting * ((1.0 - fogToCloud) + (fogToCloud - fogVolumeCoeff) * cloud.a) * fogAbsorbance;
 			fogAbsorbance *= fogVolumeCoeff;
 
 			// kill fog absorbance when in caves.
+			float fogTransmittanceAtCloud = totalAbsorbance * mix(1.0, fogToCloud, lightLevelZero);
 			totalAbsorbance *= mix(1.0, fogVolumeCoeff, lightLevelZero);
 		//------------------------------------
 		//------ ATMOSPHERE HAZE EFFECT
@@ -261,17 +261,26 @@ vec4 GetVolumetricFog(
 			vec3 m =  mC*(airCoef.y+densityVol*300.0);
 
 			// calculate the atmosphere haze seperately and purely additive to color, do not contribute to absorbtion.
-			vec3 atmosphereVolumeCoeff = exp(-(rL+m)*dd*dL_alternate);
+			vec3 airOpticalDepth = (rL + m) * stepLength;
+			vec3 atmosphereVolumeCoeff = exp(-airOpticalDepth);
+			vec3 airToCloud = beforeCloud == 1.0 ? atmosphereVolumeCoeff : exp(-airOpticalDepth * beforeCloud);
 			
 			vec3 Atmosphere = (LightSourcePhased * sh * (rayL*rL + sunPhase*m) + AveragedAmbientColor * (rL+m) * (lightLevelZero*0.99 + 0.01)) * inACave;
-			color += (Atmosphere - Atmosphere * atmosphereVolumeCoeff) / (rL+m+1e-6) * atmosphereAbsorbance * totalAbsorbance;
+			// Atmosphere behind the clouds is visible through the remaining cloud transmittance.
+			vec3 airScattering = (1.0 - airToCloud) * fogTransmittanceAtCloud
+				+ (airToCloud - atmosphereVolumeCoeff) * (cloud.a * totalAbsorbance);
+			color += Atmosphere / (rL + m + 1e-6) * atmosphereAbsorbance * airScattering;
+			if (crossesCloud) {
+				color += cloud.rgb * fogTransmittanceAtCloud * atmosphereAbsorbance * dot(airToCloud, vec3(1.0 / 3.0));
+				cloudAdded = true;
+			}
 			atmosphereAbsorbance *= dot(atmosphereVolumeCoeff, vec3(0.33333));
 			
 		//------------------------------------
 		//------ LPV FOG EFFECT
 		//------------------------------------
 			#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT 
-				color += LPV_FOG_ILLUMINATION(progressW-cameraPosition, dd, dL) * TorchBrightness_autoAdjust * totalAbsorbance;
+				color += LPV_FOG_ILLUMINATION(progressW-cameraPosition, 1.0, stepLength / 8.0) * TorchBrightness_autoAdjust * totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
 			#endif
 		//------------------------------------
 		//------ STUPID RENDER CLOUDS AS FOG EFFECT
@@ -328,14 +337,15 @@ vec4 GetVolumetricFog(
 					float distantfade = 1- exp( -10*pow(clamp(1.0 - length(progressW - cameraPosition)/(32*65),0.0,1.0),2));
 					vec3 cloudlighting = DoCloudLighting(DUAL_DENSITY * cumulus, SkyLightColor*skylightOcclusion, skyScatter, directLight, directScattering*sh_forClouds, directMultiScattering*sh_forClouds, 1);
 
-					color += max(cloudlighting - cloudlighting*exp(-muE*dd*dL_alternate),0.0) * totalAbsorbance * lightLevelZero;
-					totalAbsorbance *= max(exp(-muE*dd*dL_alternate),1.0-lightLevelZero);
+					color += max(cloudlighting - cloudlighting*exp(-muE*stepLength),0.0) * totalAbsorbance * lightLevelZero * mix(cloud.a, 1.0, beforeCloud);
+					totalAbsorbance *= max(exp(-muE*stepLength),1.0-lightLevelZero);
 				}
 			}
 		#else
 			if (totalAbsorbance < 1e-5) break;
 		#endif
 	}
+	if (!cloudAdded) color += cloud.rgb * atmosphereAbsorbance * totalAbsorbance;
 	atmosphereAlpha = atmosphereAbsorbance;
 	return vec4(color, totalAbsorbance);
 }

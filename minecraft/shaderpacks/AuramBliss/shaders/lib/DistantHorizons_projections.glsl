@@ -31,6 +31,21 @@ vec3 toScreenSpace_DH( vec2 texcoord, float depth, float DHdepth ) {
 
     return viewPos.xyz;
 }
+// Use the same view direction for terrain, LODs and empty sky. Only a real depth can stop the ray.
+vec4 volumeViewRay(vec2 texcoord, float depth, float dhDepth) {
+    vec3 direction = normalize(toScreenSpace_DH(texcoord, 0.5, 1.0));
+    float surfaceDistance = -1.0;
+    if (depth < 1.0) {
+        surfaceDistance = length(toScreenSpace_DH(texcoord, depth, 1.0));
+    }
+    #ifdef DISTANT_HORIZONS
+        else if (dhDepth > 0.0 && dhDepth < 1.0) {
+            surfaceDistance = length(toScreenSpace_DH(texcoord, 1.0, dhDepth));
+        }
+    #endif
+    return vec4(direction, surfaceDistance);
+}
+
 vec3 toClipSpace3_DH( vec3 viewSpacePosition, bool depthCheck ) {
 
 	#ifdef DISTANT_HORIZONS

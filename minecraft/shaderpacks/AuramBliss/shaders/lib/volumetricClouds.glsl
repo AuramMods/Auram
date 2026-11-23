@@ -284,8 +284,10 @@ vec4 renderLayer(
 	vec3 sunScatter,
 	vec3 sunMultiScatter,
 	float distantfog,
-	bool notVisible
+	bool notVisible,
+	out float layerDistance
 ){
+	layerDistance = traceDistance;
 	vec3 COLOR = vec3(0.0);
 	float TOTAL_EXTINCTION = 1.0;
 	if (notVisible) return vec4(COLOR, TOTAL_EXTINCTION);
@@ -323,6 +325,7 @@ vec4 renderLayer(
 			float fadeStart = mix(0.5, 0.0, rainStrength) * maxCloudTraceDistance;
 			float visibility = 1.0 - smoothstep(fadeStart, maxCloudTraceDistance, interval.x);
 			float opacity = (1.0 - exp(-mult * AltoWithDensity)) * visibility;
+			layerDistance = interval.x + mult * dither.y;
 			return vec4(max(lighting * opacity, 0.0), 1.0 - opacity);
 		}
 		return vec4(COLOR, TOTAL_EXTINCTION);
@@ -335,6 +338,7 @@ vec4 renderLayer(
 		float skylightOcclusion = 1.0;
 	#endif
 
+	float depthMoment = 0.0;
 	for (int i = 0; i < steps; i++) {
 		float cumulus = GetCumulusDensity(layer, rayProgress, 1, minHeight, maxHeight);
 		float fadedDensity = cloudDensity * pow(clamp((rayProgress.y - minHeight)/25,0.0,1.0),2.0);
@@ -365,53 +369,50 @@ vec4 renderLayer(
 			float skyScatter = clamp(((maxHeight - rayProgress.y) / 100.0),0.0,1.0); // linear gradient from bottom to top of cloud layer
 			vec3 lighting = DoCloudLighting(CumulusWithDensity, skyLightCol * skylightOcclusion, skyScatter, directLight, sunScatter, sunMultiScatter, distantfog);
 
-			COLOR += max(lighting - lighting*exp(-mult*muE),0.0) * TOTAL_EXTINCTION;
-			TOTAL_EXTINCTION *= max(exp(-mult*muE),0.0);
+			float transmittance = exp(-mult * muE);
+			float opacity = (1.0 - transmittance) * TOTAL_EXTINCTION;
+			COLOR += max(lighting * opacity, 0.0);
+			depthMoment += (interval.x + (float(i) + dither.y) * mult) * opacity;
+			TOTAL_EXTINCTION *= transmittance;
 
 			if (TOTAL_EXTINCTION < 1e-5) break;
 		}
 		rayProgress += dV_view;
 	}
 
+	if (TOTAL_EXTINCTION < 1.0) layerDistance = depthMoment / (1.0 - TOTAL_EXTINCTION);
 	return vec4(COLOR, TOTAL_EXTINCTION);
 }
 
-float invLinZ_cloud (float lindepth){
-	return -((2.0*near/lindepth)-far-near)/(far-near);
-}
 vec4 renderClouds(
-	vec3 FragPosition,
+	vec3 viewDirection,
+	float surfaceDistance,
 	vec2 Dither,
 	vec3 LightColor,
 	vec3 SkyColor,
-	inout vec3 cloudDepth
-){	
+	out float cloudDistance
+){
+	cloudDistance = maxCloudTraceDistance;
 	#ifndef VOLUMETRIC_CLOUDS
 		return vec4(0.0,0.0,0.0,1.0);
 	#endif
 
 	float total_extinction = 1.0;
-	vec3 color = vec3(0.0);
+	vec4 scattering = vec4(0.0);
 
 	float heightRelativeToClouds = clamp(1.0 - max(cameraPosition.y - LAYER0_minHEIGHT,0.0) / 100.0 ,0.0,1.0);
 
 //////////////////////////////////////////
 ////// Raymarching stuff 
 //////////////////////////////////////////
-	vec3 viewPos = normalize((gbufferModelViewInverse * vec4(FragPosition, 1.0)).xyz);
+	vec3 viewPos = mat3(gbufferModelViewInverse) * viewDirection;
 	maxIT_clouds = max(1, int(min(float(maxIT_clouds) / sqrt(exp2(viewPos.y)), float(maxIT))));
 
 	// Retain cloud curvature while keeping ray distances in world units.
 	vec3 dV_view = normalize(viewPos + vec3(0.0, 0.025 * heightRelativeToClouds, 0.0));
 	float traceDistance = maxCloudTraceDistance;
 	#ifdef CLOUDS_INTERSECT_TERRAIN
-		#ifdef DISTANT_HORIZONS
-			float geometryLimit = dhRenderDistance + 16 * 32;
-		#else
-			float geometryLimit = far + 16 * 5;
-		#endif
-		float geometryDistance = length(FragPosition);
-		if (geometryDistance < geometryLimit) traceDistance = min(traceDistance, max(geometryDistance - 1.0, 0.0));
+		if (surfaceDistance >= 0.0) traceDistance = min(traceDistance, surfaceDistance);
 	#endif
 
 //////////////////////////////////////////
@@ -472,7 +473,9 @@ vec4 renderClouds(
 	
 
 	#ifdef CloudLayer0
-		vec4 layer0 = renderLayer(0, dV_view, traceDistance, Dither, maxIT_clouds, MinHeight, MaxHeight, dV_Sun, LAYER0_DENSITY, SkyColor, directScattering, directMultiScattering, distantfog, false);
+		float distance0;
+		vec4 layer0 = renderLayer(0, dV_view, traceDistance, Dither, maxIT_clouds, MinHeight, MaxHeight, dV_Sun, LAYER0_DENSITY, SkyColor, directScattering, directMultiScattering, distantfog, false, distance0);
+		vec4 scattering0 = vec4(layer0.rgb, distance0 * (1.0 - layer0.a));
 		total_extinction *= layer0.a;
 
 		// stop overdraw.
@@ -484,7 +487,9 @@ vec4 renderClouds(
 	#endif
 
 	#ifdef CloudLayer1
-		vec4 layer1 = renderLayer(1, dV_view, traceDistance, Dither, maxIT_clouds, MinHeight1, MaxHeight1, dV_Sun, LAYER1_DENSITY, SkyColor, directScattering, directMultiScattering, distantfog, notVisible);
+		float distance1;
+		vec4 layer1 = renderLayer(1, dV_view, traceDistance, Dither, maxIT_clouds, MinHeight1, MaxHeight1, dV_Sun, LAYER1_DENSITY, SkyColor, directScattering, directMultiScattering, distantfog, notVisible, distance1);
+		vec4 scattering1 = vec4(layer1.rgb, distance1 * (1.0 - layer1.a));
 		total_extinction *= layer1.a;
 
 		// stop overdraw.
@@ -492,7 +497,9 @@ vec4 renderClouds(
 	#endif
 
 	#ifdef CloudLayer2
-		vec4 layer2 = renderLayer(2, dV_view, traceDistance, Dither, maxIT_clouds, Height2, Height2, dV_Sun, LAYER2_DENSITY, SkyColor, directScattering * (1.0 + rainStrength*3), directMultiScattering * (1.0 + rainStrength*3), distantfog, altoNotVisible);
+		float distance2;
+		vec4 layer2 = renderLayer(2, dV_view, traceDistance, Dither, maxIT_clouds, Height2, Height2, dV_Sun, LAYER2_DENSITY, SkyColor, directScattering * (1.0 + rainStrength*3), directMultiScattering * (1.0 + rainStrength*3), distantfog, altoNotVisible, distance2);
+		vec4 scattering2 = vec4(layer2.rgb, distance2 * (1.0 - layer2.a));
 		total_extinction *= layer2.a;
 	#endif
 	
@@ -506,37 +513,40 @@ vec4 renderClouds(
 	/// blend the altostratus clouds first, so it is BEHIND all the cumulus clouds, if the player postion is below the cumulus clouds.
 	/// handle the case if one of the cloud layers is disabled.
 	#if !defined CloudLayer1 && defined CloudLayer2
-		if(below_Layer2) color = color * layer2.a + layer2.rgb;
+		if(below_Layer2) scattering = scattering * layer2.a + scattering2;
 	#endif
 	#if defined CloudLayer1 && defined CloudLayer2 
-		if(below_Layer2) layer1.rgb = layer2.rgb * layer1.a + layer1.rgb;
+		if(below_Layer2) scattering1 = scattering2 * layer1.a + scattering1;
 	#endif
 
 	/// blend the cumulus clouds together. swap the blending order from (BACK TO FRONT -> FRONT TO BACK) depending on the player position relative to the lowest cloud layer.
 	#if defined CloudLayer0 && defined CloudLayer1
-		color = mix(layer0.rgb, layer1.rgb,  float(below_Layer0));
-		color = mix(color * layer1.a + layer1.rgb, color * layer0.a + layer0.rgb, float(below_Layer0));
+		scattering = mix(scattering0, scattering1, float(below_Layer0));
+		scattering = mix(scattering * layer1.a + scattering1, scattering * layer0.a + scattering0, float(below_Layer0));
 	#endif
 
 	/// handle the case of one of the cloud layers being disabled.
 	#if defined CloudLayer0 && !defined CloudLayer1
-		color = color * layer0.a + layer0.rgb;
+		scattering = scattering * layer0.a + scattering0;
 	#endif
 	#if !defined CloudLayer0 && defined CloudLayer1
-		color = color * layer1.a + layer1.rgb;
+		scattering = scattering * layer1.a + scattering1;
 	#endif
 
 	/// blend the altostratus clouds last, so it is IN FRONT of all the cumulus clouds when the player position is above them.
 	#ifdef CloudLayer2
-		if(!below_Layer2) color = color * layer2.a + layer2.rgb;
+		if(!below_Layer2) scattering = scattering * layer2.a + scattering2;
 	#endif
+
+	// The opacity-weighted distance places the accumulated cloud layer between foreground and background fog.
+	if (total_extinction < 1.0) cloudDistance = scattering.a / (1.0 - total_extinction);
 
 	#ifndef SKY_GROUND
 		
-		// return mix(fogcolor, vec4(color, total_extinction), clamp(distantfog2,0.0,1.0));
-		return mix(vec4(vec3(0.0),1.0), vec4(color, total_extinction), clamp(distantfog2,0.0,1.0));
+		// return mix(fogcolor, vec4(scattering.rgb, total_extinction), clamp(distantfog2,0.0,1.0));
+		return mix(vec4(vec3(0.0),1.0), vec4(scattering.rgb, total_extinction), clamp(distantfog2,0.0,1.0));
 	#else
-		return vec4(color, total_extinction);
+		return vec4(scattering.rgb, total_extinction);
 	#endif
 	
 }

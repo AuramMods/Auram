@@ -393,11 +393,14 @@ void main() {
 	vec3 indirectLightColor = averageSkyCol/30.0;
 	vec3 indirectLightColor_dynamic = averageSkyCol_Clouds/30.0;
 
-	vec3 cloudDepth = vec3(0.0);
-	vec3 fogDepth = vec3(0.0);
+	#ifdef OVERWORLD_SHADER
+		vec4 volumeRay = volumeViewRay(tc / RENDER_SCALE, z0, DH_z0);
+		vec4 VolumetricClouds = vec4(0.0, 0.0, 0.0, 1.0);
+		float cloudDistance = 0.0;
+	#endif
 
 	#if defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
-		vec4 VolumetricClouds = renderClouds(viewPos0, vec2(noise_1,noise_2), directLightColor, indirectLightColor, cloudDepth);
+		VolumetricClouds = renderClouds(volumeRay.xyz, volumeRay.w, vec2(noise_1,noise_2), directLightColor, indirectLightColor, cloudDistance);
 		
 		#if defined CAVE_FOG && defined CAVE_FOG_DARKEN_SKY 
   	  		float skyhole = (1.0-pow(clamp(1.0-pow(max(playerPos_normalized.y - 0.6,0.0)*5.0,2.0),0.0,1.0),2)* caveDetection) ;
@@ -408,7 +411,7 @@ void main() {
 
 	#ifdef OVERWORLD_SHADER
 		float atmosphereAlpha = 1.0;
-		vec4 VolumetricFog = GetVolumetricFog(viewPos0, vec2(noise_2,noise_1), directLightColor, indirectLightColor, averageSkyCol_Clouds/30.0, atmosphereAlpha);
+		vec4 VolumetricFog = GetVolumetricFog(volumeRay.xyz, volumeRay.w, VolumetricClouds, cloudDistance, vec2(noise_2,noise_1), directLightColor, indirectLightColor, averageSkyCol_Clouds/30.0, atmosphereAlpha);
 		#ifdef CLOUDS_INTERSECT_TERRAIN
 			VolumetricClouds.a *= atmosphereAlpha;
 		#else
@@ -420,10 +423,6 @@ void main() {
 		vec4 VolumetricFog = GetVolumetricFog(viewPos0, noise_1, noise_2);
 	#endif
 	
-	#if defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
-		VolumetricFog = vec4(VolumetricClouds.rgb * VolumetricFog.a * atmosphereAlpha + VolumetricFog.rgb, VolumetricFog.a);
-	#endif
-
 	gl_FragData[0] = clamp(VolumetricFog, 0.0, 65000.0);
 
 

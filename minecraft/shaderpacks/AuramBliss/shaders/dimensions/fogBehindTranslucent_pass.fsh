@@ -367,23 +367,22 @@ void main() {
 		// float TorchBrightness_autoAdjust = mix(1.0, 30.0,  clamp(exp(-10.0*exposure),0.0,1.0)) ;
 		// indirectLightColor_dynamic += vec3(TORCH_R,TORCH_G,TORCH_B)	* TorchBrightness_autoAdjust * pow(1.0-sqrt(1.0-clamp(lightmap.x,0.0,1.0)),2.0) * 2.0;
 
-		vec3 cloudDepth = vec3(0.0);
+		float cloudDistance = 0.0;
 		vec4 VolumetricFog2 = vec4(0,0,0,1);
 		vec4 VolumetricClouds = vec4(0,0,0,1);
 		
 		#ifdef OVERWORLD_SHADER
 			if(!iswater){
+				vec4 volumeRay = volumeViewRay(tc / RENDER_SCALE, z, DH_z);
 
 				#if defined CLOUDS_INTERSECT_TERRAIN
-					VolumetricClouds = renderClouds(viewPos1, vec2(noise_1,noise_2), directLightColor, indirectLightColor, cloudDepth);
+					VolumetricClouds = renderClouds(volumeRay.xyz, volumeRay.w, vec2(noise_1,noise_2), directLightColor, indirectLightColor, cloudDistance);
 				#endif
 
 				float atmosphereAlpha = 1.0;
-				VolumetricFog2 = GetVolumetricFog(viewPos1, vec2(noise_1, noise_2), directLightColor, indirectLightColor,indirectLightColor_dynamic, atmosphereAlpha);
-				VolumetricClouds.a *= atmosphereAlpha;
-
+				VolumetricFog2 = GetVolumetricFog(volumeRay.xyz, volumeRay.w, VolumetricClouds, cloudDistance, vec2(noise_1, noise_2), directLightColor, indirectLightColor,indirectLightColor_dynamic, atmosphereAlpha);
 				#if defined CLOUDS_INTERSECT_TERRAIN
-					VolumetricFog2 = vec4(VolumetricClouds.rgb * VolumetricFog2.a * atmosphereAlpha  + VolumetricFog2.rgb, VolumetricFog2.a*VolumetricClouds.a);
+					VolumetricFog2.a *= VolumetricClouds.a * atmosphereAlpha;
 				#endif
 			}
 		#endif

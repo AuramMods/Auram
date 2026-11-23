@@ -285,13 +285,14 @@ if (gl_FragCoord.x > 18.+257. && gl_FragCoord.y > 1. && gl_FragCoord.x < 18+257+
 		suncol = vec3(0.0);
 	#endif
 	
-	vec3 cloudDepth = vec3(0.0);
-	vec4 clouds = renderClouds(mat3(gbufferModelView)*viewVector*1024., vec2(fract(frameCounter/1.6180339887),1-fract(frameCounter/1.6180339887)), suncol*2.0, skyGroundCol/30.0, cloudDepth);
+	vec3 viewDirection = normalize(mat3(gbufferModelView) * viewVector);
+	float cloudDistance;
+	vec4 clouds = renderClouds(viewDirection, -1.0, vec2(fract(frameCounter/1.6180339887),1-fract(frameCounter/1.6180339887)), suncol*2.0, skyGroundCol/30.0, cloudDistance);
 	
 	float atmosphereAlpha = 1.0;
-	vec4 VL_Fog = GetVolumetricFog(mat3(gbufferModelView)*viewVector*1024.,  vec2(fract(frameCounter/1.6180339887),1-fract(frameCounter/1.6180339887)), suncol*2.0, skyGroundCol/30.0, averageSkyCol_Clouds*5.0, atmosphereAlpha);
+	vec4 VL_Fog = GetVolumetricFog(viewDirection, 1024.0, clouds, cloudDistance, vec2(fract(frameCounter/1.6180339887),1-fract(frameCounter/1.6180339887)), suncol*2.0, skyGroundCol/30.0, averageSkyCol_Clouds*5.0, atmosphereAlpha);
 
-	sky = sky*clouds.a + clouds.rgb / 5.0;
+	sky *= clouds.a;
 	sky *= atmosphereAlpha;
 	sky = sky * VL_Fog.a + VL_Fog.rgb / 5.0;
 
