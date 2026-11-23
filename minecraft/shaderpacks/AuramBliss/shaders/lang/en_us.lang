@@ -710,7 +710,11 @@ option.SNELLS_WINDOW.comment = §bWhat is this?§r this is the dark reflective c
 option.entityShadowDistanceMul.comment = §bWhat is this?§r Configure how far shadows should work for entities. This is good if you want to keep entity shadows and improved performance in high entity areas.
 
 screen.DISTANT_HORIZONS_SETTINGS = Distant Horizons - §cIRIS REQUIRED§r
-option.DH_OVERDRAW_PREVENTION = Overdraw prevention
+option.DH_OVERDRAW_PREVENTION = Distant Horizons terrain transition
+option.DH_OVERDRAW_CHUNKS = LOD overlap in chunks
+option.DH_OVERDRAW_CHUNKS.comment = Move the LOD boundary toward the camera so distant terrain can fill in as regular chunks load.
+option.DH_OVERDRAW_FADE_LENGTH = Terrain fade length
+option.DH_OVERDRAW_FADE_LENGTH.comment = Blend regular chunks and LODs over this distance in blocks. Zero switches at a fixed distance.
 option.OVERDRAW_MAX_DISTANCE = Max distance for overdraw prevention 
     value.OVERDRAW_MAX_DISTANCE.0 = Unlimited
     value.OVERDRAW_MAX_DISTANCE.32 = 2 Chunks

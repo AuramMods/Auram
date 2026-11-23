@@ -1,5 +1,9 @@
 #include "/lib/settings.glsl"
 
+#ifdef DH_OVERDRAW_PREVENTION
+    #include "/lib/dh_chunk_transition.glsl"
+#endif
+
 
 varying vec4 pos;
 varying vec4 localPos;
@@ -157,16 +161,8 @@ vec4 applyNoise(in vec4 fragColor, const in vec3 viewPos, const in float viewDis
 void main() {
     
     #ifdef DH_OVERDRAW_PREVENTION
-    	#if OVERDRAW_MAX_DISTANCE == 0
-			float maxOverdrawDistance = far;
-		#else
-			float maxOverdrawDistance = OVERDRAW_MAX_DISTANCE;
-		#endif
-
-        if(clamp(1.0-length(pos.xyz)/clamp(far - 32.0,32.0,maxOverdrawDistance),0.0,1.0) > 0.0 ){
-            discard;
-            return;
-        }
+        vec3 relativePosition = mat3(gbufferModelViewInverse) * pos.xyz;
+        if (!dhKeepLod(dhChunkDistance(relativePosition), far, frameCounter, false)) discard;
     #endif
 
     vec3 normals = (normals_and_materials.xyz);

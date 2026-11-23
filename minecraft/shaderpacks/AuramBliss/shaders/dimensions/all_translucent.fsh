@@ -42,10 +42,11 @@ uniform sampler2D noisetex;
 uniform sampler2D depthtex1;
 uniform sampler2D depthtex0;
 
-#ifdef DISTANT_HORIZONS
+#if defined DISTANT_HORIZONS && defined DH_OVERDRAW_PREVENTION && !defined HAND && !defined ENTITIES && !defined BLOCKENTITIES
+	uniform sampler2D dhDepthTex;
 	uniform sampler2D dhDepthTex1;
+	#include "/lib/dh_chunk_transition.glsl"
 #endif
-uniform sampler2D colortex7;
 uniform sampler2D colortex12;
 uniform sampler2D colortex14;
 uniform sampler2D colortex5;
@@ -474,6 +475,16 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
 
 	// bool isHand = abs(MATERIALS - 0.1) < 0.01;
 	bool isWater = MATERIALS > 0.99;
+
+	#if defined DISTANT_HORIZONS && defined DH_OVERDRAW_PREVENTION && !defined HAND && !defined ENTITIES && !defined BLOCKENTITIES
+		if (isWater) {
+			ivec2 pixel = ivec2(gl_FragCoord.xy);
+			float lodFront = texelFetch2D(dhDepthTex, pixel, 0).x;
+			float lodOpaque = texelFetch2D(dhDepthTex1, pixel, 0).x;
+			// The DH water pass has already selected its pixels. Use water from one pass per pixel.
+			if (lodFront < lodOpaque && dhMatchesSurface(lodFront, dhProjectionInverse, viewPos)) discard;
+		}
+	#endif
 	bool isReflectiveEntity = abs(MATERIALS - 0.8) < 0.01;
 	bool isReflective = abs(MATERIALS - 0.7) < 0.01 || isWater || isReflectiveEntity;
 	bool isEntity = abs(MATERIALS - 0.9) < 0.01 || isReflectiveEntity;
@@ -840,12 +851,6 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
 		Emission(gl_FragData[0].rgb, Albedo, SpecularTex.b, exposure);
 	#endif
 	
-	#if defined DISTANT_HORIZONS && defined DH_OVERDRAW_PREVENTION && !defined HAND
-		bool WATER = texture2D(colortex7, gl_FragCoord.xy*texelSize).a > 0.0 && length(feetPlayerPos) > far-16*4 && texture2D(depthtex1, gl_FragCoord.xy*texelSize).x >= 1.0;
-
-		if(WATER) gl_FragData[0].a = 0.0;
-	#endif
-
 	#ifndef HAND
 		gl_FragData[1] = vec4(Albedo, MATERIALS);
 	#endif

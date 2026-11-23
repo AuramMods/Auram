@@ -75,6 +75,10 @@ flat varying vec3 WsunVec2;
 
 #include "/lib/DistantHorizons_projections.glsl"
 
+#ifdef DH_OVERDRAW_PREVENTION
+    #include "/lib/dh_chunk_transition.glsl"
+#endif
+
 vec3 DH_toScreenSpace(vec3 p) {
 	vec4 iProjDiag = vec4(dhProjectionInverse[0].x, dhProjectionInverse[1].y, dhProjectionInverse[2].zw);
     vec3 feetPlayerPos = p * 2. - 1.;
@@ -296,13 +300,10 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
     float transition = exp(-25* pow(clamp(1.0 - length(playerPos)/(far-8),0.0,1.0),2));
 
     #ifdef DH_OVERDRAW_PREVENTION
-		#if OVERDRAW_MAX_DISTANCE == 0
-			float maxOverdrawDistance = far;
-		#else
-			float maxOverdrawDistance = OVERDRAW_MAX_DISTANCE;
-		#endif
+        if (!dhKeepLod(dhChunkDistance(playerPos), far, frameCounter, true)) discard;
 
-        if(length(playerPos) < clamp(far-16*4, 16, maxOverdrawDistance) ){ discard; return;}
+        float vanillaDepth = texelFetch2D(depthtex0, ivec2(gl_FragCoord.xy), 0).x;
+        if (vanillaDepth < 1.0 && dhViewDepth(vanillaDepth, gbufferProjectionInverse) + 0.05 < -viewPos.z) discard;
     #endif
 
     if(iswater && abs(normals.y) > 0.0){
@@ -482,15 +483,6 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
 		gl_FragData[0].rgb  = mix(gl_FragData[0].rgb, borderFogColor*0.1, fog);
 	#endif
 
-    #ifdef DH_OVERDRAW_PREVENTION
-        float distancefade = min(max(1.0 - length(playerPos)/clamp(far-16*4, 16, maxOverdrawDistance),0.0)*5,1.0);
-
-        if(texture2D(depthtex0, gl_FragCoord.xy*texelSize).x < 1.0 ||  distancefade > 0.0){
-            gl_FragData[0].a = 0.0;
-            material = 0.0;
-        }
-    #endif
-	
     #if DEBUG_VIEW == debug_DH_WATER_BLENDING
         if(gl_FragCoord.x*texelSize.x > 0.53) gl_FragData[0] = vec4(0.0);
     #endif

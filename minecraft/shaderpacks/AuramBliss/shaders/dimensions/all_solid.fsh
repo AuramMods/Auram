@@ -78,6 +78,12 @@ uniform float rainStrength;
 uniform sampler2D noisetex;//depth
 uniform sampler2D depthtex0;
 
+#if defined DISTANT_HORIZONS && defined DH_OVERDRAW_PREVENTION && defined WORLD
+    uniform sampler2D dhDepthTex;
+    uniform mat4 dhProjectionInverse;
+    #include "/lib/dh_chunk_transition.glsl"
+#endif
+
 
 uniform vec4 entityColor;
 
@@ -311,7 +317,15 @@ void main() {
 	vec2 tempOffset = offsets[framemod8];
 
 	vec3 fragpos = toScreenSpace(gl_FragCoord.xyz*vec3(texelSize/RENDER_SCALE,1.0)-vec3(vec2(tempOffset)*texelSize*0.5,0.0));
-	vec3 worldpos = mat3(gbufferModelViewInverse) * fragpos  + gbufferModelViewInverse[3].xyz + cameraPosition;
+	vec3 relativePosition = mat3(gbufferModelViewInverse) * fragpos + gbufferModelViewInverse[3].xyz;
+	vec3 worldpos = relativePosition + cameraPosition;
+
+	#if defined DISTANT_HORIZONS && defined DH_OVERDRAW_PREVENTION && defined WORLD
+		if (dhFadeVanillaTerrain(dhChunkDistance(relativePosition), far, frameCounter)) {
+			float lodDepth = texelFetch2D(dhDepthTex, ivec2(gl_FragCoord.xy), 0).x;
+			if (dhMatchesSurface(lodDepth, dhProjectionInverse, fragpos)) discard;
+		}
+	#endif
 
 	float torchlightmap = lmtexcoord.z;
 
