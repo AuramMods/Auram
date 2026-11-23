@@ -1,11 +1,5 @@
 #include "/lib/settings.glsl"
 
-#ifdef DH_OVERDRAW_PREVENTION
-    #include "/lib/dh_chunk_transition.glsl"
-#endif
-
-
-varying vec4 pos;
 varying vec4 localPos;
 varying vec4 gcolor;
 varying vec2 lightmapCoords;
@@ -160,10 +154,7 @@ vec4 applyNoise(in vec4 fragColor, const in vec3 viewPos, const in float viewDis
 /* RENDERTARGETS:1,7,8 */
 void main() {
     
-    #ifdef DH_OVERDRAW_PREVENTION
-        vec3 relativePosition = mat3(gbufferModelViewInverse) * pos.xyz;
-        if (!dhKeepLod(dhChunkDistance(relativePosition), far, frameCounter, false)) discard;
-    #endif
+    // DH draws first. Keep this surface available until regular terrain replaces it.
 
     vec3 normals = (normals_and_materials.xyz);
     float materials = normals_and_materials.a;

@@ -300,7 +300,7 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
     float transition = exp(-25* pow(clamp(1.0 - length(playerPos)/(far-8),0.0,1.0),2));
 
     #ifdef DH_OVERDRAW_PREVENTION
-        if (!dhKeepLod(dhChunkDistance(playerPos), far, frameCounter, true)) discard;
+        if (!dhKeepTranslucentLod(dhChunkDistance(playerPos), far, frameCounter)) discard;
 
         float vanillaDepth = texelFetch2D(depthtex0, ivec2(gl_FragCoord.xy), 0).x;
         if (vanillaDepth < 1.0 && dhViewDepth(vanillaDepth, gbufferProjectionInverse) + 0.05 < -viewPos.z) discard;

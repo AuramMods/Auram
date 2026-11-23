@@ -1,7 +1,6 @@
 #include "/lib/settings.glsl"
 #include "/lib/res_params.glsl"
 
-varying vec4 pos;
 varying vec4 localPos;
 varying vec4 gcolor;
 varying vec2 lightmapCoords;
@@ -65,7 +64,6 @@ void main() {
 	lightmapCoords = gl_MultiTexCoord1.xy; // is this even correct? lol'
     
     gcolor = gl_Color;
-    pos = gl_ModelViewMatrix * gl_Vertex;
 
 	EMISSIVE = 0.0;
 	if(dhMaterialId == DH_BLOCK_ILLUMINATED || gl_MultiTexCoord1.x >= 0.95) EMISSIVE = 0.5;

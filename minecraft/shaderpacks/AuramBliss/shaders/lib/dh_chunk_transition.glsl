@@ -28,12 +28,11 @@ float dhTransitionDither(int frameCounter) {
     return fract(52.9829189 * fract(dot(pixel, vec2(0.06711056, 0.00583715))));
 }
 
-bool dhKeepLod(float distance, float vanillaFar, int frameCounter, bool translucent) {
+bool dhKeepTranslucentLod(float distance, float vanillaFar, int frameCounter) {
     float overlapEnd = dhOverlapEnd(vanillaFar);
     float fadeStart = max(overlapEnd - float(DH_OVERDRAW_FADE_LENGTH), 0.0);
     // Water uses the whole overlap so the two representations never stack at the same pixel.
-    float fadeEnd = translucent ? dhFadeEnd(overlapEnd, vanillaFar) : overlapEnd;
-    return dhTransitionDither(frameCounter) < dhFadeCoverage(fadeStart, fadeEnd, distance);
+    return dhTransitionDither(frameCounter) < dhFadeCoverage(fadeStart, dhFadeEnd(overlapEnd, vanillaFar), distance);
 }
 
 bool dhFadeVanillaTerrain(float distance, float vanillaFar, int frameCounter) {
