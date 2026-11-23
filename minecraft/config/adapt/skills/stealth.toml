@@ -14,7 +14,11 @@ sneakCombatXPMultiplier = 3.0
 # Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often.
 sneakCombatXpCooldown = 1250
 # XP gain tuning for the stealth skill.
-sneakKillXP = 15.0
+sneakKillXP = 60.0
+# XP for the first hit on a mob that is not targeting you.
+unawareOpenerXp = 150.0
+# Extra XP for that first hit when you are sneaking and the mob is not looking at you.
+unseenOpenerBonusXp = 200.0
 
 # Controls Player preferences for the stealth skill.
 [playerPreferences]

@@ -10,7 +10,9 @@ drownedDamageXpCooldown = 1500
 # Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often.
 tridentDamageXpCooldown = 1500
 # XP awarded for catching a fish.
-fishCaughtXp = 250.0
+fishCaughtXp = 120.0
+# XP for reeling in treasure: enchanted books, name tags, nautilus shells, saddles, or an enchanted bow or rod.
+treasureCaughtXp = 250.0
 # XP awarded for reeling in an entity.
 entityCaughtXp = 10.0
 # Cooldown between fishing XP awards.
@@ -25,8 +27,14 @@ damagedrownxpmultiplier = 3.0
 enabled = true
 # Controls Skill color for the seaborne skill.
 skillColor = "&9"
-# XP gain tuning for the seaborne skill.
-swimXP = 0.4
+# XP per second spent swimming while moving horizontally.
+swimXpPerSecond = 1.0
+# XP per block of horizontal distance swum.
+swimXpPerBlock = 0.5
+# XP for killing a sea creature such as fish, squid, dolphins, guardians, drowned, turtles, or axolotls.
+seaCreatureKillXp = 150.0
+# Extra sea creature kill XP per point of the victim's maximum health.
+seaCreatureMaxHealthXpMultiplier = 5.0
 # Additional passive swimming XP multiplier for players actively moving in water with Water Breathing or Conduit Power.
 # Effect: 1.0 adds one base swim XP award for 2x total; 0 disables the bonus while retaining the base moving-swimmer award.
 waterBreathingSwimXpBonusMultiplier = 1.0

@@ -15,10 +15,10 @@ showParticles = true
 showSounds = true
 # Base knowledge cost used when learning this adaptation.
 # Effect: Higher values make each level cost more knowledge.
-baseCost = 4
+baseCost = 3
 # Scaling factor applied to higher adaptation levels.
 # Effect: Higher values increase level-to-level cost growth.
-costFactor = 0.45
+costFactor = 0.6
 # Maximum level a player can reach for this adaptation.
 # Effect: Higher values allow more levels; lower values cap progression sooner.
 maxLevel = 5
@@ -33,7 +33,7 @@ requires = []
 slidePercentBase = 0.15
 # Additional ground-friction percentage cancelled at max level, from 0 to 1 minus slidePercentBase.
 # Effect: Higher values make leveling add a stronger slide without exceeding complete friction cancellation.
-slidePercentFactor = 0.35
+slidePercentFactor = 0.8
 # Percentage of horizontal velocity removed immediately when sneak is pressed while grounded, from 0 to 1.
 # Effect: The default 1 stops horizontal movement completely; lower values leave some momentum after braking.
 sneakBrakePercent = 1.0

@@ -9,15 +9,15 @@ skillColor = "&6"
 # Cooldown between the kinetics skill activations.
 cooldownDelay = 1000
 # XP gain tuning for the kinetics skill.
-smashHitXp = 12.0
+smashHitXp = 24.0
 # XP gain tuning for the kinetics skill.
-plainMaceHitXp = 3.0
+plainMaceHitXp = 6.0
 # XP gain tuning for the kinetics skill.
-spearJabXp = 6.0
+spearJabXp = 12.0
 # XP gain tuning for the kinetics skill.
-spearChargeXp = 12.0
+spearChargeXp = 24.0
 # XP gain tuning for the kinetics skill.
-mountedChargeXp = 14.0
+mountedChargeXp = 28.0
 # Distance/area limit used by the kinetics skill.
 sweetRangeMin = 3.0
 # Distance/area limit used by the kinetics skill.
@@ -30,16 +30,29 @@ lungeChargeWindowMs = 1200
 breakFallXpPerBlock = 1.2
 # Maximum cap applied to the kinetics skill.
 breakFallCap = 25.0
+# XP per block fallen past fallXpFreeBlocks when the fall hurts you.
+fallXpPerBlock = 1.5
+# Blocks of a damaging fall that pay nothing.
+# Effect: Higher values require longer falls before they pay.
+fallXpFreeBlocks = 3.0
+# Most XP one damaging fall can pay.
+fallXpCap = 40.0
+# Milliseconds between paid damaging falls.
+# Effect: Higher values reduce how often falls pay.
+fallXpCooldownMs = 30000
+# A damaging fall that lands within this many blocks of one of your last three paid landings pays nothing.
+# Effect: Higher values stop repeated drops from the same spot over a wider area.
+fallXpRepeatRadius = 8.0
 # XP gain tuning for the kinetics skill.
-bounceXp = 4.0
+bounceXp = 8.0
 # Controls Bounce chain bonus for the kinetics skill.
-bounceChainBonus = 2.0
+bounceChainBonus = 4.0
 # Duration or timing used by the kinetics skill.
 bounceChainWindowMs = 4000
 # Maximum cap applied to the kinetics skill.
-bounceCap = 20.0
+bounceCap = 40.0
 # XP gain tuning for the kinetics skill.
-launchXp = 4.0
+launchXp = 8.0
 # Controls Launch min delta y for the kinetics skill.
 launchMinDeltaY = 0.6
 # Minimum delay in milliseconds between bounce or launch rewards.
@@ -49,25 +62,25 @@ motionRewardCooldownMs = 1000
 # Effect: Higher values require players to traverse farther before motion rewards rearm.
 motionRewardMinDistance = 1.5
 # XP gain tuning for the kinetics skill.
-kbDealtBaseXp = 3.0
+kbDealtBaseXp = 6.0
 # XP gain tuning for the kinetics skill.
-kbTakenBaseXp = 1.5
+kbTakenBaseXp = 3.0
 # Controls Kb min magnitude for the kinetics skill.
 kbMinMagnitude = 0.25
 # XP gain tuning for the kinetics skill.
-kbXpCap = 12.0
+kbXpCap = 24.0
 # Cooldown between the kinetics skill activations.
 kbCooldownMs = 750
 # Scaling applied to the kinetics skill.
 selfKnockbackFactor = 0.35
 # XP gain tuning for the kinetics skill.
-levitationReceiveXp = 5.0
+levitationReceiveXp = 10.0
 # XP gain tuning for the kinetics skill.
-levitationApplyXp = 5.0
+levitationApplyXp = 10.0
 # XP gain tuning for the kinetics skill.
-levitationPulseXp = 0.8
+levitationPulseXp = 1.6
 # XP gain tuning for the kinetics skill.
-levitationXpCap = 15.0
+levitationXpCap = 30.0
 # Cooldown between the kinetics skill activations.
 levitationCooldownMs = 1500
 # XP gain tuning for the kinetics skill.
@@ -94,6 +107,10 @@ anvilLedgerTtlMs = 120000
 anvilAdvancementMinFall = 8.0
 # Controls Anvil drop reward for the kinetics skill.
 anvilDropReward = 500.0
+# XP per experience level spent taking an anvil result.
+anvilUseXpPerLevel = 15.0
+# XP per enchantment level a grindstone removes, curses excluded.
+grindstoneXpPerEnchantLevel = 10.0
 
 # Controls Player preferences for the kinetics skill.
 [playerPreferences]

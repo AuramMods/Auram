@@ -15,13 +15,13 @@ showParticles = true
 showSounds = true
 # Base knowledge cost used when learning this adaptation.
 # Effect: Higher values make each level cost more knowledge.
-baseCost = 2
+baseCost = 1
 # Scaling factor applied to higher adaptation levels.
 # Effect: Higher values increase level-to-level cost growth.
-costFactor = 0.325
+costFactor = 0.5
 # Maximum level a player can reach for this adaptation.
 # Effect: Higher values allow more levels; lower values cap progression sooner.
-maxLevel = 2
+maxLevel = 3
 # Knowledge cost required to purchase level 1.
 # Effect: Higher values make unlocking the first level more expensive.
 initialCost = 1
@@ -43,13 +43,13 @@ dimDurationTicksFactor = 20.0
 # Controls Dim amplifier for the stealth-silent-step adaptation.
 dimAmplifier = 0
 # Controls Mob backstab base for the stealth-silent-step adaptation.
-mobBackstabBase = 1.5
+mobBackstabBase = 1.25
 # Scaling applied to the stealth-silent-step adaptation.
-mobBackstabFactor = 0.5
+mobBackstabFactor = 0.75
 # Controls Player backstab base for the stealth-silent-step adaptation.
-playerBackstabBase = 1.25
+playerBackstabBase = 1.1
 # Scaling applied to the stealth-silent-step adaptation.
-playerBackstabFactor = 0.35
+playerBackstabFactor = 0.5
 # XP gain tuning for the stealth-silent-step adaptation.
 xpPerTargetDrop = 2.0
 # XP gain tuning for the stealth-silent-step adaptation.

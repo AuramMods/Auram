@@ -15,7 +15,7 @@ showParticles = true
 showSounds = true
 # Base knowledge cost used when learning this adaptation.
 # Effect: Higher values make each level cost more knowledge.
-baseCost = 5
+baseCost = 2
 # Scaling factor applied to higher adaptation levels.
 # Effect: Higher values increase level-to-level cost growth.
 costFactor = 1.0
@@ -24,7 +24,7 @@ costFactor = 1.0
 maxLevel = 1
 # Knowledge cost required to purchase level 1.
 # Effect: Higher values make unlocking the first level more expensive.
-initialCost = 3
+initialCost = 2
 # Adaptations the player must already have learned, each written as adaptationId:level.
 # Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
 requires = []

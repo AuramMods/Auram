@@ -16,12 +16,15 @@ maxBlastResistanceBonus = 10.0
 logOrWoodXPMultiplier = 2.0
 # Scaling applied to the axes skill.
 leavesMultiplier = 0.75
-# Cooldown between the axes skill activations.
+# Milliseconds between Axes combat XP awards.
+# Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often.
 cooldownDelay = 1500
 # XP gain tuning for the axes skill.
 valueXPMultiplier = 0.175
 # XP gain tuning for the axes skill.
 axeDamageXPMultiplier = 7.0
+# Flat XP paid for each credited axe hit, before the damage XP.
+axeHitXp = 5.0
 
 # Controls Player preferences for the axes skill.
 [playerPreferences]

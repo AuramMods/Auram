@@ -36,7 +36,7 @@ witnessXpMultiplier = 0.35
 witnessCooldownMillis = 6000
 # Most witness XP one player can earn in any rolling 60 minutes.
 # Effect: Higher values allow more passive witness XP per hour.
-witnessHourlyCap = 600.0
+witnessHourlyCap = 1200.0
 # Base skill XP value of a golem kill before the victim's health is added.
 # Effect: Higher values raise the value of every golem kill.
 golemKillXpBase = 15.0
@@ -87,7 +87,7 @@ bindIronXp = 450.0
 bindXpCooldownMillis = 20000
 # Most build and bind XP one player can earn together in any rolling 60 minutes. First-bind challenges are not counted. Values below 0 count as 0.
 # Effect: Higher values let build, bind and release loops pay more per hour; 0 pays no build or bind XP.
-bindXpHourlyCap = 600.0
+bindXpHourlyCap = 1200.0
 # Skill XP paid with each first-bind challenge, the first time you bind a frost, copper or iron golem.
 # Effect: Higher values make each first bind worth more; each challenge pays once per player.
 firstBindXp = 600.0
@@ -228,7 +228,7 @@ stuckReleasesBeforePause = 3
 stuckPauseSeconds = 15
 # Most work XP one player can earn from their golems' finished jobs in any rolling 60 minutes. Values below 0 count as 0.
 # Effect: Higher values allow more passive XP from golem labor per hour; 0 pays no work XP.
-workXpHourlyCap = 1200.0
+workXpHourlyCap = 2400.0
 # Blocks from a working golem within which its owner earns work XP for its finished jobs. Owners farther away or in another world earn none. Values below 0 count as 0.
 # Effect: Higher values let owners earn work XP while farther from their golems.
 workXpOwnerRadius = 96.0

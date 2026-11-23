@@ -6,8 +6,11 @@
 enabled = true
 # Controls Skill color for the taming skill.
 skillColor = "&6"
-# XP gain tuning for the taming skill.
-tameXpBase = 65.0
+# XP for breeding two animals.
+breedXp = 40.0
+# Milliseconds before the same two parents can pay breeding XP again.
+# Effect: Higher values reduce repeated breeding XP from one pair.
+breedPairCooldownMs = 300000
 # Cooldown between the taming skill activations.
 cooldownDelay = 1500
 # XP gain tuning for the taming skill.
@@ -16,6 +19,8 @@ tameDamageXPMultiplier = 8.0
 tameSuccessXP = 150.0
 # XP gain tuning for the taming skill.
 petKillXP = 25.0
+# Extra pet kill XP per point of the victim's maximum health.
+petKillMaxHealthXpMultiplier = 1.0
 
 # Controls Player preferences for the taming skill.
 [playerPreferences]
