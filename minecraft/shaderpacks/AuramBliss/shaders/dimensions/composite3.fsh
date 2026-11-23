@@ -1,4 +1,7 @@
 #include "/lib/settings.glsl"
+#ifdef MIDNIGHT_SHADER
+  #include "/lib/midnight_atmosphere.glsl"
+#endif
 
 flat varying vec3 zMults;
 
@@ -405,13 +408,16 @@ void main() {
       #ifdef PER_BIOME_ENVIRONMENT
         BiomeFogColor(cavefogCol);
       #endif
+      #ifdef MIDNIGHT_SHADER
+        cavefogCol = midnightPurple * 0.032;
+      #endif
 
       cavefogCol *= 1.0-pow(1.0-pow(1.0 - max(1.0 - linearDistance/far,0.0),2.0),CaveFogFallOff);
       cavefogCol *= exp(-7.0*clamp(normalize(np3).y*0.5+0.5,0.0,1.0)) * 0.999 + 0.001;
 
       float caveFogAmount = caveDetection;
-      #ifdef AETHER_SHADER
-        caveFogAmount *= AETHER_FOG_DENSITY_SCALE;
+      #ifdef DIMENSION_FOG_DENSITY_SCALE
+        caveFogAmount = min(caveFogAmount * DIMENSION_FOG_DENSITY_SCALE, 1.0);
       #endif
 
       #ifdef CAVE_FOG_DARKEN_SKY 

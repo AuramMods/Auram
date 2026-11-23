@@ -978,7 +978,7 @@ void main() {
 					float disk = smoothstep(0.99965, 0.99982, dot(sunDirection, feetPlayerPos_normalized));
 					Background += DirectLightColor * (disk * 9.0);
 				#endif
-			#elif RESOURCEPACK_SKY == 1 || RESOURCEPACK_SKY == 0 || RESOURCEPACK_SKY == 3
+			#elif !defined MIDNIGHT_SHADER && (RESOURCEPACK_SKY == 1 || RESOURCEPACK_SKY == 0 || RESOURCEPACK_SKY == 3)
 				// vec3 orbitstar = vec3(feetPlayerPos_normalized.x,abs(feetPlayerPos_normalized.y),feetPlayerPos_normalized.z); orbitstar.x -= WsunVec.x*0.2;
 				vec3 orbitstar = normalize(mat3(gbufferModelViewInverse) * toScreenSpace(vec3(texcoord/RENDER_SCALE,1.0)));
 				float radiance = 2.39996 - (worldTime + worldDay*24000.0) / 24000.0;
@@ -1009,7 +1009,7 @@ void main() {
 			
 		#endif
 
-		#if !defined TWILIGHT_SHADER && (RESOURCEPACK_SKY == 1 || RESOURCEPACK_SKY == 2 || RESOURCEPACK_SKY == 3)
+		#if !defined TWILIGHT_SHADER && !defined MIDNIGHT_SHADER && (RESOURCEPACK_SKY == 1 || RESOURCEPACK_SKY == 2 || RESOURCEPACK_SKY == 3)
 			vec3 resourcePackskyBox = toLinear(texture2D(colortex10, texcoord).rgb * 5.0) * 15.0 * clamp(unsigned_WsunVec.y*2.0,0.1,1.0);
 
 			#ifdef SKY_GROUND
@@ -1017,7 +1017,7 @@ void main() {
 			#endif
 
 			Background += resourcePackskyBox;
-		#elif defined OVERWORLD_SHADER && defined AURAM_BLISS_ASTRAL_SKY && !defined TWILIGHT_SHADER
+		#elif defined OVERWORLD_SHADER && defined AURAM_BLISS_ASTRAL_SKY && !defined TWILIGHT_SHADER && !defined MIDNIGHT_SHADER
 			Background += toLinear(texture2D(colortex10, texcoord).rgb * 5.0) * 15.0;
 		#endif
 

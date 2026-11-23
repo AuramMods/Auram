@@ -163,6 +163,8 @@ void main() {
 
 	#ifdef TWILIGHT_SHADER
 		vec3 rodTint = vec3(0.61, 0.75, 0.67);
+	#elif defined MIDNIGHT_SHADER
+		vec3 rodTint = vec3(0.57, 0.24, 0.94);
 	#else
 		vec3 rodTint = vec3(Purkinje_R, Purkinje_G, Purkinje_B);
 	#endif

@@ -1,16 +1,6 @@
 uniform float noPuddleAreas;
 
-float densityAtPosFog(in vec3 pos){
-	pos /= 18.;
-	pos.xz *= 0.5;
-	vec3 p = floor(pos);
-	vec3 f = fract(pos);
-	f = (f*f) * (3.-2.*f);
-	vec2 uv =  p.xz + f.xz + p.y * vec2(0.0,193.0);
-	vec2 coord =  uv / 512.0;
-	vec2 xy = texture2D(noisetex, coord).yx;
-	return mix(xy.r,xy.g, f.y);
-}
+#include "/lib/fog_noise.glsl"
 
 #ifdef ATUM_SHADER
     #include "/lib/atum_atmosphere.glsl"
@@ -19,6 +9,13 @@ float densityAtPosFog(in vec3 pos){
 #if defined TWILIGHT_SHADER || (defined ATUM_SHADER && defined ATUM_SMOKE)
     #define DIMENSION_SMOKE
     #include "/lib/volumetric_smoke.glsl"
+#endif
+
+#ifdef MIDNIGHT_SHADER
+    #include "/lib/midnight_atmosphere.glsl"
+    #ifdef MIDNIGHT_SMOKE
+        #include "/lib/midnight_smoke.glsl"
+    #endif
 #endif
 
 float cloudVol(in vec3 pos, float maxDistance ){
@@ -53,8 +50,8 @@ float cloudVol(in vec3 pos, float maxDistance ){
 	FogDensities(medium_gradientFog, cloudyFog, rainyFog, maxDistance, dailyWeatherParams0.a, dailyWeatherParams1.a);
 
 	float fogDensity = uniformFog + medium_gradientFog + cloudyFog + rainyFog;
-	#ifdef AETHER_SHADER
-		fogDensity *= AETHER_FOG_DENSITY_SCALE;
+	#ifdef DIMENSION_FOG_DENSITY_SCALE
+		fogDensity *= DIMENSION_FOG_DENSITY_SCALE;
 	#endif
 	return fogDensity;
 }
@@ -149,6 +146,10 @@ vec4 GetVolumetricFog(
 		// Let the sky and direct light set the hue of the thin distance haze.
 		rC = vec3(dot(rC, vec3(0.21, 0.72, 0.07)) * 0.15);
 		mC = vec3(dot(mC, vec3(0.21, 0.72, 0.07)) * 0.4);
+	#elif defined MIDNIGHT_SHADER
+		// Use the purple ambient light as the haze color.
+		rC = vec3(dot(rC, vec3(0.21, 0.72, 0.07)));
+		mC = vec3(dot(mC, vec3(0.21, 0.72, 0.07)));
 	#endif
 	
 	vec3 skyLightPhased = AmbientColor;
@@ -208,6 +209,8 @@ vec4 GetVolumetricFog(
 		bool crossesCloud = !cloudAdded && cloud.a < 1.0 && cloudDistance <= stepEnd;
 		#ifdef DIMENSION_SMOKE
 			float smokeDepth = smokeOpticalDepth(worldOrigin, worldDirection, smokeInterval, stepStart, stepEnd, dither.x) * inACave;
+		#elif defined MIDNIGHT_SHADER && defined MIDNIGHT_SMOKE
+			vec2 smokeDepth = midnightSmokeOpticalDepth(worldOrigin, worldDirection, stepStart, stepEnd, dither.x) * inACave;
 		#endif
 		stepStart = stepEnd;
 		stepBoundary = (stepBoundary + fogStepScale) * stepRatio - fogStepScale;
@@ -262,6 +265,8 @@ vec4 GetVolumetricFog(
 			float fogOpticalDepth = fogDensity * stepLength / 8.0;
 			#ifdef DIMENSION_SMOKE
 				fogOpticalDepth += smokeDepth;
+			#elif defined MIDNIGHT_SHADER && defined MIDNIGHT_SMOKE
+				fogOpticalDepth += smokeDepth.x;
 			#endif
 			float fogVolumeCoeff = exp(-fogOpticalDepth);
 			float fogToCloud = beforeCloud == 1.0 ? fogVolumeCoeff : exp(-fogOpticalDepth * beforeCloud);
@@ -283,6 +288,15 @@ vec4 GetVolumetricFog(
 					smokeLight *= 5.0; // The sky lookup stores fog lighting at one fifth of its input scale.
 				#endif
 				lighting += smokeLight * (smokeDepth / max(fogOpticalDepth, 1e-6));
+			#elif defined MIDNIGHT_SHADER
+				float purpleScattering = 0.004 * MIDNIGHT_SKY_BRIGHTNESS;
+				#ifdef MIDNIGHT_SMOKE
+					purpleScattering += 0.065 * (smokeDepth.y / max(fogOpticalDepth, 1e-6));
+				#endif
+				#ifdef ReflectedFog
+					purpleScattering *= 5.0;
+				#endif
+				lighting += midnightPurple * (purpleScattering * lightLevelZero);
 			#endif
 
 			color += lighting * ((1.0 - fogToCloud) + (fogToCloud - fogVolumeCoeff) * cloud.a) * fogAbsorbance;
@@ -303,8 +317,8 @@ vec4 GetVolumetricFog(
 			// just air
 			vec2 airCoef = exp2(-max(progressW.y-SEA_LEVEL,0.0)/vec2(8.0e3, 1.2e3)*vec2(6.,7.0)) * (24.0 * atmosphereMult) * Haze_amount * cloudPlaneCutoff;
 
-			#ifdef AETHER_SHADER
-				airCoef *= AETHER_FOG_DENSITY_SCALE;
+			#ifdef DIMENSION_FOG_DENSITY_SCALE
+				airCoef *= DIMENSION_FOG_DENSITY_SCALE;
 			#endif
 
 			// Pbr for air, yolo mix between mie and rayleigh for water droplets

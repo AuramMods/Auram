@@ -257,6 +257,8 @@ if (gl_FragCoord.x > 18. && gl_FragCoord.y > 1. && gl_FragCoord.x < 18+257){
 	#ifdef TWILIGHT_SHADER
 		vec3 sunDirection = twilightSunDirection(normalize(WsunVec) * lightCol.a);
 		vec3 sky = twilightSkyRadiance(viewVector, sunDirection) * 4000.0;
+	#elif defined MIDNIGHT_SHADER
+		vec3 sky = midnightSkyRadiance(viewVector) * 4000.0;
 	#else
 	vec2 planetSphere = vec2(0.0);
 	vec3 sky = vec3(0.0);

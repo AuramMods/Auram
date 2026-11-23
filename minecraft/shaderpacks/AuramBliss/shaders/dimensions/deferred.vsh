@@ -51,6 +51,9 @@ vec3 sunVec = normalize(mat3(gbufferModelViewInverse) * sunPosition);
 #include "/lib/sky_gradient.glsl"
 #include "/lib/util.glsl"
 #include "/lib/ROBOBO_sky.glsl"
+#ifdef MIDNIGHT_SHADER
+	#include "/lib/midnight_atmosphere.glsl"
+#endif
 
 float luma(vec3 color) {
 	return dot(color,vec3(0.21, 0.72, 0.07));
@@ -146,7 +149,11 @@ void main() {
    	}
 	
 	// maximum control of color and luminance
-	vec3 minimumlight =  vec3(0.5,0.75,1.0) * (min(MIN_LIGHT_AMOUNT,0.0005) + nightVision);
+	#ifdef MIDNIGHT_SHADER
+		vec3 minimumlight = midnightPurple * min(MIN_LIGHT_AMOUNT, 0.0005) + vec3(nightVision);
+	#else
+		vec3 minimumlight = vec3(0.5, 0.75, 1.0) * (min(MIN_LIGHT_AMOUNT, 0.0005) + nightVision);
+	#endif
 	// vec3 minimumlight =  vec3(0.5,0.75,1.0) * nightVision;
 	averageSkyCol_Clouds = max(	normalize(averageSkyCol_Clouds) * min(luma(averageSkyCol_Clouds) * 3.0,2.5) * (1.0-rainStrength*0.7), minimumlight);
 	averageSkyCol = max(averageSkyCol * PLANET_GROUND_BRIGHTNESS, minimumlight);
@@ -160,6 +167,10 @@ void main() {
 		sunColor = (sunColorBase) * (0.025 / 4000.0) * vec3(1.0, 0.82, 0.64);
 		moonColor = vec3(0.0);
 		lightSourceColor = sunColor;
+	#elif defined MIDNIGHT_SHADER
+		sunColor = vec3(0.0);
+		moonColor = vec3(0.0);
+		lightSourceColor = vec3(0.0);
 	#else
 	vec2 planetSphere = vec2(0.0);
 
@@ -263,6 +274,8 @@ void main() {
 	#ifdef TWILIGHT_SHADER
 		// Preserve the night level when auto exposure adapts to a dark view.
 		exposure = clamp(targetExposure, 0.0, 0.92) * EXPOSURE_MULTIPLIER;
+	#elif defined MIDNIGHT_SHADER
+		exposure = clamp(targetExposure, 0.0, 0.68) * EXPOSURE_MULTIPLIER;
 	#else
 		exposure = max(targetExposure*EXPOSURE_MULTIPLIER, 0.0);
 	#endif

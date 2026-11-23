@@ -1,36 +1,6 @@
-float densityAtPosFog(in vec3 pos){
-	pos /= 18.;
-	pos.xz *= 0.5;
+#include "/lib/fog_noise.glsl"
 
-	vec3 p = floor(pos);
-	vec3 f = fract(pos);
-
-	f = (f*f) * (3.-2.*f);
-	vec2 uv =  p.xz + f.xz + p.y * vec2(0.0,193.0);
-	vec2 coord =  uv / 512.0;
-	vec2 xy = texture2D(noisetex, coord).yx;
-	return mix(xy.r,xy.g, f.y);
-}
-
-float cloudVol(in vec3 pos){
-	vec3 samplePos = pos*vec3(1.0,1./48.,1.0);
-
-    float Wind = pow(max(pos.y-30,0.0) / 15.0,2.1);
-
-	float Plumes = texture2D(noisetex, (samplePos.xz + Wind)/256.0).b;
-	float floorPlumes = clamp(0.3 - exp(Plumes * -6),0,1);
-	Plumes *= Plumes;
-
-	float Erosion = densityAtPosFog(samplePos * 400	- frameTimeCounter*10 - Wind*10) *0.7+0.3 ;
-
-    float RoofToFloorDensityFalloff = exp(max(100-pos.y,0.0) / -15);
-	float FloorDensityFalloff = pow(exp(max(pos.y-31,0.0) / -3.0),2);
-	float RoofDensityFalloff = exp(max(120-pos.y,0.0) / -10);
-
-	float Output = max((RoofToFloorDensityFalloff - Plumes * (1.0-Erosion)) * 2.0,	clamp((FloorDensityFalloff - floorPlumes*0.5) * Erosion ,0.0,1.0) );
-    
-	return Output;
-}
+#include "/lib/nether_smoke.glsl"
 
 vec4 GetVolumetricFog(
 	vec3 viewPosition,
@@ -74,15 +44,15 @@ vec4 GetVolumetricFog(
 		
 		progressW = gbufferModelViewInverse[3].xyz + cameraPosition + d*dVWorld;
 
-		float densityVol = cloudVol(progressW);
+		float densityVol = netherSmokeField(progressW, 1.0, frameTimeCounter * 10.0);
 		float clearArea = 1.0 - min(max(1.0 - length(progressW - cameraPosition) / 24.0,0.0),1.0);
 
 		//------ PLUME EFFECT
-			float plumeDensity = min(densityVol * pow(min(max(100.0-progressW.y,0.0)/30.0,1.0),4.0), pow(clamp(1.0 - length(progressW-cameraPosition)/far,0.0,1.0),5.0));
+			float plumeDensity = netherSmokePlumeDensity(densityVol, progressW.y, length(progressW - cameraPosition) / far);
 			plumeDensity *= NETHER_PLUME_DENSITY;
 			float plumeVolumeCoeff = exp(-plumeDensity*dd*dL);
 
-			vec3 lighting = vec3(1.0,0.4,0.2) * exp(-15.0*densityVol) * (clearArea*clearArea*0.9+0.1);
+			vec3 lighting = vec3(1.0,0.4,0.2) * netherSmokePlumeLight(densityVol) * (clearArea*clearArea*0.9+0.1);
 
 			color += (lighting - lighting * plumeVolumeCoeff) * absorbance;
 			absorbance *= plumeVolumeCoeff;
@@ -100,7 +70,7 @@ vec4 GetVolumetricFog(
 			color += (hazeLighting - hazeLighting*hazeVolumeCoeff) * absorbance;
 
 		//------ CEILING SMOKE EFFECT
-			float ceilingSmokeDensity = 0.001 * pow(min(max(progressW.y-40.0,0.0)/50.0,1.0),3.0);
+			float ceilingSmokeDensity = netherSmokeUpperDensity(progressW.y);
 			ceilingSmokeDensity *= NETHER_CEILING_SMOKE_DENSITY;
 			float ceilingSmokeVolumeCoeff = exp(-ceilingSmokeDensity*dd*dL);
 			
