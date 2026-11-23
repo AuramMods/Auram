@@ -10,7 +10,7 @@ import net.minecraft.client.Minecraft;
 import static org.lwjgl.opengl.GL41C.*;
 
 public final class PerfMetrics {
-    private static final int FRAME_COUNT = 90;
+    static final int FRAME_COUNT = 90;
     private static final ArrayDeque<Integer> pending = new ArrayDeque<>();
     private static final ArrayDeque<Integer> idle = new ArrayDeque<>();
     private static final List<Long> frameTimes = new ArrayList<>();
@@ -19,6 +19,7 @@ public final class PerfMetrics {
     private static long previousFrame;
     private static long heapHighWater;
     private static int volumeQuery;
+    private static PassMetrics.Span profileVolume;
     private static CameraMotion motion;
 
     private PerfMetrics() {}
@@ -27,6 +28,7 @@ public final class PerfMetrics {
         long now = System.nanoTime();
         if (!measuring) {
             if (!Files.deleteIfExists(Path.of("bliss-read-perf"))) return;
+            if (Files.deleteIfExists(Path.of("bliss-profile-passes"))) PassMetrics.start();
             measuring = true;
             previousFrame = now;
             heapHighWater = 0;
@@ -77,19 +79,27 @@ public final class PerfMetrics {
     }
 
     public static void beginVolume() {
+        if (PassMetrics.isActive()) {
+            profileVolume = PassMetrics.begin("stage/lpv-propagation");
+            return;
+        }
         if (!measuring || idle.isEmpty()) return;
         volumeQuery = idle.remove();
         glBeginQuery(GL_TIME_ELAPSED, volumeQuery);
     }
 
     public static void endVolume() {
+        if (profileVolume != null) {
+            PassMetrics.end(profileVolume);
+            profileVolume = null;
+        }
         if (volumeQuery == 0) return;
         glEndQuery(GL_TIME_ELAPSED);
         pending.add(volumeQuery);
         volumeQuery = 0;
     }
 
-    private static String quantiles(List<Long> times) {
+    static String quantiles(List<Long> times) {
         if (times.isEmpty()) return "null";
         List<Long> sorted = times.stream().sorted().toList();
         return String.format(java.util.Locale.ROOT, "{\"samples\":%d,\"medianMs\":%.3f,\"p95Ms\":%.3f,\"p99Ms\":%.3f}",
