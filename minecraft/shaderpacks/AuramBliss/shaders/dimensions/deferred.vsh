@@ -155,6 +155,12 @@ void main() {
 /// --- SUNLIGHT/MOONLIGHT STUFF --- ///
 ////////////////////////////////////////
 
+	#ifdef TWILIGHT_SHADER
+		// Use the dimension's existing shadow direction with a fraction of the daylight intensity.
+		sunColor = (sunColorBase) * (0.025 / 4000.0) * vec3(1.0, 0.82, 0.64);
+		moonColor = vec3(0.0);
+		lightSourceColor = sunColor;
+	#else
 	vec2 planetSphere = vec2(0.0);
 
 	float sunVis = clamp(sunElevation,0.0,0.05)/0.05*clamp(sunElevation,0.0,0.05)/0.05;
@@ -166,6 +172,7 @@ void main() {
 	moonColor = moonColorBase/4000.0;
 
 	lightSourceColor = (sunVis >= 1e-5 ? sunColor * sunVis : moonColor * moonVis) ;
+	#endif
 
 #endif
 
@@ -253,7 +260,12 @@ void main() {
 	float targetrodExposure = max(0.012/log2(avgL2+1.002)-0.1,0.0)*1.2;
 
 
-	exposure = max(targetExposure*EXPOSURE_MULTIPLIER, 0.0);
+	#ifdef TWILIGHT_SHADER
+		// Preserve the night level when auto exposure adapts to a dark view.
+		exposure = clamp(targetExposure, 0.0, 0.92) * EXPOSURE_MULTIPLIER;
+	#else
+		exposure = max(targetExposure*EXPOSURE_MULTIPLIER, 0.0);
+	#endif
 	// exposure = mix(0.0, 1.0, min(targetExposure,1.0));
 	// exposure = 1;
 

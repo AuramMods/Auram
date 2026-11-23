@@ -14,9 +14,11 @@ float densityAtPosFog(in vec3 pos){
 
 #ifdef ATUM_SHADER
     #include "/lib/atum_atmosphere.glsl"
-    #ifdef ATUM_SMOKE
-        #include "/lib/atum_smoke.glsl"
-    #endif
+#endif
+
+#if defined TWILIGHT_SHADER || (defined ATUM_SHADER && defined ATUM_SMOKE)
+    #define DIMENSION_SMOKE
+    #include "/lib/volumetric_smoke.glsl"
 #endif
 
 float cloudVol(in vec3 pos, float maxDistance ){
@@ -99,8 +101,8 @@ vec4 GetVolumetricFog(
 
 	vec3 worldDirection = mat3(gbufferModelViewInverse) * viewDirection;
 	vec3 worldOrigin = gbufferModelViewInverse[3].xyz + cameraPosition;
-	#if defined ATUM_SHADER && defined ATUM_SMOKE
-		vec2 smokeInterval = atumSmokeInterval(worldOrigin.y, worldDirection.y, rayEnd);
+	#ifdef DIMENSION_SMOKE
+		vec2 smokeInterval = smokeIntervalInLayer(worldOrigin.y, worldDirection.y, rayEnd);
 	#endif
 	vec3 shadowDirection = diagonal3(shadowProjection) * (mat3(shadowModelView) * worldDirection);
 	vec3 shadowOrigin = toShadowSpaceProjected(vec3(0.0));
@@ -127,12 +129,23 @@ vec4 GetVolumetricFog(
 
 	///// ----- fog lighting
 	//Mie phase + somewhat simulates multiple scattering (Horizon zero down cloud approx)
-	float sunPhase = fogPhase(SdotV) * 5.0;
-	float skyPhase = pow(clamp(worldDirection.y*0.5+0.5,0.0,1.0),4.0)*5.0;
+	#ifdef TWILIGHT_SHADER
+		// Soft twilight illumination keeps the drafts from flaring in the sun's direction.
+		float sunPhase = mix(0.18, 0.38, SdotV * 0.5 + 0.5);
+		float skyPhase = 0.0;
+	#else
+		float sunPhase = fogPhase(SdotV) * 5.0;
+		float skyPhase = pow(clamp(worldDirection.y*0.5+0.5,0.0,1.0),4.0)*5.0;
+	#endif
 	float rayL = phaseRayleigh(SdotV);
 
 	vec3 rC = vec3(sky_coefficientRayleighR*1e-6, sky_coefficientRayleighG*1e-5, sky_coefficientRayleighB*1e-5) ;
 	vec3 mC = vec3(fog_coefficientMieR*1e-6, fog_coefficientMieG*1e-6, fog_coefficientMieB*1e-6);
+	#ifdef TWILIGHT_SHADER
+		// Let the sky and direct light set the hue of the thin distance haze.
+		rC = vec3(dot(rC, vec3(0.21, 0.72, 0.07)) * 0.15);
+		mC = vec3(dot(mC, vec3(0.21, 0.72, 0.07)) * 0.4);
+	#endif
 	
 	vec3 skyLightPhased = AmbientColor;
 	vec3 LightSourcePhased = LightColor;
@@ -189,8 +202,8 @@ vec4 GetVolumetricFog(
 		float sampleDistance = stepStart + stepLength * dither.x;
 		float beforeCloud = cloud.a < 1.0 ? clamp((cloudDistance - stepStart) / stepLength, 0.0, 1.0) : 1.0;
 		bool crossesCloud = !cloudAdded && cloud.a < 1.0 && cloudDistance <= stepEnd;
-		#if defined ATUM_SHADER && defined ATUM_SMOKE
-			float smokeDepth = atumSmokeOpticalDepth(worldOrigin, worldDirection, smokeInterval, stepStart, stepEnd, dither.x) * inACave;
+		#ifdef DIMENSION_SMOKE
+			float smokeDepth = smokeOpticalDepth(worldOrigin, worldDirection, smokeInterval, stepStart, stepEnd, dither.x) * inACave;
 		#endif
 		stepStart = stepEnd;
 		stepBoundary = (stepBoundary + fogStepScale) * stepRatio - fogStepScale;
@@ -243,7 +256,7 @@ vec4 GetVolumetricFog(
 		//------------------------------------
 			float fogDensity = densityVol;
 			float fogOpticalDepth = fogDensity * stepLength / 8.0;
-			#if defined ATUM_SHADER && defined ATUM_SMOKE
+			#ifdef DIMENSION_SMOKE
 				fogOpticalDepth += smokeDepth;
 			#endif
 			float fogVolumeCoeff = exp(-fogOpticalDepth);
@@ -259,6 +272,14 @@ vec4 GetVolumetricFog(
 
 			vec3 Lightning = Iris_Lightningflash_VLfog(progressW-cameraPosition, lightningBoltPosition.xyz);
 			vec3 lighting = DirectLight + indirectLight * (lightLevelZero*0.99 + 0.01) + Lightning;
+			#ifdef TWILIGHT_SHADER
+				// Diffuse canopy light catches the drafts, even away from the low sun.
+				vec3 smokeLight = vec3(0.025, 0.035, 0.030) * (0.25 + 0.75 * lightLevelZero);
+				#ifdef ReflectedFog
+					smokeLight *= 5.0; // The sky lookup stores fog lighting at one fifth of its input scale.
+				#endif
+				lighting += smokeLight * (smokeDepth / max(fogOpticalDepth, 1e-6));
+			#endif
 
 			color += lighting * ((1.0 - fogToCloud) + (fogToCloud - fogVolumeCoeff) * cloud.a) * fogAbsorbance;
 			fogAbsorbance *= fogVolumeCoeff;

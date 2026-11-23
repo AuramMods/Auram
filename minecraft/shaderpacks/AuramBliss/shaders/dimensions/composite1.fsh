@@ -1,4 +1,7 @@
 #include "/lib/settings.glsl"
+#ifdef TWILIGHT_SHADER
+	#include "/lib/twilight_sky.glsl"
+#endif
 
 // #if defined END_SHADER || defined NETHER_SHADER
 // 	#undef IS_LPV_ENABLED
@@ -959,7 +962,23 @@ void main() {
 		float atmosphereGround = 1.0 - exp2(-50.0 * pow(clamp(feetPlayerPos_normalized.y+0.025,0.0,1.0),2.0)  ); // darken the ground in the sky.
 		
 		#ifdef OVERWORLD_SHADER	
-			#if RESOURCEPACK_SKY == 1 || RESOURCEPACK_SKY == 0 || RESOURCEPACK_SKY == 3
+			#ifdef TWILIGHT_SHADER
+				vec3 starDirection = normalize(mat3(gbufferModelViewInverse) * toScreenSpace(vec3(texcoord / RENDER_SCALE, 1.0)));
+				float starFade = smoothstep(0.01, 0.23, starDirection.y);
+				vec2 starCoord = sphereToCarte(starDirection) * vec2(192.0, 104.0);
+				vec2 starCell = floor(starCoord);
+				starCell.x = mod(starCell.x, 192.0);
+				float starSeed = hash12(starCell);
+				vec2 starCenter = 0.25 + vec2(hash12(starCell + 17.0), hash12(starCell - 31.0)) * 0.5;
+				float starRadius = mix(0.085, 0.17, pow(starSeed, 8.0));
+				float starShape = 1.0 - smoothstep(starRadius * 0.3, starRadius, length(fract(starCoord) - starCenter));
+				Background += vec3(starShape * max(starSeed - 0.90, 0.0) * 0.9 * starFade);
+				#ifndef ambientLight_only
+					vec3 sunDirection = twilightSunDirection(WsunVec);
+					float disk = smoothstep(0.99965, 0.99982, dot(sunDirection, feetPlayerPos_normalized));
+					Background += DirectLightColor * (disk * 9.0);
+				#endif
+			#elif RESOURCEPACK_SKY == 1 || RESOURCEPACK_SKY == 0 || RESOURCEPACK_SKY == 3
 				// vec3 orbitstar = vec3(feetPlayerPos_normalized.x,abs(feetPlayerPos_normalized.y),feetPlayerPos_normalized.z); orbitstar.x -= WsunVec.x*0.2;
 				vec3 orbitstar = normalize(mat3(gbufferModelViewInverse) * toScreenSpace(vec3(texcoord/RENDER_SCALE,1.0)));
 				float radiance = 2.39996 - (worldTime + worldDay*24000.0) / 24000.0;
@@ -990,7 +1009,7 @@ void main() {
 			
 		#endif
 
-		#if RESOURCEPACK_SKY == 1 || RESOURCEPACK_SKY == 2 || RESOURCEPACK_SKY == 3
+		#if !defined TWILIGHT_SHADER && (RESOURCEPACK_SKY == 1 || RESOURCEPACK_SKY == 2 || RESOURCEPACK_SKY == 3)
 			vec3 resourcePackskyBox = toLinear(texture2D(colortex10, texcoord).rgb * 5.0) * 15.0 * clamp(unsigned_WsunVec.y*2.0,0.1,1.0);
 
 			#ifdef SKY_GROUND
@@ -998,7 +1017,7 @@ void main() {
 			#endif
 
 			Background += resourcePackskyBox;
-		#elif defined OVERWORLD_SHADER && defined AURAM_BLISS_ASTRAL_SKY
+		#elif defined OVERWORLD_SHADER && defined AURAM_BLISS_ASTRAL_SKY && !defined TWILIGHT_SHADER
 			Background += toLinear(texture2D(colortex10, texcoord).rgb * 5.0) * 15.0;
 		#endif
 

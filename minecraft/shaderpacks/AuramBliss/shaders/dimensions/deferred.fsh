@@ -141,6 +141,9 @@ float invLinZ (float lindepth){
 	
 	#include "/lib/volumetricClouds.glsl"
 	#include "/lib/overworld_fog.glsl"
+	#ifdef TWILIGHT_SHADER
+		#include "/lib/twilight_sky.glsl"
+	#endif
 	
 #endif
 #ifdef NETHER_SHADER
@@ -251,6 +254,10 @@ if (gl_FragCoord.x > 18. && gl_FragCoord.y > 1. && gl_FragCoord.x < 18+257){
 	vec2 p = clamp(floor(gl_FragCoord.xy-vec2(18.,1.))/256.+tempOffsets/256.,0.0,1.0);
 	vec3 viewVector = cartToSphere(p);
 
+	#ifdef TWILIGHT_SHADER
+		vec3 sunDirection = twilightSunDirection(normalize(WsunVec) * lightCol.a);
+		vec3 sky = twilightSkyRadiance(viewVector, sunDirection) * 4000.0;
+	#else
 	vec2 planetSphere = vec2(0.0);
 	vec3 sky = vec3(0.0);
 	vec3 skyAbsorb = vec3(0.0);
@@ -265,6 +272,7 @@ if (gl_FragCoord.x > 18. && gl_FragCoord.y > 1. && gl_FragCoord.x < 18+257){
 	
 	#ifdef ATUM_SHADER
 		sky = tintAtumAtmosphere(sky);
+	#endif
 	#endif
 	#ifdef AEROCHROME_MODE
 		sky *= vec3(0.0, 0.18, 0.35);

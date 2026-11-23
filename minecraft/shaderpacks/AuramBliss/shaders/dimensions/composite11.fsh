@@ -158,7 +158,12 @@ void main() {
 	float rodLum = lum2*200.0;
 	float rodCurve = clamp(mix(1.0, rodLum/(2.5+rodLum), purkinje),0.0,1.0);
 
-	col = mix(lum * vec3(Purkinje_R, Purkinje_G, Purkinje_B) * Purkinje_Multiplier, col, rodCurve);
+	#ifdef TWILIGHT_SHADER
+		vec3 rodTint = vec3(0.61, 0.75, 0.67);
+	#else
+		vec3 rodTint = vec3(Purkinje_R, Purkinje_G, Purkinje_B);
+	#endif
+	col = mix(lum * rodTint * Purkinje_Multiplier, col, rodCurve);
 
 	#ifndef USE_ACES_COLORSPACE_APPROXIMATION
 		col = LinearTosRGB(TONEMAP(col));
