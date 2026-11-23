@@ -35,6 +35,18 @@ Use `--lifecycle tools/aurambliss-qa/fixtures/lifecycle.txt` with a cached shore
 
 To reproduce the scrolling shoreline benchmark, use the same source save, `--readback perf --camera-motion 22,-8,32 --seconds 12` and `LPV_ENABLED=true`, `LPV_SIZE=7`, `LPV_VL_FOG_ILLUMINATION=true`. The three motion values are the X displacement, Z displacement, and yaw turn in degrees over 90 frames. Repeat with `--cold-dh` and a config with `chunkGeneratorMode = "FEATURES"` to run during new LOD generation. The option skips DH databases when copying the save.
 
+## GPU pass profiling
+
+Add `--profile-passes --max-fps 260 --size 1280x720 --seconds 25` to the replay command with the rebuilt probe JAR. Pass profiling enables the frame timing readback. Use the same cached save and camera for each run. For a rendering-only benchmark, use a DH fixture with `generatorPlan = "DISABLED"`. The runner also accepts the existing `--camera-motion` option for a moving replay.
+
+`readback.json` contains frame intervals and a `render_pass_timing` event with 90 samples. The GPU timings use elapsed queries whose results are collected after completion. The report includes:
+
+- `draw/<program>` for each fullscreen shader draw and `compute/<program>` for pack compute dispatches when the GPU runs them.
+- `stage/shadows`, `stage/dh`, `stage/dh-deferred` and `stage/lpv-propagation` when those stages run. Nested work is counted under the more specific label. With profiling enabled, LPV propagation appears here.
+- `world/other` for the rest of the timed world render, including ordinary terrain and entities. `world` totals all intervals per frame.
+
+Sort the named passes by GPU median and compare median and p95 frame times across repeated baseline and candidate runs. The draw names match the program files in the pack's dimension directory. For example, AuramBliss's `draw/composite3` runs the volumetric fog and cloud code included by `world0/composite3.fsh`. Compare screenshots from the same pose, time, and weather to verify that an optimization preserves the effect. A feature toggle can estimate a pass's cost.
+
 ## Windows shader source audit
 
 Prepare the NVIDIA, AMD and Intel matrix and generate transformed GLSL on any supported host with Oculus 1.8.0. The test builds actual shader-pack programs with a Windows OpenGL 4.6 environment, then passes the resulting stages to `glslangValidator` for linking. Use a disposable client with the test probe from above.

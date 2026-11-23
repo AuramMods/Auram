@@ -44,16 +44,24 @@ def parse_args():
     parser.add_argument("--probe", type=Path, action="append", default=[], help="Test-only Forge JAR")
     parser.add_argument("--readback", choices=("depth", "light", "entities", "perf"),
                         help="Ask the AuramBliss test probe to sample live textures")
+    parser.add_argument("--profile-passes", action="store_true",
+                        help="Collect asynchronous GPU timings by shader pass alongside the perf readback")
     parser.add_argument("--camera-motion", help="Benchmark displacement and turn as dx,dz,yaw over 90 frames")
     parser.add_argument("--no-dh", action="store_true")
     parser.add_argument("--force-compat", action="store_true", help="Use the macOS rendering path")
     parser.add_argument("--full", action="store_true", help="Copy the complete Minecraft pack")
     parser.add_argument("--size", default="854x480")
+    parser.add_argument("--max-fps", type=int, default=90, help="Minecraft frame-rate limit (260 is Unlimited)")
     parser.add_argument("--heap", default="5g")
     parser.add_argument("--java-option", action="append", default=[])
     parser.add_argument("--timeout", type=int, default=180)
     parser.add_argument("--seconds", type=int, default=12)
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.profile_passes:
+        if args.readback not in (None, "perf"):
+            parser.error("--profile-passes uses the perf readback")
+        args.readback = "perf"
+    return args
 
 
 def copy_file(source, target):
@@ -131,7 +139,7 @@ def prepare(args, work):
         resource_settings = [line for line in resource_settings if not line.startswith("resourcePacks:")]
         resource_settings.append("resourcePacks:" + json.dumps(selected))
     profile.write_text(
-        "version:3465\nrenderDistance:8\nsimulationDistance:5\nmaxFps:90\nenableVsync:false\nfullscreen:false\n"
+        f"version:3465\nrenderDistance:8\nsimulationDistance:5\nmaxFps:{args.max_fps}\nenableVsync:false\nfullscreen:false\n"
         "pauseOnLostFocus:false\nsoundCategory_master:0.0\nnarrator:0\nonboardAccessibility:false\ntutorialStep:none\n"
         + "\n".join(resource_settings) + "\n"
     )
@@ -276,11 +284,16 @@ def observe(args, command, work, game):
                         if not readback_requested:
                             if args.camera_motion:
                                 (game / "bliss-perf-motion").write_text(args.camera_motion)
+                            if args.profile_passes:
+                                (game / "bliss-profile-passes").touch()
                             (game / f"bliss-read-{args.readback}").touch()
                             readback_requested = True
                         events = [json.loads(row.removeprefix("QA_EVT ")) for row in trace.splitlines()
                                   if row.startswith("QA_EVT ")]
                         if len(events) < (2 if args.readback == "depth" else 1):
+                            time.sleep(0.5)
+                            continue
+                        if args.profile_passes and not any(event["event"] == "render_pass_timing" for event in events):
                             time.sleep(0.5)
                             continue
                         (work / "readback.json").write_text(json.dumps(events, indent=2) + "\n")

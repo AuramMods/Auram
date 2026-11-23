@@ -29,7 +29,7 @@ def build(instance, output):
         "package": "dev.auram.bliss.test",
         "compatibilityLevel": "JAVA_17",
         "client": ["DepthProbe", "LightProbe", "EntityFixture", "PerfFrameProbe", "PerfVolumeProbe", "LifecycleProbe",
-                   "AuditDefines"],
+                   "AuditDefines", "PerfProgramNames", "PerfProgramProbe", "PerfFullscreenProbe", "PerfDhProbe"],
         "injectors": {"defaultRequire": 1},
     }
     metadata = """modLoader="lowcodefml"
