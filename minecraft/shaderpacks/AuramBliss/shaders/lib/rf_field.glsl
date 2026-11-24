@@ -84,17 +84,17 @@ vec3 rfVoxelEmission(ivec3 voxel, int side, vec3 camera) {
     if (any(lessThan(vec3(block), auramRfMinimum)) || any(greaterThanEqual(vec3(block), auramRfMaximum))) {
         return vec3(0.0);
     }
-    uvec4 data = texelFetch(auramRfVolume, block, 0);
-    uvec3 rates = data.rgb;
+    uvec3 rates = texelFetch(auramRfVolume, block, 0).rgb;
     if (rates == uvec3(0u)) return vec3(0.0);
     uvec3 peak = max(rates & 255u, (rates >> 8u) & 255u);
     peak = max(peak, (rates >> 16u) & 255u);
     peak = max(peak, rates >> 24u);
-    float phase = rfCircuitPhase(data.a, rfTravelPhase());
-    vec3 world = vec3(block) + 0.5 + auramRfPhaseOrigin;
-    float age = mod(phase - rfCenterPhase(block) - rfPhaseShift(world), rfPulseSpacing) / rfTrailLength;
     uint rate = max(peak.x, max(peak.y, peak.z));
-    return rfBandTint(world, age, float(rate)) * (2800.0 * RF_STREAK_INTENSITY *
-            rfBrightness(rate) * rfEnvelope(age));
+
+    // A powered cable lights the whole run. The stored rate is already logarithmic.
+    float decades = float(rate) / 31.0;
+    float brightness = 0.02 * min(decades / 3.5, 1.0) + 0.98 * clamp((decades - 3.5) / 4.5, 0.0, 1.0);
+    vec3 world = vec3(block) + 0.5 + auramRfPhaseOrigin;
+    return rfBandTint(world, 0.5, float(rate)) * (1400.0 * RF_STREAK_INTENSITY * brightness);
 }
 #endif
