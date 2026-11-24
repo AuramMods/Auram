@@ -3927,10 +3927,10 @@ requires = "Requires: {requirement}"
 title = "{skill} {progress} ({xp}XP {nextLevel})"
 
 [gui.client]
-catalog_changed = "Adapt changed while this screen was open. Try again."
-unavailable = "That adaptation is not available to you."
-no_change = "Nothing changed."
 preference_saved = "Setting saved."
+unavailable = "That adaptation is not available to you."
+catalog_changed = "Adapt changed while this screen was open. Try again."
+no_change = "Nothing changed."
 preference_denied = "That setting cannot be changed right now."
 
 [items.bound_eye_of_ender]
@@ -6075,19 +6075,19 @@ target = "Compass pulse: {x}, {z}"
 [discovery.insight]
 stat = "{label} {value}"
 lore = ["Detection Range"]
+description = "Look at a creature to reveal its health, armor, and attack. Higher levels add its effects, movement, defenses, and detection range, then nearby creatures."
+speed = "Speed"
+tamed = "Tamed"
+effects = "Effects"
+armor = "Armor"
+tamed_by = "Tamed by {owner}"
 attack = "Attack"
 name = "Insight"
-description = "Look at a creature to reveal its health, armor, and attack. Higher levels add its effects, movement, defenses, and detection range, then nearby creatures."
 stable_hand = "Stable Hand enhanced"
 lore1 = "Detection Range"
-speed = "Speed"
-jump = "Jump"
-armor = "Armor"
-effects = "Effects"
 wild = "Untamed"
 yours = "Yours"
-tamed = "Tamed"
-tamed_by = "Tamed by {owner}"
+jump = "Jump"
 
 [discovery.keen_eye]
 lore = ["Line-of-Sight Range", "Glimmer Duration"]
@@ -6504,6 +6504,22 @@ label = "Challenge Wither Boss Reward"
 description = ["XP gain tuning for the nether skill."]
 label = "Wither Damage Xp"
 
+[config.fields.skills.nether.netherMobMaxHealthXpMultiplier]
+label = "Nether Mob Max Health Xp Multiplier"
+description = ["XP per point of maximum health for killing blazes, ghasts, piglins, piglin brutes, hoglins, zoglins, magma cubes, and zombified piglins."]
+
+[config.fields.skills.nether.netherQuartzOreXp]
+label = "Nether Quartz Ore Xp"
+description = ["XP for mining nether quartz ore."]
+
+[config.fields.skills.nether.netherGoldOreXp]
+label = "Nether Gold Ore Xp"
+description = ["XP for mining nether gold ore."]
+
+[config.fields.skills.nether.ancientDebrisXp]
+label = "Ancient Debris Xp"
+description = ["XP for mining ancient debris."]
+
 [config.fields.skills.herbalism.harvestPerAgeXP]
 description = ["XP gain tuning for the herbalism skill."]
 label = "Harvest Per Age XP"
@@ -6581,7 +6597,7 @@ description = ["Controls Challenge shear50reward for the herbalism skill."]
 label = "Challenge Shear50Reward"
 
 [config.fields.skills.herbalism.harvestXpCooldown]
-description = ["Cooldown between the herbalism skill activations."]
+description = ["Milliseconds between Herbalism XP awards for eating.", "Effect: Higher values reduce how often eating pays; harvesting crops has no cooldown."]
 label = "Harvest Xp Cooldown"
 
 [config.fields.skills.herbalism.shearXP]
@@ -6609,7 +6625,7 @@ description = ["Scaling applied to the pickaxe skill."]
 label = "Deepslate Multiplier"
 
 [config.fields.skills.pickaxe.cooldownDelay]
-description = ["Cooldown between the pickaxe skill activations."]
+description = ["Milliseconds between Pickaxes combat XP awards.", "Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often."]
 label = "Cooldown Delay"
 
 [config.fields.skills.pickaxe.getXpForAttackingWithTools]
@@ -6692,10 +6708,6 @@ label = "Player Preferences"
 description = ["Controls Challenge place1k reward for the architect skill."]
 label = "Challenge Place1k Reward"
 
-[config.fields.skills.architect.cooldownDelay]
-description = ["Cooldown between the architect skill activations."]
-label = "Cooldown Delay"
-
 [config.fields.skills.architect.skillColor]
 description = ["Controls Skill color for the architect skill."]
 label = "Skill Color"
@@ -6721,7 +6733,7 @@ description = ["XP gain tuning for the axes skill."]
 label = "Axe Damage XPMultiplier"
 
 [config.fields.skills.axes.cooldownDelay]
-description = ["Cooldown between the axes skill activations."]
+description = ["Milliseconds between Axes combat XP awards.", "Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often."]
 label = "Cooldown Delay"
 
 [config.fields.skills.axes.skillColor]
@@ -6755,6 +6767,10 @@ label = "Enabled"
 [config.fields.skills.axes.challengeChopReward]
 description = ["Controls Challenge chop reward for the axes skill."]
 label = "Challenge Chop Reward"
+
+[config.fields.skills.axes.axeHitXp]
+label = "Axe Hit Xp"
+description = ["Flat XP paid for each credited axe hit, before the damage XP."]
 
 [config.fields.skills.swords.playerPreferences]
 description = ["Controls Player preferences for the swords skill."]
@@ -6795,6 +6811,10 @@ label = "Enabled"
 [config.fields.skills.swords.damageXPMultiplier]
 description = ["XP gain tuning for the swords skill."]
 label = "Damage XPMultiplier"
+
+[config.fields.skills.swords.killXp]
+label = "Kill Xp"
+description = ["XP for killing a mob with a sword."]
 
 [config.fields.skills.chronos.speedPotionBaseXP]
 description = ["Base Chronos XP granted for applying a Speed potion to the user or another player.", "Effect: The potion-strength, repetition, and clock multipliers are applied to this amount."]
@@ -6864,10 +6884,6 @@ label = "Survival Streak Hour Cap"
 description = ["Scaling applied to the chronos skill."]
 label = "Afk Penalty Multiplier"
 
-[config.fields.skills.chronos.sleepCooldown]
-description = ["Cooldown between the chronos skill activations."]
-label = "Sleep Cooldown"
-
 [config.fields.skills.chronos.afkVarianceThreshold]
 description = ["Minimum threshold required for the chronos skill."]
 label = "Afk Variance Threshold"
@@ -6920,10 +6936,6 @@ label = "Speed Potion Reset Window"
 description = ["Controls Challenge chronos reward for the chronos skill."]
 label = "Challenge Chronos Reward"
 
-[config.fields.skills.chronos.sleepXP]
-description = ["Chronos XP granted when the player successfully enters a bed.", "Effect: The clock multiplier is applied to this burst; failed bed entries never grant XP."]
-label = "Sleep XP"
-
 [config.fields.skills.chronos.passiveActiveXP]
 description = ["XP gain tuning for the chronos skill."]
 label = "Passive Active XP"
@@ -6931,6 +6943,18 @@ label = "Passive Active XP"
 [config.fields.skills.chronos.speedPotionRewardCooldown]
 description = ["Minimum milliseconds between Speed potion rewards from the same player.", "Effect: Prevents duplicate or rapid-fire potion events from granting repeated XP."]
 label = "Speed Potion Reward Cooldown"
+
+[config.fields.skills.chronos.sleepThroughNightXp]
+label = "Sleep Through Night Xp"
+description = ["Chronos XP for sleeping until the night is skipped.", "Effect: The clock multiplier is applied; entering or leaving a bed alone pays nothing."]
+
+[config.fields.skills.chronos.sleepStreakBonusXp]
+label = "Sleep Streak Bonus Xp"
+description = ["Extra XP per consecutive night slept through, from the second night on."]
+
+[config.fields.skills.chronos.sleepStreakBonusCap]
+label = "Sleep Streak Bonus Cap"
+description = ["Maximum streak bonus XP for one night."]
 
 [config.fields.skills.rift.challengeRiftReward]
 description = ["Controls Challenge rift reward for the rift skill."]
@@ -6979,6 +7003,30 @@ label = "Damage Endermite XPMultiplier"
 [config.fields.skills.rift.enabled]
 description = ["Enables or disables this feature.", "Effect: Set to false to disable behavior without uninstalling files."]
 label = "Enabled"
+
+[config.fields.skills.rift.portalTripXp]
+label = "Portal Trip Xp"
+description = ["XP for travelling through a nether portal, end portal, or end gateway."]
+
+[config.fields.skills.rift.portalTripXpCooldown]
+label = "Portal Trip Xp Cooldown"
+description = ["Milliseconds between paid portal trips.", "Effect: Higher values reduce how often portal hopping pays."]
+
+[config.fields.skills.rift.chorusTeleportXp]
+label = "Chorus Teleport Xp"
+description = ["XP for a chorus fruit teleport."]
+
+[config.fields.skills.rift.chorusTeleportXpCooldown]
+label = "Chorus Teleport Xp Cooldown"
+description = ["Milliseconds between paid chorus fruit teleports.", "Effect: Higher values reduce how often chorus fruit pays."]
+
+[config.fields.skills.rift.shulkerKillMaxHealthXpMultiplier]
+label = "Shulker Kill Max Health Xp Multiplier"
+description = ["XP per point of maximum health for killing a shulker."]
+
+[config.fields.skills.rift.endermiteKillMaxHealthXpMultiplier]
+label = "Endermite Kill Max Health Xp Multiplier"
+description = ["XP per point of maximum health for killing an endermite."]
 
 [config.fields.skills.brewing.splashMultiplier]
 description = ["Scaling applied to the brewing skill."]
@@ -7060,6 +7108,10 @@ label = "Hit Damage XPMultiplier"
 description = ["Distance/area limit used by the ranged skill."]
 label = "Challenge Ranged Dmg Reward"
 
+[config.fields.skills.ranged.killXp]
+label = "Kill Xp"
+description = ["XP for a kill made with a bow or crossbow in hand."]
+
 [config.fields.skills.blocking.playerPreferences]
 description = ["Controls Player preferences for the blocking skill."]
 label = "Player Preferences"
@@ -7076,14 +7128,6 @@ label = "Cooldown Delay"
 description = ["Controls Skill color for the blocking skill."]
 label = "Skill Color"
 
-[config.fields.skills.blocking.challengeBlock5kReward]
-description = ["Controls Challenge block5k reward for the blocking skill."]
-label = "Challenge Block5k Reward"
-
-[config.fields.skills.blocking.xpOnBlockedAttack]
-description = ["XP gain tuning for the blocking skill."]
-label = "Xp On Blocked Attack"
-
 [config.fields.skills.blocking.passiveXpForUsingShield]
 description = ["XP gain tuning for the blocking skill."]
 label = "Passive Xp For Using Shield"
@@ -7091,6 +7135,14 @@ label = "Passive Xp For Using Shield"
 [config.fields.skills.blocking.enabled]
 description = ["Enables or disables this feature.", "Effect: Set to false to disable behavior without uninstalling files."]
 label = "Enabled"
+
+[config.fields.skills.blocking.blockedDamageXpMultiplier]
+label = "Blocked Damage Xp Multiplier"
+description = ["XP per point of damage your shield blocks."]
+
+[config.fields.skills.blocking.blockedAttackMinXp]
+label = "Blocked Attack Min Xp"
+description = ["Least XP a credited blocked hit pays."]
 
 [config.fields.skills.crafting.furnaceXPRadius]
 description = ["XP gain tuning for the crafting skill."]
@@ -7156,6 +7208,10 @@ label = "Discover Entity Type XP"
 description = ["XP gain tuning for the discovery skill."]
 label = "Discover Enchant Level XPMultiplier"
 
+[config.fields.skills.discovery.forceDiscoveryParticles]
+description = ["Sends new-discovery particles forced, so they show on reduced particle settings and are never thinned under load.", "Effect: True forces them and false treats them as ambient effects."]
+label = "Force Discovery Particles"
+
 [config.fields.skills.discovery.showParticles]
 description = ["Controls Show particles for the discovery skill."]
 label = "Show Particles"
@@ -7220,9 +7276,25 @@ label = "Skill Color"
 description = ["XP gain tuning for the discovery skill."]
 label = "Discover Potion XP"
 
-[config.fields.skills.discovery.forceDiscoveryParticles]
-label = "Force Discovery Particles"
-description = ["Sends new-discovery particles forced, so they show on reduced particle settings and are never thinned under load.", "Effect: True forces them and false treats them as ambient effects."]
+[config.fields.skills.discovery.advancementTaskXP]
+label = "Advancement Task XP"
+description = ["XP for completing a non-Adapt task advancement."]
+
+[config.fields.skills.discovery.discoverChunkXP]
+label = "Discover Chunk XP"
+description = ["XP the first time you enter each chunk."]
+
+[config.fields.skills.discovery.discoverLootContainerXP]
+label = "Discover Loot Container XP"
+description = ["XP for opening a naturally generated loot container before anyone else."]
+
+[config.fields.skills.discovery.advancementGoalXP]
+label = "Advancement Goal XP"
+description = ["XP for completing a non-Adapt goal advancement."]
+
+[config.fields.skills.discovery.advancementChallengeXP]
+label = "Advancement Challenge XP"
+description = ["XP for completing a non-Adapt challenge advancement."]
 
 [config.fields.skills.seaborne.waterBreathingSwimXpBonusMultiplier]
 description = ["Additional passive swimming XP multiplier for players actively moving in water with Water Breathing or Conduit Power.", "Effect: 1.0 adds one base swim XP award for 2x total; 0 disables the bonus while retaining the base moving-swimmer award."]
@@ -7280,13 +7352,29 @@ label = "Fish Xp Cooldown"
 description = ["Controls Skill color for the seaborne skill."]
 label = "Skill Color"
 
-[config.fields.skills.seaborne.swimXP]
-description = ["XP gain tuning for the seaborne skill."]
-label = "Swim XP"
-
 [config.fields.skills.seaborne.challengeSwim1nmReward]
 description = ["Controls Challenge swim1nm reward for the seaborne skill."]
 label = "Challenge Swim1nm Reward"
+
+[config.fields.skills.seaborne.treasureCaughtXp]
+label = "Treasure Caught Xp"
+description = ["XP for reeling in treasure: enchanted books, name tags, nautilus shells, saddles, or an enchanted bow or rod."]
+
+[config.fields.skills.seaborne.swimXpPerSecond]
+label = "Swim Xp Per Second"
+description = ["XP per second spent swimming while moving horizontally."]
+
+[config.fields.skills.seaborne.swimXpPerBlock]
+label = "Swim Xp Per Block"
+description = ["XP per block of horizontal distance swum."]
+
+[config.fields.skills.seaborne.seaCreatureKillXp]
+label = "Sea Creature Kill Xp"
+description = ["XP for killing a sea creature such as fish, squid, dolphins, guardians, drowned, turtles, or axolotls."]
+
+[config.fields.skills.seaborne.seaCreatureMaxHealthXpMultiplier]
+label = "Sea Creature Max Health Xp Multiplier"
+description = ["Extra sea creature kill XP per point of the victim's maximum health."]
 
 [config.fields.skills.excavation.maxBlastResistanceBonus]
 description = ["Maximum cap applied to the excavation skill."]
@@ -7301,7 +7389,7 @@ description = ["XP gain tuning for the excavation skill."]
 label = "Axe Damage XPMultiplier"
 
 [config.fields.skills.excavation.cooldownDelay]
-description = ["Cooldown between the excavation skill activations."]
+description = ["Milliseconds between Excavation combat XP awards.", "Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often."]
 label = "Cooldown Delay"
 
 [config.fields.skills.excavation.skillColor]
@@ -7392,6 +7480,14 @@ label = "Challenge Sneak20k Reward"
 description = ["Cooldown in milliseconds between XP awards for sneaking combat damage.", "Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often."]
 label = "Sneak Combat Xp Cooldown"
 
+[config.fields.skills.stealth.unawareOpenerXp]
+label = "Unaware Opener Xp"
+description = ["XP for the first hit on a mob that is not targeting you."]
+
+[config.fields.skills.stealth.unseenOpenerBonusXp]
+label = "Unseen Opener Bonus Xp"
+description = ["Extra XP for that first hit when you are sneaking and the mob is not looking at you."]
+
 [config.fields.skills.unarmed.playerPreferences]
 description = ["Controls Player preferences for the unarmed skill."]
 label = "Player Preferences"
@@ -7429,8 +7525,12 @@ description = ["Enables or disables this feature.", "Effect: Set to false to dis
 label = "Enabled"
 
 [config.fields.skills.unarmed.damageXPMultiplier]
-description = ["XP gain tuning for the unarmed skill."]
+description = ["XP per health point of unarmed damage dealt; 5 pays 10 XP per heart."]
 label = "Damage XPMultiplier"
+
+[config.fields.skills.unarmed.killXp]
+label = "Kill Xp"
+description = ["XP for killing a mob while the main hand holds no weapon or tool."]
 
 [config.fields.skills.agility.sprintXpPassive]
 description = ["XP gain tuning for the agility skill."]
@@ -7853,7 +7953,7 @@ description = ["Controls Player preferences for the hunter skill."]
 label = "Player Preferences"
 
 [config.fields.skills.hunter.spawnerMobReductionXpMultiplier]
-description = ["XP gain tuning for the hunter skill."]
+description = ["Kill reward multiplier for mobs from spawners, spawn eggs, buckets, breeding, portals, and golem or snowman builds.", "Effect: Lower values make mob farms pay less."]
 label = "Spawner Mob Reduction Xp Multiplier"
 
 [config.fields.skills.hunter.cooldownDelay]
@@ -7875,6 +7975,10 @@ label = "Creeper Kill Multiplier"
 [config.fields.skills.hunter.enabled]
 description = ["Enables or disables this feature.", "Effect: Set to false to disable behavior without uninstalling files."]
 label = "Enabled"
+
+[config.fields.skills.hunter.killFlatXp]
+label = "Kill Flat Xp"
+description = ["Flat XP added to every kill reward."]
 
 [config.fields.skills.kinetics.spearJabXp]
 description = ["XP gain tuning for the kinetics skill."]
@@ -8060,9 +8164,33 @@ label = "Charge Min Speed"
 description = ["XP gain tuning for the kinetics skill."]
 label = "Anvil Base Xp"
 
-[config.fields.skills.taming.tameXpBase]
-description = ["XP gain tuning for the taming skill."]
-label = "Tame Xp Base"
+[config.fields.skills.kinetics.fallXpPerBlock]
+label = "Fall Xp Per Block"
+description = ["XP per block fallen past fallXpFreeBlocks when the fall hurts you."]
+
+[config.fields.skills.kinetics.fallXpFreeBlocks]
+label = "Fall Xp Free Blocks"
+description = ["Blocks of a damaging fall that pay nothing.", "Effect: Higher values require longer falls before they pay."]
+
+[config.fields.skills.kinetics.fallXpCap]
+label = "Fall Xp Cap"
+description = ["Most XP one damaging fall can pay."]
+
+[config.fields.skills.kinetics.fallXpCooldownMs]
+label = "Fall Xp Cooldown Ms"
+description = ["Milliseconds between paid damaging falls.", "Effect: Higher values reduce how often falls pay."]
+
+[config.fields.skills.kinetics.fallXpRepeatRadius]
+label = "Fall Xp Repeat Radius"
+description = ["A damaging fall that lands within this many blocks of one of your last three paid landings pays nothing.", "Effect: Higher values stop repeated drops from the same spot over a wider area."]
+
+[config.fields.skills.kinetics.anvilUseXpPerLevel]
+label = "Anvil Use Xp Per Level"
+description = ["XP per experience level spent taking an anvil result."]
+
+[config.fields.skills.kinetics.grindstoneXpPerEnchantLevel]
+label = "Grindstone Xp Per Enchant Level"
+description = ["XP per enchantment level a grindstone removes, curses excluded."]
 
 [config.fields.skills.taming.challengePetKillsReward]
 description = ["Controls Challenge pet kills reward for the taming skill."]
@@ -8107,6 +8235,18 @@ label = "Pet Kill XP"
 [config.fields.skills.taming.enabled]
 description = ["Enables or disables this feature.", "Effect: Set to false to disable behavior without uninstalling files."]
 label = "Enabled"
+
+[config.fields.skills.taming.breedXp]
+label = "Breed Xp"
+description = ["XP for breeding two animals."]
+
+[config.fields.skills.taming.breedPairCooldownMs]
+label = "Breed Pair Cooldown Ms"
+description = ["Milliseconds before the same two parents can pay breeding XP again.", "Effect: Higher values reduce repeated breeding XP from one pair."]
+
+[config.fields.skills.taming.petKillMaxHealthXpMultiplier]
+label = "Pet Kill Max Health Xp Multiplier"
+description = ["Extra pet kill XP per point of the victim's maximum health."]
 
 [config.fields.core.autoUpdateCheck]
 description = ["Checks stable GitHub releases and includes Adapt in shared Volmit update notices.", "Effect: Enabled by default and hot-reloadable. Disable to stop Adapt checks and notifications; /volmit plugins updates reports the disabled state."]
@@ -29473,8 +29613,8 @@ description = ["Adaptations the player must already have learned, each written a
 label = "Requires"
 
 [config.fields.adaptations.chronos-borrowed-time.xpPerDeferredDamage]
-label = "Xp Per Deferred Damage"
 description = ["Chronos XP granted per point of damage deferred.", "Effect: Higher values make every deferred hit teach more Chronos; 0 disables the reward."]
+label = "Xp Per Deferred Damage"
 
 [config.fields.adaptations.rift-pearl-rebound.maxLevel]
 description = ["Maximum level a player can reach for this adaptation.", "Effect: Higher values allow more levels; lower values cap progression sooner."]
@@ -33260,6 +33400,7 @@ skill_line_to_set = "Skill line to set"
 adaptation_level_to_apply = "Adaptation level to apply"
 adaptation_to_modify_as_skill_adaptation = "Adaptation to modify, as skill:adaptation"
 amount_of_seconds = "Positive duration in seconds"
+show_client_ui_status = "Show whether a player uses the Adapt client UI"
 clear_all_player_data_xp_knowledge_adaptations_stats_discoveries_advancements_wisdom = "Clear all player data (XP, knowledge, adaptations, stats, discoveries, advancements, wisdom)"
 reset_metrics_after_printing = "Reset metrics after printing"
 wake_a_player_s_loaded_golems = "Wake a player's loaded golems"
@@ -33277,7 +33418,6 @@ debug_upload = "Upload the report to mclo.gs"
 play_a_sound_at_your_location_for_testing = "Play a sound at your location for testing!"
 gui_to_open_main_skill_name_or_adaptation_name = "GUI to open: main, skill:<name>, or adaptation:<name>"
 level_between_0_and_100 = "Level between 0 and 100"
-show_client_ui_status = "Show whether a player uses the Adapt client UI"
 
 [command.runtime]
 golem_release_active_unloaded = "Golem {id} of {player} is active in an unloaded chunk. Load its chunk to release it, or release it once it shows as missing."
@@ -33337,6 +33477,7 @@ cleared_discoveries = "Cleared discoveries for {player}."
 skill_reset_unsupported = "Skill {skill} does not support config reset."
 perf_cache_hit_ratio = "Active-level cache hit ratio: {ratio} ({hits} hit, {misses} miss)"
 set_skill_level = "Set {player} {skill} level to {level}."
+client_ui_negotiated = "{player} uses the Adapt client UI: protocol {version}, capabilities {capabilities}."
 adaptation_disabled = "Adaptation {adaptation} is disabled on this server."
 perf_timing_budget = "Ability check timing budget: {percent} ({millisPerSecond}, {microsPerCheck})"
 golem_given_all = "Gave {player} one of every Golemancy item, runes at every tier: {count} items."
@@ -33366,6 +33507,7 @@ adaptation_already_level = "No change: {adaptation} is already at level {level}.
 vault_transaction_failed = "The Vault economy transaction failed; no progression was changed."
 adaptation_reset = "Reset config for adaptation {adaptation} to defaults."
 debug_enabled = "Debug mode enabled for {player}: all skills and adaptations are visible and learning is free and uncapped. The toggle resets on logout; adaptations learned while it is on persist."
+client_ui_absent = "{player} uses the chest and action bar UI (no Adapt client negotiated)."
 cleared_stats = "Cleared stats for {player}."
 unknown_adaptation_in_skill = "Unknown adaptation '{adaptation}' in skill {skill}."
 golem_list_header = "{player} has {count} golems:"
@@ -33379,8 +33521,6 @@ golem_return_outcome = "Use outcome=list, delivered, or missing. Select missing 
 cleared_xp = "Cleared XP for {player}."
 configs_archived = "Archived {count} config files to config-archive/{timestamp}/."
 golem_released = "Released golem {id} from {player}'s roster."
-client_ui_absent = "{player} uses the chest and action bar UI (no Adapt client negotiated)."
-client_ui_negotiated = "{player} uses the Adapt client UI: protocol {version}, capabilities {capabilities}."
 
 [agilitywindup.preferences]
 preference_speed = "Maximum speed"
