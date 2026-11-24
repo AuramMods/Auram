@@ -28,6 +28,13 @@ float dhTransitionDither(int frameCounter) {
     return fract(52.9829189 * fract(dot(pixel, vec2(0.06711056, 0.00583715))));
 }
 
+bool dhKeepOpaqueLod(float distance, float vanillaFar, int frameCounter) {
+    float overlapEnd = dhOverlapEnd(vanillaFar);
+    float fadeStart = max(overlapEnd - float(DH_OVERDRAW_FADE_LENGTH), 0.0);
+    // The LOD is drawn first. Hide nearby cached geometry before it can fill vanilla air.
+    return dhTransitionDither(frameCounter) < dhFadeCoverage(fadeStart, overlapEnd, distance);
+}
+
 bool dhKeepTranslucentLod(float distance, float vanillaFar, int frameCounter) {
     float overlapEnd = dhOverlapEnd(vanillaFar);
     float fadeStart = max(overlapEnd - float(DH_OVERDRAW_FADE_LENGTH), 0.0);

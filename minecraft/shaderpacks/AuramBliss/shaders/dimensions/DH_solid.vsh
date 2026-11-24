@@ -2,6 +2,9 @@
 #include "/lib/res_params.glsl"
 
 varying vec4 localPos;
+#ifdef DH_OVERDRAW_PREVENTION
+    varying vec2 dhChunkOffset;
+#endif
 varying vec4 gcolor;
 varying vec2 lightmapCoords;
 varying vec4 normals_and_materials;
@@ -49,10 +52,13 @@ void main() {
     vec3 cameraOffset = fract(cameraPosition);
     vPos.xyz = floor(vPos.xyz + cameraOffset + 0.5) - cameraOffset;
 
-    vec4 viewPos = gl_ModelViewMatrix * vPos;
-	localPos = gbufferModelViewInverse * viewPos;
+    vec4 viewPos = gl_ModelViewMatrix * gl_Vertex;
+	localPos = gbufferModelViewInverse * (gl_ModelViewMatrix * vPos);
 
-    gl_Position = gl_ProjectionMatrix * gl_ModelViewMatrix * gl_Vertex;	
+    #ifdef DH_OVERDRAW_PREVENTION
+        dhChunkOffset = (gbufferModelViewInverse * viewPos).xz;
+    #endif
+    gl_Position = gl_ProjectionMatrix * viewPos;
 
 	#ifdef TAA_UPSCALING
 		gl_Position.xy = gl_Position.xy * RENDER_SCALE + RENDER_SCALE * gl_Position.w - gl_Position.w;
