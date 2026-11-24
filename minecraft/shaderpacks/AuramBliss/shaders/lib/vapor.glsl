@@ -105,7 +105,7 @@ VaporScattering traceVapor(vec3 origin, vec3 direction, vec2 interval, float sta
     #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
         // Let nearby colored lights dominate the smoke without boosting the neutral part of the light.
         float neutral = min(min(scattering.r, scattering.g), scattering.b);
-        vec3 extraColor = 2.0 * (scattering - neutral);
+        vec3 extraColor = 2.3 * (scattering - neutral);
         float colorStrength = max(max(extraColor.r, extraColor.g), extraColor.b);
         float ambientStrength = max(max(ambientScattering.r, ambientScattering.g), ambientScattering.b);
         ambientScattering *= 1.0 - 0.8 * colorStrength / max(ambientStrength + colorStrength, 1e-6);
