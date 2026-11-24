@@ -83,7 +83,13 @@ VaporScattering traceVapor(vec3 origin, vec3 direction, vec2 interval, float sta
     #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
         float blockLightScale = LPV_VL_FOG_ILLUMINATION_BRIGHTNESS / 100.0;
         #ifdef OVERWORLD_SHADER
-            blockLightScale *= mix(1.0, 0.8649, smoothstep(0.0, 0.05, -sunElevation));
+            float night = smoothstep(0.0, 0.05, -sunElevation);
+            blockLightScale *= mix(1.0, 0.8649, night);
+            // Skylight also identifies dark interiors during the day.
+            float skyExposure = smoothstep(64.0, 192.0, float(eyeBrightnessSmooth.y));
+            float vaporDarkness = max(night, 1.0 - skyExposure);
+        #else
+            const float vaporDarkness = 1.0;
         #endif
     #endif
     for (int i = 0; i < samples; i++) {
@@ -109,7 +115,7 @@ VaporScattering traceVapor(vec3 origin, vec3 direction, vec2 interval, float sta
         float colorStrength = max(max(extraColor.r, extraColor.g), extraColor.b);
         float ambientStrength = max(max(ambientScattering.r, ambientScattering.g), ambientScattering.b);
         ambientScattering *= 1.0 - 0.8 * colorStrength / max(ambientStrength + colorStrength, 1e-6);
-        scattering += extraColor;
+        scattering = (scattering + extraColor) * mix(1.0, 0.9, vaporDarkness);
     #endif
     return VaporScattering(ambientScattering, scattering, transmission);
 }

@@ -90,12 +90,12 @@
 		#Player distance in blocks to render active echo-zone overlays when holding an activated Echo Wand.
 		#Range: 0.0 ~ 10000.0
 		ECHO_OVERLAY_HELD_DISTANCE = 32.0
-		#Cuboid overlay fill renderer mode. Supported: QUADS, SHELL.
+		#Legacy compatibility setting; ignored. Cuboid overlays always render outlines only.
 		CUBOID_OVERLAY_RENDER_MODE = "EMISSIVE_SHELL"
-		#Alpha multiplier for cuboid fill in SHELL mode. Lower values are more transparent.
+		#Legacy compatibility setting; ignored because cuboid face rendering is disabled.
 		#Range: 0.0 ~ 4.0
 		CUBOID_EMISSIVE_SHELL_ALPHA_SCALE = 0.9
-		#World-space tile size in blocks for cuboid shell texture repetition in SHELL mode.
+		#Legacy compatibility setting; ignored because cuboid noise textures are disabled.
 		#Range: 0.125 ~ 16.0
 		CUBOID_EMISSIVE_SHELL_TILE_SIZE = 4.0
 		#Minimum opacity factor used by pulsing cuboid overlays (higher = less extreme dimming).

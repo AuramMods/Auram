@@ -43,7 +43,9 @@ void PopulateShadowVoxel(const in vec3 playerPos) {
 			((renderStage == MC_RENDER_STAGE_ENTITIES && (currentRenderedItemId > 0 || entityId > 0)) || renderStage == MC_RENDER_STAGE_BLOCK_ENTITIES)
 		) {
 			if (renderStage == MC_RENDER_STAGE_BLOCK_ENTITIES) {
-				if (blockEntityId > 0 && blockEntityId < 500)
+				// Iris/Oculus assigns ID 1 to rendered block items.
+				// Their miniatures must not occupy an entire lighting voxel.
+				if (blockEntityId > 1 && blockEntityId < 500)
 					voxelId = uint(blockEntityId);
 			}
 			else if (currentRenderedItemId > 0 && currentRenderedItemId < 1200) {
