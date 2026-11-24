@@ -1,3 +1,9 @@
+bool replacesFluidLightFallback(uint materialId, vec3 fluidLight) {
+    // Oculus encodes otherwise unmapped luminous blocks as white light blocks.
+    return materialId >= uint(BLOCK_LIGHT_1) && materialId <= uint(BLOCK_LIGHT_15)
+            && any(greaterThan(fluidLight, vec3(0.0)));
+}
+
 uniform sampler3D auramTinkersFluidLight;
 uniform bool auramTinkersFluidLightActive;
 uniform vec3 auramTinkersFluidLightOrigin;

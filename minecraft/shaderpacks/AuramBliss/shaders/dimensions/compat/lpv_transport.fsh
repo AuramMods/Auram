@@ -18,6 +18,7 @@ uniform int voxel_atlas_columns;
 #endif
 
 #ifdef AURAM_TINKERS_FLUID_BACKEND
+    #include "/lib/blocks.glsl"
     #include "/lib/tinkers_fluid_light.glsl"
 #endif
 
@@ -50,6 +51,15 @@ void main() {
     vec3 tint = id == 0u ? vec3(1.0) : srgbToLinear(blissUnpackMaterial(material.y).rgb);
 
     vec4 incoming = vec4(0.0);
+    vec4 emission = blissUnpackMaterial(material.x);
+    vec3 fluidLight = vec3(0.0);
+    #ifdef AURAM_TINKERS_FLUID_BACKEND
+        fluidLight = tinkersFluidEmission(voxel, int(LpvSize), cameraPosition);
+        if (replacesFluidLightFallback(id, fluidLight)) {
+            tint = vec3(0.0);
+            emission = vec4(0.0);
+        }
+    #endif
     if (any(greaterThan(tint, vec3(0.0)))) {
         for (int direction = 0; direction < 6; direction++) {
             if (((mask >> direction) & 1u) == 0u) continue;
@@ -68,8 +78,6 @@ void main() {
         incoming *= (1.0 / 6.0) * 0.96;
         incoming.rgb *= tint;
     }
-
-    vec4 emission = blissUnpackMaterial(material.x);
     if (id != 0u && emission.a > 0.0) {
         vec3 hsv = RgbToHsv(srgbToLinear(emission.rgb));
         hsv.z = exp2(emission.a * 255.0) - 1.0;
@@ -80,10 +88,7 @@ void main() {
         incoming.rgb += rfVoxelEmission(voxel, int(LpvSize), cameraPosition);
     #endif
 
-    #ifdef AURAM_TINKERS_FLUID_BACKEND
-        incoming.rgb += tinkersFluidEmission(voxel, int(LpvSize), cameraPosition);
-    #endif
-
+    incoming.rgb += fluidLight;
     if (incoming == vec4(0.0)) {
         light = incoming;
     } else {

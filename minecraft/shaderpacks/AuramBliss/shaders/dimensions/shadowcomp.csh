@@ -146,6 +146,14 @@ void main() {
             mixMask = (blockData.g >> 24) & 0xFFFF;
         }
 
+        #ifdef AURAM_TINKERS_FLUID_BACKEND
+            lightValue.rgb = tinkersFluidEmission(imgCoord, int(LpvSize), cameraPosition);
+            if (replacesFluidLightFallback(blockId, lightValue.rgb)) {
+                tintColor = vec3(0.0);
+                lightRange = 0.0;
+            }
+        #endif
+
         // Mix neighbor voxel light values
         if (any(greaterThan(tintColor, vec3(0.0)))) {
             vec4 lightMixed = mixNeighbours(ivec3(gl_LocalInvocationID), mixMask);
@@ -162,10 +170,6 @@ void main() {
 
         #if defined RF_FLOW_STREAKS && defined AURAM_RF_BACKEND
             lightValue.rgb += rfVoxelEmission(imgCoord, int(LpvSize), cameraPosition);
-        #endif
-
-        #ifdef AURAM_TINKERS_FLUID_BACKEND
-            lightValue.rgb += tinkersFluidEmission(imgCoord, int(LpvSize), cameraPosition);
         #endif
 
         // Convert back to linear RGB space
