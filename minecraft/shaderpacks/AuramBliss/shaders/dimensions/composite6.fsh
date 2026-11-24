@@ -8,6 +8,20 @@ uniform vec2 texelSize;
 uniform float viewWidth;
 uniform float viewHeight;
 
+#ifdef RF_FLOW_STREAKS
+    #ifdef AURAM_RF_BACKEND
+        uniform mat4 gbufferProjectionInverse;
+        uniform mat4 gbufferModelViewInverse;
+        uniform float frameTimeCounter;
+        #ifdef DISTANT_HORIZONS
+            uniform sampler2D dhDepthTex;
+            uniform float dhNearPlane;
+            uniform float dhFarPlane;
+        #endif
+        #include "/lib/rf_streaks.glsl"
+    #endif
+#endif
+
 vec2 decodeVec2(float a){
     const vec2 constant1 = 65535. / vec2( 256., 65536.);
     const float constant2 = 256. / 255.;
@@ -51,6 +65,12 @@ vec2 quarterResTC = gl_FragCoord.xy*2.0*resScale*texelSize;
 
 		//0.125
 		gl_FragData[0] += texture2D(colortex5,quarterResTC)*0.125;
+
+        #if defined RF_FLOW_STREAKS && defined AURAM_RF_BACKEND
+            if (all(lessThanEqual(quarterResTC, vec2(1.0)))) {
+                gl_FragData[0].rgb += 8.0 * rfStreakLight(quarterResTC);
+            }
+        #endif
 
 		gl_FragData[0].rgb = clamp(gl_FragData[0].rgb,0.0,65000.);
 		if (quarterResTC.x > 1.0 - 3.5*texelSize.x || quarterResTC.y > 1.0 -3.5*texelSize.y || quarterResTC.x < 3.5*texelSize.x || quarterResTC.y < 3.5*texelSize.y) gl_FragData[0].rgb = vec3(0.0);

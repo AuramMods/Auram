@@ -2,16 +2,21 @@ package dev.auram.photon.compat.lpv;
 
 import dev.auram.photon.compat.gl.DrawState;
 import dev.auram.photon.compat.mixin.ShaderPackSourceAccess;
+import it.unimi.dsi.fastutil.objects.Object2ObjectMaps;
 import net.irisshaders.iris.Iris;
+import net.irisshaders.iris.gl.program.ProgramSamplers;
 import net.irisshaders.iris.gl.program.ProgramUniforms;
 import net.irisshaders.iris.layer.GbufferPrograms;
 import net.irisshaders.iris.pipeline.IrisRenderingPipeline;
+import net.irisshaders.iris.samplers.IrisSamplers;
 import net.irisshaders.iris.shaderpack.include.AbsolutePackPath;
 import net.irisshaders.iris.shaderpack.programs.ProgramSet;
 import net.irisshaders.iris.shaderpack.programs.ProgramSource;
 import net.irisshaders.iris.shadows.ShadowRenderer;
 import net.irisshaders.iris.uniforms.CameraUniforms;
+import net.irisshaders.iris.uniforms.CommonUniforms;
 import net.irisshaders.iris.uniforms.MatrixUniforms;
+import net.irisshaders.iris.uniforms.SystemTimeUniforms;
 import org.joml.Matrix4f;
 import org.joml.Matrix4fc;
 
@@ -21,6 +26,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import static org.lwjgl.opengl.GL41C.*;
 
@@ -63,6 +69,7 @@ public final class RasterLightVolume implements AutoCloseable {
     private int transportCameraLocation;
     private int transportViewInverseLocation;
     private ProgramUniforms transportUniforms;
+    private ProgramSamplers transportSamplers;
     private int published;
     private boolean capturing;
     private boolean capturedTerrain;
@@ -161,6 +168,14 @@ public final class RasterLightVolume implements AutoCloseable {
         ProgramUniforms.Builder builder = ProgramUniforms.builder("AuramPhoton LPV transport", transportProgram);
         CameraUniforms.addCameraUniforms(builder, pipeline.getFrameUpdateNotifier());
         MatrixUniforms.addMatrixUniforms(builder, set.getPackDirectives());
+        if (bliss && glGetUniformLocation(transportProgram, "auramRfVolume") >= 0) {
+            // Reuse AuramCore's Iris texture and uniform registration without a hard mod dependency.
+            CommonUniforms.generalCommonUniforms(builder, pipeline.getFrameUpdateNotifier(), set.getPackDirectives());
+            SystemTimeUniforms.addSystemTimeUniforms(builder);
+            var samplers = ProgramSamplers.builder(transportProgram, Set.of(0, 1, 2));
+            IrisSamplers.addCustomTextures(samplers, Object2ObjectMaps.emptyMap());
+            transportSamplers = samplers.build();
+        }
         transportUniforms = builder.buildUniforms();
 
         if (metal != null) {
@@ -413,7 +428,16 @@ public final class RasterLightVolume implements AutoCloseable {
                 TextureBinding blocks = TextureBinding.bind(1, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, occupancy.texture());
                 TextureBinding colors = TextureBinding.bind(2, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, palette.texture())) {
             draw.bind(lights[next].framebuffer(), transportProgram, side, side);
-            glDrawArraysInstanced(GL_TRIANGLES, 0, 3, side);
+            if (transportSamplers == null) {
+                glDrawArraysInstanced(GL_TRIANGLES, 0, 3, side);
+            } else {
+                try (TextureBinding rf = TextureBinding.bind(3, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0)) {
+                    transportSamplers.update();
+                    glDrawArraysInstanced(GL_TRIANGLES, 0, 3, side);
+                } finally {
+                    transportSamplers.removeListeners();
+                }
+            }
         } finally {
             glActiveTexture(activeUnit);
         }

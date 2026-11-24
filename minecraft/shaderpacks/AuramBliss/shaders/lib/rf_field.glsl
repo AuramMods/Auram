@@ -1,0 +1,76 @@
+#ifndef AURAM_RF_FIELD_GLSL
+#define AURAM_RF_FIELD_GLSL
+
+uniform usampler3D auramRfVolume;
+uniform bool auramRfActive;
+uniform vec3 auramRfOrigin;
+uniform vec3 auramRfMinimum;
+uniform vec3 auramRfMaximum;
+uniform vec3 auramRfPhaseOrigin;
+
+const float rfTau = 6.2831853;
+const float rfPulseSpacing = 2.0;
+const float rfTrailLength = 1.72;
+
+// Texels contain logarithmic rates, with 31 codes per decade. This response is
+// intentionally editable in the pack so shader reloads can tune the visible range.
+float rfBrightness(uint rate) {
+    float decades = float(rate) / 31.0;
+    return 0.14 * smoothstep(1.5, 4.0, decades) + 0.86 * smoothstep(4.0, 8.0, decades);
+}
+
+vec2 rfWanderLattice(vec2 grid, float seed) {
+    grid = mod(grid, vec2(128.0, 16.0));
+    vec3 hash = fract(grid.xyx * vec3(0.1031, 0.1030, 0.0973) + seed);
+    hash += dot(hash, hash.yzx + 33.33);
+    return 2.0 * fract((hash.xx + hash.yz) * hash.zy) - 1.0;
+}
+
+float rfTravelPhase() {
+    const float originalSpeed = 3.45;
+    const float noiseInterval = 0.25;
+    float slowTime = frameTimeCounter / 3.0;
+    float clock = slowTime / noiseInterval;
+    float progress = fract(clock);
+    float noise = rfWanderLattice(vec2(floor(clock), 5.0), 0.347).x;
+    // This displacement and its slope meet at zero across noise intervals.
+    // The derivative of the normalized bump ranges from -1 to +1.
+    float bump = progress * (1.0 - progress);
+    float jitter = 2.0 * noise * noiseInterval * 5.1961524 * bump * bump;
+    return mod(originalSpeed * (5.0 * slowTime + jitter), rfPulseSpacing);
+}
+
+float rfCenterPhase(ivec3 block) {
+    // The two sides of each shared cable face meet at the same phase modulo two.
+    return mod(dot(vec3(block) + auramRfPhaseOrigin, vec3(1.0)), rfPulseSpacing);
+}
+
+float rfEnvelope(float age) {
+    return smoothstep(0.0, 0.21, age) * (1.0 - smoothstep(0.42, 1.0, age));
+}
+
+vec3 rfBandTint(vec3 world, float age) {
+    float hue = (5.0 / 3.0) * frameTimeCounter - age * 2.4 + rfTau * dot(world, vec3(3.0, 1.0, 5.0)) / 32.0;
+    return mix(vec3(1.0), 0.5 + 0.5 * cos(hue + vec3(0.0, 2.0944, 4.1888)), 0.64);
+}
+
+// LPV positions are relative to the floored camera; the RF origin is relative
+// to the continuous camera position. Converting both to voxel indices aligns them.
+vec3 rfVoxelEmission(ivec3 voxel, int side, vec3 camera) {
+    if (!auramRfActive) return vec3(0.0);
+    vec3 offset = auramRfOrigin + fract(camera);
+    ivec3 block = voxel - ivec3(side / 2) - ivec3(round(offset));
+    if (any(lessThan(vec3(block), auramRfMinimum)) || any(greaterThanEqual(vec3(block), auramRfMaximum))) {
+        return vec3(0.0);
+    }
+    uvec3 rates = texelFetch(auramRfVolume, block, 0).rgb;
+    if (rates == uvec3(0u)) return vec3(0.0);
+    uvec3 peak = max(rates & 255u, (rates >> 8u) & 255u);
+    peak = max(peak, (rates >> 16u) & 255u);
+    peak = max(peak, rates >> 24u);
+    float age = mod(rfTravelPhase() - rfCenterPhase(block), rfPulseSpacing) / rfTrailLength;
+    vec3 world = vec3(block) + 0.5 + auramRfPhaseOrigin;
+    return rfBandTint(world, age) * (2800.0 * RF_STREAK_INTENSITY *
+            rfBrightness(max(peak.x, max(peak.y, peak.z))) * rfEnvelope(age));
+}
+#endif

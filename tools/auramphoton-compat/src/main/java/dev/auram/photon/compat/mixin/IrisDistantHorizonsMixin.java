@@ -55,7 +55,8 @@ abstract class IrisDistantHorizonsMixin {
         } else if (auramPhoton$isAuramBliss(packName)) {
             ImmutableList.Builder<StringPair> auramDefines = ImmutableList.<StringPair>builder()
                     .addAll(defines)
-                    .add(new StringPair("AURAM_BLISS_LPV_BACKEND", ""));
+                    .add(new StringPair("AURAM_BLISS_LPV_BACKEND", ""))
+                    .add(new StringPair("AURAM_BLISS_RF_LPV", ""));
             if (WarpMistState.available()) auramDefines.add(new StringPair("AURAM_BLISS_WARP_MIST", ""));
             if (AstralEclipseState.available()) auramDefines.add(new StringPair("AURAM_BLISS_ASTRAL_SKY", ""));
             if (GL.getCapabilities().glDispatchCompute == 0 || GL.getCapabilities().glClearTexImage == 0

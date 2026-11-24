@@ -29,6 +29,11 @@ layout (local_size_x = 8, local_size_y = 8, local_size_z = 8) in;
     #include "/lib/lpv_buffer.glsl"
     #include "/lib/voxel_common.glsl"
 
+    #if defined RF_FLOW_STREAKS && defined AURAM_RF_BACKEND
+        uniform float frameTimeCounter;
+        #include "/lib/rf_field.glsl"
+    #endif
+
     int sumOf(ivec3 vec) {return vec.x + vec.y + vec.z;}
 
     int getSharedIndex(ivec3 pos) {
@@ -150,6 +155,10 @@ void main() {
             hsv.z = exp2(lightRange) - 1.0;
             lightValue.rgb += HsvToRgb(hsv);
         }
+
+        #if defined RF_FLOW_STREAKS && defined AURAM_RF_BACKEND
+            lightValue.rgb += rfVoxelEmission(imgCoord, int(LpvSize), cameraPosition);
+        #endif
 
         // Convert back to linear RGB space
         vec4 hsv_sky = vec4(RgbToHsv(lightValue.rgb), lightValue.a);

@@ -12,6 +12,11 @@ uniform int voxel_atlas_columns;
 
 #include "/lib/lpv_common.glsl"
 
+#if defined RF_FLOW_STREAKS && defined AURAM_RF_BACKEND && defined AURAM_BLISS_RF_LPV
+    uniform float frameTimeCounter;
+    #include "/lib/rf_field.glsl"
+#endif
+
 flat in int auram_photon_layer;
 layout(location = 0) out vec4 light;
 
@@ -66,6 +71,10 @@ void main() {
         hsv.z = exp2(emission.a * 255.0) - 1.0;
         incoming.rgb += HsvToRgb(hsv);
     }
+
+    #if defined RF_FLOW_STREAKS && defined AURAM_RF_BACKEND && defined AURAM_BLISS_RF_LPV
+        incoming.rgb += rfVoxelEmission(voxel, int(LpvSize), cameraPosition);
+    #endif
 
     if (incoming == vec4(0.0)) {
         light = incoming;
