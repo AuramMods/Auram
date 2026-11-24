@@ -4346,9 +4346,9 @@ description = ["Flat master xp granted for each skill level a player gains.", "E
 label = "Player Xp Per Skill Level Up Level Multiplier"
 description = ["Master xp added per skill level already reached when a skill levels up.", "Effect: Clamped to a finite non-negative value. Increasing it back-loads master progression toward high skill levels."]
 
-[config.fields.core.powerPerLevel]
-label = "Power Per Level"
-description = ["Power granted per master level.", "Effect: Clamped to a finite non-negative value. Lowering it shrinks how many adaptation levels a player can hold at once."]
+[config.fields.core.maxPowerScale]
+label = "Max Power Scale"
+description = ["Maximum power is floor(maxPowerScale * sqrt(master level)), plus any region bonus. Each held adaptation uses 1 power at any level.", "Effect: Clamped to a finite non-negative value. Lowering it shrinks how many adaptations a player can hold at once."]
 
 [config.fields.core.hardcoreResetOnPlayerDeath]
 label = "Hardcore Reset On Player Death"
@@ -32627,7 +32627,7 @@ click_learn = "Click to Learn"
 no_knowledge = "(You don't have any Knowledge)"
 you_only_have = "You only have"
 how_to_level_up = "Level up skills to increase your max power."
-not_enough_power = "Not enough power! Each Ability Level costs 1 power."
+not_enough_power = "Not enough power! Each adaptation you hold uses 1 power."
 power = "power"
 power_drain = "Power Drain"
 learned = "Learned "
