@@ -17,7 +17,7 @@ uniform int voxel_atlas_columns;
     #include "/lib/rf_field.glsl"
 #endif
 
-#ifdef AURAM_TINKERS_FLUID_BACKEND
+#if defined AURAM_LIGHT_BACKEND || defined AURAM_TINKERS_FLUID_BACKEND
     #include "/lib/blocks.glsl"
     #include "/lib/tinkers_fluid_light.glsl"
 #endif
@@ -53,7 +53,7 @@ void main() {
     vec4 incoming = vec4(0.0);
     vec4 emission = blissUnpackMaterial(material.x);
     vec3 fluidLight = vec3(0.0);
-    #ifdef AURAM_TINKERS_FLUID_BACKEND
+    #if defined AURAM_LIGHT_BACKEND || defined AURAM_TINKERS_FLUID_BACKEND
         fluidLight = tinkersFluidEmission(voxel, int(LpvSize), cameraPosition);
         if (replacesFluidLightFallback(id, fluidLight)) {
             tint = vec3(0.0);

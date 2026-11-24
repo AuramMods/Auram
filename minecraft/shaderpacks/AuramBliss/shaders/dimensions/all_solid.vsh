@@ -30,6 +30,10 @@ Read the terms of modification and sharing before changing something below pleas
 
 
 varying vec4 color;
+
+#if defined BLOCKENTITIES && defined AURAM_TINKERS_FLUID_BACKEND
+    varying float castingCoverage;
+#endif
 varying float VanillaAO;
 
 varying vec4 lmtexcoord;
@@ -197,6 +201,15 @@ void main() {
 	color = gl_Color;
 
 	VanillaAO = 1.0 - clamp(color.a,0,1);
+	#if defined BLOCKENTITIES && defined AURAM_TINKERS_FLUID_BACKEND
+		castingCoverage = 1.0;
+		if (blockEntityId == 32760) {
+			// Casting preview vertex alpha describes coverage, independent of the lightmap and AO.
+			castingCoverage = color.a;
+			VanillaAO = 0.0;
+			color.a = 1.0;
+		}
+	#endif
 	if (color.a < 0.3) color.a = 1.0; // fix vanilla ao on some custom block models.
 
     /////// ----- RANDOM STUFF ----- ///////

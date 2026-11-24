@@ -47,6 +47,10 @@ varying vec4 lmtexcoord;
 
 varying vec4 color;
 
+#if defined BLOCKENTITIES && defined AURAM_TINKERS_FLUID_BACKEND
+    varying float castingCoverage;
+#endif
+
 uniform float far;
 
 
@@ -417,6 +421,17 @@ void main() {
 	//////////////////////////////// 				//////////////////////////////// 
 	float textureLOD = bias();
 	vec4 Albedo = texture2D_POMSwitch(texture, adjustedTexCoord.xy, vec4(dcdx,dcdy), ifPOM, textureLOD) * color;
+
+	#if defined BLOCKENTITIES && defined AURAM_TINKERS_FLUID_BACKEND
+		// Write opaque samples into the deferred buffer. Uncovered samples show the liquid below.
+		if (castingCoverage < 1.0) {
+			#ifdef TAA
+				if (castingCoverage <= R2_dither()) discard;
+			#else
+				if (castingCoverage <= interleaved_gradientNoise()) discard;
+			#endif
+		}
+	#endif
 	
 	#if defined HAND
 		if (Albedo.a < 0.1) discard;
