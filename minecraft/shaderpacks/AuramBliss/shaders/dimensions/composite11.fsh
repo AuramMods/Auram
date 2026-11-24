@@ -78,6 +78,12 @@ float linearizeDepthFast(const in float depth, const in float near, const in flo
 
 
 
+#ifdef RF_FLOW_STREAKS
+    #ifdef AURAM_RF_BACKEND
+        #include "/lib/rf_streaks.glsl"
+    #endif
+#endif
+
 float bloomWeight(){
 	
 	float weights[7] = float[](     1.0,    1.0/2.0,    1.0/3.0,    1.0/5.5,    1.0/8.0,    1.0/10.0,   1.0/12.0    );
@@ -169,6 +175,11 @@ void main() {
 		vec3 rodTint = vec3(Purkinje_R, Purkinje_G, Purkinje_B);
 	#endif
 	col = mix(lum * rodTint * Purkinje_Multiplier, col, rodCurve);
+	#ifdef RF_FLOW_STREAKS
+		#ifdef AURAM_RF_BACKEND
+			col += rfStreakLight(texcoord);
+		#endif
+	#endif
 
 	#ifndef USE_ACES_COLORSPACE_APPROXIMATION
 		col = LinearTosRGB(TONEMAP(col));

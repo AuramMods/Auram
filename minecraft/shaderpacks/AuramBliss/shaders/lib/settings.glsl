@@ -163,6 +163,8 @@ const float entityShadowDistanceMul = 0.25; // [0.01 0.02 0.03 0.04 0.05 0.10 0.
 //////////////////////////////////////
 #define TOGGLE_VL_FOG
 #define VOLUMETRIC_VAPOR
+#define RF_FLOW_STREAKS
+#define RF_STREAK_INTENSITY 1.0 // [0.25 0.5 0.75 1.0 1.5 2.0 3.0 4.0]
 
 #define VL_SAMPLES 8 // [4 6 8 10 12 14 16 20 24 30 40 50]
 
