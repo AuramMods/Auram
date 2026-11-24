@@ -1,7 +1,7 @@
 
 #Energy conversion settings used by Roh.
 [Energy]
-	#Conversion tax applied to energy/mana/roh conversions.
+	#Conversion tax applied when turning FE, mana, Vis, or LP into Roh.
 	#Range: 0.0 ~ 0.999999
 	TAX = 0.05
 	#How much RF equals 1 mana before tax.
@@ -10,6 +10,15 @@
 	#How much Roh equals 1 mana before tax.
 	#Range: 1.0E-9 ~ 1.0E12
 	ROH_PER_MANA = 0.0688235294117647
+	#How much Roh one Thaumaturge Vis yields before tax.
+	#Range: 1.0E-9 ~ 1.0E12
+	ROH_PER_VIS = 7.0
+	#How much Roh one Blood Magic Life Point yields before tax.
+	#Range: 1.0E-9 ~ 1.0E12
+	ROH_PER_LP = 0.1
+	#Multiplies Starlight Tap production. Each tap is capped at 0.1 Roh per tick.
+	#Range: 0.0 ~ 100.0
+	STARLIGHT_TAP_MULTIPLIER = 1.0
 
 #Matter placement settings.
 [Matter]
