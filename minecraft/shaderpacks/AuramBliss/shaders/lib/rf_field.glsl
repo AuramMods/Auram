@@ -16,7 +16,8 @@ const float rfTrailLength = 1.72;
 // intentionally editable in the pack so shader reloads can tune the visible range.
 float rfBrightness(uint rate) {
     float decades = float(rate) / 31.0;
-    return 0.14 * smoothstep(1.5, 4.0, decades) + 0.86 * smoothstep(4.0, 8.0, decades);
+    float low = clamp(decades * 0.25, 0.0, 1.0);
+    return 0.14 * low * low * low + 0.86 * smoothstep(4.0, 8.0, decades);
 }
 
 vec2 rfWanderLattice(vec2 grid, float seed) {
@@ -40,6 +41,13 @@ float rfTravelPhase() {
     return mod(originalSpeed * (5.0 * slowTime + jitter), rfPulseSpacing);
 }
 
+float rfCircuitPhase(uint clock, float fallback) {
+    if (clock == 0u) return fallback;
+    // The client puts one phase per connected run in the slice beyond the RF field.
+    uint index = clock - 1u;
+    return uintBitsToFloat(texelFetch(auramRfVolume, ivec3(index % 64u, index / 64u, 64), 0).r);
+}
+
 float rfCenterPhase(ivec3 block) {
     // The two sides of each shared cable face meet at the same phase modulo two.
     return mod(dot(vec3(block) + auramRfPhaseOrigin, vec3(1.0)), rfPulseSpacing);
@@ -49,9 +57,13 @@ float rfEnvelope(float age) {
     return smoothstep(0.0, 0.21, age) * (1.0 - smoothstep(0.42, 1.0, age));
 }
 
-vec3 rfBandTint(vec3 world, float age) {
-    float hue = (5.0 / 3.0) * frameTimeCounter - age * 2.4 + rfTau * dot(world, vec3(3.0, 1.0, 5.0)) / 32.0;
-    return mix(vec3(1.0), 0.5 + 0.5 * cos(hue + vec3(0.0, 2.0944, 4.1888)), 0.64);
+vec3 rfBandTint(vec3 world, float age, float rate) {
+    float decades = rate / 31.0;
+    vec3 blue = mix(vec3(0.045, 0.20, 0.80), vec3(0.19, 0.57, 1.0), smoothstep(3.8, 6.8, decades));
+    float violetRange = smoothstep(5.85, 7.8, decades);
+    float wave = 0.5 + 0.5 * cos((5.0 / 3.0) * frameTimeCounter - age * 3.1
+                                  + rfTau * dot(world, vec3(3.0, 1.0, 5.0)) / 32.0);
+    return mix(blue, vec3(0.40, 0.19, 1.0), 0.9 * violetRange * smoothstep(0.20, 0.96, wave));
 }
 
 // LPV positions are relative to the floored camera; the RF origin is relative
@@ -63,14 +75,17 @@ vec3 rfVoxelEmission(ivec3 voxel, int side, vec3 camera) {
     if (any(lessThan(vec3(block), auramRfMinimum)) || any(greaterThanEqual(vec3(block), auramRfMaximum))) {
         return vec3(0.0);
     }
-    uvec3 rates = texelFetch(auramRfVolume, block, 0).rgb;
+    uvec4 data = texelFetch(auramRfVolume, block, 0);
+    uvec3 rates = data.rgb;
     if (rates == uvec3(0u)) return vec3(0.0);
     uvec3 peak = max(rates & 255u, (rates >> 8u) & 255u);
     peak = max(peak, (rates >> 16u) & 255u);
     peak = max(peak, rates >> 24u);
-    float age = mod(rfTravelPhase() - rfCenterPhase(block), rfPulseSpacing) / rfTrailLength;
+    float phase = rfCircuitPhase(data.a, rfTravelPhase());
+    float age = mod(phase - rfCenterPhase(block), rfPulseSpacing) / rfTrailLength;
     vec3 world = vec3(block) + 0.5 + auramRfPhaseOrigin;
-    return rfBandTint(world, age) * (2800.0 * RF_STREAK_INTENSITY *
-            rfBrightness(max(peak.x, max(peak.y, peak.z))) * rfEnvelope(age));
+    uint rate = max(peak.x, max(peak.y, peak.z));
+    return rfBandTint(world, age, float(rate)) * (2800.0 * RF_STREAK_INTENSITY *
+            rfBrightness(rate) * rfEnvelope(age));
 }
 #endif

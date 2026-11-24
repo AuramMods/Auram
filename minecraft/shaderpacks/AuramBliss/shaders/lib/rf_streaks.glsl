@@ -15,7 +15,7 @@ vec3 rfAxis(int axis) {
 
 vec2 rfWander(float worldAxial, float seed) {
     // Sample in world space so neighboring conduit halves share the same drifting path.
-    vec2 p = vec2(worldAxial, frameTimeCounter * (0.32 / 3.0)) + seed * vec2(15.0, 11.0);
+    vec2 p = vec2(worldAxial, frameTimeCounter * (0.56 / 3.0)) + seed * vec2(15.0, 11.0);
     vec2 grid = floor(p);
     vec2 blend = smoothstep(vec2(0.0), vec2(1.0), fract(p));
     vec2 early = mix(rfWanderLattice(grid, seed), rfWanderLattice(grid + vec2(1.0, 0.0), seed), blend.x);
@@ -36,18 +36,23 @@ vec3 rfFacePoint(vec3 center, int face, bool entering) {
     world[axis] = 0.0;
     bool negative = ((face & 1) != 0) != entering;
     float seed = rfHash(world + vec3(float(axis) * 19.0 + (negative ? 7.0 : 0.0)));
-    vec2 wander = rfWander(along, seed);
-    float angle = rfTau * (along * 0.125 + seed) + 2.2 * wander.x;
-    float radius = 0.216 + 0.105 * wander.y;
+    vec2 wander = rfWander(along * 1.5, seed);
+    float angle = rfTau * (along * 0.0625 + seed) + 2.75 * wander.x;
+    float radius = 0.221 + 0.100 * wander.y;
     vec2 offset = radius * vec2(cos(angle), sin(angle));
     point[(axis + 1) % 3] += offset.x;
     point[(axis + 2) % 3] += offset.y;
     return point;
 }
 
-vec3 rfCurve(vec3 a, vec3 b, vec3 c, vec3 d, float t) {
+vec3 rfCurve(vec3 a, vec3 b, vec3 c, vec3 d, vec3 center, vec3 bend, vec3 twist, float t) {
     vec3 ab = mix(a, b, t), bc = mix(b, c, t), cd = mix(c, d, t);
-    return mix(mix(ab, bc, t), mix(bc, cd, t), t);
+    vec3 point = mix(mix(ab, bc, t), mix(bc, cd, t), t);
+    // The perturbation and its derivative vanish at both faces.
+    float middle = t * (1.0 - t);
+    vec3 drift = 16.0 * middle * middle * (bend + twist * (3.5 * t - 1.75));
+    vec3 room = max(vec3(0.0), 0.322 - abs(point - center));
+    return point + clamp(drift, -room, room);
 }
 
 // Closest approach between the pixel's ray interval and one short strand segment.
@@ -88,6 +93,15 @@ vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, float phase,
     float reach = (inFace < 0 || outFace < 0) ? 0.17 : 0.29;
     vec3 b = a + reach * enter;
     vec3 c = d - reach * exit;
+    vec3 worldCell = center + auramRfPhaseOrigin;
+    float seed = rfHash(worldCell + vec3(float(1 + inFace), float(1 + outFace), 13.0));
+    vec2 crosswind = rfWander(dot(worldCell, vec3(1.0, 3.0, 5.0)) * 1.5, seed);
+    float lift = rfWander(dot(worldCell, vec3(5.0, 2.0, 3.0)), seed + 0.39).x;
+    vec3 course = normalize(enter + exit);
+    vec3 eddy = vec3(crosswind.x, lift, crosswind.y);
+    vec3 bend = 0.23 * (eddy - course * dot(course, eddy));
+    vec3 twist = cross(course, bend);
+
 
     vec3 light = vec3(0.0);
     // A voxel can contain both the fading end of one band and the tip of the next.
@@ -98,16 +112,16 @@ vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, float phase,
 
         float beginT = (first - start) / (stop - start);
         float endT = (last - start) / (stop - start);
-        vec3 pointA = rfCurve(a, b, c, d, beginT);
+        vec3 pointA = rfCurve(a, b, c, d, center, bend, twist, beginT);
         float d2 = 0.0306;
         float closestT = 0.0;
-        for (int i = 1; i <= 4; i++) {
-            vec3 pointB = rfCurve(a, b, c, d, mix(beginT, endT, float(i) * 0.25));
+        for (int i = 1; i <= 5; i++) {
+            vec3 pointB = rfCurve(a, b, c, d, center, bend, twist, mix(beginT, endT, float(i) * 0.2));
             float alongSegment;
             float distance = rfDistanceSquared(ro, rd, interval, pointA, pointB, alongSegment);
             if (distance < d2) {
                 d2 = distance;
-                closestT = mix(beginT, endT, (float(i - 1) + alongSegment) * 0.25);
+                closestT = mix(beginT, endT, (float(i - 1) + alongSegment) * 0.2);
             }
             pointA = pointB;
         }
@@ -120,9 +134,11 @@ vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, float phase,
         float glow = (0.44 * exp2(-300.0 * d2) + 0.29 * exp2(-65.0 * d2))
                    * (1.0 - smoothstep(0.009, 0.0306, d2));
         float age = (head - mix(start, stop, closestT)) / rfTrailLength;
-        vec3 world = auramRfPhaseOrigin + rfCurve(a, b, c, d, closestT);
+        vec3 world = auramRfPhaseOrigin + rfCurve(a, b, c, d, center, bend, twist, closestT);
         float energy = mix(energyIn, energyOut, closestT);
-        light = max(light, rfBandTint(world, age) * energy * rfEnvelope(age) * (2.4 * core + glow));
+        float tintRate = inRate == 0u || outRate == 0u ? float(max(inRate, outRate))
+                                                      : mix(float(inRate), float(outRate), closestT);
+        light = max(light, rfBandTint(world, age, tintRate) * energy * rfEnvelope(age) * (2.4 * core + glow));
     }
     return light;
 }
@@ -218,9 +234,9 @@ vec3 rfStreakLight(vec2 uv) {
         if (first >= last || any(lessThan(cell, low)) || any(greaterThanEqual(cell, high))) break;
         int axis = cellExit.x <= cellExit.y && cellExit.x <= cellExit.z ? 0 : (cellExit.y <= cellExit.z ? 1 : 2);
         float stop = min(cellExit[axis], last);
-        uvec3 rates = texelFetch(auramRfVolume, cell, 0).rgb;
-        if (stop > first && any(notEqual(rates, uvec3(0u)))) {
-            light += rfCell(ro, rd, vec2(first, stop), cell, rates, phase);
+        uvec4 data = texelFetch(auramRfVolume, cell, 0);
+        if (stop > first && any(notEqual(data.rgb, uvec3(0u)))) {
+            light += rfCell(ro, rd, vec2(first, stop), cell, data.rgb, rfCircuitPhase(data.a, phase));
         }
         first = stop;
         cell[axis] += stepDir[axis];
