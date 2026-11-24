@@ -123,7 +123,7 @@ vec4 GetVolumetricFog(
 	/// -------------  COLOR/LIGHTING STUFF ------------- \\\
 	
 	vec3 color = vec3(0.0);
-	#if defined ATUM_SHADER && defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT
+	#if defined ATUM_SHADER && defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
 		vec3 localLight = vec3(0.0);
 	#endif
 	float totalAbsorbance = 1.0;
@@ -196,7 +196,7 @@ vec4 GetVolumetricFog(
 		vec3 directMultiScattering = LightSourceColor * mieDayMulti * 3.14 * 2.0;
 	#endif
 
-	#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT
+	#if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
     	float TorchBrightness_autoAdjust = mix(1.0, 30.0,  clamp(exp(-10.0*exposure),0.0,1.0)) / 5.0;
 	#endif
 
@@ -363,7 +363,7 @@ vec4 GetVolumetricFog(
 		//------------------------------------
 		//------ LPV FOG EFFECT
 		//------------------------------------
-			#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT 
+			#if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
 				vec3 voxelLight = LPV_FOG_ILLUMINATION(progressW-cameraPosition, 1.0, stepLength / 8.0) * TorchBrightness_autoAdjust * totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
 				#ifdef ATUM_SHADER
 					localLight += voxelLight;
@@ -437,7 +437,7 @@ vec4 GetVolumetricFog(
 	if (!cloudAdded) color += cloud.rgb * atmosphereAbsorbance * totalAbsorbance;
 	#ifdef ATUM_SHADER
 		color = tintAtumAtmosphere(color);
-		#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT
+		#if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
 			color += localLight;
 		#endif
 	#endif
