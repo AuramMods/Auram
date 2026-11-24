@@ -9,6 +9,7 @@ uniform vec3 auramRfMaximum;
 uniform vec3 auramRfPhaseOrigin;
 
 const float rfTau = 6.2831853;
+const float rfPulseSpacing = 2.0;
 
 // Texels contain logarithmic rates, with 31 codes per decade. This response is
 // intentionally editable in the pack so shader reloads can tune the visible range.
@@ -45,12 +46,43 @@ vec2 rfWander(float worldAxial, float seed) {
     return mix(early, late, blend.y);
 }
 
-vec3 rfCoil(vec3 center, vec3 axis, vec3 radialA, vec3 radialB, float axial, float worldAxial, float seed) {
-    vec2 wander = rfWander(worldAxial, seed);
-    float angle = rfTau * (worldAxial * 0.25 + seed) + 0.65 * wander.x;
-    float radius = 0.201 + 0.027 * sin(rfTau * (worldAxial * 0.125 + seed));
+vec3 rfFaceNormal(int face) {
+    return rfAxis(face / 2) * ((face & 1) == 0 ? 1.0 : -1.0);
+}
+
+vec3 rfFacePoint(vec3 center, int face, bool entering) {
+    int axis = face / 2;
+    vec3 point = center + 0.5 * rfFaceNormal(face);
+    vec3 world = point + auramRfPhaseOrigin;
+    float along = world[axis];
+    world[axis] = 0.0;
+    bool negative = ((face & 1) != 0) != entering;
+    float seed = rfHash(world + vec3(float(axis) * 19.0 + (negative ? 7.0 : 0.0)));
+    vec2 wander = rfWander(along, seed);
+    float angle = rfTau * (along * 0.25 + seed) + 0.65 * wander.x;
+    float radius = 0.201 + 0.027 * sin(rfTau * (along * 0.125 + seed));
     vec2 offset = radius * vec2(cos(angle), sin(angle)) + 0.095 * wander;
-    return center + axis * axial + radialA * offset.x + radialB * offset.y;
+    point[(axis + 1) % 3] += offset.x;
+    point[(axis + 2) % 3] += offset.y;
+    return point;
+}
+
+vec3 rfCurve(vec3 a, vec3 b, vec3 c, vec3 d, float t) {
+    vec3 ab = mix(a, b, t), bc = mix(b, c, t), cd = mix(c, d, t);
+    return mix(mix(ab, bc, t), mix(bc, cd, t), t);
+}
+
+float rfTravelPhase() {
+    const float originalSpeed = 3.45;
+    const float noiseInterval = 0.25;
+    float clock = frameTimeCounter / noiseInterval;
+    float progress = fract(clock);
+    float noise = rfWanderLattice(vec2(floor(clock), 5.0), 0.347).x;
+    // This displacement and its slope meet at zero across noise intervals.
+    // The derivative of the normalized bump ranges from -1 to +1.
+    float bump = progress * (1.0 - progress);
+    float jitter = 2.0 * noise * noiseInterval * 5.1961524 * bump * bump;
+    return mod(originalSpeed * (5.0 * frameTimeCounter + jitter), rfPulseSpacing);
 }
 
 // Closest approach between the pixel's ray interval and one short strand segment.
@@ -70,39 +102,49 @@ float rfDistanceSquared(vec3 ro, vec3 rd, vec2 interval, vec3 a, vec3 b, out flo
     return dot(miss, miss);
 }
 
-vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, int axisIndex,
-             vec2 halfEdge, float direction, uint rate) {
-    float energy = rfBrightness(rate);
-    if (energy <= 0.0) return vec3(0.0);
-
-    vec3 axis = rfAxis(axisIndex);
-    vec3 radialA = rfAxis((axisIndex + 1) % 3);
-    vec3 radialB = cross(axis, radialA);
-    vec3 center = vec3(block) + 0.5;
-    vec3 phaseCenter = center + auramRfPhaseOrigin;
-    float axisCenter = dot(phaseCenter, axis);
-    float seed = rfHash(phaseCenter - axisCenter * axis + vec3(float(axisIndex) * 19.0));
-    vec2 along = direction * (axisCenter + halfEdge);
-    float start = min(along.x, along.y), stop = max(along.x, along.y);
-
-    // Short, tapered pulses leave quiet gaps between threads of light.
-    const float spacing = 3.2;
-    float trail = mix(0.39, 0.72, energy);
-    float speed = 2.6 + 1.7 * seed;
-    float phase = spacing * fract(frameTimeCounter * speed / spacing + seed + step(direction, 0.0) * 0.38);
-    float head = floor((stop - phase + trail) / spacing) * spacing + phase;
+vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, float phase,
+             int inFace, uint inRate, int outFace, uint outRate) {
+    const float trail = 0.48;
+    // Each hop flips grid parity. Both sides of a shared face have the same
+    // phase modulo two, even when the next hop turns or reverses world axes.
+    float centerPhase = mod(dot(vec3(block) + auramRfPhaseOrigin, vec3(1.0)), rfPulseSpacing);
+    float start = centerPhase - (inFace < 0 ? 0.0 : 0.5);
+    float stop = centerPhase + (outFace < 0 ? 0.0 : 0.5);
+    float head = floor((stop - phase + trail) / rfPulseSpacing) * rfPulseSpacing + phase;
     float first = max(start, head - trail);
     float last = min(stop, head);
     if (last <= first) return vec3(0.0);
 
-    vec3 pointA = rfCoil(center, axis, radialA, radialB, direction * first - axisCenter, direction * first, seed);
-    float middle = (first + last) * 0.5;
-    vec3 pointB = rfCoil(center, axis, radialA, radialB, direction * middle - axisCenter, direction * middle, seed);
-    vec3 pointC = rfCoil(center, axis, radialA, radialB, direction * last - axisCenter, direction * last, seed);
-    float alongAB, alongBC;
-    float distanceAB = rfDistanceSquared(ro, rd, interval, pointA, pointB, alongAB);
-    float distanceBC = rfDistanceSquared(ro, rd, interval, pointB, pointC, alongBC);
-    float d2 = min(distanceAB, distanceBC);
+    float energyIn = rfBrightness(inRate);
+    float energyOut = rfBrightness(outRate);
+    if (max(energyIn, energyOut) <= 0.0) return vec3(0.0);
+
+    vec3 center = vec3(block) + 0.5;
+    vec3 a = inFace < 0 ? center : rfFacePoint(center, inFace, true);
+    vec3 d = outFace < 0 ? center : rfFacePoint(center, outFace, false);
+    vec3 enter = inFace < 0 ? rfFaceNormal(outFace) : -rfFaceNormal(inFace);
+    vec3 exit = outFace < 0 ? -rfFaceNormal(inFace) : rfFaceNormal(outFace);
+    // Face-normal tangents and shared endpoints make the curve smooth across blocks.
+    float reach = (inFace < 0 || outFace < 0) ? 0.17 : 0.29;
+    vec3 b = a + reach * enter;
+    vec3 c = d - reach * exit;
+
+    float beginT = (first - start) / (stop - start);
+    float endT = (last - start) / (stop - start);
+    vec3 points[4];
+    for (int i = 0; i < 4; i++) {
+        points[i] = rfCurve(a, b, c, d, mix(beginT, endT, float(i) / 3.0));
+    }
+    float d2 = 0.0256;
+    float closestT = 0.0;
+    for (int i = 0; i < 3; i++) {
+        float alongSegment;
+        float distance = rfDistanceSquared(ro, rd, interval, points[i], points[i + 1], alongSegment);
+        if (distance < d2) {
+            d2 = distance;
+            closestT = mix(beginT, endT, (float(i) + alongSegment) / 3.0);
+        }
+    }
     if (d2 >= 0.0256) return vec3(0.0);
 
     // Keep the subpixel filament stable while its wider bloom carries most of the visible glow.
@@ -112,28 +154,59 @@ vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, int axisIndex,
     float core = exp2(-0.72135 * d2 / widthSquared) * filament * inversesqrt(widthSquared);
     float halo = (0.19 * exp2(-275.0 * d2) + 0.12 * exp2(-85.0 * d2))
                * (1.0 - smoothstep(0.010, 0.0256, d2));
-    float closest = distanceAB <= distanceBC ? mix(first, middle, alongAB) : mix(middle, last, alongBC);
-    float age = (head - closest) / trail;
+    float age = (head - mix(start, stop, closestT)) / trail;
     float tail = smoothstep(0.0, 0.16, age) * (1.0 - smoothstep(0.25, 1.0, age));
-    vec3 shimmer = 0.55 + 0.45 * cos(5.0 * frameTimeCounter - direction * closest * (rfTau * 0.25)
-                                  + seed * rfTau + vec3(0.0, 2.0944, 4.1888));
+    vec3 world = auramRfPhaseOrigin + rfCurve(a, b, c, d, closestT);
+    float hue = 5.0 * frameTimeCounter - age * 1.8 + rfTau * dot(world, vec3(3.0, 1.0, 5.0)) / 32.0;
+    vec3 shimmer = 0.55 + 0.45 * cos(hue + vec3(0.0, 2.0944, 4.1888));
     vec3 tint = mix(vec3(1.0), shimmer, 0.42);
+    float energy = mix(energyIn, energyOut, closestT);
     return tint * energy * tail * (core + halo);
 }
 
-vec3 rfCell(vec3 ro, vec3 rd, vec2 interval, ivec3 cell, uvec3 data) {
-    vec3 light = vec3(0.0);
+int rfFeedingFace(uint rates[6], int otherFace) {
+    int bestFace = -1;
+    uint bestRate = 0u;
+    for (int face = 0; face < 6; face++) {
+        uint rate = rates[face];
+        if (face == otherFace || rate == 0u) continue;
+        if (rate > bestRate || (rate == bestRate && face == (otherFace ^ 1))) {
+            bestRate = rate;
+            bestFace = face;
+        }
+    }
+    return bestFace;
+}
+
+vec3 rfCell(vec3 ro, vec3 rd, vec2 interval, ivec3 cell, uvec3 data, float phase) {
+    uint incoming[6], outgoing[6];
     for (int axis = 0; axis < 3; axis++) {
         uint traffic = data[axis];
-        if (traffic == 0u) continue;
-        if ((traffic & 0xffu) != 0u)
-            light += rfPulse(ro, rd, interval, cell, axis, vec2(0.0, 0.5), 1.0, traffic & 0xffu);
-        if (((traffic >> 8u) & 0xffu) != 0u)
-            light += rfPulse(ro, rd, interval, cell, axis, vec2(0.0, 0.5), -1.0, (traffic >> 8u) & 0xffu);
-        if (((traffic >> 16u) & 0xffu) != 0u)
-            light += rfPulse(ro, rd, interval, cell, axis, vec2(-0.5, 0.0), 1.0, (traffic >> 16u) & 0xffu);
-        if ((traffic >> 24u) != 0u)
-            light += rfPulse(ro, rd, interval, cell, axis, vec2(-0.5, 0.0), -1.0, traffic >> 24u);
+        incoming[axis * 2] = (traffic >> 8u) & 0xffu;
+        outgoing[axis * 2] = traffic & 0xffu;
+        incoming[axis * 2 + 1] = (traffic >> 16u) & 0xffu;
+        outgoing[axis * 2 + 1] = traffic >> 24u;
+    }
+
+    // The field stores traffic per face. At forks, start each outgoing strand
+    // from the strongest compatible input and also draw any remaining inputs.
+    vec3 light = vec3(0.0);
+    int usedInputs = 0;
+    for (int outFace = 0; outFace < 6; outFace++) {
+        if (outgoing[outFace] == 0u) continue;
+        int inFace = rfFeedingFace(incoming, outFace);
+        uint inRate = 0u;
+        if (inFace >= 0) {
+            usedInputs |= 1 << inFace;
+            inRate = incoming[inFace];
+        }
+        light = max(light, rfPulse(ro, rd, interval, cell, phase, inFace, inRate, outFace, outgoing[outFace]));
+    }
+    for (int inFace = 0; inFace < 6; inFace++) {
+        if (incoming[inFace] == 0u || (usedInputs & (1 << inFace)) != 0) continue;
+        int outFace = rfFeedingFace(outgoing, inFace);
+        uint outRate = outFace < 0 ? 0u : outgoing[outFace];
+        light = max(light, rfPulse(ro, rd, interval, cell, phase, inFace, incoming[inFace], outFace, outRate));
     }
     return light;
 }
@@ -177,13 +250,14 @@ vec3 rfStreakLight(vec2 uv) {
     ivec3 high = ivec3(auramRfMaximum);
 
     vec3 light = vec3(0.0);
+    float phase = rfTravelPhase();
     for (int i = 0; i < 96; i++) {
         if (first >= last || any(lessThan(cell, low)) || any(greaterThanEqual(cell, high))) break;
         int axis = cellExit.x <= cellExit.y && cellExit.x <= cellExit.z ? 0 : (cellExit.y <= cellExit.z ? 1 : 2);
         float stop = min(cellExit[axis], last);
         uvec3 rates = texelFetch(auramRfVolume, cell, 0).rgb;
         if (stop > first && any(notEqual(rates, uvec3(0u)))) {
-            light += rfCell(ro, rd, vec2(first, stop), cell, rates);
+            light += rfCell(ro, rd, vec2(first, stop), cell, rates, phase);
         }
         first = stop;
         cell[axis] += stepDir[axis];
