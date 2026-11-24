@@ -123,7 +123,7 @@ vec4 GetVolumetricFog(
 	/// -------------  COLOR/LIGHTING STUFF ------------- \\\
 	
 	vec3 color = vec3(0.0);
-	#if defined ATUM_SHADER && defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
+	#ifdef ATUM_SHADER
 		vec3 localLight = vec3(0.0);
 	#endif
 	float totalAbsorbance = 1.0;
@@ -317,11 +317,18 @@ vec4 GetVolumetricFog(
 				if (vaporInterval.y > vaporStart && vaporInterval.x < stepEnd) {
 					vec3 vaporLight = indirectLight * (0.08 + 0.92 * lightLevelZero) + DirectLight * 0.25;
 					vaporLight += vec3(0.003);
-					vec4 vapor = traceVapor(vaporOrigin, worldDirection, vaporInterval, vaporStart, stepEnd, vaporLight);
-					color += vapor.rgb * totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
-					fogTransmittanceAtCloud *= pow(vapor.a, beforeCloud);
-					fogAbsorbance *= vapor.a;
-					totalAbsorbance *= vapor.a;
+					VaporScattering vapor = traceVapor(vaporOrigin, worldDirection, vaporInterval, vaporStart, stepEnd, vaporLight);
+					float vaporWeight = totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
+					color += vapor.ambient * vaporWeight;
+					#ifdef ATUM_SHADER
+						// Preserve the source hue when tinting the desert atmosphere.
+						localLight += vapor.blockLight * vaporWeight;
+					#else
+						color += vapor.blockLight * vaporWeight;
+					#endif
+					fogTransmittanceAtCloud *= pow(vapor.transmission, beforeCloud);
+					fogAbsorbance *= vapor.transmission;
+					totalAbsorbance *= vapor.transmission;
 				}
 			#endif
 		//------------------------------------
@@ -436,10 +443,7 @@ vec4 GetVolumetricFog(
 	}
 	if (!cloudAdded) color += cloud.rgb * atmosphereAbsorbance * totalAbsorbance;
 	#ifdef ATUM_SHADER
-		color = tintAtumAtmosphere(color);
-		#if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
-			color += localLight;
-		#endif
+		color = tintAtumAtmosphere(color) + localLight;
 	#endif
 	atmosphereAlpha = atmosphereAbsorbance;
 	return vec4(color, totalAbsorbance);

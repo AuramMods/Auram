@@ -65,10 +65,16 @@ float vaporDensity(vec3 playerPos) {
     return density * mix(1.0, mix(0.22, 1.45, wisps), edge);
 }
 
-vec4 traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float stop, vec3 ambient) {
+struct VaporScattering {
+    vec3 ambient;
+    vec3 blockLight;
+    float transmission;
+};
+
+VaporScattering traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float stop, vec3 ambient) {
     float first = max(start, interval.x);
     float distance = min(stop, interval.y) - first;
-    if (distance <= 0.0) return vec4(0.0, 0.0, 0.0, 1.0);
+    if (distance <= 0.0) return VaporScattering(vec3(0.0), vec3(0.0), 1.0);
 
     int samples = min(48, int(ceil(distance / 0.65)));
     float stride = distance / float(samples);
@@ -84,19 +90,28 @@ vec4 traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float s
         vec3 position = origin + direction * (first + (float(i) + 0.5) * stride);
         float density = vaporDensity(position);
         if (density <= 0.001) continue;
-        vec3 light = ambient;
+        float segmentTransmission = exp(-2.5 * density * stride);
         #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
             vec3 lpv = GetLpvPosition(position);
             if (all(greaterThanEqual(lpv, vec3(0.5))) && all(lessThan(lpv, LpvSize3 - 0.5))) {
-                light += GetLpvBlockLight(SampleLpvLinear(lpv)) * blockLightScale;
+                vec3 light = GetLpvBlockLight(SampleLpvLinear(lpv)) * blockLightScale;
+                scattering += light * ((1.0 - segmentTransmission) * transmission);
             }
         #endif
-        float segmentTransmission = exp(-2.5 * density * stride);
-        scattering += light * ((1.0 - segmentTransmission) * transmission);
         transmission *= segmentTransmission;
         if (transmission < 0.002) break;
     }
-    return vec4(scattering, transmission);
+    vec3 ambientScattering = ambient * (1.0 - transmission);
+    #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
+        // Let nearby colored lights dominate the smoke without boosting the neutral part of the light.
+        float neutral = min(min(scattering.r, scattering.g), scattering.b);
+        vec3 extraColor = 2.0 * (scattering - neutral);
+        float colorStrength = max(max(extraColor.r, extraColor.g), extraColor.b);
+        float ambientStrength = max(max(ambientScattering.r, ambientScattering.g), ambientScattering.b);
+        ambientScattering *= 1.0 - 0.8 * colorStrength / max(ambientStrength + colorStrength, 1e-6);
+        scattering += extraColor;
+    #endif
+    return VaporScattering(ambientScattering, scattering, transmission);
 }
 #endif
 #endif
