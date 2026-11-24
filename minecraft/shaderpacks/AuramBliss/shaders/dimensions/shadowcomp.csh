@@ -34,6 +34,10 @@ layout (local_size_x = 8, local_size_y = 8, local_size_z = 8) in;
         #include "/lib/rf_field.glsl"
     #endif
 
+    #ifdef AURAM_TINKERS_FLUID_BACKEND
+        #include "/lib/tinkers_fluid_light.glsl"
+    #endif
+
     int sumOf(ivec3 vec) {return vec.x + vec.y + vec.z;}
 
     int getSharedIndex(ivec3 pos) {
@@ -158,6 +162,10 @@ void main() {
 
         #if defined RF_FLOW_STREAKS && defined AURAM_RF_BACKEND
             lightValue.rgb += rfVoxelEmission(imgCoord, int(LpvSize), cameraPosition);
+        #endif
+
+        #ifdef AURAM_TINKERS_FLUID_BACKEND
+            lightValue.rgb += tinkersFluidEmission(imgCoord, int(LpvSize), cameraPosition);
         #endif
 
         // Convert back to linear RGB space

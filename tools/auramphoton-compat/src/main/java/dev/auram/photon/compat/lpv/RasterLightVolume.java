@@ -70,6 +70,7 @@ public final class RasterLightVolume implements AutoCloseable {
     private int transportViewInverseLocation;
     private ProgramUniforms transportUniforms;
     private ProgramSamplers transportSamplers;
+    private boolean transportUsesTwoSamplers;
     private int published;
     private boolean capturing;
     private boolean capturedTerrain;
@@ -168,7 +169,10 @@ public final class RasterLightVolume implements AutoCloseable {
         ProgramUniforms.Builder builder = ProgramUniforms.builder("AuramPhoton LPV transport", transportProgram);
         CameraUniforms.addCameraUniforms(builder, pipeline.getFrameUpdateNotifier());
         MatrixUniforms.addMatrixUniforms(builder, set.getPackDirectives());
-        if (bliss && glGetUniformLocation(transportProgram, "auramRfVolume") >= 0) {
+        boolean rfLight = bliss && glGetUniformLocation(transportProgram, "auramRfVolume") >= 0;
+        boolean fluidLight = bliss && glGetUniformLocation(transportProgram, "auramTinkersFluidLight") >= 0;
+        transportUsesTwoSamplers = rfLight && fluidLight;
+        if (rfLight || fluidLight) {
             // Reuse AuramCore's Iris texture and uniform registration without a hard mod dependency.
             CommonUniforms.generalCommonUniforms(builder, pipeline.getFrameUpdateNotifier(), set.getPackDirectives());
             SystemTimeUniforms.addSystemTimeUniforms(builder);
@@ -431,7 +435,9 @@ public final class RasterLightVolume implements AutoCloseable {
             if (transportSamplers == null) {
                 glDrawArraysInstanced(GL_TRIANGLES, 0, 3, side);
             } else {
-                try (TextureBinding rf = TextureBinding.bind(3, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0)) {
+                try (TextureBinding first = TextureBinding.bind(3, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0);
+                     TextureBinding second = transportUsesTwoSamplers
+                             ? TextureBinding.bind(4, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0) : null) {
                     transportSamplers.update();
                     glDrawArraysInstanced(GL_TRIANGLES, 0, 3, side);
                 } finally {

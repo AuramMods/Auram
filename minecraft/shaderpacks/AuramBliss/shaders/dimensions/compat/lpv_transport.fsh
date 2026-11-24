@@ -17,6 +17,10 @@ uniform int voxel_atlas_columns;
     #include "/lib/rf_field.glsl"
 #endif
 
+#ifdef AURAM_TINKERS_FLUID_BACKEND
+    #include "/lib/tinkers_fluid_light.glsl"
+#endif
+
 flat in int auram_photon_layer;
 layout(location = 0) out vec4 light;
 
@@ -74,6 +78,10 @@ void main() {
 
     #if defined RF_FLOW_STREAKS && defined AURAM_RF_BACKEND && defined AURAM_BLISS_RF_LPV
         incoming.rgb += rfVoxelEmission(voxel, int(LpvSize), cameraPosition);
+    #endif
+
+    #ifdef AURAM_TINKERS_FLUID_BACKEND
+        incoming.rgb += tinkersFluidEmission(voxel, int(LpvSize), cameraPosition);
     #endif
 
     if (incoming == vec4(0.0)) {
