@@ -74,6 +74,12 @@ vec4 traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float s
     float stride = distance / float(samples);
     float transmission = 1.0;
     vec3 scattering = vec3(0.0);
+    #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
+        float blockLightScale = LPV_VL_FOG_ILLUMINATION_BRIGHTNESS / 100.0;
+        #ifdef OVERWORLD_SHADER
+            blockLightScale *= mix(1.0, 0.8649, smoothstep(0.0, 0.05, -sunElevation));
+        #endif
+    #endif
     for (int i = 0; i < samples; i++) {
         vec3 position = origin + direction * (first + (float(i) + 0.5) * stride);
         float density = vaporDensity(position);
@@ -82,7 +88,7 @@ vec4 traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float s
         #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
             vec3 lpv = GetLpvPosition(position);
             if (all(greaterThanEqual(lpv, vec3(0.5))) && all(lessThan(lpv, LpvSize3 - 0.5))) {
-                light += GetLpvBlockLight(SampleLpvLinear(lpv)) * (LPV_VL_FOG_ILLUMINATION_BRIGHTNESS / 100.0);
+                light += GetLpvBlockLight(SampleLpvLinear(lpv)) * blockLightScale;
             }
         #endif
         float segmentTransmission = exp(-2.5 * density * stride);
