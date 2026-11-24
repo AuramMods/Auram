@@ -1,4 +1,11 @@
 #include "/lib/settings.glsl"
+
+#if defined AURAM_VAPOR_BACKEND && defined VOLUMETRIC_VAPOR
+    #define VAPOR_BEHIND_TRANSLUCENT
+    #if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED
+        #define VAPOR_TRANSLUCENT_LPV
+    #endif
+#endif
 // #if defined END_SHADER || defined NETHER_SHADER
 	#undef IS_LPV_ENABLED
 // #endif
@@ -63,6 +70,13 @@ uniform float caveDetection;
 #include "/lib/waterBump.glsl"
 
 #include "/lib/DistantHorizons_projections.glsl"
+
+#ifdef VAPOR_TRANSLUCENT_LPV
+    #include "/lib/lpv_samplers.glsl"
+    #include "/lib/hsv.glsl"
+    #include "/lib/lpv_common.glsl"
+    #include "/lib/lpv_render.glsl"
+#endif
 
 float DH_ld(float dist) {
     return (2.0 * near) / (dhFarPlane + dhNearPlane - dist * (dhFarPlane - dhNearPlane));
@@ -343,6 +357,9 @@ void main() {
 
 		vec3 viewPos1 = toScreenSpace_DH(tc/RENDER_SCALE, z, DH_z);
 		vec3 viewPos0 = toScreenSpace_DH(tc/RENDER_SCALE, z0, DH_z0);
+		#ifdef AURAM_RENDER_VAPOR
+			vaporTranslucentStart = length(viewPos0);
+		#endif
 		vec3 playerPos = normalize(mat3(gbufferModelViewInverse) *  viewPos1);
 
 		#ifdef OVERWORLD_SHADER
@@ -384,6 +401,15 @@ void main() {
 				#if defined CLOUDS_INTERSECT_TERRAIN
 					VolumetricFog2.a *= VolumetricClouds.a * atmosphereAlpha;
 				#endif
+			}
+		#elif defined AURAM_RENDER_VAPOR
+			if (!iswater && auramVaporActive) {
+				vec4 ray = volumeViewRay(tc / RENDER_SCALE, z, DH_z);
+				vec3 origin = gbufferModelViewInverse[3].xyz;
+				vec3 direction = mat3(gbufferModelViewInverse) * ray.xyz;
+				float rayEnd = ray.w >= 0.0 ? ray.w : far;
+				vec2 interval = vaporRayInterval(origin, direction, rayEnd);
+				VolumetricFog2 = traceVapor(origin, direction, interval, 0.0, rayEnd, vec3(0.014));
 			}
 		#endif
 		

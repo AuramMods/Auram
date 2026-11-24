@@ -8,6 +8,9 @@ uniform float auramVaporBlend;
 uniform vec3 auramVaporOrigin;
 uniform vec3 auramVaporMinimum;
 uniform vec3 auramVaporMaximum;
+#ifdef VAPOR_BEHIND_TRANSLUCENT
+float vaporTranslucentStart = 0.0;
+#endif
 
 vec2 vaporRayInterval(vec3 origin, vec3 direction, float rayEnd) {
     if (!auramVaporActive) return vec2(0.0);
@@ -24,8 +27,22 @@ vec2 vaporRayInterval(vec3 origin, vec3 direction, float rayEnd) {
     vec3 farPlane = max(a, b);
     vec3 entry = vec3(parallel.x ? 0.0 : nearPlane.x, parallel.y ? 0.0 : nearPlane.y, parallel.z ? 0.0 : nearPlane.z);
     vec3 exit = vec3(parallel.x ? rayEnd : farPlane.x, parallel.y ? rayEnd : farPlane.y, parallel.z ? rayEnd : farPlane.z);
-    return vec2(max(max(entry.x, entry.y), max(entry.z, 0.0)),
-                min(min(exit.x, exit.y), min(exit.z, rayEnd)));
+    float first = max(max(entry.x, entry.y), max(entry.z, 0.0));
+    #ifdef VAPOR_BEHIND_TRANSLUCENT
+        first = max(first, vaporTranslucentStart);
+    #endif
+    return vec2(first, min(min(exit.x, exit.y), min(exit.z, rayEnd)));
+}
+
+float vaporDetailNoise(vec3 position) {
+    vec3 cell = floor(position);
+    vec3 blend = fract(position);
+    blend = blend * blend * (3.0 - 2.0 * blend);
+    // Use two slices of the existing noise texture as a repeatable 3D field.
+    vec2 base = cell.xz + blend.xz + cell.y * vec2(37.0, 151.0) + 0.5;
+    float lower = textureLod(noisetex, base / 512.0, 0.0).a;
+    float upper = textureLod(noisetex, (base + vec2(37.0, 151.0)) / 512.0, 0.0).a;
+    return mix(lower, upper, blend.y);
 }
 
 float vaporDensity(vec3 playerPos) {
@@ -33,8 +50,19 @@ float vaporDensity(vec3 playerPos) {
     ivec3 cell = clamp(ivec3(floor(local)), ivec3(0), ivec3(63));
     // Full collision cells mask the trilinear filter at glass and walls.
     if (texelFetch(auramVaporVolume, cell, 0).b < 0.5) return 0.0;
-    vec2 density = textureLod(auramVaporVolume, local / 64.0, 0.0).rg;
-    return mix(density.x, density.y, auramVaporBlend);
+    vec2 densityFrames = textureLod(auramVaporVolume, local / 64.0, 0.0).rg;
+    float density = mix(densityFrames.x, densityFrames.y, auramVaporBlend);
+    if (density <= 0.001) return 0.0;
+
+    // Warp the detail coordinates, keeping the density sample inside its world cell.
+    vec3 field = (playerPos + cameraPosition) * vec3(1.8, 1.0, 1.8);
+    field.y -= frameTimeCounter * 0.8;
+    field *= 1.0 / 3.0;
+    float bend = vaporDetailNoise(field * 0.72) - 0.5;
+    float detail = vaporDetailNoise(field * 2.1 + bend * vec3(2.4, 0.75, -2.0));
+    float wisps = smoothstep(0.27, 0.75, detail);
+    float edge = 1.0 - smoothstep(0.1, 0.5, density);
+    return density * mix(1.0, mix(0.22, 1.45, wisps), edge);
 }
 
 vec4 traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float stop, vec3 ambient) {
@@ -51,7 +79,7 @@ vec4 traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float s
         float density = vaporDensity(position);
         if (density <= 0.001) continue;
         vec3 light = ambient;
-        #if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
+        #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
             vec3 lpv = GetLpvPosition(position);
             if (all(greaterThanEqual(lpv, vec3(0.5))) && all(lessThan(lpv, LpvSize3 - 0.5))) {
                 light += GetLpvBlockLight(SampleLpvLinear(lpv)) * (LPV_VL_FOG_ILLUMINATION_BRIGHTNESS / 100.0);
