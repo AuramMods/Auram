@@ -49,9 +49,9 @@ playerXpPerSkillLevelUpBase = 489.0
 # Master xp added per skill level already reached when a skill levels up.
 # Effect: Clamped to a finite non-negative value. Increasing it back-loads master progression toward high skill levels.
 playerXpPerSkillLevelUpLevelMultiplier = 44.0
-# Power granted per master level.
-# Effect: Clamped to a finite non-negative value. Lowering it shrinks how many adaptation levels a player can hold at once.
-powerPerLevel = 0.75
+# Maximum power is floor(maxPowerScale * sqrt(master level)), plus any region bonus. Each held adaptation uses 1 power at any level.
+# Effect: Clamped to a finite non-negative value. Lowering it shrinks how many adaptations a player can hold at once.
+maxPowerScale = 1.6
 # Controls Hardcore reset on player death.
 hardcoreResetOnPlayerDeath = false
 # Controls Hardcore no refunds.
