@@ -1,6 +1,7 @@
 uniform float noPuddleAreas;
 
 #include "/lib/fog_noise.glsl"
+#include "/lib/vapor.glsl"
 
 #ifdef ATUM_SHADER
     #include "/lib/atum_atmosphere.glsl"
@@ -102,6 +103,10 @@ vec4 GetVolumetricFog(
 
 	vec3 worldDirection = mat3(gbufferModelViewInverse) * viewDirection;
 	vec3 worldOrigin = gbufferModelViewInverse[3].xyz + cameraPosition;
+	#ifdef AURAM_RENDER_VAPOR
+		vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
+		vec2 vaporInterval = vaporRayInterval(vaporOrigin, worldDirection, rayEnd);
+	#endif
 	#ifdef DIMENSION_SMOKE
 		vec2 smokeInterval = smokeIntervalInLayer(worldOrigin.y, worldDirection.y, rayEnd);
 	#endif
@@ -212,6 +217,9 @@ vec4 GetVolumetricFog(
 		#elif defined MIDNIGHT_SHADER && defined MIDNIGHT_SMOKE
 			vec2 smokeDepth = midnightSmokeOpticalDepth(worldOrigin, worldDirection, stepStart, stepEnd, dither.x) * inACave;
 		#endif
+		#ifdef AURAM_RENDER_VAPOR
+			float vaporStart = stepStart;
+		#endif
 		stepStart = stepEnd;
 		stepBoundary = (stepBoundary + fogStepScale) * stepRatio - fogStepScale;
 
@@ -305,6 +313,17 @@ vec4 GetVolumetricFog(
 			// kill fog absorbance when in caves.
 			float fogTransmittanceAtCloud = totalAbsorbance * mix(1.0, fogToCloud, lightLevelZero);
 			totalAbsorbance *= mix(1.0, fogVolumeCoeff, lightLevelZero);
+			#ifdef AURAM_RENDER_VAPOR
+				if (vaporInterval.y > vaporStart && vaporInterval.x < stepEnd) {
+					vec3 vaporLight = indirectLight * (0.08 + 0.92 * lightLevelZero) + DirectLight * 0.25;
+					vaporLight += vec3(0.003);
+					vec4 vapor = traceVapor(vaporOrigin, worldDirection, vaporInterval, vaporStart, stepEnd, vaporLight);
+					color += vapor.rgb * totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
+					fogTransmittanceAtCloud *= pow(vapor.a, beforeCloud);
+					fogAbsorbance *= vapor.a;
+					totalAbsorbance *= vapor.a;
+				}
+			#endif
 		//------------------------------------
 		//------ ATMOSPHERE HAZE EFFECT
 		//------------------------------------

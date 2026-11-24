@@ -1,4 +1,5 @@
 #include "/lib/fog_noise.glsl"
+#include "/lib/vapor.glsl"
 
 #include "/lib/nether_smoke.glsl"
 
@@ -19,6 +20,9 @@ vec4 GetVolumetricFog(
 	vec3 dVWorld = (wpos-gbufferModelViewInverse[3].xyz);
 	vec3 progressW = vec3(0.0);
 
+	#ifdef AURAM_RENDER_VAPOR
+		float vaporRayEnd = length(dVWorld);
+	#endif
 	float maxLength = min(length(dVWorld), min(far, 12*16))/length(dVWorld);
 
 	dVWorld *= maxLength;
@@ -85,5 +89,15 @@ vec4 GetVolumetricFog(
 			#endif
 
 	}
+	#ifdef AURAM_RENDER_VAPOR
+		if (auramVaporActive && vaporRayEnd > 1e-6 && dL > 1e-6) {
+			vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
+			vec3 vaporDirection = dVWorld / dL;
+			vec2 interval = vaporRayInterval(vaporOrigin, vaporDirection, vaporRayEnd);
+			vec4 vapor = traceVapor(vaporOrigin, vaporDirection, interval, 0.0, vaporRayEnd, vec3(0.034, 0.012, 0.008));
+			color = color * vapor.a + vapor.rgb;
+			absorbance *= vapor.a;
+		}
+	#endif
 	return vec4(color, absorbance);
 }

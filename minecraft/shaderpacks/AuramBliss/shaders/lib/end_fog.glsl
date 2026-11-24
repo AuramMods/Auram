@@ -93,6 +93,7 @@ vec3 LightSourcePosition(vec3 worldPos, vec3 cameraPos, float vortexBounds){
 }
 
 #include "/lib/fog_noise.glsl"
+#include "/lib/vapor.glsl"
 
 // Create a rising swirl centered around some origin.
 void SwirlAroundOrigin(inout vec3 alteredOrigin, vec3 origin){
@@ -216,6 +217,9 @@ vec4 GetVolumetricFog(
 	vec3 dVWorld = (wpos-gbufferModelViewInverse[3].xyz);
 	vec3 progressW = vec3(0.0);
 
+	#ifdef AURAM_RENDER_VAPOR
+		float vaporRayEnd = length(dVWorld);
+	#endif
 	float maxLength = min(length(dVWorld),32.0 * 12.0)/length(dVWorld);
 	
 	dVWorld *= maxLength;
@@ -327,6 +331,16 @@ vec4 GetVolumetricFog(
 				color += LPV_FOG_ILLUMINATION(progressW-cameraPosition, dd, dL) * TorchBrightness_autoAdjust * absorbance;
 			#endif
 	}
+	#ifdef AURAM_RENDER_VAPOR
+		if (auramVaporActive && vaporRayEnd > 1e-6 && dL > 1e-6) {
+			vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
+			vec3 vaporDirection = dVWorld / dL;
+			vec2 interval = vaporRayInterval(vaporOrigin, vaporDirection, vaporRayEnd);
+			vec4 vapor = traceVapor(vaporOrigin, vaporDirection, interval, 0.0, vaporRayEnd, vec3(0.019, 0.013, 0.032));
+			color = color * vapor.a + vapor.rgb;
+			absorbance *= vapor.a;
+		}
+	#endif
 	return vec4(color, absorbance);
 }
 
