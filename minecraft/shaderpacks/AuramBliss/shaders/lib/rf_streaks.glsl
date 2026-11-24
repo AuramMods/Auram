@@ -15,7 +15,7 @@ vec3 rfAxis(int axis) {
 
 vec2 rfWander(float worldAxial, float seed) {
     // Sample in world space so neighboring conduit halves share the same drifting path.
-    vec2 p = vec2(worldAxial, frameTimeCounter * (0.56 / 3.0)) + seed * vec2(15.0, 11.0);
+    vec2 p = vec2(worldAxial, frameTimeCounter * (2.24 / 3.0)) + seed * vec2(15.0, 11.0);
     vec2 grid = floor(p);
     vec2 blend = smoothstep(vec2(0.0), vec2(1.0), fract(p));
     vec2 early = mix(rfWanderLattice(grid, seed), rfWanderLattice(grid + vec2(1.0, 0.0), seed), blend.x);
@@ -75,8 +75,12 @@ float rfDistanceSquared(vec3 ro, vec3 rd, vec2 interval, vec3 a, vec3 b, out flo
 vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, float phase,
              int inFace, uint inRate, int outFace, uint outRate) {
     float centerPhase = rfCenterPhase(block);
-    float start = centerPhase - (inFace < 0 ? 0.0 : 0.5);
-    float stop = centerPhase + (outFace < 0 ? 0.0 : 0.5);
+    vec3 center = vec3(block) + 0.5;
+    vec3 worldCell = center + auramRfPhaseOrigin;
+    vec3 inputFace = inFace < 0 ? vec3(0.0) : 0.5 * rfFaceNormal(inFace);
+    vec3 outputFace = outFace < 0 ? vec3(0.0) : 0.5 * rfFaceNormal(outFace);
+    float start = centerPhase - (inFace < 0 ? 0.0 : 0.5) + rfPhaseShift(worldCell + inputFace);
+    float stop = centerPhase + (outFace < 0 ? 0.0 : 0.5) + rfPhaseShift(worldCell + outputFace);
     float head = floor((stop - phase + rfTrailLength) / rfPulseSpacing) * rfPulseSpacing + phase;
     if (head <= start) return vec3(0.0);
 
@@ -84,7 +88,6 @@ vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, float phase,
     float energyOut = rfBrightness(outRate);
     if (max(energyIn, energyOut) <= 0.0) return vec3(0.0);
 
-    vec3 center = vec3(block) + 0.5;
     vec3 a = inFace < 0 ? center : rfFacePoint(center, inFace, true);
     vec3 d = outFace < 0 ? center : rfFacePoint(center, outFace, false);
     vec3 enter = inFace < 0 ? rfFaceNormal(outFace) : -rfFaceNormal(inFace);
@@ -93,7 +96,6 @@ vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, float phase,
     float reach = (inFace < 0 || outFace < 0) ? 0.17 : 0.29;
     vec3 b = a + reach * enter;
     vec3 c = d - reach * exit;
-    vec3 worldCell = center + auramRfPhaseOrigin;
     float seed = rfHash(worldCell + vec3(float(1 + inFace), float(1 + outFace), 13.0));
     vec2 crosswind = rfWander(dot(worldCell, vec3(1.0, 3.0, 5.0)) * 1.5, seed);
     float lift = rfWander(dot(worldCell, vec3(5.0, 2.0, 3.0)), seed + 0.39).x;

@@ -48,6 +48,15 @@ float rfCircuitPhase(uint clock, float fallback) {
     return uintBitsToFloat(texelFetch(auramRfVolume, ivec3(index % 64u, index / 64u, 64), 0).r);
 }
 
+float rfPhaseShift(vec3 world) {
+    // A moving speed field compresses and stretches the band's travel coordinate.
+    // Both sides of a cable face evaluate it at the same world position.
+    vec2 angle = vec2(dot(world, vec3(43.0, 29.0, 53.0)),
+                      dot(world, vec3(31.0, -47.0, 38.0))) * (rfTau / 256.0);
+    angle += (rfTau * frameTimeCounter / 3600.0) * vec2(-1604.0, 974.0);
+    return dot(sin(angle), vec2(0.14, 0.09));
+}
+
 float rfCenterPhase(ivec3 block) {
     // The two sides of each shared cable face meet at the same phase modulo two.
     return mod(dot(vec3(block) + auramRfPhaseOrigin, vec3(1.0)), rfPulseSpacing);
@@ -82,8 +91,8 @@ vec3 rfVoxelEmission(ivec3 voxel, int side, vec3 camera) {
     peak = max(peak, (rates >> 16u) & 255u);
     peak = max(peak, rates >> 24u);
     float phase = rfCircuitPhase(data.a, rfTravelPhase());
-    float age = mod(phase - rfCenterPhase(block), rfPulseSpacing) / rfTrailLength;
     vec3 world = vec3(block) + 0.5 + auramRfPhaseOrigin;
+    float age = mod(phase - rfCenterPhase(block) - rfPhaseShift(world), rfPulseSpacing) / rfTrailLength;
     uint rate = max(peak.x, max(peak.y, peak.z));
     return rfBandTint(world, age, float(rate)) * (2800.0 * RF_STREAK_INTENSITY *
             rfBrightness(rate) * rfEnvelope(age));
