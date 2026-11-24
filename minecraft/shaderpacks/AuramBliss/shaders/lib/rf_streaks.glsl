@@ -15,7 +15,7 @@ vec3 rfAxis(int axis) {
 
 vec2 rfWander(float worldAxial, float seed) {
     // Sample in world space so neighboring conduit halves share the same drifting path.
-    vec2 p = vec2(worldAxial, frameTimeCounter * (2.24 / 3.0)) + seed * vec2(15.0, 11.0);
+    vec2 p = vec2(worldAxial * 2.0, frameTimeCounter * (2.24 / 3.0)) + seed * vec2(15.0, 11.0);
     vec2 grid = floor(p);
     vec2 blend = smoothstep(vec2(0.0), vec2(1.0), fract(p));
     vec2 early = mix(rfWanderLattice(grid, seed), rfWanderLattice(grid + vec2(1.0, 0.0), seed), blend.x);
