@@ -266,7 +266,7 @@ void main() {
     float DH_depth1 = 0.0;
 	#endif
 
-	vec3 fragpos = toScreenSpace_DH(texcoord/RENDER_SCALE-vec2(TAA_Offset)*texelSize*0.5, z, DH_depth0);
+	vec3 fragpos = auramFrontViewPosition(texcoord/RENDER_SCALE-vec2(TAA_Offset)*texelSize*0.5, z, DH_depth0);
   
 	// vec3 fragpos = toScreenSpace(vec3(texcoord/RENDER_SCALE-vec2(TAA_Offset)*texelSize*0.5,z));
 	vec3 p3 = mat3(gbufferModelViewInverse) * fragpos + gbufferModelViewInverse[3].xyz;

@@ -357,7 +357,7 @@ void main() {
 		vec3 indirectLightColor_dynamic = averageSkyCol_Clouds/30.0;
 
 		vec3 viewPos1 = auramSurfaceViewPosition(tc/RENDER_SCALE, z, DH_z);
-		vec3 viewPos0 = auramSurfaceViewPosition(tc/RENDER_SCALE, z0, DH_z0);
+		vec3 viewPos0 = auramFrontViewPosition(tc/RENDER_SCALE, z0, DH_z0);
 		#ifdef AURAM_RENDER_VAPOR
 			vaporTranslucentStart = length(viewPos0);
 		#endif

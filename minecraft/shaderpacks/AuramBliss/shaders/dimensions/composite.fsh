@@ -278,12 +278,12 @@ vec2 SSAO(
 
 		if (offset.x >= 0 && offset.y >= 0 && offset.x < viewWidth*RENDER_SCALE.x && offset.y < viewHeight*RENDER_SCALE.y ) {
 			#ifdef AURAM_LOD_DEPTH
-				float dhdepth = texelFetch2D(dhDepthTex1, offset,0).x;
+				float dhdepth = sampleLodDepth(dhDepthTex1, (vec2(offset) + 0.5) * texelSize).x;
 			#else
 				float dhdepth = 0.0;
 			#endif
 
-			vec3 t0 = toScreenSpace_DH((offset*texelSize+acc+0.5*texelSize) * (1.0/RENDER_SCALE), convertHandDepth_2(texelFetch2D(depthtex1, offset,0).x, hand), dhdepth);
+			vec3 t0 = auramSurfaceViewPosition((offset*texelSize+acc+0.5*texelSize) * (1.0/RENDER_SCALE), convertHandDepth_2(texelFetch2D(depthtex1, offset,0).x, hand), dhdepth);
 		
 			vec3 vec = (t0.xyz - viewPos);
 			float dsquared = dot(vec, vec);
@@ -441,7 +441,7 @@ void main() {
 		convertHandDepth(z);
 	}
 
-	vec3 viewPos = toScreenSpace_DH(texcoord/RENDER_SCALE - TAA_Offset*texelSize*0.5, z, DH_depth1);
+	vec3 viewPos = auramSurfaceViewPosition(texcoord/RENDER_SCALE - TAA_Offset*texelSize*0.5, z, DH_depth1);
 	
 
 	#if defined BLISS_PACKED_DH_DEPTH || (defined DENOISE_SSS_AND_SSAO && indirect_effect == 1)

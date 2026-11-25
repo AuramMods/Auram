@@ -49,24 +49,42 @@ vec3 auramSurfaceViewPosition(vec2 texcoord, float depth, float lodDepth) {
     return toScreenSpace_DH(texcoord, depth, lodDepth);
 }
 
+vec3 auramFrontViewPosition(vec2 texcoord, float depth, float lodDepth) {
+    vec3 viewPosition = auramSurfaceViewPosition(texcoord, depth, lodDepth);
+    #ifdef AURAM_VOXY_DEPTH
+        // A Voxy translucent pixel can be in front of the near opaque depth.
+        if (depth < 1.0 && lodDepth > 0.0 && lodDepth < 1.0) {
+            vec3 lodPosition = auramVoxyViewPosition(texcoord, lodDepth);
+            if (lodPosition.z > viewPosition.z) return lodPosition;
+        }
+    #endif
+    return viewPosition;
+}
+
 // Use the same view direction for terrain, LODs and empty sky. Only a real depth can stop the ray.
 vec4 volumeViewRay(vec2 texcoord, float depth, float dhDepth) {
     vec3 direction = normalize(toScreenSpace_DH(texcoord, 0.5, 1.0));
     float surfaceDistance = -1.0;
+    #ifdef AURAM_VOXY_DEPTH
+    if (depth < 1.0 || (dhDepth > 0.0 && dhDepth < 1.0)) {
+        surfaceDistance = length(auramFrontViewPosition(texcoord, depth, dhDepth));
+    }
+    #else
     if (depth < 1.0) {
         surfaceDistance = length(toScreenSpace_DH(texcoord, depth, 1.0));
     }
-    #if defined DISTANT_HORIZONS || defined AURAM_VOXY_DEPTH
+    #ifdef DISTANT_HORIZONS
         else if (dhDepth > 0.0 && dhDepth < 1.0) {
             surfaceDistance = length(auramSurfaceViewPosition(texcoord, depth, dhDepth));
         }
+    #endif
     #endif
     return vec4(direction, surfaceDistance);
 }
 
 vec3 toClipSpace3_DH( vec3 viewSpacePosition, bool depthCheck ) {
 
-	#ifdef DISTANT_HORIZONS
+	#if defined DISTANT_HORIZONS || defined AURAM_VOXY_DEPTH
 		mat4 projectionMatrix = depthCheck ? dhProjection : gbufferProjection;
    		return projMAD(projectionMatrix, viewSpacePosition) / -viewSpacePosition.z * 0.5 + 0.5;
 	#else

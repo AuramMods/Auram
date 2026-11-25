@@ -19,9 +19,19 @@ vec3 voxyViewPosition() {
 }
 
 #ifdef DH_OVERDRAW_PREVENTION
-bool voxy_keepWaterOverlap() {
-    vec3 waterPosition = (vxModelViewInv * vec4(voxyViewPosition(), 1.0)).xyz;
+bool voxy_keepWaterWithNearDepth(float nearDepth) {
+    vec3 viewPosition = voxyViewPosition();
+    if (nearDepth < 1.0 - 1e-5) {
+        vec4 nearClip = gbufferProjection * vec4(viewPosition, 1.0);
+        float waterDepth = nearClip.z / nearClip.w * 0.5 + 0.5;
+        if (waterDepth >= nearDepth) return false;
+    }
+    vec3 waterPosition = (vxModelViewInv * vec4(viewPosition, 1.0)).xyz;
     return dhTransitionDither(frameCounter) < voxyWaterCoverage(dhChunkDistance(waterPosition), vxNearRenderDistance);
+}
+
+bool voxy_keepWaterOverlap() {
+    return voxy_keepWaterWithNearDepth(1.0);
 }
 #endif
 

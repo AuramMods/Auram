@@ -379,7 +379,7 @@ void main() {
 		float DH_z0 = 0.0;
 	#endif
 	
-	vec3 viewPos0 = auramSurfaceViewPosition(tc/RENDER_SCALE, z0, DH_z0);
+	vec3 viewPos0 = auramFrontViewPosition(tc/RENDER_SCALE, z0, DH_z0);
 	vec3 playerPos_normalized = normalize(mat3(gbufferModelViewInverse) * viewPos0 + gbufferModelViewInverse[3].xyz);
 
 

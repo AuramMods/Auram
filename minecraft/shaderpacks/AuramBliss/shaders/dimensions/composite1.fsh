@@ -1120,7 +1120,7 @@ void main() {
 
  	if ((isEyeInWater == 0 && isWater) || (isEyeInWater == 1 && !isWater)){
 		#ifdef AURAM_LOD_DEPTH
-			vec3 viewPos0 = auramSurfaceViewPosition(texcoord / RENDER_SCALE - TAA_Offset * texelSize * 0.5, z0, DH_depth0);
+			vec3 viewPos0 = auramFrontViewPosition(texcoord / RENDER_SCALE - TAA_Offset * texelSize * 0.5, z0, DH_depth0);
 		#else
 			vec3 viewPos0 = toScreenSpace(vec3(texcoord/RENDER_SCALE-TAA_Offset*texelSize*0.5,z0));
 		#endif
@@ -1308,7 +1308,7 @@ void main() {
 			#endif
 			
 			#ifdef SCREENSPACE_CONTACT_SHADOWS
-				vec2 SS_directLight = SSRT_Shadows(toScreenSpace_DH(texcoord/RENDER_SCALE, z, DH_depth1), isDHrange, normalize(WsunVec*mat3(gbufferModelViewInverse)), interleaved_gradientNoise(), sunSSS_density > 0.0 && shadowMapFalloff2 < 1.0, hand);
+				vec2 SS_directLight = SSRT_Shadows(auramSurfaceViewPosition(texcoord/RENDER_SCALE, z, DH_depth1), isDHrange, normalize(WsunVec*mat3(gbufferModelViewInverse)), interleaved_gradientNoise(), sunSSS_density > 0.0 && shadowMapFalloff2 < 1.0, hand);
 				
 				// combine shadowmap with a minumum shadow determined by the screenspace shadows.
 				Shadows = min(Shadows, SS_directLight.r);
