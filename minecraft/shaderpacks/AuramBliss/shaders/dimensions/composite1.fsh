@@ -1,5 +1,8 @@
 #include "/lib/settings.glsl"
 #include "/lib/auram_lod_depth.glsl"
+#if defined BorderFog && defined OVERWORLD_SHADER
+	#include "/lib/border_fog.glsl"
+#endif
 #ifdef TWILIGHT_SHADER
 	#include "/lib/twilight_sky.glsl"
 #endif
@@ -1372,13 +1375,15 @@ void main() {
 	}
 
   	#if defined BorderFog && defined OVERWORLD_SHADER
-		#ifdef AURAM_LOD_DEPTH
-  	  	float fog = smoothstep(1.0, 0.0, min(max(1.0 - length(feetPlayerPos) / dhRenderDistance,0.0)*3.0,1.0)   );
-  	  #else
-  	  	float fog = smoothstep(1.0, 0.0, min(max(1.0 - length(feetPlayerPos) / far,0.0)*3.0,1.0)   );
-  	  #endif
+	  #if defined AURAM_VOXY_DEPTH
+	    float fogRange = max(far, float(dhRenderDistance));
+	  #elif defined AURAM_LOD_DEPTH
+	    float fogRange = float(dhRenderDistance);
+	  #else
+	    float fogRange = far;
+	  #endif
 
-  	  fog *= exp(-10.0 * pow(clamp(feetPlayerPos_normalized.y,0.0,1.0)*4.0,2.0));
+	  float fog = borderFogFactor(feetPlayerPos, fogRange);
 
   	  if(swappedDepth >= 1.0 || isEyeInWater != 0) fog = 0.0;
 

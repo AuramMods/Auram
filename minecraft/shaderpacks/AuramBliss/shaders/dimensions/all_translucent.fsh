@@ -114,6 +114,13 @@ uniform vec3 nsunColor;
 #include "/lib/water_cloud_reflection.glsl"
 #include "/lib/waterBump.glsl"
 
+#if defined BorderFog && defined OVERWORLD_SHADER
+	#include "/lib/border_fog.glsl"
+	#if defined VOXY && !defined DISTANT_HORIZONS
+		uniform int vxRenderDistanceBlocks;
+	#endif
+#endif
+
 
 #ifdef OVERWORLD_SHADER
 	flat varying float Flashing;
@@ -711,13 +718,15 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
 
 	#if defined BorderFog && defined OVERWORLD_SHADER
 	
-	  #ifdef DISTANT_HORIZONS
-	  	float fog = smoothstep(1.0, 0.0, min(max(1.0 - length(feetPlayerPos) / dhRenderDistance,0.0)*3.0,1.0)   );
+	  #if defined DISTANT_HORIZONS
+	    float fogRange = float(dhRenderDistance);
+	  #elif defined VOXY
+	    float fogRange = max(far, float(vxRenderDistanceBlocks));
 	  #else
-	  	float fog = smoothstep(1.0, 0.0, min(max(1.0 - length(feetPlayerPos) / far,0.0)*3.0,1.0)   );
+	    float fogRange = far;
 	  #endif
 
-	  fog *= exp(-10.0 * pow(clamp(normalize(feetPlayerPos).y,0.0,1.0)*4.0,2.0));
+	  float fog = borderFogFactor(feetPlayerPos, fogRange);
 
 	  #ifdef SKY_GROUND
 	    vec3 borderFogColor = averageSkyCol;
