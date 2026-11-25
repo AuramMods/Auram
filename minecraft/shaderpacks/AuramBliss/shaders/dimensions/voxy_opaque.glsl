@@ -139,6 +139,12 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
         subSurfaceScattering = auramTerrainScattering(blockId);
     #endif
 
+    float emission = 0.0;
+    #if EMISSIVE_TYPE == 1 || EMISSIVE_TYPE == 2
+        // Match Bliss's near-terrain emission for lava through the LOD handoff.
+        if (blockId == BLOCK_LAVA) emission = 0.5;
+    #endif
+
     // colortex8 takes raw LabPBR channels. The compatibility pass packs them later.
-    SPECULAR_DATA = vec4(0.0, 0.02, subSurfaceScattering, 0.0);
+    SPECULAR_DATA = vec4(0.0, 0.02, subSurfaceScattering, emission);
 }
