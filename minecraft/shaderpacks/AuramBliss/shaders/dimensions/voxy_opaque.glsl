@@ -5,6 +5,8 @@
 #include "/lib/blocks.glsl"
 #include "/lib/terrain_sss.glsl"
 
+bool voxyUsesNearDepth = false;
+
 #ifdef DH_OVERDRAW_PREVENTION
 #include "/lib/res_params.glsl"
 #include "/lib/dh_chunk_transition.glsl"
@@ -23,7 +25,8 @@ bool voxy_keepOpaqueWithNearDepth(float nearDepth, float nearReadiness) {
     float coverage = smoothstep(max(nearDistance - 16.0, 0.0), nearDistance + 8.0,
                                 dhChunkDistance(relativePosition));
     if (nearReadiness >= 0.0) coverage = mix(1.0, coverage, nearReadiness);
-    return dhTransitionDither(frameCounter) < coverage;
+    voxyUsesNearDepth = dhTransitionDither(frameCounter) < coverage;
+    return voxyUsesNearDepth;
 }
 #endif
 
@@ -87,9 +90,13 @@ layout(location = 2) out vec4 NORMAL_AND_AO;
 void voxy_emitFragment(VoxyFragmentParameters parameters) {
 
     vec3 normal = vec3( uint((parameters.face >> 1) == 2), uint((parameters.face >> 1) == 0), uint((parameters.face >> 1) == 1) ) * (float(int(parameters.face) & 1) * 2.0 - 1.0);
-    // normal.z = clamp(normal.z-1.0,-1.0,1.0)*0.5+0.5;
-    normal = normalize(normal); // normals in worldspace by default
-    NORMAL_AND_AO = vec4(normal * 0.5 + 0.5, 0.0);
+    normal = normalize(normal);
+    vec3 viewNormal = worldToView(normal);
+    // An overlap pixel retains Embeddium's depth. Match the near G-buffer
+    // layout so the lighting pass uses the same normal and shadow bias.
+    vec3 flatNormal = voxyUsesNearDepth ? viewNormal : normal;
+    vec3 shadingNormal = voxyUsesNearDepth ? normal : viewNormal;
+    NORMAL_AND_AO = vec4(flatNormal * 0.5 + 0.5, 0.0);
 #ifdef BLISS_COMPAT
     NORMAL_AND_AO = roundEven(NORMAL_AND_AO * 255.0) / 255.0;
 #endif
@@ -102,7 +109,7 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
 
     // Voxy supplies texture sample centers. Bliss stores each light level on [0, 1].
     vec2 lightMaps = clamp((parameters.lightMap * 16.0 - 0.5) / 15.0, 0.0, 1.0);
-    vec4 data1 = encode(worldToView(normal), lightMaps);
+    vec4 data1 = encode(shadingNormal, lightMaps);
 
     Albedo = clamp(Albedo,0.0,1.0);
     data1 = clamp(data1,0.0,1.0);
