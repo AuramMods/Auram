@@ -1329,7 +1329,16 @@ void main() {
 			#endif
 
 			#ifdef CLOUDS_SHADOWS
-				cloudShadow = GetCloudShadow(feetPlayerPos);
+				vec3 cloudShadowPosition = feetPlayerPos;
+				#if defined VOXY && !defined DISTANT_HORIZONS
+					if (isDHrange && DH_depth1 > 0.0 && DH_depth1 < 1.0) {
+						vec2 lodUv = texcoord / RENDER_SCALE - TAA_Offset * texelSize * 0.5;
+						vec3 lodClipPosition = vec3(lodUv, DH_depth1) * 2.0 - 1.0;
+						vec4 lodViewPosition = dhProjectionInverse * vec4(lodClipPosition, 1.0);
+						cloudShadowPosition = mat3(gbufferModelViewInverse) * (lodViewPosition.xyz / lodViewPosition.w);
+					}
+				#endif
+				cloudShadow = GetCloudShadow(cloudShadowPosition);
 				Shadows *= cloudShadow;
 				Direct_SSS *= cloudShadow;
 			#endif
