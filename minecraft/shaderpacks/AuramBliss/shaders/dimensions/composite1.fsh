@@ -1226,11 +1226,12 @@ void main() {
 		float estimatedSunDepth = Vdiff; //assuming water plane
 		Absorbtion = mix(exp(-2.0 * totEpsilon * estimatedDepth), exp(-8.0 * totEpsilon), depthfalloff);
         #ifdef AURAM_VOXY_DEPTH
-            if (isEyeInWater == 0 && auramVoxyFrontIsLod(z0, DH_depth0)
-                && (z < 1.0 || auramHasVoxyDepth(DH_depth1))) {
-                // Filter the light going to the bed here. The fog pass covers the ray back to the surface.
-                vec3 waterColumn = mat3(gbufferModelViewInverse) * (viewPos - viewPos0);
-                estimatedDepth = abs(waterColumn.y);
+            if (isEyeInWater == 0 && auramWaterColumnUsesVoxy(z0, DH_depth0, z, DH_depth1)) {
+                // The water surface and the bed can come from different renderers.
+                vec2 uv = texcoord / RENDER_SCALE - TAA_Offset * texelSize * 0.5;
+                vec3 bedPosition = auramFrontViewPosition(uv, z, DH_depth1);
+                vec3 waterColumn = mat3(gbufferModelViewInverse) * (bedPosition - viewPos0);
+                estimatedDepth = max(-waterColumn.y, 0.0);
                 float sunPath = estimatedDepth / max(abs(WsunVec.y), 0.15);
                 Absorbtion = exp(-totEpsilon * min(sunPath, 16.0));
             }

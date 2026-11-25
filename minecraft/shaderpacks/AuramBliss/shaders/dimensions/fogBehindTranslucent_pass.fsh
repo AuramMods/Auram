@@ -308,6 +308,10 @@ void main() {
 	vec2 tc = floor(gl_FragCoord.xy)/VL_RENDER_RESOLUTION*texelSize+0.5*texelSize;
 
 	bool iswater = texture2D(colortex7,tc).a > 0.99;
+    #ifdef AURAM_VOXY_DEPTH
+        // From underwater, the water surface is the end of the water ray.
+        if (iswater && isEyeInWater == 1) return;
+    #endif
 
 	//////////////////////////////////////////////////////////
 	///////////////// BEHIND OF TRANSLUCENTS /////////////////
@@ -381,10 +385,11 @@ void main() {
 		float estimatedDepth = Vdiff * abs(VdotU) ;	//assuming water plane
 		float estimatedSunDepth = estimatedDepth / max(abs(WsunVec.y), 0.001); // assuming water plane
         #ifdef AURAM_VOXY_DEPTH
-            if (iswater && auramVoxyFrontIsLod(z0, DH_z0) && (z < 1.0 || auramHasVoxyDepth(DH_z))) {
+            if (iswater && auramWaterColumnUsesVoxy(z0, DH_z0, z, DH_z) && (z < 1.0 || auramHasVoxyDepth(DH_z))) {
+                viewPos1 = auramFrontViewPosition(tc / RENDER_SCALE, z, DH_z);
                 vec3 waterColumn = viewPos1 - viewPos0;
-                Vdiff = length(waterColumn);
-                estimatedDepth = abs((mat3(gbufferModelViewInverse) * waterColumn).y);
+                Vdiff = max(length(viewPos1) - length(viewPos0), 0.0);
+                estimatedDepth = max(-(mat3(gbufferModelViewInverse) * waterColumn).y, 0.0);
                 estimatedSunDepth = estimatedDepth / max(abs(WsunVec.y), 0.15);
             }
         #endif

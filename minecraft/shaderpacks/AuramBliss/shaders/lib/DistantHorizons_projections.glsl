@@ -47,6 +47,10 @@ bool auramVoxyFrontIsLod(float nearDepth, float lodDepth) {
         (nearDepth >= 1.0 || auramAxialDepth(lodDepth, dhProjectionInverse) < auramAxialDepth(nearDepth, gbufferProjectionInverse));
 }
 
+bool auramWaterColumnUsesVoxy(float nearFront, float lodFront, float nearBed, float lodBed) {
+    return auramVoxyFrontIsLod(nearFront, lodFront) || auramVoxyFrontIsLod(nearBed, lodBed);
+}
+
 vec3 auramVoxyViewPosition(vec2 texcoord, float lodDepth) {
     vec3 clipPosition = vec3(texcoord, lodDepth) * 2.0 - 1.0;
     vec4 viewPosition = dhProjectionInverse * vec4(clipPosition, 1.0);

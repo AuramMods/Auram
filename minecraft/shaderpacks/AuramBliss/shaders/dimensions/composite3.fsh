@@ -61,6 +61,9 @@ uniform vec3 cameraPosition;
 uniform vec3 previousCameraPosition;
 
 uniform int isEyeInWater;
+#ifdef AURAM_VOXY_DEPTH
+  uniform float vxNearRenderDistance;
+#endif
 uniform ivec2 eyeBrightnessSmooth;
 uniform ivec2 eyeBrightness;
 uniform float rainStrength;
@@ -485,9 +488,22 @@ void main() {
     #ifdef OVERWORLD_SHADER
     
       linearDistance = length(vec3(p3.x,max(-p3.y,0.0),p3.z));
-      float fogfade =  exp(-0.001*(linearDistance*linearDistance));
+      float fogfade = exp(-0.001 * linearDistance * linearDistance);
+      #ifdef AURAM_VOXY_DEPTH
+        // The tinted absorption below handles near water. Fade distant terrain
+        // gradually past the chunk handoff so the fog does not hide it first.
+        if (vxNearRenderDistance > 0.0) {
+          float fadeStart = min(vxNearRenderDistance, 64.0);
+          fogfade = 1.0 - smoothstep(fadeStart, fadeStart + 32.0, linearDistance);
+        }
+      #endif
       vec3 thresholdAbsorbedColor = mix(maxAbsorb, absorbColor, clamp(dot(absorbColor,vec3(0.33333)),0.0,1.0));
-      color.rgb = mix(vec3(1.0) * clamp(WsunVec.y,0,1) * pow(normalize(np3).y*0.3+0.7,1.5) * maxAbsorb, color.rgb * thresholdAbsorbedColor, clamp(fogfade,0.0,1.0));
+      #ifdef AURAM_VOXY_DEPTH
+        // The volumetric pass adds water scattering below. Only attenuate the scene here.
+        color.rgb *= thresholdAbsorbedColor * fogfade;
+      #else
+        color.rgb = mix(vec3(1.0) * clamp(WsunVec.y,0,1) * pow(normalize(np3).y*0.3+0.7,1.5) * maxAbsorb, color.rgb * thresholdAbsorbedColor, clamp(fogfade,0.0,1.0));
+      #endif
     
     #else
    

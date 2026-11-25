@@ -444,6 +444,10 @@ void main() {
 
 	#if defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
         float cloudTransmittance = VolumetricClouds.a;
+        #ifdef AURAM_VOXY_DEPTH
+            // The underwater fog pass replaces the air volume for this ray.
+            if (isEyeInWater == 1) cloudTransmittance = 1.0;
+        #endif
         #ifdef BLISS_COMPAT
             cloudTransmittance = roundEven(clamp(cloudTransmittance, 0.0, 1.0) * 65535.0) / 65535.0;
         #endif

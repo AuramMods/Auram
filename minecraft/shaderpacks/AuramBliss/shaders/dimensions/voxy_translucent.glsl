@@ -69,9 +69,9 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
     vec3 viewPosition = voxyViewPosition();
     vec3 playerPosition = (vxModelViewInv * vec4(viewPosition, 1.0)).xyz;
 
-    if (water && worldNormal.y > 0.1) {
+    if (water && abs(worldNormal.y) > 0.1) {
         vec3 bump = auramWaterSurfaceBump(playerPosition + cameraPosition);
-        worldNormal = bump.xzy;
+        worldNormal = bump.xzy * sign(worldNormal.y);
     }
     worldNormal = normalize(worldNormal);
 
@@ -89,7 +89,8 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
     vec3 direct = vec3(0.0);
     vec3 ambient = vec3(0.5);
     #ifdef OVERWORLD_SHADER
-        vec3 sun = normalize(mat3(vxModelViewInv) * sunPosition) * (sunElevation > 0.0 ? 1.0 : -1.0);
+        vec3 worldSun = normalize(mat3(vxModelViewInv) * sunPosition);
+        vec3 sun = worldSun * (sunElevation > 0.0 ? 1.0 : -1.0);
         float normalLight = clamp((-15.0 + max(dot(worldNormal, sun), 0.0) * 255.0) / 240.0, 0.0, 1.0);
         direct = texelFetch(colortex4, ivec2(6, 37), 0).rgb / 80.0 * normalLight;
         vec3 normalWeights = worldNormal / dot(abs(worldNormal), vec3(1.0));
@@ -102,16 +103,30 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
     #ifdef WATER_REFLECTIONS
         vec3 eye = normalize(viewPosition);
         vec3 normal = mat3(vxModelView) * worldNormal;
-        float fresnel = mix(0.02, 1.0, pow(clamp(1.0 + dot(normal, eye), 0.0, 1.0), 5.0));
+        bool underwater = water && isEyeInWater == 1;
+        float normalDotEye = dot(normal, eye);
+        if (water) normalDotEye = -abs(normalDotEye);
+        float fresnelFactor = pow(clamp(1.0 + normalDotEye, 0.0, 1.0), 5.0);
+        #ifdef SNELLS_WINDOW
+            if (underwater) fresnelFactor = pow(clamp(1.5 + normalDotEye, 0.0, 1.0), 25.0);
+        #endif
+        float fresnel = mix(0.02, 1.0, fresnelFactor);
         vec3 reflection = shaded;
         #if defined OVERWORLD_SHADER && defined WATER_BACKGROUND_SPECULAR
-            vec3 reflected = mat3(vxModelViewInv) * reflect(eye, normal);
-            if (water) reflected = auramWaterSkyDirection(reflected, playerPosition, cameraPosition.y);
-            reflection = voxySkyReflection(reflected);
+            if (!underwater) {
+                vec3 reflected = mat3(vxModelViewInv) * reflect(eye, normal);
+                if (water) reflected = auramWaterSkyDirection(reflected, playerPosition, cameraPosition.y);
+                reflection = voxySkyReflection(reflected);
+            }
+        #endif
+        #ifdef OVERWORLD_SHADER
+            if (underwater) {
+                reflection = exp(-8.0 * vec3(Water_Absorb_R, Water_Absorb_G, Water_Absorb_B)) * max(worldSun.y, 0.0);
+            }
         #endif
         reflection *= fresnel;
         #if defined OVERWORLD_SHADER && defined WATER_SUN_SPECULAR
-            reflection += direct * voxySunReflection(worldNormal, normalize(playerPosition), sun);
+            if (!underwater) reflection += direct * voxySunReflection(worldNormal, normalize(playerPosition), sun);
         #endif
         float outputAlpha = mix(alpha, 1.0, fresnel);
         shaded = (shaded * alpha * (1.0 - fresnel) + reflection) / max(outputAlpha, 1.0 / 255.0);
