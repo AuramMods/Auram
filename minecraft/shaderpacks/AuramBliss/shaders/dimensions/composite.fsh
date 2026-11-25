@@ -278,13 +278,18 @@ vec2 SSAO(
 		ivec2 offset = ivec2(gl_FragCoord.xy + sampleOffset*vec2(viewWidth,viewHeight*aspectRatio)*RENDER_SCALE);
 
 		if (offset.x >= 0 && offset.y >= 0 && offset.x < viewWidth*RENDER_SCALE.x && offset.y < viewHeight*RENDER_SCALE.y ) {
+			vec2 sampleUV = (vec2(offset) + 0.5) * texelSize;
 			#ifdef AURAM_LOD_DEPTH
-				float dhdepth = sampleLodDepth(dhDepthTex1, (vec2(offset) + 0.5) * texelSize).x;
+				float dhdepth = sampleLodOpaqueDepth(dhDepthTex1, sampleUV);
 			#else
 				float dhdepth = 0.0;
 			#endif
 
-			vec3 t0 = auramSurfaceViewPosition((offset*texelSize+acc+0.5*texelSize) * (1.0/RENDER_SCALE), convertHandDepth_2(texelFetch2D(depthtex1, offset,0).x, hand), dhdepth);
+			float nearDepth = texelFetch2D(depthtex1, offset, 0).x;
+			#if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
+				nearDepth = auramVisibleNearOpaqueDepth(sampleUV / RENDER_SCALE, nearDepth, dhdepth);
+			#endif
+			vec3 t0 = auramSurfaceViewPosition((sampleUV + acc) / RENDER_SCALE, convertHandDepth_2(nearDepth, hand), dhdepth);
 		
 			vec3 vec = (t0.xyz - viewPos);
 			float dsquared = dot(vec, vec);
@@ -390,17 +395,19 @@ void main() {
 	vec2 texcoord = gl_FragCoord.xy*texelSize;
 
 	float z = texture2D(depthtex1,texcoord).x;
-    #ifdef BLISS_COMPAT
-        float vanillaOpaqueDepth = z;
-    #endif
-
 	#ifdef AURAM_LOD_DEPTH
-		float DH_depth1 = sampleLodDepth(dhDepthTex1,texcoord).x;
+		float DH_depth1 = sampleLodOpaqueDepth(dhDepthTex1, texcoord);
+		#if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
+			z = auramVisibleNearOpaqueDepth(texcoord / RENDER_SCALE, z, DH_depth1);
+		#endif
 		float swappedDepth = z >= 1.0 ? DH_depth1 : z;
 	#else
 		float DH_depth1 = 1.0;
 		float swappedDepth = z;
 	#endif
+    #ifdef BLISS_COMPAT
+        float visibleNearOpaqueDepth = z;
+    #endif
 	
 
 	vec4 SHADOWDATA = vec4(0.0);
@@ -421,7 +428,7 @@ void main() {
         if (translucentMask > 0.0) gl_FragData[1].a += 2.0;
         gl_FragData[1].b = uintBitsToFloat(floatBitsToUint(frontDepth) | (isWater ? 0x80000000u : 0u));
         #ifndef AURAM_LOD_DEPTH
-            gl_FragData[2] = vec4(vanillaOpaqueDepth, 0.0, 0.0, 0.0);
+            gl_FragData[2] = vec4(visibleNearOpaqueDepth, 0.0, 0.0, 0.0);
         #endif
         vec4 normalsAndAO = texture2D(colortex15, texcoord);
         vec4 specular = texture2D(colortex8, texcoord);
@@ -462,8 +469,11 @@ void main() {
 		#endif
 
         #ifdef BLISS_PACKED_DH_DEPTH
-            gl_FragData[2] = vec4(vanillaOpaqueDepth, DH_depth1,
-                sampleLodDepth(dhDepthTex, texcoord).x, blissEncodeMixedDepth(depth));
+            float lodFront = sampleLodDepth(dhDepthTex, texcoord).x;
+            #if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
+                lodFront = auramVoxyFrontDepth(lodFront, DH_depth1);
+            #endif
+            gl_FragData[2] = vec4(visibleNearOpaqueDepth, DH_depth1, lodFront, blissEncodeMixedDepth(depth));
         #elif !defined BLISS_COMPAT
             gl_FragData[2] = vec4(0.0, 0.0, 0.0, depth < 1.0 ? depth * depth * 65000.0 : 65000.0);
         #endif

@@ -17,7 +17,7 @@ const int colortex11Format = RGBA16; 				// unchanged translucents albedo, alpha
 */
 #ifdef BLISS_COMPAT
 /*
-const int colortex12Format = RGBA32F;              // Raw vanilla opaque, DH opaque and DH translucent depth, mixed depth in alpha.
+const int colortex12Format = RGBA32F;              // Visible near opaque, LoD opaque, LoD translucent and mixed depth.
 */
 #else
 /*
@@ -57,6 +57,13 @@ const bool colortex12Clear = false;
 const bool colortex13Clear = false;
 const bool colortex14Clear = true;
 const bool colortex15Clear = false;
+#if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
+/*
+const int colortex16Format = R32F;                  // Opaque Voxy depth written with its material.
+*/
+const bool colortex16Clear = true;
+const vec4 colortex16ClearColor = vec4(0.0, 0.0, 0.0, 0.0);
+#endif
 
 
 #ifdef SCREENSHOT_MODE

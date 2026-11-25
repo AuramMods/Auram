@@ -10,7 +10,11 @@
     "waterTransition": true,
     "terrainTransition": true,
 #endif
+#ifdef DH_OVERDRAW_PREVENTION
+    "opaqueDrawBuffers": [1, 8, 15, 16],
+#else
     "opaqueDrawBuffers": [1, 8, 15],
+#endif
     "translucentDrawBuffers": [2, 7],
     "blending": {
         "-1": "off",

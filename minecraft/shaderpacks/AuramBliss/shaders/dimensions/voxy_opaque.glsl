@@ -10,13 +10,18 @@ bool voxyUsesNearDepth = false;
 #ifdef DH_OVERDRAW_PREVENTION
 #include "/lib/res_params.glsl"
 #include "/lib/dh_chunk_transition.glsl"
+#include "/lib/voxy_opaque_depth.glsl"
 
 bool voxy_keepOpaqueWithNearDepth(float nearDepth, float nearReadiness) {
     vec2 uv = gl_FragCoord.xy * texelSize / RENDER_SCALE;
     vec4 view = vxProjInv * vec4(vec3(uv, gl_FragCoord.z) * 2.0 - 1.0, 1.0);
     vec3 lod = view.xyz / view.w;
-    float tolerance = 0.6 * -lod.z / max(length(lod), 1.0);
-    if (abs(dhViewDepth(nearDepth, gbufferProjectionInverse) + lod.z) > tolerance) return false;
+    float tolerance = auramVoxyOpaqueTolerance(lod);
+    float gap = dhViewDepth(nearDepth, gbufferProjectionInverse) + lod.z;
+    if (gap < -tolerance) return false;
+    // A deeper near fragment can be a cave wall under a section still loading.
+    // Let a settled near section reveal real openings in the cached surface.
+    if (gap > tolerance) return nearReadiness < 1.0;
 
     // Both passes wrote this surface. Choose one material per pixel so encoded
     // normals and lightmaps survive the transition intact.
@@ -86,8 +91,16 @@ struct VoxyFragmentParameters {
 layout(location = 0) out vec4 DEFERRED_DATA;
 layout(location = 1) out vec4 SPECULAR_DATA;
 layout(location = 2) out vec4 NORMAL_AND_AO;
+#ifdef DH_OVERDRAW_PREVENTION
+layout(location = 3) out float OPAQUE_LOD_DEPTH;
+#endif
 
 void voxy_emitFragment(VoxyFragmentParameters parameters) {
+#ifdef DH_OVERDRAW_PREVENTION
+    // Voxy clears its depth where the regular terrain stencil was set, even after
+    // the handoff drew a foreground LoD. Record the depth with the material.
+    OPAQUE_LOD_DEPTH = voxyUsesNearDepth ? 0.0 : gl_FragCoord.z;
+#endif
 
     vec3 normal = vec3( uint((parameters.face >> 1) == 2), uint((parameters.face >> 1) == 0), uint((parameters.face >> 1) == 1) ) * (float(int(parameters.face) & 1) * 2.0 - 1.0);
     normal = normalize(normal);

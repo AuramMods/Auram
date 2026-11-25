@@ -396,7 +396,7 @@ vec2 voxyContactShadows(vec3 viewPos, float clipDepth, vec3 rayStep, int steps) 
         #ifdef BLISS_COMPAT
             float depth = texelFetch2D(colortex12, ivec2(ray.xy / texelSize), 0).g;
         #else
-            float depth = sampleLodDepth(dhDepthTex1, ray.xy).x;
+            float depth = sampleLodOpaqueDepth(dhDepthTex1, ray.xy);
         #endif
         if (depth <= 0.0 || depth >= ray.z) continue;
 
@@ -464,7 +464,7 @@ vec2 SSRT_Shadows(vec3 viewPos, bool depthCheck, vec3 lightDir, float noise, boo
         #else
             float samplePos = convertHandDepth_2(texture2D(depthtex1, screenPos.xy).x, hand);
             #ifdef AURAM_LOD_DEPTH
-                if (depthCheck) samplePos = sampleLodDepth(dhDepthTex1, screenPos.xy).x;
+                if (depthCheck) samplePos = sampleLodOpaqueDepth(dhDepthTex1, screenPos.xy);
             #endif
         #endif
 
@@ -592,7 +592,10 @@ float voxyOpaqueViewDepth(ivec2 pixel, bool hand) {
     #ifdef BLISS_COMPAT
         vec2 opaqueDepths = texelFetch2D(colortex12, pixel, 0).rg;
     #else
-        vec2 opaqueDepths = vec2(texelFetch2D(depthtex1, pixel, 0).x, sampleLodDepth(dhDepthTex1, uv).x);
+        vec2 opaqueDepths = vec2(texelFetch2D(depthtex1, pixel, 0).x, sampleLodOpaqueDepth(dhDepthTex1, uv));
+        #ifdef DH_OVERDRAW_PREVENTION
+            opaqueDepths.x = auramVisibleNearOpaqueDepth(uv / RENDER_SCALE, opaqueDepths.x, opaqueDepths.y);
+        #endif
     #endif
     float nearDepth = opaqueDepths.x < 1.0 ? convertHandDepth_2(opaqueDepths.x, hand) : 1.0;
     if (nearDepth >= 1.0 && (opaqueDepths.y <= 0.0 || opaqueDepths.y >= 1.0)) return dhFarPlane;
@@ -863,8 +866,6 @@ void main() {
         #endif
 		float swappedDepth = z;
 
-		bool isDHrange = z >= 1.0;
-
 		#ifdef AURAM_LOD_DEPTH
             #ifdef BLISS_PACKED_DH_DEPTH
                 float DH_mixedLinearZ = sqrt(packedDepth.a / 65000.0);
@@ -873,7 +874,11 @@ void main() {
             #else
                 float DH_mixedLinearZ = sqrt(texture2D(colortex12, texcoord).a / 65000.0);
                 float DH_depth0 = sampleLodDepth(dhDepthTex, texcoord).x;
-                float DH_depth1 = sampleLodDepth(dhDepthTex1, texcoord).x;
+                float DH_depth1 = sampleLodOpaqueDepth(dhDepthTex1, texcoord);
+                #if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
+                    z = auramVisibleNearOpaqueDepth(texcoord / RENDER_SCALE, z, DH_depth1);
+                    DH_depth0 = auramVoxyFrontDepth(DH_depth0, DH_depth1);
+                #endif
             #endif
 
 			float depthOpaque = z;
@@ -897,6 +902,8 @@ void main() {
 
 	
 
+
+		bool isDHrange = z >= 1.0;
 
 	////// --------------- UNPACK OPAQUE GBUFFERS --------------- //////
 	
