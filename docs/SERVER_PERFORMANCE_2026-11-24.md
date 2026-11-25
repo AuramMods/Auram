@@ -107,3 +107,22 @@ Four Forge fixture runs compared both run orders. Each performed 60 paired compa
 | Median of 300 live terminal rebuilds with the experimental direct slot loop | 6.99 / 7.15 ms | 6.92 / 7.29 ms |
 
 The direct slot-loop experiment showed overlapping results, so the production build uses Tom's normal inventory rebuild. Its handler interface permits changes to inventory and capabilities without a terminal-visible dirty signal. Iron Chests keeps its existing block and display broadcasts. A later broadcast optimization needs a verified snapshot for players who start tracking an already populated chest.
+
+## Cycle 3 lookup and entity tick changes
+
+- **Astral Sorcery** builds a first-match identity index after the Forge registry bakes. Adds and clears invalidate it, and unknown provider implementations use the ordered registry walk. All 21 required Forge GameTests passed, including the test comparing hits and misses with registry order. Source commit `07ee07726`.
+- **Thaumaturge** uses an identity map to find legacy tainted animals on loaded servers. Forge Pre and Post dispatch, cancellation, conversion, and trait lookups stay on their established paths. The packaged fixture converted all seven historical entity IDs and ticked each converted mob. Source commit `15771ed5c`. The mod's plain Gradle JUnit launcher failed in a separate test's Forge initialization, so the native dedicated fixture supplied the runtime check for this change.
+- **Portal and FTB Chunks** skip the thread-local lookup when no portal search is active and reuse FTB's existing force-load cache during dimension lookups. The Forge fixture checked cold and loaded portal reads, nesting, POI isolation, exception cleanup, other-thread isolation, and FTB cache invalidation. AuramCore commit `ff84ea8`.
+- **ChunkActivityTracker and Does It Tick** read the aggregate maintained with the original player-time writes. The tracker resumes summing the underlying map if another consumer obtains its mutable view. The fixture checked initial saved values, multiple player updates within one tick, direct map edits, removals, and the existing missing-entry result. AuramCore commit `ff84ea8`.
+- **Pehkui** already caches both interaction-box scale data entries and returns the original AABB when both scales are 1. The sampled cost includes collision traversal and mutable scale modifiers. Bypassing the two reads can miss a modifier change. The first copied-save control recorded one main-thread execution sample through Pehkui, so the patch preserves its behavior and leaves the crowded-entity scenario open.
+
+## Cycle 4 structure sampler experiment
+
+The prototype placed a temporary identity lookup ahead of structural equality for supported one-cell noise graphs. Distinct equal nodes still used the original cache. Tests used four JVM-visible processors and the same smoke jar. Lithostitched start and RNG checks passed, as did 1,056 fossil cases per arm and the mushroom fixture. The saved comparison matched 2,621,440 block states, all biome palettes, complete starts and fluid ticks across 16 Overworld and 16 Nether chunks. The saved comparison isolated terrain before decoration.
+
+| Dimension and seed | Control FULL/s | Prototype FULL/s | Control p95 readiness | Prototype p95 readiness | Structure-start worker CPU |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Overworld, 104729 | 4.67 | 4.68 | 2.650 s | 2.652 s | 1.10 → 1.22 s |
+| Nether, 130363 | 11.06 | 17.75 | 0.950 s | 0.350 s | 35.65 → 32.74 ms |
+
+The Overworld column benchmark also moved from 56.97 to 58.74 ms per 16 probes. Most of the Nether pair's measured CPU change occurred in biome fill, outside the prototype. The production build retains the shipped mapping and sampler implementation. Existing aquifer-height reuse, spline-wrapper reuse, TerraBlender region reuse, and Dreamtinker's tag predicate cache remain the reference for future phase-specific experiments.
