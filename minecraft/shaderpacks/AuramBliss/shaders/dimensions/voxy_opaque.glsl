@@ -1,8 +1,31 @@
 // THANK YOU SIXTHSURGE FOR ALLOWING USAGE OF PHOTON CODE TO BUILD THIS VOXY IMPLEMENTATION FROM: https://github.com/sixthsurge/photon
+#define ANTIALIASING_RELATED_SETTINGS
 #define SUB_SURFACE_SCATTERING_RELATED_SETTINGS
 #include "/lib/settings.glsl"
 #include "/lib/blocks.glsl"
 #include "/lib/terrain_sss.glsl"
+
+#ifdef DH_OVERDRAW_PREVENTION
+#include "/lib/res_params.glsl"
+#include "/lib/dh_chunk_transition.glsl"
+
+bool voxy_keepOpaqueWithNearDepth(float nearDepth, float nearReadiness) {
+    vec2 uv = gl_FragCoord.xy * texelSize / RENDER_SCALE;
+    vec4 view = vxProjInv * vec4(vec3(uv, gl_FragCoord.z) * 2.0 - 1.0, 1.0);
+    vec3 lod = view.xyz / view.w;
+    float tolerance = 0.6 * -lod.z / max(length(lod), 1.0);
+    if (abs(dhViewDepth(nearDepth, gbufferProjectionInverse) + lod.z) > tolerance) return false;
+
+    // Both passes wrote this surface. Choose one material per pixel so encoded
+    // normals and lightmaps survive the transition intact.
+    vec3 relativePosition = mat3(vxModelViewInv) * lod;
+    float nearDistance = vxNearRenderDistance;
+    float coverage = smoothstep(max(nearDistance - 16.0, 0.0), nearDistance + 8.0,
+                                dhChunkDistance(relativePosition));
+    if (nearReadiness >= 0.0) coverage = mix(1.0, coverage, nearReadiness);
+    return dhTransitionDither(frameCounter) < coverage;
+}
+#endif
 
 vec4 encode (vec3 n, vec2 lightmaps){
 	n.xy = n.xy / dot(abs(n), vec3(1.0));
