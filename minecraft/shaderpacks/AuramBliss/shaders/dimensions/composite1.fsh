@@ -379,6 +379,39 @@ float swapperlinZ(float depth, float _near, float _far) {
 
 }
 
+#ifdef AURAM_VOXY_DEPTH
+vec2 voxyContactShadows(vec3 viewPos, float clipDepth, vec3 rayStep, int steps) {
+    vec3 ray = vec3(gl_FragCoord.xy * texelSize, clipDepth) + rayStep;
+    vec2 minUV = 0.5 * texelSize;
+    vec2 maxUV = RENDER_SCALE - minUV;
+    float pixelWidth = (2.0 * -viewPos.z * texelSize.y) / (dhProjection[1][1] * RENDER_SCALE.y);
+    float minGap = clamp(0.5 * pixelWidth, 0.04, 0.2);
+    float maxGap = clamp(6.0 * pixelWidth, 0.75, 2.5);
+    float occlusion = 0.0;
+    float scattering = 0.0;
+
+    for (int i = 0; i < steps; ++i, ray += rayStep) {
+        if (any(lessThan(ray.xy, minUV)) || any(greaterThan(ray.xy, maxUV)) || ray.z <= 0.0 || ray.z >= 1.0) break;
+
+        #ifdef BLISS_COMPAT
+            float depth = texelFetch2D(colortex12, ivec2(ray.xy / texelSize), 0).g;
+        #else
+            float depth = sampleLodDepth(dhDepthTex1, ray.xy).x;
+        #endif
+        if (depth <= 0.0 || depth >= ray.z) continue;
+
+        // Measure the gap in view-space blocks. Fade in after the receiver and out
+        // before a depth discontinuity can turn into a full shadow.
+        float gap = auramAxialDepth(ray.z, dhProjectionInverse) - auramAxialDepth(depth, dhProjectionInverse);
+        float hit = smoothstep(minGap, 2.0 * minGap, gap) * (1.0 - smoothstep(0.5 * maxGap, maxGap, gap));
+        float rayEnd = 1.0 - smoothstep(0.65, 1.0, float(i + 1) / float(steps));
+        occlusion = max(occlusion, hit * rayEnd);
+        scattering += hit;
+    }
+    return vec2(1.0 - occlusion * 0.75, scattering / float(steps));
+}
+#endif
+
 vec2 SSRT_Shadows(vec3 viewPos, bool depthCheck, vec3 lightDir, float noise, bool isSSS, bool hand){
 	
 
@@ -404,11 +437,19 @@ vec2 SSRT_Shadows(vec3 viewPos, bool depthCheck, vec3 lightDir, float noise, boo
       				  (-_near -viewPos.z) / lightDir.z : _far*sqrt(3.);
 
     vec3 direction = toClipSpace3_DH(viewPos + lightDir*rayLength, depthCheck) - clipPosition;  //convert to clip space
-    direction.xyz = direction.xyz / max(abs(direction.x)/texelSize.x, abs(direction.y)/texelSize.y);	//fixed step size
+    float screenLength = max(abs(direction.x) / texelSize.x, abs(direction.y) / texelSize.y);
+    #ifdef AURAM_VOXY_DEPTH
+        if (depthCheck && screenLength < 1e-6) return vec2(1.0, 0.0);
+    #endif
+    direction /= screenLength;
 	
 	float Stepmult = depthCheck ? (isSSS ? 1.0 : 6.0) : (isSSS ? 1.0 : 3.0);
 
     vec3 rayDir = direction * Stepmult * vec3(RENDER_SCALE,1.0) ;
+
+    #ifdef AURAM_VOXY_DEPTH
+        if (depthCheck) return voxyContactShadows(viewPos, clipPosition.z, rayDir, int(steps));
+    #endif
 	
 	vec3 screenPos = clipPosition * vec3(RENDER_SCALE,1.0) + rayDir * noise;
 
