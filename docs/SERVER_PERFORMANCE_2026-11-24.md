@@ -93,3 +93,17 @@ The matched Forge 47.4.10 servers used Java 17 and four JVM-visible CPUs. Contro
 | Global scans for each active Incendium shield case | 30 | 27 |
 
 Per-function timings came from the installed-function smoke fixture. The exact lookup and active-case scan counts showed repeatable reductions. The full function timings varied by run order and still need the combined dedicated-server replay before estimating a tick stability benefit.
+
+## Cycle 2 storage verification
+
+AuramCore commit `dcf1122` skips the terminal sync removal scan once the forward scan has found every previous key with a nonzero count. Empty, zero-count and removed entries still follow the existing diff when necessary. The crystal chest groups stacks by item identity before invoking the same item, NBT and capability equality check. It preserves first-slot tie order and the upstream handling of equal-count stacks.
+
+Four Forge fixture runs compared both run orders. Each performed 60 paired comparisons covering 61 captured terminal packets, mutable Mekanism capabilities and the oversized-item fallback. Two real terminal menus watching one chest observed identical inventories through a vanilla hopper insertion, tagged and untagged stack counts, an item removal and an unchanged refresh. All four runs produced identical decoded states across both viewers.
+
+| Fixture measurement | Control | Candidate |
+| --- | ---: | ---: |
+| Median of ten capability-heavy sync updates | 2.70 / 2.83 ms | 2.05 / 2.22 ms |
+| Median of 100 full, distinct-item crystal chest refreshes, paired in the candidate JVM | 2.44 / 5.57 ms | 1.48 / 1.44 ms |
+| Median of 300 live terminal rebuilds with the experimental direct slot loop | 6.99 / 7.15 ms | 6.92 / 7.29 ms |
+
+The direct slot-loop experiment showed overlapping results, so the production build uses Tom's normal inventory rebuild. Its handler interface permits changes to inventory and capabilities without a terminal-visible dirty signal. Iron Chests keeps its existing block and display broadcasts. A later broadcast optimization needs a verified snapshot for players who start tracking an already populated chest.
