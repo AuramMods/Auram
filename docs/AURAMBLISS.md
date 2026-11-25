@@ -90,3 +90,38 @@ The first fresh-copy launch encountered an `ArrayIndexOutOfBoundsException` in f
 ## Windows coverage
 
 Oculus 1.8.0 generated and glslang linked 821 graphics programs and 24 compute stages across 11 NVIDIA, AMD and Intel cases. This enumerated Overworld, Nether and End, native compute selection, forced compatibility, default settings and no-DH samples. Every compute case declared four images. Forced compatibility declared zero images. The heavy runs enabled colored shadows, volumetric LPV, terrain-independent clouds, translucent entities, POM, 65% TAA upscaling and DOF 5. Native Windows hardware remains untested. The same disposable client replay accepts a native Windows Java executable and can be repeated with the forced compatibility switch.
+
+## Voxy and Embeddium sunlight shadows
+
+AuramBliss's Overworld pass accepts opaque and alpha-tested Voxy casters in Oculus's existing sunlight map. Voxy submits them before Oculus saves its opaque shadow depth. Both caster paths use the same Bliss projection, distortion and depth compression. The existing receiver lookup, texel alignment, shadow bias, filtering, contact shadows and cloud shading apply to both renderers. Oculus continues to render translucent and entity casters.
+
+Voxy traverses the light frustum independently of the eye frustum, within 768 horizontal blocks of the camera and the available Voxy terrain radius. Each shadow pass can select up to 16,384 mesh sections and request up to 32 missing descendants. Sections submitted by Embeddium's opaque or cutout shadow pass take precedence over their Voxy copies. The receiver coverage still follows Bliss's shadow distance and fade. The validation preset uses 1,024 shadow texels and a 128-block shadow distance. A caster can be much farther away than its receiver when the sun is low. Coarse LOD geometry can change silhouette detail.
+
+### Test positions
+
+Use the disposable Overworld fixture with daylight and weather cycles frozen, clear weather, and sun path rotation 0°. The white concrete receiver extends from X −128 to 128 and Z 240 to 335 at Y 192. The off-screen island is about 540 blocks west of the receiver, with a raised cap between X −545 and −516, Z 256 and 307, and Y 285 and 290. The two near stone posts reach Y 205 and 215 and the Voxy leaf canopy spans X 73 to 84.
+
+- Sunset tick 12200. Use `/tp @s 8.5 278 287.5 0 89` and reopen the world at that pose for the cold off-screen test. Use `/tp @s 18.5 242 291.5 0 89` to see the near and Voxy receivers in the same frame.
+- Daylight tick 9000. Use `/tp @s 13.5 246 282.5 -90 45` to see the near posts and the Voxy canopy.
+- Near caster test at tick 11200. Use `/tp @s 8.5 255 287.5 0 89` to follow the taller near post's shadow toward the Voxy receiver.
+- Movement test at tick 9000. Start at `/tp @s 4.5 229 281.5 -90 38` and fly east for four seconds, bringing the canopy into full-detail terrain.
+
+The background, muted 920 × 600 client ran Forge 47.4.10, GLA 1.0.1, Embeddium 0.3.31 and Oculus 1.8.0 on an Apple M4 Max. At three chunks, the leaf canopy reduced the median brightness of the receiver under it by 80 levels on an 8-bit grayscale scale, with a neighboring unshadowed control changing by 0.5 levels. The off-screen island's sunset shadow continued across the terrain handoff and appeared following a fresh launch at the downward camera pose. A temporary receiver overlay identified Embeddium and Voxy pixels at the lower camera pose. A continuous dark region crossed their boundary with Voxy submission enabled and disappeared when the Voxy casters were disabled. The near posts still cast shadows with either setting.
+
+### Frame times
+
+Each row gives the median, 95th and 99th percentile milliseconds across 480 frame swaps after the fixture warmed up. VSync was off in the isolated profile. The caster-pass toggle uses the same candidate jar and shader settings, removing only the optional Voxy shadow program between samples.
+
+| Fixture | Published 0.4.0-beta.1 | Candidate, caster pass disabled | Candidate, caster pass enabled |
+| --- | ---: | ---: | ---: |
+| Three chunks, daylight | 6.13 / 10.43 / 14.05 | 7.57 / 16.02 / 21.65 | 8.95 / 18.31 / 21.98 |
+| Three chunks, sunset | 7.02 / 12.02 / 18.67 | 7.00 / 12.23 / 17.21 | 8.86 / 17.84 / 22.88 |
+| Five chunks, daylight | 6.25 / 11.57 / 18.48 | 5.15 / 8.13 / 10.62 | 6.47 / 10.07 / 15.48 |
+| Five chunks, sunset | 6.54 / 11.73 / 16.27 | 5.71 / 9.56 / 13.13 | 5.92 / 9.28 / 14.95 |
+| Five chunks, moving through the handoff | — | 6.09 / 9.65 / 12.12 | 8.66 / 17.80 / 22.56 |
+
+Following multiple shader reloads and a Nether round trip, the three-chunk sunset pose recorded 5.72 / 11.20 / 16.77 ms. These runs measure the whole client during each route, including temporal variation and background chunk activity.
+
+### Lifecycle and pack smoke test
+
+The shadow pass rebuilt after shader reloads, a Nether round trip, and saving and rejoining the Overworld in the same JVM. The exact production Forge jar entered the copied full Auram pack, rendered the daylight and canopy fixture with AuramBliss active, and reloaded the shader. Both Distant Horizons rendering switches were disabled. Prism launched the test clients in the background with sound muted. Native Windows OpenGL was unavailable for runtime validation.
