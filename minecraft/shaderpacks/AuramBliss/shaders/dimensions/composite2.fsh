@@ -1,4 +1,5 @@
 #include "/lib/settings.glsl"
+#include "/lib/auram_lod_depth.glsl"
 
 #define EXCLUDE_WRITE_TO_LUT
 
@@ -11,7 +12,7 @@ uniform sampler2D noisetex;
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
 
-#ifdef DISTANT_HORIZONS
+#ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;
 uniform sampler2D dhDepthTex1;
 #endif
@@ -372,8 +373,8 @@ void main() {
 
 	float z0 = texture2D(depthtex0, tc).x;
 	
-	#ifdef DISTANT_HORIZONS
-		float DH_z0 = texture2D(dhDepthTex,tc).x;
+	#ifdef AURAM_LOD_DEPTH
+		float DH_z0 = sampleLodDepth(dhDepthTex,tc).x;
 	#else
 		float DH_z0 = 0.0;
 	#endif

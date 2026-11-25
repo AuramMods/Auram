@@ -1,4 +1,5 @@
 #include "/lib/settings.glsl"
+#include "/lib/auram_lod_depth.glsl"
 
 uniform sampler2D colortex4;
 uniform sampler2D colortex1;
@@ -8,7 +9,7 @@ uniform vec2 texelSize;
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
 
-#ifdef DISTANT_HORIZONS
+#ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;
 uniform sampler2D dhDepthTex1;
 #endif
@@ -51,7 +52,7 @@ void main() {
 	vec3 oldTex = texelFetch2D(colortex4, ivec2(gl_FragCoord.xy), 0).xyz;
 	float newTex = texelFetch2D(depthtex1, ivec2(gl_FragCoord.xy*4), 0).x;
 
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
     	float QuarterResDepth = texelFetch2D(dhDepthTex, ivec2(gl_FragCoord.xy*4), 0).x;
 		QuarterResDepth = DH_linZ(QuarterResDepth);
         #ifdef BLISS_PACKED_DH_DEPTH

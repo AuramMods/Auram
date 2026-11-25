@@ -16,11 +16,11 @@ float waterCaustics(vec3 worldPos, vec3 sunVec) {
 		vec2(32.,32.)
 	);
 
-	float WavesLarge = max(texture2D(noisetex, pos / 600.0 ).b,0.1);
+	float WavesLarge = max(texture(noisetex, pos / 600.0 ).b,0.1);
 
 	for (int i = 0; i < 3; i++){
 		pos = rotationMatrix * pos;
-		heightSum += pow(abs(abs(texture2D(noisetex, pos / wave_size[i] + WavesLarge*0.5 + movement).b * 2.0 - 1.0) * 2.0 - 1.0), 2.0) ;
+		heightSum += pow(abs(abs(texture(noisetex, pos / wave_size[i] + WavesLarge*0.5 + movement).b * 2.0 - 1.0) * 2.0 - 1.0), 2.0) ;
 	}
 
 	float FinalCaustics = exp((1.0 + 5.0 * pow(WavesLarge,0.5)) * (heightSum / 3.0 - 0.5));
@@ -44,11 +44,11 @@ float getWaterHeightmap(vec2 posxz) {
 		vec2(32.,32.)
 	);
 
-	float WavesLarge = max(texture2D(noisetex, pos / 600.0 ).b,0.1);
+	float WavesLarge = max(texture(noisetex, pos / 600.0 ).b,0.1);
 
 	for (int i = 0; i < 3; i++){
 		pos = rotationMatrix * pos;
-		heightSum += texture2D(noisetex, pos / wave_size[i] + WavesLarge*0.5 + movement).b;
+		heightSum += texture(noisetex, pos / wave_size[i] + WavesLarge*0.5 + movement).b;
 	}
 
 	return (heightSum / 60.0) * WavesLarge;

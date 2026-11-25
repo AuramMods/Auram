@@ -3,6 +3,7 @@
 #ifndef DH_AMBIENT_OCCLUSION
 	#undef DISTANT_HORIZONS
 #endif
+#include "/lib/auram_lod_depth.glsl"
 
 
 flat varying vec3 WsunVec;
@@ -13,7 +14,7 @@ flat varying vec2 TAA_Offset;
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
 
-#ifdef DISTANT_HORIZONS
+#ifdef AURAM_LOD_DEPTH
 	uniform sampler2D dhDepthTex;
 	uniform sampler2D dhDepthTex1;
 #endif
@@ -276,7 +277,7 @@ vec2 SSAO(
 		ivec2 offset = ivec2(gl_FragCoord.xy + sampleOffset*vec2(viewWidth,viewHeight*aspectRatio)*RENDER_SCALE);
 
 		if (offset.x >= 0 && offset.y >= 0 && offset.x < viewWidth*RENDER_SCALE.x && offset.y < viewHeight*RENDER_SCALE.y ) {
-			#ifdef DISTANT_HORIZONS
+			#ifdef AURAM_LOD_DEPTH
 				float dhdepth = texelFetch2D(dhDepthTex1, offset,0).x;
 			#else
 				float dhdepth = 0.0;
@@ -392,8 +393,8 @@ void main() {
         float vanillaOpaqueDepth = z;
     #endif
 
-	#ifdef DISTANT_HORIZONS
-		float DH_depth1 = texture2D(dhDepthTex1,texcoord).x;
+	#ifdef AURAM_LOD_DEPTH
+		float DH_depth1 = sampleLodDepth(dhDepthTex1,texcoord).x;
 		float swappedDepth = z >= 1.0 ? DH_depth1 : z;
 	#else
 		float DH_depth1 = 1.0;
@@ -418,7 +419,7 @@ void main() {
         bool isWater = translucentMask > 0.99;
         if (translucentMask > 0.0) gl_FragData[1].a += 2.0;
         gl_FragData[1].b = uintBitsToFloat(floatBitsToUint(frontDepth) | (isWater ? 0x80000000u : 0u));
-        #ifndef DISTANT_HORIZONS
+        #ifndef AURAM_LOD_DEPTH
             gl_FragData[2] = vec4(vanillaOpaqueDepth, 0.0, 0.0, 0.0);
         #endif
         vec4 normalsAndAO = texture2D(colortex15, texcoord);
@@ -446,7 +447,7 @@ void main() {
 	#if defined BLISS_PACKED_DH_DEPTH || (defined DENOISE_SSS_AND_SSAO && indirect_effect == 1)
 		float depth = z;
 
-		#ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
 		    float _near = near;
 		    float _far = far*4.0;
 		    if (depth >= 1.0) {
@@ -461,7 +462,7 @@ void main() {
 
         #ifdef BLISS_PACKED_DH_DEPTH
             gl_FragData[2] = vec4(vanillaOpaqueDepth, DH_depth1,
-                texture2D(dhDepthTex, texcoord).x, blissEncodeMixedDepth(depth));
+                sampleLodDepth(dhDepthTex, texcoord).x, blissEncodeMixedDepth(depth));
         #elif !defined BLISS_COMPAT
             gl_FragData[2] = vec4(0.0, 0.0, 0.0, depth < 1.0 ? depth * depth * 65000.0 : 65000.0);
         #endif

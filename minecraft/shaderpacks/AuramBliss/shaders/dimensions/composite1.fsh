@@ -1,4 +1,5 @@
 #include "/lib/settings.glsl"
+#include "/lib/auram_lod_depth.glsl"
 #ifdef TWILIGHT_SHADER
 	#include "/lib/twilight_sky.glsl"
 #endif
@@ -63,7 +64,7 @@ uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
 uniform sampler2D depthtex2;
 
-#ifdef DISTANT_HORIZONS
+#ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;
 uniform sampler2D dhDepthTex1;
 #endif
@@ -417,8 +418,8 @@ vec2 SSRT_Shadows(vec3 viewPos, bool depthCheck, vec3 lightDir, float noise, boo
             float samplePos = depthCheck ? opaqueDepths.g : convertHandDepth_2(opaqueDepths.r, hand);
         #else
             float samplePos = convertHandDepth_2(texture2D(depthtex1, screenPos.xy).x, hand);
-            #ifdef DISTANT_HORIZONS
-                if (depthCheck) samplePos = texture2D(dhDepthTex1, screenPos.xy).x;
+            #ifdef AURAM_LOD_DEPTH
+                if (depthCheck) samplePos = sampleLodDepth(dhDepthTex1, screenPos.xy).x;
             #endif
         #endif
 
@@ -508,7 +509,7 @@ vec4 BilateralUpscale_DH(sampler2D tex, sampler2D depth, vec2 coord, float refer
 		// ivec2( 1,-1)
   	);
 
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
 		float diffThreshold = 0.01;
 	#else
 		float diffThreshold = zMults.x;
@@ -523,7 +524,7 @@ vec4 BilateralUpscale_DH(sampler2D tex, sampler2D depth, vec2 coord, float refer
 		
 		ivec2 radius = getRadius[i] ;
 
-		#ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
 			float offsetDepth = sqrt(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling,0).a/65000.0);
 		#else
 			float offsetDepth = ld(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).r);
@@ -553,7 +554,7 @@ void BilateralUpscale_REUSE_Z(sampler2D tex1, sampler2D tex2, sampler2D depth, v
 		ivec2(-1, 1)
   	);
 
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
 		float diffThreshold = 0.0005;
 	#else
 		float diffThreshold = 0.005;
@@ -615,7 +616,7 @@ vec4 BilateralUpscale_VLFOG(sampler2D tex, sampler2D depth, vec2 coord, float re
 		ivec2( 0, 0)
   );
 
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
 		float diffThreshold = 0.01;
 	#else
 		float diffThreshold = zMults.x;
@@ -628,7 +629,7 @@ vec4 BilateralUpscale_VLFOG(sampler2D tex, sampler2D depth, vec2 coord, float re
 		
 		ivec2 radius = getRadius[i];
 
-		#ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
 			float offsetDepth = sqrt(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling,0).a/65000.0);
 		#else
 			float offsetDepth = ld(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).r);
@@ -783,21 +784,21 @@ void main() {
 
 		bool isDHrange = z >= 1.0;
 
-		#ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
             #ifdef BLISS_PACKED_DH_DEPTH
                 float DH_mixedLinearZ = sqrt(packedDepth.a / 65000.0);
                 float DH_depth0 = packedDepth.b;
                 float DH_depth1 = packedDepth.g;
             #else
                 float DH_mixedLinearZ = sqrt(texture2D(colortex12, texcoord).a / 65000.0);
-                float DH_depth0 = texture2D(dhDepthTex, texcoord).x;
-                float DH_depth1 = texture2D(dhDepthTex1, texcoord).x;
+                float DH_depth0 = sampleLodDepth(dhDepthTex, texcoord).x;
+                float DH_depth1 = sampleLodDepth(dhDepthTex1, texcoord).x;
             #endif
 
 			float depthOpaque = z;
 			float depthOpaqueL = linearizeDepthFast(depthOpaque, near, farPlane);
 			
-			#ifdef DISTANT_HORIZONS
+			#ifdef AURAM_LOD_DEPTH
 			    float dhDepthOpaque = DH_depth1;
 			    float dhDepthOpaqueL = linearizeDepthFast(dhDepthOpaque, dhNearPlane, dhFarPlane);
 
@@ -899,7 +900,7 @@ void main() {
 			convertHandDepth(z0);
 		}
 
-		#ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
 			vec3 viewPos = toScreenSpace_DH(texcoord/RENDER_SCALE-TAA_Offset*texelSize*0.5, z, DH_depth1);
 		#else
 			vec3 viewPos = toScreenSpace(vec3(texcoord/RENDER_SCALE - TAA_Offset*texelSize*0.5,z));
@@ -1118,7 +1119,7 @@ void main() {
 	////////////////////////////////////////////////////////////////////////////////////////////
 
  	if ((isEyeInWater == 0 && isWater) || (isEyeInWater == 1 && !isWater)){
-		#ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
 			vec3 viewPos0 = toScreenSpace_DH(texcoord/RENDER_SCALE-TAA_Offset*texelSize*0.5, z0, DH_depth0);
 		#else
 			vec3 viewPos0 = toScreenSpace(vec3(texcoord/RENDER_SCALE-TAA_Offset*texelSize*0.5,z0));
@@ -1298,7 +1299,7 @@ void main() {
 			float sunSSS_density = LabSSS;
 			float SSS_shadow = ShadowAlpha * Shadows;
 			
-			#ifdef DISTANT_HORIZONS
+			#ifdef AURAM_LOD_DEPTH
 				shadowMapFalloff2 = smoothstep(0.0, 1.0, min(max(1.0 - length(feetPlayerPos) / min(shadowDistance, max(far-32.0,32.0)),0.0)*5.0,1.0));
 			#endif
 
@@ -1364,7 +1365,7 @@ void main() {
 	}
 
   	#if defined BorderFog && defined OVERWORLD_SHADER
-  	  #ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
   	  	float fog = smoothstep(1.0, 0.0, min(max(1.0 - length(feetPlayerPos) / dhRenderDistance,0.0)*3.0,1.0)   );
   	  #else
   	  	float fog = smoothstep(1.0, 0.0, min(max(1.0 - length(feetPlayerPos) / far,0.0)*3.0,1.0)   );
@@ -1384,7 +1385,7 @@ void main() {
   	#endif
 
 	if(hasTranslucency){
-		#ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
 			vec4 vlBehingTranslucents = BilateralUpscale_VLFOG(colortex13, colortex12, gl_FragCoord.xy - 1.5, sqrt(texture2D(colortex12,texcoord).a/65000.0));
     	#else
             #ifdef BLISS_COMPAT

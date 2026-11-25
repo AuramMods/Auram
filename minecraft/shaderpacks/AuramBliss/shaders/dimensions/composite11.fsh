@@ -1,4 +1,5 @@
 #include "/lib/settings.glsl"
+#include "/lib/auram_lod_depth.glsl"
 
 #include "/lib/res_params.glsl"
 
@@ -62,7 +63,7 @@ float ld(float depth) {
 
 // uniform sampler2D depthtex0;
 
-#ifdef DISTANT_HORIZONS
+#ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;
 #endif
 uniform float dhNearPlane;
@@ -208,12 +209,12 @@ void main() {
 		#endif
 		float depth = texture(depthtex0, texcoord).r;
 		
-		#ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
 		float _near = near;
 		float _far = far*4.0;
 
 		if (depth >= 1.0) {
-			depth = texture2D(dhDepthTex, texcoord).x;
+			depth = sampleLodDepth(dhDepthTex, texcoord).x;
 			_near = dhNearPlane;
 			_far = dhFarPlane;
 		}

@@ -1,0 +1,32 @@
+// Based on Bliss Unstable's version 1 Voxy patch.
+{
+    "unusedString": "
+        #include "/lib/settings.glsl"
+        #include "/lib/res_params.glsl"
+    ",
+    "version": 1,
+    "excludeLodsFromVanillaDepth": true,
+    "opaqueDrawBuffers": [1, 8, 15],
+    "translucentDrawBuffers": [2, 7],
+    "blending": {
+        "-1": "off",
+        "0": "SRC_ALPHA ONE_MINUS_SRC_ALPHA ONE_MINUS_DST_ALPHA ONE"
+    },
+    "samplers": ["noisetex", "colortex4", "colortex5", "vxDepthTexOpaque"],
+    "uniforms": [
+        "vxViewProj", "vxViewProjInv", "vxViewProjPrev",
+        "vxModelView", "vxModelViewInv", "vxModelViewPrev",
+        "vxProj", "vxProjInv", "vxProjPrev",
+        "vxNear", "vxFar",
+        "gbufferModelView", "gbufferModelViewInverse",
+        "gbufferProjection", "gbufferProjectionInverse",
+        "gbufferPreviousModelView", "gbufferPreviousProjection",
+        "cameraPosition", "previousCameraPosition",
+        "frameTimeCounter", "sunPosition", "sunElevation", "texelSize",
+        "isEyeInWater", "near", "far", "frameCounter", "framemod8", "auramVoxyTaaEnabled"
+    ]
+#ifdef TAA_UPSCALING
+    ,"useViewportDims": true,
+    "renderScale": [SCALE_FACTOR,SCALE_FACTOR]
+#endif
+}

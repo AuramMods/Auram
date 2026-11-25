@@ -1,4 +1,5 @@
 #include "/lib/settings.glsl"
+#include "/lib/auram_lod_depth.glsl"
 //Computes volumetric clouds at variable resolution (default 1/4 res)
 
 
@@ -11,7 +12,7 @@ flat varying float tempOffsets;
 uniform float near;
 uniform sampler2D depthtex0;
 
-#ifdef DISTANT_HORIZONS
+#ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;
 uniform sampler2D dhDepthTex1;
 #endif
@@ -130,8 +131,8 @@ void main() {
 		#ifdef CLOUDS_INTERSECT_TERRAIN
 			float depth = texture2D(depthtex0, halfResTC2*texelSize).x;
 
-			#ifdef DISTANT_HORIZONS
-				float DH_depth =  texture2D(dhDepthTex, halfResTC2*texelSize).x;
+			#ifdef AURAM_LOD_DEPTH
+				float DH_depth =  sampleLodDepth(dhDepthTex, halfResTC2*texelSize).x;
 				vec3 viewPos = toScreenSpace_DH(halfResTC*texelSize, depth, DH_depth);
 			#else
 				vec3 viewPos = toScreenSpace(vec3(halfResTC*texelSize, depth));

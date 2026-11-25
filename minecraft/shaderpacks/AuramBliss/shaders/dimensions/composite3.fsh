@@ -1,4 +1,5 @@
 #include "/lib/settings.glsl"
+#include "/lib/auram_lod_depth.glsl"
 #ifdef MIDNIGHT_SHADER
   #include "/lib/midnight_atmosphere.glsl"
 #endif
@@ -16,7 +17,7 @@ uniform sampler2D noisetex;
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
 
-#ifdef DISTANT_HORIZONS
+#ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;
 uniform sampler2D dhDepthTex1;
 #endif
@@ -146,7 +147,7 @@ vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord
 		ivec2( 0, 0)
   );
 
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
 		float diffThreshold = 0.01;
 	#else
 		float diffThreshold = zMults.x;
@@ -159,7 +160,7 @@ vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord
 		
 		ivec2 radius = getRadius[i];
 
-		#ifdef DISTANT_HORIZONS
+		#ifdef AURAM_LOD_DEPTH
 			float offsetDepth = sqrt(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling,0).a/65000.0);
 		#else
 			float offsetDepth = ld(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).r);
@@ -244,9 +245,9 @@ void main() {
 
 	float swappedDepth = z;
 
-	#ifdef DISTANT_HORIZONS
-    float DH_depth0 = texture2D(dhDepthTex,texcoord).x;
-    float DH_depth1 = texture2D(dhDepthTex1,texcoord).x;
+	#ifdef AURAM_LOD_DEPTH
+    float DH_depth0 = sampleLodDepth(dhDepthTex,texcoord).x;
+    float DH_depth1 = sampleLodDepth(dhDepthTex1,texcoord).x;
 
 		float depthOpaque = z;
 		float depthOpaqueL = linearizeDepthFast(depthOpaque, near, farPlane);
@@ -313,7 +314,7 @@ void main() {
     float cloudAlpha = 1.0;
   #endif
 
-  #ifdef DISTANT_HORIZONS
+  #ifdef AURAM_LOD_DEPTH
     vec4 vl = BilateralUpscale(colortex0, colortex14, colortex12, gl_FragCoord.xy - 1.5, sqrt(texture2D(colortex12,texcoord).a/65000.0), cloudAlpha);
   #else
     vec4 vl = BilateralUpscale(colortex0, colortex14, depthtex0, gl_FragCoord.xy - 1.5, frDepth,cloudAlpha);
@@ -333,7 +334,7 @@ void main() {
 
   // #if defined BorderFog && defined OVERWORLD_SHADER
     
-  //   #ifdef DISTANT_HORIZONS
+  //   #ifdef AURAM_LOD_DEPTH
   //   	float fog = smoothstep(1.0, 0.0, min(max(1.0 - linearDistance_cylinder / dhRenderDistance,0.0)*3.0,1.0)   );
   //   #else
   //   	float fog = smoothstep(1.0, 0.0, min(max(1.0 - linearDistance_cylinder / far,0.0)*3.0,1.0)   );
@@ -363,7 +364,7 @@ void main() {
 
   #ifdef AURAM_BLISS_WARP_MIST
     vec3 mistColor = toLinear(max(fogColor, vec3(0.0)));
-    #ifdef DISTANT_HORIZONS
+    #ifdef AURAM_LOD_DEPTH
       bool distantFront = DH_depth0 > 0.0 && DH_depth0 < 1.0
         && (z >= 1.0 || linearizeDepthFast(DH_depth0, dhNearPlane, dhFarPlane) < linearizeDepthFast(z, near, farPlane));
       bool distantOpaque = z2 >= 1.0

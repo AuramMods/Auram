@@ -1,4 +1,5 @@
 #include "/lib/settings.glsl"
+#include "/lib/auram_lod_depth.glsl"
 
 #if defined AURAM_VAPOR_BACKEND && defined VOLUMETRIC_VAPOR
     #define VAPOR_BEHIND_TRANSLUCENT
@@ -22,7 +23,7 @@ flat varying float exposure;
 uniform sampler2D noisetex;
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
-#ifdef DISTANT_HORIZONS
+#ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;
 uniform sampler2D dhDepthTex1;
 #endif
@@ -319,16 +320,16 @@ void main() {
 
 		float z0 = texture2D(depthtex0,tc).x;
 
-		#ifdef DISTANT_HORIZONS
-			float DH_z0 = texture2D(dhDepthTex,tc).x;
+		#ifdef AURAM_LOD_DEPTH
+			float DH_z0 = sampleLodDepth(dhDepthTex,tc).x;
 		#else
 			float DH_z0 = 0.0;
 		#endif
 
 		float z = texture2D(depthtex1,tc).x;
 
-		#ifdef DISTANT_HORIZONS
-			float DH_z = texture2D(dhDepthTex1,tc).x;
+		#ifdef AURAM_LOD_DEPTH
+			float DH_z = sampleLodDepth(dhDepthTex1,tc).x;
 		#else
 			float DH_z = 0.0;
 		#endif
@@ -367,7 +368,7 @@ void main() {
 			
 			vec2 lightmap = vec2(0.0,texture2D(colortex14, tc).a);
 			
-			#ifdef DISTANT_HORIZONS
+			#ifdef AURAM_LOD_DEPTH
 				if(z >= 1.0) lightmap.y = 0.99;
 			#endif
 		#else

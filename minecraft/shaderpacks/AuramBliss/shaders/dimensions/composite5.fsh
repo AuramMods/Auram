@@ -1,4 +1,5 @@
 #include "/lib/settings.glsl"
+#include "/lib/auram_lod_depth.glsl"
 #include "/lib/res_params.glsl"
 
 /*
@@ -147,7 +148,7 @@ float convertHandDepth2( float depth) {
 }
 
 
-#ifdef DISTANT_HORIZONS
+#ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;
 #endif
 uniform float near;
@@ -177,7 +178,7 @@ float invertlinearDepthFast(const in float depth, const in float near, const in 
 
 vec3 toClipSpace3Prev_DH( vec3 viewSpacePosition, bool depthCheck ) {
 
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
 		mat4 projectionMatrix = depthCheck ? dhPreviousProjection : gbufferPreviousProjection;
    		return projMAD(projectionMatrix, viewSpacePosition) / -viewSpacePosition.z * 0.5 + 0.5;
 	#else
@@ -190,7 +191,7 @@ vec3 toScreenSpace_DH_special(vec3 POS, bool depthCheck ) {
 	vec4 viewPos = vec4(0.0);
 	vec3 feetPlayerPos = vec3(0.0);
 	vec4 iProjDiag = vec4(0.0);
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
     	if (depthCheck) {
 			iProjDiag = vec4(dhProjectionInverse[0].x, dhProjectionInverse[1].y, dhProjectionInverse[2].zw);
 
@@ -206,7 +207,7 @@ vec3 toScreenSpace_DH_special(vec3 POS, bool depthCheck ) {
     		viewPos = iProjDiag * feetPlayerPos.xyzz + gbufferProjectionInverse[3];
 			viewPos.xyz /= viewPos.w;
 			
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
 		}
 	#endif
 
@@ -263,17 +264,17 @@ vec3 FastCatmulRom(sampler2D colorTex, vec2 texcoord, vec4 rtMetrics, float shar
 
 }
 
-vec3 closestToCamera5taps(vec2 uv, sampler2D depth, bool hand, vec2 lastCenter)
+vec3 closestToCamera5taps(vec2 uv, sampler2D depth, bool hand, vec2 lastCenter, vec2 uvScale)
 {
 	vec2 firstCenter = texelSize * 0.5;
 	vec2 low = max(uv - texelSize * 2.0, firstCenter);
 	vec2 high = min(uv + texelSize * 2.0, lastCenter);
 
-	vec3 dtl = vec3(uv - texelSize, texture2D(depth, low).x);
-	vec3 dtr = vec3(uv + vec2(texelSize.x, -texelSize.y), texture2D(depth, vec2(high.x, low.y)).x);
-	vec3 dmc = vec3(uv, texture2D(depth, uv).x);
-	vec3 dbl = vec3(uv + vec2(-texelSize.x, texelSize.y), texture2D(depth, vec2(low.x, high.y)).x);
-	vec3 dbr = vec3(uv + texelSize, texture2D(depth, high).x);
+	vec3 dtl = vec3(uv - texelSize, texture2D(depth, low * uvScale).x);
+	vec3 dtr = vec3(uv + vec2(texelSize.x, -texelSize.y), texture2D(depth, vec2(high.x, low.y) * uvScale).x);
+	vec3 dmc = vec3(uv, texture2D(depth, uv * uvScale).x);
+	vec3 dbl = vec3(uv + vec2(-texelSize.x, texelSize.y), texture2D(depth, vec2(low.x, high.y) * uvScale).x);
+	vec3 dbr = vec3(uv + texelSize, texture2D(depth, high * uvScale).x);
 
 	if(hand){
 		convertHandDepth(dtl.z);
@@ -299,20 +300,20 @@ vec4 computeTAA(vec2 texcoord, vec2 adjTC, vec2 lastCenter, bool hand){
 
 	// get previous frames position stuff for UV	
 	//use velocity from the nearest texel from camera in a 3x3 box in order to improve edge quality in motion	
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
 		bool depthCheck = texture2D(depthtex0,adjTC).x >= 1.0;
 		vec3 closestToCamera = depthCheck
-			? closestToCamera5taps(adjTC, dhDepthTex, hand, lastCenter)
-			: closestToCamera5taps(adjTC, depthtex0, hand, lastCenter);
+			? closestToCamera5taps(adjTC, dhDepthTex, hand, lastCenter, AURAM_LOD_UV_SCALE)
+			: closestToCamera5taps(adjTC, depthtex0, hand, lastCenter, vec2(1.0));
 		vec3 viewPos = toScreenSpace_DH_special(closestToCamera, depthCheck);
 	#else
-		vec3 closestToCamera = closestToCamera5taps(adjTC, depthtex0, hand, lastCenter);
+		vec3 closestToCamera = closestToCamera5taps(adjTC, depthtex0, hand, lastCenter, vec2(1.0));
 		vec3 viewPos = toScreenSpace(closestToCamera);
 	#endif
 	
 	vec3 playerPos = mat3(gbufferModelViewInverse) * viewPos + gbufferModelViewInverse[3].xyz + (cameraPosition - previousCameraPosition);
 	vec3 previousPosition = mat3(gbufferPreviousModelView) * playerPos + gbufferPreviousModelView[3].xyz;
-	#ifdef DISTANT_HORIZONS
+	#ifdef AURAM_LOD_DEPTH
 		previousPosition = toClipSpace3Prev_DH(previousPosition, depthCheck);
 	#else
 		previousPosition = toClipSpace3Prev(previousPosition);

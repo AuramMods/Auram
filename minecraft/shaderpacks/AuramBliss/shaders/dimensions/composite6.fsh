@@ -1,4 +1,5 @@
 #include "/lib/settings.glsl"
+#include "/lib/auram_lod_depth.glsl"
 #include "/lib/res_params.glsl"
 
 uniform sampler2D depthtex0;
@@ -13,7 +14,7 @@ uniform float viewHeight;
         uniform mat4 gbufferProjectionInverse;
         uniform mat4 gbufferModelViewInverse;
         uniform float frameTimeCounter;
-        #ifdef DISTANT_HORIZONS
+        #ifdef AURAM_LOD_DEPTH
             uniform sampler2D dhDepthTex;
             uniform float dhNearPlane;
             uniform float dhFarPlane;
