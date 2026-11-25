@@ -269,13 +269,8 @@ void main() {
 		if (entityId == ENTITY_SSS_MEDIUM || entityId == ENTITY_SLIME)
 			position.xyz = position.xyz - normalize(gl_NormalMatrix * gl_Normal) * 0.25;
 
-		gl_Position = BiasShadowProjection(toClipSpace3(position));
-	#else
-		gl_Position = toClipSpace3(position);
 	#endif
- 	
 
+	gl_Position = blissShadowClipPosition(toClipSpace3(position));
 	if (blockId == BLOCK_WATER) gl_Position.w = -1.0;
-
-  	gl_Position.z /= 6.0;
 }

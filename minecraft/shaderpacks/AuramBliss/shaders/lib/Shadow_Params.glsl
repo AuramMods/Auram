@@ -24,3 +24,11 @@ vec4 BiasShadowProjection(in vec4 projectedShadowSpacePosition) {
 float calcDistort(vec2 worldpos){
   return 1.0/(log(length(worldpos)*b+a)*k);
 }
+
+vec4 blissShadowClipPosition(vec4 projectedShadowPosition) {
+  #ifdef DISTORT_SHADOWMAP
+    projectedShadowPosition = BiasShadowProjection(projectedShadowPosition);
+  #endif
+  projectedShadowPosition.z /= 6.0;
+  return projectedShadowPosition;
+}
