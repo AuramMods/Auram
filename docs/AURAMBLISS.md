@@ -139,3 +139,5 @@ The shadow pass rebuilt after shader reloads, a Nether round trip, and saving an
 In Shader Settings → AuramCore Fields → Vapor, **Vapor Range** sets the radius in blocks along each axis. The default radius of 64 gives a 128 × 128 × 128 block cube, with a four-block fade inside its faces. The cube follows the player's view, using the player eye position when AuramCore supplies it. Atum and Twilight Forest smoke, Midnight and Nether plumes and ceiling smoke, and simulated Vapor share the limit.
 
 Smoke uses the nearest visible regular or LOD terrain to stop each ray. The camera-relative bounds let smoke continue into Voxy terrain beyond the vanilla chunk and fog distances. Simulated Vapor still samples the occupied part of the AuramCore field. Weather clouds and the base atmospheric haze keep their existing range.
+
+A muted macOS GLA run at three chunks compared radius 16 and 64 at the same Atum pose. The larger setting restored the visible column, and the pack loaded Overworld, Nether, End, Twilight Forest and Midnight. A native GPU readback verified the axis and corner distances, a ray blocked by nearer terrain, a camera outside the cube, and the edge fade.
