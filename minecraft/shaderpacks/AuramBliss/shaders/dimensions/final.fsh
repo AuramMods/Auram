@@ -73,7 +73,7 @@ vec3 doMotionBlur(vec2 texcoord, float depth, float noise){
   // thank you Capt Tatsu for letting me use these
   velocity = (velocity / (1.0 + length(velocity))) * 0.05 * blurMult * MOTION_BLUR_STRENGTH;
   texcoord = texcoord - velocity*(samples*0.5 + noise);
-  vec2 screenEdges = 2.0/vec2(viewWidth, viewHeight);
+  vec2 screenEdges = texelSize * 0.5;
 
 	for (int i = 0; i < int(samples); i++) {
 

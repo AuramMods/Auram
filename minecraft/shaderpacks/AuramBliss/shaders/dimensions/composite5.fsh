@@ -214,7 +214,7 @@ vec3 toScreenSpace_DH_special(vec3 POS, bool depthCheck ) {
 }
 
 //Modified texture interpolation from inigo quilez
-vec4 smoothfilter(in sampler2D tex, in vec2 uv)
+vec4 smoothfilter(in sampler2D tex, in vec2 uv, vec2 lastCenter)
 {
 	vec2 textureResolution = vec2(viewWidth,viewHeight);
 	uv = uv*textureResolution + 0.5;
@@ -230,7 +230,7 @@ vec4 smoothfilter(in sampler2D tex, in vec2 uv)
 
 	uv = (uv - 0.5)/textureResolution;
 	
-	return texture2D(tex, uv);
+	return texture2D(tex, clamp(uv, texelSize * 0.5, lastCenter));
 }
 //approximation from SMAA presentation from siggraph 2016
 vec3 FastCatmulRom(sampler2D colorTex, vec2 texcoord, vec4 rtMetrics, float sharpenAmount)
@@ -263,17 +263,18 @@ vec3 FastCatmulRom(sampler2D colorTex, vec2 texcoord, vec4 rtMetrics, float shar
 
 }
 
-vec3 closestToCamera5taps(vec2 texcoord, sampler2D depth, bool hand)
+vec3 closestToCamera5taps(vec2 uv, sampler2D depth, bool hand, vec2 lastCenter)
 {
-	vec2 du = vec2(texelSize.x*2., 0.0);
-	vec2 dv = vec2(0.0, texelSize.y*2.);
+	vec2 firstCenter = texelSize * 0.5;
+	vec2 low = max(uv - texelSize * 2.0, firstCenter);
+	vec2 high = min(uv + texelSize * 2.0, lastCenter);
 
-	vec3 dtl = vec3(texcoord,0.) + vec3(-texelSize, 				texture2D(depth, texcoord - dv - du).x);
-	vec3 dtr = vec3(texcoord,0.) + vec3( texelSize.x, -texelSize.y, texture2D(depth, texcoord - dv + du).x);
-	vec3 dmc = vec3(texcoord,0.) + vec3( 0.0, 0.0, 					texture2D(depth, texcoord).x);
-	vec3 dbl = vec3(texcoord,0.) + vec3(-texelSize.x, texelSize.y, 	texture2D(depth, texcoord + dv - du).x);
-	vec3 dbr = vec3(texcoord,0.) + vec3( texelSize.x, texelSize.y, 	texture2D(depth, texcoord + dv + du).x);
-	
+	vec3 dtl = vec3(uv - texelSize, texture2D(depth, low).x);
+	vec3 dtr = vec3(uv + vec2(texelSize.x, -texelSize.y), texture2D(depth, vec2(high.x, low.y)).x);
+	vec3 dmc = vec3(uv, texture2D(depth, uv).x);
+	vec3 dbl = vec3(uv + vec2(-texelSize.x, texelSize.y), texture2D(depth, vec2(low.x, high.y)).x);
+	vec3 dbr = vec3(uv + texelSize, texture2D(depth, high).x);
+
 	if(hand){
 		convertHandDepth(dtl.z);
 		convertHandDepth(dtr.z);
@@ -287,65 +288,25 @@ vec3 closestToCamera5taps(vec2 texcoord, sampler2D depth, bool hand)
 	dmin = dmin.z > dtl.z ? dtl : dmin;
 	dmin = dmin.z > dbl.z ? dbl : dmin;
 	dmin = dmin.z > dbr.z ? dbr : dmin;
-	
-	#ifdef TAA_UPSCALING
-		dmin.xy = dmin.xy/RENDER_SCALE;
-	#endif
+	dmin.xy = clamp(dmin.xy, firstCenter, lastCenter) / RENDER_SCALE;
 
 	return dmin;
 }
 
-vec3 closestToCamera5taps_DH(vec2 texcoord, sampler2D depth, sampler2D dhDepth, bool depthCheck, bool hand)
-{
-	vec2 du = vec2(texelSize.x*2., 0.0);
-	vec2 dv = vec2(0.0, texelSize.y*2.);
-
-	vec3 dtl = vec3(texcoord,0.);
-	vec3 dtr = vec3(texcoord,0.);
-	vec3 dmc = vec3(texcoord,0.);
-	vec3 dbl = vec3(texcoord,0.);
-	vec3 dbr = vec3(texcoord,0.);
-
-	dtl += vec3(-texelSize, 					depthCheck ? texture2D(dhDepth, texcoord - dv - du).x	:	texture2D(depth, texcoord - dv - du).x);
-	dtr += vec3( texelSize.x, -texelSize.y, 	depthCheck ? texture2D(dhDepth, texcoord - dv + du).x	:	texture2D(depth, texcoord - dv + du).x);
-	dmc += vec3( 0.0, 0.0, 				   		depthCheck ? texture2D(dhDepth, texcoord).x				:	texture2D(depth, texcoord).x);
-	dbl += vec3(-texelSize.x, texelSize.y, 		depthCheck ? texture2D(dhDepth, texcoord + dv - du).x	:	texture2D(depth, texcoord + dv - du).x);
-	dbr += vec3( texelSize.x, texelSize.y, 		depthCheck ? texture2D(dhDepth, texcoord + dv + du).x	:	texture2D(depth, texcoord + dv + du).x);
-
-	if(hand){
-		convertHandDepth(dtl.z);
-		convertHandDepth(dtr.z);
-		convertHandDepth(dmc.z);
-		convertHandDepth(dbl.z);
-		convertHandDepth(dbr.z);
-	}
-	
-	vec3 dmin = dmc;
-	dmin = dmin.z > dtr.z ? dtr : dmin;
-	dmin = dmin.z > dtl.z ? dtl : dmin;
-	dmin = dmin.z > dbl.z ? dbl : dmin;
-	dmin = dmin.z > dbr.z ? dbr : dmin;
-	
-	#ifdef TAA_UPSCALING
-		dmin.xy = dmin.xy/RENDER_SCALE;
-	#endif
-
-	return dmin;
-}
-
-vec4 computeTAA(vec2 texcoord, bool hand){
+vec4 computeTAA(vec2 texcoord, vec2 adjTC, vec2 lastCenter, bool hand){
 
 	vec2 jitter = offsets[framemod8]*texelSize*0.5;
-	vec2 adjTC = clamp(texcoord*RENDER_SCALE, vec2(0.0), RENDER_SCALE - texelSize*2.0);
 
 	// get previous frames position stuff for UV	
 	//use velocity from the nearest texel from camera in a 3x3 box in order to improve edge quality in motion	
 	#ifdef DISTANT_HORIZONS
 		bool depthCheck = texture2D(depthtex0,adjTC).x >= 1.0;
-		vec3 closestToCamera = closestToCamera5taps_DH(adjTC, depthtex0, dhDepthTex, depthCheck, hand);
+		vec3 closestToCamera = depthCheck
+			? closestToCamera5taps(adjTC, dhDepthTex, hand, lastCenter)
+			: closestToCamera5taps(adjTC, depthtex0, hand, lastCenter);
 		vec3 viewPos = toScreenSpace_DH_special(closestToCamera, depthCheck);
 	#else
-		vec3 closestToCamera = closestToCamera5taps(adjTC, depthtex0, hand);
+		vec3 closestToCamera = closestToCamera5taps(adjTC, depthtex0, hand, lastCenter);
 		vec3 viewPos = toScreenSpace(closestToCamera);
 	#endif
 	
@@ -361,7 +322,7 @@ vec4 computeTAA(vec2 texcoord, bool hand){
 	previousPosition.xy = texcoord + velocity;
 
 	// sample current frame, and make sure it is de-jittered
-	vec3 currentFrame = smoothfilter(colortex3, adjTC + jitter).rgb;
+	vec3 currentFrame = smoothfilter(colortex3, texcoord * RENDER_SCALE + jitter, lastCenter).rgb;
 
 	//reject history if off-screen and early exit
 	if (previousPosition.x < 0.0 || previousPosition.y < 0.0 || previousPosition.x > 1.0 || previousPosition.y > 1.0) return vec4(currentFrame, 1.0);
@@ -430,14 +391,15 @@ vec4 computeTAA(vec2 texcoord, bool hand){
 void main() {
 /* DRAWBUFFERS:5 */
 	#ifdef TAA
-		vec2 taauTC = clamp(texcoord*RENDER_SCALE, vec2(0.0), RENDER_SCALE - texelSize*2.0);
+		vec2 lastCenter = (TAA_VIEWPORT_SIZE(vec2(viewWidth, viewHeight)) - 0.5) * texelSize;
+		vec2 taauTC = clamp(texcoord * RENDER_SCALE, texelSize * 0.5, lastCenter);
 		
-		float dataUnpacked = decodeVec2(texelFetch2D(colortex1,ivec2(gl_FragCoord.xy*RENDER_SCALE),0).w).y; 
+		float dataUnpacked = decodeVec2(texelFetch2D(colortex1,ivec2(taauTC / texelSize),0).w).y;
 		bool hand = abs(dataUnpacked-0.75) < 0.01 && texture2D(depthtex1,taauTC).x < 1.0;
 		
 		// vec4 color = TAA_hq(hand);
 		
-		vec4 color = computeTAA(texcoord, hand);
+		vec4 color = computeTAA(texcoord, taauTC, lastCenter, hand);
 
 		// gl_FragData[0] = clamp(color, 0.0, 65000.0);
 
