@@ -31,6 +31,24 @@ vec3 toScreenSpace_DH( vec2 texcoord, float depth, float DHdepth ) {
 
     return viewPos.xyz;
 }
+
+#ifdef AURAM_VOXY_DEPTH
+vec3 auramVoxyViewPosition(vec2 texcoord, float lodDepth) {
+    vec3 clipPosition = vec3(texcoord, lodDepth) * 2.0 - 1.0;
+    vec4 viewPosition = dhProjectionInverse * vec4(clipPosition, 1.0);
+    return viewPosition.xyz / viewPosition.w;
+}
+#endif
+
+vec3 auramSurfaceViewPosition(vec2 texcoord, float depth, float lodDepth) {
+    #ifdef AURAM_VOXY_DEPTH
+        if (depth >= 1.0 && lodDepth > 0.0 && lodDepth < 1.0) {
+            return auramVoxyViewPosition(texcoord, lodDepth);
+        }
+    #endif
+    return toScreenSpace_DH(texcoord, depth, lodDepth);
+}
+
 // Use the same view direction for terrain, LODs and empty sky. Only a real depth can stop the ray.
 vec4 volumeViewRay(vec2 texcoord, float depth, float dhDepth) {
     vec3 direction = normalize(toScreenSpace_DH(texcoord, 0.5, 1.0));
@@ -38,9 +56,9 @@ vec4 volumeViewRay(vec2 texcoord, float depth, float dhDepth) {
     if (depth < 1.0) {
         surfaceDistance = length(toScreenSpace_DH(texcoord, depth, 1.0));
     }
-    #ifdef DISTANT_HORIZONS
+    #if defined DISTANT_HORIZONS || defined AURAM_VOXY_DEPTH
         else if (dhDepth > 0.0 && dhDepth < 1.0) {
-            surfaceDistance = length(toScreenSpace_DH(texcoord, 1.0, dhDepth));
+            surfaceDistance = length(auramSurfaceViewPosition(texcoord, depth, dhDepth));
         }
     #endif
     return vec4(direction, surfaceDistance);
