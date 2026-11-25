@@ -379,7 +379,15 @@ void main() {
 		float DH_z0 = 0.0;
 	#endif
 	
-	vec3 viewPos0 = auramFrontViewPosition(tc/RENDER_SCALE, z0, DH_z0);
+	vec2 uv = tc / RENDER_SCALE;
+	#if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
+		float lodOpaque = sampleLodOpaqueDepth(dhDepthTex1, tc);
+		float nearOpaque = texture2D(depthtex1, tc).r;
+		if (z0 >= nearOpaque) z0 = auramVisibleNearOpaqueDepth(uv, z0, lodOpaque);
+		DH_z0 = auramVoxyFrontDepth(DH_z0, lodOpaque);
+	#endif
+	vec4 volumeRay = volumeViewRay(uv, z0, DH_z0);
+	vec3 viewPos0 = auramFrontViewPosition(uv, z0, DH_z0);
 	vec3 playerPos_normalized = normalize(mat3(gbufferModelViewInverse) * viewPos0 + gbufferModelViewInverse[3].xyz);
 
 
@@ -395,7 +403,6 @@ void main() {
 	vec3 indirectLightColor_dynamic = averageSkyCol_Clouds/30.0;
 
 	#ifdef OVERWORLD_SHADER
-		vec4 volumeRay = volumeViewRay(tc / RENDER_SCALE, z0, DH_z0);
 		vec4 VolumetricClouds = vec4(0.0, 0.0, 0.0, 1.0);
 		float cloudDistance = 0.0;
 	#endif
@@ -421,7 +428,7 @@ void main() {
 	#endif
 	
 	#if defined NETHER_SHADER || defined END_SHADER
-		vec4 VolumetricFog = GetVolumetricFog(viewPos0, noise_1, noise_2);
+		vec4 VolumetricFog = GetVolumetricFog(viewPos0, volumeRay.w, noise_1, noise_2);
 	#endif
 	
 	gl_FragData[0] = clamp(VolumetricFog, 0.0, 65000.0);

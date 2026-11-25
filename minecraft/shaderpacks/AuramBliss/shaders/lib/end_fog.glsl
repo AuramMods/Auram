@@ -203,6 +203,7 @@ float phaseEND(float x, float g){
 }
 vec4 GetVolumetricFog(
 	vec3 viewPosition,
+	float surfaceDistance,
 	float dither,
 	float dither2
 ){
@@ -217,9 +218,6 @@ vec4 GetVolumetricFog(
 	vec3 dVWorld = (wpos-gbufferModelViewInverse[3].xyz);
 	vec3 progressW = vec3(0.0);
 
-	#ifdef AURAM_RENDER_VAPOR
-		float vaporRayEnd = length(dVWorld);
-	#endif
 	float maxLength = min(length(dVWorld),32.0 * 12.0)/length(dVWorld);
 	
 	dVWorld *= maxLength;
@@ -332,12 +330,12 @@ vec4 GetVolumetricFog(
 			#endif
 	}
 	#ifdef AURAM_RENDER_VAPOR
-		if (auramVaporActive && vaporRayEnd > 1e-6 && dL > 1e-6) {
+		if (auramVaporActive && dL > 1e-6) {
 			vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
 			vec3 vaporDirection = dVWorld / dL;
-			vec2 interval = vaporRayInterval(vaporOrigin, vaporDirection, vaporRayEnd);
+			vec2 interval = vaporRayInterval(vaporOrigin, vaporDirection, surfaceDistance);
 			float vaporTransmission = 1.0;
-			VaporScattering vapor = traceVapor(vaporOrigin, vaporDirection, interval, 0.0, vaporRayEnd, vec3(0.019, 0.013, 0.032), vaporTransmission);
+			VaporScattering vapor = traceVapor(vaporOrigin, vaporDirection, interval, 0.0, interval.y, vec3(0.019, 0.013, 0.032), vaporTransmission);
 			color = color * vapor.transmission + vapor.ambient + vapor.blockLight;
 			absorbance *= vapor.transmission;
 		}

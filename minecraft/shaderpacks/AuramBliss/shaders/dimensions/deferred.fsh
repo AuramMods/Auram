@@ -323,7 +323,7 @@ if (gl_FragCoord.x > 18.+257. && gl_FragCoord.y > 1. && gl_FragCoord.x < 18+257+
 
 	 	vec3 BackgroundColor = vec3(0.0);
 
-		vec4 VL_Fog = GetVolumetricFog(mat3(gbufferModelView)*viewVector*256.,  fract(frameCounter/1.6180339887), fract(frameCounter/2.6180339887));
+		vec4 VL_Fog = GetVolumetricFog(mat3(gbufferModelView)*viewVector*256., -1.0,  fract(frameCounter/1.6180339887), fract(frameCounter/2.6180339887));
 
 		BackgroundColor += VL_Fog.rgb/5.0;
 

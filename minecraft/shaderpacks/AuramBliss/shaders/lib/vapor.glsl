@@ -1,45 +1,33 @@
+#include "/lib/vapor_bounds.glsl"
+
 #ifdef VOLUMETRIC_VAPOR
 #ifdef AURAM_VAPOR_BACKEND
 #define AURAM_RENDER_VAPOR
 
 uniform sampler3D auramVaporVolume;
-uniform bool auramVaporActive;
 uniform float auramVaporBlend;
 uniform vec3 auramVaporOrigin;
 uniform vec3 auramVaporMinimum;
 uniform vec3 auramVaporMaximum;
 #ifdef AURAM_VAPOR_RADIUS
-uniform vec3 auramVaporCenter;
 const float vaporRadius = float(AURAM_VAPOR_RADIUS);
 #endif
 #ifdef VAPOR_BEHIND_TRANSLUCENT
 float vaporTranslucentStart = 0.0;
 #endif
 
-vec2 vaporRayInterval(vec3 origin, vec3 direction, float rayEnd) {
+vec2 vaporRayInterval(vec3 origin, vec3 direction, float surfaceDistance) {
     if (!auramVaporActive) return vec2(0.0);
-    #if VAPOR_RENDER_RANGE > 0
-        rayEnd = min(rayEnd, float(VAPOR_RENDER_RANGE));
-    #endif
-    bvec3 parallel = lessThan(abs(direction), vec3(1e-6));
-    bvec3 inside = bvec3(origin.x >= auramVaporMinimum.x && origin.x < auramVaporMaximum.x,
-                         origin.y >= auramVaporMinimum.y && origin.y < auramVaporMaximum.y,
-                         origin.z >= auramVaporMinimum.z && origin.z < auramVaporMaximum.z);
-    if ((parallel.x && !inside.x) || (parallel.y && !inside.y) || (parallel.z && !inside.z)) return vec2(0.0);
-    vec3 directionSign = mix(vec3(-1.0), vec3(1.0), step(vec3(0.0), direction));
-    vec3 inverseDirection = directionSign / max(abs(direction), vec3(1e-6));
-    vec3 a = (auramVaporMinimum - origin) * inverseDirection;
-    vec3 b = (auramVaporMaximum - origin) * inverseDirection;
-    vec3 nearPlane = min(a, b);
-    vec3 farPlane = max(a, b);
-    vec3 entry = vec3(parallel.x ? 0.0 : nearPlane.x, parallel.y ? 0.0 : nearPlane.y, parallel.z ? 0.0 : nearPlane.z);
-    vec3 exit = vec3(parallel.x ? rayEnd : farPlane.x, parallel.y ? rayEnd : farPlane.y, parallel.z ? rayEnd : farPlane.z);
-    float first = max(max(entry.x, entry.y), max(entry.z, 0.0));
+    vec2 cube = vaporCubeInterval(origin, direction, vaporCenter(), surfaceDistance);
+    if (cube.y <= cube.x) return vec2(0.0);
+    vec2 interval = vaporBoundsInterval(origin, direction, auramVaporMinimum, auramVaporMaximum, cube.y);
+    float first = max(interval.x, cube.x);
     #ifdef VAPOR_BEHIND_TRANSLUCENT
         first = max(first, vaporTranslucentStart);
     #endif
-    float last = min(min(exit.x, exit.y), min(exit.z, rayEnd));
+    float last = interval.y;
     #ifdef AURAM_VAPOR_RADIUS
+        // The simulation can only supply density inside its own field.
         vec3 offset = origin - auramVaporCenter;
         float speed2 = dot(direction, direction);
         float along = dot(offset, direction);
@@ -49,7 +37,7 @@ vec2 vaporRayInterval(vec3 origin, vec3 direction, float rayEnd) {
         first = max(first, (-along - halfLength) / speed2);
         last = min(last, (-along + halfLength) / speed2);
     #endif
-    return vec2(first, last);
+    return last > first ? vec2(first, last) : vec2(0.0);
 }
 
 float vaporDetailNoise(vec3 position) {
@@ -72,13 +60,14 @@ float vaporDensity(vec3 playerPos) {
     vec2 densityFrames = textureLod(auramVaporVolume, local / vec3(size), 0.0).rg;
     float density = mix(densityFrames.x, densityFrames.y, auramVaporBlend);
     if (density <= 0.001) return 0.0;
+    density *= vaporEdgeFade(playerPos - vaporCenter());
     #ifdef AURAM_VAPOR_RADIUS
         // Fade in world space so the last few blocks stay smooth when the voxel grid moves.
         vec3 offset = playerPos - auramVaporCenter;
         const float fadeStart = vaporRadius - 4.0;
         density *= 1.0 - smoothstep(fadeStart * fadeStart, vaporRadius * vaporRadius, dot(offset, offset));
-        if (density <= 0.001) return 0.0;
     #endif
+    if (density <= 0.001) return 0.0;
 
     // Warp the detail coordinates, keeping the density sample inside its world cell.
     vec3 field = (playerPos + cameraPosition) * vec3(1.8, 1.0, 1.8);

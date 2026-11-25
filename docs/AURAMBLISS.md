@@ -133,3 +133,9 @@ Following multiple shader reloads and a Nether round trip, the three-chunk sunse
 ### Lifecycle and pack smoke test
 
 The shadow pass rebuilt after shader reloads, a Nether round trip, and saving and rejoining the Overworld in the same JVM. The exact production Forge jar entered the copied full Auram pack, rendered the daylight and canopy fixture with AuramBliss active, and reloaded the shader. Both Distant Horizons rendering switches were disabled. Prism launched the test clients in the background with sound muted. Native Windows OpenGL was unavailable for runtime validation.
+
+## Vapor Range
+
+In Shader Settings → AuramCore Fields → Vapor, **Vapor Range** sets the radius in blocks along each axis. The default radius of 64 gives a 128 × 128 × 128 block cube, with a four-block fade inside its faces. The cube follows the player's view, using the player eye position when AuramCore supplies it. Atum and Twilight Forest smoke, Midnight and Nether plumes and ceiling smoke, and simulated Vapor share the limit.
+
+Smoke uses the nearest visible regular or LOD terrain to stop each ray. The camera-relative bounds let smoke continue into Voxy terrain beyond the vanilla chunk and fog distances. Simulated Vapor still samples the occupied part of the AuramCore field. Weather clouds and the base atmospheric haze keep their existing range.

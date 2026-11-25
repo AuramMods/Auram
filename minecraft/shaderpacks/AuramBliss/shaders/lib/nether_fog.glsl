@@ -5,6 +5,7 @@
 
 vec4 GetVolumetricFog(
 	vec3 viewPosition,
+	float surfaceDistance,
 	float dither,
 	float dither2
 ){
@@ -14,23 +15,20 @@ vec4 GetVolumetricFog(
 
 	/// -------------  RAYMARCHING STUFF ------------- \\\
 
-	int SAMPLECOUNT = 16;
+	const int sampleCount = 16;
+	const float expFactor = 11.0;
+	vec3 origin = gbufferModelViewInverse[3].xyz;
+	vec3 direction = normalize(mat3(gbufferModelViewInverse) * viewPosition);
+	float fogEnd = min(length(viewPosition), min(far, 192.0));
+	vec3 smokeCenter = vaporCenter();
+	vec3 cameraFromSmokeCenter = origin - smokeCenter;
+	vec2 smokeInterval = vaporCubeInterval(origin, direction, smokeCenter, surfaceDistance);
+	float marchEnd = max(fogEnd, smokeInterval.y);
+	if (marchEnd <= 0.0) return vec4(0.0, 0.0, 0.0, 1.0);
+	float stepStart = 0.0;
+	float stepRatio = pow(expFactor, 1.0 / float(sampleCount));
+	float stepScale = marchEnd / (expFactor - 1.0);
 
-	vec3 wpos = mat3(gbufferModelViewInverse) * viewPosition + gbufferModelViewInverse[3].xyz;
-	vec3 dVWorld = (wpos-gbufferModelViewInverse[3].xyz);
-	vec3 progressW = vec3(0.0);
-
-	#ifdef AURAM_RENDER_VAPOR
-		float vaporRayEnd = length(dVWorld);
-	#endif
-	float maxLength = min(length(dVWorld), min(far, 12*16))/length(dVWorld);
-
-	dVWorld *= maxLength;
-
-	float dL = length(dVWorld);
-
-	float expFactor = 11.0;
-	
 	/// -------------  COLOR/LIGHTING STUFF ------------- \\\
 
 	vec3 color = vec3(0.0);
@@ -42,60 +40,51 @@ vec4 GetVolumetricFog(
     	float TorchBrightness_autoAdjust = mix(1.0, 30.0,  clamp(exp(-10.0*exposure),0.0,1.0)) / 5.0;
 	#endif
 
-	for (int i = 0; i < SAMPLECOUNT; i++) {
-		float d = (pow(expFactor, float(i+dither)/float(SAMPLECOUNT))/expFactor - 1.0/expFactor)/(1-1.0/expFactor);
-		float dd = pow(expFactor, float(i+dither)/float(SAMPLECOUNT)) * log(expFactor) / float(SAMPLECOUNT)/(expFactor-1.0);
-		
-		progressW = gbufferModelViewInverse[3].xyz + cameraPosition + d*dVWorld;
+	for (int i = 0; i < sampleCount; i++) {
+		float stepEnd = i == sampleCount - 1 ? marchEnd : (stepStart + stepScale) * stepRatio - stepScale;
+		float smokeStart = max(stepStart, smokeInterval.x);
+		float smokeLength = min(stepEnd, smokeInterval.y) - smokeStart;
+		float fogLength = max(min(stepEnd, fogEnd) - stepStart, 0.0);
+		float ceilingTransmission = 1.0;
+		if (smokeLength > 0.0) {
+			float distance = smokeStart + smokeLength * dither;
+			vec3 progressW = origin + cameraPosition + distance * direction;
+			float smokeWeight = smokeLength * vaporEdgeFade(cameraFromSmokeCenter + distance * direction);
 
-		float densityVol = netherSmokeField(progressW, 1.0, frameTimeCounter * 10.0);
-		float clearArea = 1.0 - min(max(1.0 - length(progressW - cameraPosition) / 24.0,0.0),1.0);
+			float densityVol = netherSmokeField(progressW, 1.0, frameTimeCounter * 10.0);
+			float plumeDensity = netherSmokePlumeDensity(densityVol, progressW.y) * NETHER_PLUME_DENSITY;
+			float plumeTransmission = exp(-plumeDensity * smokeWeight);
+			float clearArea = clamp(distance / 24.0, 0.0, 1.0);
+			vec3 lighting = vec3(1.0, 0.4, 0.2) * netherSmokePlumeLight(densityVol) * (clearArea * clearArea * 0.9 + 0.1);
+			color += lighting * (1.0 - plumeTransmission) * absorbance;
+			absorbance *= plumeTransmission;
 
-		//------ PLUME EFFECT
-			float plumeDensity = netherSmokePlumeDensity(densityVol, progressW.y, length(progressW - cameraPosition) / far);
-			plumeDensity *= NETHER_PLUME_DENSITY;
-			float plumeVolumeCoeff = exp(-plumeDensity*dd*dL);
-
-			vec3 lighting = vec3(1.0,0.4,0.2) * netherSmokePlumeLight(densityVol) * (clearArea*clearArea*0.9+0.1);
-
-			color += (lighting - lighting * plumeVolumeCoeff) * absorbance;
-			absorbance *= plumeVolumeCoeff;
-
-		//------ HAZE EFFECT
-			// dont make haze contrube to absorbance.
+			float ceilingSmokeDensity = netherSmokeUpperDensity(progressW.y) * NETHER_CEILING_SMOKE_DENSITY;
+			ceilingTransmission = exp(-ceilingSmokeDensity * smokeWeight);
+		}
+		if (fogLength > 0.0) {
 			float hazeDensity = 0.001;
 			#ifndef ReflectedFog
 				hazeDensity *= NETHER_HAZE_DENSITY;
 			#endif
-			float hazeVolumeCoeff = exp(-hazeDensity*dd*dL);
-			
-			vec3 hazeLighting = hazeColor;
-			
-			color += (hazeLighting - hazeLighting*hazeVolumeCoeff) * absorbance;
-
-		//------ CEILING SMOKE EFFECT
-			float ceilingSmokeDensity = netherSmokeUpperDensity(progressW.y);
-			ceilingSmokeDensity *= NETHER_CEILING_SMOKE_DENSITY;
-			float ceilingSmokeVolumeCoeff = exp(-ceilingSmokeDensity*dd*dL);
-			
-			vec3 ceilingSmoke = vec3(1.0);
-
-			color += (ceilingSmoke - ceilingSmoke*ceilingSmokeVolumeCoeff) * (absorbance*0.5+0.5);
-			absorbance *= ceilingSmokeVolumeCoeff;
-
-		//------ LPV FOG EFFECT
-			#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT
-				color += LPV_FOG_ILLUMINATION(progressW-cameraPosition, dd, dL) * TorchBrightness_autoAdjust * absorbance;
-			#endif
-
+			color += hazeColor * (1.0 - exp(-hazeDensity * fogLength)) * absorbance;
+		}
+		color += vec3(1.0 - ceilingTransmission) * (absorbance * 0.5 + 0.5);
+		absorbance *= ceilingTransmission;
+		#if defined LPV_VL_FOG_ILLUMINATION && defined EXCLUDE_WRITE_TO_LUT
+			if (fogLength > 0.0) {
+				vec3 fogPosition = origin + (stepStart + fogLength * dither) * direction;
+				color += LPV_FOG_ILLUMINATION(fogPosition, fogLength, 1.0) * TorchBrightness_autoAdjust * absorbance;
+			}
+		#endif
+		stepStart = stepEnd;
 	}
+
 	#ifdef AURAM_RENDER_VAPOR
-		if (auramVaporActive && vaporRayEnd > 1e-6 && dL > 1e-6) {
-			vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
-			vec3 vaporDirection = dVWorld / dL;
-			vec2 interval = vaporRayInterval(vaporOrigin, vaporDirection, vaporRayEnd);
+		if (auramVaporActive) {
+			vec2 interval = vaporRayInterval(origin, direction, surfaceDistance);
 			float vaporTransmission = 1.0;
-			VaporScattering vapor = traceVapor(vaporOrigin, vaporDirection, interval, 0.0, vaporRayEnd, vec3(0.034, 0.012, 0.008), vaporTransmission);
+			VaporScattering vapor = traceVapor(origin, direction, interval, 0.0, interval.y, vec3(0.034, 0.012, 0.008), vaporTransmission);
 			color = color * vapor.transmission + vapor.ambient + vapor.blockLight;
 			absorbance *= vapor.transmission;
 		}

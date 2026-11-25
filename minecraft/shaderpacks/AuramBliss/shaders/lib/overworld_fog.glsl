@@ -107,17 +107,24 @@ vec4 GetVolumetricFog(
 	#else
 		float fogRange = far;
 	#endif
-	float rayEnd = surfaceDistance >= 0.0 ? min(surfaceDistance, fogRange) : fogRange;
-
+	float fogEnd = surfaceDistance >= 0.0 ? min(surfaceDistance, fogRange) : fogRange;
+	float rayEnd = fogEnd;
 	vec3 worldDirection = mat3(gbufferModelViewInverse) * viewDirection;
-	vec3 worldOrigin = gbufferModelViewInverse[3].xyz + cameraPosition;
+	vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
+	vec3 worldOrigin = vaporOrigin + cameraPosition;
 	#ifdef AURAM_RENDER_VAPOR
-		vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
-		vec2 vaporInterval = vaporRayInterval(vaporOrigin, worldDirection, rayEnd);
+		vec2 vaporInterval = vaporRayInterval(vaporOrigin, worldDirection, surfaceDistance);
 		float vaporTransmission = 1.0;
+		rayEnd = max(rayEnd, vaporInterval.y);
 	#endif
-	#ifdef DIMENSION_SMOKE
-		vec2 smokeInterval = smokeIntervalInLayer(worldOrigin.y, worldDirection.y, rayEnd);
+	#if defined DIMENSION_SMOKE || (defined MIDNIGHT_SHADER && defined MIDNIGHT_SMOKE)
+		vec3 smokeCenter = vaporCenter();
+		vec3 cameraFromSmokeCenter = vaporOrigin - smokeCenter;
+		vec2 smokeInterval = vaporCubeInterval(vaporOrigin, worldDirection, smokeCenter, surfaceDistance);
+		#ifdef DIMENSION_SMOKE
+			smokeInterval = smokeIntervalInLayer(worldOrigin.y, worldDirection.y, smokeInterval);
+		#endif
+		if (smokeInterval.y > smokeInterval.x) rayEnd = max(rayEnd, smokeInterval.y);
 	#endif
 	vec3 shadowDirection = diagonal3(shadowProjection) * (mat3(shadowModelView) * worldDirection);
 	vec3 shadowOrigin = toShadowSpaceProjected(vec3(0.0));
@@ -214,17 +221,19 @@ vec4 GetVolumetricFog(
 
 	// SkyLightColor *= lightLevelZero*0.9 + 0.1;
 
-	for (int i = 0; i < SAMPLECOUNT; i++) {
+	// Reserve one segment for local smoke beyond the regular fog distance.
+	for (int i = 0; i <= SAMPLECOUNT; i++) {
 		if (stepStart >= rayEnd) break;
-		float stepEnd = i == SAMPLECOUNT - 1 ? rayEnd : min(rayEnd, stepBoundary);
+		float stepEnd = i == SAMPLECOUNT ? rayEnd : (i == SAMPLECOUNT - 1 ? fogEnd : min(fogEnd, stepBoundary));
 		float stepLength = stepEnd - stepStart;
+		float fogStepLength = i == SAMPLECOUNT ? 0.0 : stepLength;
 		float sampleDistance = stepStart + stepLength * dither.x;
 		float beforeCloud = cloud.a < 1.0 ? clamp((cloudDistance - stepStart) / stepLength, 0.0, 1.0) : 1.0;
 		bool crossesCloud = !cloudAdded && cloud.a < 1.0 && cloudDistance <= stepEnd;
 		#ifdef DIMENSION_SMOKE
-			float smokeDepth = smokeOpticalDepth(worldOrigin, worldDirection, smokeInterval, stepStart, stepEnd, dither.x) * inACave;
+			float smokeDepth = smokeOpticalDepth(worldOrigin, worldDirection, cameraFromSmokeCenter, smokeInterval, stepStart, stepEnd, dither.x) * inACave;
 		#elif defined MIDNIGHT_SHADER && defined MIDNIGHT_SMOKE
-			vec2 smokeDepth = midnightSmokeOpticalDepth(worldOrigin, worldDirection, stepStart, stepEnd, dither.x) * inACave;
+			vec2 smokeDepth = midnightSmokeOpticalDepth(worldOrigin, worldDirection, cameraFromSmokeCenter, smokeInterval, stepStart, stepEnd, dither.x) * inACave;
 		#endif
 		#ifdef AURAM_RENDER_VAPOR
 			float vaporStart = stepStart;
@@ -270,16 +279,16 @@ vec4 GetVolumetricFog(
 
 		#ifdef PER_BIOME_ENVIRONMENT
 			float maxDistance = inBiome * min(max(1.0 -  sampleDistance * length(worldDirection.xz)/(32*8),0.0)*2.0,1.0);
-			float densityVol = cloudVol(progressW, maxDistance) * inACave;
+			float densityVol = fogStepLength > 0.0 ? cloudVol(progressW, maxDistance) * inACave : 0.0;
 		#else
-			float densityVol = cloudVol(progressW, 0.0) * inACave;
+			float densityVol = fogStepLength > 0.0 ? cloudVol(progressW, 0.0) * inACave : 0.0;
 		#endif
 
 		//------------------------------------
 		//------ MAIN FOG EFFECT
 		//------------------------------------
 			float fogDensity = densityVol;
-			float fogOpticalDepth = fogDensity * stepLength / 8.0;
+			float fogOpticalDepth = fogDensity * fogStepLength / 8.0;
 			#ifdef DIMENSION_SMOKE
 				fogOpticalDepth += smokeDepth;
 			#elif defined MIDNIGHT_SHADER && defined MIDNIGHT_SMOKE
@@ -361,7 +370,7 @@ vec4 GetVolumetricFog(
 			vec3 m =  mC*(airCoef.y+densityVol*300.0);
 
 			// calculate the atmosphere haze seperately and purely additive to color, do not contribute to absorbtion.
-			vec3 airOpticalDepth = (rL + m) * stepLength;
+			vec3 airOpticalDepth = (rL + m) * fogStepLength;
 			vec3 atmosphereVolumeCoeff = exp(-airOpticalDepth);
 			vec3 airToCloud = beforeCloud == 1.0 ? atmosphereVolumeCoeff : exp(-airOpticalDepth * beforeCloud);
 			
@@ -380,7 +389,7 @@ vec4 GetVolumetricFog(
 		//------ LPV FOG EFFECT
 		//------------------------------------
 			#if defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT
-				vec3 voxelLight = LPV_FOG_ILLUMINATION(progressW-cameraPosition, 1.0, stepLength / 8.0) * TorchBrightness_autoAdjust * totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
+				vec3 voxelLight = LPV_FOG_ILLUMINATION(progressW-cameraPosition, 1.0, fogStepLength / 8.0) * TorchBrightness_autoAdjust * totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
 				#ifdef ATUM_SHADER
 					localLight += voxelLight;
 				#else
@@ -442,8 +451,8 @@ vec4 GetVolumetricFog(
 					float distantfade = 1- exp( -10*pow(clamp(1.0 - length(progressW - cameraPosition)/(32*65),0.0,1.0),2));
 					vec3 cloudlighting = DoCloudLighting(DUAL_DENSITY * cumulus, SkyLightColor*skylightOcclusion, skyScatter, directLight, directScattering*sh_forClouds, directMultiScattering*sh_forClouds, 1);
 
-					color += max(cloudlighting - cloudlighting*exp(-muE*stepLength),0.0) * totalAbsorbance * lightLevelZero * mix(cloud.a, 1.0, beforeCloud);
-					totalAbsorbance *= max(exp(-muE*stepLength),1.0-lightLevelZero);
+					color += max(cloudlighting - cloudlighting*exp(-muE*fogStepLength),0.0) * totalAbsorbance * lightLevelZero * mix(cloud.a, 1.0, beforeCloud);
+					totalAbsorbance *= max(exp(-muE*fogStepLength),1.0-lightLevelZero);
 				}
 			}
 		#else

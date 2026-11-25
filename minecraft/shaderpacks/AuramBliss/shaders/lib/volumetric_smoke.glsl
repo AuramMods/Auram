@@ -1,5 +1,3 @@
-const float smokeRange = 768.0;
-
 #ifdef TWILIGHT_SHADER
     const float smokeFloor = float(TWILIGHT_SMOKE_FLOOR);
     #include "/lib/twilight_smoke.glsl"
@@ -8,17 +6,16 @@ const float smokeRange = 768.0;
     #include "/lib/atum_smoke.glsl"
 #endif
 
-vec2 smokeIntervalInLayer(float originY, float directionY, float rayEnd) {
-    float traceEnd = min(rayEnd, smokeRange);
+vec2 smokeIntervalInLayer(float originY, float directionY, vec2 cube) {
     if (abs(directionY) < 1e-6) {
-        return originY > smokeFloor && originY < smokeTop ? vec2(0.0, traceEnd) : vec2(0.0);
+        return originY > smokeFloor && originY < smokeTop ? cube : vec2(0.0);
     }
 
     vec2 intersections = (vec2(smokeFloor, smokeTop) - originY) / directionY;
-    return vec2(max(min(intersections.x, intersections.y), 0.0), min(max(intersections.x, intersections.y), traceEnd));
+    return vec2(max(min(intersections.x, intersections.y), cube.x), min(max(intersections.x, intersections.y), cube.y));
 }
 
-float smokeOpticalDepth(vec3 origin, vec3 direction, vec2 interval, float stepStart, float stepEnd, float dither) {
+float smokeOpticalDepth(vec3 origin, vec3 direction, vec3 cameraFromCenter, vec2 interval, float stepStart, float stepEnd, float dither) {
     float start = max(stepStart, interval.x);
     float stop = min(stepEnd, interval.y);
     float lengthInSmoke = stop - start;
@@ -30,7 +27,7 @@ float smokeOpticalDepth(vec3 origin, vec3 direction, vec2 interval, float stepSt
     float density = 0.0;
     for (int i = 0; i < samples; i++) {
         float distance = start + (float(i) + dither) * stride;
-        float rangeFade = 1.0 - smoothstep(384.0, smokeRange, distance);
+        float rangeFade = vaporEdgeFade(cameraFromCenter + direction * distance);
         density += smokeDensity(origin + direction * distance) * rangeFade;
     }
     return density * stride;

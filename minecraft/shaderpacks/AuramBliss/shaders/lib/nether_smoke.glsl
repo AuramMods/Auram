@@ -14,9 +14,8 @@ float netherSmokeField(vec3 pos, float scale, float animation) {
                clamp((floorFalloff - floorPlumes * 0.5) * erosion, 0.0, 1.0));
 }
 
-float netherSmokePlumeDensity(float field, float height, float distanceFraction) {
-    return min(field * pow(clamp((100.0 - height) / 30.0, 0.0, 1.0), 4.0),
-               pow(clamp(1.0 - distanceFraction, 0.0, 1.0), 5.0));
+float netherSmokePlumeDensity(float field, float height) {
+    return min(field * pow(clamp((100.0 - height) / 30.0, 0.0, 1.0), 4.0), 1.0);
 }
 
 float netherSmokePlumeLight(float field) {
