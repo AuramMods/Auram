@@ -96,7 +96,4 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
     #if DEBUG_VIEW == debug_NORMALS
         FORWARD_RENDERED_COLOR = vec4(worldNormal * 0.1, 1.0);
     #endif
-    #if DEBUG_VIEW == debug_ALBEDO
-        FORWARD_RENDERED_COLOR = color;
-    #endif
 }
