@@ -333,7 +333,7 @@ void main() {
 		float z = texture2D(depthtex1,tc).x;
 
 		#ifdef AURAM_LOD_DEPTH
-			float DH_z = sampleLodDepth(dhDepthTex1,tc).x;
+			float DH_z = sampleLodOpaqueDepth(dhDepthTex1, tc);
 		#else
 			float DH_z = 0.0;
 		#endif
@@ -360,6 +360,10 @@ void main() {
 		vec3 indirectLightColor = averageSkyCol/30.0;
 		vec3 indirectLightColor_dynamic = averageSkyCol_Clouds/30.0;
 
+		#if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
+			z = auramVisibleNearOpaqueDepth(tc / RENDER_SCALE, z, DH_z);
+			DH_z0 = auramVoxyFrontDepth(DH_z0, DH_z);
+		#endif
 		vec3 viewPos1 = auramSurfaceViewPosition(tc/RENDER_SCALE, z, DH_z);
 		vec3 viewPos0 = auramFrontViewPosition(tc/RENDER_SCALE, z0, DH_z0);
 		#ifdef AURAM_RENDER_VAPOR

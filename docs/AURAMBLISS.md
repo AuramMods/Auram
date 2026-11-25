@@ -20,6 +20,14 @@ The compatibility path stores vanilla opaque, DH opaque, and DH translucent dept
 
 The Apple OpenGL linker reflected 13 samplers for the patched Overworld lighting pass, down from 16. A hidden client with active DH and a depth readback at 854 × 480 found all 409,920 pixels matched the three source textures exactly in the current RGBA32F target. The readback saw one DH-only opaque pixel, no nearer translucent pixels and GL error 0. The shoreline, underwater, and full-client counts are recorded below.
 
+## Voxy surface handoff
+
+When regular chunks have drawn a deeper surface but the section in front of it is still arriving, the opaque pass keeps the foreground Voxy mesh. Once that near section is ready, a deeper near surface can show through a real opening. The existing dither still blends surfaces that agree within 0.6 blocks along the view ray.
+
+Voxy clears its own depth at pixels marked by the near terrain stencil. AuramBliss writes Voxy-owned opaque depth into a single-channel color target so lighting, ambient occlusion, and fog can use the same position as the visible material. The packed compatibility path records the near depth as absent when the Voxy surface covers it.
+
+A disposable three-chunk Overworld test on macOS with GLA, Embeddium, Oculus, and Neo-Voxy 0.4.0-beta.1 hid a rectangle of the near roof to simulate a delayed section. The original shader showed the lower floor. The patched shader hid the floor behind the cached roof with matching surface lighting while the section was marked as loading, then exposed the floor when the section was marked ready. A separate opening in the roof stayed visible in both states.
+
 ## Feature-heavy sampler coverage
 
 Oculus 1.8.0 also occupies unit 0 for the default color target even if the linked program has no color-target-0 sampler. On the 16-unit Apple context this leaves 13 active user samplers for that program. The front depth and translucency flags now travel with the existing lighting guide. Normal, AO and specular values share one RGBA16 target with eight bits per original component. The preparation pass writes the shared inputs before opaque lighting and the packed channels become available for subsequent passes.

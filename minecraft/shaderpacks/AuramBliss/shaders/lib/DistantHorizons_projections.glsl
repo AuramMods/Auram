@@ -33,6 +33,10 @@ vec3 toScreenSpace_DH( vec2 texcoord, float depth, float DHdepth ) {
 }
 
 #ifdef AURAM_VOXY_DEPTH
+#ifdef DH_OVERDRAW_PREVENTION
+#include "/lib/voxy_opaque_depth.glsl"
+#endif
+
 bool auramHasVoxyDepth(float depth) {
     return depth > 0.0 && depth < 1.0;
 }
@@ -40,6 +44,10 @@ bool auramHasVoxyDepth(float depth) {
 float auramAxialDepth(float depth, mat4 projectionInverse) {
     vec2 view = projectionInverse[2].zw * (depth * 2.0 - 1.0) + projectionInverse[3].zw;
     return -view.x / view.y;
+}
+
+float auramVoxyFrontDepth(float lodFront, float lodOpaque) {
+    return auramHasVoxyDepth(lodFront) ? min(lodFront, lodOpaque) : lodOpaque;
 }
 
 bool auramVoxyFrontIsLod(float nearDepth, float lodDepth) {
@@ -56,6 +64,16 @@ vec3 auramVoxyViewPosition(vec2 texcoord, float lodDepth) {
     vec4 viewPosition = dhProjectionInverse * vec4(clipPosition, 1.0);
     return viewPosition.xyz / viewPosition.w;
 }
+
+#ifdef DH_OVERDRAW_PREVENTION
+float auramVisibleNearOpaqueDepth(vec2 uv, float nearDepth, float lodDepth) {
+    if (nearDepth >= 1.0 || !auramHasVoxyDepth(lodDepth)) return nearDepth;
+    vec3 lod = auramVoxyViewPosition(uv, lodDepth);
+    float gap = auramAxialDepth(nearDepth, gbufferProjectionInverse) + lod.z;
+    // A Voxy fragment beyond the match tolerance wrote its own material and depth.
+    return gap > auramVoxyOpaqueTolerance(lod) ? 1.0 : nearDepth;
+}
+#endif
 #endif
 
 vec3 auramSurfaceViewPosition(vec2 texcoord, float depth, float lodDepth) {

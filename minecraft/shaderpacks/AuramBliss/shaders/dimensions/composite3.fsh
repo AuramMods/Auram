@@ -280,7 +280,10 @@ void main() {
 
 	#ifdef AURAM_LOD_DEPTH
     float DH_depth0 = sampleLodDepth(dhDepthTex,texcoord).x;
-    float DH_depth1 = sampleLodDepth(dhDepthTex1,texcoord).x;
+    float DH_depth1 = sampleLodOpaqueDepth(dhDepthTex1, texcoord);
+    #if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
+        DH_depth0 = auramVoxyFrontDepth(DH_depth0, DH_depth1);
+    #endif
 
 		float depthOpaque = z;
 		float depthOpaqueL = linearizeDepthFast(depthOpaque, near, farPlane);
