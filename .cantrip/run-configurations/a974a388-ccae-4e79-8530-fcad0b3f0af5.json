@@ -1,0 +1,29 @@
+{
+  "schema": "cantrip.run-configuration",
+  "version": 1,
+  "id": "a974a388-ccae-4e79-8530-fcad0b3f0af5",
+  "name": "Client",
+  "provider": "shell",
+  "workingDirectory": ".",
+  "target": {
+    "kind": "command",
+    "command": "/usr/bin/tail -n 0 -F minecraft/logs/latest.log &\nlog_pid=$!\ntrap 'kill \"$log_pid\" 2>/dev/null || true' EXIT\ntrap 'exit 130' INT\ntrap 'exit 143' TERM\n\n'/Applications/Prism Launcher.app/Contents/MacOS/prismlauncher' --launch Auram --offline cyberpwn || exit $?\nwait \"$log_pid\""
+  },
+  "commandOverride": null,
+  "arguments": [],
+  "environment": {
+    "includeCodexEnvironment": true,
+    "files": [],
+    "variables": [],
+    "secrets": []
+  },
+  "beforeLaunch": [],
+  "platformOverrides": {},
+  "options": {
+    "shell": "automatic",
+    "login": true
+  },
+  "stop": {
+    "gracePeriodMs": 3000
+  }
+}
