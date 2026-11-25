@@ -112,7 +112,7 @@ Use the disposable Overworld fixture with daylight and weather cycles frozen, cl
 - Sunset tick 12200. Use `/tp @s 8.5 278 287.5 0 89` and reopen the world at that pose for the cold off-screen test. Use `/tp @s 18.5 242 291.5 0 89` to see the near and Voxy receivers in the same frame.
 - Daylight tick 9000. Use `/tp @s 13.5 246 282.5 -90 45` to see the near posts and the Voxy canopy.
 - Near caster test at tick 11200. Use `/tp @s 8.5 255 287.5 0 89` to follow the taller near post's shadow toward the Voxy receiver.
-- Movement test at tick 9000. Start at `/tp @s 4.5 229 281.5 -90 38` and fly east for four seconds, bringing the canopy into full-detail terrain.
+- Movement test at tick 9000. Start at `/tp @s 4.5 229 281.5 -90 38` and fly east for four seconds, moving the terrain handoff across the receiver.
 
 The background, muted 920 × 600 client ran Forge 47.4.10, GLA 1.0.1, Embeddium 0.3.31 and Oculus 1.8.0 on an Apple M4 Max. At three chunks, the leaf canopy reduced the median brightness of the receiver under it by 80 levels on an 8-bit grayscale scale, with a neighboring unshadowed control changing by 0.5 levels. The off-screen island's sunset shadow continued across the terrain handoff and appeared following a fresh launch at the downward camera pose. A temporary receiver overlay identified Embeddium and Voxy pixels at the lower camera pose. A continuous dark region crossed their boundary with Voxy submission enabled and disappeared when the Voxy casters were disabled. The near posts still cast shadows with either setting.
 
@@ -126,7 +126,7 @@ Each row gives the median, 95th and 99th percentile milliseconds across 480 fram
 | Three chunks, sunset | 7.02 / 12.02 / 18.67 | 7.00 / 12.23 / 17.21 | 8.86 / 17.84 / 22.88 |
 | Five chunks, daylight | 6.25 / 11.57 / 18.48 | 5.15 / 8.13 / 10.62 | 6.47 / 10.07 / 15.48 |
 | Five chunks, sunset | 6.54 / 11.73 / 16.27 | 5.71 / 9.56 / 13.13 | 5.92 / 9.28 / 14.95 |
-| Five chunks, moving through the handoff | — | 6.09 / 9.65 / 12.12 | 8.66 / 17.80 / 22.56 |
+| Five chunks, moving through the handoff | 5.86 / 7.94 / 10.09 | 6.09 / 9.65 / 12.12 | 8.66 / 17.80 / 22.56 |
 
 Following multiple shader reloads and a Nether round trip, the three-chunk sunset pose recorded 5.72 / 11.20 / 16.77 ms. These runs measure the whole client during each route, including temporal variation and background chunk activity.
 
