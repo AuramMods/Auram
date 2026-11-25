@@ -2,6 +2,7 @@
 #define SUB_SURFACE_SCATTERING_RELATED_SETTINGS
 #include "/lib/settings.glsl"
 #include "/lib/blocks.glsl"
+#include "/lib/terrain_sss.glsl"
 
 vec4 encode (vec3 n, vec2 lightmaps){
 	n.xy = n.xy / dot(abs(n), vec3(1.0));
@@ -65,7 +66,7 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
     vec3 normal = vec3( uint((parameters.face >> 1) == 2), uint((parameters.face >> 1) == 0), uint((parameters.face >> 1) == 1) ) * (float(int(parameters.face) & 1) * 2.0 - 1.0);
     // normal.z = clamp(normal.z-1.0,-1.0,1.0)*0.5+0.5;
     normal = normalize(normal); // normals in worldspace by default
-    NORMAL_AND_AO = vec4(normal * 0.5 + 0.5, 1.0);
+    NORMAL_AND_AO = vec4(normal * 0.5 + 0.5, 0.0);
 #ifdef BLISS_COMPAT
     NORMAL_AND_AO = roundEven(NORMAL_AND_AO * 255.0) / 255.0;
 #endif
@@ -76,8 +77,8 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
 		Albedo.rgb = vec3(1.0);
 	#endif
 
-    vec2 lightMaps = parameters.lightMap.xy;
-    lightMaps.y = clamp(lightMaps.y*1.04,0.0,1.0);
+    // Voxy supplies texture sample centers. Bliss stores each light level on [0, 1].
+    vec2 lightMaps = clamp((parameters.lightMap * 16.0 - 0.5) / 15.0, 0.0, 1.0);
     vec4 data1 = encode(worldToView(normal), lightMaps);
 
     Albedo = clamp(Albedo,0.0,1.0);
@@ -89,37 +90,10 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
                                 encodeVec2(data1.w, 0.0) );
 
     float subSurfaceScattering = 0.0;
-    #if SSS_TYPE > 0
-        if(
-            parameters.customId == BLOCK_SSS_STRONG || parameters.customId == BLOCK_SAPLING ||
-            parameters.customId == BLOCK_AIR_WAVING
-        ) subSurfaceScattering = 1.0;
-
-        if(
-            parameters.customId == BLOCK_GROUND_WAVING || parameters.customId == BLOCK_GROUND_WAVING_VERTICAL ||
-            parameters.customId == BLOCK_GRASS_SHORT || parameters.customId == BLOCK_GRASS_TALL_UPPER ||
-            parameters.customId == BLOCK_GRASS_TALL_LOWER
-        ) subSurfaceScattering = 0.5;
-
-        if (
-			parameters.customId == BLOCK_SSS_WEAK || parameters.customId == BLOCK_SSS_WEAK_2 ||
-			parameters.customId == BLOCK_GLOW_LICHEN || parameters.customId == BLOCK_SNOW_LAYERS || parameters.customId == BLOCK_CARPET ||
-			parameters.customId == BLOCK_AMETHYST_BUD_MEDIUM || parameters.customId == BLOCK_AMETHYST_BUD_LARGE || parameters.customId == BLOCK_AMETHYST_CLUSTER ||
-			parameters.customId == BLOCK_BAMBOO || parameters.customId == BLOCK_SAPLING || parameters.customId == BLOCK_VINE
-	    ) subSurfaceScattering = 0.5;
-
-	    if(parameters.customId == BLOCK_SSS_WEAK_3) subSurfaceScattering = 0.4;
+    #if SSS_TYPE == 1 || SSS_TYPE == 2
+        subSurfaceScattering = auramTerrainScattering(int(parameters.customId));
     #endif
 
-    vec4 specularData = vec4(0.0,0.0,subSurfaceScattering,0.0);
-    vec4 otherData = vec4(normal.xyz * 0.5 + 0.5,0.0);
-
-    specularData = clamp(specularData,0.0,1.0);
-    otherData = clamp(otherData,0.0,1.0);
-
-	SPECULAR_DATA.xyzw = vec4(
-		encodeVec2(specularData.x, otherData.x),
-		encodeVec2(specularData.y, otherData.y),
-		encodeVec2(specularData.z, otherData.z),
-		encodeVec2(specularData.w, otherData.w) );
+    // colortex8 takes raw LabPBR channels. The compatibility pass packs them later.
+    SPECULAR_DATA = vec4(0.0, 0.02, subSurfaceScattering, 0.0);
 }

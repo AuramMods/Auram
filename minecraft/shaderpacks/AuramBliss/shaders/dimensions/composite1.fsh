@@ -901,7 +901,7 @@ void main() {
 		}
 
 		#ifdef AURAM_LOD_DEPTH
-			vec3 viewPos = toScreenSpace_DH(texcoord/RENDER_SCALE-TAA_Offset*texelSize*0.5, z, DH_depth1);
+			vec3 viewPos = auramSurfaceViewPosition(texcoord/RENDER_SCALE-TAA_Offset*texelSize*0.5, z, DH_depth1);
 		#else
 			vec3 viewPos = toScreenSpace(vec3(texcoord/RENDER_SCALE - TAA_Offset*texelSize*0.5,z));
 		#endif
@@ -1119,18 +1119,13 @@ void main() {
 	////////////////////////////////////////////////////////////////////////////////////////////
 
  	if ((isEyeInWater == 0 && isWater) || (isEyeInWater == 1 && !isWater)){
-		vec3 opaqueWaterViewPos = viewPos;
 		#ifdef AURAM_LOD_DEPTH
-			vec2 waterUv = texcoord / RENDER_SCALE - TAA_Offset * texelSize * 0.5;
-			vec3 viewPos0 = auramSurfaceViewPosition(waterUv, z0, DH_depth0);
-			#ifdef AURAM_VOXY_DEPTH
-				opaqueWaterViewPos = auramSurfaceViewPosition(waterUv, z, DH_depth1);
-			#endif
+			vec3 viewPos0 = auramSurfaceViewPosition(texcoord / RENDER_SCALE - TAA_Offset * texelSize * 0.5, z0, DH_depth0);
 		#else
 			vec3 viewPos0 = toScreenSpace(vec3(texcoord/RENDER_SCALE-TAA_Offset*texelSize*0.5,z0));
 		#endif
 
-		float Vdiff = distance(opaqueWaterViewPos, viewPos0)*mix(5.0,2.0,clamp(pow(eyeBrightnessSmooth.y/240. + lightmap.y,2.0) ,0.0,1.0));
+		float Vdiff = distance(viewPos, viewPos0)*mix(5.0,2.0,clamp(pow(eyeBrightnessSmooth.y/240. + lightmap.y,2.0) ,0.0,1.0));
 		float estimatedDepth = Vdiff * abs(feetPlayerPos_normalized.y);	//assuming water plane
 
 		// make it such that the estimated depth flips to be correct when entering water.
@@ -1145,8 +1140,7 @@ void main() {
 		Absorbtion = mix(exp(-2.0 * totEpsilon * estimatedDepth), exp(-8.0 * totEpsilon), depthfalloff);
 
 		// apply caustics to the lighting, and make sure they dont look weird
-		vec3 waterFloorPosition = mat3(gbufferModelViewInverse) * opaqueWaterViewPos + cameraPosition;
-		DirectLightColor *= mix(1.0, waterCaustics(waterFloorPosition, WsunVec)*WATER_CAUSTICS_BRIGHTNESS + 0.25, clamp(estimatedDepth,0,1));
+		DirectLightColor *= mix(1.0, waterCaustics(feetPlayerPos + cameraPosition, WsunVec)*WATER_CAUSTICS_BRIGHTNESS + 0.25, clamp(estimatedDepth,0,1));
 	}
 
 	#ifdef END_SHADER
