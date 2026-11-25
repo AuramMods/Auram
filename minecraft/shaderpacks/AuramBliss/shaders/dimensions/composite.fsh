@@ -4,6 +4,7 @@
 	#undef DISTANT_HORIZONS
 #endif
 #include "/lib/auram_lod_depth.glsl"
+#include "/lib/voxy_scattering.glsl"
 
 
 flat varying vec3 WsunVec;
@@ -508,14 +509,23 @@ void main() {
 		 }
 	#endif
 
-	if (z < 1.0){
+	bool nearReceiver = z < 1.0;
+	vec3 cameraRelativePos = mat3(gbufferModelViewInverse) * viewPos;
+	bool voxyScattering = false;
+	#ifdef AURAM_VOXY_NEAR_SSS
+		voxyScattering = !nearReceiver && DH_depth1 > 0.0 && DH_depth1 < 1.0 && LabSSS > 0.0
+			&& vxNearRenderDistance > 0.0 && auramVoxyScatteringWeight(cameraRelativePos.xz) > 0.0;
+		gl_FragData[0] = vec4(0.0);
+	#endif
 
-		gl_FragData[0] = vec4(minshadowfilt, 0.1, 0.0, 0.0);
+	if (nearReceiver || voxyScattering){
+
+		if (nearReceiver) gl_FragData[0] = vec4(minshadowfilt, 0.1, 0.0, 0.0);
 
 		#ifdef Variable_Penumbra_Shadows
 			if (LabSSS > -1) {
 				
-				vec3 feetPlayerPos = mat3(gbufferModelViewInverse) * viewPos + gbufferModelViewInverse[3].xyz;
+				vec3 feetPlayerPos = cameraRelativePos + gbufferModelViewInverse[3].xyz;
 				vec3 projectedShadowPosition = mat3(shadowModelView) * feetPlayerPos  + shadowModelView[3].xyz;
 				projectedShadowPosition = diagonal3(shadowProjection) * projectedShadowPosition + shadowProjection[3].xyz;
 				
@@ -539,20 +549,28 @@ void main() {
 					vec2 scales = vec2(0.0, Max_Filter_Depth);
 					float blockerCount = 0.0;
 					float rdMul = distortFactor*(1.0+mult)*d0*k/shadowMapResolution;
-					float diffthreshM = diffthresh*mult*d0*k/20.;
 					float avgDepth = 0.0;
+
+					#ifdef AURAM_VOXY_NEAR_SSS
+						if (voxyScattering) {
+							float sampleMargin = 0.5 * rdMul + 1.0 / shadowMapResolution;
+							vec3 distanceToEdge = min(projectedShadowPosition, 1.0 - projectedShadowPosition);
+							if (any(lessThan(distanceToEdge, vec3(sampleMargin, sampleMargin, 0.0)))) return;
+						}
+					#endif
 
 					for(int i = 0; i < VPS_Search_Samples; i++){
 
 						// vec2 offsetS = SpiralSample(i, 7, 8, noise) * 0.5;
 						vec2 offsetS = CleanSample(i, VPS_Search_Samples - 1, noise) * 0.5;
 						
-						float weight = 3.0 + (i+noise) *rdMul/SHADOW_FILTER_SAMPLE_COUNT*shadowMapResolution*distortFactor/2.7;
-						
 						float d = texelFetch2D(shadow, ivec2((projectedShadowPosition.xy+offsetS*rdMul)*shadowMapResolution),0).x;
-						float b = smoothstep(weight*diffthresh/2.0, weight*diffthresh, projectedShadowPosition.z - d);
-
-						blockerCount += b;
+						if (nearReceiver) {
+							float weight = 3.0 + (i+noise) *rdMul/SHADOW_FILTER_SAMPLE_COUNT*shadowMapResolution*distortFactor/2.7;
+							float b = smoothstep(weight*diffthresh/2.0, weight*diffthresh, projectedShadowPosition.z - d);
+							blockerCount += b;
+							avgBlockerDepth += d * b;
+						}
 
 						#ifdef DISTANT_HORIZONS_SHADOWMAP
 							avgDepth += max(projectedShadowPosition.z - d, 0.0)*10000.0;
@@ -560,8 +578,15 @@ void main() {
 							avgDepth += max(projectedShadowPosition.z - d, 0.0)*1000.0;
 						#endif
 						
-						avgBlockerDepth += d * b;
 					}
+
+					#ifdef AURAM_VOXY_NEAR_SSS
+						// Leave the ordinary shadow filter's radius and blocker depth alone.
+						if (voxyScattering) {
+							gl_FragData[0].b = avgDepth / VPS_Search_Samples + voxyScatteringDepthOffset;
+							return;
+						}
+					#endif
 					
 					gl_FragData[0].g = avgDepth / VPS_Search_Samples;
 					gl_FragData[0].b = blockerCount / VPS_Search_Samples;

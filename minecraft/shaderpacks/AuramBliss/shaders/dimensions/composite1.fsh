@@ -18,6 +18,7 @@
 
 #include "/lib/util.glsl"
 #include "/lib/res_params.glsl"
+#include "/lib/voxy_scattering.glsl"
 
 
 #define diagonal3_old(m) vec3((m)[0].x, (m)[1].y, m[2].z)
@@ -1359,13 +1360,29 @@ void main() {
 			#endif
 
 			
-			Direct_SSS = SubsurfaceScattering_sun(albedo, ShadowBlockerDepth, sunSSS_density, clamp(dot(feetPlayerPos_normalized, WsunVec),0.0,1.0), SSS_shadow, shadowMapFalloff2);
-
-			Direct_SSS *= lightLeakFix;
+			float scatteringAngle = clamp(dot(feetPlayerPos_normalized, WsunVec), 0.0, 1.0);
+			Direct_SSS = SubsurfaceScattering_sun(albedo, ShadowBlockerDepth, sunSSS_density, scatteringAngle, SSS_shadow, shadowMapFalloff2);
 
 			#ifndef SCREENSPACE_CONTACT_SHADOWS
-				Direct_SSS = mix(vec3(0.0), Direct_SSS, shadowMapFalloff2);
+				Direct_SSS *= shadowMapFalloff2;
 			#endif
+
+			#ifdef AURAM_VOXY_NEAR_SSS
+				if (isDHrange && sunSSS_density > 0.0 && vxNearRenderDistance > 0.0) {
+					vec2 cameraRelativeXZ = (feetPlayerPos - gbufferModelViewInverse[3].xyz).xz;
+					float weight = auramVoxyScatteringWeight(cameraRelativeXZ);
+					if (weight > 0.0) {
+						float storedDepth = texelFetch2D(colortex3, ivec2(gl_FragCoord.xy), 0).b;
+						if (storedDepth > 0.0) {
+							float blockerDepth = max(storedDepth - voxyScatteringDepthOffset, 0.0);
+							vec3 nearScattering = SubsurfaceScattering_sun(albedo, blockerDepth, sunSSS_density, scatteringAngle, SSS_shadow, 1.0);
+							Direct_SSS = mix(Direct_SSS, nearScattering, weight);
+						}
+					}
+				}
+			#endif
+
+			Direct_SSS *= lightLeakFix;
 
 			#ifdef CLOUDS_SHADOWS
 				vec3 cloudShadowPosition = feetPlayerPos;
