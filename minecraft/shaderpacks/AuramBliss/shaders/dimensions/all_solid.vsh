@@ -240,7 +240,7 @@ void main() {
 
 	blockID = mc_Entity.x ;
 
-	if(blockID == BLOCK_GROUND_WAVING_VERTICAL || blockID == BLOCK_GRASS_SHORT || blockID == BLOCK_GRASS_TALL_LOWER || blockID == BLOCK_GRASS_TALL_UPPER ) normalMat.a = 0.60;
+	normalMat.a = auramTerrainFoliageMask(int(blockID));
 
 
 	PORTAL = 0;
@@ -267,7 +267,6 @@ void main() {
 	
 #endif
 
-	if(mc_Entity.x == BLOCK_AIR_WAVING) normalMat.a = 0.55;
 
     /////// ----- EMISSIVE STUFF ----- ///////
 		EMISSIVE = 0.0;

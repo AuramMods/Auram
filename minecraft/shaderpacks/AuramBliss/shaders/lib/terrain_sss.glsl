@@ -1,3 +1,10 @@
+float auramTerrainFoliageMask(int blockId) {
+    if (blockId == BLOCK_AIR_WAVING) return 0.55;
+    if (blockId == BLOCK_GROUND_WAVING_VERTICAL || blockId == BLOCK_GRASS_SHORT ||
+        blockId == BLOCK_GRASS_TALL_LOWER || blockId == BLOCK_GRASS_TALL_UPPER) return 0.60;
+    return 1.0;
+}
+
 float auramTerrainScattering(int blockId) {
     if (blockId == BLOCK_SSS_WEAK || blockId == BLOCK_SSS_WEAK_2 ||
         blockId == BLOCK_GLOW_LICHEN || blockId == BLOCK_SNOW_LAYERS || blockId == BLOCK_CARPET ||

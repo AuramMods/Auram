@@ -114,14 +114,16 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
     Albedo = clamp(Albedo,0.0,1.0);
     data1 = clamp(data1,0.0,1.0);
 
+    int blockId = int(parameters.customId);
+    float foliageMask = auramTerrainFoliageMask(blockId);
     DEFERRED_DATA.xyzw = vec4(  encodeVec2(Albedo.x, data1.x),
                                 encodeVec2(Albedo.y, data1.y),
                                 encodeVec2(Albedo.z, data1.z),
-                                encodeVec2(data1.w, 0.0) );
+                                encodeVec2(data1.w, foliageMask) );
 
     float subSurfaceScattering = 0.0;
     #if SSS_TYPE == 1 || SSS_TYPE == 2
-        subSurfaceScattering = auramTerrainScattering(int(parameters.customId));
+        subSurfaceScattering = auramTerrainScattering(blockId);
     #endif
 
     // colortex8 takes raw LabPBR channels. The compatibility pass packs them later.

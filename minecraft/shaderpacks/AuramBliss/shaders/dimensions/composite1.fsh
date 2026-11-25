@@ -625,6 +625,9 @@ void BilateralUpscale_REUSE_Z(sampler2D tex1, sampler2D tex2, sampler2D depth, v
 	vec3 shadow_RESULT = vec3(0.0);
 	vec2 ssao_RESULT = vec2(0.0);
 	float SUM = 1.0;
+    #ifdef AURAM_VOXY_NEAR_SSS
+        float thicknessWeight = 0.0;
+    #endif
 
 	#ifdef LIGHTING_EFFECTS_BLUR_FILTER
 		for (int i = 0; i < 4; i++) {
@@ -647,7 +650,11 @@ void BilateralUpscale_REUSE_Z(sampler2D tex1, sampler2D tex2, sampler2D depth, v
 			float EDGES = abs(offsetDepth - referenceDepth) < diffThreshold ? 1.0 : 1e-5;
 
 			#ifdef Variable_Penumbra_Shadows
-				shadow_RESULT += texelFetch2D(tex1, samplePixel, 0).rgb * EDGES;
+				vec3 sampleShadow = texelFetch2D(tex1, samplePixel, 0).rgb;
+				shadow_RESULT += sampleShadow * EDGES;
+                #ifdef AURAM_VOXY_NEAR_SSS
+                    if (sampleShadow.b > 0.0) thicknessWeight += EDGES;
+                #endif
 			#endif
 
 			#if indirect_effect == 1
@@ -659,8 +666,13 @@ void BilateralUpscale_REUSE_Z(sampler2D tex1, sampler2D tex2, sampler2D depth, v
 	#endif
 
 	#ifdef Variable_Penumbra_Shadows
-		shadow_RESULT += texture2D(tex1, gl_FragCoord.xy*texelSize).rgb;
+		vec3 centerShadow = texture2D(tex1, gl_FragCoord.xy*texelSize).rgb;
+		shadow_RESULT += centerShadow;
 		filteredShadow = shadow_RESULT/SUM;
+        #ifdef AURAM_VOXY_NEAR_SSS
+            // Keep the center's validity. A nearby receiver must not extend the band.
+            filteredShadow.b = centerShadow.b > 0.0 ? shadow_RESULT.b / (thicknessWeight + 1.0) : 0.0;
+        #endif
 	#endif
 	
 	#if indirect_effect == 1
@@ -918,7 +930,11 @@ void main() {
             vec4 SpecularTex = texture2D(colortex8, texcoord);
             vec4 normalAndAO = texture2D(colortex15, texcoord);
         #endif
-        float LabSSS = clamp((-65.0 + SpecularTex.z * 255.0) / 190.0, 0.0, 1.0);
+        #if SSS_TYPE == 0
+            const float LabSSS = 0.0;
+        #else
+            float LabSSS = clamp((-65.0 + SpecularTex.z * 255.0) / 190.0, 0.0, 1.0);
+        #endif
 		vec3 FlatNormals = normalAndAO.rgb * 2.0 - 1.0;
 		vec3 slopednormal = normal;
 
@@ -1375,7 +1391,7 @@ void main() {
 		#endif
 	
 	////////////////////////////////	SUN SSS		////////////////////////////////
-		#if SSS_TYPE != 0 && defined OVERWORLD_SHADER
+		#ifdef OVERWORLD_SHADER
 
 			float sunSSS_density = LabSSS;
 			float SSS_shadow = ShadowAlpha * Shadows;
@@ -1389,7 +1405,7 @@ void main() {
 			#endif
 			
 			#ifdef SCREENSPACE_CONTACT_SHADOWS
-				vec2 SS_directLight = SSRT_Shadows(auramSurfaceViewPosition(texcoord/RENDER_SCALE, z, DH_depth1), isDHrange, normalize(WsunVec*mat3(gbufferModelViewInverse)), interleaved_gradientNoise(), sunSSS_density > 0.0 && shadowMapFalloff2 < 1.0, hand);
+				vec2 SS_directLight = SSRT_Shadows(auramSurfaceViewPosition(texcoord/RENDER_SCALE, z, DH_depth1), isDHrange, normalize(WsunVec*mat3(gbufferModelViewInverse)), interleaved_gradientNoise(), isLeaf || isGrass, hand);
 				
 				// combine shadowmap with a minumum shadow determined by the screenspace shadows.
 				Shadows = min(Shadows, SS_directLight.r);
@@ -1401,6 +1417,7 @@ void main() {
 			#endif
 
 			
+            #if SSS_TYPE != 0
 			float scatteringAngle = clamp(dot(feetPlayerPos_normalized, WsunVec), 0.0, 1.0);
 			Direct_SSS = SubsurfaceScattering_sun(albedo, ShadowBlockerDepth, sunSSS_density, scatteringAngle, SSS_shadow, shadowMapFalloff2);
 
@@ -1413,7 +1430,7 @@ void main() {
 					vec2 cameraRelativeXZ = (feetPlayerPos - gbufferModelViewInverse[3].xyz).xz;
 					float weight = auramVoxyScatteringWeight(cameraRelativeXZ);
 					if (weight > 0.0) {
-						float storedDepth = texelFetch2D(colortex3, ivec2(gl_FragCoord.xy), 0).b;
+						float storedDepth = filteredShadow.b;
 						if (storedDepth > 0.0) {
 							float blockerDepth = max(storedDepth - voxyScatteringDepthOffset, 0.0);
 							vec3 nearScattering = SubsurfaceScattering_sun(albedo, blockerDepth, sunSSS_density, scatteringAngle, SSS_shadow, 1.0);
@@ -1424,6 +1441,7 @@ void main() {
 			#endif
 
 			Direct_SSS *= lightLeakFix;
+            #endif
 
 			#ifdef CLOUDS_SHADOWS
 				vec3 cloudShadowPosition = feetPlayerPos;

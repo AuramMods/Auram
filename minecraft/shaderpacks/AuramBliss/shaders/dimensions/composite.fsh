@@ -490,7 +490,7 @@ void main() {
 
 #ifdef OVERWORLD_SHADER
 	float SpecularTex = texture2D(colortex8,texcoord).z;
-	float LabSSS = clamp((-64.0 + SpecularTex * 255.0) / 191.0 ,0.0,1.0);
+	float LabSSS = clamp((-65.0 + SpecularTex * 255.0) / 190.0, 0.0, 1.0);
 
 	float NdotL = clamp(dot(normal,WsunVec),0.0,1.0);
 	float vanillAO = clamp(texture2D(colortex15,texcoord).a,0.0,1.0)  ;
@@ -589,7 +589,9 @@ void main() {
 					#endif
 					
 					gl_FragData[0].g = avgDepth / VPS_Search_Samples;
-					gl_FragData[0].b = blockerCount / VPS_Search_Samples;
+                    #ifdef AURAM_VOXY_NEAR_SSS
+                        gl_FragData[0].b = gl_FragData[0].g + voxyScatteringDepthOffset;
+                    #endif
 					
 					if (blockerCount >= 0.9){
 						avgBlockerDepth /= blockerCount;
