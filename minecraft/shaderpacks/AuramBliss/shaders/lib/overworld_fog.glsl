@@ -7,8 +7,16 @@ uniform float noPuddleAreas;
     #include "/lib/atum_atmosphere.glsl"
 #endif
 
-#if defined TWILIGHT_SHADER || (defined ATUM_SHADER && defined ATUM_SMOKE)
-    #define DIMENSION_SMOKE
+#ifdef TWILIGHT_SHADER
+    #ifdef TWILIGHT_SMOKE
+        #define DIMENSION_SMOKE
+    #endif
+#elif defined ATUM_SHADER
+    #ifdef ATUM_SMOKE
+        #define DIMENSION_SMOKE
+    #endif
+#endif
+#ifdef DIMENSION_SMOKE
     #include "/lib/volumetric_smoke.glsl"
 #endif
 
@@ -106,6 +114,7 @@ vec4 GetVolumetricFog(
 	#ifdef AURAM_RENDER_VAPOR
 		vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
 		vec2 vaporInterval = vaporRayInterval(vaporOrigin, worldDirection, rayEnd);
+		float vaporTransmission = 1.0;
 	#endif
 	#ifdef DIMENSION_SMOKE
 		vec2 smokeInterval = smokeIntervalInLayer(worldOrigin.y, worldDirection.y, rayEnd);
@@ -289,9 +298,9 @@ vec4 GetVolumetricFog(
 
 			vec3 Lightning = Iris_Lightningflash_VLfog(progressW-cameraPosition, lightningBoltPosition.xyz);
 			vec3 lighting = DirectLight + indirectLight * (lightLevelZero*0.99 + 0.01) + Lightning;
-			#ifdef TWILIGHT_SHADER
+			#if defined TWILIGHT_SHADER && defined TWILIGHT_SMOKE
 				// Diffuse canopy light catches the drafts, even away from the low sun.
-				vec3 smokeLight = vec3(0.025, 0.035, 0.030) * (0.25 + 0.75 * lightLevelZero);
+				vec3 smokeLight = vec3(TWILIGHT_SMOKE_R, TWILIGHT_SMOKE_G, TWILIGHT_SMOKE_B) * (0.25 + 0.75 * lightLevelZero);
 				#ifdef ReflectedFog
 					smokeLight *= 5.0; // The sky lookup stores fog lighting at one fifth of its input scale.
 				#endif
@@ -304,7 +313,7 @@ vec4 GetVolumetricFog(
 				#ifdef ReflectedFog
 					purpleScattering *= 5.0;
 				#endif
-				lighting += midnightPurple * (purpleScattering * lightLevelZero);
+				lighting += midnightTint * (purpleScattering * lightLevelZero);
 			#endif
 
 			color += lighting * ((1.0 - fogToCloud) + (fogToCloud - fogVolumeCoeff) * cloud.a) * fogAbsorbance;
@@ -317,7 +326,7 @@ vec4 GetVolumetricFog(
 				if (vaporInterval.y > vaporStart && vaporInterval.x < stepEnd) {
 					vec3 vaporLight = indirectLight * (0.08 + 0.92 * lightLevelZero) + DirectLight * 0.25;
 					vaporLight += vec3(0.003);
-					VaporScattering vapor = traceVapor(vaporOrigin, worldDirection, vaporInterval, vaporStart, stepEnd, vaporLight);
+					VaporScattering vapor = traceVapor(vaporOrigin, worldDirection, vaporInterval, vaporStart, stepEnd, vaporLight, vaporTransmission);
 					float vaporWeight = totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
 					color += vapor.ambient * vaporWeight;
 					#ifdef ATUM_SHADER

@@ -75,7 +75,7 @@ void main() {
             hsvSky.zw = exp2(hsvSky.zw * LpvBlockSkyRange) - 1.0;
             incoming += vec4(HsvToRgb(hsvSky.xyz), hsvSky.w);
         }
-        incoming *= (1.0 / 6.0) * 0.96;
+        incoming *= (1.0 / 6.0) * vec4(vec3(LPV_BLOCK_FALLOFF), 0.96);
         incoming.rgb *= tint;
     }
     if (id != 0u && emission.a > 0.0) {

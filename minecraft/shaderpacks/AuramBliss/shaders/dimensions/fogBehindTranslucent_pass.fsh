@@ -409,7 +409,8 @@ void main() {
 				vec3 direction = mat3(gbufferModelViewInverse) * ray.xyz;
 				float rayEnd = ray.w >= 0.0 ? ray.w : far;
 				vec2 interval = vaporRayInterval(origin, direction, rayEnd);
-				VaporScattering vapor = traceVapor(origin, direction, interval, 0.0, rayEnd, vec3(0.014));
+				float vaporTransmission = 1.0;
+				VaporScattering vapor = traceVapor(origin, direction, interval, 0.0, rayEnd, vec3(0.014), vaporTransmission);
 				VolumetricFog2 = vec4(vapor.ambient + vapor.blockLight, vapor.transmission);
 			}
 		#endif

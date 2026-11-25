@@ -94,7 +94,8 @@ vec4 GetVolumetricFog(
 			vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
 			vec3 vaporDirection = dVWorld / dL;
 			vec2 interval = vaporRayInterval(vaporOrigin, vaporDirection, vaporRayEnd);
-			VaporScattering vapor = traceVapor(vaporOrigin, vaporDirection, interval, 0.0, vaporRayEnd, vec3(0.034, 0.012, 0.008));
+			float vaporTransmission = 1.0;
+			VaporScattering vapor = traceVapor(vaporOrigin, vaporDirection, interval, 0.0, vaporRayEnd, vec3(0.034, 0.012, 0.008), vaporTransmission);
 			color = color * vapor.transmission + vapor.ambient + vapor.blockLight;
 			absorbance *= vapor.transmission;
 		}

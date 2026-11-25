@@ -101,7 +101,7 @@ float linearizeDepthFast(const in float depth, const in float near, const in flo
 
 		vec3 lpvPos = GetLpvPosition(playerPos);
 
-        float fadeLength = 10.0; // in blocks
+        const float fadeLength = LPV_FOG_EDGE_FADE;
         vec3 cubicRadius = clamp(	min(((LpvSize3-1.0) - lpvPos)/fadeLength,      lpvPos/fadeLength) ,0.0,1.0);
         float LpvFadeF = cubicRadius.x*cubicRadius.y*cubicRadius.z;
 

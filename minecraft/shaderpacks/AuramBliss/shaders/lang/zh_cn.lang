@@ -577,16 +577,16 @@ screen.Ambient_light.comment = 配置和遮蔽处的照明相关的设置.
     screen.Ambient_Colors.comment = 配置阴影区域的照明颜色.
     screen.Torch_Colors.comment = 配置火把或其它可放置光源的颜色.
     
-    option.LPV_SIZE.comment = 配置彩色照明体积的大小（以方块为单位）。
-    option.LPV_SATURATION.comment = 配置彩色光照的鲜艳度。
-    option.LPV_TINT_SATURATION.comment = 配置透明方块对光照的色调鲜艳度。
-    option.LPV_NORMAL_STRENGTH.comment = 配置将影响照明方向的表面法线数量。
-    option.LPV_ENTITY_LIGHTS.comment = 允许实体发出光照。
-    option.LPV_REDSTONE_LIGHTS.comment = 允许红石发出光照。
-    option.LPV_COLORED_CANDLES.comment = 允许彩色蜡烛发出对应的的彩色光。
-    option.LPV_NOSHADOW_HACK.comment = Iris 模组 1.7.0 及更低版本的修复！允许在下界和末地使用 FloodFill，但会禁用实体和掉落物的光照。
-    option.LPV_VL_FOG_ILLUMINATION.comment = 允许光线照亮周围的空气。
-    option.LPV_VL_FOG_ILLUMINATION_BRIGHTNESS.comment = 配置照亮周围空气的强度。
+    option.LPV_SIZE.comment = 配置彩色照明体积的大小（以方块为单位）。默认值为7（每边 128 方块）。
+    option.LPV_SATURATION.comment = 配置彩色光照的鲜艳度。默认值为100%。
+    option.LPV_TINT_SATURATION.comment = 配置透明方块对光照的色调鲜艳度。默认值为100%。
+    option.LPV_NORMAL_STRENGTH.comment = 配置将影响照明方向的表面法线数量。默认值为50%。
+    option.LPV_ENTITY_LIGHTS.comment = 允许实体发出光照。默认值为开启。
+    option.LPV_REDSTONE_LIGHTS.comment = 允许红石发出光照。默认值为开启。
+    option.LPV_COLORED_CANDLES.comment = 允许彩色蜡烛发出对应的的彩色光。默认值为关闭。
+    option.LPV_NOSHADOW_HACK.comment = Iris 模组 1.7.0 及更低版本的修复！允许在下界和末地使用 FloodFill，但会禁用实体和掉落物的光照。默认值为关闭。
+    option.LPV_VL_FOG_ILLUMINATION.comment = 允许光线照亮周围的空气。默认值为关闭。
+    option.LPV_VL_FOG_ILLUMINATION_BRIGHTNESS.comment = 配置照亮周围空气的强度。默认值为100%。
 
 screen.Resource_Pack_Support.comment = 由遵循 LabPBR 格式的资源包提供部分信息的小部分效果.
     screen.Reflections.comment = 配置由 LabPBR 格式的资源包所提供信息的反射.

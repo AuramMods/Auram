@@ -14,7 +14,7 @@ layout (local_size_x = 8, local_size_y = 8, local_size_z = 8) in;
     shared vec4 lpvSharedData[10*10*10];
     shared uint voxelSharedData[10*10*10];
 
-    const vec2 LpvBlockSkyFalloff = vec2(0.96, 0.96);
+    const vec2 LpvBlockSkyFalloff = vec2(LPV_BLOCK_FALLOFF, 0.96);
     const ivec3 lpvFlatten = ivec3(1, 10, 100);
 
     uniform int frameCounter;

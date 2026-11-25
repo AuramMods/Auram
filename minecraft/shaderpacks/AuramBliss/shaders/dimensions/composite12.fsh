@@ -131,7 +131,7 @@ vec3 saturationAndCrosstalk(vec3 color){
 
 	color = color + lumaColDiff*(-luminance*CROSSTALK + SATURATION);
 	#ifdef AETHER_SHADER
-		color = luminance + (color - luminance) * 1.05;
+		color = luminance + (color - luminance) * AETHER_SATURATION;
 	#endif
   
   return color;
@@ -159,7 +159,7 @@ void main() {
 
 	#ifdef AETHER_SHADER
 		// Keep the gold-green grade separate from the exposure boost.
-		const vec3 aetherTint = vec3(1.035, 1.030, 0.930);
+		const vec3 aetherTint = vec3(AETHER_TINT_R, AETHER_TINT_G, AETHER_TINT_B);
 		color *= aetherTint / luma(aetherTint);
 	#endif
 

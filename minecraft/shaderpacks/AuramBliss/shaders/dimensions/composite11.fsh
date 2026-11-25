@@ -159,7 +159,7 @@ void main() {
 	
 	col = (mix(col, bloom, VL_abs) + bloom * lightScat) * exposure.rgb;
 	#ifdef AETHER_SHADER
-		col *= 1.10;
+		col *= AETHER_EXPOSURE;
 	#endif
 	
   	float lum = dot(col, vec3(0.15,0.3,0.55));

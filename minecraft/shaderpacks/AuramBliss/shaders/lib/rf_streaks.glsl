@@ -117,13 +117,14 @@ vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, float phase,
         vec3 pointA = rfCurve(a, b, c, d, center, bend, twist, beginT);
         float d2 = 0.0306;
         float closestT = 0.0;
-        for (int i = 1; i <= 5; i++) {
-            vec3 pointB = rfCurve(a, b, c, d, center, bend, twist, mix(beginT, endT, float(i) * 0.2));
+        const float segmentStep = 1.0 / float(RF_CURVE_SEGMENTS);
+        for (int i = 1; i <= RF_CURVE_SEGMENTS; i++) {
+            vec3 pointB = rfCurve(a, b, c, d, center, bend, twist, mix(beginT, endT, float(i) * segmentStep));
             float alongSegment;
             float distance = rfDistanceSquared(ro, rd, interval, pointA, pointB, alongSegment);
             if (distance < d2) {
                 d2 = distance;
-                closestT = mix(beginT, endT, (float(i - 1) + alongSegment) * 0.2);
+                closestT = mix(beginT, endT, (float(i - 1) + alongSegment) * segmentStep);
             }
             pointA = pointB;
         }
@@ -140,7 +141,7 @@ vec3 rfPulse(vec3 ro, vec3 rd, vec2 interval, ivec3 block, float phase,
         float energy = mix(energyIn, energyOut, closestT);
         float tintRate = inRate == 0u || outRate == 0u ? float(max(inRate, outRate))
                                                       : mix(float(inRate), float(outRate), closestT);
-        light = max(light, rfBandTint(world, age, tintRate) * energy * rfEnvelope(age) * (2.4 * core + glow));
+        light = max(light, rfBandTint(world, age, tintRate) * energy * rfEnvelope(age) * (2.4 * core + glow * RF_HALO_BRIGHTNESS));
     }
     return light;
 }
@@ -201,7 +202,7 @@ vec3 rfStreakLight(vec2 uv) {
     if (!auramRfActive) return vec3(0.0);
     float sceneDepth = texture2D(depthtex0, uv * RENDER_SCALE).r;
     vec3 viewRay = rfUnproject(uv, 0.9);
-    float rayStop = 48.0;
+    float rayStop = float(RF_RENDER_RANGE);
     if (sceneDepth < 1.0) rayStop = min(rayStop, length(rfUnproject(uv, sceneDepth)));
     #ifdef DISTANT_HORIZONS
         float lodDepth = texture2D(dhDepthTex, uv * RENDER_SCALE).r;
@@ -232,7 +233,7 @@ vec3 rfStreakLight(vec2 uv) {
 
     vec3 light = vec3(0.0);
     float phase = rfTravelPhase();
-    for (int i = 0; i < 96; i++) {
+    for (int i = 0; i < RF_TRACE_CELLS; i++) {
         if (first >= last || any(lessThan(cell, low)) || any(greaterThanEqual(cell, high))) break;
         int axis = cellExit.x <= cellExit.y && cellExit.x <= cellExit.z ? 0 : (cellExit.y <= cellExit.z ? 1 : 2);
         float stop = min(cellExit[axis], last);

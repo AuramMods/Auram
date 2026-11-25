@@ -1,9 +1,10 @@
-const float smokeFloor = 64.0;
 const float smokeRange = 768.0;
 
 #ifdef TWILIGHT_SHADER
+    const float smokeFloor = float(TWILIGHT_SMOKE_FLOOR);
     #include "/lib/twilight_smoke.glsl"
 #else
+    const float smokeFloor = float(ATUM_SMOKE_FLOOR);
     #include "/lib/atum_smoke.glsl"
 #endif
 

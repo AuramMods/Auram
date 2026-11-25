@@ -14,6 +14,9 @@ float vaporTranslucentStart = 0.0;
 
 vec2 vaporRayInterval(vec3 origin, vec3 direction, float rayEnd) {
     if (!auramVaporActive) return vec2(0.0);
+    #if VAPOR_RENDER_RANGE > 0
+        rayEnd = min(rayEnd, float(VAPOR_RENDER_RANGE));
+    #endif
     bvec3 parallel = lessThan(abs(direction), vec3(1e-6));
     bvec3 inside = bvec3(origin.x >= auramVaporMinimum.x && origin.x < auramVaporMaximum.x,
                          origin.y >= auramVaporMinimum.y && origin.y < auramVaporMaximum.y,
@@ -57,7 +60,7 @@ float vaporDensity(vec3 playerPos) {
     // Warp the detail coordinates, keeping the density sample inside its world cell.
     vec3 field = (playerPos + cameraPosition) * vec3(1.8, 1.0, 1.8);
     field.y -= frameTimeCounter * 0.8;
-    field *= 1.0 / 3.0;
+    field *= VAPOR_WISP_SCALE / 3.0;
     float bend = vaporDetailNoise(field * 0.72) - 0.5;
     float detail = vaporDetailNoise(field * 2.1 + bend * vec3(2.4, 0.75, -2.0));
     float wisps = smoothstep(0.27, 0.75, detail);
@@ -71,20 +74,24 @@ struct VaporScattering {
     float transmission;
 };
 
-VaporScattering traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float stop, vec3 ambient) {
+VaporScattering traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float stop, vec3 ambient, inout float rayTransmission) {
     float first = max(start, interval.x);
     float distance = min(stop, interval.y) - first;
     if (distance <= 0.0) return VaporScattering(vec3(0.0), vec3(0.0), 1.0);
 
-    int samples = min(48, int(ceil(distance / 0.65)));
+    #if VAPOR_MAX_OPACITY < 100
+        float minimumTransmission = (1.0 - VAPOR_MAX_OPACITY / 100.0) / max(rayTransmission, 1e-6);
+        if (minimumTransmission >= 1.0) return VaporScattering(vec3(0.0), vec3(0.0), 1.0);
+    #endif
+    int samples = min(VAPOR_MAX_SAMPLES, int(ceil(distance / VAPOR_SAMPLE_SPACING)));
     float stride = distance / float(samples);
     float transmission = 1.0;
     vec3 scattering = vec3(0.0);
     #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
-        float blockLightScale = LPV_VL_FOG_ILLUMINATION_BRIGHTNESS / 100.0;
+        float blockLightScale = (LPV_VL_FOG_ILLUMINATION_BRIGHTNESS / 100.0) * VAPOR_LIGHT_BRIGHTNESS;
         #ifdef OVERWORLD_SHADER
             float night = smoothstep(0.0, 0.05, -sunElevation);
-            blockLightScale *= mix(1.0, 0.8649, night);
+            blockLightScale *= mix(1.0, VAPOR_NIGHT_LIGHT, night);
             // Skylight also identifies dark interiors during the day.
             float skyExposure = smoothstep(64.0, 192.0, float(eyeBrightnessSmooth.y));
             float vaporDarkness = max(night, 1.0 - skyExposure);
@@ -96,26 +103,44 @@ VaporScattering traceVapor(vec3 origin, vec3 direction, vec2 interval, float sta
         vec3 position = origin + direction * (first + (float(i) + 0.5) * stride);
         float density = vaporDensity(position);
         if (density <= 0.001) continue;
-        float segmentTransmission = exp(-2.5 * density * stride);
+        float segmentTransmission = exp(-VAPOR_EXTINCTION * density * stride);
+        #if VAPOR_MAX_OPACITY < 100
+            // Spend the remaining opacity budget before accumulating this sample's light.
+            segmentTransmission = max(segmentTransmission, minimumTransmission / transmission);
+        #endif
         #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
             vec3 lpv = GetLpvPosition(position);
             if (all(greaterThanEqual(lpv, vec3(0.5))) && all(lessThan(lpv, LpvSize3 - 0.5))) {
                 vec3 light = GetLpvBlockLight(SampleLpvLinear(lpv)) * blockLightScale;
+                #if VAPOR_LIGHT_LIMIT > 0
+                    float peak = max(max(light.r, light.g), light.b);
+                    light *= min(1.0, float(VAPOR_LIGHT_LIMIT) / max(peak, 1e-6));
+                #endif
+                #if VAPOR_LIGHT_SATURATION != 100
+                    float neutral = dot(light, vec3(0.2126, 0.7152, 0.0722));
+                    light = max(mix(vec3(neutral), light, VAPOR_LIGHT_SATURATION / 100.0), vec3(0.0));
+                #endif
                 scattering += light * ((1.0 - segmentTransmission) * transmission);
             }
         #endif
         transmission *= segmentTransmission;
         if (transmission < 0.002) break;
+        #if VAPOR_MAX_OPACITY < 100
+            if (transmission <= minimumTransmission) break;
+        #endif
     }
+    #if VAPOR_MAX_OPACITY < 100
+        rayTransmission *= transmission;
+    #endif
     vec3 ambientScattering = ambient * (1.0 - transmission);
     #if (defined LPV_VL_FOG_ILLUMINATION && defined IS_LPV_ENABLED && defined EXCLUDE_WRITE_TO_LUT) || defined VAPOR_TRANSLUCENT_LPV
         // Let nearby colored lights dominate the smoke without boosting the neutral part of the light.
         float neutral = min(min(scattering.r, scattering.g), scattering.b);
-        vec3 extraColor = 2.3 * (scattering - neutral);
+        vec3 extraColor = VAPOR_LIGHT_CHROMA * (scattering - neutral);
         float colorStrength = max(max(extraColor.r, extraColor.g), extraColor.b);
         float ambientStrength = max(max(ambientScattering.r, ambientScattering.g), ambientScattering.b);
-        ambientScattering *= 1.0 - 0.8 * colorStrength / max(ambientStrength + colorStrength, 1e-6);
-        scattering = (scattering + extraColor) * mix(1.0, 0.9, vaporDarkness);
+        ambientScattering *= 1.0 - VAPOR_AMBIENT_SUPPRESSION * colorStrength / max(ambientStrength + colorStrength, 1e-6);
+        scattering = (scattering + extraColor) * mix(1.0, VAPOR_DARK_GLOW, vaporDarkness);
     #endif
     return VaporScattering(ambientScattering, scattering, transmission);
 }

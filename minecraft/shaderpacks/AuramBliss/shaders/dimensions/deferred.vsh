@@ -150,7 +150,7 @@ void main() {
 	
 	// maximum control of color and luminance
 	#ifdef MIDNIGHT_SHADER
-		vec3 minimumlight = midnightPurple * min(MIN_LIGHT_AMOUNT, 0.0005) + vec3(nightVision);
+		vec3 minimumlight = midnightTint * min(MIN_LIGHT_AMOUNT, 0.0005) + vec3(nightVision);
 	#else
 		vec3 minimumlight = vec3(0.5, 0.75, 1.0) * (min(MIN_LIGHT_AMOUNT, 0.0005) + nightVision);
 	#endif
@@ -164,7 +164,7 @@ void main() {
 
 	#ifdef TWILIGHT_SHADER
 		// Use the dimension's existing shadow direction with a fraction of the daylight intensity.
-		sunColor = (sunColorBase) * (0.025 / 4000.0) * vec3(1.0, 0.82, 0.64);
+		sunColor = (sunColorBase) * (TWILIGHT_SUN_STRENGTH / 4000.0) * vec3(1.0, 0.82, 0.64);
 		moonColor = vec3(0.0);
 		lightSourceColor = sunColor;
 	#elif defined MIDNIGHT_SHADER
@@ -273,9 +273,9 @@ void main() {
 
 	#ifdef TWILIGHT_SHADER
 		// Preserve the night level when auto exposure adapts to a dark view.
-		exposure = clamp(targetExposure, 0.0, 0.92) * EXPOSURE_MULTIPLIER;
+		exposure = clamp(targetExposure, 0.0, TWILIGHT_EXPOSURE_LIMIT) * EXPOSURE_MULTIPLIER;
 	#elif defined MIDNIGHT_SHADER
-		exposure = clamp(targetExposure, 0.0, 0.68) * EXPOSURE_MULTIPLIER;
+		exposure = clamp(targetExposure, 0.0, MIDNIGHT_EXPOSURE_LIMIT) * EXPOSURE_MULTIPLIER;
 	#else
 		exposure = max(targetExposure*EXPOSURE_MULTIPLIER, 0.0);
 	#endif

@@ -409,7 +409,7 @@ void main() {
         BiomeFogColor(cavefogCol);
       #endif
       #ifdef MIDNIGHT_SHADER
-        cavefogCol = midnightPurple * 0.032;
+        cavefogCol = midnightTint * 0.032;
       #endif
 
       cavefogCol *= 1.0-pow(1.0-pow(1.0 - max(1.0 - linearDistance/far,0.0),2.0),CaveFogFallOff);

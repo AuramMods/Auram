@@ -25,11 +25,11 @@ uniform int worldTime;
 #endif
 
 #ifdef AETHER_SHADER
-	const float LAYER0_minHEIGHT = 1.0;
-	const float LAYER0_maxHEIGHT = 28.0;
+	const float LAYER0_minHEIGHT = AETHER_CLOUD_BASE;
+	const float LAYER0_maxHEIGHT = AETHER_CLOUD_BASE + AETHER_CLOUD_THICKNESS;
 	// Compress the cumulus profile into the Aether's low cloud layer.
 	const float aetherCloudHeightScale = 100.0 / (LAYER0_maxHEIGHT - LAYER0_minHEIGHT);
-	const float lowCloudDensityScale = 1.15;
+	const float lowCloudDensityScale = AETHER_CLOUD_DENSITY;
 #else
 	float LAYER0_minHEIGHT = CloudLayer0_height;
 	float LAYER0_maxHEIGHT = LAYER0_minHEIGHT + 100.0;
