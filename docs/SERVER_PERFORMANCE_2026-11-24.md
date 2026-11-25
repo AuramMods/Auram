@@ -126,3 +126,20 @@ The prototype placed a temporary identity lookup ahead of structural equality fo
 | Nether, 130363 | 11.06 | 17.75 | 0.950 s | 0.350 s | 35.65 → 32.74 ms |
 
 The Overworld column benchmark also moved from 56.97 to 58.74 ms per 16 probes. Most of the Nether pair's measured CPU change occurred in biome fill, outside the prototype. The production build retains the shipped mapping and sampler implementation. Existing aquifer-height reuse, spline-wrapper reuse, TerraBlender region reuse, and Dreamtinker's tag predicate cache remain the reference for future phase-specific experiments.
+
+## Cycle 5 dedicated replay and release validation
+
+Each arm loaded a private copy of the same existing save on headless Forge 47.4.10, Java 17, with four JVM-visible processors, an 8–12 GiB G1 heap, and view and simulation distance 10. The server reported 570 loaded mods including nested dependencies and test instrumentation. Each run warmed on 12 chunks, measured 96 cold FULL requests using native generation tickets, and recorded at least 1,200 main-thread ticks. The benchmark queued the same positions and added a fixed entity NBT workload. It ran without connected players. The first pair kept the pack's 15-worker pool. The second pair ran in reverse order with three generation workers. GuideME was supplied to both private exports to satisfy Applied Energistics 2's declared dependency.
+
+| Generation workers and arm | Ticks | p95 MSPT | p99 MSPT | p99.9 MSPT | Max MSPT | Above 50 / 100 / 250 / 1,000 ms | p95 chunk ready | FULL/s |
+| --- | ---: | ---: | ---: | ---: | ---: | --- | ---: | ---: |
+| 15, control | 1,200 | 5.23 | 16.45 | 50.56 | 103.29 | 2 / 1 / 0 / 0 | 3.40 s | 2.16 |
+| 15, release jars | 1,257 | 5.66 | 16.82 | 61.76 | 77.53 | 3 / 0 / 0 / 0 | 4.55 s | 1.54 |
+| 3, control | 1,200 | 4.18 | 14.88 | 49.77 | 49.99 | 0 / 0 / 0 / 0 | 4.25 s | 2.19 |
+| 3, release jars | 1,200 | 4.62 | 15.03 | 57.37 | 81.42 | 3 / 0 / 0 / 0 | 4.80 s | 1.94 |
+
+The shipped fixes improved the specific selector, terminal and crystal chest fixtures. The full replay measured slower cold throughput and higher p95 and p99.9 MSPT in both pairs. The measured main-thread p99 difference was under 0.4 ms in each pair, and neither workload reproduced the multi-second stalls from the original profile. Both release runs recorded more worker execution samples inside terrain probes although those classes are byte-identical to the control. All three releases retain exactly the same packaged datapack contents as their prior jars.
+
+The 96 saved chunks agreed on biome palettes and complete structure starts in all four comparisons. The 15-worker and three-worker cross-build comparisons differed at 105,741 and 80,757 block positions out of 26,738,688 and in six and one saved fluid-tick lists respectively. Changing the worker count on the same control build changed 107,045 block positions and one fluid-tick list. Changing it on the same release build changed 67,988 block positions and four fluid-tick lists. The largest differences included moss, clay and kelp. The full decorated output varies under this workload. The targeted sampler fixture provides the exact parity check.
+
+JFR GC overlapped one of the eight ticks above 50 ms across the four runs. That was about 34 ms of the three-worker candidate's 81.42 ms tick. Selected main-thread save and I/O stacks appeared in two to four execution samples per arm. Distant Horizons work was visible on other threads, and the workload does not isolate ticket ownership or a player transition. These results leave GC tuning, Distant Horizons scheduling, chunk persistence, and the Nether-return stall open. Adapt is outside this implementation.
