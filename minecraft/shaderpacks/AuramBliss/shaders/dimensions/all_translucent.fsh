@@ -385,23 +385,24 @@ float ComputeShadowMap(inout vec3 directLightColor, vec3 playerPos, float maxDis
 
 		for(int i = 0; i < samples; i++){
 			vec2 offsetS = CleanSample(i, samples - 1, noise) * 0.3;
-			projectedShadowPosition.xy += rdMul*offsetS;
+			vec3 shadowTap = projectedShadowPosition + vec3(rdMul * offsetS, 0.0);
 	#else
 		int samples = 1;
+        vec3 shadowTap = projectedShadowPosition;
 	#endif
 	
 
 		#ifdef TRANSLUCENT_COLORED_SHADOWS
 
 			// determine when opaque shadows are overlapping translucent shadows by getting the difference of opaque depth and translucent depth
-			float shadowDepthDiff = pow(clamp((shadow2D(shadowtex1, projectedShadowPosition).x - projectedShadowPosition.z) * 2.0,0.0,1.0),2.0);
+			float shadowDepthDiff = pow(clamp((shadow2D(shadowtex1, shadowTap).x - shadowTap.z) * 2.0,0.0,1.0),2.0);
 
 			// get opaque shadow data to get opaque data from translucent shadows.
-			float opaqueShadow = shadow2D(shadowtex0, projectedShadowPosition).x;
+			float opaqueShadow = shadow2D(shadowtex0, shadowTap).x;
 			shadowmap += max(opaqueShadow, shadowDepthDiff);
 
 			// get translucent shadow data
-			vec4 translucentShadow = texture2D(shadowcolor0, projectedShadowPosition.xy);
+			vec4 translucentShadow = texture2D(shadowcolor0, shadowTap.xy);
 
 			// this curve simply looked the nicest. it has no other meaning.
 			float shadowAlpha = pow(1.0 - pow(translucentShadow.a,5.0),0.2);
@@ -414,7 +415,7 @@ float ComputeShadowMap(inout vec3 directLightColor, vec3 playerPos, float maxDis
 			translucentTint += mix(translucentShadow.rgb, vec3(1.0),  opaqueShadow*shadowDepthDiff);
 
 		#else
-			shadowmap += shadow2D(shadow, projectedShadowPosition).x;
+			shadowmap += shadow2D(shadow, shadowTap).x;
 		#endif
 
 	#ifdef BASIC_SHADOW_FILTER

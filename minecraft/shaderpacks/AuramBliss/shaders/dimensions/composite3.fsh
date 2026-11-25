@@ -133,6 +133,16 @@ vec2 decodeVec2(float a){
     const float constant2 = 256. / 255.;
     return fract( a * constant1 ) * constant2 ;
 }
+#if defined AURAM_VOXY_DEPTH && defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
+float frontViewDepth(ivec2 pixel) {
+    vec2 uv = (vec2(pixel) + 0.5) * texelSize;
+    float nearDepth = texelFetch2D(depthtex0, pixel, 0).x;
+    float lodDepth = sampleLodDepth(dhDepthTex, uv).x;
+    if (auramVoxyFrontIsLod(nearDepth, lodDepth)) return auramAxialDepth(lodDepth, dhProjectionInverse);
+    return nearDepth < 1.0 ? auramAxialDepth(nearDepth, gbufferProjectionInverse) : -1.0;
+}
+#endif
+
 vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord, float referenceDepth, inout float CLOUDALPHA){
 	ivec2 scaling = ivec2(1.0/VL_RENDER_RESOLUTION);
 	ivec2 posDepth  = ivec2(coord*VL_RENDER_RESOLUTION) * scaling;
@@ -147,11 +157,15 @@ vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord
 		ivec2( 0, 0)
   );
 
-	#ifdef AURAM_LOD_DEPTH
-		float diffThreshold = 0.01;
-	#else
-		float diffThreshold = zMults.x;
-	#endif
+    #if defined AURAM_VOXY_DEPTH && defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
+        // Match the first surface that stopped the cloud ray, including Voxy water.
+        referenceDepth = frontViewDepth(ivec2(gl_FragCoord.xy));
+        float diffThreshold = max(1.5, referenceDepth * 0.03);
+    #elif defined AURAM_LOD_DEPTH
+        float diffThreshold = 0.01;
+    #else
+        float diffThreshold = zMults.x;
+    #endif
 
 	vec4 RESULT = vec4(0.0);
 	float SUM = 0.0;
@@ -160,13 +174,22 @@ vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord
 		
 		ivec2 radius = getRadius[i];
 
-		#ifdef AURAM_LOD_DEPTH
-			float offsetDepth = sqrt(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling,0).a/65000.0);
-		#else
-			float offsetDepth = ld(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).r);
-		#endif
-
-		float EDGES = abs(offsetDepth - referenceDepth) < diffThreshold ? 1.0 : 1e-5;
+        ivec2 depthPixel = posDepth + (radius + pos) * scaling;
+        #if defined AURAM_VOXY_DEPTH && defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
+            ivec2 lastPixel = ivec2(TAA_VIEWPORT_SIZE(1.0 / texelSize)) - 1;
+            if (any(lessThan(depthPixel, ivec2(0))) || any(greaterThan(depthPixel, lastPixel))) continue;
+            float offsetDepth = frontViewDepth(depthPixel);
+            if ((offsetDepth < 0.0) != (referenceDepth < 0.0)
+                || abs(offsetDepth - referenceDepth) >= diffThreshold) continue;
+            float EDGES = 1.0;
+        #else
+            #ifdef AURAM_LOD_DEPTH
+                float offsetDepth = sqrt(texelFetch2D(depth, depthPixel, 0).a / 65000.0);
+            #else
+                float offsetDepth = ld(texelFetch2D(depth, depthPixel, 0).r);
+            #endif
+            float EDGES = abs(offsetDepth - referenceDepth) < diffThreshold ? 1.0 : 1e-5;
+        #endif
 		
 		RESULT += texelFetch2D(tex, posColor + radius + pos, 0) * EDGES;
 
@@ -177,9 +200,16 @@ vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord
     SUM += EDGES;
 	}
 
-  #if defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
-   CLOUDALPHA = CLOUDALPHA / SUM;
-  #endif
+    #if defined AURAM_VOXY_DEPTH && defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
+        // A thin foreground surface can have no matching low-resolution tap.
+        if (SUM == 0.0) {
+            CLOUDALPHA = 1.0;
+            return vec4(0.0, 0.0, 0.0, 1.0);
+        }
+    #endif
+    #if defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
+        CLOUDALPHA /= SUM;
+    #endif
 
 	return RESULT / SUM;
 }

@@ -33,6 +33,20 @@ vec3 toScreenSpace_DH( vec2 texcoord, float depth, float DHdepth ) {
 }
 
 #ifdef AURAM_VOXY_DEPTH
+bool auramHasVoxyDepth(float depth) {
+    return depth > 0.0 && depth < 1.0;
+}
+
+float auramAxialDepth(float depth, mat4 projectionInverse) {
+    vec2 view = projectionInverse[2].zw * (depth * 2.0 - 1.0) + projectionInverse[3].zw;
+    return -view.x / view.y;
+}
+
+bool auramVoxyFrontIsLod(float nearDepth, float lodDepth) {
+    return auramHasVoxyDepth(lodDepth) &&
+        (nearDepth >= 1.0 || auramAxialDepth(lodDepth, dhProjectionInverse) < auramAxialDepth(nearDepth, gbufferProjectionInverse));
+}
+
 vec3 auramVoxyViewPosition(vec2 texcoord, float lodDepth) {
     vec3 clipPosition = vec3(texcoord, lodDepth) * 2.0 - 1.0;
     vec4 viewPosition = dhProjectionInverse * vec4(clipPosition, 1.0);

@@ -686,25 +686,26 @@ float ComputeShadowMap(in vec3 projectedShadowPosition, float distortFactor, flo
 		for(int i = 0; i < samples; i++){
 			// vec2 offsetS = tapLocation_simple(i, 7, 9, noise) * 0.5;
 			vec2 offsetS = CleanSample(i, samples - 1, noise) * 0.3;
-			projectedShadowPosition.xy += rdMul*offsetS;
+			vec3 shadowTap = projectedShadowPosition + vec3(rdMul * offsetS, 0.0);
 	#else
 		int samples = 1;
+        vec3 shadowTap = projectedShadowPosition;
 	#endif
 		#ifdef TRANSLUCENT_COLORED_SHADOWS
 			// determine when opaque shadows are overlapping translucent shadows by getting the difference of opaque depth and translucent depth
-			float shadowDepthDiff = pow(clamp((shadow2D(shadowtex1, projectedShadowPosition).x - projectedShadowPosition.z*0.6)*2.0,0.0,1.0),2.0);
+			float shadowDepthDiff = pow(clamp((shadow2D(shadowtex1, shadowTap).x - shadowTap.z*0.6)*2.0,0.0,1.0),2.0);
 
 			// get opaque shadow data to get opaque data from translucent shadows.
-			float opaqueShadow = shadow2D(shadowtex0, projectedShadowPosition).x;
+			float opaqueShadow = shadow2D(shadowtex0, shadowTap).x;
 			shadowmap += max(opaqueShadow, shadowDepthDiff);
 
 			// get translucent shadow data
-			vec4 translucentShadow = texture2D(shadowcolor0, projectedShadowPosition.xy);
+			vec4 translucentShadow = texture2D(shadowcolor0, shadowTap.xy);
 
 			// this curve simply looked the nicest. it has no other meaning.
 			float shadowAlpha = pow(1.0 - pow(translucentShadow.a,5.0),0.2);
 
-			FUNNYSHADOW = shadowAlpha;
+			FUNNYSHADOW += shadowAlpha;
 
 			// normalize the color to remove luminance, and keep the hue. remove all opaque color.
 			// mulitply shadow alpha to shadow color, but only on surfaces facing the lightsource. this is a tradeoff to protect subsurface scattering's colored shadow tint from shadow bias on the back of the caster.
@@ -714,7 +715,7 @@ float ComputeShadowMap(in vec3 projectedShadowPosition, float distortFactor, flo
 			// make it such that full alpha areas that arent in a shadow have a value of 1.0 instead of 0.0
 			translucentTint += mix(translucentShadow.rgb, vec3(1.0),  opaqueShadow*shadowDepthDiff);
 		#else
-			shadowmap += shadow2D(shadow, projectedShadowPosition).x;
+			shadowmap += shadow2D(shadow, shadowTap).x;
 		#endif
 	#ifdef BASIC_SHADOW_FILTER
 		}
@@ -723,6 +724,7 @@ float ComputeShadowMap(in vec3 projectedShadowPosition, float distortFactor, flo
 	#ifdef TRANSLUCENT_COLORED_SHADOWS
 		// tint the lightsource color with the translucent shadow color
 		directLightColor *= mix(vec3(1.0), translucentTint.rgb / samples, maxDistFade);
+        FUNNYSHADOW /= float(samples);
 	#endif
 
 	// return maxDistFade;
@@ -1165,6 +1167,16 @@ void main() {
 		
 		float estimatedSunDepth = Vdiff; //assuming water plane
 		Absorbtion = mix(exp(-2.0 * totEpsilon * estimatedDepth), exp(-8.0 * totEpsilon), depthfalloff);
+        #ifdef AURAM_VOXY_DEPTH
+            if (isEyeInWater == 0 && auramVoxyFrontIsLod(z0, DH_depth0)
+                && (z < 1.0 || auramHasVoxyDepth(DH_depth1))) {
+                // Filter the light going to the bed here. The fog pass covers the ray back to the surface.
+                vec3 waterColumn = mat3(gbufferModelViewInverse) * (viewPos - viewPos0);
+                estimatedDepth = abs(waterColumn.y);
+                float sunPath = estimatedDepth / max(abs(WsunVec.y), 0.15);
+                Absorbtion = exp(-totEpsilon * min(sunPath, 16.0));
+            }
+        #endif
 
 		// apply caustics to the lighting, and make sure they dont look weird
 		DirectLightColor *= mix(1.0, waterCaustics(feetPlayerPos + cameraPosition, WsunVec)*WATER_CAUSTICS_BRIGHTNESS + 0.25, clamp(estimatedDepth,0,1));

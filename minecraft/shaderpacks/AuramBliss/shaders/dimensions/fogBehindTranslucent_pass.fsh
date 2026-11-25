@@ -379,7 +379,15 @@ void main() {
 		float Vdiff = distance(viewPos1, viewPos0) * 2.0;
 		float VdotU = playerPos.y;
 		float estimatedDepth = Vdiff * abs(VdotU) ;	//assuming water plane
-		float estimatedSunDepth = estimatedDepth / abs(WsunVec.y); //assuming water plane
+		float estimatedSunDepth = estimatedDepth / max(abs(WsunVec.y), 0.001); // assuming water plane
+        #ifdef AURAM_VOXY_DEPTH
+            if (iswater && auramVoxyFrontIsLod(z0, DH_z0) && (z < 1.0 || auramHasVoxyDepth(DH_z))) {
+                vec3 waterColumn = viewPos1 - viewPos0;
+                Vdiff = length(waterColumn);
+                estimatedDepth = abs((mat3(gbufferModelViewInverse) * waterColumn).y);
+                estimatedSunDepth = estimatedDepth / max(abs(WsunVec.y), 0.15);
+            }
+        #endif
 
 	 	indirectLightColor_dynamic *= ambient_brightness * pow(1.0-pow(1.0-lightmap.y,0.5),3.0)	;
 		// float TorchBrightness_autoAdjust = mix(1.0, 30.0,  clamp(exp(-10.0*exposure),0.0,1.0)) ;
