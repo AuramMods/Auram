@@ -8,6 +8,10 @@ uniform float auramVaporBlend;
 uniform vec3 auramVaporOrigin;
 uniform vec3 auramVaporMinimum;
 uniform vec3 auramVaporMaximum;
+#ifdef AURAM_VAPOR_RADIUS
+uniform vec3 auramVaporCenter;
+const float vaporRadius = float(AURAM_VAPOR_RADIUS);
+#endif
 #ifdef VAPOR_BEHIND_TRANSLUCENT
 float vaporTranslucentStart = 0.0;
 #endif
@@ -34,7 +38,18 @@ vec2 vaporRayInterval(vec3 origin, vec3 direction, float rayEnd) {
     #ifdef VAPOR_BEHIND_TRANSLUCENT
         first = max(first, vaporTranslucentStart);
     #endif
-    return vec2(first, min(min(exit.x, exit.y), min(exit.z, rayEnd)));
+    float last = min(min(exit.x, exit.y), min(exit.z, rayEnd));
+    #ifdef AURAM_VAPOR_RADIUS
+        vec3 offset = origin - auramVaporCenter;
+        float speed2 = dot(direction, direction);
+        float along = dot(offset, direction);
+        float discriminant = along * along + speed2 * (vaporRadius * vaporRadius - dot(offset, offset));
+        if (discriminant <= 0.0) return vec2(0.0);
+        float halfLength = sqrt(discriminant);
+        first = max(first, (-along - halfLength) / speed2);
+        last = min(last, (-along + halfLength) / speed2);
+    #endif
+    return vec2(first, last);
 }
 
 float vaporDetailNoise(vec3 position) {
@@ -50,12 +65,20 @@ float vaporDetailNoise(vec3 position) {
 
 float vaporDensity(vec3 playerPos) {
     vec3 local = playerPos - auramVaporOrigin;
-    ivec3 cell = clamp(ivec3(floor(local)), ivec3(0), ivec3(63));
+    ivec3 size = textureSize(auramVaporVolume, 0);
+    ivec3 cell = clamp(ivec3(floor(local)), ivec3(0), size - 1);
     // Full collision cells mask the trilinear filter at glass and walls.
     if (texelFetch(auramVaporVolume, cell, 0).b < 0.5) return 0.0;
-    vec2 densityFrames = textureLod(auramVaporVolume, local / 64.0, 0.0).rg;
+    vec2 densityFrames = textureLod(auramVaporVolume, local / vec3(size), 0.0).rg;
     float density = mix(densityFrames.x, densityFrames.y, auramVaporBlend);
     if (density <= 0.001) return 0.0;
+    #ifdef AURAM_VAPOR_RADIUS
+        // Fade in world space so the last few blocks stay smooth when the voxel grid moves.
+        vec3 offset = playerPos - auramVaporCenter;
+        const float fadeStart = vaporRadius - 4.0;
+        density *= 1.0 - smoothstep(fadeStart * fadeStart, vaporRadius * vaporRadius, dot(offset, offset));
+        if (density <= 0.001) return 0.0;
+    #endif
 
     // Warp the detail coordinates, keeping the density sample inside its world cell.
     vec3 field = (playerPos + cameraPosition) * vec3(1.8, 1.0, 1.8);
