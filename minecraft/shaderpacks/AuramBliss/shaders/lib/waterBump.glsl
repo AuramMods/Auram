@@ -89,3 +89,8 @@ vec3 getWaveNormal(vec3 posxz, bool isLOD){
 
 	return wave;
 }
+
+vec3 auramWaterSurfaceBump(vec3 position) {
+    vec3 bump = getWaveNormal(position, false);
+    return mix(vec3(0.0, 0.0, 1.0), bump, 10.0 * WATER_WAVE_STRENGTH);
+}

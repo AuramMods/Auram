@@ -46,6 +46,13 @@ uniform sampler2D depthtex0;
 	uniform sampler2D dhDepthTex;
 	uniform sampler2D dhDepthTex1;
 	#include "/lib/dh_chunk_transition.glsl"
+#elif defined VOXY && defined DH_OVERDRAW_PREVENTION && !defined HAND && !defined ENTITIES && !defined BLOCKENTITIES
+	#define AURAM_VOXY_WATER_TRANSITION
+	uniform sampler2D vxDepthTexTrans;
+	uniform sampler2D vxDepthTexOpaque;
+	uniform mat4 vxProjInv;
+	uniform float vxNearRenderDistance;
+	#include "/lib/dh_chunk_transition.glsl"
 #endif
 uniform sampler2D colortex12;
 uniform sampler2D colortex14;
@@ -104,6 +111,7 @@ uniform vec3 nsunColor;
 #include "/lib/color_transforms.glsl"
 #include "/lib/projections.glsl"
 #include "/lib/sky_gradient.glsl"
+#include "/lib/water_cloud_reflection.glsl"
 #include "/lib/waterBump.glsl"
 
 
@@ -484,6 +492,16 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
 			// The DH water pass has already selected its pixels. Use water from one pass per pixel.
 			if (lodFront < lodOpaque && dhMatchesSurface(lodFront, dhProjectionInverse, viewPos)) discard;
 		}
+	#elif defined AURAM_VOXY_WATER_TRANSITION
+		if (isWater && vxNearRenderDistance > 0.0) {
+			vec2 lodUv = gl_FragCoord.xy * texelSize / RENDER_SCALE;
+			float lodFront = texture2D(vxDepthTexTrans, lodUv).r;
+			float lodOpaque = texture2D(vxDepthTexOpaque, lodUv).r;
+			// Voxy already chose the overlap pixels. Yield only to the same water surface.
+			float oneBlockInView = -viewPos.z / max(length(viewPos), 1.0);
+			if (lodFront > 0.0 && lodFront < lodOpaque
+			    && abs(dhViewDepth(lodFront, vxProjInv) + viewPos.z) <= oneBlockInView) discard;
+		}
 	#endif
 	bool isReflectiveEntity = abs(MATERIALS - 0.8) < 0.01;
 	bool isReflective = abs(MATERIALS - 0.7) < 0.01 || isWater || isReflectiveEntity;
@@ -564,10 +582,7 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
 			if(abs(worldSpaceNormal.y) < 0.9995) posxz.xz -= (posxz.y + frameTimeCounter*3 * WATER_WAVE_SPEED) * normalize(worldSpaceNormal.xz) ;
 		
 			posxz.xyz = getParallaxDisplacement(posxz);
-			vec3 bump = normalize(getWaveNormal(posxz, false));
-
-			float bumpmult = 10.0 * WATER_WAVE_STRENGTH;
-			bump = bump * vec3(bumpmult, bumpmult, bumpmult) + vec3(0.0f, 0.0f, 1.0f - bumpmult);
+			vec3 bump = auramWaterSurfaceBump(posxz);
 
 			NormalTex.xyz = bump;
 
@@ -791,7 +806,11 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
 					SunReflection = Direct_lighting * GGX(normal, -normalize(viewPos), WsunVec*mat3(gbufferModelViewInverse), max(roughness,0.035), f0) * Metals; 
 				#endif
 				#ifdef WATER_BACKGROUND_SPECULAR
- 					if(isEyeInWater == 0 && !isReflectiveEntity) BackgroundReflection = skyCloudsFromTex(mat3(gbufferModelViewInverse) * reflectedVector, colortex4).rgb / 30.0 * Metals;
+					if (isEyeInWater == 0 && !isReflectiveEntity) {
+                        vec3 skyDirection = mat3(gbufferModelViewInverse) * reflectedVector;
+                        if (isWater) skyDirection = auramWaterSkyDirection(skyDirection, feetPlayerPos, cameraPosition.y);
+                        BackgroundReflection = skyCloudsFromTex(skyDirection, colortex4).rgb / 30.0 * Metals;
+                    }
 				#endif
 
 				if(isEyeInWater == 1 && isWater) BackgroundReflection.rgb = exp(-8.0 * vec3(Water_Absorb_R, Water_Absorb_G, Water_Absorb_B)) * clamp(WsunVec.y*lightCol.a,0,1);
@@ -810,6 +829,11 @@ if (gl_FragCoord.x * texelSize.x < 1.0  && gl_FragCoord.y * texelSize.y < 1.0 )	
 					previousPosition.xy = projMAD(gbufferPreviousProjection, previousPosition).xy / -previousPosition.z * 0.5 + 0.5;
 					if (previousPosition.x > 0.0 && previousPosition.y > 0.0 && previousPosition.x < 1.0 && previousPosition.x < 1.0) {
 						Reflections.a = 1.0; 
+						#ifdef AURAM_VOXY_WATER_TRANSITION
+						if (isWater && vxNearRenderDistance > 0.0) {
+							Reflections.a *= 1.0 - voxyWaterCoverage(dhChunkDistance(feetPlayerPos), vxNearRenderDistance);
+						}
+						#endif
 						Reflections.rgb = texture2D(colortex5, previousPosition.xy).rgb * Metals;
 					}
 				}

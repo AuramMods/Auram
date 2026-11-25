@@ -6,6 +6,9 @@
     ",
     "version": 1,
     "excludeLodsFromVanillaDepth": true,
+#ifdef DH_OVERDRAW_PREVENTION
+    "waterTransition": true,
+#endif
     "opaqueDrawBuffers": [1, 8, 15],
     "translucentDrawBuffers": [2, 7],
     "blending": {
@@ -17,7 +20,7 @@
         "vxViewProj", "vxViewProjInv", "vxViewProjPrev",
         "vxModelView", "vxModelViewInv", "vxModelViewPrev",
         "vxProj", "vxProjInv", "vxProjPrev",
-        "vxNear", "vxFar",
+        "vxNear", "vxFar", "vxNearRenderDistance",
         "gbufferModelView", "gbufferModelViewInverse",
         "gbufferProjection", "gbufferProjectionInverse",
         "gbufferPreviousModelView", "gbufferPreviousProjection",

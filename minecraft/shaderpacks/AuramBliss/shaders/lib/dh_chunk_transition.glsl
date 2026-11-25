@@ -42,6 +42,12 @@ bool dhKeepTranslucentLod(float distance, float vanillaFar, int frameCounter) {
     return dhTransitionDither(frameCounter) < dhFadeCoverage(fadeStart, dhFadeEnd(overlapEnd, vanillaFar), distance);
 }
 
+float voxyWaterCoverage(float distance, float nearDistance) {
+    float overlapStart = max(dhOverlapEnd(nearDistance) - float(DH_OVERDRAW_FADE_LENGTH), 0.0);
+    // The loaded sections can extend past the nominal render circle.
+    return dhFadeCoverage(overlapStart, nearDistance + float(DH_OVERDRAW_FADE_LENGTH), distance);
+}
+
 bool dhFadeVanillaTerrain(float distance, float vanillaFar, int frameCounter) {
     float overlapEnd = dhOverlapEnd(vanillaFar);
     return dhTransitionDither(frameCounter) < dhFadeCoverage(overlapEnd, dhFadeEnd(overlapEnd, vanillaFar), distance);

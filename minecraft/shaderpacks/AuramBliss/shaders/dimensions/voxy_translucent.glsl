@@ -4,6 +4,10 @@
 #include "/lib/settings.glsl"
 #include "/lib/res_params.glsl"
 #include "/lib/waterBump.glsl"
+#include "/lib/water_cloud_reflection.glsl"
+#ifdef DH_OVERDRAW_PREVENTION
+    #include "/lib/dh_chunk_transition.glsl"
+#endif
 
 layout(location = 0) out vec4 FORWARD_RENDERED_COLOR;
 layout(location = 1) out vec4 TINT_AND_MASK;
@@ -14,6 +18,13 @@ vec3 voxyViewPosition() {
     return position.xyz / position.w;
 }
 
+#ifdef DH_OVERDRAW_PREVENTION
+bool voxy_keepWaterOverlap() {
+    vec3 waterPosition = (vxModelViewInv * vec4(voxyViewPosition(), 1.0)).xyz;
+    return dhTransitionDither(frameCounter) < voxyWaterCoverage(dhChunkDistance(waterPosition), vxNearRenderDistance);
+}
+#endif
+
 vec3 voxyLinearColor(vec3 srgb) {
     return srgb * (srgb * (srgb * 0.305306011 + 0.682171111) + 0.012522878);
 }
@@ -21,7 +32,7 @@ vec3 voxyLinearColor(vec3 srgb) {
 vec3 voxySkyReflection(vec3 direction) {
     const float PI = 3.141592653589793;
     vec2 uv = vec2(atan(-direction.x, -direction.z) * (0.5 / PI) + 0.5,
-                   asin(clamp(direction.y, -1.0, 1.0)) / PI + 0.5);
+                   direction.y * 0.5 + 0.5);
     return texture(colortex4, (clamp(uv, 0.0, 1.0) * 256.0 + vec2(275.5, 1.5)) * texelSize).rgb / 30.0;
 }
 
@@ -44,9 +55,9 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
     vec3 viewPosition = voxyViewPosition();
     vec3 playerPosition = (vxModelViewInv * vec4(viewPosition, 1.0)).xyz;
 
-    if (water && abs(worldNormal.y) > 0.1) {
-        vec3 wave = normalize(getWaveNormal(playerPosition + cameraPosition, true));
-        worldNormal.xz = clamp(wave.xy * WATER_WAVE_STRENGTH, -0.1, 0.1);
+    if (water && worldNormal.y > 0.1) {
+        vec3 bump = auramWaterSurfaceBump(playerPosition + cameraPosition);
+        worldNormal = bump.xzy;
     }
     worldNormal = normalize(worldNormal);
 
@@ -81,6 +92,7 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
         vec3 reflection = shaded;
         #if defined OVERWORLD_SHADER && defined WATER_BACKGROUND_SPECULAR
             vec3 reflected = mat3(vxModelViewInv) * reflect(eye, normal);
+            if (water) reflected = auramWaterSkyDirection(reflected, playerPosition, cameraPosition.y);
             reflection = voxySkyReflection(reflected);
         #endif
         reflection *= fresnel;
