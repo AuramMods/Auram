@@ -544,6 +544,20 @@ vec4 BilateralUpscale_DH(sampler2D tex, sampler2D depth, vec2 coord, float refer
 
 }
 
+#if defined AURAM_VOXY_DEPTH && defined LIGHTING_EFFECTS_BLUR_FILTER
+float voxyOpaqueViewDepth(ivec2 pixel, bool hand) {
+    vec2 uv = (vec2(pixel) + 0.5) * texelSize;
+    #ifdef BLISS_COMPAT
+        vec2 opaqueDepths = texelFetch2D(colortex12, pixel, 0).rg;
+    #else
+        vec2 opaqueDepths = vec2(texelFetch2D(depthtex1, pixel, 0).x, sampleLodDepth(dhDepthTex1, uv).x);
+    #endif
+    float nearDepth = opaqueDepths.x < 1.0 ? convertHandDepth_2(opaqueDepths.x, hand) : 1.0;
+    if (nearDepth >= 1.0 && (opaqueDepths.y <= 0.0 || opaqueDepths.y >= 1.0)) return dhFarPlane;
+    return -auramSurfaceViewPosition(uv / RENDER_SCALE, nearDepth, opaqueDepths.y).z;
+}
+#endif
+
 void BilateralUpscale_REUSE_Z(sampler2D tex1, sampler2D tex2, sampler2D depth, vec2 coord, float referenceDepth, inout vec2 ambientEffects, inout vec3 filteredShadow, bool hand){
 	ivec2 scaling = ivec2(1.0);
 	ivec2 posDepth  = ivec2(coord) * scaling;
@@ -557,7 +571,10 @@ void BilateralUpscale_REUSE_Z(sampler2D tex1, sampler2D tex2, sampler2D depth, v
 		ivec2(-1, 1)
   	);
 
-	#ifdef AURAM_LOD_DEPTH
+	#ifdef AURAM_VOXY_DEPTH
+		// Reference and tap depths are in view-space blocks on both renderers.
+		float diffThreshold = max(0.5, referenceDepth * 0.02);
+	#elif defined AURAM_LOD_DEPTH
 		float diffThreshold = 0.0005;
 	#else
 		float diffThreshold = 0.005;
@@ -572,7 +589,12 @@ void BilateralUpscale_REUSE_Z(sampler2D tex1, sampler2D tex2, sampler2D depth, v
 
 			ivec2 radius = getRadius[i];
 
-            #if defined BLISS_COMPAT && !(defined DISTANT_HORIZONS && defined DH_AMBIENT_OCCLUSION)
+            ivec2 samplePixel = posColor + radius + pos;
+            #if defined AURAM_VOXY_DEPTH
+                ivec2 viewport = ivec2(TAA_VIEWPORT_SIZE(vec2(viewWidth, viewHeight)));
+                if (any(lessThan(samplePixel, ivec2(0))) || any(greaterThanEqual(samplePixel, viewport))) continue;
+                float offsetDepth = voxyOpaqueViewDepth(samplePixel, hand);
+            #elif defined BLISS_COMPAT && !(defined DISTANT_HORIZONS && defined DH_AMBIENT_OCCLUSION)
                 float offsetDepth = ld(abs(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).b));
             #elif defined DISTANT_HORIZONS
                 float offsetDepth = sqrt(texelFetch2D(depth, posDepth + radius * scaling + pos * scaling, 0).a / 65000.0);
@@ -583,11 +605,11 @@ void BilateralUpscale_REUSE_Z(sampler2D tex1, sampler2D tex2, sampler2D depth, v
 			float EDGES = abs(offsetDepth - referenceDepth) < diffThreshold ? 1.0 : 1e-5;
 
 			#ifdef Variable_Penumbra_Shadows
-				shadow_RESULT += texelFetch2D(tex1, posColor + radius + pos, 0).rgb * EDGES;
+				shadow_RESULT += texelFetch2D(tex1, samplePixel, 0).rgb * EDGES;
 			#endif
 
 			#if indirect_effect == 1
-				ssao_RESULT += texelFetch2D(tex2, posColor + radius + pos, 0).rg * EDGES;
+				ssao_RESULT += texelFetch2D(tex2, samplePixel, 0).rg * EDGES;
 			#endif
 
 			SUM += EDGES;
@@ -1046,7 +1068,9 @@ void main() {
 		vec3 filteredShadow = vec3(1.412,1.0,0.0);
 		vec2 SSAO_SSS = vec2(1.0);
 		
-		#if defined DISTANT_HORIZONS && defined DH_AMBIENT_OCCLUSION
+		#if defined AURAM_VOXY_DEPTH
+			BilateralUpscale_REUSE_Z(colortex3, colortex14, colortex12, gl_FragCoord.xy - 1.5, -viewPos.z, SSAO_SSS, filteredShadow, hand);
+		#elif defined DISTANT_HORIZONS && defined DH_AMBIENT_OCCLUSION
 			BilateralUpscale_REUSE_Z(colortex3,	colortex14, colortex12, gl_FragCoord.xy-1.5, DH_mixedLinearZ, SSAO_SSS, filteredShadow, hand);
         #elif defined BLISS_COMPAT
             BilateralUpscale_REUSE_Z(colortex3, colortex14, colortex14, gl_FragCoord.xy - 1.5, ld(z0), SSAO_SSS, filteredShadow, hand);
