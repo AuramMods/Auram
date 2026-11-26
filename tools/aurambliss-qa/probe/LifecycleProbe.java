@@ -1,6 +1,9 @@
 package dev.auram.bliss.test;
 
 import dev.auram.bliss.qa.SceneChecks;
+import dev.auram.bliss.qa.BaseFixture;
+import dev.auram.bliss.qa.RfFixture;
+import dev.auram.bliss.qa.VisualClock;
 import dev.auram.bliss.qa.WindowsShaders;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -38,6 +41,22 @@ abstract class LifecycleProbe {
                     Iris.reload();
                 }
                 case "shader-reload" -> Iris.reload();
+                case "hide-hud" -> Minecraft.m_91087_().f_91066_.f_92062_ = true;
+                case "freeze-shader-time" -> VisualClock.freeze(argument);
+                case "rf-backend" -> {
+                    if (!argument.equals("prepared") && !argument.equals("inline")) {
+                        throw new IllegalArgumentException("Choose the prepared or inline RF backend");
+                    }
+                    System.setProperty("auramphoton.bliss.prepareRf", Boolean.toString(argument.equals("prepared")));
+                    Iris.reload();
+                }
+                case "lpv-backend" -> {
+                    if (!argument.equals("compute") && !argument.equals("raster")) {
+                        throw new IllegalArgumentException("Choose the compute or raster LPV backend");
+                    }
+                    System.setProperty("auramphoton.bliss.compute", Boolean.toString(argument.equals("compute")));
+                    Iris.reload();
+                }
                 case "option" -> {
                     String[] option = argument.split("=", 2);
                     Iris.getShaderPackOptionQueue().put(option[0], option[1]);
@@ -53,9 +72,25 @@ abstract class LifecycleProbe {
                 case "capture" -> SceneChecks.capture(argument);
                 case "fullscreen" -> SceneChecks.fullscreen(argument);
                 case "enter", "leave" -> SceneChecks.world(action);
-                case "server" -> {
+                case "server", "server-batch", "refresh-chests" -> {
                     String requested = command;
-                    SceneChecks.command(argument).whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
+                    var result = switch (action) {
+                        case "server" -> SceneChecks.command(argument);
+                        case "server-batch" -> SceneChecks.commands(Files.readAllLines(Path.of(argument)).stream()
+                                .filter(line -> !line.isBlank() && !line.startsWith("#")).toList());
+                        default -> BaseFixture.refreshChests(argument);
+                    };
+                    result.whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
+                    return;
+                }
+                case "verify-chests" -> BaseFixture.verifyChests(argument);
+                case "verify-chest-top" -> BaseFixture.verifyChestTop(argument);
+                case "chest-model-cache" -> Class.forName("dev.auram.photon.compat.chest.CrystalChestMeshes")
+                        .getMethod("setEnabled", boolean.class).invoke(null, Boolean.parseBoolean(argument));
+                case "rf-routes" -> {
+                    String requested = command;
+                    RfFixture.configure(Integer.parseInt(argument))
+                            .whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
                     return;
                 }
                 case "resize" -> {

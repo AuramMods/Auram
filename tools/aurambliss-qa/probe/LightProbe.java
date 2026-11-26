@@ -1,8 +1,10 @@
 package dev.auram.bliss.test;
 
 import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import net.irisshaders.iris.pipeline.IrisRenderingPipeline;
 import org.lwjgl.system.MemoryUtil;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +17,10 @@ import static org.lwjgl.opengl.GL41C.*;
 abstract class LightProbe {
     @Inject(method = "finalizeLevelRendering", at = @At("TAIL"))
     private void sampleLight(CallbackInfo callback) throws Exception {
-        if (!Files.deleteIfExists(Path.of("bliss-read-light"))) return;
+        Path request = Path.of("bliss-read-light");
+        if (!Files.isRegularFile(request)) return;
+        String name = Files.readString(request).strip();
+        Files.delete(request);
         Class<?> lightVolume = Class.forName("dev.auram.photon.compat.lpv.RasterLightVolume");
         int texture = (int) lightVolume.getMethod("activeBlissTexture").invoke(null);
         if (texture <= 0) throw new IllegalStateException("Bliss did not publish a light texture");
@@ -39,6 +44,13 @@ abstract class LightProbe {
             }
             for (int i = volume; i < volume + palette; i++) {
                 if (data.get(i * 4 + 3) != 0) paletteEmitting++;
+            }
+            if (!name.isEmpty()) {
+                if (!name.matches("[a-zA-Z0-9._-]+")) throw new IllegalArgumentException("Invalid readback name");
+                try (var output = FileChannel.open(Path.of("lpv-" + name + ".rgba8"),
+                        StandardOpenOption.WRITE, StandardOpenOption.CREATE_NEW)) {
+                    while (data.hasRemaining()) output.write(data);
+                }
             }
             System.out.printf("QA_EVT {\"event\":\"light_readback\",\"status\":\"info\",\"context\":{\"side\":%d,\"slices\":%d,\"occupied\":%d,\"emitting\":%d,\"paletteEmitting\":%d,\"gl\":%d}}%n",
                     side, slices, occupied, emitting, paletteEmitting, glGetError());

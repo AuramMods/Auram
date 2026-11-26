@@ -37,15 +37,21 @@ public final class SceneChecks {
     }
 
     public static CompletableFuture<Void> command(String statement) throws ReflectiveOperationException {
+        return commands(java.util.List.of(statement));
+    }
+
+    public static CompletableFuture<Void> commands(java.util.List<String> statements) throws ReflectiveOperationException {
         var client = client();
         var server = client.getClass().getMethod("m_91092_").invoke(client);
         return CompletableFuture.runAsync(() -> {
             try {
                 var commands = server.getClass().getMethod("m_129892_").invoke(server);
                 var source = server.getClass().getMethod("m_129893_").invoke(server);
-                int result = (int) commands.getClass().getMethod("m_230957_", source.getClass(), String.class)
-                        .invoke(commands, source, statement);
-                if (result == 0 && statement.contains("tp @p")) throw new IllegalStateException("Teleport did not run: " + statement);
+                var run = commands.getClass().getMethod("m_230957_", source.getClass(), String.class);
+                for (String statement : statements) {
+                    int result = (int) run.invoke(commands, source, statement);
+                    if (result == 0 && statement.contains("tp @p")) throw new IllegalStateException("Teleport did not run: " + statement);
+                }
             } catch (ReflectiveOperationException error) {
                 throw new CompletionException(error);
             }

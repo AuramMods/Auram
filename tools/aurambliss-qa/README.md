@@ -47,6 +47,20 @@ Add `--profile-passes --max-fps 260 --size 1280x720 --seconds 25` to the replay 
 
 Sort the named passes by GPU median and compare median and p95 frame times across repeated baseline and candidate runs. The draw names match the program files in the pack's dimension directory. For example, AuramBliss's `draw/composite3` runs the volumetric fog and cloud code included by `world0/composite3.fsh`. Compare screenshots from the same pose, time, and weather to verify that an optimization preserves the effect. A feature toggle can estimate a pass's cost.
 
+## Crystal-chest benchmark
+
+Generate a fixed clear-weather world fixture with `python3 tools/aurambliss-qa/chest_fixture.py /tmp/bliss-chest-scenes`. Pass its `lifecycle.txt` to the runner with the QA probe, the compatibility JAR, and Iron Chests via `--mod`. The replay needs a disposable Overworld save with the platform area clear around X 29–66, Y 73–89, Z 23–52. Use `--case small --rounds 1` for a quick check. The full fixture alternates the two backends for empty, 64 loaded, 512 loaded, and mixed-model cases. It also changes an inventory, moves the camera, and reloads resources. The `render_pass_timing` event reports average entity and world vertex-buffer draws and the number of item models served by the experimental cache. Direct chunk and Voxy submissions are timed in their own GPU spans.
+
+Add Flerovium with the pack’s `flerovium.json` to exercise the full pack’s item renderer on the same scene. Test a second bank at Z 42 with `refresh-chests 42` and `verify-chests 512,512,0 42` in the lifecycle.
+
+Use `--no-dh` and repeat `--mod /path/to/mod.jar` for Neo-Voxy, AuramCore and, on macOS, GLA and its Forge loader dependencies. Use `--config /path/to/voxy-config.json` to copy a fixed Voxy configuration. The probe reports render-thread CPU time with frame intervals. Named GPU stages include LPV occupancy replay and Neo-Voxy shadows when those features run.
+
+For repeated same-client measurements, add `measure label` or `profile label` to a lifecycle file. The runner waits for the frame sample, and `profile` also waits for the per-pass GPU sample. Both write their results to `benchmarks.json`. Set `--java-option=-Dauram.bliss.qa.frames=180` to increase each sample from 90 to 180 frames. Use `light-volume label` to save the RGBA8 light texture, including its handheld palette, to `minecraft/lpv-label.rgba8`. Use `capture label` for the matching screenshot.
+
+Append `dx,dz,yaw` to a measurement for a repeatable camera move. Reset the player's pose before each repeated path. In the disposable Overworld fixture, `rf-routes count` reports bent routes through AuramCore's RF API at 100 million RF/t, starting near `33 75 34`. Use `rf-routes 0` to stop reporting those routes.
+
+After the routes have appeared, use `freeze-shader-time 37.25` to hold shader animation and the uploaded RF circuit phases across matched captures. Resume animation with `freeze-shader-time off` before timing or changing routes. Use `rf-volume label` to sample active RF cells and face rates, and `packed-depth label` to sample the packed depth format, LOD coverage, and depth checksum.
+
 ## Windows shader source audit
 
 Prepare the NVIDIA, AMD and Intel matrix and generate transformed GLSL on any supported host with Oculus 1.8.0. The test builds actual shader-pack programs with a Windows OpenGL 4.6 environment, then passes the resulting stages to `glslangValidator` for linking. Use a disposable client with the test probe from above.
@@ -61,6 +75,8 @@ python3 tools/aurambliss-qa/windows_audit.py verify /tmp/bliss-windows
 ```
 
 The export includes the device defines, image declarations, and GLSL for DH, fullscreen composite, sky, terrain, shadow, and compute stages across the three vanilla dimension programs. The checks cover default, feature-heavy compute, and forced compatibility. A device run uses the regular runner with native Java and the same scene, options, and DH configuration. Add `--force-compat` for a second run.
+
+For the shared RF shader path, supply the rebuilt compatibility JAR with `--companion` and add `--java-option=-Dauram.bliss.qa.auditPreparedRf=true` during export.
 
 ## Source inventory
 

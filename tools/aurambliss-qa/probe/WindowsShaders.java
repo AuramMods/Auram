@@ -81,7 +81,11 @@ public final class WindowsShaders {
                 }, ""), new StringPair("IRIS_FEATURE_CUSTOM_IMAGES", ""), new StringPair("IRIS_FEATURE_COMPUTE_SHADERS", ""),
                 new StringPair("MC_GL_ARB_shader_image_load_store", ""), new StringPair("MC_GL_ARB_compute_shader", ""),
                 new StringPair("AURAM_BLISS_LPV_BACKEND", ""), new StringPair("AURAM_BLISS_WARP_MIST", ""),
+                new StringPair("AURAM_RF_BACKEND", ""), new StringPair("AURAM_BLISS_RF_LPV", ""),
                 new StringPair("AURAM_BLISS_ASTRAL_SKY", ""));
+        if (Boolean.getBoolean("auram.bliss.qa.auditPreparedRf")) {
+            defines.add(new StringPair("AURAM_BLISS_RF_PREPARED", ""));
+        }
         if (dh) defines.add(new StringPair("DISTANT_HORIZONS", ""));
         return defines.build();
     }

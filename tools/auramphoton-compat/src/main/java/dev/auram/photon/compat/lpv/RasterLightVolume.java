@@ -20,7 +20,9 @@ import net.irisshaders.iris.uniforms.SystemTimeUniforms;
 import org.joml.Matrix4f;
 import org.joml.Matrix4fc;
 
+import org.lwjgl.opengl.GL;
 import org.lwjgl.system.MemoryUtil;
+import org.lwjgl.system.Platform;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -29,6 +31,7 @@ import java.util.Map;
 import java.util.Set;
 
 import static org.lwjgl.opengl.GL41C.*;
+import static org.lwjgl.opengl.GL43C.*;
 
 public final class RasterLightVolume implements AutoCloseable {
     private static RasterLightVolume active;
@@ -60,6 +63,7 @@ public final class RasterLightVolume implements AutoCloseable {
     private boolean capturedBlissEntityDraw;
     private boolean capturingBlissEntityBatch;
     private int transportProgram;
+    private boolean computeTransport;
     private int modelViewLocation;
     private int regionOffsetLocation;
     private int shadowInverseLocation;
@@ -144,7 +148,7 @@ public final class RasterLightVolume implements AutoCloseable {
         try {
             volume.initialize(set);
             Iris.logger.info("Initialized " + (bliss ? "AuramBliss " : "AuramPhoton ")
-                    + (volume.metal == null ? "raster" : "Metal")
+                    + (volume.computeTransport ? "compute" : volume.metal == null ? "raster" : "Metal")
                     + " colored lighting at " + side + "³");
             return volume;
         } catch (RuntimeException | Error failure) {
@@ -161,7 +165,16 @@ public final class RasterLightVolume implements AutoCloseable {
             transportProgram = metal.reprojectionProgram();
         } else {
             String transportPath = bliss ? "/dimensions/compat/lpv_transport.fsh" : "/program/lpv/raster_transport.fsh";
-            transportProgram = LightVolumeShaders.transport(readSource(sources, transportPath), atlasColumns);
+            if (bliss && supportsComputeTransport()) {
+                try {
+                    String transportSource = readSource(sources, "/dimensions/compat/lpv_transport.csh");
+                    transportProgram = LightVolumeShaders.computeTransport(transportSource, atlasColumns);
+                    computeTransport = true;
+                } catch (RuntimeException error) {
+                    Iris.logger.warn("AuramBliss compute transport failed to initialize. Using raster propagation.", error);
+                }
+            }
+            if (!computeTransport) transportProgram = LightVolumeShaders.transport(readSource(sources, transportPath), atlasColumns);
         }
         transportCameraLocation = glGetUniformLocation(transportProgram, "cameraPosition");
         transportViewInverseLocation = glGetUniformLocation(transportProgram, "gbufferModelViewInverse");
@@ -218,6 +231,25 @@ public final class RasterLightVolume implements AutoCloseable {
                 initializeBlissEntityReplay(sources, set);
             }
         }
+    }
+
+    private static boolean supportsComputeTransport() {
+        if (Platform.get() != Platform.MACOSX
+                || !Boolean.parseBoolean(System.getProperty("auramphoton.bliss.compute", "true"))) return false;
+        var functions = GL.getCapabilities();
+        if (functions.glDispatchCompute == 0 || functions.glBindImageTexture == 0 || functions.glMemoryBarrier == 0) {
+            Iris.logger.info("AuramBliss compute transport functions are unavailable");
+            return false;
+        }
+        int threads = glGetInteger(GL_MAX_COMPUTE_WORK_GROUP_INVOCATIONS);
+        int sharedBytes = glGetInteger(GL_MAX_COMPUTE_SHARED_MEMORY_SIZE);
+        int images = glGetInteger(GL_MAX_COMPUTE_IMAGE_UNIFORMS);
+        if (threads < 256 || sharedBytes < 12_000 || images < 1) {
+            Iris.logger.info("AuramBliss compute transport resources: {} threads, {} shared bytes, {} images",
+                    threads, sharedBytes, images);
+            return false;
+        }
+        return true;
     }
 
     private void initializeBlissEntityReplay(ShaderPackSourceAccess sources, ProgramSet set) {
@@ -426,27 +458,63 @@ public final class RasterLightVolume implements AutoCloseable {
             return;
         }
         int activeUnit = glGetInteger(GL_ACTIVE_TEXTURE);
-        try (DrawState draw = new DrawState(fullscreenVao, false);
-                TextureBinding previous = TextureBinding.bind(0, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, lights[published].texture());
+        try (TextureBinding previous = TextureBinding.bind(0, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, lights[published].texture());
                 TextureBinding blocks = TextureBinding.bind(1, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, occupancy.texture());
                 TextureBinding colors = TextureBinding.bind(2, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, palette.texture())) {
-            draw.bind(lights[next].framebuffer(), transportProgram, side, side);
-            if (transportSamplers == null) {
-                glDrawArraysInstanced(GL_TRIANGLES, 0, 3, side);
-            } else {
-                try (TextureBinding first = TextureBinding.bind(3, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0);
-                     TextureBinding second = transportUsesTwoSamplers
-                             ? TextureBinding.bind(4, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0) : null) {
-                    transportSamplers.update();
-                    glDrawArraysInstanced(GL_TRIANGLES, 0, 3, side);
+            if (computeTransport) {
+                int previousProgram = glGetInteger(GL_CURRENT_PROGRAM);
+                try {
+                    glUseProgram(transportProgram);
+                    runWithTransportSamplers(next);
                 } finally {
-                    transportSamplers.removeListeners();
+                    glUseProgram(previousProgram);
+                }
+            } else {
+                try (DrawState draw = new DrawState(fullscreenVao, false)) {
+                    draw.bind(lights[next].framebuffer(), transportProgram, side, side);
+                    runWithTransportSamplers(next);
                 }
             }
         } finally {
             glActiveTexture(activeUnit);
         }
         published = next;
+    }
+
+    private void runWithTransportSamplers(int next) {
+        if (transportSamplers == null) {
+            runTransport(next);
+            return;
+        }
+        try (TextureBinding first = TextureBinding.bind(3, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0);
+                TextureBinding second = transportUsesTwoSamplers
+                        ? TextureBinding.bind(4, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0) : null) {
+            transportSamplers.update();
+            runTransport(next);
+        } finally {
+            transportSamplers.removeListeners();
+        }
+    }
+
+    private void runTransport(int next) {
+        if (!computeTransport) {
+            glDrawArraysInstanced(GL_TRIANGLES, 0, 3, side);
+            return;
+        }
+        int image = glGetIntegeri(GL_IMAGE_BINDING_NAME, 0);
+        int level = glGetIntegeri(GL_IMAGE_BINDING_LEVEL, 0);
+        boolean layered = glGetIntegeri(GL_IMAGE_BINDING_LAYERED, 0) != 0;
+        int layer = glGetIntegeri(GL_IMAGE_BINDING_LAYER, 0);
+        int access = glGetIntegeri(GL_IMAGE_BINDING_ACCESS, 0);
+        int format = glGetIntegeri(GL_IMAGE_BINDING_FORMAT, 0);
+        try {
+            glBindImageTexture(0, lights[next].texture(), 0, true, 0, GL_WRITE_ONLY, GL_RGBA8);
+            glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+            glDispatchCompute(side / 8, side / 8, side / 4);
+            glMemoryBarrier(GL_TEXTURE_FETCH_BARRIER_BIT | GL_TEXTURE_UPDATE_BARRIER_BIT | GL_FRAMEBUFFER_BARRIER_BIT);
+        } finally {
+            glBindImageTexture(0, image, level, layered, layer, access, format);
+        }
     }
 
     private record TextureBinding(int unit, int target, int previousTexture, int previousSampler) implements AutoCloseable {

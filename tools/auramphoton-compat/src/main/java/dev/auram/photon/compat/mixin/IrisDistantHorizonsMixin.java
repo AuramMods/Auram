@@ -6,6 +6,7 @@ import dev.auram.photon.compat.WarpMistState;
 import dev.auram.photon.compat.AstralEclipseState;
 import dev.auram.photon.compat.lpv.MetalLightVolume;
 import dev.auram.photon.compat.lpv.RasterLightVolume;
+import dev.auram.photon.compat.rf.PreparedRfStreaks;
 import net.irisshaders.iris.Iris;
 import net.irisshaders.iris.helpers.StringPair;
 import net.irisshaders.iris.pipeline.IrisRenderingPipeline;
@@ -57,6 +58,7 @@ abstract class IrisDistantHorizonsMixin {
                     .addAll(defines)
                     .add(new StringPair("AURAM_BLISS_LPV_BACKEND", ""))
                     .add(new StringPair("AURAM_BLISS_RF_LPV", ""));
+            if (PreparedRfStreaks.requested()) auramDefines.add(new StringPair("AURAM_BLISS_RF_PREPARED", ""));
             if (WarpMistState.available()) auramDefines.add(new StringPair("AURAM_BLISS_WARP_MIST", ""));
             if (AstralEclipseState.available()) auramDefines.add(new StringPair("AURAM_BLISS_ASTRAL_SKY", ""));
             if (GL.getCapabilities().glDispatchCompute == 0 || GL.getCapabilities().glClearTexImage == 0

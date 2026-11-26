@@ -21,12 +21,14 @@ abstract class PerfFrameProbe {
 
     @Inject(method = "renderShadows", at = @At("HEAD"))
     private void beginShadows(CallbackInfo callback) {
+        PassMetrics.renderingShadows(true);
         auramShadowSpan = PassMetrics.begin("stage/shadows");
     }
 
     @Inject(method = "renderShadows", at = @At("RETURN"))
     private void endShadows(CallbackInfo callback) {
         PassMetrics.end(auramShadowSpan);
+        PassMetrics.renderingShadows(false);
     }
 
     @Inject(method = "finalizeLevelRendering", at = @At("TAIL"))

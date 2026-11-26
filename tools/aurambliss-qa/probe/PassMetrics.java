@@ -20,6 +20,13 @@ public final class PassMetrics {
     private static int issuedFrames;
     private static int skippedFrames;
     private static int currentProgram;
+    private static int vertexBufferDraws;
+    private static int shadowVertexBufferDraws;
+    private static int cachedItemCalls;
+    private static long totalVertexBufferDraws;
+    private static long totalShadowVertexBufferDraws;
+    private static long totalCachedItemCalls;
+    private static boolean renderingShadows;
     private static Frame current;
     private static Span currentSpan;
     private static int currentQuery;
@@ -44,6 +51,9 @@ public final class PassMetrics {
         if (active) return;
         issuedFrames = 0;
         skippedFrames = 0;
+        totalVertexBufferDraws = 0;
+        totalShadowVertexBufferDraws = 0;
+        totalCachedItemCalls = 0;
         active = true;
     }
 
@@ -63,6 +73,9 @@ public final class PassMetrics {
             return;
         }
         currentProgram = 0;
+        vertexBufferDraws = 0;
+        shadowVertexBufferDraws = 0;
+        cachedItemCalls = 0;
         current = new Frame(new ArrayList<>());
         currentSpan = new Span("world/other", null);
         startQuery();
@@ -74,7 +87,24 @@ public final class PassMetrics {
         pending.addLast(current);
         current = null;
         currentSpan = null;
+        totalVertexBufferDraws += vertexBufferDraws;
+        totalShadowVertexBufferDraws += shadowVertexBufferDraws;
+        totalCachedItemCalls += cachedItemCalls;
         issuedFrames++;
+    }
+
+    public static void renderingShadows(boolean rendering) {
+        renderingShadows = rendering;
+    }
+
+    public static void vertexBufferDraw() {
+        if (current == null) return;
+        vertexBufferDraws++;
+        if (renderingShadows) shadowVertexBufferDraws++;
+    }
+
+    public static void cachedItem() {
+        if (current != null) cachedItemCalls++;
     }
 
     public static Span beginProgram(String kind) {
@@ -134,9 +164,12 @@ public final class PassMetrics {
         String passes = timings.entrySet().stream()
                 .map(entry -> "\"" + entry.getKey() + "\":" + PerfMetrics.quantiles(entry.getValue()))
                 .collect(Collectors.joining(","));
-        System.out.printf("QA_EVT {\"event\":\"render_pass_timing\",\"status\":\"info\","
-                        + "\"context\":{\"frames\":%d,\"skippedFrames\":%d,\"gpu\":{%s},\"gl\":%d}}%n",
-                issuedFrames, skippedFrames, passes, glGetError());
+        System.out.printf(java.util.Locale.ROOT, "QA_EVT {\"event\":\"render_pass_timing\",\"status\":\"info\","
+                        + "\"context\":{\"frames\":%d,\"skippedFrames\":%d,\"gpu\":{%s},"
+                        + "\"vertexBufferDrawsPerFrame\":%.3f,\"shadowVertexBufferDrawsPerFrame\":%.3f,"
+                        + "\"cachedItemCallsPerFrame\":%.3f,\"gl\":%d}}%n",
+                issuedFrames, skippedFrames, passes, (double) totalVertexBufferDraws / issuedFrames,
+                (double) totalShadowVertexBufferDraws / issuedFrames, (double) totalCachedItemCalls / issuedFrames, glGetError());
         while (!idleQueries.isEmpty()) glDeleteQueries(idleQueries.removeFirst());
         timings.clear();
         active = false;

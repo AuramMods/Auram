@@ -21,6 +21,12 @@ RENDER_ERROR = re.compile(
     r"Failed to create shader rendering pipeline|A fatal error has been detected|"
     r"MixinTransformerError|Mod Loading has failed|QA_COMMAND_ERROR"
 )
+READBACK_ACTIONS = {
+    "light-volume": ("bliss-read-light", "light_readback"),
+    "packed-depth": ("bliss-read-packed-depth", "packed_depth_readback"),
+    "rf-volume": ("bliss-read-rf-volume", "rf_volume_readback"),
+    "rf-prepared-cache": ("bliss-read-rf-prepared", "rf_prepared_readback"),
+}
 
 
 def parse_args():
@@ -37,6 +43,8 @@ def parse_args():
     parser.add_argument("--dh", default="3.3.3")
     parser.add_argument("--installer", type=Path, help="Forge installer used by the Prism instance")
     parser.add_argument("--options", type=Path, help="Shader properties fixture")
+    parser.add_argument("--mod", type=Path, action="append", default=[], help="Additional mod for the disposable client")
+    parser.add_argument("--config", type=Path, action="append", default=[], help="Additional client configuration fixture")
     parser.add_argument("--resource-pack", type=Path, action="append", default=[], help="Resource pack for the disposable client")
     parser.add_argument("--dh-config", type=Path, help="Distant Horizons config fixture")
     parser.add_argument("--cold-dh", action="store_true", help="Copy the save without its existing DH databases")
@@ -95,6 +103,10 @@ def prepare(args, work):
         copy_file(args.companion, game / "mods" / args.companion.name)
     for source in args.probe:
         copy_file(source, game / "mods" / source.name)
+    for source in args.mod:
+        copy_file(source, game / "mods" / source.name)
+    for source in args.config:
+        copy_file(source, game / "config" / source.name)
     if args.dh_config:
         copy_file(args.dh_config, game / "config/DistantHorizons.toml")
 
@@ -225,6 +237,8 @@ def observe(args, command, work, game):
     step_started = False
     next_step_at = 0
     command_count = 0
+    event_count = 0
+    benchmarks = {}
     deadline = time.monotonic() + args.timeout
     with log.open("w") as output:
         child = subprocess.Popen([command[0], f"@{argfile}"], cwd=game, stdout=output, stderr=subprocess.STDOUT)
@@ -250,9 +264,41 @@ def observe(args, command, work, game):
                         ready_at = time.monotonic()
                 if ready_at is not None and time.monotonic() - ready_at >= args.seconds:
                     if step_index < len(steps):
+                        step = steps[step_index]
+                        action, _, label = step.partition(" ")
+                        readback = READBACK_ACTIONS.get(action)
+                        if readback or action in ("measure", "profile"):
+                            label, _, motion = label.partition(" ")
+                            events = read_events(trace)
+                            if not step_started and time.monotonic() >= next_step_at:
+                                event_count = len(events)
+                                if readback:
+                                    marker = game / readback[0]
+                                    request = marker.with_suffix(".pending")
+                                    request.write_text(label)
+                                    request.replace(marker)
+                                else:
+                                    if motion:
+                                        (game / "bliss-perf-motion").write_text(motion)
+                                    if action == "profile":
+                                        (game / "bliss-profile-passes").touch()
+                                    (game / "bliss-read-perf").touch()
+                                step_started = True
+                            elif step_started:
+                                expected = {readback[1]} if readback else {"frame_timing"}
+                                if action == "profile":
+                                    expected.add("render_pass_timing")
+                                results = events[event_count:]
+                                if expected <= {event["event"] for event in results}:
+                                    benchmarks[label] = results
+                                    (work / "benchmarks.json").write_text(json.dumps(benchmarks, indent=2) + "\n")
+                                    step_index += 1
+                                    step_started = False
+                                    next_step_at = time.monotonic() + 2
+                            time.sleep(0.5)
+                            continue
                         if step_started:
                             if trace.count("\nQA_COMMAND ") > command_count:
-                                step = steps[step_index]
                                 if step.startswith("snapshot"):
                                     state_line = next(row for row in reversed(trace.splitlines()) if row.startswith("QA_STATE "))
                                     state = dict(token.split("=", 1) for token in state_line.split()[1:])
@@ -278,6 +324,9 @@ def observe(args, command, work, game):
                         time.sleep(0.5)
                         continue
                     if steps:
+                        if time.monotonic() < next_step_at:
+                            time.sleep(0.5)
+                            continue
                         (work / "lifecycle.log").write_text("\n".join(line for line in trace.splitlines()
                             if line.startswith(("QA_STATE ", "QA_COMMAND "))) + "\n")
                     if args.readback:
@@ -288,8 +337,7 @@ def observe(args, command, work, game):
                                 (game / "bliss-profile-passes").touch()
                             (game / f"bliss-read-{args.readback}").touch()
                             readback_requested = True
-                        events = [json.loads(row.removeprefix("QA_EVT ")) for row in trace.splitlines()
-                                  if row.startswith("QA_EVT ")]
+                        events = read_events(trace)
                         if len(events) < (2 if args.readback == "depth" else 1):
                             time.sleep(0.5)
                             continue
@@ -309,6 +357,11 @@ def observe(args, command, work, game):
                 except subprocess.TimeoutExpired:
                     child.kill()
                     child.wait()
+
+
+def read_events(trace):
+    return [json.loads(row.removeprefix("QA_EVT ")) for row in trace.splitlines(keepends=True)
+            if row.startswith("QA_EVT ") and row.endswith("\n")]
 
 
 if __name__ == "__main__":

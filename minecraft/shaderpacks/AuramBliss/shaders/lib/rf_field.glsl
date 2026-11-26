@@ -66,18 +66,22 @@ float rfEnvelope(float age) {
     return smoothstep(0.0, 0.21, age) * (1.0 - smoothstep(0.42, 1.0, age));
 }
 
-vec3 rfBandTint(vec3 world, float age, float rate) {
+vec3 rfBandTintFromWave(float wave, float rate) {
     float decades = rate / 31.0;
     vec3 blue = mix(vec3(0.045, 0.20, 0.80), vec3(0.19, 0.57, 1.0), smoothstep(3.8, 6.8, decades));
     float violetRange = smoothstep(5.85, 7.8, decades);
-    float wave = 0.5 + 0.5 * cos((5.0 / 3.0) * frameTimeCounter - age * 3.1
-                                  + rfTau * dot(world, vec3(3.0, 1.0, 5.0)) / 32.0);
     vec3 tint = mix(blue, vec3(0.40, 0.19, 1.0), 0.9 * violetRange * smoothstep(0.20, 0.96, wave));
     #if RF_COLOR_SATURATION != 100
         float neutral = dot(tint, vec3(0.2126, 0.7152, 0.0722));
         tint = max(mix(vec3(neutral), tint, RF_COLOR_SATURATION / 100.0), vec3(0.0));
     #endif
     return tint;
+}
+
+vec3 rfBandTint(vec3 world, float age, float rate) {
+    float wave = 0.5 + 0.5 * cos((5.0 / 3.0) * frameTimeCounter - age * 3.1
+                                  + rfTau * dot(world, vec3(3.0, 1.0, 5.0)) / 32.0);
+    return rfBandTintFromWave(wave, rate);
 }
 
 // LPV positions are relative to the floored camera; the RF origin is relative
