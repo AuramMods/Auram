@@ -51,6 +51,8 @@ Use `--no-dh` and repeat `--mod /path/to/mod.jar` for Neo-Voxy, AuramCore and, o
 
 For repeated same-client measurements, add `measure label` or `profile label` to a lifecycle file. The runner waits for the frame sample, and `profile` also waits for the per-pass GPU sample. Both write their results to `benchmarks.json`. Set `--java-option=-Dauram.bliss.qa.frames=180` to increase each sample from 90 to 180 frames. Use `light-volume label` to save the RGBA8 light texture, including its handheld palette, to `minecraft/lpv-label.rgba8`. Use `capture label` for the matching screenshot.
 
+Append `dx,dz,yaw` to a measurement for a repeatable camera move. Reset the player's pose before each repeated path. In the disposable Overworld fixture, `rf-routes count` reports bent routes through AuramCore's RF API at 100 million RF/t, starting near `33 75 34`. Use `rf-routes 0` to stop reporting those routes.
+
 ## Windows shader source audit
 
 Prepare the NVIDIA, AMD and Intel matrix and generate transformed GLSL on any supported host with Oculus 1.8.0. The test builds actual shader-pack programs with a Windows OpenGL 4.6 environment, then passes the resulting stages to `glslangValidator` for linking. Use a disposable client with the test probe from above.

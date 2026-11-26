@@ -1,6 +1,7 @@
 package dev.auram.bliss.qa;
 
 import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadMXBean;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +12,9 @@ import net.minecraft.client.Minecraft;
 import static org.lwjgl.opengl.GL41C.*;
 
 public final class PerfMetrics {
-    static final int FRAME_COUNT = Integer.getInteger("auram.bliss.qa.frames", 90);
-    private static final java.lang.management.ThreadMXBean THREADS = ManagementFactory.getThreadMXBean();
+    static final int FRAME_COUNT = Math.max(2, Integer.getInteger("auram.bliss.qa.frames", 90));
+    private static final ThreadMXBean THREADS = ManagementFactory.getThreadMXBean();
+    private static final boolean CPU_TIME_SUPPORTED = THREADS.isCurrentThreadCpuTimeSupported();
     private static final ArrayDeque<Integer> pending = new ArrayDeque<>();
     private static final ArrayDeque<Integer> idle = new ArrayDeque<>();
     private static final List<Long> frameTimes = new ArrayList<>();
@@ -35,7 +37,7 @@ public final class PerfMetrics {
             if (Files.deleteIfExists(Path.of("bliss-profile-passes"))) PassMetrics.start();
             measuring = true;
             previousFrame = now;
-            previousCpu = THREADS.getCurrentThreadCpuTime();
+            if (CPU_TIME_SUPPORTED) previousCpu = THREADS.getCurrentThreadCpuTime();
             heapHighWater = 0;
             for (int i = 0; i < 8; i++) idle.add(glGenQueries());
             Path requested = Path.of("bliss-perf-motion");
@@ -52,9 +54,11 @@ public final class PerfMetrics {
         }
         frameTimes.add(now - previousFrame);
         previousFrame = now;
-        long cpu = THREADS.getCurrentThreadCpuTime();
-        if (cpu >= 0 && previousCpu >= 0) cpuTimes.add(cpu - previousCpu);
-        previousCpu = cpu;
+        if (CPU_TIME_SUPPORTED) {
+            long cpu = THREADS.getCurrentThreadCpuTime();
+            if (cpu >= 0 && previousCpu >= 0) cpuTimes.add(cpu - previousCpu);
+            previousCpu = cpu;
+        }
         Runtime heap = Runtime.getRuntime();
         heapHighWater = Math.max(heapHighWater, heap.totalMemory() - heap.freeMemory());
         if (frameTimes.size() >= FRAME_COUNT) {

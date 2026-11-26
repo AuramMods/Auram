@@ -261,6 +261,7 @@ def observe(args, command, work, game):
                         step = steps[step_index]
                         action, _, label = step.partition(" ")
                         if action in ("measure", "profile", "light-volume"):
+                            label, _, motion = label.partition(" ")
                             events = read_events(trace)
                             if not step_started and time.monotonic() >= next_step_at:
                                 event_count = len(events)
@@ -269,6 +270,8 @@ def observe(args, command, work, game):
                                     request.write_text(label)
                                     request.replace(game / "bliss-read-light")
                                 else:
+                                    if motion:
+                                        (game / "bliss-perf-motion").write_text(motion)
                                     if action == "profile":
                                         (game / "bliss-profile-passes").touch()
                                     (game / "bliss-read-perf").touch()
@@ -346,8 +349,8 @@ def observe(args, command, work, game):
 
 
 def read_events(trace):
-    return [json.loads(row.removeprefix("QA_EVT ")) for row in trace.splitlines()
-            if row.startswith("QA_EVT ")]
+    return [json.loads(row.removeprefix("QA_EVT ")) for row in trace.splitlines(keepends=True)
+            if row.startswith("QA_EVT ") and row.endswith("\n")]
 
 
 if __name__ == "__main__":

@@ -30,7 +30,7 @@ def build(instance, output):
         "compatibilityLevel": "JAVA_17",
         "client": ["DepthProbe", "LightProbe", "EntityFixture", "PerfFrameProbe", "PerfVolumeProbe", "LifecycleProbe",
                    "AuditDefines", "PerfProgramNames", "PerfProgramProbe", "PerfFullscreenProbe", "PerfDhProbe",
-                   "PerfVoxyProbe"],
+                   "PerfVoxyProbe", "RfFixtureTick"],
         "injectors": {"defaultRequire": 1},
     }
     metadata = """modLoader="lowcodefml"

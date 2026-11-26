@@ -1,6 +1,7 @@
 package dev.auram.bliss.test;
 
 import dev.auram.bliss.qa.SceneChecks;
+import dev.auram.bliss.qa.RfFixture;
 import dev.auram.bliss.qa.WindowsShaders;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -63,6 +64,12 @@ abstract class LifecycleProbe {
                 case "server" -> {
                     String requested = command;
                     SceneChecks.command(argument).whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
+                    return;
+                }
+                case "rf-routes" -> {
+                    String requested = command;
+                    RfFixture.configure(Integer.parseInt(argument))
+                            .whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
                     return;
                 }
                 case "resize" -> {
