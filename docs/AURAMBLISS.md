@@ -152,6 +152,10 @@ The colored light volume only sees emitters submitted to its voxelization pass. 
 
 A hidden macOS GLA test linked the Voxy translucency patch for all seven dimensions. GPU readback verified three Aercloud textures, open and covered water reflections, glowstone emission, and block light inside and outside an empty light volume.
 
+### Water at Voxy LOD seams
+
+AuramBliss clears the translucent material mask before each frame with Voxy active. When a water fragment moves off an ice or terrain edge, the uncovered pixel loses its water mask immediately. Voxy also aligns the exposed side faces of coarse sea-level water to the same height as their top faces, while stacked water still connects to the cell above.
+
 ## Vapor Range
 
 In Shader Settings → AuramCore Fields → Vapor, **Vapor Range** sets the radius in blocks along each axis. The default radius of 64 gives a 128 × 128 × 128 block cube, with a four-block fade inside its faces. The cube follows the player's view, using the player eye position when AuramCore supplies it. Atum and Twilight Forest smoke, Midnight and Nether plumes and ceiling smoke, and simulated Vapor share the limit.

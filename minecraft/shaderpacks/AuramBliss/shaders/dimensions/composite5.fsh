@@ -48,7 +48,13 @@ const bool colortex3Clear = false;
 const bool colortex4Clear = false;
 const bool colortex5Clear = false;
 const bool colortex6Clear = false;
+#ifdef AURAM_VOXY_DEPTH
+// The opaque Voxy pass does not write the translucent material mask.
+const bool colortex7Clear = true;
+const vec4 colortex7ClearColor = vec4(0.0);
+#else
 const bool colortex7Clear = false;
+#endif
 const bool colortex8Clear = false;
 const bool colortex9Clear = true;
 const bool colortex10Clear = true;
