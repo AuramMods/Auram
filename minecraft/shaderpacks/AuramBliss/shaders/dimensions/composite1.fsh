@@ -1329,7 +1329,13 @@ void main() {
 			const vec3 lpvPos = vec3(0.0);
 		#endif
 
-		vec3 blockLightColor = doBlockLightLighting( vec3(TORCH_R,TORCH_G,TORCH_B), lightmap.x, exposure, feetPlayerPos, lpvPos);
+        #ifdef AURAM_VOXY_DEPTH
+            bool preserveLodBlockLight = isDHrange && DH_depth1 > 0.0 && DH_depth1 < 1.0;
+        #else
+            const bool preserveLodBlockLight = false;
+        #endif
+        vec3 blockLightColor = doBlockLightLighting(vec3(TORCH_R, TORCH_G, TORCH_B), lightmap.x,
+                                                   exposure, feetPlayerPos, lpvPos, preserveLodBlockLight);
 		Indirect_lighting += blockLightColor;
 
 	/////////////////////////////////////////////////////////////////////////////////////

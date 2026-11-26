@@ -144,8 +144,8 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
 
     float emission = 0.0;
     #if EMISSIVE_TYPE == 1 || EMISSIVE_TYPE == 2
-        // Match Bliss's near-terrain emission for lava through the LOD handoff.
-        if (blockId == BLOCK_LAVA) emission = 0.5;
+        // Use the same material ID range as the near terrain, including glowstone and lava.
+        if (blockId >= 100 && blockId < 300) emission = 0.5;
     #endif
 
     // colortex8 takes raw LabPBR channels. The compatibility pass packs them later.
