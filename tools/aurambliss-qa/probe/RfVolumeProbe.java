@@ -1,5 +1,6 @@
 package dev.auram.bliss.test;
 
+import dev.auram.bliss.qa.RfPreparedReadback;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import net.irisshaders.iris.pipeline.IrisRenderingPipeline;
@@ -9,10 +10,16 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import static org.lwjgl.opengl.GL41C.*;
 
-@Mixin(value = IrisRenderingPipeline.class, remap = false)
+@Mixin(value = IrisRenderingPipeline.class, priority = 900, remap = false)
 abstract class RfVolumeProbe {
+    @Inject(method = "beginLevelRendering", at = @At("HEAD"))
+    private void beginPreparedReadback(CallbackInfo callback) throws Exception {
+        RfPreparedReadback.begin();
+    }
+
     @Inject(method = "finalizeLevelRendering", at = @At("TAIL"))
     private void readRfVolume(CallbackInfo callback) throws Exception {
+        RfPreparedReadback.finish();
         if (!Files.deleteIfExists(Path.of("bliss-read-rf-volume"))) return;
         var source = Class.forName("art.arcane.auram.rf.client.RfFieldTexture");
         var activeField = source.getDeclaredField("active");

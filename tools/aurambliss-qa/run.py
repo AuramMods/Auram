@@ -25,6 +25,7 @@ READBACK_ACTIONS = {
     "light-volume": ("bliss-read-light", "light_readback"),
     "packed-depth": ("bliss-read-packed-depth", "packed_depth_readback"),
     "rf-volume": ("bliss-read-rf-volume", "rf_volume_readback"),
+    "rf-prepared-cache": ("bliss-read-rf-prepared", "rf_prepared_readback"),
 }
 
 

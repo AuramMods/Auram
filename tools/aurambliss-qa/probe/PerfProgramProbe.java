@@ -1,6 +1,7 @@
 package dev.auram.bliss.test;
 
 import dev.auram.bliss.qa.PassMetrics;
+import dev.auram.bliss.qa.RfPreparedReadback;
 import net.irisshaders.iris.gl.program.ComputeProgram;
 import net.irisshaders.iris.gl.program.Program;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,6 +19,7 @@ abstract class PerfProgramProbe {
     @Inject(method = "use", at = @At("RETURN"))
     private void recordProgram(CallbackInfo callback) {
         PassMetrics.useProgram(getProgramId());
+        RfPreparedReadback.usedProgram(getProgramId());
     }
 
     // Only ComputeProgram has dispatch.
