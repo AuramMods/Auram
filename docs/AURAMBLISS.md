@@ -144,6 +144,14 @@ The dedicated raster LPV entity pass now owns the palette lookup. Terrain occupa
 
 Hold Numpad Multiply to tint Voxy terrain by its rendered LOD level. Bliss applies the tint to opaque albedo before packing its G-buffer and to translucent color after water shading. The tint preserves texture detail and water transparency.
 
+### Distant light sources and reflections
+
+Aether translucent LODs use the dimension's sun and sky lighting. Aerclouds keep their texture alpha and use the non-reflective material path. Aether, Atum, Twilight Forest and Midnight LOD water sample the same sky reflection atlas as nearby water. Water reflection strength follows the surface's skylight on both sides of the handoff.
+
+The colored light volume only sees emitters submitted to its voxelization pass. When it lacks light from distant sources, opaque Voxy terrain keeps the brightness from its cached Minecraft block light. Stronger colored samples still take effect. Distant glowstone and other hardcoded emitters use the same emissive material range as nearby blocks.
+
+A hidden macOS GLA test linked the Voxy translucency patch for all seven dimensions. GPU readback verified three Aercloud textures, open and covered water reflections, glowstone emission, and block light inside and outside an empty light volume.
+
 ## Vapor Range
 
 In Shader Settings → AuramCore Fields → Vapor, **Vapor Range** sets the radius in blocks along each axis. The default radius of 64 gives a 128 × 128 × 128 block cube, with a four-block fade inside its faces. The cube follows the player's view, using the player eye position when AuramCore supplies it. Atum and Twilight Forest smoke, Midnight and Nether plumes and ceiling smoke, and simulated Vapor share the limit.

@@ -29,7 +29,7 @@
 
 vec3 doBlockLightLighting(
     vec3 lightColor, float lightmap, float exposureValue,
-    vec3 playerPos, vec3 lpvPos
+    vec3 playerPos, vec3 lpvPos, bool preserveLodBlockLight
 ){
 
     float lightmapCurve = pow(1.0-sqrt(1.0-clamp(lightmap,0.0,1.0)),2.0) * 2.0;
@@ -38,7 +38,13 @@ vec3 doBlockLightLighting(
     
     #ifdef IS_LPV_ENABLED
         vec4 lpvSample = SampleLpvLinear(lpvPos);
-        vec3 lpvBlockLight = GetLpvBlockLight(lpvSample);
+        vec3 lpvBlockLight = GetLpvBlockLight(lpvSample) / 5.0;
+        if (preserveLodBlockLight) {
+            // The volume can cover cached terrain whose emitters were never voxelized.
+            const vec3 brightnessWeights = vec3(0.299, 0.587, 0.114);
+            float missingLight = max(dot(blockLight - lpvBlockLight, brightnessWeights), 0.0);
+            lpvBlockLight += lightColor * (missingLight / max(dot(lightColor, brightnessWeights), 1e-6));
+        }
 
         // create a smooth falloff at the edges of the voxel volume.
         float fadeLength = 10.0; // in meters
@@ -47,7 +53,7 @@ vec3 doBlockLightLighting(
         voxelRangeFalloff = 1.0 - pow(1.0-pow(voxelRangeFalloff,1.5),3.0);
         
         // outside the voxel volume, lerp to vanilla lighting as a fallback
-        blockLight = mix(blockLight, lpvBlockLight/5.0, voxelRangeFalloff);
+        blockLight = mix(blockLight, lpvBlockLight, voxelRangeFalloff);
 
         #ifdef Hand_Held_lights
             // create handheld lightsources
@@ -66,6 +72,10 @@ vec3 doBlockLightLighting(
     blockLight *= autoBrightness;
     
     return blockLight * TORCH_AMOUNT;
+}
+
+vec3 doBlockLightLighting(vec3 lightColor, float lightmap, float exposureValue, vec3 playerPos, vec3 lpvPos) {
+    return doBlockLightLighting(lightColor, lightmap, exposureValue, playerPos, lpvPos, false);
 }
 
 vec3 doIndirectLighting(
