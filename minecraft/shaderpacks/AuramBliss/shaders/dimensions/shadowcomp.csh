@@ -188,4 +188,5 @@ void main() {
 // Register the companion source with Oculus's include graph.
 #if 0
     #include "/dimensions/compat/lpv_transport.fsh"
+    #include "/dimensions/compat/lpv_transport.csh"
 #endif

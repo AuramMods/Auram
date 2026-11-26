@@ -2,6 +2,7 @@ package dev.auram.photon.compat.lpv;
 
 import static net.irisshaders.iris.compat.sodium.impl.IrisChunkShaderBindingPoints.*;
 import static org.lwjgl.opengl.GL41C.*;
+import static org.lwjgl.opengl.GL43C.GL_COMPUTE_SHADER;
 
 final class LightVolumeShaders {
     static final String VERSION = "#version 410 core\n";
@@ -91,11 +92,28 @@ final class LightVolumeShaders {
 
     static int transport(String fragment, int columns) {
         int program = link("transport", FULLSCREEN_VERTEX, VOLUME_LAYERS, VERSION + fragment, false);
+        setTransportSamplers(program, columns);
+        return program;
+    }
+
+    static int computeTransport(String source, int columns) {
+        int program = glCreateProgram();
+        try {
+            attach(program, GL_COMPUTE_SHADER, "compute transport", "#version 430 core\n" + source);
+            linkProgram(program, "compute transport");
+            setTransportSamplers(program, columns);
+            return program;
+        } catch (RuntimeException | Error failure) {
+            glDeleteProgram(program);
+            throw failure;
+        }
+    }
+
+    private static void setTransportSamplers(int program, int columns) {
         glProgramUniform1i(program, glGetUniformLocation(program, "previous_light"), 0);
         glProgramUniform1i(program, glGetUniformLocation(program, "voxel_sampler"), 1);
         glProgramUniform1i(program, glGetUniformLocation(program, "light_data_sampler"), 2);
         glProgramUniform1i(program, glGetUniformLocation(program, "voxel_atlas_columns"), columns);
-        return program;
     }
 
     static int palette(String fragment) {
@@ -121,14 +139,18 @@ final class LightVolumeShaders {
                 glBindAttribLocation(program, TANGENT, "at_tangent");
                 glBindAttribLocation(program, MID_BLOCK, "at_midBlock");
             }
-            glLinkProgram(program);
-            if (glGetProgrami(program, GL_LINK_STATUS) != GL_TRUE) {
-                throw new IllegalStateException("AuramPhoton LPV " + label + " link failed:\n" + glGetProgramInfoLog(program));
-            }
+            linkProgram(program, label);
             return program;
         } catch (RuntimeException | Error failure) {
             glDeleteProgram(program);
             throw failure;
+        }
+    }
+
+    private static void linkProgram(int program, String label) {
+        glLinkProgram(program);
+        if (glGetProgrami(program, GL_LINK_STATUS) != GL_TRUE) {
+            throw new IllegalStateException("AuramPhoton LPV " + label + " link failed:\n" + glGetProgramInfoLog(program));
         }
     }
 
