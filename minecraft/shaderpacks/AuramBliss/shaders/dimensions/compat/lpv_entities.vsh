@@ -24,6 +24,7 @@ uniform usampler2D auram_bliss_palette;
 #define at_midBlock vec4(0.0)
 
 #include "/lib/voxel_common.glsl"
+#define BLISS_RASTER_ENTITY_PASS
 #include "/lib/voxel_write.glsl"
 
 void main() {

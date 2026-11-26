@@ -38,7 +38,8 @@ void PopulateShadowVoxel(const in vec3 playerPos) {
 		originPos += at_midBlock.xyz/64.0;
 	}
 	
-	#ifdef LPV_ENTITY_LIGHTS
+	// Raster entity lighting runs in its own pass with a dedicated integer palette.
+	#if defined LPV_ENTITY_LIGHTS && (!defined BLISS_RASTER_LPV || defined BLISS_RASTER_ENTITY_PASS)
 		if (
 			((renderStage == MC_RENDER_STAGE_ENTITIES && (currentRenderedItemId > 0 || entityId > 0)) || renderStage == MC_RENDER_STAGE_BLOCK_ENTITIES)
 		) {

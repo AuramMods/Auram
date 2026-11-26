@@ -134,6 +134,12 @@ Following multiple shader reloads and a Nether round trip, the three-chunk sunse
 
 The shadow pass rebuilt after shader reloads, a Nether round trip, and saving and rejoining the Overworld in the same JVM. The exact production Forge jar entered the copied full Auram pack, rendered the daylight and canopy fixture with AuramBliss active, and reloaded the shader. Both Distant Horizons rendering switches were disabled. Prism launched the test clients in the background with sound muted. Native Windows OpenGL was unavailable for runtime validation.
 
+### Raster LPV entity palette
+
+GLA kept the integer light palette active in the regular shadow shader. Oculus bound the color texture to unit 0, where the unassigned palette sampler also pointed. The conflicting sampler types made the entity shadow draw fail. GLA reported that error on the next OpenGL query as `glIsProgram` or `glGetIntegerv`.
+
+The dedicated raster LPV entity pass now owns the palette lookup. Terrain occupancy still comes from the terrain shadow pass. In a muted full-pack Overworld test, both occupancy passes resumed after a shader reload and the repeated errors stopped.
+
 ## Vapor Range
 
 In Shader Settings → AuramCore Fields → Vapor, **Vapor Range** sets the radius in blocks along each axis. The default radius of 64 gives a 128 × 128 × 128 block cube, with a four-block fade inside its faces. The cube follows the player's view, using the player eye position when AuramCore supplies it. Atum and Twilight Forest smoke, Midnight and Nether plumes and ceiling smoke, and simulated Vapor share the limit.

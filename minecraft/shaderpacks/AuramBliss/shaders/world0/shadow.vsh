@@ -61,12 +61,8 @@ uniform int entityId;
 		attribute vec3 at_midBlock;
 	#endif
 
-	#ifdef LPV_ENTITY_LIGHTS
-        #ifdef BLISS_RASTER_LPV
-            uniform usampler2D auram_bliss_palette;
-        #else
-            uniform usampler1D texBlockData;
-        #endif
+	#if defined LPV_ENTITY_LIGHTS && !defined BLISS_RASTER_LPV
+		uniform usampler1D texBlockData;
 	#endif
 	
     uniform int currentRenderedItemId;
