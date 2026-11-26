@@ -189,4 +189,5 @@ void main() {
 #if 0
     #include "/dimensions/compat/lpv_transport.fsh"
     #include "/dimensions/compat/lpv_transport.csh"
+    #include "/dimensions/compat/rf_prepare.csh"
 #endif
