@@ -32,13 +32,20 @@ abstract class CrystalChestItemModelsMixin {
     private void auramBliss$drawChestMesh(ItemRenderer renderer, BakedModel model, ItemStack stack, int light,
                                          int overlay, PoseStack pose, VertexConsumer consumer) {
         if (!CrystalChestMeshes.inChest() || stack.m_41790_() || !auramBliss$meshes.draw(
-                model, stack, light, overlay, pose.m_85850_(), consumer, f_115097_, this::m_115189_)) {
+                model, stack, light, overlay, pose.m_85850_(), consumer, f_115097_, this::auramBliss$captureMesh)) {
             m_115189_(model, stack, light, overlay, pose, consumer);
         }
+    }
+
+    @Unique
+    private void auramBliss$captureMesh(BakedModel model, int variant, ItemStack stack, int light, int overlay,
+                                        PoseStack pose, VertexConsumer consumer, ItemColors colors) {
+        m_115189_(model, stack, light, overlay, pose, consumer);
     }
 
     @Inject(method = "m_6213_", at = @At("TAIL"))
     private void auramBliss$clearChestMeshes(ResourceManager resources, CallbackInfo callback) {
         auramBliss$meshes.clear();
+        CrystalChestMeshes.flerovium().clear();
     }
 }

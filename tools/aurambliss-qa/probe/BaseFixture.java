@@ -13,23 +13,27 @@ import net.minecraft.world.level.Level;
 public final class BaseFixture {
     private BaseFixture() {}
 
-    public static CompletableFuture<Void> refreshChests() {
+    public static CompletableFuture<Void> refreshChests(String bank) {
         var server = Minecraft.m_91087_().m_91092_();
+        int z = bank.isBlank() ? 40 : Integer.parseInt(bank);
         return CompletableFuture.runAsync(() -> {
             try {
-                scan(server.m_129880_(Level.f_46428_), true);
+                scan(server.m_129880_(Level.f_46428_), z, true);
             } catch (ReflectiveOperationException error) {
                 throw new CompletionException(error);
             }
         }, server);
     }
 
-    public static void verifyChests(String expected) throws ReflectiveOperationException {
-        var actual = scan(Minecraft.m_91087_().f_91073_, false);
+    public static void verifyChests(String input) throws ReflectiveOperationException {
+        String[] values = input.split(" ", 2);
+        String expected = values[0];
+        int z = values.length == 1 ? 40 : Integer.parseInt(values[1]);
+        var actual = scan(Minecraft.m_91087_().f_91073_, z, false);
         if (!actual.equals(expected)) {
             throw new IllegalStateException("Expected crystal/loaded/opaque counts " + expected + ", found " + actual);
         }
-        System.out.println("QA_BASE_CHESTS crystal/loaded/opaque=" + actual);
+        System.out.println("QA_BASE_CHESTS crystal/loaded/opaque=" + actual + " z=" + z);
     }
 
     public static void verifyChestTop(String input) throws ReflectiveOperationException {
@@ -43,7 +47,7 @@ public final class BaseFixture {
         System.out.println("QA_BASE_INVENTORY " + pos + " " + actual);
     }
 
-    private static String scan(Level level, boolean refresh) throws ReflectiveOperationException {
+    private static String scan(Level level, int z, boolean refresh) throws ReflectiveOperationException {
         var crystalClass = Class.forName("com.progwml6.ironchest.common.block.entity.ICrystalChest");
         var chestClass = Class.forName("com.progwml6.ironchest.common.block.regular.entity.AbstractIronChestBlockEntity");
         Method stacks = crystalClass.getMethod("getTopItems");
@@ -51,7 +55,7 @@ public final class BaseFixture {
         int crystal = 0, loaded = 0, opaque = 0;
         for (int y = 74; y <= 89; y++) {
             for (int x = 32; x <= 63; x++) {
-                var blockEntity = level.m_7702_(new BlockPos(x, y, 40));
+                var blockEntity = level.m_7702_(new BlockPos(x, y, z));
                 if (crystalClass.isInstance(blockEntity)) {
                     crystal++;
                     if (refresh) {

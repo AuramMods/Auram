@@ -4,6 +4,7 @@ import dev.auram.bliss.qa.VisualClock;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Pseudo
@@ -12,5 +13,10 @@ abstract class ChestClockProbe {
     @Redirect(method = "m_6922_", at = @At(value = "INVOKE", target = "Ljava/lang/System;currentTimeMillis()J"))
     private long chestClock() {
         return VisualClock.frozen() ? Math.round(VisualClock.time() * 1_000.0) : System.currentTimeMillis();
+    }
+
+    @ModifyVariable(method = "m_6922_", at = @At("HEAD"), argsOnly = true, ordinal = 0)
+    private float holdPartialTick(float partialTick) {
+        return VisualClock.frozen() ? 0 : partialTick;
     }
 }

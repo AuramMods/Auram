@@ -78,7 +78,7 @@ abstract class LifecycleProbe {
                         case "server" -> SceneChecks.command(argument);
                         case "server-batch" -> SceneChecks.commands(Files.readAllLines(Path.of(argument)).stream()
                                 .filter(line -> !line.isBlank() && !line.startsWith("#")).toList());
-                        default -> BaseFixture.refreshChests();
+                        default -> BaseFixture.refreshChests(argument);
                     };
                     result.whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
                     return;
