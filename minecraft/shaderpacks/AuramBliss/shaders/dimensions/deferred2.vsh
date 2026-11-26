@@ -48,7 +48,10 @@ void main() {
 	// WsunVec = normalize(LightDir);
 
 	tempOffsets = HaltonSeq2(frameCounter%10000);
-	#ifdef TAA_UPSCALING
+	#if defined OVERWORLD_SHADER && defined VOLUMETRIC_CLOUDS && defined CLOUDS_INTERSECT_TERRAIN
+		// The fog pass renders these clouds. Preserve Oculus's colortex0 flip without writing fragments.
+		gl_Position = vec4(2.0, 0.0, 0.0, 1.0);
+	#elif defined TAA_UPSCALING
 		gl_Position.xy = (gl_Position.xy*0.5+0.5)*RENDER_SCALE*2.0-1.0;
 	#endif
 }
