@@ -5,18 +5,18 @@ distantGeneration = true
 radiusChunks = 256
 #Maximum in-flight Voxy chunk jobs across all dimensions with players online.
 #Range: 1 ~ 64
-chunkJobs = 3
+chunkJobs = 4
 #Maximum in-flight Voxy chunk jobs when no players are online.
 #Range: 1 ~ 64
 idleChunkJobs = 8
 #Voxy terrain bandwidth per remote player in KiB/s at 20 TPS.
 #Range: 1 ~ 16384
-playerStreamKiBPerSecond = 512
+playerStreamKiBPerSecond = 1024
 #Total Voxy terrain bandwidth for remote players in KiB/s at 20 TPS.
 #Range: 1 ~ 16384
 serverStreamKiBPerSecond = 2048
 #Ordered spawn generation dimensions. Absent dimensions are skipped.
-spawnDimensions = ["minecraft:overworld", "minecraft:the_nether", "minecraft:the_end"]
+spawnDimensions = ["minecraft:overworld", "minecraft:the_nether", "aether:the_aether", "twilightforest:twilight_forest", "atum:atum", "minecraft:the_end", "midnight:the_midnight", "deeperdarker:otherside"]
 #Optional spawn overrides as dimension=x,z using block coordinates.
 spawnAnchors = []
 

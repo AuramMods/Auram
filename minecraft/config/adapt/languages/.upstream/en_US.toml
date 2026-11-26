@@ -9144,6 +9144,10 @@ description = ["Most knockback speed a thrown block adds.", "Effect: Lower value
 label = "Throw Speed"
 description = ["Blocks per tick a thrown block travels, before its arc.", "Effect: Higher values give flatter, faster throws."]
 
+[config.fields.adaptations.architect-brickbat.hitPlayers]
+label = "Hit Players"
+description = ["Whether thrown blocks may be aimed at and hit other players where PvP is allowed.", "Effect: True lets blocks be thrown at players."]
+
 [config.fields.adaptations.architect-brickbat.flightGraceTicks]
 label = "Flight Grace Ticks"
 description = ["Ticks a thrown block may fly past its planned arc before it drops on its own.", "Effect: Higher values let missed throws fall farther."]
@@ -15594,7 +15598,7 @@ description = ["Range in blocks added at maximum level.", "Effect: Higher values
 
 [config.fields.adaptations.excavation-clod-hurler.damageMultiplierBase]
 label = "Damage Multiplier Base"
-description = ["Damage multiplier at level 0, applied to shovel damage times block heft.", "Effect: Higher values make every throw hit harder."]
+description = ["Damage multiplier at level 0, applied to the held shovel's attack damage times block heft.", "Effect: Higher values make every throw hit harder."]
 
 [config.fields.adaptations.excavation-clod-hurler.damageMultiplierFactor]
 label = "Damage Multiplier Factor"
@@ -15612,17 +15616,13 @@ description = ["Flight distance in blocks at which a throw reaches full damage."
 label = "Close Factor"
 description = ["Share of full damage a point-blank throw deals.", "Effect: Higher values make close throws closer to full damage."]
 
-[config.fields.adaptations.excavation-clod-hurler.cooldownMillisBase]
-label = "Cooldown Millis Base"
-description = ["Milliseconds between throws at level 0.", "Effect: Higher values slow how often digs can throw."]
+[config.fields.adaptations.excavation-clod-hurler.cooldownMillisAtLevelOne]
+label = "Cooldown Millis At Level One"
+description = ["Milliseconds between throws at level 1.", "Effect: Higher values slow how often digs can throw."]
 
-[config.fields.adaptations.excavation-clod-hurler.cooldownMillisLevelReduction]
-label = "Cooldown Millis Level Reduction"
-description = ["Milliseconds of cooldown removed at maximum level.", "Effect: Higher values let high levels throw more often."]
-
-[config.fields.adaptations.excavation-clod-hurler.minCooldownMillis]
-label = "Min Cooldown Millis"
-description = ["Shortest cooldown in milliseconds at any level.", "Effect: Higher values keep throws rare even at high levels."]
+[config.fields.adaptations.excavation-clod-hurler.cooldownMillisAtTopLevel]
+label = "Cooldown Millis At Top Level"
+description = ["Milliseconds between throws at the top level; levels between are linear.", "Effect: Lower values let high levels throw more often."]
 
 [config.fields.adaptations.excavation-clod-hurler.throwSpeed]
 label = "Throw Speed"
@@ -25651,6 +25651,14 @@ description = ["Time a target is remembered after your last hit on it, in millis
 [config.fields.adaptations.seaborne-storm-strike.xpPerStrike]
 label = "Xp Per Strike"
 description = ["Seaborne XP for each strike on a natural mob; strikes on players pay none.", "Effect: Higher values level Seaborne faster in storms."]
+
+[config.fields.adaptations.seaborne-storm-strike.strikePassiveMobs]
+label = "Strike Passive Mobs"
+description = ["Whether strikes land on mobs that are not hostile, such as animals, villagers and mobs that only fight back.", "Effect: True lets lightning hit passive and neutral mobs."]
+
+[config.fields.adaptations.seaborne-storm-strike.strikePlayers]
+label = "Strike Players"
+description = ["Whether strikes land on other players where PvP is allowed.", "Effect: True lets lightning hit players."]
 
 [config.fields.adaptations.seaborne-tidecaller.playerPreferences]
 label = "Player Preferences"

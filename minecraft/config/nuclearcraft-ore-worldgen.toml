@@ -1,0 +1,21 @@
+#Dimension IDs eligible for stock ores. Use namespaced IDs.
+ore_dims = ["minecraft:overworld", "nuclearcraft:wasteland"]
+#False allows only the listed dimensions. True excludes the listed dimensions.
+ore_dims_list_type = false
+
+#Array order: copper, tin, lead, thorium, uranium, boron, lithium, magnesium.
+[ores]
+	ore_gen = [true, true, true, true, true, true, true, true]
+	#Legacy vein size (1 to 64).
+	ore_size = [6, 6, 6, 3, 3, 4, 4, 5]
+	#Placement attempts per chunk (0 to 256).
+	ore_rate = [5, 4, 6, 3, 6, 6, 6, 4]
+	#Minimum inclusive placement Y.
+	ore_min_height = [0, 0, 0, 0, 0, 0, 0, 0]
+	#Maximum inclusive placement Y.
+	ore_max_height = [48, 40, 36, 32, 32, 28, 28, 24]
+	#Minimum pickaxe levels (0 to 15).
+	ore_harvest_levels = [1, 1, 1, 2, 2, 2, 2, 2]
+	#Hide the ore, block, ingot, and dust of disabled stock ores in JEI.
+	ore_hide_disabled = false
+
