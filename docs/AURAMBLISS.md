@@ -140,6 +140,10 @@ GLA kept the integer light palette active in the regular shadow shader. Oculus b
 
 The dedicated raster LPV entity pass now owns the palette lookup. Terrain occupancy still comes from the terrain shadow pass. In a muted full-pack Overworld test, both occupancy passes resumed after a shader reload and the repeated errors stopped.
 
+### Voxy LOD tint
+
+Hold Numpad Multiply to tint Voxy terrain by its rendered LOD level. Bliss applies the tint to opaque albedo before packing its G-buffer and to translucent color after water shading. The tint preserves texture detail and water transparency.
+
 ## Vapor Range
 
 In Shader Settings → AuramCore Fields → Vapor, **Vapor Range** sets the radius in blocks along each axis. The default radius of 64 gives a 128 × 128 × 128 block cube, with a four-block fade inside its faces. The cube follows the player's view, using the player eye position when AuramCore supplies it. Atum and Twilight Forest smoke, Midnight and Nether plumes and ceiling smoke, and simulated Vapor share the limit.

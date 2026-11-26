@@ -119,6 +119,9 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
 	#ifdef WhiteWorld
 		Albedo.rgb = vec3(1.0);
 	#endif
+#ifdef VOXY_LOD_DEBUG_TINT
+    Albedo = voxy_applyLodDebugTint(Albedo);
+#endif
 
     // Voxy supplies texture sample centers. Bliss stores each light level on [0, 1].
     vec2 lightMaps = clamp((parameters.lightMap * 16.0 - 0.5) / 15.0, 0.0, 1.0);

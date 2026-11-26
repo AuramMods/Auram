@@ -133,6 +133,9 @@ void voxy_emitFragment(VoxyFragmentParameters parameters) {
         alpha = outputAlpha;
     #endif
 
+#ifdef VOXY_LOD_DEBUG_TINT
+    shaded = voxy_applyLodDebugTint(shaded);
+#endif
     FORWARD_RENDERED_COLOR = vec4(clamp(shaded * 0.1, 0.0, 65000.0), alpha);
     #if DEBUG_VIEW == debug_NORMALS
         FORWARD_RENDERED_COLOR = vec4(worldNormal * 0.1, 1.0);
