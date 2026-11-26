@@ -1,0 +1,91 @@
+# Adapt configuration - adaptation:upgraded-hunter-apex-predator
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Repeated hits on one target ramp your damage, big game rolls its drops again, and a compass tracks your prey.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 5
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Bonus damage per ramp stack before level scaling.
+# Effect: Higher values make every stack hit harder.
+perStackBonusBase = 0.06
+# Bonus damage per ramp stack added per level.
+# Effect: Higher values reward higher levels more.
+perStackBonusPerLevel = 0.02
+# Ramp stack cap before level scaling.
+# Effect: Higher values let the ramp climb further.
+rampCapBase = 4
+# Ramp stack cap added per level.
+# Effect: Higher values let higher levels climb further.
+rampCapPerLevel = 2
+# Stacks gained per hit on large and boss mobs.
+# Effect: Higher values ramp faster against big game.
+bigGameStacksPerHit = 2
+# Milliseconds without a hit before the ramp resets.
+# Effect: Higher values forgive slower attacks.
+decayMillis = 3500
+# Silent skill XP for each ramped hit.
+# Effect: Higher values reward sustained focus.
+xpPerRampedHit = 2.0
+# Chance of one more roll of a large or boss mob's own drops before level scaling.
+# Effect: Higher values give big game extra loot more often.
+extraRollChanceBase = 0.1
+# Extra roll chance added per level.
+# Effect: Higher values reward higher levels more.
+extraRollChancePerLevel = 0.2
+# Tracker's Compass range per level, in blocks.
+# Effect: Higher values find prey farther away in loaded chunks.
+compassRangePerLevel = 64.0
+# Kinds one Tracker's Compass remembers, from level 1 upward.
+# Effect: Higher values let you switch between more kinds.
+kindsRememberedByLevel = [1, 3, 6]
+# Level from which the compass tracks bosses and named mobs you have hit.
+# Effect: Lower values unlock quarry tracking sooner.
+quarryLevel = 3
+# Bosses and named mobs remembered per player for the compass.
+# Effect: Higher values keep more quarries tracked.
+maxQuarries = 4
+# Killed kinds a compass offers in its menu.
+# Effect: Higher values keep a longer list.
+maxKilledKinds = 18
+# Hunger points paid each time the compass is set to a kind.
+# Effect: Higher values make setting a kind cost more food.
+setHungerCost = 1
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

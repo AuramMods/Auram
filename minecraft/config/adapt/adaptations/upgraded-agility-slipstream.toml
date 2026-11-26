@@ -1,0 +1,108 @@
+# Adapt configuration - adaptation:upgraded-agility-slipstream
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Running keeps adding speed up to a ceiling, slides carry the run, sprinting drains no hunger, and Featherfoot comes along.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Running ticks that make up one step of the speed ramp.
+# Effect: Lower values make speed climb faster.
+ticksPerStep = 100.0
+# Relative movement speed gained per step before level scaling.
+# Effect: Higher values make every step of running faster.
+speedPerStepBase = 0.1
+# Relative movement speed per step added per level.
+# Effect: Higher values reward higher levels more.
+speedPerStepPerLevel = 0.05
+# Share of the gap to the target speed closed each tick.
+# Effect: Higher values make the speed follow the ramp more tightly.
+speedLerpPerTick = 0.45
+# Horizontal speed in blocks per tick needed to count as running at full speed.
+# Effect: Higher values need clearer movement before the full-speed trail and stat.
+movementVelocityThreshold = 0.015
+# Slide velocity in blocks per tick before level scaling.
+# Effect: Higher values throw the slide further.
+slideForceBase = 0.6
+# Slide velocity in blocks per tick added per level.
+# Effect: Higher values reward higher levels more.
+slideForcePerLevel = 0.15
+# Prone ticks of a slide before level scaling.
+# Effect: Higher values keep the slide going longer.
+slideTicksBase = 14
+# Prone ticks added per level.
+# Effect: Higher values lengthen slides at higher levels.
+slideTicksPerLevel = 4
+# Fraction of ground friction removed during a slide.
+# Effect: Higher values keep more momentum while prone.
+slideFrictionReduction = 0.9
+# Slide cooldown before level scaling, in milliseconds.
+# Effect: Higher values make slides rarer.
+slideCooldownMillisBase = 3000.0
+# Slide cooldown removed per level, in milliseconds.
+# Effect: Higher values make higher levels slide more often.
+slideCooldownMillisPerLevel = 600.0
+# Shortest slide cooldown at any level, in milliseconds.
+# Effect: Lower values allow slides back to back.
+minimumSlideCooldownMillis = 900.0
+# Time after a slide ends during which the run still counts without sprinting, in milliseconds.
+# Effect: Higher values give more time to start sprinting again after a slide.
+carryGraceMillis = 750
+# Highest relative movement speed a run can reach before level scaling.
+# Effect: Higher values let long runs go faster; very high values outrun chunk loading and anti-cheat.
+maximumSpeedBonusBase = 0.4
+# Highest relative movement speed added per level.
+# Effect: Higher values reward higher levels more.
+maximumSpeedBonusPerLevel = 0.2
+# Featherfoot level at upgrade level 0; each upgrade level adds one.
+# Effect: Higher values unlock more Featherfoot surfaces sooner.
+featherfootLevelBase = 1
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.control]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "TAP"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["TAP", "HOLD"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

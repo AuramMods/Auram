@@ -147,6 +147,9 @@ skillsGuiRows = 0
 # Skill registry names in the order they should appear in the skills GUI.
 # Effect: Listed skills are placed first in this order; every other skill follows in the normal alphabetical order and unknown names are ignored.
 skillOrder = []
+# Shows skills a player has not started, and the seats of skills merged into a mutation, greyed out on the skills page.
+# Effect: False hides them on the native client page and in the skills GUI, and the remaining skills close up in the same order.
+showInactiveSkills = true
 
 # Skill registry name to Bukkit Material name used as that skill's icon.
 # Effect: Overrides the built-in icon; models.toml entries still win while customModels is enabled, and unknown material names fall back to the built-in icon.
@@ -294,6 +297,51 @@ absoluteBurstXp = 80000.0
 absoluteXpPerMinute = 48000.0
 # Maximum cap applied to the xpEarningLimits section.
 maximumAllowanceBoost = 4.0
+
+# Settings for Mutations.
+[mutations]
+# Skill level both parents need before they can be merged into a mutation.
+# Effect: Higher values make mutations a later goal.
+requiredSkillLevel = 15
+# Most mutations one player may hold; 0 for no limit.
+# Effect: A skill is still in one mutation only, so 24 skills allow at most 12.
+maxMutations = 0
+# Share of the smaller award a mutated skill keeps when one action pays both of its parents.
+# Effect: 0 pays only the larger award; 1 pays both in full.
+sameActionSmallerShare = 0.25
+# Multiplier on the XP rate allowance of a mutated skill compared with a single skill.
+# Effect: Higher values let a mutated skill earn faster before the rate limit applies.
+rateAllowanceMultiplier = 1.5
+# Graft and Echo cooldown at level 1, in milliseconds.
+# Effect: Lower values let a Trigger set off its Strike more often.
+triggerCooldownMillisAtFirstLevel = 8000
+# Graft and Echo cooldown at the top level, in milliseconds.
+# Effect: Lower values let a Trigger set off its Strike more often.
+triggerCooldownMillisAtTopLevel = 4000
+# Convergence cooldown, in milliseconds.
+# Effect: Lower values let both Strikes fire more often.
+convergenceCooldownMillis = 45000
+# Barter cooldown, in milliseconds.
+# Effect: Lower values let the gesture spend its Fuel more often.
+barterCooldownMillis = 6000
+# Time between Attunement boons while its State holds, in milliseconds.
+# Effect: Lower values grant the Boon more often.
+attunementIntervalMillis = 20000
+# Radius in blocks within which a hostile makes an either Trigger use the fight Strike and becomes its target.
+# Effect: Higher values pick the fight Strike from farther away.
+hostileRadius = 6.0
+# Longest gap between the two presses of Barter's double-tap sneak, in milliseconds.
+# Effect: Higher values make the double-tap easier and accidental casts likelier.
+doubleSneakWindowMillis = 400
+# Most skill XP one upgrade pays a player each minute.
+# Effect: Lower values limit how fast repeating an upgrade levels a skill.
+upgradeXpPerMinute = 600.0
+# Multiplier on an upgrade's effect when it spends the partner skill's Fuel as an overcharge.
+# Effect: Higher values make paying the Fuel worth more; 1 turns overcharges into a cost with no gain.
+overchargeStrength = 1.5
+# Most blocks all build batches together place, break or undo in one server tick.
+# Effect: Lower values spread large fills over more ticks and keep the server smoother.
+buildBlocksPerTick = 64
 
 # Settings for Redis.
 [redis]

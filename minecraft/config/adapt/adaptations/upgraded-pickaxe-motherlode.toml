@@ -1,0 +1,70 @@
+# Adapt configuration - adaptation:upgraded-pickaxe-motherlode
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Mining an ore breaks its whole vein, smelts the drops and adds a bonus ore; mined spawners drop from level 2.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Vein radius in blocks before adding the level.
+# Effect: Higher values reach farther along a vein.
+veinRadiusBase = 3
+# Most blocks one vein can break.
+# Effect: Higher values allow larger veins but cost more block updates.
+maxBlocks = 64
+# Extra ores dropped for each vein.
+# Effect: Higher values make every vein richer.
+bonusOres = 1
+# Natural ores a vein needs, the mined one included, before it drops the bonus.
+# Effect: Higher values keep the bonus for larger veins.
+bonusVeinSize = 3
+# Skill XP for each ore in the vein.
+# Effect: Higher values reward large veins.
+xpPerOre = 2.0
+# Level from which a spawner mined while sneaking without silk touch drops itself.
+# Effect: Higher values keep spawner pickup for higher levels.
+spawnerLevel = 2
+# Pickaxe durability each kept spawner costs.
+# Effect: Higher values make spawner pickup wear the pickaxe faster; a pickaxe that cannot pay stops a sneaking break.
+spawnerDurability = 200
+# Level from which a kept spawner names its mob and can be placed only where the placer may build.
+# Effect: Higher values keep the label and placement rule for higher levels.
+spawnerDisplayLevel = 3
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

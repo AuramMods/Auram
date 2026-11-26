@@ -1,0 +1,73 @@
+# Adapt configuration - adaptation:signature-hunter-taming-convergence
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Your pets hunt your blood trail or tracked species within 32 blocks of you and share your Apex Predator ramp on it.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# How far from you the pack picks up a quarry at level 1, in blocks.
+# Effect: Higher values start hunts farther away.
+rangeAtFirstLevel = 16.0
+# How far from you the pack picks up a quarry at the top level, in blocks.
+# Effect: Higher values start hunts farther away.
+rangeAtTopLevel = 32.0
+# Farthest a hunting pet goes from you, in blocks.
+# Effect: Higher values let pets chase farther.
+leash = 32.0
+# Extra reach past the leash searched for pets to call back, in blocks.
+# Effect: Higher values call back pets that ran farther.
+recallMargin = 16.0
+# Pets that join a hunt at level 1.
+# Effect: Higher values hunt with more of the pack.
+petsAtFirstLevel = 2.0
+# Pets that join a hunt at the top level.
+# Effect: Higher values hunt with more of the pack.
+petsAtTopLevel = 4.0
+# Pet damage added per Apex Predator ramp stack on the quarry at level 1. 0.05 is 5%.
+# Effect: Higher values make pets ramp harder.
+perStackAtFirstLevel = 0.05
+# Pet damage added per ramp stack on the quarry at the top level.
+# Effect: Higher values make pets ramp harder.
+perStackAtTopLevel = 0.1
+# Cooldown between two hunts, in milliseconds.
+# Effect: Higher values give the pack longer rests between quarries.
+cooldownMillis = 5000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

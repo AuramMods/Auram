@@ -1,0 +1,91 @@
+# Adapt configuration - adaptation:upgraded-rift-phase-step
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Double jump to blink far through walls with resistance on arrival for a pearl or half a heart; thrown pearls bounce once.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Blink distance before level scaling, in blocks.
+# Effect: Higher values reach farther.
+distanceBase = 30.0
+# Blink distance added per level, in blocks.
+# Effect: Higher values reward higher levels more; capped at 128.
+distancePerLevel = 6.0
+# Shortest blink that counts, in blocks.
+# Effect: Higher values stop short hops from using the blink.
+minDistance = 2.0
+# Blocks searched downward from the aimed point for solid ground.
+# Effect: Higher values snap more blinks onto the ground.
+groundSnapDepth = 5
+# Speed kept along the look direction after a blink.
+# Effect: Higher values give a stronger dash on arrival.
+momentumCarry = 0.35
+# Time between two blinks, in milliseconds.
+# Effect: Lower values allow blinking more often.
+cooldownMillis = 2500
+# Resistance after a blink before level scaling, in ticks.
+# Effect: Higher values protect you longer on arrival.
+resistanceTicksBase = 40
+# Resistance after a blink added per level, in ticks.
+# Effect: Higher values reward higher levels more.
+resistanceTicksPerLevel = 20
+# Resistance amplifier on arrival.
+# Effect: Higher values cut more damage while it lasts.
+resistanceAmplifier = 2
+# Share of a bounced pearl's direction taken from your crosshair.
+# Effect: Higher values steer bounces toward where you look.
+pearlAimBias = 0.6
+# Launch speed of a bounced pearl.
+# Effect: Higher values throw the bounce farther.
+pearlSpeed = 1.5
+# Health taken per blink when you carry no plain ender pearl.
+# Effect: Higher values make pearl-free blinks cost more; you never blink below this.
+healthCost = 1.0
+# Level from which a sneak hit tags a creature to swap places with.
+# Effect: Lower values unlock the swap sooner.
+taglockLevel = 2
+# Level from which players can be tagged and swapped, where PvP is allowed.
+# Effect: Lower values allow player swaps sooner.
+playerSwapLevel = 3
+# How long a tag waits for your next blink, in milliseconds.
+# Effect: Higher values keep the tag longer.
+tagMillis = 30000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,137 @@
+# Adapt configuration - adaptation:upgraded-axes-worldsplitter
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# A thrown axe smashes the ground where it lands, then flies back to you through everything in its way.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Exclude passive and neutral mobs from the smash and from bounced axes.
+# Effect: When enabled, protected mobs are skipped. Direct throws and player targeting are unchanged.
+ignorePassiveMobs = false
+# Fraction of the axe's melee damage dealt on a throw hit, before level scaling.
+# Effect: Higher values make thrown axes hit harder.
+damageMultiplierBase = 0.9
+# Melee-damage fraction added per level.
+# Effect: Higher values reward higher levels more.
+damageMultiplierPerLevel = 0.2
+# Flight velocity of a thrown axe in blocks per tick.
+# Effect: Higher values make throws travel faster and flatter.
+throwSpeed = 2.0
+# Smash damage at the impact point before level scaling.
+# Effect: Higher values make the smash hit harder.
+smashDamageBase = 4.0
+# Smash damage added per level.
+# Effect: Higher values reward higher levels more.
+smashDamagePerLevel = 2.0
+# Fraction of the smash damage dealt at the edge of the radius.
+# Effect: Higher values flatten the falloff.
+smashEdgeDamageRatio = 0.4
+# Smash radius in blocks before level scaling.
+# Effect: Higher values reach more targets.
+smashRadiusBase = 3.0
+# Smash radius added per level, in blocks.
+# Effect: Higher values widen the smash at higher levels.
+smashRadiusPerLevel = 1.0
+# Knockback at the impact point.
+# Effect: Higher values throw targets farther.
+smashForce = 1.0
+# Throw cooldown before level scaling, in milliseconds.
+# Effect: Higher values make throws rarer.
+cooldownMillisBase = 2500.0
+# Cooldown removed per level, in milliseconds.
+# Effect: Higher values let higher levels throw more often.
+cooldownMillisPerLevel = 500.0
+# Shortest cooldown at any level, in milliseconds.
+# Effect: Lower values allow more frequent throws.
+minimumCooldownMillis = 1000.0
+# Durability spent from the axe on each throw.
+# Effect: Higher values wear thrown axes out faster.
+durabilityCost = 3
+# Ticks a thrown axe stays airborne before it returns on its own.
+# Effect: Higher values let throws travel farther.
+maxFlightTicks = 80
+# Skill XP for each thrown-axe hit on an entity.
+# Effect: Higher values reward accurate throws.
+xpPerHit = 6.0
+# Skill XP for each target the smash hits.
+# Effect: Higher values reward smashing groups.
+xpPerSmashTarget = 4.0
+# Most creatures the returning axe strikes at level 1.
+# Effect: Higher values cut through larger crowds on the way back.
+returnTargetsLevel1 = 3
+# Most creatures the returning axe strikes at level 2.
+# Effect: Higher values cut through larger crowds on the way back.
+returnTargetsLevel2 = 5
+# Most creatures the returning axe strikes at level 3.
+# Effect: Higher values cut through larger crowds on the way back.
+returnTargetsLevel3 = 8
+# Fraction of the throw damage each creature on the return path takes.
+# Effect: Higher values make the return hit harder.
+returnDamageRatio = 0.5
+# How far from the line between the impact and you a creature is struck, in blocks.
+# Effect: Higher values widen the return path.
+returnPathWidth = 1.25
+# Axe durability each creature struck on the return costs.
+# Effect: Higher values wear the axe faster; the return never breaks it.
+returnDurabilityPerHit = 1
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.ignore-passive]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.require-sneak]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

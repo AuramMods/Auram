@@ -1,0 +1,106 @@
+# Adapt configuration - adaptation:upgraded-agility-skyrunner
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Wall jump, high jump and air dash share one mid-air charge that a wall refreshes a few times per jump.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 5
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# High jump apex in blocks before level scaling.
+# Effect: Higher values make ground and mid-air high jumps rise further.
+highJumpHeightBase = 2.0
+# High jump apex in blocks added per level.
+# Effect: Higher values reward higher levels more.
+highJumpHeightPerLevel = 0.6
+# Upward velocity of a wall jump before level scaling, in blocks per tick.
+# Effect: Higher values push off walls higher.
+wallJumpVelocityBase = 0.7
+# Wall jump velocity added per level, in blocks per tick.
+# Effect: Higher values reward higher levels more.
+wallJumpVelocityPerLevel = 0.1
+# Air dash velocity before level scaling, in blocks per tick.
+# Effect: Higher values throw the dash further.
+dashForceBase = 0.9
+# Air dash velocity added per level, in blocks per tick.
+# Effect: Higher values reward higher levels more.
+dashForcePerLevel = 0.15
+# Upward velocity added to every air dash.
+# Effect: Higher values keep dashes airborne longer.
+dashUpwardLift = 0.12
+# Saturation and hunger spent per air dash.
+# Effect: Higher values make dashing drain stamina faster.
+dashHungerCost = 1.5
+# Walls that give back a mid-air charge before you touch the ground again.
+# Effect: Higher values let you climb higher up a wall.
+wallRefreshesPerJump = 3
+# Mid-air charges at level 1.
+# Effect: Higher values allow more air moves per jump.
+midAirChargesBase = 1
+# Mid-air charges added per level above 1.
+# Effect: Higher values reward higher levels more.
+midAirChargesPerLevel = 1
+# Most mid-air charges at any level.
+# Effect: Higher values allow longer chains of air moves.
+maxMidAirCharges = 2
+# Grappling line reach in blocks before level scaling.
+# Effect: Higher values hook blocks further away.
+grappleRangeBase = 8.0
+# Grappling line reach in blocks added per level.
+# Effect: Higher values reward higher levels more.
+grappleRangePerLevel = 8.0
+# Reel speed in blocks per tick before level scaling.
+# Effect: Higher values pull you to the hook faster.
+reelSpeedBase = 0.8
+# Reel speed in blocks per tick added per level.
+# Effect: Higher values reward higher levels more.
+reelSpeedPerLevel = 0.1
+# Share of your own momentum kept on each reel tick.
+# Effect: Higher values make the reel swing wider instead of pulling straight.
+reelMomentumCarry = 0.35
+# Upward velocity added on each reel tick while far from the hook, in blocks per tick.
+# Effect: Higher values arc the reel higher over ledges.
+reelArcLift = 0.08
+# Longest a reel pulls, in ticks.
+# Effect: Higher values let a reel run longer before it lets go.
+maxReelTicks = 60
+# Durability spent per grapple.
+# Effect: Higher values wear the line out faster.
+grappleDurabilityCost = 1
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

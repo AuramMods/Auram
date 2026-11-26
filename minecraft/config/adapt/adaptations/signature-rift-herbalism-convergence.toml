@@ -1,0 +1,70 @@
+# Adapt configuration - adaptation:signature-rift-herbalism-convergence
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Harvests nearby grow your chorus flowers, and chorus fruit sends you where you look.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Aimed chorus range before level scaling, in blocks.
+# Effect: Higher values send you farther.
+rangeBase = 4.0
+# Aimed chorus range added per level, in blocks.
+# Effect: Higher values reward higher levels more.
+rangePerLevel = 4.0
+# Chorus flowers one harvest grows, before adding the level.
+# Effect: Higher values grow more flowers at once.
+flowersBase = 0
+# Sideways reach from the harvested crop to the flowers, before adding the level, in blocks (at most 8).
+# Effect: Higher values reach flowers farther from the crops.
+reachBase = 2
+# Reach above and below the harvested crop, in blocks (at most 4).
+# Effect: Higher values reach flowers on other levels of the farm.
+reachHeight = 2
+# Tallest straight stem a flower grows on before it stops rising.
+# Effect: Higher values grow taller plants.
+maxStemHeight = 4
+# Cooldown after an aimed landing, in milliseconds.
+# Effect: Higher values space aimed landings further apart.
+aimCooldownMillis = 1000
+# Cooldown after harvests grow flowers, in milliseconds.
+# Effect: Higher values space growth further apart.
+ripenCooldownMillis = 1000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

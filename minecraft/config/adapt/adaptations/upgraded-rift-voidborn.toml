@@ -1,0 +1,84 @@
+# Adapt configuration - adaptation:upgraded-rift-voidborn
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Lethal damage blinks you to safety for an ender pearl, endermen ignore you, and sneaking ends levitation.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Escape cooldown before level scaling, in milliseconds.
+# Effect: Higher values make escapes rarer.
+cooldownMillisBase = 100000
+# Escape cooldown removed per level, in milliseconds.
+# Effect: Higher values make higher levels escape more often.
+cooldownMillisPerLevel = 15000
+# Shortest escape cooldown at any level, in milliseconds.
+# Effect: Lower values allow more frequent escapes.
+minimumCooldownMillis = 30000
+# Farthest an escape searches for a safe spot, in blocks.
+# Effect: Higher values escape farther; capped at 16.
+searchRadius = 12.0
+# Nearest an escape lands, in blocks.
+# Effect: Higher values put more distance between you and the danger.
+minRadius = 4.0
+# Resistance after an escape before level scaling, in ticks.
+# Effect: Higher values protect you longer after escaping.
+resistanceTicksBase = 60
+# Resistance after an escape added per level, in ticks.
+# Effect: Higher values reward higher levels more.
+resistanceTicksPerLevel = 30
+# Resistance amplifier after an escape.
+# Effect: Higher values cut more damage while it lasts.
+resistanceAmplifier = 3
+# Time between two levitation releases, in seconds; your fall is guarded for as long.
+# Effect: Higher values guard the fall longer but allow fewer releases.
+levitationCooldownSeconds = 3.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.death-save-priority]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NORMAL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FIRST", "NORMAL", "LAST"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

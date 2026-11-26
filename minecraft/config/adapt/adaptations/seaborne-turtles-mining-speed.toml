@@ -1,7 +1,7 @@
 # Adapt configuration - adaptation:seaborne-turtles-mining-speed
 # This file is canonicalized on load; comments and new keys may update automatically.
 #
-# Mine faster while underwater, with optional compensation for the vanilla floating penalty.
+# Mine faster while underwater, with compensation for the vanilla floating penalty, and shrug off most of a guardian's Mining Fatigue.
 
 # Enables or disables this feature.
 # Effect: Set to false to disable behavior without uninstalling files.
@@ -43,6 +43,15 @@ attributeDurationTicks = 160
 # Milliseconds between passive underwater-state refreshes.
 # Effect: Lower values react faster but scan learned players more frequently; block damage still activates the boost immediately.
 refreshIntervalMillis = 3000
+# Share of Mining Fatigue's slowdown cancelled each tick while you mine underwater.
+# Effect: Higher values offset more of Mining Fatigue II and above; Mining Fatigue I remains the floor.
+fatigueTrimChance = 0.65
+# Mining Fatigue amplifier steps each cancelled tick removes.
+# Effect: Higher values counter stronger Mining Fatigue more aggressively.
+fatigueTrimAmount = 2
+# Duration in ticks of each refreshed counter while Mining Fatigue is present.
+# Effect: Higher values tolerate refresh delays; zero disables fatigue countering.
+fatigueCounterDurationTicks = 80
 
 # Server defaults and permitted choices for this adaptation's player preferences.
 # Effect: Each registered control can be locked or restricted without changing another player's saved choices.

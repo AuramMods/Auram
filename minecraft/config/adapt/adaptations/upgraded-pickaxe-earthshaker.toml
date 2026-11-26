@@ -1,0 +1,73 @@
+# Adapt configuration - adaptation:upgraded-pickaxe-earthshaker
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Mining stone, deepslate or obsidian bores a 3 by 3 face, the harder blocks mine at stone speed, and Prospector's Charges open stone around them.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 5
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Share of the gap to stone speed closed per level on deepslate and obsidian.
+# Effect: Higher values reach full stone speed at lower levels; capped at the full gap.
+speedSharePerLevel = 0.34
+# How long the speed lasts after each swing, in ticks.
+# Effect: Higher values keep the speed between slow swings.
+boostDurationTicks = 60
+# Extra pickaxe durability lost per bored block.
+# Effect: Higher values wear the pickaxe out faster.
+durabilityPerBonusBlock = 1
+# Skill XP for each bored block.
+# Effect: Higher values reward tunnelling.
+xpPerBlock = 0.5
+# Charge radius in blocks before adding the level.
+# Effect: Higher values open larger spheres at every level.
+chargeRadiusBase = 1
+# Ticks between pressing a charge and its blast.
+# Effect: Higher values give more time to step away.
+chargeFuseTicks = 60
+# Blocks a blast breaks per tick.
+# Effect: Higher values open the sphere faster but cost more block updates per tick.
+chargeBlocksPerTick = 12
+# How long ores just outside the sphere glow, in ticks.
+# Effect: Higher values keep the outlines up longer.
+chargeGlowTicks = 200
+# Level from which a charge also opens obsidian, with a diamond or netherite pickaxe.
+# Effect: Lower values let charges open obsidian sooner.
+chargeObsidianLevel = 3
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

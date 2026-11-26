@@ -1,0 +1,175 @@
+# Adapt configuration - adaptation:upgraded-taming-one-mind
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# The Beastmaster's Whistle sends, recalls and organises your pets, and wolves fetch drops on their own.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 5
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Range for sending the pack at a target before level scaling, in blocks.
+# Effect: Higher values let you send the pack farther.
+commandRangeBase = 8.0
+# Sending range added per level, in blocks.
+# Effect: Higher values reward higher levels more.
+commandRangePerLevel = 8.0
+# Ticks pets stay focused on a target before level scaling.
+# Effect: Higher values keep the pack on the target longer.
+focusTicksBase = 80.0
+# Focus ticks added per level.
+# Effect: Higher values reward higher levels more.
+focusTicksPerLevel = 40.0
+# Time between two sends at a target, in milliseconds.
+# Effect: Lower values let you retarget the pack more often.
+commandCooldownMillis = 2500.0
+# Most pets sent at one target, capped at 24.
+# Effect: Lower values send smaller packs.
+maxPets = 12
+# Radius searched for a pet to recall before level scaling, in blocks.
+# Effect: Higher values recall pets from farther away.
+recallRadiusBase = 32.0
+# Recall radius added per level, in blocks.
+# Effect: Higher values reward higher levels more.
+recallRadiusPerLevel = 12.0
+# Whistle cooldown after a recall before level scaling, in ticks; at least 40.
+# Effect: Higher values make recalls rarer.
+recallCooldownTicksBase = 300.0
+# Recall cooldown removed per level, in ticks.
+# Effect: Higher values shorten the cooldown faster as you level.
+recallCooldownTicksPerLevel = 60.0
+# Food points each recall costs.
+# Effect: Higher values make recalls cost more hunger; 0 disables the cost.
+recallHungerCost = 1
+# Range around you in which wolves fetch drops, in blocks; capped at 11.
+# Effect: Higher values reach farther drops.
+fetchRange = 9.0
+# Chance each drop is fetched on a pass, from 0 to 1.
+# Effect: Higher values clear drops faster.
+carryRate = 0.85
+# Radius searched for idle wolves to send, in blocks.
+# Effect: Higher values send wolves from farther away.
+wolfSearchRadius = 24.0
+# Most wolves counted for one pass, capped at 12.
+# Effect: Higher values let larger packs fetch together.
+maxWolves = 6
+# Most drops fetched by one pass, capped at 8.
+# Effect: Higher values clear more drops per pass.
+maxItemsPerSend = 6
+# Walking speed of a fetching wolf, clamped to 0.1 - 4.0.
+# Effect: Higher values finish the round trip sooner.
+fetchWalkSpeed = 1.3
+# Time a fetch may run before it is given up, in milliseconds; clamped to 1000 - 60000.
+# Effect: Higher values let wolves work awkward routes longer.
+fetchDeadlineMillis = 9000.0
+# One Mind level from which named pets take roles in the whistle's menu.
+# Effect: Lower values unlock roles sooner.
+rolesLevel = 2
+# Radius around you in which the whistle's menu lists named pets, in blocks.
+# Effect: Higher values list pets farther away.
+menuRadius = 32.0
+# Radius around a guard's post in which it attacks hostile mobs, in blocks.
+# Effect: Higher values let guards engage from farther away.
+guardRadius = 10.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.fetch-collar]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "RED", "BLUE", "YELLOW"]
+
+[playerPreferences.hunger-reserve]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NONE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["NONE", "FOUR", "EIGHT"]
+
+[playerPreferences.items]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "FOOD", "BLOCKS", "VALUABLES"]
+
+[playerPreferences.pets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "WOLVES", "CATS", "HORSES"]
+
+[playerPreferences.sitting]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "HOSTILE", "NON_PLAYERS"]
+

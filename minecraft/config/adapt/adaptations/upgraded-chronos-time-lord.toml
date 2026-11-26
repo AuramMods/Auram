@@ -1,0 +1,124 @@
+# Adapt configuration - adaptation:upgraded-chronos-time-lord
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Chrono bottles hold and gather far more time, the time aura is stronger, and potions on you last much longer.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# How many times more time a bottle holds than Time in a Bottle allows.
+# Effect: Higher values store more time per bottle.
+bottleCapacityMultiplier = 3.0
+# How many times faster bottles gather time than with Time in a Bottle.
+# Effect: Higher values fill bottles sooner.
+bottleChargeMultiplier = 2.0
+# Time between two aura pulses, in milliseconds.
+# Effect: Lower values pulse more often at more server cost.
+auraPulseMillis = 2000
+# Aura radius before level scaling, in blocks.
+# Effect: Higher values reach further.
+auraRadiusBase = 7.0
+# Aura radius added per level, in blocks.
+# Effect: Higher values widen the aura at higher levels.
+auraRadiusPerLevel = 1.5
+# Blocks sampled per pulse before level scaling.
+# Effect: Higher values accelerate more blocks each pulse.
+auraSamplesBase = 6
+# Blocks sampled per pulse added per level.
+# Effect: Higher values reward higher levels more.
+auraSamplesPerLevel = 2
+# Chance a sampled crop grows a stage, before level scaling.
+# Effect: Higher values grow crops faster.
+auraGrowChanceBase = 0.45
+# Crop growth chance added per level.
+# Effect: Higher values reward higher levels more.
+auraGrowChancePerLevel = 0.1
+# Share of a cook or brew skipped per hit, before level scaling.
+# Effect: Higher values finish cooking sooner; capped at 0.9.
+auraCookBoostBase = 0.35
+# Cook and brew share added per level.
+# Effect: Higher values reward higher levels more.
+auraCookBoostPerLevel = 0.1
+# Beneficial potion extension before level scaling, as a share of its duration.
+# Effect: Higher values make potions last longer.
+potionExtensionBase = 0.5
+# Potion extension added per level.
+# Effect: Higher values reward higher levels more.
+potionExtensionPerLevel = 0.25
+# Highest potion extension at any level, as a share of its duration.
+# Effect: Caps the extension.
+potionMaxExtension = 1.5
+# Most ticks added to one potion.
+# Effect: Higher values let long potions gain more.
+potionMaxBonusTicks = 12000
+# Shortest potion that gets extended, in ticks.
+# Effect: Higher values ignore short pulsing effects.
+potionMinimumDurationTicks = 60
+# Longest potion that gets extended, in ticks.
+# Effect: Lower values leave near-permanent effects alone.
+potionMaximumBaseDurationTicks = 72000
+# How long destroyed blocks can still be restored at level 1, in seconds.
+# Effect: Higher values let older damage be restored.
+restoreWindowSecondsLevel1 = 60.0
+# How long destroyed blocks can still be restored at level 2, in seconds.
+# Effect: Higher values let older damage be restored.
+restoreWindowSecondsLevel2 = 120.0
+# How long destroyed blocks can still be restored at level 3, in seconds.
+# Effect: Higher values let older damage be restored.
+restoreWindowSecondsLevel3 = 300.0
+# Restoration radius before level scaling, in blocks.
+# Effect: Higher values restore a wider area.
+restoreRadiusBase = 4.0
+# Restoration radius added per level, in blocks.
+# Effect: Higher values widen restoration at higher levels.
+restoreRadiusPerLevel = 2.0
+# Stored bottle seconds one restoration charge costs.
+# Effect: Higher values make restoration drain bottles faster.
+restoreChargeSeconds = 60.0
+# Blocks one restoration charge restores.
+# Effect: Higher values make restoration cheaper.
+restoreBlocksPerCharge = 16
+# Blocks destroyed within this distance of a holder are remembered, in blocks.
+# Effect: Higher values remember damage further away at more server cost.
+restoreRecordRadius = 32.0
+# Most destroyed blocks remembered across the server.
+# Effect: Higher values remember more at more memory cost.
+restoreMaxLoggedBlocks = 20000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

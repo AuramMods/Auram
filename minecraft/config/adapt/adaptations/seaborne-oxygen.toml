@@ -1,7 +1,7 @@
 # Adapt configuration - adaptation:seaborne-oxygen
 # This file is canonicalized on load; comments and new keys may update automatically.
 #
-# Hold more oxygen underwater.
+# Hold more oxygen underwater, and see in the dark while submerged from level 2.
 
 # Enables or disables this feature.
 # Effect: Set to false to disable behavior without uninstalling files.
@@ -28,8 +28,12 @@ initialCost = 1
 # Adaptations the player must already have learned, each written as adaptationId:level.
 # Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
 requires = []
-# Controls Air per level tics for the seaborne-oxygen adaptation.
-airPerLevelTics = 15
+# Air ticks saved per level out of every 75 ticks underwater.
+# Effect: Higher values stretch your breath further; 19 per level never runs out at level 4.
+airPerLevelTics = 19
+# First level that also gives Night Vision while your head is underwater.
+# Effect: Higher values make the sight a later reward; 0 gives it at every level.
+nightVisionFromLevel = 2
 
 # Server defaults and permitted choices for this adaptation's player preferences.
 # Effect: Each registered control can be locked or restricted without changing another player's saved choices.

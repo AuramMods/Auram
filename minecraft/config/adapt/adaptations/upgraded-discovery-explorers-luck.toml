@@ -1,0 +1,106 @@
+# Adapt configuration - adaptation:upgraded-discovery-explorers-luck
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# First visits, first kills and relics pay more and bank permanent bonuses.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Payout multiplier on every discovery before level scaling.
+# Effect: Higher values make every discovery pay more.
+payoutBase = 1.25
+# Payout multiplier added per level.
+# Effect: Higher values reward higher levels more.
+payoutPerLevel = 0.25
+# Permanent payout bonus banked by each discovery.
+# Effect: Higher values reach the bank cap in fewer discoveries.
+bankPerDiscovery = 0.01
+# Largest permanent payout bonus the bank holds.
+# Effect: Higher values let long explorations pay far more.
+maxBank = 0.5
+# First-visit XP at level 1.
+# Effect: Higher values make new biomes and structures pay more.
+visitXpBase = 40.0
+# First-visit XP gained across levels.
+# Effect: Higher values reward higher levels more.
+visitXpFactor = 160.0
+# Multiplier on first visits to a structure type instead of a biome.
+# Effect: Higher values make structures pay more than biomes.
+structureXpMultiplier = 2.5
+# First-kill XP at level 1.
+# Effect: Higher values make each new species pay more.
+killXpBase = 120.0
+# First-kill XP gained across levels.
+# Effect: Higher values reward higher levels more.
+killXpFactor = 240.0
+# Damage banked against a species per kill until its cap.
+# Effect: Higher values reach the cap in fewer kills.
+bonusPerKill = 0.25
+# Damage cap per species at level 1.
+# Effect: Higher values raise the banked damage ceiling.
+speciesCapBase = 1.0
+# Damage cap per species gained across levels.
+# Effect: Higher values reward higher levels more.
+speciesCapFactor = 3.0
+# Relic appraisal XP at level 1.
+# Effect: Higher values make relics pay more.
+relicXpBase = 60.0
+# Relic appraisal XP gained across levels.
+# Effect: Higher values reward higher levels more.
+relicXpFactor = 180.0
+# Least XP one appraisal gives a random other skill; clamped to 0-10,000.
+# Effect: Set both bounds to zero to turn the extra payout off.
+randomSkillXpMin = 30.0
+# Most XP one appraisal gives a random other skill; clamped to 0-10,000.
+# Effect: Higher values make the extra payout larger.
+randomSkillXpMax = 90.0
+# Rarity multiplier for music discs.
+# Effect: Higher values pay more for discs.
+discRarityWeight = 1.5
+# Rarity multiplier for heads and skulls.
+# Effect: Higher values pay more for mob heads.
+headRarityWeight = 1.4
+# Rarity multiplier for armor trim templates.
+# Effect: Higher values pay more for trims.
+trimRarityWeight = 1.25
+# Rarity multiplier for pottery sherds.
+# Effect: Higher values pay more for sherds.
+sherdRarityWeight = 1.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
