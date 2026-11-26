@@ -30,11 +30,11 @@ initialCost = 2
 requires = []
 # Throw range in blocks at level 1 before level scaling.
 # Effect: Higher values let digs reach farther mobs.
-rangeBase = 6.0
+rangeBase = 7.0
 # Range in blocks added at maximum level.
 # Effect: Higher values grow the range faster with level.
-rangeFactor = 10.0
-# Damage multiplier at level 0, applied to shovel damage times block heft.
+rangeFactor = 25.0
+# Damage multiplier at level 0, applied to the held shovel's attack damage times block heft.
 # Effect: Higher values make every throw hit harder.
 damageMultiplierBase = 0.8
 # Damage multiplier added at maximum level.
@@ -49,15 +49,12 @@ sweetSpotBlocks = 8.0
 # Share of full damage a point-blank throw deals.
 # Effect: Higher values make close throws closer to full damage.
 closeFactor = 0.6
-# Milliseconds between throws at level 0.
+# Milliseconds between throws at level 1.
 # Effect: Higher values slow how often digs can throw.
-cooldownMillisBase = 3000.0
-# Milliseconds of cooldown removed at maximum level.
-# Effect: Higher values let high levels throw more often.
-cooldownMillisLevelReduction = 1800.0
-# Shortest cooldown in milliseconds at any level.
-# Effect: Higher values keep throws rare even at high levels.
-minCooldownMillis = 600.0
+cooldownMillisAtLevelOne = 2000.0
+# Milliseconds between throws at the top level; levels between are linear.
+# Effect: Lower values let high levels throw more often.
+cooldownMillisAtTopLevel = 500.0
 # Blocks per tick a flung block travels, before its arc.
 # Effect: Higher values give flatter, faster throws.
 throwSpeed = 1.1

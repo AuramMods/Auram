@@ -61,6 +61,12 @@ targetMemoryMillis = 20000
 # Seaborne XP for each strike on a natural mob; strikes on players pay none.
 # Effect: Higher values level Seaborne faster in storms.
 xpPerStrike = 4.0
+# Whether strikes land on mobs that are not hostile, such as animals, villagers and mobs that only fight back.
+# Effect: True lets lightning hit passive and neutral mobs.
+strikePassiveMobs = false
+# Whether strikes land on other players where PvP is allowed.
+# Effect: True lets lightning hit players.
+strikePlayers = false
 
 # Server defaults and permitted choices for this adaptation's player preferences.
 # Effect: Each registered control can be locked or restricted without changing another player's saved choices.

@@ -30,10 +30,10 @@ initialCost = 2
 requires = []
 # Throw range in blocks at level 0.
 # Effect: Higher values let throws reach farther targets.
-rangeBase = 4.0
+rangeBase = 4.25
 # Range in blocks added at maximum level.
 # Effect: Higher values grow the range faster with level.
-rangeFactor = 10.0
+rangeFactor = 23.75
 # Damage per point of block heft at level 0.
 # Effect: Higher values make every block hit harder.
 damageMultiplierBase = 0.9
@@ -67,6 +67,9 @@ maxKnockback = 0.6
 # Blocks per tick a thrown block travels, before its arc.
 # Effect: Higher values give flatter, faster throws.
 throwSpeed = 1.2
+# Whether thrown blocks may be aimed at and hit other players where PvP is allowed.
+# Effect: True lets blocks be thrown at players.
+hitPlayers = false
 # Ticks a thrown block may fly past its planned arc before it drops on its own.
 # Effect: Higher values let missed throws fall farther.
 flightGraceTicks = 20
