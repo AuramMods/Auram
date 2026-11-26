@@ -24,7 +24,10 @@
 #define diagonal3_old(m) vec3((m)[0].x, (m)[1].y, m[2].z)
 #define  projMAD_old(m, v) (diagonal3_old(m) * (v) + (m)[3].xyz)
 
+// TAA reads the same history texture later in this composite chain.
+#if defined TAA || (defined Specular_Reflections && defined Screen_Space_Reflections) || indirect_effect == 4
 const bool colortex5MipmapEnabled = true;
+#endif
 
 #ifdef OVERWORLD_SHADER
 	const bool shadowHardwareFiltering = true;
