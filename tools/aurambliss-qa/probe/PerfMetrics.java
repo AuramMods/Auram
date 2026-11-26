@@ -1,5 +1,6 @@
 package dev.auram.bliss.qa;
 
+import java.lang.management.ManagementFactory;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +11,16 @@ import net.minecraft.client.Minecraft;
 import static org.lwjgl.opengl.GL41C.*;
 
 public final class PerfMetrics {
-    static final int FRAME_COUNT = 90;
+    static final int FRAME_COUNT = Integer.getInteger("auram.bliss.qa.frames", 90);
+    private static final java.lang.management.ThreadMXBean THREADS = ManagementFactory.getThreadMXBean();
     private static final ArrayDeque<Integer> pending = new ArrayDeque<>();
     private static final ArrayDeque<Integer> idle = new ArrayDeque<>();
     private static final List<Long> frameTimes = new ArrayList<>();
+    private static final List<Long> cpuTimes = new ArrayList<>();
     private static final List<Long> volumeTimes = new ArrayList<>();
     private static boolean measuring;
     private static long previousFrame;
+    private static long previousCpu;
     private static long heapHighWater;
     private static int volumeQuery;
     private static PassMetrics.Span profileVolume;
@@ -31,6 +35,7 @@ public final class PerfMetrics {
             if (Files.deleteIfExists(Path.of("bliss-profile-passes"))) PassMetrics.start();
             measuring = true;
             previousFrame = now;
+            previousCpu = THREADS.getCurrentThreadCpuTime();
             heapHighWater = 0;
             for (int i = 0; i < 8; i++) idle.add(glGenQueries());
             Path requested = Path.of("bliss-perf-motion");
@@ -47,17 +52,21 @@ public final class PerfMetrics {
         }
         frameTimes.add(now - previousFrame);
         previousFrame = now;
+        long cpu = THREADS.getCurrentThreadCpuTime();
+        if (cpu >= 0 && previousCpu >= 0) cpuTimes.add(cpu - previousCpu);
+        previousCpu = cpu;
         Runtime heap = Runtime.getRuntime();
         heapHighWater = Math.max(heapHighWater, heap.totalMemory() - heap.freeMemory());
         if (frameTimes.size() >= FRAME_COUNT) {
             System.out.printf(java.util.Locale.ROOT,
-                    "QA_EVT {\"event\":\"frame_timing\",\"status\":\"info\",\"context\":{\"frame\":%s,\"lpvGpu\":%s,\"heapHighWaterBytes\":%d,\"movingCamera\":%b,\"gl\":%d}}%n",
-                    quantiles(frameTimes), quantiles(volumeTimes), heapHighWater, motion != null, glGetError());
+                    "QA_EVT {\"event\":\"frame_timing\",\"status\":\"info\",\"context\":{\"frame\":%s,\"renderThreadCpu\":%s,\"lpvGpu\":%s,\"heapHighWaterBytes\":%d,\"movingCamera\":%b,\"gl\":%d}}%n",
+                    quantiles(frameTimes), quantiles(cpuTimes), quantiles(volumeTimes), heapHighWater, motion != null, glGetError());
             measuring = false;
             motion = null;
             while (!idle.isEmpty()) glDeleteQueries(idle.remove());
             while (!pending.isEmpty()) glDeleteQueries(pending.remove());
             frameTimes.clear();
+            cpuTimes.clear();
             volumeTimes.clear();
         } else if (motion != null) {
             motion.advance((float) frameTimes.size() / (FRAME_COUNT - 1));

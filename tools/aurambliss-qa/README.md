@@ -47,6 +47,10 @@ Add `--profile-passes --max-fps 260 --size 1280x720 --seconds 25` to the replay 
 
 Sort the named passes by GPU median and compare median and p95 frame times across repeated baseline and candidate runs. The draw names match the program files in the pack's dimension directory. For example, AuramBliss's `draw/composite3` runs the volumetric fog and cloud code included by `world0/composite3.fsh`. Compare screenshots from the same pose, time, and weather to verify that an optimization preserves the effect. A feature toggle can estimate a pass's cost.
 
+Use `--no-dh` and repeat `--mod /path/to/mod.jar` for Neo-Voxy, AuramCore and, on macOS, GLA and its Forge loader dependencies. Use `--config /path/to/voxy-config.json` to copy a fixed Voxy configuration. The probe reports render-thread CPU time with frame intervals. Named GPU stages include LPV occupancy replay and Neo-Voxy shadows when those features run.
+
+For repeated same-client measurements, add `measure label` or `profile label` to a lifecycle file. The runner waits for the frame sample, and `profile` also waits for the per-pass GPU sample. Both write their results to `benchmarks.json`. Set `--java-option=-Dauram.bliss.qa.frames=180` to increase each sample from 90 to 180 frames. Use `light-volume label` to save the RGBA8 light texture, including its handheld palette, to `minecraft/lpv-label.rgba8`. Use `capture label` for the matching screenshot.
+
 ## Windows shader source audit
 
 Prepare the NVIDIA, AMD and Intel matrix and generate transformed GLSL on any supported host with Oculus 1.8.0. The test builds actual shader-pack programs with a Windows OpenGL 4.6 environment, then passes the resulting stages to `glslangValidator` for linking. Use a disposable client with the test probe from above.

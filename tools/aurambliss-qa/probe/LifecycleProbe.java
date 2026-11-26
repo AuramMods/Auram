@@ -38,6 +38,13 @@ abstract class LifecycleProbe {
                     Iris.reload();
                 }
                 case "shader-reload" -> Iris.reload();
+                case "lpv-backend" -> {
+                    if (!argument.equals("compute") && !argument.equals("raster")) {
+                        throw new IllegalArgumentException("Choose the compute or raster LPV backend");
+                    }
+                    System.setProperty("auramphoton.bliss.compute", Boolean.toString(argument.equals("compute")));
+                    Iris.reload();
+                }
                 case "option" -> {
                     String[] option = argument.split("=", 2);
                     Iris.getShaderPackOptionQueue().put(option[0], option[1]);
