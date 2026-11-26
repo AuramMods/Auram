@@ -316,12 +316,11 @@ public final class RasterLightVolume implements AutoCloseable {
         return active != null && active.capturingBlissEntityBatch;
     }
 
-    public static void replayBlissEntities(int count, int type, int position, int entity, Matrix4fc modelView) {
-        active.replayEntities(count, type, new EntityAttributes(position, entity), modelView);
+    public static void replayBlissEntities(int shader, int count, int type, int position, int entity, Matrix4fc modelView) {
+        active.replayEntities(shader, count, type, new EntityAttributes(position, entity), modelView);
     }
 
-    private void replayEntities(int count, int type, EntityAttributes attributes, Matrix4fc modelView) {
-        int shader = glGetInteger(GL_CURRENT_PROGRAM);
+    private void replayEntities(int shader, int count, int type, EntityAttributes attributes, Matrix4fc modelView) {
         if (shader == 0) return;
 
         EntityReplay replay = entityPrograms.computeIfAbsent(attributes, this::linkEntityReplay);
@@ -338,7 +337,7 @@ public final class RasterLightVolume implements AutoCloseable {
         }
 
         int activeUnit = glGetInteger(GL_ACTIVE_TEXTURE);
-        try (DrawState draw = new DrawState(0, true);
+        try (DrawState draw = new DrawState(0, true, shader);
                 TextureBinding material = TextureBinding.bind(0, GL_TEXTURE_2D, GL_TEXTURE_BINDING_2D, palette.texture())) {
             draw.bind(occupancy.framebuffer(), replay.program(), atlasWidth, atlasHeight);
             glDrawElements(GL_POINTS, count, type, 0L);

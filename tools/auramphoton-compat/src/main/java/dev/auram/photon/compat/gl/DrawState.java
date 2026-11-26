@@ -13,7 +13,7 @@ public final class DrawState implements AutoCloseable {
     };
 
     private final int framebuffer = glGetInteger(GL_DRAW_FRAMEBUFFER_BINDING);
-    private final int program = glGetInteger(GL_CURRENT_PROGRAM);
+    private final int program;
     private final int vao;
     private final float[] viewport = new float[4];
     private final boolean[] colorMask = new boolean[4];
@@ -21,6 +21,11 @@ public final class DrawState implements AutoCloseable {
     private final boolean changedPointSize;
 
     public DrawState(int vao, boolean points) {
+        this(vao, points, glGetInteger(GL_CURRENT_PROGRAM));
+    }
+
+    public DrawState(int vao, boolean points, int program) {
+        this.program = program;
         this.vao = vao == 0 ? -1 : glGetInteger(GL_VERTEX_ARRAY_BINDING);
         changedPointSize = points && !glIsEnabled(GL_PROGRAM_POINT_SIZE);
         glGetFloati_v(GL_VIEWPORT, 0, viewport);

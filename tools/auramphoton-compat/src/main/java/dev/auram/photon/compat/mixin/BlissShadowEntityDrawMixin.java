@@ -32,7 +32,9 @@ abstract class BlissShadowEntityDrawMixin {
         if (entityIndex < 0) return;
         for (int index = 0; index < elements.size(); index++) {
             if (elements.get(index).m_86048_() == VertexFormatElement.Usage.POSITION) {
-                RasterLightVolume.replayBlissEntities(f_166863_, m_231231_().f_166923_, index, entityIndex, modelView);
+                // VertexBuffer has already applied this shader. Querying GL_CURRENT_PROGRAM here raises an error on GLA.
+                RasterLightVolume.replayBlissEntities(shader.m_108943_(), f_166863_,
+                        m_231231_().f_166923_, index, entityIndex, modelView);
                 return;
             }
         }
