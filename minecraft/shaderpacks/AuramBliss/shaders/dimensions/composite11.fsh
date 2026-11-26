@@ -8,7 +8,10 @@ flat varying vec4 exposure;
 flat varying vec2 rodExposureDepth;
 varying vec2 texcoord;
 
+// Only bokeh uses higher levels of the full-resolution scene color.
+#if DOF_QUALITY >= 0 && DOF_QUALITY < 5
 const bool colortex5MipmapEnabled = true;
+#endif
 // uniform sampler2D colortex4;
 uniform sampler2D colortex5;
 uniform sampler2D colortex3;
