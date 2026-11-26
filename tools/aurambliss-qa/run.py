@@ -21,6 +21,11 @@ RENDER_ERROR = re.compile(
     r"Failed to create shader rendering pipeline|A fatal error has been detected|"
     r"MixinTransformerError|Mod Loading has failed|QA_COMMAND_ERROR"
 )
+READBACK_ACTIONS = {
+    "light-volume": ("bliss-read-light", "light_readback"),
+    "packed-depth": ("bliss-read-packed-depth", "packed_depth_readback"),
+    "rf-volume": ("bliss-read-rf-volume", "rf_volume_readback"),
+}
 
 
 def parse_args():
@@ -260,15 +265,17 @@ def observe(args, command, work, game):
                     if step_index < len(steps):
                         step = steps[step_index]
                         action, _, label = step.partition(" ")
-                        if action in ("measure", "profile", "light-volume"):
+                        readback = READBACK_ACTIONS.get(action)
+                        if readback or action in ("measure", "profile"):
                             label, _, motion = label.partition(" ")
                             events = read_events(trace)
                             if not step_started and time.monotonic() >= next_step_at:
                                 event_count = len(events)
-                                if action == "light-volume":
-                                    request = game / "bliss-read-light.pending"
+                                if readback:
+                                    marker = game / readback[0]
+                                    request = marker.with_suffix(".pending")
                                     request.write_text(label)
-                                    request.replace(game / "bliss-read-light")
+                                    request.replace(marker)
                                 else:
                                     if motion:
                                         (game / "bliss-perf-motion").write_text(motion)
@@ -277,7 +284,7 @@ def observe(args, command, work, game):
                                     (game / "bliss-read-perf").touch()
                                 step_started = True
                             elif step_started:
-                                expected = {"light_readback"} if action == "light-volume" else {"frame_timing"}
+                                expected = {readback[1]} if readback else {"frame_timing"}
                                 if action == "profile":
                                     expected.add("render_pass_timing")
                                 results = events[event_count:]
@@ -316,6 +323,9 @@ def observe(args, command, work, game):
                         time.sleep(0.5)
                         continue
                     if steps:
+                        if time.monotonic() < next_step_at:
+                            time.sleep(0.5)
+                            continue
                         (work / "lifecycle.log").write_text("\n".join(line for line in trace.splitlines()
                             if line.startswith(("QA_STATE ", "QA_COMMAND "))) + "\n")
                     if args.readback:

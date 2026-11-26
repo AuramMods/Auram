@@ -53,6 +53,8 @@ For repeated same-client measurements, add `measure label` or `profile label` to
 
 Append `dx,dz,yaw` to a measurement for a repeatable camera move. Reset the player's pose before each repeated path. In the disposable Overworld fixture, `rf-routes count` reports bent routes through AuramCore's RF API at 100 million RF/t, starting near `33 75 34`. Use `rf-routes 0` to stop reporting those routes.
 
+After the routes have appeared, use `freeze-shader-time 37.25` to hold shader animation and the uploaded RF circuit phases across matched captures. Resume animation with `freeze-shader-time off` before timing or changing routes. Use `rf-volume label` to sample active RF cells and face rates, and `packed-depth label` to sample the packed depth format, LOD coverage, and depth checksum.
+
 ## Windows shader source audit
 
 Prepare the NVIDIA, AMD and Intel matrix and generate transformed GLSL on any supported host with Oculus 1.8.0. The test builds actual shader-pack programs with a Windows OpenGL 4.6 environment, then passes the resulting stages to `glslangValidator` for linking. Use a disposable client with the test probe from above.

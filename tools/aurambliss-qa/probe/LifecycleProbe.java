@@ -2,6 +2,7 @@ package dev.auram.bliss.test;
 
 import dev.auram.bliss.qa.SceneChecks;
 import dev.auram.bliss.qa.RfFixture;
+import dev.auram.bliss.qa.VisualClock;
 import dev.auram.bliss.qa.WindowsShaders;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -39,6 +40,7 @@ abstract class LifecycleProbe {
                     Iris.reload();
                 }
                 case "shader-reload" -> Iris.reload();
+                case "freeze-shader-time" -> VisualClock.freeze(argument);
                 case "lpv-backend" -> {
                     if (!argument.equals("compute") && !argument.equals("raster")) {
                         throw new IllegalArgumentException("Choose the compute or raster LPV backend");

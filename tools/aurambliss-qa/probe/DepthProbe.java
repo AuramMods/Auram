@@ -2,6 +2,7 @@ package dev.auram.bliss.test;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.zip.CRC32;
 import net.irisshaders.iris.Iris;
 import net.irisshaders.iris.compat.dh.DHCompat;
 import net.irisshaders.iris.pipeline.IrisRenderingPipeline;
@@ -22,6 +23,7 @@ abstract class DepthProbe {
 
     @Inject(method = "finalizeLevelRendering", at = @At("TAIL"))
     private void sampleDepths(CallbackInfo callback) throws Exception {
+        if (Files.deleteIfExists(Path.of("bliss-read-packed-depth"))) samplePackedDepth();
         Path request = Path.of("bliss-read-depth");
         if (!Files.exists(request)) return;
         DHCompat dh = getDHCompat();
@@ -79,11 +81,55 @@ abstract class DepthProbe {
         }
     }
 
+    private void samplePackedDepth() {
+        RenderTarget packed = renderTargets.get(12);
+        if (packed == null) throw new IllegalStateException("Bliss did not allocate packed depth");
+        int binding = glGetInteger(GL_TEXTURE_BINDING_2D);
+        int buffer = glGetInteger(GL_PIXEL_PACK_BUFFER_BINDING);
+        int[] fields = {GL_PACK_ALIGNMENT, GL_PACK_ROW_LENGTH, GL_PACK_SKIP_ROWS, GL_PACK_SKIP_PIXELS};
+        int[] previous = new int[fields.length];
+        for (int i = 0; i < fields.length; i++) {
+            previous[i] = glGetInteger(fields[i]);
+            glPixelStorei(fields[i], i == 0 ? 1 : 0);
+        }
+        glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
+        try {
+            StringBuilder targets = new StringBuilder();
+            for (int texture : new int[] {packed.getMainTexture(), packed.getAltTexture()}) {
+                glBindTexture(GL_TEXTURE_2D, texture);
+                int width = glGetTexLevelParameteri(GL_TEXTURE_2D, 0, GL_TEXTURE_WIDTH);
+                int height = glGetTexLevelParameteri(GL_TEXTURE_2D, 0, GL_TEXTURE_HEIGHT);
+                int format = glGetTexLevelParameteri(GL_TEXTURE_2D, 0, GL_TEXTURE_INTERNAL_FORMAT);
+                float[] pixels = read(texture, width, height, true);
+                long opaque = 0, front = 0;
+                var depth = new CRC32();
+                for (int i = 0; i < pixels.length; i += 4) {
+                    if (pixels[i + 1] > 0 && pixels[i + 1] < 1) opaque++;
+                    if (pixels[i + 2] > 0 && pixels[i + 2] < 1) front++;
+                    for (int channel = 0; channel < 3; channel++) {
+                        int bits = Float.floatToRawIntBits(pixels[i + channel]);
+                        for (int shift = 0; shift < 32; shift += 8) depth.update(bits >>> shift);
+                    }
+                }
+                if (!targets.isEmpty()) targets.append(',');
+                targets.append(String.format(java.util.Locale.ROOT,
+                        "{\"width\":%d,\"height\":%d,\"format\":%d,\"lodOpaque\":%d,\"lodFront\":%d,\"depthCrc32\":%d}",
+                        width, height, format, opaque, front, depth.getValue()));
+            }
+            System.out.printf("QA_EVT {\"event\":\"packed_depth_readback\",\"status\":\"info\",\"context\":{\"targets\":[%s],\"gl\":%d}}%n",
+                    targets, glGetError());
+        } finally {
+            glBindTexture(GL_TEXTURE_2D, binding);
+            glBindBuffer(GL_PIXEL_PACK_BUFFER, buffer);
+            for (int i = 0; i < fields.length; i++) glPixelStorei(fields[i], previous[i]);
+        }
+    }
+
     private static float[] read(int texture, int width, int height, boolean color) {
         glBindTexture(GL_TEXTURE_2D, texture);
         if (glGetTexLevelParameteri(GL_TEXTURE_2D, 0, GL_TEXTURE_WIDTH) != width
                 || glGetTexLevelParameteri(GL_TEXTURE_2D, 0, GL_TEXTURE_HEIGHT) != height) {
-            throw new IllegalStateException("Texture does not match the DH depth size: " + texture);
+            throw new IllegalStateException("Texture does not match the requested depth size: " + texture);
         }
         float[] data = new float[Math.multiplyExact(width * height, color ? 4 : 1)];
         glGetTexImage(GL_TEXTURE_2D, 0, color ? GL_RGBA : GL_DEPTH_COMPONENT, GL_FLOAT, data);
