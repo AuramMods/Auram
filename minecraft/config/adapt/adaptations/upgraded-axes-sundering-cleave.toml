@@ -1,0 +1,110 @@
+# Adapt configuration - adaptation:upgraded-axes-sundering-cleave
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Axe swings strike everything in a frontal arc and shred armor on every target hit.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Exclude passive and neutral mobs from the arc and its shred.
+# Effect: When enabled, protected mobs are skipped. The struck target is unchanged.
+ignorePassiveMobs = false
+# Half the arc width in degrees before level scaling.
+# Effect: Higher values widen the arc.
+halfArcDegreesBase = 45.0
+# Half-arc degrees added per level.
+# Effect: Higher values widen the arc faster with level.
+halfArcDegreesPerLevel = 10.0
+# Arc reach in blocks around the struck target.
+# Effect: Higher values reach enemies farther out.
+radius = 4.0
+# Most extra targets one swing can hit.
+# Effect: Lower values cap damage and work in large crowds.
+maxTargets = 16
+# Fraction of the swing's damage dealt to each arc target, before level scaling.
+# Effect: Higher values make the arc hit harder.
+damageShareBase = 0.45
+# Damage fraction added per level.
+# Effect: Higher values reward higher levels more.
+damageSharePerLevel = 0.15
+# Armor points removed per stack before level scaling.
+# Effect: Higher values strip more armor per hit.
+shredPerStackBase = 1.5
+# Armor points per stack added per level.
+# Effect: Higher values reward higher levels more.
+shredPerStackPerLevel = 0.75
+# Fraction of each stack's armor shred also removed from armor toughness.
+# Effect: Higher values bite harder against heavy armor; 0 leaves toughness alone.
+toughnessShredPerStackRatio = 0.5
+# Shred stacks a target can carry, before adding the level.
+# Effect: Higher values let repeated swings strip more armor.
+maxStacksBase = 2
+# Ticks a shred layer lasts after the last stack.
+# Effect: Higher values keep armor down longer between swings.
+shredDurationTicks = 120
+# Axe durability spent when the arc hits something.
+# Effect: Higher values wear the axe faster.
+durabilityCost = 1
+# Skill XP for each arc target hit.
+# Effect: Higher values reward fighting crowds.
+xpPerTarget = 4.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.ignore-passive]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.player-targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

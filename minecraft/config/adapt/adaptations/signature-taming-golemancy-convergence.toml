@@ -1,0 +1,79 @@
+# Adapt configuration - adaptation:signature-taming-golemancy-convergence
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Your golems count as pets for Alpha, Blood Bond and the Beastmaster's Whistle.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Golem damage and health bonus inside Alpha's aura at level 1. 0.15 is 15%.
+# Effect: Higher values make golems in the pack stronger.
+buffAtFirstLevel = 0.15
+# Golem damage and health bonus inside Alpha's aura at the top level.
+# Effect: Higher values make golems in the pack stronger.
+buffAtTopLevel = 0.35
+# Share of each hit you take moved to your golems at level 1, with Blood Bond, at most Blood Bond's own share.
+# Effect: Higher values move more of each hit onto golems.
+shareAtFirstLevel = 0.1
+# Share of each hit you take moved to your golems at the top level, with Blood Bond, at most Blood Bond's own share.
+# Effect: Higher values move more of each hit onto golems.
+shareAtTopLevel = 0.2
+# Most golems that share one hit.
+# Effect: Higher values spread each hit thinner.
+maxSharers = 2
+# Share of its maximum health a golem keeps before it stops sharing. 0.25 is 25%.
+# Effect: Higher values keep golems healthier.
+golemHealthFloor = 0.25
+# Smallest hit that is shared.
+# Effect: Higher values ignore chip damage.
+minimumShared = 1.0
+# Reach of the whistle's command and recall at level 1, in blocks.
+# Effect: Higher values command golems farther away.
+whistleRangeAtFirstLevel = 16.0
+# Reach of the whistle's command and recall at the top level, in blocks.
+# Effect: Higher values command golems farther away.
+whistleRangeAtTopLevel = 32.0
+# How long a whistled golem attacks before it returns to its work, in milliseconds.
+# Effect: Higher values keep golems on the target longer.
+commandMillis = 15000
+# Cooldown between two whistle commands to golems, in milliseconds.
+# Effect: Higher values space commands further apart.
+cooldownMillis = 2000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,7 +1,7 @@
 # Adapt configuration - adaptation:seaborne-pressure-diver
 # This file is canonicalized on load; comments and new keys may update automatically.
 #
-# Gain absorption hearts and depth-scaling protection underwater while partially countering mining fatigue.
+# Absorption hearts build while you are in water or rain, up to a cap; any hit pauses the ward and it drains away soon after you dry off.
 
 # Enables or disables this feature.
 # Effect: Set to false to disable behavior without uninstalling files.
@@ -21,64 +21,40 @@ baseCost = 3
 costFactor = 0.6
 # Maximum level a player can reach for this adaptation.
 # Effect: Higher values allow more levels; lower values cap progression sooner.
-maxLevel = 4
+maxLevel = 5
 # Knowledge cost required to purchase level 1.
 # Effect: Higher values make unlocking the first level more expensive.
 initialCost = 2
 # Adaptations the player must already have learned, each written as adaptationId:level.
 # Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
 requires = []
-# Required eye depth below sea level in blocks at the lowest adaptation level.
-# Effect: Higher values require a deeper dive before any Pressure Diver buff activates.
-depthThresholdBase = 10.0
-# Blocks removed from the activation depth requirement across adaptation levels.
-# Effect: Higher values let experienced divers activate the buff closer to the surface; the threshold floors at 2 blocks.
-depthThresholdFactor = 6.0
-# Required eye depth below sea level for the stronger Resistance tier at the lowest level.
-# Effect: Higher values reserve Resistance II for deeper water.
-deepThresholdBase = 18.0
-# Blocks removed from the stronger Resistance tier requirement across levels.
-# Effect: Higher values make the deep tier activate closer to the surface; the threshold floors at 4 blocks.
-deepThresholdFactor = 8.0
-# Incoming damage fraction removed while Pressure Diver is active at the lowest level.
-# Effect: 0.12 removes 12% of incoming damage before the rolling Resistance effect is considered.
-damageReductionBase = 0.12
-# Additional incoming damage reduction gained across adaptation levels.
-# Effect: Higher values scale the depth protection more strongly toward max level.
-damageReductionFactor = 0.26
-# Maximum incoming damage reduction fraction from Pressure Diver itself.
-# Effect: Caps the direct reduction independently of the Resistance effect.
-maxDamageReduction = 0.45
-# Absorption health points granted when Pressure Diver activates at level 1; two health points display as one heart.
-# Effect: Higher values give low-level divers more temporary bonus hearts without refilling consumed absorption during refreshes.
-absorptionHealthBase = 4.0
-# Additional absorption health points granted by maximum adaptation level.
-# Effect: Higher values increase Pressure Diver's visible bonus-heart capacity as it levels.
-absorptionHealthFactor = 8.0
-# Lowest-level per-tick Mining Fatigue trim chance represented by the deterministic speed counter.
-# Effect: Higher values offset more of Mining Fatigue II and above; Mining Fatigue I remains the floor.
-fatigueTrimChanceBase = 0.2
-# Additional Mining Fatigue trim chance gained across levels.
-# Effect: Higher values make the submerged mining-speed counter stronger at higher levels.
-fatigueTrimChanceFactor = 0.45
-# Lowest-level Mining Fatigue amplifier steps trimmed by each conceptual proc.
-# Effect: Higher values counter stronger Mining Fatigue more aggressively.
-fatigueTrimAmountBase = 1.0
-# Additional Mining Fatigue amplifier trim gained across levels.
-# Effect: Higher values increase high-level fatigue suppression.
-fatigueTrimAmountFactor = 1.0
-# Duration in ticks of each refreshed Resistance effect.
-# Effect: Higher values give more refresh tolerance; the runtime checks at least every 15 ticks while active.
-effectTicks = 60
-# Duration in ticks of each refreshed submerged mining-speed counter while Mining Fatigue is present.
-# Effect: Higher values tolerate refresh delays; zero disables fatigue countering.
-fatigueCounterDurationTicks = 80
-# Seaborne XP granted on each active depth pulse.
-# Effect: Higher values level Seaborne faster while Pressure Diver stays active.
-xpPerDepthPulse = 6.0
-# Minimum milliseconds between active-depth XP pulses.
-# Effect: Higher values reduce XP frequency without changing the defensive buffs.
-xpPulseCooldownMillis = 3000
+# Most absorption health the ward holds at level 1; two health points show as one heart.
+# Effect: Higher values soak more damage.
+capAtLevelOne = 4.0
+# Most absorption health the ward holds at the top level.
+# Effect: Higher values soak more damage at the top level.
+capAtTopLevel = 12.0
+# Absorption health the ward gains each second while you are wet, at level 1.
+# Effect: Higher values refill the ward faster.
+gainPerSecondAtLevelOne = 0.5
+# Absorption health the ward gains each second while you are wet, at the top level.
+# Effect: Higher values refill the ward faster at the top level.
+gainPerSecondAtTopLevel = 1.0
+# Time the ward stops building after you take damage, at level 1, in milliseconds.
+# Effect: Higher values keep the ward from refilling during a fight.
+pauseMillisAtLevelOne = 6000.0
+# Time the ward stops building after you take damage, at the top level, in milliseconds.
+# Effect: Lower values let the ward refill sooner after a hit.
+pauseMillisAtTopLevel = 4000.0
+# Time the ward keeps its hearts after you dry off, at level 1, in milliseconds.
+# Effect: Higher values let you carry the ward out of the water.
+lingerMillisAtLevelOne = 2000.0
+# Time the ward keeps its hearts after you dry off, at the top level, in milliseconds.
+# Effect: Higher values let you carry the ward farther at the top level.
+lingerMillisAtTopLevel = 6000.0
+# Absorption health the ward loses each second once you are dry and the linger time is over.
+# Effect: Higher values drain the ward faster on land.
+drainPerSecond = 2.0
 
 # Server defaults and permitted choices for this adaptation's player preferences.
 # Effect: Each registered control can be locked or restricted without changing another player's saved choices.

@@ -1,0 +1,94 @@
+# Adapt configuration - adaptation:upgraded-blocking-tempered-aegis
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Blocked hits from real foes repair your shield and armor, axes no longer disable your shield, and a sprint-jump with the shield up slams a foe.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Shield durability restored per blocked hit from a natural mob or a player before level scaling, never more than the hit wore off.
+# Effect: Higher values keep your shield whole longer.
+shieldRepairBase = 2.0
+# Shield durability restored per blocked hit, added per level.
+# Effect: Higher values reward higher levels more.
+shieldRepairPerLevel = 2.0
+# Armor durability restored per blocked hit before level scaling, from what the shield repair left of the hit's wear.
+# Effect: Higher values keep your armor whole longer.
+armorRepairBase = 1.0
+# Armor durability restored per blocked hit, added per level.
+# Effect: Higher values reward higher levels more.
+armorRepairPerLevel = 1.0
+# Skill XP each time an axe from a natural mob or a player fails to disable your shield.
+# Effect: Higher values reward holding against axes.
+xpOnShrug = 12.0
+# Bash damage before level scaling.
+# Effect: Higher values hit harder.
+bashDamageBase = 1.5
+# Bash damage added per level.
+# Effect: Higher values reward higher levels more.
+bashDamagePerLevel = 1.5
+# Bash cooldown before level scaling, in milliseconds.
+# Effect: Lower values bash more often.
+bashCooldownMillisBase = 7000
+# Milliseconds of bash cooldown removed per level.
+# Effect: Higher values shorten the cooldown at higher levels.
+bashCooldownMillisPerLevel = 1000
+# Shield durability each bash costs.
+# Effect: Higher values wear your shield faster.
+bashDurability = 5
+# How long after sprinting a raised shield in the air still bashes, in milliseconds.
+# Effect: Higher values give more time to raise the shield after the sprint-jump.
+recentSprintWindowMillis = 900
+# Horizontal shove given to the bashed target.
+# Effect: Higher values push it farther.
+bashKnockback = 1.0
+# Upward shove given to the bashed target.
+# Effect: Higher values lift it more.
+bashUpwardKnockback = 0.25
+# Ticks the bashed target is staggered.
+# Effect: Higher values stagger longer.
+bashStaggerTicks = 30
+# Slowness amplifier of the stagger.
+# Effect: Higher values slow the target more.
+bashStaggerAmplifier = 2
+# Skill XP per bash on a natural mob or a player.
+# Effect: Higher values reward bashing.
+xpPerBash = 8.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

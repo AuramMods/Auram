@@ -1,0 +1,105 @@
+# Adapt configuration - adaptation:architect-brickbat
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Punch or swing at a creature with a block in hand to throw one block at it; heavier blocks hit harder.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Throw range in blocks at level 0.
+# Effect: Higher values let throws reach farther targets.
+rangeBase = 4.0
+# Range in blocks added at maximum level.
+# Effect: Higher values grow the range faster with level.
+rangeFactor = 10.0
+# Damage per point of block heft at level 0.
+# Effect: Higher values make every block hit harder.
+damageMultiplierBase = 0.9
+# Damage per point of heft added at maximum level.
+# Effect: Higher values reward leveling with stronger throws.
+damageMultiplierFactor = 0.6
+# Least damage any thrown block deals.
+# Effect: Higher values make soft blocks sting more.
+minDamage = 0.5
+# Most damage one thrown block deals.
+# Effect: Lower values cap obsidian and netherite throws sooner.
+maxDamage = 12.0
+# Wind-up in milliseconds for a weightless block at level 0.
+# Effect: Higher values slow every throw.
+cooldownMillisBase = 700.0
+# Wind-up in milliseconds added per point of block heft.
+# Effect: Higher values slow heavy blocks more than light ones.
+cooldownMillisPerHeft = 260.0
+# Share of the wind-up removed at maximum level.
+# Effect: Higher values let high levels throw more often.
+cooldownLevelReduction = 0.4
+# Heft at which a thrown block starts to knock its target back.
+# Effect: Lower values let lighter blocks shove.
+knockbackHeft = 3.0
+# Knockback speed per point of heft.
+# Effect: Higher values shove targets farther.
+knockbackPerHeft = 0.06
+# Most knockback speed a thrown block adds.
+# Effect: Lower values keep heavy throws from flinging targets.
+maxKnockback = 0.6
+# Blocks per tick a thrown block travels, before its arc.
+# Effect: Higher values give flatter, faster throws.
+throwSpeed = 1.2
+# Ticks a thrown block may fly past its planned arc before it drops on its own.
+# Effect: Higher values let missed throws fall farther.
+flightGraceTicks = 20
+# Most thrown blocks in the air on the server at once.
+# Effect: Lower values cap the server cost of many builders fighting at once.
+maxInFlight = 64
+# XP for each throw that hits a natural mob.
+# Effect: Higher values speed up Architect from fighting with thrown blocks.
+xpPerHit = 3.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.air-throws]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

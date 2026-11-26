@@ -1,0 +1,134 @@
+# Adapt configuration - adaptation:upgraded-tragoul-plague-nova
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Kills burst in a blood nova and launch a seeking lance; poisoned or withered kills spread their affliction.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Exclude passive and neutral mobs from the nova, the plague and the lances.
+# Effect: When enabled, neutral species are never hit by any part of the upgrade.
+ignorePassiveMobs = false
+# Nova radius before level scaling, in blocks.
+# Effect: Higher values hit mobs farther from the corpse.
+novaRadiusBase = 4.0
+# Nova radius added per level, in blocks.
+# Effect: Higher values widen the nova at higher levels; capped at 16.
+novaRadiusPerLevel = 1.5
+# Flat nova damage to every mob hit.
+# Effect: Higher values make every burst hit harder.
+novaBaseDamage = 3.0
+# Share of the corpse's maximum health added to nova damage, before level scaling.
+# Effect: Higher values make tough kills burst harder.
+victimHealthFractionBase = 0.15
+# Corpse health share added per level.
+# Effect: Higher values reward higher levels more.
+victimHealthFractionPerLevel = 0.1
+# Most nova damage dealt to one mob.
+# Effect: Stops boss kills from one-shotting crowds.
+novaMaxDamage = 24.0
+# Most mobs one nova hits; at most 16.
+# Effect: Lower values cap work and damage in crowds.
+novaMaxTargets = 12
+# Time a nova-struck mob cannot burst again, in milliseconds.
+# Effect: Higher values stop chain reactions sooner.
+novaChainSuppressionMillis = 5000
+# Plague spread radius before level scaling, in blocks.
+# Effect: Higher values infect mobs farther from the corpse.
+plagueRadiusBase = 8.0
+# Plague spread radius added per level, in blocks.
+# Effect: Higher values widen the spread at higher levels; capped at 24.
+plagueRadiusPerLevel = 3.0
+# Spread affliction duration before level scaling, in ticks.
+# Effect: Higher values keep infected mobs afflicted longer.
+plagueDurationTicksBase = 100.0
+# Spread affliction duration added per level, in ticks.
+# Effect: Higher values reward higher levels more.
+plagueDurationTicksPerLevel = 40.0
+# Most mobs infected by one death; at most 8.
+# Effect: Lower values cap work per death.
+plagueMaxSpreadTargets = 6
+# Potion amplifier levels added when the affliction spreads.
+# Effect: Higher values make spread poison and wither stronger.
+plagueAmplifierBonus = 1
+# Most generations one affliction can jump through; at most 4.
+# Effect: Caps how far a plague cascades.
+plagueMaxGenerations = 3
+# How long a mob stays marked after your hit, in milliseconds.
+# Effect: Higher values let older poisons still spread on death.
+plagueFreshnessMillis = 15000
+# Lance damage as a multiple of the killing blow.
+# Effect: Higher values make lances hit harder; clamped to 4.
+lanceDamageMultiplier = 1.0
+# Lance damage multiplier while you wear no armor.
+# Effect: Higher values reward fighting unarmored; clamped to 10.
+lanceUnarmoredDamageMultiplier = 3.0
+# Delay before a lance lands, in ticks.
+# Effect: Lower values make lances strike sooner; clamped to 1 to 40.
+lanceSeekerDelay = 10
+# Damage you take when a lance lands.
+# Effect: Higher values make lances cost more health.
+lanceSelfDamage = 1.0
+# Skill XP for each mob a nova hits.
+# Effect: Higher values reward bursting crowds.
+xpPerMobHit = 6.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.ignore-passive]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "UNDEAD", "ARTHROPODS", "NON_PLAYERS"]
+

@@ -1,0 +1,102 @@
+# Adapt configuration - adaptation:upgraded-tragoul-crimson-tide
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Damage you deal heals you, and attackers are drained into your health and take thorns damage.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Fraction of attributed damage returned as healing before level scaling.
+# Effect: Higher values heal more from every hit you deal.
+healPercentBase = 0.15
+# Healing fraction added per level.
+# Effect: Higher values reward higher levels more.
+healPercentPerLevel = 0.1
+# Most health siphoned per second before level scaling.
+# Effect: Lower values limit healing from rapid or multi-target damage.
+healCapPerSecondBase = 3.0
+# Siphon cap per second added per level.
+# Effect: Higher values let higher levels sustain more healing.
+healCapPerSecondPerLevel = 2.0
+# Life drained from each attacker before level scaling.
+# Effect: Higher values punish and heal more on every hit you take.
+drainDamageBase = 0.5
+# Drained life added per level.
+# Effect: Higher values reward higher levels more.
+drainDamagePerLevel = 0.5
+# Thorns damage reflected before level scaling.
+# Effect: Higher values hurt attackers more.
+reflectDamageBase = 1.5
+# Thorns damage added per level.
+# Effect: Higher values reward higher levels more.
+reflectDamagePerLevel = 1.5
+# Time between two thorns reflections, in milliseconds.
+# Effect: Lower values reflect more often against fast attackers.
+reflectCooldownMillis = 1000.0
+# Exclude passive and neutral mobs from reflected damage.
+# Effect: When enabled, neutral species are never hurt by the thorns.
+ignorePassiveMobs = false
+# Blood reservoir size in hearts before level scaling.
+# Effect: Higher values store more overflow healing.
+reservoirHeartsBase = 1.0
+# Blood reservoir hearts added per level.
+# Effect: Higher values reward higher levels more.
+reservoirHeartsPerLevel = 3.0
+# Time after your last hit dealt or taken before blood starts to drain, in milliseconds.
+# Effect: Higher values keep blood longer between fights.
+combatWindowMillis = 10000
+# Time between two drains of blood out of combat, in milliseconds.
+# Effect: Lower values drain the reservoir faster.
+bloodDrainIntervalMillis = 10000
+# Blood lost at each drain out of combat, in health points; 2 is one heart.
+# Effect: Higher values empty the reservoir faster.
+bloodDrainPerInterval = 2.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.ignore-passive]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

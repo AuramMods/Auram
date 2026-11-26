@@ -1,0 +1,119 @@
+# Adapt configuration - adaptation:upgraded-blocking-living-wall
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Sneak still with your shield raised, then let go, to plant it as a wall that shelters everyone behind it.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Damage reduction behind the wall and while blocking, before level scaling.
+# Effect: Higher values protect more.
+damageReductionBase = 0.2
+# Damage reduction added per level.
+# Effect: Higher values reward higher levels more.
+damageReductionPerLevel = 0.1
+# Highest damage reduction at any level.
+# Effect: Caps the reduction.
+maxDamageReduction = 0.6
+# Depth of the sheltered area behind the wall before level scaling, in blocks.
+# Effect: Higher values shelter players farther behind the wall.
+rangeBase = 3.0
+# Sheltered depth added per level, in blocks.
+# Effect: Higher values deepen the shelter at higher levels.
+rangePerLevel = 1.0
+# Wall width in blocks at levels 1 and 2.
+# Effect: Higher values cover more ground.
+widthBelowTopLevel = 3
+# Wall width in blocks at level 3.
+# Effect: Higher values cover more ground at the top level.
+widthAtTopLevel = 5
+# How long the wall stands before level scaling, in milliseconds.
+# Effect: Higher values keep the wall up longer.
+durationMillisBase = 5000
+# Milliseconds the wall stands added per level.
+# Effect: Higher values reward higher levels more.
+durationMillisPerLevel = 5000
+# Cooldown between plants before level scaling, in milliseconds.
+# Effect: Lower values let you plant more often.
+cooldownMillisBase = 50000
+# Milliseconds of cooldown removed per level.
+# Effect: Higher values shorten the cooldown at higher levels.
+cooldownMillisPerLevel = 10000
+# Ticks you must sneak still with the shield raised before letting go plants it.
+# Effect: Lower values plant faster.
+stillTicks = 20
+# Shield durability each plant costs.
+# Effect: Higher values wear your shield faster.
+plantDurability = 20
+# Distance from the wall in blocks at which it comes down and the shield returns.
+# Effect: Higher values let you stray farther from the wall.
+returnDistance = 24.0
+# Slowness amplifier given to hostile mobs against the wall.
+# Effect: Higher values slow them more.
+slowAmplifier = 1
+# Shield durability worn per point of damage the raised shield takes off you.
+# Effect: Higher values wear your shield down faster.
+durabilityPerDamage = 1.0
+# Skill XP per point of damage taken off you or an ally from a natural mob or a player.
+# Effect: Higher values reward holding the line.
+xpPerDamageShielded = 3.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.allies]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "SAME_TEAM"]
+
+[playerPreferences.durability-reserve]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NONE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["NONE", "QUARTER", "HALF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

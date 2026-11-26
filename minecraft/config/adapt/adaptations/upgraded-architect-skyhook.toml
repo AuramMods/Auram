@@ -1,0 +1,92 @@
+# Adapt configuration - adaptation:upgraded-architect-skyhook
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Footing while you build, and a template that copies, stamps and repeats small builds.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 5
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Levels below the usual loan at which Magic Foundation, Scaffolder and Steady Hands work, never below 1.
+# Effect: Higher values make the footing originals weaker.
+lighterLoanLevels = 1
+# Blocks per side a template copies at level 1; one stamp lays at most this many cubed.
+# Effect: Higher values copy larger builds.
+templateSizeAtFirstLevel = 6
+# Blocks per side added per level after the first.
+# Effect: Higher values reward higher levels more.
+templateSizePerLevel = 4
+# Stamps one repeat lays along a chalk guide at level 1; doubles each level.
+# Effect: Higher values repeat further along a guide.
+repeatsAtFirstLevel = 4
+# Most blocks one repeat lays, however many stamps it makes.
+# Effect: Higher values allow longer repeats at more cost per run.
+maxBlocksPerRepeat = 4096
+# Level from which a template can be mirrored.
+# Effect: Lower values unlock mirroring sooner.
+mirrorLevel = 2
+# Seconds a stamp preview stays up waiting for the second right-click.
+# Effect: Higher values give more time to confirm.
+previewSeconds = 30.0
+# Blocks a stamp lays per tick, before the server-wide cap.
+# Effect: Higher values finish sooner but cost more per tick.
+blocksPerTick = 8
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.gap]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ONE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["NONE", "ONE", "TWO", "FOUR"]
+
+[playerPreferences.overcharge]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

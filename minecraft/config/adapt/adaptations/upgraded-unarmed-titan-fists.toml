@@ -1,0 +1,113 @@
+# Adapt configuration - adaptation:upgraded-unarmed-titan-fists
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Fists hit like the maxed Unarmed originals and more, and a sprint punch breaks through soft blocks.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Attack damage multiplier of Unarmed Power at its top level.
+# Effect: Higher values make every punch hit harder.
+powerMultiplier = 3.57
+# Glass Cannon's no-armor damage multiplier at its top level.
+# Effect: Higher values reward fighting without armor.
+nakedFactor = 5.05
+# Glass Cannon's flat damage at its top level.
+# Effect: Higher values raise every punch.
+flatBonus = 1.75
+# Iron Fists' flat damage at its top level.
+# Effect: Higher values raise every punch.
+ironBonus = 3.0
+# Share of damage added on top of the maxed originals per level.
+# Effect: Higher values reward higher levels more.
+bonusPerLevel = 0.1
+# Hardest block that still breaks instantly by hand.
+# Effect: Higher values let tougher blocks break instantly.
+softBlockMaxHardness = 0.8
+# Sprint punch cooldown before level scaling, in milliseconds.
+# Effect: Higher values make sprint punches rarer.
+sprintCooldownMillisBase = 7000.0
+# Sprint punch cooldown removed per level, in milliseconds.
+# Effect: Higher values make higher levels punch through more often.
+sprintCooldownMillisPerLevel = 1000.0
+# Hunger points a sprint punch costs.
+# Effect: Higher values drain food faster; 0 removes the cost.
+sprintHunger = 1
+# Push of a sprint punch.
+# Effect: Higher values throw the target farther.
+sprintKnockback = 1.4
+# Most soft blocks a sprint punch breaks behind the target.
+# Effect: Higher values open bigger holes.
+sprintBlocksBroken = 3
+# How far behind the target a sprint punch looks for soft blocks, in blocks.
+# Effect: Higher values break blocks farther back.
+sprintReach = 3
+# How long a raised shield is knocked down by a sprint punch, in ticks.
+# Effect: Higher values keep the target from blocking longer.
+shieldLockTicks = 100
+# Skill XP for each punch.
+# Effect: Higher values reward fist fighting.
+xpPerHit = 3.0
+# Skill XP for each soft block broken by hand.
+# Effect: Higher values reward breaking blocks by hand.
+xpPerSoftBlock = 0.5
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.combat]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.soft-blocks]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

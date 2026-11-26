@@ -1,0 +1,100 @@
+# Adapt configuration - adaptation:upgraded-discovery-omniscience
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# The creature you look at, nearby chests and spawners, and the nearest structure on one readout, with an Atlas of your finds.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 5
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Creature, chest and spawner range before level scaling, in blocks.
+# Effect: Higher values read farther targets.
+readoutRangeBase = 12.0
+# Creature, chest and spawner range added per level, in blocks.
+# Effect: Higher values widen the gap between levels.
+readoutRangePerLevel = 6.0
+# Cosine of the view cone for chests and spawners; -1 counts every direction.
+# Effect: Higher values only count containers closer to where you look.
+viewConeCos = -1.0
+# Ticks a chest or spawner you can see stays outlined after each readout.
+# Effect: Higher values keep outlines longer.
+outlineTicks = 16
+# Structure search range at level 1, in blocks.
+# Effect: Higher values find structures from farther away.
+structureRangeBase = 96.0
+# Structure search range gained across levels, in blocks.
+# Effect: Higher values reward higher levels with a wider search.
+structureRangeFactor = 404.0
+# Largest structure search range, in blocks; clamped to 16-500.
+# Effect: Lower values keep searches cheap.
+maxStructureRange = 500.0
+# Time between readout refreshes, in milliseconds.
+# Effect: Lower values update the readout more often at more cost.
+readoutIntervalMillis = 500
+# Time between structure searches, in milliseconds.
+# Effect: Lower values notice new structures sooner at more cost.
+structurePulseMillis = 4000
+# Time between Atlas checks of the biome and structures you stand in, in milliseconds.
+# Effect: Lower values add finds sooner at more cost.
+recordIntervalMillis = 1500
+# Most structures one Atlas keeps; past it the oldest unpinned one is dropped.
+# Effect: Higher values keep more finds in player data.
+maxStructures = 256
+# Pins at level 1.
+# Effect: Higher values show more entries on screen.
+pinsAtFirstLevel = 1
+# Pins added per level after the first.
+# Effect: Higher values reward higher levels with more pins.
+pinsPerLevel = 2
+# Waypoints at level 1; doubles each level.
+# Effect: Higher values let players name more places.
+waypointsAtFirstLevel = 5
+# Level that unlocks the unfound-structure search.
+# Effect: Lower values unlock the search sooner.
+searchLevel = 3
+# Unfound-structure search radius, in blocks. Only chunks that were already generated are read.
+# Effect: Higher values find farther structures but read more chunk data.
+searchRange = 2000.0
+# Cooldown between unfound-structure searches, in milliseconds.
+# Effect: Lower values allow more searches.
+searchCooldownMillis = 60000
+# Hunger each unfound-structure search costs, besides one paper.
+# Effect: Higher values make searches cost more food.
+searchHunger = 3
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

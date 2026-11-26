@@ -1,0 +1,85 @@
+# Adapt configuration - adaptation:upgraded-seaborne-leviathan
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# More air, a faster swim and regeneration while wet, with the tidal ward and rain feeding of the originals it fuses.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 5
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Air ticks saved per level out of every 75 ticks underwater.
+# Effect: Higher values stretch your breath further; 25 per level never runs out at level 3.
+airTicksPerLevel = 20
+# Water movement efficiency before level scaling.
+# Effect: Higher values make every level swim faster.
+swimEfficiencyBase = 0.4
+# Water movement efficiency added per level.
+# Effect: Higher values widen the gap between levels; the total caps at 1.
+swimEfficiencyPerLevel = 0.2
+# Dolphin's Grace ticks granted while swimming, before level scaling.
+# Effect: Higher values keep the grace alive between refreshes.
+graceTicksBase = 40
+# Dolphin's Grace ticks added per level.
+# Effect: Higher values let the grace linger longer at higher levels.
+graceTicksPerLevel = 20
+# Highest Regeneration amplifier while wet; level 1 starts at 0.
+# Effect: Higher values allow faster healing at the top level.
+maxRegenAmplifier = 2
+# Tide Shrine radius in blocks before level scaling.
+# Effect: Higher values make every shrine reach farther.
+shrineRadiusBase = 4.0
+# Tide Shrine radius added per level, in blocks.
+# Effect: Higher values widen the gap between levels.
+shrineRadiusPerLevel = 4.0
+# Tide Shrines you can have placed below the top level.
+# Effect: Higher values allow more shrines early.
+shrinesBelowTopLevel = 1
+# Tide Shrines you can have placed at the top level.
+# Effect: Higher values allow more shrines at the top level.
+shrinesAtTopLevel = 2
+# Underwater mining speed multiplier inside your shrine.
+# Effect: 5 cancels the vanilla underwater mining penalty.
+shrineMiningMultiplier = 5.0
+# Block break speed multiplier while floating inside your shrine.
+# Effect: 5 cancels the vanilla floating mining penalty.
+shrineFloatingMultiplier = 5.0
+# Length of each refreshed breathing, night vision and mining effect inside your shrine, in ticks.
+# Effect: Higher values keep the effects longer after you leave.
+shrineEffectTicks = 220
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

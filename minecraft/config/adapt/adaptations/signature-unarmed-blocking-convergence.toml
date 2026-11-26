@@ -1,0 +1,82 @@
+# Adapt configuration - adaptation:signature-unarmed-blocking-convergence
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Raising empty hands just before a hit parries it, sends half back and loads the next punch.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 4
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId:level.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Time after raising empty hands that a hit is still parried at level 1, in milliseconds; half of Mirror Guard's.
+# Effect: Higher values make the parry easier to land.
+windowMillisAtFirstLevel = 175.0
+# Parry window at the top level, in milliseconds.
+# Effect: Higher values make the parry easier to land.
+windowMillisAtTopLevel = 275.0
+# Lowest dot product between your view and the attacker's direction that still counts as facing it.
+# Effect: Higher values require the attacker to be more directly in front of you.
+minFacingAlignment = 0.15
+# Share of a parried hit sent back to the attacker or on the returned projectile.
+# Effect: Higher values make parries hurt more.
+reflectShare = 0.5
+# Ticks a parried attacker is slowed and weakened at level 1.
+# Effect: Higher values leave a longer opening.
+staggerTicksAtFirstLevel = 20.0
+# Ticks a parried attacker is slowed and weakened at the top level.
+# Effect: Higher values leave a longer opening.
+staggerTicksAtTopLevel = 40.0
+# Push given to a parried attacker.
+# Effect: Higher values knock attackers further back.
+knockback = 0.45
+# Extra damage on the first bare-hand hit after a parry at level 1.
+# Effect: Higher values make counters hit harder.
+riposteBonusAtFirstLevel = 0.25
+# Extra damage on the first bare-hand hit after a parry at the top level.
+# Effect: Higher values make counters hit harder.
+riposteBonusAtTopLevel = 0.55
+# Time after a parry that the counter stays loaded, in milliseconds.
+# Effect: Higher values give more time to answer.
+riposteWindowMillis = 3000
+# Time between parries at level 1, in milliseconds.
+# Effect: Higher values make parries rarer.
+cooldownMillisAtFirstLevel = 3000.0
+# Time between parries at the top level, in milliseconds.
+# Effect: Higher values make parries rarer.
+cooldownMillisAtTopLevel = 2000.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
