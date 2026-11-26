@@ -74,6 +74,8 @@ python3 tools/aurambliss-qa/windows_audit.py verify /tmp/bliss-windows
 
 The export includes the device defines, image declarations, and GLSL for DH, fullscreen composite, sky, terrain, shadow, and compute stages across the three vanilla dimension programs. The checks cover default, feature-heavy compute, and forced compatibility. A device run uses the regular runner with native Java and the same scene, options, and DH configuration. Add `--force-compat` for a second run.
 
+For the shared RF shader path, supply the rebuilt compatibility JAR with `--companion` and add `--java-option=-Dauram.bliss.qa.auditPreparedRf=true` during export.
+
 ## Source inventory
 
 Generate the control inventory with `python3 tools/aurambliss-qa/inventory.py minecraft/shaderpacks/AuramBliss /tmp/bliss-options.json`. The output lists profile values, menu paths, source lines, suggested scene checks, dimensions and texture declarations.
