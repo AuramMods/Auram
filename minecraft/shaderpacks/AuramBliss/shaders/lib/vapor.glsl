@@ -16,9 +16,6 @@ const float vaporNoiseFixedPoint = 65536.0;
 const uint vaporNoiseMask = uint(vaporNoisePeriod * vaporNoiseFixedPoint) - 1u;
 const vec3 vaporBendScale = vec3(1.8, 1.0, 1.8) * (0.72 * VAPOR_WISP_SCALE / 3.0);
 const vec3 vaporDetailScale = vec3(1.8, 1.0, 1.8) * (2.1 * VAPOR_WISP_SCALE / 3.0);
-#ifdef AURAM_VAPOR_RADIUS
-const float vaporRadius = float(AURAM_VAPOR_RADIUS);
-#endif
 #ifdef VAPOR_BEHIND_TRANSLUCENT
 float vaporTranslucentStart = 0.0;
 #elif defined EXCLUDE_WRITE_TO_LUT
@@ -35,22 +32,19 @@ struct VaporRay {
 
 VaporRay vaporRayInterval(vec3 origin, vec3 direction, float surfaceDistance) {
     if (!auramVaporActive) return VaporRay(vec2(0.0));
-    vec2 cube = vaporCubeInterval(origin, direction, vaporCenter(), -1.0);
+    // Configured range is an axis-aligned radius. The backend may be older and provide less data.
+    #ifdef AURAM_VAPOR_RADIUS
+        const vec3 halfExtent = vec3(float(min(VAPOR_RENDER_RANGE, AURAM_VAPOR_RADIUS)));
+    #else
+        const vec3 halfExtent = vec3(float(VAPOR_RENDER_RANGE));
+    #endif
+    vec3 center = vaporCenter();
+    float rayEnd = length(abs(origin - center) + halfExtent);
+    vec2 cube = vaporBoundsInterval(origin, direction, center - halfExtent, center + halfExtent, rayEnd);
     if (cube.y <= cube.x) return VaporRay(vec2(0.0));
     vec2 interval = vaporBoundsInterval(origin, direction, auramVaporMinimum, auramVaporMaximum, cube.y);
     float first = max(interval.x, cube.x);
     float last = interval.y;
-    #ifdef AURAM_VAPOR_RADIUS
-        // The simulation can only supply density inside its own field.
-        vec3 offset = origin - auramVaporCenter;
-        float speed2 = dot(direction, direction);
-        float along = dot(offset, direction);
-        float discriminant = along * along + speed2 * (vaporRadius * vaporRadius - dot(offset, offset));
-        if (discriminant <= 0.0) return VaporRay(vec2(0.0));
-        float halfLength = sqrt(discriminant);
-        first = max(first, (-along - halfLength) / speed2);
-        last = min(last, (-along + halfLength) / speed2);
-    #endif
     #ifdef VAPOR_BEHIND_TRANSLUCENT
         first = max(first, vaporTranslucentStart);
     #elif defined EXCLUDE_WRITE_TO_LUT
@@ -94,7 +88,9 @@ VaporGrid vaporWorldGrid(ivec3 worldOrigin, vec3 localOrigin, vec3 direction,
                         float first, float bandStart, float bandWidth) {
     vec3 frequency;
     float gridScale = bandWidth / vaporGridBandWidth;
-    vec3 gridOrigin = fract(vaporWorldPhase(worldOrigin, vec3(0.5 / (VAPOR_SAMPLE_SPACING * gridScale)), frequency));
+    // Keep thin distant plumes sampleable after the adaptive bands widen.
+    float planeSpacing = min(2.0 * VAPOR_SAMPLE_SPACING * gridScale, max(2.0, 2.0 * VAPOR_SAMPLE_SPACING));
+    vec3 gridOrigin = fract(vaporWorldPhase(worldOrigin, vec3(1.0 / planeSpacing), frequency));
     vec3 raySign = mix(vec3(-1.0), vec3(1.0), greaterThanEqual(direction, vec3(0.0)));
     vec3 entry = localOrigin + direction * first;
     vec3 phase = fract(raySign * (gridOrigin + entry * frequency));
@@ -107,7 +103,7 @@ VaporGrid vaporWorldGrid(ivec3 worldOrigin, vec3 localOrigin, vec3 direction,
     return VaporGrid(bandWidth, bandStart + bandWidth, cellStart, next, spacing);
 }
 
-float vaporDensity(vec3 playerPos, vec3 local, vec3 bendPosition, vec3 detailPosition) {
+float vaporDensity(vec3 local, vec3 bendPosition, vec3 detailPosition) {
     ivec3 size = textureSize(auramVaporVolume, 0);
     ivec3 cell = clamp(ivec3(floor(local)), ivec3(0), size - 1);
     // Full collision cells mask the trilinear filter at glass and walls.
@@ -115,15 +111,6 @@ float vaporDensity(vec3 playerPos, vec3 local, vec3 bendPosition, vec3 detailPos
     vec2 densityFrames = textureLod(auramVaporVolume, local / vec3(size), 0.0).rg;
     float density = mix(densityFrames.x, densityFrames.y, auramVaporBlend);
     if (density <= 0.001) return 0.0;
-    density *= vaporEdgeFade(playerPos - vaporCenter());
-    #ifdef AURAM_VAPOR_RADIUS
-        // Fade in world space so the last few blocks stay smooth when the voxel grid moves.
-        vec3 offset = playerPos - auramVaporCenter;
-        const float fadeStart = vaporRadius - 4.0;
-        density *= 1.0 - smoothstep(fadeStart * fadeStart, vaporRadius * vaporRadius, dot(offset, offset));
-    #endif
-    if (density <= 0.001) return 0.0;
-
     float bend = vaporDetailNoise(bendPosition) - 0.5;
     float detail = vaporDetailNoise(detailPosition + bend * vec3(2.4, 0.75, -2.0));
     float wisps = smoothstep(0.27, 0.75, detail);
@@ -200,7 +187,7 @@ VaporScattering traceVapor(vec3 origin, vec3 direction, VaporRay ray, float star
                 : midpoint + (i == 0 ? -0.28867513 : 0.28867513) * cellLength;
             vec3 position = origin + direction * sampleDistance;
             vec3 local = localOrigin + direction * sampleDistance;
-            float density = vaporDensity(position, local, bendOrigin + local * bendFrequency, detailOrigin + local * detailFrequency);
+            float density = vaporDensity(local, bendOrigin + local * bendFrequency, detailOrigin + local * detailFrequency);
             if (density <= 0.001) continue;
             float segmentTransmission = exp(-VAPOR_EXTINCTION * density * sampleLength);
             #if VAPOR_MAX_OPACITY < 100
