@@ -100,6 +100,7 @@ uniform int dhRenderDistance;
 #include "/lib/res_params.glsl"
 
 uniform float eyeAltitude;
+#define BLISS_STABLE_VIEW_CLOUDS
 #include "/lib/volumetricClouds.glsl"
 #ifdef ATUM_SHADER
 	#include "/lib/atum_atmosphere.glsl"

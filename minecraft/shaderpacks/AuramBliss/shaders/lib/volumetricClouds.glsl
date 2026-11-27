@@ -317,7 +317,16 @@ vec4 renderLayer(
 
 	int steps = layer == 2 ? 1 : quality;
 	float mult = rayLength / float(steps);
-	vec3 rayProgress = cameraPosition + rayDirection * interval.x + (rayDirection * mult) * dither.y;
+	float firstSampleOffset = dither.y;
+	#ifdef BLISS_STABLE_VIEW_CLOUDS
+		// A large march step can jump across the entire cloud edge as the dither changes.
+		// Use a stable sequence along long rays, fading it in as the sample spacing grows.
+		float stableSamples = 0.92 * smoothstep(8.0, 40.0, mult);
+		float spatialPhase = texelFetch2D(noisetex, ivec2(gl_FragCoord.xy) % 512, 0).a;
+		firstSampleOffset = mix(dither.y, mix(0.5, spatialPhase, 0.35), stableSamples);
+		dither.x = mix(dither.x, 0.5, stableSamples);
+	#endif
+	vec3 rayProgress = cameraPosition + rayDirection * (interval.x + mult * firstSampleOffset);
 
 	if (layer == 2) {
 		float altostratus = GetAltostratusDensity(rayProgress);
@@ -341,7 +350,7 @@ vec4 renderLayer(
 			float fadeStart = mix(0.5, 0.0, rainStrength) * maxCloudTraceDistance;
 			float visibility = 1.0 - smoothstep(fadeStart, maxCloudTraceDistance, interval.x);
 			float opacity = (1.0 - exp(-mult * AltoWithDensity)) * visibility;
-			layerDistance = interval.x + mult * dither.y;
+			layerDistance = interval.x + mult * firstSampleOffset;
 			return vec4(max(lighting * opacity, 0.0), 1.0 - opacity);
 		}
 		return vec4(COLOR, TOTAL_EXTINCTION);
@@ -354,7 +363,7 @@ vec4 renderLayer(
 	float sampleRange = mix(rayLength, openLength, nearBias);
 	float inverseSteps = 1.0 / float(steps);
 	float firstBoundary = interval.x + mix(inverseSteps, inverseSteps * inverseSteps * inverseSteps, nearBias) * sampleRange;
-	rayProgress = cameraPosition + rayDirection * mix(interval.x, min(firstBoundary, rayEnd), dither.y);
+	rayProgress = cameraPosition + rayDirection * mix(interval.x, min(firstBoundary, rayEnd), firstSampleOffset);
 
 	float skylightOcclusion = 1.0;
 	#if defined CloudLayer1 && defined CloudLayer0
@@ -372,7 +381,14 @@ vec4 renderLayer(
 		float boundary = interval.x + mix(t, t * t * t, nearBias) * sampleRange;
 		float stepEnd = i == steps - 1 ? rayEnd : min(rayEnd, boundary);
 		float stepLength = stepEnd - stepStart;
-		float sampleDistance = stepStart + stepLength * dither.y;
+		float sampleOffset = dither.y;
+		#ifdef BLISS_STABLE_VIEW_CLOUDS
+			// Stagger the position within each step so adjacent steps do not shift together.
+			float sampleSequence = float(i) * 0.6180339887;
+			float stableOffset = mix(fract(0.5 + sampleSequence), fract(spatialPhase + sampleSequence), 0.35);
+			sampleOffset = mix(sampleOffset, stableOffset, stableSamples);
+		#endif
+		float sampleDistance = stepStart + stepLength * sampleOffset;
 		rayProgress = cameraPosition + rayDirection * sampleDistance;
 		float cumulus = GetCumulusDensity(layer, rayProgress, 1, minHeight, maxHeight);
 		float heightInLayer = (rayProgress.y - minHeight) / (maxHeight - minHeight);

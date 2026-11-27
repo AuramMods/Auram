@@ -140,6 +140,7 @@ float invLinZ (float lindepth){
 	// uniform int dhRenderDistance;
 	#define TIMEOFDAYFOG
 	#include "/lib/lightning_stuff.glsl"
+	#define BLISS_STABLE_VIEW_CLOUDS
 	#include "/lib/volumetricClouds.glsl"
 	#include "/lib/overworld_fog.glsl"
 #endif
@@ -369,7 +370,8 @@ void main() {
 	
 	vec2 tc = floor(gl_FragCoord.xy)/VL_RENDER_RESOLUTION*texelSize + texelSize*0.5;
 
-	bool iswater = texture2D(colortex7,tc).a > 0.99;
+	float translucentMaterial = texture2D(colortex7, tc).a;
+	bool iswater = translucentMaterial > 0.99;
 
 	float z0 = texture2D(depthtex0, tc).x;
 	
@@ -388,6 +390,24 @@ void main() {
 		DH_z0 = frontDepths.y;
 	#endif
 	vec4 volumeRay = volumeViewRay(uv, z0, DH_z0);
+    #ifdef AURAM_RENDER_VAPOR
+        // Particle sprites have blended color but no translucent surface material.
+        // Keep their depth from punching holes in the local vapor behind them.
+        if (auramVaporActive && translucentMaterial <= 0.0 && texture2D(colortex2, tc).a > 0.0) {
+            float opaqueDepth = texture2D(depthtex1, tc).r;
+            if (z0 < opaqueDepth) {
+                #ifdef AURAM_LOD_DEPTH
+                    float lodOpaqueDepth = sampleLodOpaqueDepth(dhDepthTex1, tc);
+                #else
+                    const float lodOpaqueDepth = 0.0;
+                #endif
+                #if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
+                    opaqueDepth = auramVisibleNearOpaqueDepth(uv, opaqueDepth, lodOpaqueDepth);
+                #endif
+                vaporOpaqueDistance = volumeViewRay(uv, opaqueDepth, DH_z0).w;
+            }
+        }
+    #endif
 	vec3 viewPos0 = auramFrontViewPosition(uv, z0, DH_z0);
 	vec3 playerPos_normalized = normalize(mat3(gbufferModelViewInverse) * viewPos0 + gbufferModelViewInverse[3].xyz);
 

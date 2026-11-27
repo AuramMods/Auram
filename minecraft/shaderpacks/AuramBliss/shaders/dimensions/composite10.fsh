@@ -47,10 +47,15 @@ float h1(float a)
     return 1.0 + w3(a) / (w2(a) + w3(a));
 }
 
-vec4 texture2D_bicubic(sampler2D tex, vec2 uv)
+vec3 sampleBloomTile(sampler2D tex, vec2 uv, vec2 atlasScale, float tileSize, float gap)
 {
-	vec4 texelSize = vec4(texelSize,1.0/texelSize);
-	uv = uv*texelSize.zw;
+    vec2 origin = vec2((0.5 - 2.0 * tileSize) * atlasScale.x + gap * texelSize.x, 0.0);
+    vec2 end = min(origin + tileSize * atlasScale, vec2(0.5, 0.25) * atlasScale);
+    // Only texel centers strictly inside the tile were written this frame.
+    vec2 first = floor(origin / texelSize + 0.5) + 0.5;
+    vec2 last = ceil(end / texelSize - 0.5) - 0.5;
+    if (any(lessThan(last, first))) return vec3(0.0);
+    uv = (uv + origin) / texelSize + vec2(gap > 0.0 ? 0.5 : 0.0, 0.0);
 	vec2 iuv = floor( uv );
 	vec2 fuv = fract( uv );
 
@@ -61,15 +66,12 @@ vec4 texture2D_bicubic(sampler2D tex, vec2 uv)
     float h0y = h0(fuv.y);
     float h1y = h1(fuv.y);
 
-	vec2 p0 = (vec2(iuv.x + h0x, iuv.y + h0y) - 0.5) * texelSize.xy;
-	vec2 p1 = (vec2(iuv.x + h1x, iuv.y + h0y) - 0.5) * texelSize.xy;
-	vec2 p2 = (vec2(iuv.x + h0x, iuv.y + h1y) - 0.5) * texelSize.xy;
-	vec2 p3 = (vec2(iuv.x + h1x, iuv.y + h1y) - 0.5) * texelSize.xy;
-
-    return g0(fuv.y) * (g0x * texture2D(tex, p0)  +
-                        g1x * texture2D(tex, p1)) +
-           g1(fuv.y) * (g0x * texture2D(tex, p2)  +
-                        g1x * texture2D(tex, p3));
+    vec2 low = clamp(iuv + vec2(h0x, h0y) - 0.5, first, last) * texelSize;
+    vec2 high = clamp(iuv + vec2(h1x, h1y) - 0.5, first, last) * texelSize;
+    return g0(fuv.y) * (g0x * texture2D(tex, low).rgb +
+                        g1x * texture2D(tex, vec2(high.x, low.y)).rgb) +
+           g1(fuv.y) * (g0x * texture2D(tex, vec2(low.x, high.y)).rgb +
+                        g1x * texture2D(tex, high).rgb);
 }
 
 //////////////////////////////VOID MAIN//////////////////////////////
@@ -84,30 +86,20 @@ vec2 resScale = vec2(1920.,1080.)/max(vec2(viewWidth,viewHeight),vec2(1920.0,108
 vec2 texcoord = ((gl_FragCoord.xy)*2.0 + 0.5)*texelSize;
 
 #ifdef OLD_BLOOM
-    vec3 bloom = texture2D_bicubic(colortex3,texcoord/2.).rgb;	//1/4 res
-    bloom += texture2D_bicubic(colortex6,texcoord/4.).rgb; //1/8 res
-    bloom += texture2D_bicubic(colortex6,texcoord/8.+vec2(0.25*resScale.x+2.5*texelSize.x,.0)).rgb;  //1/16 res
-    bloom += texture2D_bicubic(colortex6,texcoord/16.+vec2(0.375*resScale.x+4.5*texelSize.x,.0)).rgb; //1/32 res
-    bloom += texture2D_bicubic(colortex6,texcoord/32.+vec2(0.4375*resScale.x+6.5*texelSize.x,.0)).rgb; //1/64 res
-    bloom += texture2D_bicubic(colortex6,texcoord/64.+vec2(0.46875*resScale.x+8.5*texelSize.x,.0)).rgb; //1/128 res
-    bloom += texture2D_bicubic(colortex6,texcoord/128.+vec2(0.484375*resScale.x+10.5*texelSize.x,.0)).rgb; //1/256 res
-
-    gl_FragData[0].rgb = bloom * 2.0;
+    const float weights[7] = float[](1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0);
+    const float scale = 2.0;
 #else
-
-	float weights[7] = float[](     1.0,    1.0/2.0,    1.0/3.0,    1.0/5.5,    1.0/8.0,    1.0/10.0,   1.0/12.0    );
-	// float weights[7] = float[](     0.7,    pow(0.5,2), pow(0.5,3),  pow(0.5,4),   pow(0.5,5),    pow(0.5,6), pow(0.5,7)	);
-
-    vec3 bloom = texture2D_bicubic(colortex3,texcoord/2.).rgb * weights[0];	//1/4 res
-    bloom += texture2D_bicubic(colortex6,texcoord/4.).rgb * weights[1]; //1/8 res
-    bloom += texture2D_bicubic(colortex6,texcoord/8.+vec2(0.25*resScale.x+2.5*texelSize.x,.0)).rgb * weights[2];  //1/16 res
-    bloom += texture2D_bicubic(colortex6,texcoord/16.+vec2(0.375*resScale.x+4.5*texelSize.x,.0)).rgb * weights[3]; //1/32 res
-    bloom += texture2D_bicubic(colortex6,texcoord/32.+vec2(0.4375*resScale.x+6.5*texelSize.x,.0)).rgb * weights[4]; //1/64 res
-    bloom += texture2D_bicubic(colortex6,texcoord/64.+vec2(0.46875*resScale.x+8.5*texelSize.x,.0)).rgb * weights[5]; //1/128 res
-    bloom += texture2D_bicubic(colortex6,texcoord/128.+vec2(0.484375*resScale.x+10.5*texelSize.x,.0)).rgb * weights[6]; //1/256 res
-
-    gl_FragData[0].rgb = bloom * 3.0;
+    const float weights[7] = float[](1.0, 1.0/2.0, 1.0/3.0, 1.0/5.5, 1.0/8.0, 1.0/10.0, 1.0/12.0);
+    const float scale = 3.0;
 #endif
 
-gl_FragData[0].rgb = clamp(gl_FragData[0].rgb,0.0,65000.);
+    vec3 bloom = sampleBloomTile(colortex3, texcoord / 2.0, resScale, 0.25, 0.0) * weights[0];
+    bloom += sampleBloomTile(colortex6, texcoord / 4.0, resScale, 0.25, 0.0) * weights[1];
+    bloom += sampleBloomTile(colortex6, texcoord / 8.0, resScale, 0.125, 2.0) * weights[2];
+    bloom += sampleBloomTile(colortex6, texcoord / 16.0, resScale, 0.0625, 4.0) * weights[3];
+    bloom += sampleBloomTile(colortex6, texcoord / 32.0, resScale, 0.03125, 6.0) * weights[4];
+    bloom += sampleBloomTile(colortex6, texcoord / 64.0, resScale, 0.015625, 8.0) * weights[5];
+    bloom += sampleBloomTile(colortex6, texcoord / 128.0, resScale, 0.0078125, 10.0) * weights[6];
+
+    gl_FragData[0].rgb = clamp(bloom * scale, 0.0, 65000.0);
 }

@@ -109,6 +109,7 @@ float linearizeDepthFast(const in float depth, const in float near, const in flo
 	#include "/lib/lightning_stuff.glsl"
 
 	// #define CLOUDSHADOWSONLY
+	#define BLISS_STABLE_VIEW_CLOUDS
 	#include "/lib/volumetricClouds.glsl"
 	#include "/lib/overworld_fog.glsl"
 

@@ -309,37 +309,50 @@ vec3 closestToCamera5taps(vec2 uv, sampler2D depth, bool hand, vec2 lastCenter, 
 
 vec4 computeTAA(vec2 texcoord, vec2 adjTC, vec2 lastCenter, bool hand){
 
-	vec2 jitter = offsets[framemod8]*texelSize*0.5;
-
-	// get previous frames position stuff for UV	
-	//use velocity from the nearest texel from camera in a 3x3 box in order to improve edge quality in motion	
-	#ifdef AURAM_LOD_DEPTH
-		bool depthCheck = texture2D(depthtex0,adjTC).x >= 1.0;
-		vec3 closestToCamera = depthCheck
-			? closestToCamera5taps(adjTC, dhDepthTex, hand, lastCenter, AURAM_LOD_UV_SCALE)
-			: closestToCamera5taps(adjTC, depthtex0, hand, lastCenter, vec2(1.0));
-		vec3 viewPos = toScreenSpace_DH_special(closestToCamera, depthCheck);
-	#else
-		vec3 closestToCamera = closestToCamera5taps(adjTC, depthtex0, hand, lastCenter, vec2(1.0));
-		vec3 viewPos = toScreenSpace(closestToCamera);
-	#endif
-	
-	vec3 playerPos = mat3(gbufferModelViewInverse) * viewPos + gbufferModelViewInverse[3].xyz + (cameraPosition - previousCameraPosition);
-	vec3 previousPosition = mat3(gbufferPreviousModelView) * playerPos + gbufferPreviousModelView[3].xyz;
-	#ifdef AURAM_LOD_DEPTH
-		previousPosition = toClipSpace3Prev_DH(previousPosition, depthCheck);
-	#else
-		previousPosition = toClipSpace3Prev(previousPosition);
-	#endif
-
-	vec2 velocity = previousPosition.xy - closestToCamera.xy;
-	previousPosition.xy = texcoord + velocity;
-
-	// sample current frame, and make sure it is de-jittered
+	vec2 jitter = offsets[framemod8] * texelSize * 0.5;
 	vec3 currentFrame = smoothfilter(colortex3, texcoord * RENDER_SCALE + jitter, lastCenter).rgb;
 
+	bool noNearSurface = texture2D(depthtex0, adjTC).x >= 1.0;
+	bool sky = noNearSurface;
+	#ifdef AURAM_LOD_DEPTH
+		if (noNearSurface) {
+			float lodDepth = sampleLodDepth(dhDepthTex, adjTC).x;
+			sky = lodDepth <= 0.0 || lodDepth >= 1.0;
+		}
+	#endif
+
+	vec2 previousUV;
+	if (sky) {
+		// Empty depth represents a direction, with no camera translation or LOD projection.
+		vec3 viewRay = toScreenSpaceVector(vec3(texcoord, 0.5));
+		vec3 worldRay = mat3(gbufferModelViewInverse) * viewRay;
+		vec4 previousClip = gbufferPreviousProjection * vec4(mat3(gbufferPreviousModelView) * worldRay, 0.0);
+		if (previousClip.w <= 0.0) return vec4(currentFrame, 1.0);
+		previousUV = previousClip.xy / previousClip.w * 0.5 + 0.5;
+	} else {
+		// Keep the nearest-surface velocity at geometry edges.
+		#ifdef AURAM_LOD_DEPTH
+			vec3 closestToCamera = noNearSurface
+				? closestToCamera5taps(adjTC, dhDepthTex, hand, lastCenter, AURAM_LOD_UV_SCALE)
+				: closestToCamera5taps(adjTC, depthtex0, hand, lastCenter, vec2(1.0));
+			vec3 viewPos = toScreenSpace_DH_special(closestToCamera, noNearSurface);
+		#else
+			vec3 closestToCamera = closestToCamera5taps(adjTC, depthtex0, hand, lastCenter, vec2(1.0));
+			vec3 viewPos = toScreenSpace(closestToCamera);
+		#endif
+		vec3 playerPos = mat3(gbufferModelViewInverse) * viewPos + gbufferModelViewInverse[3].xyz + (cameraPosition - previousCameraPosition);
+		vec3 previousPosition = mat3(gbufferPreviousModelView) * playerPos + gbufferPreviousModelView[3].xyz;
+		#ifdef AURAM_LOD_DEPTH
+			previousPosition = toClipSpace3Prev_DH(previousPosition, noNearSurface);
+		#else
+			previousPosition = toClipSpace3Prev(previousPosition);
+		#endif
+		previousUV = texcoord + (previousPosition.xy - closestToCamera.xy);
+	}
+	vec2 velocity = previousUV - texcoord;
+
 	//reject history if off-screen and early exit
-	if (previousPosition.x < 0.0 || previousPosition.y < 0.0 || previousPosition.x > 1.0 || previousPosition.y > 1.0) return vec4(currentFrame, 1.0);
+	if (any(lessThan(previousUV, vec2(0.0))) || any(greaterThan(previousUV, vec2(1.0)))) return vec4(currentFrame, 1.0);
 
 	#ifdef TAA_UPSCALING
 		// Interpolating neighboorhood clampling boundaries between pixels
@@ -368,10 +381,10 @@ vec4 computeTAA(vec2 texcoord, vec2 adjTC, vec2 lastCenter, bool hand){
 	#endif
     #ifdef DAMAGE_TAKEN_EFFECT
 		// when this triggers, use current frame UV to sample history, for a funny trailing effect.
-		if(CriticalDamageTaken > 0.01) previousPosition.xy = texcoord;
+		if(CriticalDamageTaken > 0.01) previousUV = texcoord;
 	#endif
 
-	vec3 frameHistory = max(FastCatmulRom(colortex5, previousPosition.xy, vec4(texelSize, 1.0/texelSize), 0.75).xyz,0.0);
+	vec3 frameHistory = max(FastCatmulRom(colortex5, previousUV, vec4(texelSize, 1.0/texelSize), 0.75).xyz,0.0);
 	vec3 clampedframeHistory = clamp(frameHistory, colMin, colMax);
 
 	float blendingFactor = BLEND_FACTOR;
@@ -391,7 +404,7 @@ vec4 computeTAA(vec2 texcoord, vec2 adjTC, vec2 lastCenter, bool hand){
 		// when this is on, do "infinite frame accumulation	"
 		if (hideGUI == 0) return vec4(finalResult, 1.0);
 
-		vec4 superSampledHistory = texture2D(colortex5, previousPosition.xy);
+		vec4 superSampledHistory = texture2D(colortex5, previousUV);
 		vec3 superSampledResult = superSampledHistory.rgb * superSampledHistory.a + currentFrame;
 
 		return vec4(superSampledResult/(superSampledHistory.a+1.0), superSampledHistory.a+1.0);
