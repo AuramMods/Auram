@@ -47,15 +47,13 @@ float h1(float a)
     return 1.0 + w3(a) / (w2(a) + w3(a));
 }
 
-vec3 sampleBloomTile(sampler2D tex, vec2 uv, vec2 atlasScale, float tileSize, float gap)
+vec3 sampleBloomRegion(sampler2D tex, vec2 uv, vec2 origin, vec2 end)
 {
-    vec2 origin = vec2((0.5 - 2.0 * tileSize) * atlasScale.x + gap * texelSize.x, 0.0);
-    vec2 end = min(origin + tileSize * atlasScale, vec2(0.5, 0.25) * atlasScale);
     // Only texel centers strictly inside the tile were written this frame.
     vec2 first = floor(origin / texelSize + 0.5) + 0.5;
     vec2 last = ceil(end / texelSize - 0.5) - 0.5;
     if (any(lessThan(last, first))) return vec3(0.0);
-    uv = (uv + origin) / texelSize + vec2(gap > 0.0 ? 0.5 : 0.0, 0.0);
+    uv /= texelSize;
 	vec2 iuv = floor( uv );
 	vec2 fuv = fract( uv );
 
@@ -72,6 +70,14 @@ vec3 sampleBloomTile(sampler2D tex, vec2 uv, vec2 atlasScale, float tileSize, fl
                         g1x * texture2D(tex, vec2(high.x, low.y)).rgb) +
            g1(fuv.y) * (g0x * texture2D(tex, vec2(low.x, high.y)).rgb +
                         g1x * texture2D(tex, high).rgb);
+}
+
+vec3 sampleBloomTile(sampler2D tex, vec2 uv, vec2 atlasScale, float tileSize, float gap)
+{
+    vec2 origin = vec2((0.5 - 2.0 * tileSize) * atlasScale.x + gap * texelSize.x, 0.0);
+    vec2 end = min(origin + tileSize * atlasScale, vec2(0.5, 0.25) * atlasScale);
+    vec2 sampleUV = uv + origin + vec2(gap > 0.0 ? 0.5 * texelSize.x : 0.0, 0.0);
+    return sampleBloomRegion(tex, sampleUV, origin, end);
 }
 
 //////////////////////////////VOID MAIN//////////////////////////////
@@ -93,7 +99,8 @@ vec2 texcoord = ((gl_FragCoord.xy)*2.0 + 0.5)*texelSize;
     const float scale = 3.0;
 #endif
 
-    vec3 bloom = sampleBloomTile(colortex3, texcoord / 2.0, resScale, 0.25, 0.0) * weights[0];
+    // The first downsample is a separate half-resolution image.
+    vec3 bloom = sampleBloomRegion(colortex3, texcoord / 2.0, vec2(0.0), 0.5 * resScale) * weights[0];
     bloom += sampleBloomTile(colortex6, texcoord / 4.0, resScale, 0.25, 0.0) * weights[1];
     bloom += sampleBloomTile(colortex6, texcoord / 8.0, resScale, 0.125, 2.0) * weights[2];
     bloom += sampleBloomTile(colortex6, texcoord / 16.0, resScale, 0.0625, 4.0) * weights[3];
