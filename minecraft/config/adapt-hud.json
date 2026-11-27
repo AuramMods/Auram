@@ -1,0 +1,109 @@
+{
+  "schema": 4,
+  "active": "Default",
+  "reducedMotion": false,
+  "profiles": [
+    {
+      "schema": 4,
+      "name": "Default",
+      "scale": 1.0,
+      "autoFit": true,
+      "protect": 0.15,
+      "widgets": [
+        {
+          "id": "skills",
+          "kind": "skills",
+          "anchor": "bottom_left",
+          "x": 4.0,
+          "y": -3.98,
+          "scale": 1.5,
+          "opacity": 1.0,
+          "orientation": "vertical",
+          "visible": true,
+          "options": {
+            "pinned": [],
+            "maxRows": 4,
+            "lingerMillis": 3000,
+            "showNames": false,
+            "iconSize": 10
+          }
+        },
+        {
+          "id": "resources",
+          "kind": "resources",
+          "anchor": "bottom_right",
+          "x": -4.0,
+          "y": -31.77,
+          "scale": 0.25,
+          "opacity": 1.0,
+          "orientation": "vertical",
+          "visible": false,
+          "options": {
+            "power": true,
+            "master": true,
+            "wisdom": true,
+            "knowledge": true
+          }
+        },
+        {
+          "id": "abilities",
+          "kind": "abilities",
+          "anchor": "bottom_right",
+          "x": -159.25,
+          "y": -4.0,
+          "scale": 0.75,
+          "opacity": 1.0,
+          "orientation": "horizontal",
+          "visible": true,
+          "options": {
+            "arrangement": "row",
+            "growth": "auto",
+            "iconSize": 16,
+            "minIconSize": 10,
+            "maxShown": 40,
+            "maxRows": 4,
+            "maxColumns": 16,
+            "sort": "skill",
+            "cooldowns": true,
+            "charges": true,
+            "durations": true,
+            "toggles": true,
+            "skills": [],
+            "collapseGroups": false,
+            "footprint": 0.3,
+            "showNames": false
+          }
+        },
+        {
+          "id": "notices",
+          "kind": "notices",
+          "anchor": "bottom_center",
+          "x": 0.0,
+          "y": -43.0,
+          "scale": 0.6,
+          "opacity": 1.0,
+          "orientation": "vertical",
+          "visible": true,
+          "options": {
+            "maxLines": 2
+          }
+        },
+        {
+          "id": "toasts",
+          "kind": "toasts",
+          "anchor": "bottom_right",
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 0.8,
+          "opacity": 1.0,
+          "orientation": "vertical",
+          "visible": true,
+          "options": {
+            "durationMillis": 3000,
+            "maxVisible": 1
+          }
+        }
+      ]
+    }
+  ]
+}
