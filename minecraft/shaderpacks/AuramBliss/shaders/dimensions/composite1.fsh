@@ -1394,7 +1394,9 @@ void main() {
 			if (!hand){
 				vec3 ambientColor = (AmbientLightColor*2.5) * ambient_brightness; // x2.5 to match the brightness of upfacing skylight
 
-				Indirect_SSS = SubsurfaceScattering_sky(albedo, SkySSS, LabSSS);
+				if (LabSSS > 0.0 || LabSSS_Curve <= 0.0) {
+					Indirect_SSS = SubsurfaceScattering_sky(albedo, SkySSS, LabSSS);
+				}
 				Indirect_SSS *= lightmap.y*lightmap.y*lightmap.y;
 				Indirect_SSS *= AO;
 
@@ -1421,22 +1423,31 @@ void main() {
 				if(entities) sunSSS_density = 0.0;
 			#endif
 			
+			#if SSS_TYPE != 0
+				bool hasSunScattering = sunSSS_density > 0.0 || LabSSS_Curve <= 0.0;
+			#endif
 			#ifdef SCREENSPACE_CONTACT_SHADOWS
-				vec2 SS_directLight = SSRT_Shadows(auramSurfaceViewPosition(texcoord/RENDER_SCALE, z, DH_depth1), isDHrange, normalize(WsunVec*mat3(gbufferModelViewInverse)), interleaved_gradientNoise(), isLeaf || isGrass, hand);
-				
-				// combine shadowmap with a minumum shadow determined by the screenspace shadows.
-				Shadows = min(Shadows, SS_directLight.r);
-				// Shadows = SS_directLight.r;
-				
-				// combine shadowmap blocker depth with a minumum determined by the screenspace shadows, starting after the shadowmap ends
-				ShadowBlockerDepth = mix(SS_directLight.g, ShadowBlockerDepth, shadowMapFalloff2);
-				// ShadowBlockerDepth = max( SS_directLight.g,0.0);
+				bool skipContactTrace = false;
+				#ifdef AURAM_VOXY_DEPTH
+					// The Voxy trace cannot reduce the shadow below 0.25.
+					skipContactTrace = isDHrange && Shadows <= 0.25;
+					#if SSS_TYPE != 0
+						skipContactTrace = skipContactTrace && (!hasSunScattering || shadowMapFalloff2 == 1.0);
+					#endif
+				#endif
+				if (!skipContactTrace) {
+					vec2 contact = SSRT_Shadows(auramSurfaceViewPosition(texcoord/RENDER_SCALE, z, DH_depth1), isDHrange, normalize(WsunVec*mat3(gbufferModelViewInverse)), interleaved_gradientNoise(), isLeaf || isGrass, hand);
+					Shadows = min(Shadows, contact.r);
+					ShadowBlockerDepth = mix(contact.g, ShadowBlockerDepth, shadowMapFalloff2);
+				}
 			#endif
 
 			
             #if SSS_TYPE != 0
 			float scatteringAngle = clamp(dot(feetPlayerPos_normalized, WsunVec), 0.0, 1.0);
-			Direct_SSS = SubsurfaceScattering_sun(albedo, ShadowBlockerDepth, sunSSS_density, scatteringAngle, SSS_shadow, shadowMapFalloff2);
+			if (hasSunScattering) {
+				Direct_SSS = SubsurfaceScattering_sun(albedo, ShadowBlockerDepth, sunSSS_density, scatteringAngle, SSS_shadow, shadowMapFalloff2);
+			}
 
 			#ifndef SCREENSPACE_CONTACT_SHADOWS
 				Direct_SSS *= shadowMapFalloff2;

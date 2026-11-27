@@ -480,15 +480,11 @@ void main() {
     #endif
 
     #if defined DENOISE_SSS_AND_SSAO && indirect_effect == 1
-		vec3 FlatNormals = texture2D(colortex15,texcoord).rgb * 2.0 - 1.0;
-		
-		if(z >= 1.0){
-			FlatNormals = normal;
+		vec2 SSAO_SSS = vec2(1.0, 0.0);
+		if (!(swappedDepth >= 1.0)) {
+			vec3 FlatNormals = z >= 1.0 ? normal : texture2D(colortex15, texcoord).rgb * 2.0 - 1.0;
+			SSAO_SSS = SSAO(viewPos, FlatNormals, hand, isLeaf, noise);
 		}
-
-		vec2 SSAO_SSS = SSAO(viewPos, FlatNormals, hand, isLeaf, noise);
-
-		if(swappedDepth >= 1.0) SSAO_SSS = vec2(1.0,0.0);
 
         #ifdef BLISS_COMPAT
             SSAO_SSS = roundEven(clamp(SSAO_SSS, 0.0, 1.0) * 65535.0) / 65535.0;
