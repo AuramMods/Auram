@@ -82,9 +82,9 @@ vec4 GetVolumetricFog(
 
 	#ifdef AURAM_RENDER_VAPOR
 		if (auramVaporActive) {
-			vec2 interval = vaporRayInterval(origin, direction, surfaceDistance);
+			VaporRay vaporRay = vaporRayInterval(origin, direction, surfaceDistance);
 			float vaporTransmission = 1.0;
-			VaporScattering vapor = traceVapor(origin, direction, interval, 0.0, interval.y, vec3(0.034, 0.012, 0.008), vaporTransmission);
+			VaporScattering vapor = traceVapor(origin, direction, vaporRay, 0.0, vaporRay.visible.y, vec3(0.034, 0.012, 0.008), vaporTransmission);
 			color = color * vapor.transmission + vapor.ambient + vapor.blockLight;
 			absorbance *= vapor.transmission;
 		}

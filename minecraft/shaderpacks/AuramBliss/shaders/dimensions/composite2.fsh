@@ -383,8 +383,9 @@ void main() {
 	#if defined AURAM_VOXY_DEPTH && defined DH_OVERDRAW_PREVENTION
 		float lodOpaque = sampleLodOpaqueDepth(dhDepthTex1, tc);
 		float nearOpaque = texture2D(depthtex1, tc).r;
-		if (z0 >= nearOpaque) z0 = auramVisibleNearOpaqueDepth(uv, z0, lodOpaque);
-		DH_z0 = auramVoxyFrontDepth(DH_z0, lodOpaque);
+		vec2 frontDepths = auramVoxyFogSurface(uv, z0, nearOpaque, DH_z0, lodOpaque);
+		z0 = frontDepths.x;
+		DH_z0 = frontDepths.y;
 	#endif
 	vec4 volumeRay = volumeViewRay(uv, z0, DH_z0);
 	vec3 viewPos0 = auramFrontViewPosition(uv, z0, DH_z0);
@@ -458,6 +459,12 @@ void main() {
         #ifdef BLISS_COMPAT
             cloudTransmittance = roundEven(clamp(cloudTransmittance, 0.0, 1.0) * 65535.0) / 65535.0;
         #endif
-        gl_FragData[1] = vec4(cloudTransmittance, 0.0, 0.0, 0.0);
+        #if defined AURAM_VOXY_DEPTH && defined BLISS_COMPAT
+            // Publish the actual ray endpoint with the low-resolution fog sample.
+            float guideDepth = volumeRay.w >= 0.0 ? -viewPos0.z : -1.0;
+            gl_FragData[1] = vec4(cloudTransmittance, guideDepth, 0.0, 0.0);
+        #else
+            gl_FragData[1] = vec4(cloudTransmittance, 0.0, 0.0, 0.0);
+        #endif
 	#endif
 }

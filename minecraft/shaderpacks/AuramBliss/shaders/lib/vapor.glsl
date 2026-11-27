@@ -23,15 +23,17 @@ const float vaporRadius = float(AURAM_VAPOR_RADIUS);
 float vaporTranslucentStart = 0.0;
 #endif
 
-vec2 vaporRayInterval(vec3 origin, vec3 direction, float surfaceDistance) {
-    if (!auramVaporActive) return vec2(0.0);
-    vec2 cube = vaporCubeInterval(origin, direction, vaporCenter(), surfaceDistance);
-    if (cube.y <= cube.x) return vec2(0.0);
+struct VaporRay {
+    float sampleSpan;
+    vec2 visible;
+};
+
+VaporRay vaporRayInterval(vec3 origin, vec3 direction, float surfaceDistance) {
+    if (!auramVaporActive) return VaporRay(0.0, vec2(0.0));
+    vec2 cube = vaporCubeInterval(origin, direction, vaporCenter(), -1.0);
+    if (cube.y <= cube.x) return VaporRay(0.0, vec2(0.0));
     vec2 interval = vaporBoundsInterval(origin, direction, auramVaporMinimum, auramVaporMaximum, cube.y);
     float first = max(interval.x, cube.x);
-    #ifdef VAPOR_BEHIND_TRANSLUCENT
-        first = max(first, vaporTranslucentStart);
-    #endif
     float last = interval.y;
     #ifdef AURAM_VAPOR_RADIUS
         // The simulation can only supply density inside its own field.
@@ -39,12 +41,18 @@ vec2 vaporRayInterval(vec3 origin, vec3 direction, float surfaceDistance) {
         float speed2 = dot(direction, direction);
         float along = dot(offset, direction);
         float discriminant = along * along + speed2 * (vaporRadius * vaporRadius - dot(offset, offset));
-        if (discriminant <= 0.0) return vec2(0.0);
+        if (discriminant <= 0.0) return VaporRay(0.0, vec2(0.0));
         float halfLength = sqrt(discriminant);
         first = max(first, (-along - halfLength) / speed2);
         last = min(last, (-along + halfLength) / speed2);
     #endif
-    return last > first ? vec2(first, last) : vec2(0.0);
+    // Opaque clipping and translucent splits must not shift the vapor sample grid.
+    float sampleSpan = max(last - first, 0.0);
+    #ifdef VAPOR_BEHIND_TRANSLUCENT
+        first = max(first, vaporTranslucentStart);
+    #endif
+    if (surfaceDistance >= 0.0) last = min(last, surfaceDistance);
+    return VaporRay(sampleSpan, last > first ? vec2(first, last) : vec2(0.0));
 }
 
 float vaporDetailNoise(vec3 position) {
@@ -100,7 +108,8 @@ struct VaporScattering {
     float transmission;
 };
 
-VaporScattering traceVapor(vec3 origin, vec3 direction, vec2 interval, float start, float stop, vec3 ambient, inout float rayTransmission) {
+VaporScattering traceVapor(vec3 origin, vec3 direction, VaporRay ray, float start, float stop, vec3 ambient, inout float rayTransmission) {
+    vec2 interval = ray.visible;
     float first = max(start, interval.x);
     float last = min(stop, interval.y);
     if (last <= first) return VaporScattering(vec3(0.0), vec3(0.0), 1.0);
@@ -115,7 +124,7 @@ VaporScattering traceVapor(vec3 origin, vec3 direction, vec2 interval, float sta
     int axis = speed.x >= speed.y && speed.x >= speed.z ? 0 : (speed.y >= speed.z ? 1 : 2);
     float axisSpeed = speed[axis];
     const float baseUnits = floor(VAPOR_SAMPLE_SPACING * 256.0 + 0.5);
-    float minUnits = (interval.y - interval.x) * axisSpeed * 256.0 / float(VAPOR_MAX_SAMPLES - 1);
+    float minUnits = ray.sampleSpan * axisSpeed * 256.0 / float(VAPOR_MAX_SAMPLES - 1);
     int stepUnits = int(baseUnits) << int(ceil(log2(max(minUnits / baseUnits, 1.0))));
     float axisSpacing = float(stepUnits) / 256.0;
     float stride = axisSpacing / axisSpeed;

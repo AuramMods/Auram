@@ -73,6 +73,11 @@ float auramVisibleNearOpaqueDepth(vec2 uv, float nearDepth, float lodDepth) {
     // A Voxy fragment beyond the match tolerance wrote its own material and depth.
     return gap > auramVoxyOpaqueTolerance(lod) ? 1.0 : nearDepth;
 }
+
+vec2 auramVoxyFogSurface(vec2 uv, float nearFront, float nearOpaque, float lodFront, float lodOpaque) {
+    if (nearFront >= nearOpaque) nearFront = auramVisibleNearOpaqueDepth(uv, nearFront, lodOpaque);
+    return vec2(nearFront, auramVoxyFrontDepth(lodFront, lodOpaque));
+}
 #endif
 #endif
 

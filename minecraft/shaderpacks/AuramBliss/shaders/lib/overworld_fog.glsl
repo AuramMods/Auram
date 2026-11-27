@@ -113,9 +113,9 @@ vec4 GetVolumetricFog(
 	vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
 	vec3 worldOrigin = vaporOrigin + cameraPosition;
 	#ifdef AURAM_RENDER_VAPOR
-		vec2 vaporInterval = vaporRayInterval(vaporOrigin, worldDirection, surfaceDistance);
+		VaporRay vaporRay = vaporRayInterval(vaporOrigin, worldDirection, surfaceDistance);
 		float vaporTransmission = 1.0;
-		rayEnd = max(rayEnd, vaporInterval.y);
+		rayEnd = max(rayEnd, vaporRay.visible.y);
 	#endif
 	#if defined DIMENSION_SMOKE || (defined MIDNIGHT_SHADER && defined MIDNIGHT_SMOKE)
 		vec3 smokeCenter = vaporCenter();
@@ -332,10 +332,10 @@ vec4 GetVolumetricFog(
 			float fogTransmittanceAtCloud = totalAbsorbance * mix(1.0, fogToCloud, lightLevelZero);
 			totalAbsorbance *= mix(1.0, fogVolumeCoeff, lightLevelZero);
 			#ifdef AURAM_RENDER_VAPOR
-				if (vaporInterval.y > vaporStart && vaporInterval.x < stepEnd) {
+				if (vaporRay.visible.y > vaporStart && vaporRay.visible.x < stepEnd) {
 					vec3 vaporLight = indirectLight * (0.08 + 0.92 * lightLevelZero) + DirectLight * 0.25;
 					vaporLight += vec3(0.003);
-					VaporScattering vapor = traceVapor(vaporOrigin, worldDirection, vaporInterval, vaporStart, stepEnd, vaporLight, vaporTransmission);
+					VaporScattering vapor = traceVapor(vaporOrigin, worldDirection, vaporRay, vaporStart, stepEnd, vaporLight, vaporTransmission);
 					float vaporWeight = totalAbsorbance * mix(cloud.a, 1.0, beforeCloud);
 					color += vapor.ambient * vaporWeight;
 					#ifdef ATUM_SHADER

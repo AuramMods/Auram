@@ -137,12 +137,23 @@ vec2 decodeVec2(float a){
     return fract( a * constant1 ) * constant2 ;
 }
 #if defined AURAM_VOXY_DEPTH && defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
+    #if defined AURAM_VAPOR_BACKEND && defined VOLUMETRIC_VAPOR
+        #define AURAM_VAPOR_EDGE_TAPS
+        uniform bool auramVaporActive;
+    #endif
 float frontViewDepth(ivec2 pixel) {
     vec2 uv = (vec2(pixel) + 0.5) * texelSize;
     float nearDepth = texelFetch2D(depthtex0, pixel, 0).x;
     float lodDepth = sampleLodDepth(dhDepthTex, uv).x;
-    if (auramVoxyFrontIsLod(nearDepth, lodDepth)) return auramAxialDepth(lodDepth, dhProjectionInverse);
-    return nearDepth < 1.0 ? auramAxialDepth(nearDepth, gbufferProjectionInverse) : -1.0;
+    #ifdef DH_OVERDRAW_PREVENTION
+        float nearOpaque = texelFetch2D(depthtex1, pixel, 0).r;
+        float lodOpaque = sampleLodOpaqueDepth(dhDepthTex1, uv);
+        vec2 frontDepths = auramVoxyFogSurface(uv / RENDER_SCALE, nearDepth, nearOpaque, lodDepth, lodOpaque);
+        nearDepth = frontDepths.x;
+        lodDepth = frontDepths.y;
+    #endif
+    if (nearDepth >= 1.0 && !auramHasVoxyDepth(lodDepth)) return -1.0;
+    return -auramFrontViewPosition(uv / RENDER_SCALE, nearDepth, lodDepth).z;
 }
 #endif
 
@@ -172,6 +183,10 @@ vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord
 
 	vec4 RESULT = vec4(0.0);
 	float SUM = 0.0;
+    #ifdef AURAM_VAPOR_EDGE_TAPS
+        float foregroundDepth = -1.0;
+        ivec2 foregroundTap = ivec2(0);
+    #endif
 
 	for (int i = 0; i < 5; i++) {
 		
@@ -181,9 +196,24 @@ vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord
         #if defined AURAM_VOXY_DEPTH && defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
             ivec2 lastPixel = ivec2(TAA_VIEWPORT_SIZE(1.0 / texelSize)) - 1;
             if (any(lessThan(depthPixel, ivec2(0))) || any(greaterThan(depthPixel, lastPixel))) continue;
-            float offsetDepth = frontViewDepth(depthPixel);
+            #ifdef BLISS_COMPAT
+                vec2 fogGuide = texelFetch2D(tex2, posColor + radius + pos, 0).rg;
+                float offsetDepth = fogGuide.g;
+            #else
+                float offsetDepth = frontViewDepth(depthPixel);
+            #endif
             if ((offsetDepth < 0.0) != (referenceDepth < 0.0)
-                || abs(offsetDepth - referenceDepth) >= diffThreshold) continue;
+                || abs(offsetDepth - referenceDepth) >= diffThreshold) {
+                #ifdef AURAM_VAPOR_EDGE_TAPS
+                    // A ray that stops earlier can fill a silhouette gap without revealing fog behind the surface.
+                    if (auramVaporActive && offsetDepth > foregroundDepth && offsetDepth >= 0.0
+                            && (referenceDepth < 0.0 || offsetDepth <= referenceDepth)) {
+                        foregroundDepth = offsetDepth;
+                        foregroundTap = posColor + radius + pos;
+                    }
+                #endif
+                continue;
+            }
             float EDGES = 1.0;
         #else
             #ifdef AURAM_LOD_DEPTH
@@ -197,7 +227,11 @@ vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord
 		RESULT += texelFetch2D(tex, posColor + radius + pos, 0) * EDGES;
 
     #if defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
-	    CLOUDALPHA += texelFetch2D(tex2, posColor + radius + pos, 0).x * EDGES;
+        #if defined AURAM_VOXY_DEPTH && defined BLISS_COMPAT
+            CLOUDALPHA += fogGuide.r * EDGES;
+        #else
+            CLOUDALPHA += texelFetch2D(tex2, posColor + radius + pos, 0).x * EDGES;
+        #endif
     #endif
 		
     SUM += EDGES;
@@ -206,6 +240,12 @@ vec4 BilateralUpscale(sampler2D tex, sampler2D tex2, sampler2D depth, vec2 coord
     #if defined AURAM_VOXY_DEPTH && defined OVERWORLD_SHADER && defined CLOUDS_INTERSECT_TERRAIN
         // A thin foreground surface can have no matching low-resolution tap.
         if (SUM == 0.0) {
+            #ifdef AURAM_VAPOR_EDGE_TAPS
+                if (foregroundDepth >= 0.0) {
+                    CLOUDALPHA = texelFetch2D(tex2, foregroundTap, 0).r;
+                    return texelFetch2D(tex, foregroundTap, 0);
+                }
+            #endif
             CLOUDALPHA = 1.0;
             return vec4(0.0, 0.0, 0.0, 1.0);
         }

@@ -333,9 +333,9 @@ vec4 GetVolumetricFog(
 		if (auramVaporActive && dL > 1e-6) {
 			vec3 vaporOrigin = gbufferModelViewInverse[3].xyz;
 			vec3 vaporDirection = dVWorld / dL;
-			vec2 interval = vaporRayInterval(vaporOrigin, vaporDirection, surfaceDistance);
+			VaporRay vaporRay = vaporRayInterval(vaporOrigin, vaporDirection, surfaceDistance);
 			float vaporTransmission = 1.0;
-			VaporScattering vapor = traceVapor(vaporOrigin, vaporDirection, interval, 0.0, interval.y, vec3(0.019, 0.013, 0.032), vaporTransmission);
+			VaporScattering vapor = traceVapor(vaporOrigin, vaporDirection, vaporRay, 0.0, vaporRay.visible.y, vec3(0.019, 0.013, 0.032), vaporTransmission);
 			color = color * vapor.transmission + vapor.ambient + vapor.blockLight;
 			absorbance *= vapor.transmission;
 		}
