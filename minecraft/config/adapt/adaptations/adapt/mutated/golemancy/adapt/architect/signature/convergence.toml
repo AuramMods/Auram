@@ -1,0 +1,70 @@
+# Adapt configuration - adaptation:adapt:mutated/golemancy/adapt/architect/signature/convergence
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# A golem given a Mason's Template builds the previewed stamp from your Deposit Node while you stay near.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 0
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 0
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Most blocks one golem lays for one order at level 1.
+# Effect: Higher values let golems finish larger stamps.
+blocksAtFirstLevel = 216
+# Most blocks one golem lays for one order at the top level.
+# Effect: Higher values let golems finish larger stamps.
+blocksAtTopLevel = 2744
+# Blocks a golem lays per second at level 1.
+# Effect: Higher values build faster.
+blocksPerSecondAtFirstLevel = 1.0
+# Blocks a golem lays per second at the top level.
+# Effect: Higher values build faster.
+blocksPerSecondAtTopLevel = 4.0
+# Blocks around the golem searched for your Deposit Node.
+# Effect: Higher values find nodes farther from the golem.
+nodeRadius = 16.0
+# Blocks from the golem a placement may be.
+# Effect: Higher values let a golem build farther from where it stands.
+golemReach = 24.0
+# Blocks you may move from the golem before it stops building.
+# Effect: Higher values let you wander farther.
+leashBlocks = 32.0
+# Seconds after a template preview during which a golem can be given that stamp.
+# Effect: Higher values give more time to reach the golem.
+orderSeconds = 60.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

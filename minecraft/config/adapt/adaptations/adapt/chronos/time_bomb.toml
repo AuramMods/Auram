@@ -1,0 +1,154 @@
+# Adapt configuration - adaptation:adapt:chronos/time_bomb
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Throw a crafted chrono bomb that creates a temporal field, slowing entities and freezing projectiles.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 5
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 3
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Controls Play clock sounds for the adapt:chronos/time_bomb adaptation.
+playClockSounds = true
+# Base temporal-field radius in blocks.
+# Effect: Level scaling can expand the field up to the hard 16-block radius limit.
+baseRadius = 6.0
+# Additional temporal-field radius per adaptation level.
+# Effect: Higher values reach the hard 16-block radius limit sooner.
+radiusPerLevel = 1.5
+# Duration or timing used by the adapt:chronos/time_bomb adaptation.
+baseDurationTicks = 60
+# Duration or timing used by the adapt:chronos/time_bomb adaptation.
+durationPerLevelTicks = 25
+# Cooldown between the adapt:chronos/time_bomb adaptation activations.
+cooldownMillis = 15000
+# Controls Slowness amplifier for the adapt:chronos/time_bomb adaptation.
+slownessAmplifier = 2
+# Controls Caster slowness amplifier for the adapt:chronos/time_bomb adaptation.
+casterSlownessAmplifier = 1
+# Controls Fatigue amplifier for the adapt:chronos/time_bomb adaptation.
+fatigueAmplifier = 1
+# Controls Freeze players in air for the adapt:chronos/time_bomb adaptation.
+freezePlayersInAir = true
+# Controls Accumulate frozen impulse for the adapt:chronos/time_bomb adaptation.
+accumulateFrozenImpulse = true
+# Controls Frozen impulse min magnitude for the adapt:chronos/time_bomb adaptation.
+frozenImpulseMinMagnitude = 0.03
+# Maximum cap applied to the adapt:chronos/time_bomb adaptation.
+frozenImpulseSampleCap = 2.8
+# Maximum cap applied to the adapt:chronos/time_bomb adaptation.
+frozenImpulseReleaseCap = 7.5
+# Duration or timing used by the adapt:chronos/time_bomb adaptation.
+effectRefreshTicks = 24
+# Controls Show field sphere for the adapt:chronos/time_bomb adaptation.
+showFieldSphere = true
+# Duration or timing used by the adapt:chronos/time_bomb adaptation.
+fieldSphereRefreshMillis = 100
+# Duration or timing used by the adapt:chronos/time_bomb adaptation.
+fieldTickMinIntervalMillis = 70
+# Scaling applied to the adapt:chronos/time_bomb adaptation.
+fieldTickAccelerationFactor = 0.82
+# Maximum concurrent temporal fields processed by this server.
+# Effect: Bounds active field state and replaces the field nearest expiry when full.
+maxActiveFields = 32
+# Interval between temporal field entity scans.
+# Effect: Values are constrained to 200-250 milliseconds to preserve feel while bounding scan frequency.
+fieldScanIntervalMillis = 250
+# Maximum loaded-region scans shared by all temporal fields per scan cycle.
+# Effect: Bounds region scheduler and chunk-query work.
+maxRegionScansPerCycle = 64
+# Maximum loaded-region scans assigned to one temporal field per scan cycle.
+# Effect: Prevents one large field from monopolizing scan work.
+maxRegionScansPerField = 8
+# Maximum entities scheduled for temporal field evaluation per scan cycle.
+# Effect: Bounds aggregate entity scheduler work.
+maxEntitiesPerScanCycle = 512
+# Maximum entities assigned to one temporal field per scan cycle.
+# Effect: Shares entity work fairly across concurrent fields.
+maxEntitiesPerField = 64
+# Maximum entities read from one owned loaded region during a field scan.
+# Effect: Bounds burst work in entity-dense chunks.
+maxEntitiesPerRegion = 64
+# Maximum frozen non-player entities reconciled per tick.
+# Effect: Bounds retained-state checks and release work.
+maxFrozenEntitiesPerTick = 256
+# Maximum frozen players reconciled per tick.
+# Effect: Bounds player-owned retained-state checks and release work.
+maxFrozenPlayersPerTick = 128
+# Maximum field presentation particles shared by all temporal fields per tick.
+# Effect: Bounds aggregate field and thaw visual effects.
+maxFieldFxParticlesPerTick = 512
+# Maximum field presentation particles assigned to one temporal field per tick.
+# Effect: Prevents one field from monopolizing visual effects.
+maxFieldFxParticlesPerField = 48
+# Maximum sphere particles emitted by one field refresh.
+# Effect: Bounds the visible lattice while retaining full field scale.
+maxFieldSphereParticlesPerField = 36
+# Maximum freeze-impact particles shared by all temporal fields per scan cycle.
+# Effect: Bounds combat visual effect work.
+maxFreezeFxParticlesPerScan = 256
+# Maximum freeze-impact particles assigned to one temporal field per scan cycle.
+# Effect: Shares combat visual effects fairly across fields.
+maxFreezeFxParticlesPerField = 24
+# XP gain tuning for the adapt:chronos/time_bomb adaptation.
+xpOnCast = 28.0
+# XP gain tuning for the adapt:chronos/time_bomb adaptation.
+xpPerLevel = 3.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.clock-sounds]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.private-visuals]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

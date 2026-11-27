@@ -1,0 +1,88 @@
+# Adapt configuration - adaptation:adapt:mutated/hunter/adapt/ranged/signature/convergence
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Your Tracker's Compass quarry glows for you far past the compass's reach, and a bow drawn at it locks on from far away.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 0
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 0
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# How far the quarry glows for you at level 1, in blocks.
+# Effect: Higher values reveal the quarry farther away but search a wider area.
+glowRangeAtFirstLevel = 96.0
+# How far the quarry glows for you at the top level, in blocks.
+# Effect: Higher values reveal the quarry farther away but search a wider area.
+glowRangeAtTopLevel = 128.0
+# Farthest a drawn bow locks on at level 1, in blocks.
+# Effect: Higher values lock from farther away.
+lockRangeAtFirstLevel = 40.0
+# Farthest a drawn bow locks on at the top level, in blocks.
+# Effect: Higher values lock from farther away.
+lockRangeAtTopLevel = 64.0
+# Widest angle between your aim and the quarry that still locks, in degrees.
+# Effect: Higher values forgive looser aim.
+aimConeDegrees = 12.0
+# Glow pulses a found quarry, or finding none, is kept before the area is searched again.
+# Effect: Higher values search less often.
+rescanPulses = 6
+# How long a lock waits for the shot, in milliseconds.
+# Effect: Higher values allow slower draws.
+lockMillis = 4000
+# Longest a called arrow steers, in milliseconds.
+# Effect: Higher values let arrows chase longer.
+maxFlightMillis = 6000
+# Distance the opening curve lasts, in blocks.
+# Effect: Higher values make a wider opening curve.
+initialArcDistance = 12.0
+# How far ahead the opening curve bends from, in blocks.
+# Effect: Higher values make the curve leave straighter.
+initialArcControlDistance = 8.0
+# Distance from the quarry where the arrow turns hardest, in blocks.
+# Effect: Higher values start the final turn earlier.
+lungeRadius = 2.5
+# Steering per tick in flight, in degrees.
+# Effect: Higher values let arrows turn tighter.
+turnDegreesPerTick = 10.0
+# Steering per tick near the quarry, in degrees.
+# Effect: Higher values make final turns sharper.
+lungeTurnDegreesPerTick = 18.0
+# Cooldown after a called shot, in milliseconds.
+# Effect: Higher values space called shots further apart.
+cooldownMillis = 0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

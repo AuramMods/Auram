@@ -1,0 +1,121 @@
+# Adapt configuration - adaptation:adapt:stealth/silent_step
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Core stealth detection. Sneaking uses observer awareness, while invisibility or an active Shadow Decoy always counts as undetected.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 1
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Distance/area limit used by the adapt:stealth/silent_step adaptation.
+radiusBase = 6.0
+# Scaling applied to the adapt:stealth/silent_step adaptation.
+radiusFactor = 8.0
+# Distance/area limit used by the adapt:stealth/silent_step adaptation.
+playerDetectionRadiusBase = 10.0
+# Scaling applied to the adapt:stealth/silent_step adaptation.
+playerDetectionRadiusFactor = 14.0
+# Duration or timing used by the adapt:stealth/silent_step adaptation.
+dimDurationTicksBase = 20.0
+# Scaling applied to the adapt:stealth/silent_step adaptation.
+dimDurationTicksFactor = 20.0
+# Controls Dim amplifier for the adapt:stealth/silent_step adaptation.
+dimAmplifier = 0
+# Controls Mob backstab base for the adapt:stealth/silent_step adaptation.
+mobBackstabBase = 1.25
+# Scaling applied to the adapt:stealth/silent_step adaptation.
+mobBackstabFactor = 0.75
+# Controls Player backstab base for the adapt:stealth/silent_step adaptation.
+playerBackstabBase = 1.1
+# Scaling applied to the adapt:stealth/silent_step adaptation.
+playerBackstabFactor = 0.5
+# XP gain tuning for the adapt:stealth/silent_step adaptation.
+xpPerTargetDrop = 2.0
+# XP gain tuning for the adapt:stealth/silent_step adaptation.
+xpPerBonusDamage = 3.0
+# Shows nearby threats with per-player glowing while sneaking (red = can detect, gray = almost).
+# Effect: Enable to get visual awareness of entities that can or almost can spot you.
+showThreatGlows = true
+# Look-dot margin below the full detection threshold used for gray 'almost detect' glow.
+# Effect: Higher values make gray warnings appear earlier; lower values make warnings stricter.
+almostLookDotMargin = 0.2
+# Look-dot threshold for stealth visibility checks while sneaking.
+# Effect: Lower values make crossing an entity's view count as seen more easily; higher values require a more direct look.
+detectionLookDotThreshold = 0.2
+# If true, all nearby mobs (including passive) can break hidden state when they have line-of-sight.
+# Effect: Enable to prevent stealth from feeling hidden in front of passive mobs like pigs.
+allMobsAffectStealthVisibility = true
+# Entity types that are NOT ignored by stealth targeting suppression.
+# Effect: Mobs listed here can still detect or target sneaking players using Stealth.
+targetingBlacklistTypes = ["WARDEN", "WITHER", "PHANTOM", "ENDER_DRAGON"]
+# Milliseconds between nearby threat-awareness scans while sneaking.
+# Effect: Lower values update threat glows faster but increase nearby-entity scan frequency.
+threatScanIntervalMillis = 250
+# Maximum mobs inspected by each target-drop scan.
+# Effect: Caps per-player work in dense farms while keeping the closest scheduler-provided candidates responsive.
+maxTargetDropEntitiesPerScan = 32
+# Maximum mobs and players inspected by each threat-awareness scan.
+# Effect: Caps cross-entity dispatch in dense hubs; higher values improve awareness coverage at greater scheduler cost.
+maxThreatEntitiesPerScan = 32
+# Ticks allowed for secondary entity threat checks to complete before applying partial results.
+# Effect: Small values keep the HUD responsive without waiting indefinitely for retired or migrating entities.
+threatScanCompletionDelayTicks = 2
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.glows]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.status]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

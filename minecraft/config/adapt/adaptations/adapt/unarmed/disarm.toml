@@ -1,0 +1,89 @@
+# Adapt configuration - adaptation:adapt:unarmed/disarm
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Bare-hand hits can knock the target's held item to the ground.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Allows disarming other players, not just mobs.
+# Effect: True lets bare-hand hits knock items out of player hands in PVP.
+allowDisarmPlayers = true
+# Chance that a successful disarm against a mob also knocks loose a worn armor piece.
+# Effect: Higher values strip mob armor faster; players never lose armor.
+mobArmorDropChance = 0.5
+# Base chance for a bare-hand hit to disarm the target.
+# Effect: Higher values make disarms proc more often at level 1.
+chanceBase = 0.04
+# Additional disarm chance granted at max level.
+# Effect: Higher values make disarms proc more often as levels increase.
+chanceFactor = 0.18
+# Pickup delay ticks applied to the knocked item.
+# Effect: Higher values keep the victim from re-grabbing the item for longer.
+pickupDelayTicks = 60
+# Per-target cooldown in milliseconds between disarms.
+# Effect: Higher values prevent chain-disarming the same target.
+targetCooldownMillis = 8000
+# XP granted per successful disarm.
+# Effect: Higher values speed up unarmed skill progression from disarms.
+xpPerDisarm = 28.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.mob-armor]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.player-targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

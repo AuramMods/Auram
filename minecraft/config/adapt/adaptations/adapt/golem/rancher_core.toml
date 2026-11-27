@@ -1,0 +1,129 @@
+# Adapt configuration - adaptation:adapt:golem/rancher_core
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Golems bound with a Rancher Core tend the animals in a Pasture Node's area: they breed pairs up to the node's keep count, then shear sheep, milk cows and goats, and cull spare adults as the core grows stronger.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["adapt:golem/node_weaving@1"]
+# Animals Pasture Nodes tend, by entity type name. Each Pasture Node tends all of them or the one species chosen in its Node GUI. Names that are not animals, and hostile animals such as hoglins, are ignored.
+# Effect: Remove a name to have Ranchers leave that animal alone, or add a breedable animal to have them tend it.
+species = ["COW", "MOOSHROOM", "SHEEP", "PIG", "CHICKEN", "GOAT", "RABBIT"]
+# Keep count of a Pasture Node whose keep count was never changed in its Node GUI. Ranchers breed a species while its adults and babies in the area, plus one for each pair in love, number fewer than this; a lone animal in love counts as a pair. They cull adults above it, counting adults only. Values load between 2 and 64.
+# Effect: Higher values keep bigger herds.
+defaultKeep = 8
+# Ticks a Rancher spends on each breeding, shearing, milking or culling action after it reaches the animal. Swiftness runes and Copper Frame's Static Overdrive shorten it. Values below 1 load as 1.
+# Effect: Lower values make Ranchers work faster.
+actionIntervalTicks = 40
+# Rancher Core level at which Ranchers shear sheep.
+# Effect: Lower values unlock shearing sooner.
+shearLevel = 2
+# Rancher Core level at which Ranchers milk cows, goats and mooshrooms with buckets or bowls from their linked home chest.
+# Effect: Lower values unlock milking sooner.
+milkLevel = 3
+# Rancher Core level at which iron Ranchers cull adults above a Pasture Node's keep count.
+# Effect: Lower values unlock culling sooner.
+cullLevel = 4
+# Rancher Core level at which Husbandry shortens the breeding cooldown of animals a Rancher fed and adds loot rolls to each cull.
+# Effect: Lower values unlock Husbandry sooner.
+husbandryLevel = 5
+# Multiplier, from 0 to 1, on the breeding cooldown of parents a Rancher fed once Husbandry is unlocked. 0.5 halves it. Values outside that range load as the nearest limit.
+# Effect: Lower values let animals breed again sooner.
+husbandryCooldownMultiplier = 0.5
+# Extra times a culled animal's loot is rolled once Husbandry is unlocked, from 0 to 8. Values outside that range load as the nearest limit.
+# Effect: Higher values give more drops from each cull.
+husbandryExtraLootRolls = 1
+# Golemancy work XP paid for each pair of animals a Rancher feeds to breed, half for each animal fed. Values below 0 load as 0.
+# Effect: Higher values pay more XP for breeding.
+workXpPerPair = 4.0
+# Golemancy work XP paid for each sheep a Rancher shears. Values below 0 load as 0.
+# Effect: Higher values pay more XP for shearing.
+workXpPerShear = 2.0
+# Golemancy work XP paid for each bucket or bowl a Rancher fills. Values below 0 load as 0.
+# Effect: Higher values pay more XP for milking.
+workXpPerMilk = 1.0
+# Golemancy work XP paid for each animal a Rancher culls. Values below 0 load as 0.
+# Effect: Higher values pay more XP for culling.
+workXpPerCull = 1.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+# Settings for the adapt:golem/rancher_core adaptation Rancher core recipe section.
+[rancherCoreRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", "YBY", " Z "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:core/rancher"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[rancherCoreRecipe.keys]
+B = "golemancy:blank_core"
+X = "SHEARS"
+Y = "WHEAT"
+Z = "LEAD"
+
+# Settings for the adapt:golem/rancher_core adaptation Pasture node recipe section.
+[pastureNodeRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", " B ", "   "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:node/pasture"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[pastureNodeRecipe.keys]
+B = "golemancy:blank_node"
+X = "LEAD"
+

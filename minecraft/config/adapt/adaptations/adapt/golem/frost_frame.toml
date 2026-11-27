@@ -1,0 +1,82 @@
+# Adapt configuration - adaptation:adapt:golem/frost_frame
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Strengthens your bound frost golems with extra health, damaging snowballs and protection from rain and heat.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["adapt:golem/animus_binding@1"]
+# Extra maximum health for your bound frost golems, by Frost Frame level from level 1 upward.
+# Effect: Higher values make frost golems tougher; a golem heals by any gain above the highest maximum health it has had.
+healthBonusByLevel = [4, 8, 12, 16, 20]
+# Damage a bound frost golem's snowball deals to the golem's target or a hostile mob, by Frost Frame level from level 1 upward.
+# Effect: Higher values make snowballs hit harder; snowballs never deal less than vanilla, such as 3 against blazes.
+snowballDamageByLevel = [1, 2, 2, 3, 4]
+# Multiplier on the damage bound frost golems take in warm biomes, by Frost Frame level from level 1 upward.
+# Effect: Lower values protect frost golems in warm biomes; 0 makes them immune.
+warmBiomeDamageMultiplierByLevel = [1.0, 0.5, 0.0, 0.0, 0.0]
+# Frost Frame level at which snowball hits slow the target with Chill.
+# Effect: Lower values unlock Chill sooner.
+chillLevel = 3
+# Ticks of Slowness I a Chill snowball hit applies.
+# Effect: Higher values keep targets slowed longer.
+chillTicks = 40
+# Frost Frame level at which bound frost golems can throw an extra snowball.
+# Effect: Lower values unlock the faster fire rate sooner.
+fireRateBonusLevel = 4
+# Chance, from 0 to 1, that each snowball a bound frost golem throws is followed 5 ticks later by a second one at the same target.
+# Effect: Higher values raise the fire rate.
+extraSnowballChance = 0.25
+# Frost Frame level at which snowball hits can freeze the target with Frostbite.
+# Effect: Lower values unlock Frostbite sooner.
+frostbiteLevel = 5
+# Snowball hits that must land on one target within frostbiteWindowMillis to freeze it.
+# Effect: Lower values freeze targets sooner.
+frostbiteHits = 4
+# Milliseconds within which the frostbiteHits snowball hits must land.
+# Effect: Higher values make Frostbite easier to trigger.
+frostbiteWindowMillis = 5000
+# Ticks a Frostbite target stays fully frozen before it starts to thaw.
+# Effect: Higher values keep targets frozen longer.
+frostbiteFreezeTicks = 100
+# Milliseconds before Frostbite can freeze the same target again.
+# Effect: Lower values let Frostbite freeze a target more often.
+frostbitePerTargetCooldownMillis = 10000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,100 @@
+# Adapt configuration - adaptation:adapt:stealth/upgrade/phantom_decoy
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# A Smoke Pellet leaves a decoy you can swap places with, or steps you behind a creature that cannot see you.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Decoy lifetime before level scaling, in ticks.
+# Effect: Higher values keep the decoy and its smoke longer.
+decoyTicksBase = 80
+# Decoy lifetime added per level, in ticks.
+# Effect: Higher values reward higher levels more.
+decoyTicksPerLevel = 40
+# Radius around the decoy that it pulls aggro from, in blocks.
+# Effect: Higher values pull mobs from farther away.
+aggroRadius = 12.0
+# Smoke cloud radius before level scaling, in blocks.
+# Effect: Higher values hide more around the decoy.
+smokeRadiusBase = 2.5
+# Smoke cloud radius added per level, in blocks.
+# Effect: Higher values reward higher levels more.
+smokeRadiusPerLevel = 0.75
+# Time between decoys before level scaling, in milliseconds.
+# Effect: Higher values make decoys rarer.
+cooldownMillisBase = 20000.0
+# Cooldown removed per level, in milliseconds.
+# Effect: Higher values let higher levels spawn decoys more often.
+cooldownMillisPerLevel = 4000.0
+# Shortest time between decoys, in milliseconds.
+# Effect: Lower values allow more frequent decoys.
+minimumCooldownMillis = 6000.0
+# Farthest the decoy can be for a swap, in blocks.
+# Effect: Higher values let you swap from farther away.
+swapRange = 48.0
+# Time between two swaps, in milliseconds.
+# Effect: Lower values let you swap back and forth faster.
+swapCooldownMillis = 1000
+# Shadow Step range before level scaling, in blocks.
+# Effect: Higher values let you step to farther creatures.
+stepRangeBase = 4.0
+# Shadow Step range added per level, in blocks.
+# Effect: Higher values reward higher levels more.
+stepRangePerLevel = 4.0
+# Time between Shadow Steps before level scaling, in milliseconds.
+# Effect: Higher values make steps rarer.
+stepCooldownMillisBase = 25000.0
+# Shadow Step cooldown removed per level, in milliseconds.
+# Effect: Higher values let higher levels step more often.
+stepCooldownMillisPerLevel = 5000.0
+# Shortest time between Shadow Steps, in milliseconds.
+# Effect: Lower values allow more frequent steps.
+minimumStepCooldownMillis = 5000.0
+# Gap kept behind the target's back on landing, in blocks.
+# Effect: Higher values land you farther from the target.
+stepBehindDistance = 0.8
+# Smoke pulses left where you vanish.
+# Effect: Higher values keep the smoke longer.
+stepSmokePulses = 4
+# Time after a Shadow Step in which your first hit on the target is a Death Mark opening, in milliseconds.
+# Effect: Higher values give more time to strike.
+openingWindowMillis = 2000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

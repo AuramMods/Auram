@@ -1,0 +1,90 @@
+# Adapt configuration - adaptation:adapt:nether/strider_bond
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Ride striders faster, keep their pace out of lava, and land safely when dismounting over lava.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 1
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 4
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Controls Strider speed amplifier base for the adapt:nether/strider_bond adaptation.
+striderSpeedAmplifierBase = 0.0
+# Scaling applied to the adapt:nether/strider_bond adaptation.
+striderSpeedAmplifierFactor = 1.5
+# Duration or timing used by the adapt:nether/strider_bond adaptation.
+speedTicks = 60
+# Controls Safety unlock level for the adapt:nether/strider_bond adaptation.
+# Effect: Higher values require more levels before the lava-dismount rescue activates.
+safetyUnlockLevel = 2
+# Distance/area limit used by the adapt:nether/strider_bond adaptation.
+searchRadiusBase = 4.0
+# Scaling applied to the adapt:nether/strider_bond adaptation.
+searchRadiusFactor = 4.0
+# Distance/area limit used by the adapt:nether/strider_bond adaptation.
+# Effect: Caps the block search radius to keep the rescue scan within the local region.
+searchRadiusMax = 8
+# XP gain tuning for the adapt:nether/strider_bond adaptation.
+xpPerRide = 2.0
+# XP gain tuning for the adapt:nether/strider_bond adaptation.
+xpIntervalMillis = 1500
+# XP gain tuning for the adapt:nether/strider_bond adaptation.
+xpPerRescue = 30.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.rescue]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.speed]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,58 @@
+# Adapt configuration - skill:adapt:rift
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this skill and everything registered under it.
+# Effect: Set to false to remove the skill from menus and stop its XP and adaptations.
+enabled = true
+# Skill colour as #RRGGBB, used for its name and pages.
+# Effect: Leave empty for the colour the skill was written with.
+skillColor = ""
+# XP below which an award in this skill is not shown to the player.
+# Effect: Higher values hide more small awards from the XP ticker.
+minXp = 100.0
+# XP gain tuning for the adapt:rift skill.
+destroyEndCrystalXP = 250.0
+# XP gain tuning for the adapt:rift skill.
+damageEndermanXPMultiplier = 4.0
+# XP gain tuning for the adapt:rift skill.
+damageEndermiteXPMultiplier = 2.0
+# XP gain tuning for the adapt:rift skill.
+damageEnderdragonXPMultiplier = 8.0
+# XP gain tuning for the adapt:rift skill.
+throwEnderpearlXP = 65.0
+# XP gain tuning for the adapt:rift skill.
+throwEnderEyeXP = 30.0
+# XP gain tuning for the adapt:rift skill.
+teleportXP = 15.0
+# Cooldown between the adapt:rift skill activations.
+teleportXPCooldown = 60000.0
+# XP for travelling through a nether portal, end portal, or end gateway.
+portalTripXp = 40.0
+# Milliseconds between paid portal trips.
+# Effect: Higher values reduce how often portal hopping pays.
+portalTripXpCooldown = 60000
+# XP for a chorus fruit teleport.
+chorusTeleportXp = 20.0
+# Milliseconds between paid chorus fruit teleports.
+# Effect: Higher values reduce how often chorus fruit pays.
+chorusTeleportXpCooldown = 10000
+# XP per point of maximum health for killing a shulker.
+shulkerKillMaxHealthXpMultiplier = 3.0
+# XP per point of maximum health for killing an endermite.
+endermiteKillMaxHealthXpMultiplier = 3.0
+
+# Server defaults and permitted choices for this skill's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

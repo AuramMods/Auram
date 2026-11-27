@@ -1,0 +1,67 @@
+# Adapt configuration - adaptation:adapt:mutated/nether/adapt/brewing/signature/graft
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Thrown splash potions leave a ring of harmless soul fire that gives their effects once more.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 0
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 0
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Ring radius at level 1, in blocks.
+# Effect: Higher values cover more ground.
+radiusAtFirstLevel = 2.0
+# Ring radius at the top level, in blocks.
+# Effect: Higher values cover more ground.
+radiusAtTopLevel = 3.5
+# Share of each lasting effect's duration the ring gives at level 1.
+# Effect: Higher values make the second dose last longer.
+durationShareAtFirstLevel = 0.5
+# Share of each lasting effect's duration the ring gives at the top level.
+# Effect: Higher values make the second dose last longer.
+durationShareAtTopLevel = 1.0
+# How long a ring burns, in ticks.
+# Effect: Higher values leave the ring longer.
+ringTicks = 80
+# Ticks between two checks of who stands in the ring.
+# Effect: Lower values catch passers-by sooner.
+pulseTicks = 10
+# Most creatures one check of the ring reaches.
+# Effect: Lower values cap work in crowds.
+maxTargetsPerPulse = 12
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,67 @@
+# Adapt configuration - adaptation:adapt:seaborne/fishers_fantasy
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Fishing can grant one bounded bonus item, vanilla XP, and Seaborne XP.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 7
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Chance of one bonus reward bundle at adaptation level one.
+# Effect: Higher values make low-level bonus catches more common.
+bonusChanceAtLevelOne = 0.1
+# Chance of one bonus reward bundle at maximum adaptation level.
+# Effect: Higher values make max-level bonus catches more common.
+bonusChanceAtMaxLevel = 0.35
+# Vanilla XP points granted by a level-one successful bonus catch.
+# Effect: Higher values increase the base fishing reward.
+vanillaXpAtLevelOne = 2
+# Vanilla XP points added for each adaptation level after level one.
+# Effect: Higher values make the fishing reward scale faster with adaptation level.
+vanillaXpPerAdditionalLevel = 1
+# Maximum vanilla XP points granted by one catch.
+# Effect: Caps oversized or heavily scaled fishing rewards.
+maximumVanillaXpPerCatch = 16
+# Seaborne skill XP granted after a successful bonus catch.
+# Effect: Higher values accelerate Seaborne progression through fishing bonuses.
+skillXpOnSuccess = 8.0
+# Minimum milliseconds between successful bonus reward bundles for the same player.
+# Effect: Higher values limit unusually rapid fishing reward sources.
+cooldownMillis = 5000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

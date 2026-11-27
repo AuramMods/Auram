@@ -1,0 +1,106 @@
+# Adapt configuration - adaptation:adapt:axes/upgrade/timberfall
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Breaking a log fells the whole tree, leaves included, into your inventory.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Most logs one swing fells, before level scaling.
+# Effect: Higher values fell larger trees in one swing.
+maxLogsBase = 48
+# Logs added to the limit per level.
+# Effect: Higher values reward higher levels more.
+maxLogsPerLevel = 32
+# Most leaves one swing clears, before level scaling.
+# Effect: Higher values clear wider canopies.
+maxLeavesBase = 128
+# Leaves added to the limit per level.
+# Effect: Higher values reward higher levels more.
+maxLeavesPerLevel = 64
+# Log search radius around the broken log and the trunk top, before adding the level.
+# Effect: Higher values reach farther branches.
+radiusBase = 4
+# Tallest trunk followed up from the broken log, in blocks.
+# Effect: Higher values fell taller trees to the top.
+trunkHeight = 32
+# Leaf search radius around the canopy, in blocks.
+# Effect: Higher values clear wider canopies.
+leafRadius = 7
+# Skill XP for each log felled.
+# Effect: Higher values reward felling.
+xpPerLog = 2.0
+# Skill XP for each leaf cleared.
+# Effect: Higher values reward clearing canopies.
+xpPerLeaf = 0.25
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.items]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "LOGS", "SAPLINGS", "APPLES"]
+
+[playerPreferences.trigger]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "SNEAK"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["SNEAK", "NOT_SNEAKING", "ALWAYS"]
+
+[playerPreferences.work-limit]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "FULL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FULL", "HALF", "QUARTER"]
+

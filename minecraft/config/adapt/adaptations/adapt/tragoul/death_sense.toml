@@ -1,0 +1,92 @@
+# Adapt configuration - adaptation:adapt:tragoul/death_sense
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Weakened living targets near you glow through walls with a color based on their remaining health.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 1
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Scan radius before level scaling.
+# Effect: Higher values sense prey further away but cost more scan work.
+radiusBase = 8.0
+# Additional scan radius granted at max level.
+# Effect: Higher values increase level-scaled radius growth.
+radiusFactor = 8.0
+# Maximum effective sensing radius, capped internally at 32 blocks.
+# Effect: Lower values reduce spatial lookup work and keep the effect more local.
+maxRadius = 32.0
+# Health fraction at or below which targets are sensed at adaptation level one.
+# Effect: Higher values reveal healthier targets at the first level.
+healthThresholdStart = 0.5
+# Health fraction at or below which targets are sensed at maximum adaptation level.
+# Effect: Higher values reveal healthier targets at maximum level.
+healthThresholdEnd = 0.9
+# Maximum learned owners refreshed per scheduler tick, capped internally at 24.
+# Effect: Higher values refresh player positions faster at the cost of more player-owned tasks.
+maxOwnersPerTick = 24
+# Maximum indexed living targets inspected per scheduler tick, capped internally at 48.
+# Effect: Higher values refresh more loaded targets at the cost of more entity-owned tasks.
+maxTargetInspectionsPerTick = 48
+# Maximum owner-specific target glows refreshed per scheduler tick, capped internally at 12.
+# Effect: Caps effect, feedback, and stat fanout under dense combat loads.
+maxMarksPerTick = 12
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.health-palette]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "WARM"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["WARM", "COOL"]
+
+[playerPreferences.targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "UNDEAD", "ARTHROPODS", "NON_PLAYERS"]
+

@@ -1,0 +1,69 @@
+# Adapt configuration - skill:adapt:axes
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this skill and everything registered under it.
+# Effect: Set to false to remove the skill from menus and stop its XP and adaptations.
+enabled = true
+# Skill colour as #RRGGBB, used for its name and pages.
+# Effect: Leave empty for the colour the skill was written with.
+skillColor = ""
+# XP below which an award in this skill is not shown to the player.
+# Effect: Higher values hide more small awards from the XP ticker.
+minXp = 100.0
+# XP gain tuning for the adapt:axes skill.
+getXpForAttackingWithTools = true
+# Maximum cap applied to the adapt:axes skill.
+maxHardnessBonus = 9.0
+# Maximum cap applied to the adapt:axes skill.
+maxBlastResistanceBonus = 10.0
+# XP gain tuning for the adapt:axes skill.
+logOrWoodXPMultiplier = 2.0
+# Scaling applied to the adapt:axes skill.
+leavesMultiplier = 0.75
+# Milliseconds between Axes combat XP awards.
+# Effect: Higher values reduce repeated combat XP frequency; lower values reward hits more often.
+cooldownDelay = 1500
+# XP gain tuning for the adapt:axes skill.
+valueXPMultiplier = 0.175
+# XP gain tuning for the adapt:axes skill.
+axeDamageXPMultiplier = 7.0
+# Flat XP paid for each credited axe hit, before the damage XP.
+axeHitXp = 5.0
+# Item ids or #tags that also count as an axe for this skill and all its adaptations, such as mekanismtools:osmium_paxel or #forge:tools/hammers.
+# Effect: Listed tools earn Axes XP and trigger its adaptations; a tag covers every item in it.
+extraTools = []
+# Item ids or #tags that never count as an axe for this skill, whatever a tag or other rule says.
+# Effect: Wins over every other rule, the extra tools list included.
+excludedTools = []
+# Block ids or #tags that never give Axes XP or count as its work.
+# Effect: Use it to stop XP from a modded block the automatic rules pick up.
+excludedBlocks = []
+# Counts items in the axe tags minecraft:axes, forge:tools/axes, c:axes and fabric:axes as an axe.
+# Effect: Set to false to recognise tools only by the other rules.
+toolTagRule = true
+# Counts items the mod loader says dig as an axe (Forge tool actions, NeoForge 1.21.1 item abilities) as an axe.
+# Effect: Set to false to ignore loader tool actions; Fabric and newer loaders have none.
+toolCapabilityRule = true
+# Counts items that are the correct tool for an oak log as an axe, and pays Axes XP for a mineable/axe block broken with its correct tool.
+# Effect: Set to false to recognise tools only by lists, tags and loader actions.
+toolBehaviourRule = true
+
+# Server defaults and permitted choices for this skill's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+# Block ids or #tags that count as this skill's work, each with the XP one block gives before placed-block scaling.
+# Effect: Listed blocks use this XP instead of the derived value, and any tool of this skill earns it.
+[extraBlocks]
+

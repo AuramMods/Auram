@@ -1,0 +1,58 @@
+# Adapt configuration - adaptation:adapt:crafting/xp
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Committed crafts periodically grant a bounded vanilla XP orb.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 1
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 7
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Vanilla XP points granted by a level-one activation.
+# Effect: Higher values increase the base crafting reward.
+vanillaXpAtLevelOne = 1
+# Vanilla XP points added for each adaptation level after level one.
+# Effect: Higher values make the reward scale faster with adaptation level.
+vanillaXpPerAdditionalLevel = 1
+# Maximum vanilla XP points granted by one craft activation.
+# Effect: Caps oversized or heavily scaled rewards.
+maximumXpPerCraft = 16
+# Minimum milliseconds between vanilla XP rewards for the same player.
+# Effect: Higher values reduce rapid-crafting XP generation.
+cooldownMillis = 30000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

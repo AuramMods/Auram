@@ -1,0 +1,117 @@
+# Adapt configuration - adaptation:adapt:tame/mounted_tactics
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Gain mount-specific combat and control bonuses while riding.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 2
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Controls Mounted damage bonus base for the adapt:tame/mounted_tactics adaptation.
+mountedDamageBonusBase = 0.08
+# Scaling applied to the adapt:tame/mounted_tactics adaptation.
+mountedDamageBonusFactor = 0.22
+# Maximum cap applied to the adapt:tame/mounted_tactics adaptation.
+maxMountedDamageBonus = 0.35
+# Controls Mounted damage reduction base for the adapt:tame/mounted_tactics adaptation.
+mountedDamageReductionBase = 0.06
+# Scaling applied to the adapt:tame/mounted_tactics adaptation.
+mountedDamageReductionFactor = 0.2
+# Maximum cap applied to the adapt:tame/mounted_tactics adaptation.
+maxMountedDamageReduction = 0.28
+# Controls Horse speed amplifier base for the adapt:tame/mounted_tactics adaptation.
+horseSpeedAmplifierBase = 0.0
+# Scaling applied to the adapt:tame/mounted_tactics adaptation.
+horseSpeedAmplifierFactor = 2.0
+# Controls Strider speed amplifier base for the adapt:tame/mounted_tactics adaptation.
+striderSpeedAmplifierBase = 0.0
+# Scaling applied to the adapt:tame/mounted_tactics adaptation.
+striderSpeedAmplifierFactor = 2.0
+# Base horse jump strength bonus as a percent of the mount's own jump strength.
+# Effect: Higher values increase mounted horse jump height at minimum level.
+horseJumpStrengthBonusBase = 0.1
+# Additional horse jump strength bonus scaling with level percent.
+# Effect: Higher values increase mounted horse jump height at higher levels.
+horseJumpStrengthBonusFactor = 0.15
+# Controls Pig resistance amplifier base for the adapt:tame/mounted_tactics adaptation.
+pigResistanceAmplifierBase = 0.0
+# Scaling applied to the adapt:tame/mounted_tactics adaptation.
+pigResistanceAmplifierFactor = 1.0
+# Base horizontal speed target used for horse mounted speed scaling.
+# Effect: Higher values increase steady mounted horse acceleration when moving forward.
+horseBaseHorizontalSpeed = 0.3
+# Base horizontal speed target used for strider mounted speed scaling.
+# Effect: Higher values increase steady mounted strider acceleration when moving forward.
+striderBaseHorizontalSpeed = 0.24
+# Maximum horizontal speed this adaptation can force on mounts.
+# Effect: Acts as a hard cap to prevent runaway mounted momentum.
+mountMaxHorizontalSpeed = 0.78
+# Controls Horse push base for the adapt:tame/mounted_tactics adaptation.
+horsePushBase = 0.08
+# Scaling applied to the adapt:tame/mounted_tactics adaptation.
+horsePushFactor = 0.16
+# Controls Pig push base for the adapt:tame/mounted_tactics adaptation.
+pigPushBase = 0.05
+# Scaling applied to the adapt:tame/mounted_tactics adaptation.
+pigPushFactor = 0.12
+# XP gain tuning for the adapt:tame/mounted_tactics adaptation.
+xpPerMountedDamage = 1.5
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.combat]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.handling]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

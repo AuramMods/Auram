@@ -1,0 +1,94 @@
+# Adapt configuration - adaptation:adapt:seaborne/upgrade/deep_fortune
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Luckier fishing with bonus catches, sea life that joins your fights, and glowing sunken chests.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Chance of a bonus catch at level 1.
+# Effect: Higher values make bonus catches more common early.
+catchChanceAtLevelOne = 0.3
+# Chance of a bonus catch at the top level.
+# Effect: Higher values make bonus catches more common at the top level.
+catchChanceAtMaxLevel = 0.6
+# Shortest time between two bonus catches, in milliseconds.
+# Effect: Lower values allow bonus catches in quick succession.
+catchCooldownMillis = 3000
+# Vanilla XP dropped with a bonus catch at level 1.
+# Effect: Higher values make bonus catches feed enchanting more.
+vanillaXpAtLevelOne = 4
+# Vanilla XP added per level after the first.
+# Effect: Higher values reward higher levels more.
+vanillaXpPerLevel = 2
+# Most vanilla XP a single bonus catch drops.
+# Effect: Caps the XP at any level.
+maximumVanillaXp = 16
+# Luck before level scaling; each level adds one.
+# Effect: Higher values improve every catch and loot roll.
+luckBase = 1
+# Range in blocks within which dolphins and axolotls join a fight.
+# Effect: Higher values rally sea life from farther away.
+assistRangeBase = 10.0
+# Assist range added per level, in blocks.
+# Effect: Higher values widen the gap between levels.
+assistRangePerLevel = 3.0
+# Push given to a dolphin charging your target.
+# Effect: Higher values make dolphins ram harder.
+dolphinChargeStrength = 1.0
+# Radius in which chests and barrels glow, before level scaling.
+# Effect: Higher values reveal containers from farther away; capped at 9.
+glowRangeBase = 5.0
+# Glow radius added per level, in blocks.
+# Effect: Higher values widen the gap between levels.
+glowRangePerLevel = 1.5
+# Time between container glow scans, in milliseconds.
+# Effect: Lower values refresh the glow sooner but scan more often.
+glowScanMillis = 3000
+# Extra draws at the heart of the sea per level on a salvage cast.
+# Effect: Higher values make salvaged hearts more likely.
+salvageLuckPerLevel = 1
+# Rod durability each salvage cast costs.
+# Effect: Higher values wear the rod faster.
+salvageRodDurability = 10
+# Skill XP for the first salvage of each structure.
+# Effect: Higher values reward finding wrecks and ruins.
+salvageXp = 20.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

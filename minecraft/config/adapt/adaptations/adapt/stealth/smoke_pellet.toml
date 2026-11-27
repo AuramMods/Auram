@@ -1,0 +1,103 @@
+# Adapt configuration - adaptation:adapt:stealth/smoke_pellet
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Sneak while holding gunpowder in either hand to cast a smoke cloud that conceals players, blinds living entities, and clears mob aggression.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 2
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base cloud radius of the smoke pellet.
+# Effect: Higher values blind living entities across a wider area.
+radiusBase = 2.5
+# Extra cloud radius gained across levels.
+# Effect: Higher values expand the cloud more per level.
+radiusFactor = 2.5
+# Maximum cloud radius after scaling.
+# Effect: Caps how large the smoke cloud can get.
+radiusMax = 6.0
+# Base number of blinding pulses in the cloud.
+# Effect: Higher values make the cloud last longer.
+pulsesBase = 8.0
+# Extra pulses gained across levels.
+# Effect: Higher values extend cloud duration more per level.
+pulsesFactor = 10.0
+# Maximum smoke ray distance in blocks.
+# Effect: Higher values place the smoke cloud farther along the player's aim.
+raycastRange = 24.0
+# Cooldown between pellet throws, in milliseconds.
+# Effect: Higher values mean longer waits between throws.
+cooldownMillis = 1500
+# Experience granted per pellet thrown.
+# Effect: Higher values level the adaptation faster.
+xpOnThrow = 10.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.gesture]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "SINGLE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["SINGLE", "DOUBLE"]
+
+[playerPreferences.hand]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "EITHER"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["EITHER", "MAIN", "OFF"]
+
+[playerPreferences.reserve]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NONE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["NONE", "ONE", "FOUR"]
+

@@ -1,0 +1,100 @@
+# Adapt configuration - adaptation:adapt:chronos/hourglass_guard
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# A killing blow instead leaves you at half a heart, granting brief invulnerability and slowing nearby enemies, on a long cooldown.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 7
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 6
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Controls Play clock sounds for the adapt:chronos/hourglass_guard adaptation.
+playClockSounds = true
+# Health the player is left with after a save.
+# Effect: Higher values leave the player healthier after cheating death.
+survivalHealth = 1.0
+# Invulnerability window in milliseconds after a save.
+# Effect: Higher values protect the player longer after a save.
+invulnerabilityMillis = 2000
+# Base cooldown in milliseconds between saves.
+# Effect: Higher values force longer waits between saves.
+baseCooldownMillis = 480000
+# Cooldown reduction in milliseconds per adaptation level.
+# Effect: Higher values make leveling shorten the cooldown faster.
+cooldownReductionPerLevelMillis = 60000
+# Lowest possible cooldown in milliseconds regardless of level.
+# Effect: Higher values keep a floor under cooldown reduction.
+minimumCooldownMillis = 180000
+# Radius in blocks for the slow applied to nearby enemies on save.
+# Effect: Higher values slow enemies from further away up to the hard 12-block radius limit.
+enemySlowRadius = 5.0
+# Duration in ticks of the slow applied to nearby enemies.
+# Effect: Higher values keep enemies slowed longer.
+enemySlowTicks = 50
+# Slowness amplifier applied to nearby enemies on save.
+# Effect: Higher values slow enemies more severely.
+enemySlowAmplifier = 2
+# XP granted when a save triggers.
+# Effect: Higher values grant more skill XP per save.
+xpOnSave = 60.0
+# Extra XP granted per adaptation level on save.
+# Effect: Higher values scale save XP with level faster.
+xpPerLevel = 10.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.clock-sounds]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.death-save-priority]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NORMAL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FIRST", "NORMAL", "LAST"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,142 @@
+# Adapt configuration - adaptation:adapt:golem/harvester_core
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Golems bound with a Harvester Core harvest and replant ripe crops in a Harvest Node's area, and tend and till the field as the core grows stronger.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["adapt:golem/node_weaving@1"]
+# Ticks a Harvester spends on each harvest, tilling, planting or tending action after it reaches the spot, by Harvester Core level from level 1 upward. Swiftness runes and Copper Frame's Static Overdrive shorten it. Values below 1 count as 1.
+# Effect: Lower values make Harvesters work faster.
+actionIntervalTicksByLevel = [40, 30, 24, 18, 12]
+# Crops a Harvester harvests in one action, by Harvester Core level from level 1 upward: the crop it walked to, plus other ripe crops of the same Harvest Node within 3 blocks that no other golem is walking to. Values below 1 count as 1.
+# Effect: Higher values let Harvesters clear a field faster.
+cropsPerActionByLevel = [1, 1, 2, 3, 4]
+# Blocks Harvesters work, by block name. TORCHFLOWER_CROP covers grown torchflowers on farmland, CAVE_VINES covers both cave vine blocks, MELON, PUMPKIN, SUGAR_CANE, BAMBOO and CACTUS need extendedCropsLevel, and any other name is harvested at its maximum growth age. Unknown names are ignored, and melon and pumpkin stems are ignored with a warning.
+# Effect: Remove a name to have Harvesters leave that crop alone, or add an ageable crop block to have them harvest it.
+crops = ["WHEAT", "CARROTS", "POTATOES", "BEETROOTS", "NETHER_WART", "COCOA", "SWEET_BERRY_BUSH", "CAVE_VINES", "TORCHFLOWER_CROP", "PITCHER_CROP", "MELON", "PUMPKIN", "SUGAR_CANE", "BAMBOO", "CACTUS"]
+# Harvester Core level at which Harvesters also harvest melons, pumpkins, sugar cane, bamboo and cactus.
+# Effect: Lower values unlock these crops sooner.
+extendedCropsLevel = 2
+# Harvester Core level at which Harvesters bone meal young crops with Tending, using bone meal from their linked home chest.
+# Effect: Lower values unlock Tending sooner.
+tendingLevel = 3
+# Milliseconds after a Harvester uses bone meal before it can use another, at least 1000.
+# Effect: Lower values let Harvesters bone meal crops more often and use more bone meal.
+tendingIntervalMillis = 10000
+# Harvester Core level at which Harvesters re-till bare dirt into farmland and plant empty farmland with seeds they carry.
+# Effect: Lower values unlock Tilling sooner.
+tillingLevel = 4
+# Harvester Core level at which each harvest has a chance to roll its drops a second time with Bountiful.
+# Effect: Lower values unlock Bountiful sooner.
+bountifulLevel = 5
+# Chance, from 0 to 1, that a Bountiful harvest rolls its drops a second time. 0.1 is 10%.
+# Effect: Higher values give more extra drops.
+bountifulChance = 0.1
+# Golemancy work XP paid for each crop a Harvester harvests. Tilling, planting and tending pay none. Values below 0 count as 0.
+# Effect: Higher values pay more XP for harvests.
+workXpPerCrop = 0.4
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.tending]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.tilling]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+# Settings for the adapt:golem/harvester_core adaptation Harvester core recipe section.
+[harvesterCoreRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", "YBY", " Z "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:core/harvester"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[harvesterCoreRecipe.keys]
+B = "golemancy:blank_core"
+X = "IRON_HOE"
+Y = "WHEAT"
+Z = "COMPOSTER"
+
+# Settings for the adapt:golem/harvester_core adaptation Harvest node recipe section.
+[harvestNodeRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", " B ", "   "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:node/harvest"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[harvestNodeRecipe.keys]
+B = "golemancy:blank_node"
+X = "IRON_HOE"
+

@@ -1,0 +1,128 @@
+# Adapt configuration - adaptation:adapt:unarmed/upgrade/seismic_throw
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# A thrown enemy lands with a shockwave.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Hurl force before level scaling.
+# Effect: Higher values throw grabbed targets further.
+forceBase = 1.3
+# Hurl force added per level.
+# Effect: Higher values throw further at higher levels.
+forcePerLevel = 0.3
+# Upward part of the hurl.
+# Effect: Higher values arc thrown targets higher, so they land harder and later.
+upwardBoost = 0.6
+# Farthest a grabbed target can be from you when hurled, in blocks.
+# Effect: Higher values let the grab hold over larger gaps.
+maxHurlRange = 6.0
+# Time before an unused grab expires, in milliseconds.
+# Effect: Higher values keep the grab ready longer.
+grabTimeoutMillis = 5000
+# Cooldown before level scaling, in milliseconds.
+# Effect: Higher values make throws rarer.
+cooldownMillisBase = 9000.0
+# Cooldown removed per level, in milliseconds.
+# Effect: Higher values make higher levels throw more often.
+cooldownMillisPerLevel = 1500.0
+# Exhaustion added per throw.
+# Effect: Higher values drain food faster; 0 removes the cost.
+exhaustionPerThrow = 2.0
+# Longest a thrown target is followed for its landing, in ticks.
+# Effect: Higher values catch landings after longer flights.
+maxFlightTicks = 60
+# Shockwave radius before level scaling, in blocks.
+# Effect: Higher values reach more targets around the landing.
+waveRangeBase = 3.0
+# Shockwave radius added per level, in blocks.
+# Effect: Higher values widen the shockwave at higher levels.
+waveRangePerLevel = 0.75
+# Shockwave knockback before level scaling.
+# Effect: Higher values push targets further.
+waveForceBase = 0.8
+# Shockwave knockback added per level.
+# Effect: Higher values push further at higher levels.
+waveForcePerLevel = 0.2
+# Upward part of the shockwave knockback.
+# Effect: Higher values pop targets into the air.
+waveUpwardForce = 0.35
+# Shockwave damage before level scaling.
+# Effect: Higher values hurt everything around the landing more.
+waveDamageBase = 2.0
+# Shockwave damage added per level.
+# Effect: Higher values reward higher levels more.
+waveDamagePerLevel = 1.5
+# Most nearby living targets one shockwave inspects.
+# Effect: Lower values reduce work in crowds; clamped to 32.
+maxCandidatesPerActivation = 16
+# Most targets one shockwave pushes.
+# Effect: Lower values cap the effect in crowds; clamped to 16.
+maxAffectedPerActivation = 12
+# Most pushed targets that get their own cloud effect.
+# Effect: Lower values reduce particles; clamped to 12.
+maxTargetFxPerActivation = 8
+# Skill XP for each target the shockwave pushes.
+# Effect: Higher values reward throwing into groups.
+xpPerTargetHit = 10.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.release]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "SNEAK_OR_HIT"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["SNEAK_OR_HIT", "NEXT_HIT"]
+
+[playerPreferences.targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "HOSTILE", "NON_PLAYERS"]
+

@@ -1,0 +1,85 @@
+# Adapt configuration - adaptation:adapt:herbalism/upgrade/wildgrowth
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# A wide growth aura, boosted by nearby bees, that also plants hotbar seeds on empty farmland.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Aura radius before level scaling, in blocks.
+# Effect: Higher values grow crops farther away.
+radiusBase = 14.0
+# Aura radius added per level, in blocks.
+# Effect: Higher values widen the aura at higher levels.
+radiusPerLevel = 4.0
+# Growth stages per sampled crop before level scaling.
+# Effect: Higher values age crops faster.
+strengthBase = 0.0
+# Growth stages per sampled crop added per level.
+# Effect: Higher values reward higher levels more.
+strengthPerLevel = 1.0
+# Food charged for each growth stage.
+# Effect: Higher values drain hunger faster.
+foodCost = 0.1
+# Food level growth never takes you under.
+# Effect: Higher values keep more food in reserve.
+foodFloor = 10
+# Only grow crops on the highest block of each column.
+# Effect: When enabled, crops under roofs or in caves are skipped.
+surfaceOnly = true
+# Extra growth attempts per nearby bee, as a share of the base attempts.
+# Effect: Higher values make bees matter more.
+growthBonusPerBee = 0.15
+# Most nearby bees that count toward the bonus.
+# Effect: Higher values let larger swarms keep helping.
+maxBonusBees = 5
+# Planting radius as a share of the aura radius.
+# Effect: Higher values sow farther from where you stand.
+plantRadiusShare = 0.25
+# Seeds planted per sowing before level scaling.
+# Effect: Higher values plant more each time.
+plantedBase = 4
+# Seeds planted per sowing added per level.
+# Effect: Higher values reward higher levels more.
+plantedPerLevel = 4
+# Time between two sowings, in milliseconds.
+# Effect: Lower values plant more often.
+plantIntervalMillis = 2000.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

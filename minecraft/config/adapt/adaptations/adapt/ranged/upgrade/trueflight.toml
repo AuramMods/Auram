@@ -1,0 +1,131 @@
+# Adapt configuration - adaptation:adapt:ranged/upgrade/trueflight
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Locked arrows curve onto their target and bounce on to the nearest second one.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Lock range before level scaling, in blocks.
+# Effect: Higher values lock targets from farther away.
+lockRangeBase = 24.0
+# Lock range added per level, in blocks.
+# Effect: Higher values reward higher levels more.
+lockRangePerLevel = 8.0
+# How long a lock waits for the shot, in milliseconds.
+# Effect: Higher values allow slower draws.
+lockMillis = 4000
+# Bounce search radius around the first target before level scaling, in blocks.
+# Effect: Higher values find a second target farther away.
+bounceRadiusBase = 6.0
+# Bounce search radius added per level, in blocks.
+# Effect: Higher values reward higher levels more.
+bounceRadiusPerLevel = 2.0
+# Extra damage on the bounced hit before level scaling.
+# Effect: Higher values make the second hit stronger.
+bounceDamageBase = 1.0
+# Extra bounced damage added per level.
+# Effect: Higher values reward higher levels more.
+bounceDamagePerLevel = 1.0
+# Speed gained by the arrow when it bounces.
+# Effect: Higher values make the second leg faster.
+bounceSpeedBonus = 0.2
+# Leave passive and neutral mobs out of locks and bounces.
+# Effect: When enabled, only hostile mobs and players are chosen.
+ignorePassiveMobs = true
+# Distance the opening curve lasts, in blocks.
+# Effect: Higher values make a wider opening curve.
+initialArcDistance = 12.0
+# How far ahead the opening curve bends from, in blocks.
+# Effect: Higher values make the curve leave straighter.
+initialArcControlDistance = 8.0
+# Distance from the target where the arrow turns hardest, in blocks.
+# Effect: Higher values start the final turn earlier.
+lungeRadius = 2.5
+# Steering per tick in flight, in degrees.
+# Effect: Higher values let arrows turn tighter.
+turnDegreesPerTick = 10.0
+# Steering per tick near the target, in degrees.
+# Effect: Higher values make final turns sharper.
+lungeTurnDegreesPerTick = 18.0
+# Longest a locked arrow steers, in milliseconds.
+# Effect: Higher values let arrows chase longer.
+maxFlightMillis = 6000
+# Time between redraws of the curve while drawing, in milliseconds.
+# Effect: Lower values redraw the curve more often.
+previewIntervalMillis = 150
+# Points sampled when drawing the curve.
+# Effect: Higher values draw longer, smoother curves.
+previewSegments = 24
+# Skill XP for each locked hit.
+# Effect: Higher values reward locked shots.
+xpPerHit = 6.0
+# Volley locks before adding the level.
+# Effect: Higher values let one release hit more targets.
+volleyLocksBase = 1
+# Draw time before sweeping adds Volley locks, in milliseconds.
+# Effect: Lower values start locking sooner.
+fullDrawMillis = 1000
+# Time between Volleys, in milliseconds.
+# Effect: Lower values let you fire Volleys more often.
+volleyCooldownMillis = 6000
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.impact-marker]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.trajectory-trail]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
