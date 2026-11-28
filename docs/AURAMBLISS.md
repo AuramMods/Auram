@@ -42,6 +42,12 @@ Apple OpenGL linked and drew the integer palette for 2,048 IDs with default, can
 
 The companion replays Oculus’s shadow entity batch from the vertex buffer’s real position and ID attributes. It preserves the loader’s render phase and applies Bliss’s existing light classification. A 64³ native test with DH observed eight Blaze voxels, one dropped sea-lantern voxel and one beacon voxel in the current occupancy target, with GL error 0.
 
+## Voxy FloodFill terrain and vapor
+
+Both the native compute and compatibility lighting passes use Voxy's cached block materials when the regular pass has no voxel at that position. The volume uses Bliss's **FloodFill** size setting. It fills from available LOD 0 sections outside the loaded Minecraft chunks and uses the same emission palette and propagation masks as the near scene. This lets Voxy-only emitters illuminate distant terrain and vapor in that volume. Terrain available only at coarser LODs keeps its existing baked light.
+
+The Voxy snapshot reads on a worker, then uploads when the occupancy changes. The camera can move between uploads because the shader offsets the volume by the difference in whole-block camera position. The renderer releases it on shader reload or world exit.
+
 ## Native validation
 
 The [isolated replay and probes](../tools/aurambliss-qa/README.md) ran with native Temurin 17 on an Apple M4 Max using OpenGL 4.1 Metal 91.7. All measured window snapshots reported GLFW visibility and focus at zero. The full Auram build 336 client loaded Forge 47.4.10, Oculus 1.8.0, Embeddium 0.3.31, DH 3.3.3 and AuramCore 1.0.25.

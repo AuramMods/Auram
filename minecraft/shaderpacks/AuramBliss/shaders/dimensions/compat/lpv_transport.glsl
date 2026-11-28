@@ -11,6 +11,7 @@ uniform usampler2D light_data_sampler;
 uniform int voxel_atlas_columns;
 
 #include "/lib/lpv_common.glsl"
+#include "/lib/voxy_lpv.glsl"
 
 #if defined RF_FLOW_STREAKS && defined AURAM_RF_BACKEND && defined AURAM_BLISS_RF_LPV
     uniform float frameTimeCounter;
@@ -35,7 +36,12 @@ uniform int voxel_atlas_columns;
 uint voxelId(ivec3 voxel) {
     if (any(lessThan(voxel, ivec3(0))) || any(greaterThanEqual(voxel, ivec3(LpvSize)))) return 0u;
     ivec2 tile = ivec2(voxel.z % voxel_atlas_columns, voxel.z / voxel_atlas_columns);
-    return texelFetch(voxel_sampler, voxel.xy + tile * int(LpvSize), 0).r;
+    uint material = texelFetch(voxel_sampler, voxel.xy + tile * int(LpvSize), 0).r;
+    #ifdef VOXY_LPV_OCCUPANCY
+        return voxyLpvMaterial(material, voxel);
+    #else
+        return material;
+    #endif
 }
 
 uvec2 materialData(uint id) {

@@ -74,7 +74,7 @@ public final class RasterLightVolume implements AutoCloseable {
     private int transportViewInverseLocation;
     private ProgramUniforms transportUniforms;
     private ProgramSamplers transportSamplers;
-    private boolean transportUsesTwoSamplers;
+    private int transportSamplerCount;
     private int published;
     private boolean capturing;
     private boolean capturedTerrain;
@@ -184,8 +184,9 @@ public final class RasterLightVolume implements AutoCloseable {
         MatrixUniforms.addMatrixUniforms(builder, set.getPackDirectives());
         boolean rfLight = bliss && glGetUniformLocation(transportProgram, "auramRfVolume") >= 0;
         boolean fluidLight = bliss && glGetUniformLocation(transportProgram, "auramTinkersFluidLight") >= 0;
-        transportUsesTwoSamplers = rfLight && fluidLight;
-        if (rfLight || fluidLight) {
+        boolean voxyOccupancy = bliss && glGetUniformLocation(transportProgram, "voxyLpvOccupancy") >= 0;
+        transportSamplerCount = (rfLight ? 1 : 0) + (fluidLight ? 1 : 0) + (voxyOccupancy ? 1 : 0);
+        if (rfLight || fluidLight || voxyOccupancy) {
             // Reuse AuramCore's Iris texture and uniform registration without a hard mod dependency.
             CommonUniforms.generalCommonUniforms(builder, pipeline.getFrameUpdateNotifier(), set.getPackDirectives());
             SystemTimeUniforms.addSystemTimeUniforms(builder);
@@ -487,8 +488,10 @@ public final class RasterLightVolume implements AutoCloseable {
             return;
         }
         try (TextureBinding first = TextureBinding.bind(3, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0);
-                TextureBinding second = transportUsesTwoSamplers
-                        ? TextureBinding.bind(4, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0) : null) {
+                TextureBinding second = transportSamplerCount >= 2
+                        ? TextureBinding.bind(4, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0) : null;
+                TextureBinding third = transportSamplerCount >= 3
+                        ? TextureBinding.bind(5, GL_TEXTURE_3D, GL_TEXTURE_BINDING_3D, 0) : null) {
             transportSamplers.update();
             runTransport(next);
         } finally {
