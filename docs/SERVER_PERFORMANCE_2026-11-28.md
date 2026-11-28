@@ -59,6 +59,24 @@ The queue removed the multi-second stalls at view 5 as well. The candidate ran f
 
 The follow-up in AuramCore `d02ae2f` asks the main-thread chunk scheduler to start the already-ticketed work without joining a future. Its six cold-border cases passed all the original replacement and reload checks, including the guard against synchronous waits. Median callback time was 0.30 ms and the maximum was 4.41 ms.
 
+### Fixed-batch foreground replay at view 10 and simulation 10
+
+Both arms used the same save copy, 24 batches of four FULL requests, one cold callback per batch, and no Voxy background terrain work. The queue waited for a batch to complete before submitting the next four requests. The harness also serialized 128 test entities on each measured tick.
+
+| Measurement | Published 1.0.77 | Queued fills and native scheduling |
+| --- | ---: | ---: |
+| Measured ticks | 1,200 | 3,250 |
+| p95 / p99 / p99.9 MSPT, all measured ticks | 5.46 / 1,199.52 / 3,684.06 | 14.93 / 45.65 / 112.46 |
+| p95 / p99 / p99.9 MSPT, first 1,200 ticks | 5.46 / 1,199.52 / 3,684.06 | 28.64 / 71.41 / 298.27 |
+| Maximum MSPT | 13,378.25 | 411.00 |
+| Tick counts above 50 / 100 / 250 / 1,000 ms, all measured ticks | 26 / 24 / 22 / 13 | 28 / 5 / 2 / 0 |
+| FULL became ready inside the callback | 24 of 24 | 0 of 24 |
+| Median cold callback wall time | 1,195.82 ms | 0.30 ms |
+| Fresh FULL chunks per second | 1.71 | 0.59 |
+| p95 time until an individual chunk was ready | 4.00 s | 13.06 s |
+
+The native scheduling change kept the large tick spikes out of both the shared and full measurement windows. Foreground throughput remained lower with Voxy background work removed. The published callback pumps the main-thread task queue while it waits. The two arms also completed different amounts of per-tick entity work while generation was active and produced different block fingerprints. The measured benefit is tick responsiveness, with a throughput tradeoff in this replay.
+
 ## Tom's Simple Storage
 
 The installed 1.7.1 terminal passed 60 paired update cases, including 61 packet comparisons, both oversized-item fallbacks, two live viewers, a hopper insertion, and a removal. Across 250 measured synthetic updates with 128 powered Mekanism items, AuramCore's existing sync fast path reduced Forge provider comparisons from 96,500 to 64,250 and median time for ten updates from 3.41 to 2.88 ms. The live terminal fixture took a median of 10.03 ms for 300 rebuilds of a 26-slot snapshot.
