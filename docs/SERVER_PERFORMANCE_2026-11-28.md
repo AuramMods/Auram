@@ -130,4 +130,8 @@ The experiment in AuramCore `c1547db` tracks accepted integer boxes separately a
 
 Across 1,728 structure-start cases on three fixed seeds, both arms produced 11 accepted starts and 674 rejected attempts. Ordered piece IDs, positions, rotations, saved data, and random draws matched. All three complete-chunk fingerprints matched, including the selected village-start chunk.
 
-The structure-start workload took 1.73 s in the control and 1.67 s with the experiment. The three complete-chunk tests took a median of 2.82 s in the control and 3.28 s with the experiment. This sample provides parity evidence. The copied-save throughput run measures the effect across 96 requests with the Snowy Biomes change present in both arms.
+The structure-start workload took 1.73 s in the control and 1.67 s with the experiment. The three complete-chunk tests took a median of 2.82 s in the control and 3.28 s with the experiment.
+
+The 96-request copied-save run used the Snowy Biomes change in both arms, four JVM-visible CPUs, view 10, simulation 10, and no Voxy background terrain work. The experiment completed 1.16 FULL chunks/s versus 0.59. Individual p95 readiness fell from 13.06 s to 5.00 s, and p95, p99, and p99.9 MSPT were 8.48, 24.47, and 106.45 ms. The worst tick was 114.25 ms, with 3 / 2 / 0 / 0 ticks above 50 / 100 / 250 / 1,000 ms and zero synchronous Snowy Biomes waits. The complete block fingerprints differed in this workload.
+
+The release leaves the collision change on its experimental commit. The targeted complete chunks were slower, and the single larger replay used different resulting terrain. A repeatable full-pack comparison around several fixed structure starts would help isolate the geometry change.
