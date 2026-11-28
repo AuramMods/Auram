@@ -18,3 +18,22 @@ The initial fixture used production-mapped jars on Forge 47.4.10 with Java 17 an
 | Biome replacements after chunks became ready | Pass | Pass |
 
 The candidate test rejects a synchronous chunk lookup at the pending target during both the initial callback and deferred replay. These six trials measure command-path latency. Full-pack tick percentiles and throughput are measured separately.
+
+### Initial copied-save replay at view 10 and simulation 10
+
+Both arms loaded a private copy of the save with 570 reported mods, four JVM-visible processors, 8–12 GiB heap, and the pack's 15-worker pool. Each queued the same 96 fresh FULL requests. Two synthetic player positions were present during real dry and rainy datapack callbacks. Voxy generation remained active.
+
+| Measurement | Published 1.0.77 | Queued fills at `9aac8d6` |
+| --- | ---: | ---: |
+| Measured ticks | 1,200 | 5,115 |
+| p95 MSPT | 40.45 | 5.73 |
+| p99 MSPT | 1,599.09 | 11.85 |
+| p99.9 MSPT | 3,990.72 | 47.58 |
+| Maximum MSPT | 21,974.87 | 204.06 |
+| Tick counts above 50 / 100 / 250 / 1,000 ms | 54 / 39 / 35 / 20 | 5 / 1 / 0 / 0 |
+| FULL became ready inside the callback | 35 of 35 | 0 of 77 |
+| Median cold callback wall time | 1,152.70 ms | 0.18 ms |
+| Fresh FULL chunks per second | 1.37 | 0.38 |
+| p95 time until an individual chunk was ready | 5.79 s | 19.50 s |
+
+The initial candidate removes the synchronous callback waits in this replay. The foreground generation rate was lower during the candidate, and its longer run gave Voxy more time to generate competing LOD chunks. The control also pumps the main-thread chunk task queue while the callback is waiting. A follow-up invokes the native scheduler for existing tickets without joining their futures. The next comparison needs to check throughput separately under a fixed amount of Voxy work.
