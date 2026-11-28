@@ -69,7 +69,6 @@ uniform int hideGUI;
 uniform sampler2D noisetex; //noise
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
-uniform sampler2D depthtex2;
 
 #ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;

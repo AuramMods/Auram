@@ -3,7 +3,6 @@
 uniform sampler2D colortex7;
 uniform sampler2D colortex14;
 uniform sampler2D depthtex0;
-uniform sampler2D depthtex2;
 uniform sampler2D noisetex;
 
 varying vec2 texcoord;
