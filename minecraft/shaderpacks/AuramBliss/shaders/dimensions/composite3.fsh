@@ -17,6 +17,11 @@ uniform sampler2D noisetex;
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
 
+#if defined AURAM_DRACONIC_TOOL_CAPTURE && defined IRIS_FEATURE_CUSTOM_IMAGES
+  uniform sampler2D auramDraconicToolColor;
+  uniform usampler2D auramDraconicToolDepth;
+#endif
+
 #ifdef AURAM_LOD_DEPTH
 uniform sampler2D dhDepthTex;
 uniform sampler2D dhDepthTex1;
@@ -407,6 +412,23 @@ void main() {
   
   ////// --------------- MAIN COLOR BUFFER
   vec3 color = texture2D(colortex3, refractedCoord).rgb;
+  #if defined AURAM_DRACONIC_TOOL_CAPTURE && defined IRIS_FEATURE_CUSTOM_IMAGES
+    ivec2 toolPixel = ivec2(gl_FragCoord.xy);
+    uint packedToolDepth = texelFetch(auramDraconicToolDepth, toolPixel, 0).r;
+    float toolDepth = (float(packedToolDepth) - 1.0) / 16777214.0;
+    bool toolInFront = toolDepth <= z + 0.0000002;
+    vec4 toolColor = vec4(0.0);
+    if (packedToolDepth != 0u && toolDepth <= z2 + 0.0000002) {
+      toolColor = texelFetch(auramDraconicToolColor, toolPixel, 0);
+      if (toolColor.a > 0.0) {
+        toolColor.rgb = toLinear(max(toolColor.rgb / toolColor.a, vec3(0.0)));
+        // Keep HDR traces colored while limiting their contribution to bloom.
+        float peak = max(1.0, max(toolColor.r, max(toolColor.g, toolColor.b)));
+        toolColor.rgb *= (1.0 + 0.8 * (peak - 1.0)) / peak;
+        if (!toolInFront) color = mix(color, toolColor.rgb, toolColor.a);
+      }
+    }
+  #endif
 
   // #if defined BorderFog && defined OVERWORLD_SHADER
     
@@ -463,8 +485,12 @@ void main() {
     #endif
     
     color *= (1.0-TranslucentShader.a);
-    color += TranslucentShader.rgb*10.0; 
+    color += TranslucentShader.rgb*10.0;
   }
+
+  #if defined AURAM_DRACONIC_TOOL_CAPTURE && defined IRIS_FEATURE_CUSTOM_IMAGES
+    if (toolColor.a > 0.0 && toolInFront) color = mix(color, toolColor.rgb, toolColor.a);
+  #endif
 
 #ifdef AURAM_BLISS_WARP_MIST
   if (auramBlissNearWarpMist > 0.0 && z < 1.0 && isEyeInWater == 0) {
