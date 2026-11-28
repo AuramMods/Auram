@@ -71,6 +71,14 @@ AuramCore `4fdff4e` adds the opt-in `auram.DatapackFunction` JFR event. It captu
 
 In the repeatable fixture with 32 armor stands and Guns item entities, the median cost per direct invocation was 0.521 ms for `ggunz:loop`, 0.169 ms for `incendium:clocks/main`, and 0.062 ms for `scorched:tick`. The Guns loop's lightning-rod command had the most repeated global selector passes in the prior command trace for this workload. The candidate checks the block before it expands the second selector.
 
+With 12 matching item entities, the original and candidate commands returned the same result and set invulnerability on the same items with zero, one, and two active lightning rods. The installed function also passed the conversion, consumption, projectile, scoreboard, and offhand checks. The timing below measures the single command with eight calls per batch. The scan count covers 72 calls per case.
+
+| Active rods | Original median | Optimized median | Original global scans | Optimized global scans |
+| --- | ---: | ---: | ---: | ---: |
+| 0 | 7.35 ms | 0.26 ms | 2,808 | 216 |
+| 1 | 8.35 ms | 2.65 ms | 3,672 | 1,296 |
+| 2 | 6.31 ms | 3.37 ms | 4,536 | 2,376 |
+
 ## Voxy section encoding
 
 The capture used Neo-Voxy 0.4.23-beta.1. The server and section-storage code matched 0.4.24-beta.1, which serves as the control for this change. The candidate writes bulk big-endian voxel data and reuses the deflater and buffers within each column transaction. It keeps the zlib level and stream write boundaries. SQLite uses compressed blob equality to determine whether a section revision changes.
@@ -86,3 +94,14 @@ The encoder replay used 80 real cached sections sampled equally from LOD levels 
 | Median encoder throughput | 1,133.95 sections/s | 1,339.03 sections/s | 6,620.84 sections/s |
 
 The default-level candidate reproduced the 80 stored blobs exactly. Best-speed compression increased sample size by 82.4% and changed the compressed bytes used to track revisions. The candidate retains the original compression level. A separate replay measures column commits on Voxy's SQLite writer, including on-disk size and revisions.
+
+The SQLite replay ran the original writer alongside Voxy commit `61c81246` using a single storage worker and up to eight queued jobs. Both arms committed 160 columns per round, with eight sampled sections per column. The warmup was excluded, and the order alternated across five measured rounds on a JVM configured with four CPUs.
+
+| Median SQLite writer measurement | Current | Batched |
+| --- | ---: | ---: |
+| Worker CPU per 160 columns | 2,195.53 ms | 1,951.78 ms |
+| p95 queue delay | 111.75 ms | 101.51 ms |
+| Committed LOD columns per second | 72.09 | 80.21 |
+| On-disk database bytes | 1,187,840 | 1,187,840 |
+
+Every round finished with identical stored section data and revisions. The production storage test also read legacy data in all three coverage modes, retained existing revisions for unchanged sections, and incremented only a changed section. These timings cover the compression and commit path. Terrain generation and extracting voxel data are upstream workloads.
