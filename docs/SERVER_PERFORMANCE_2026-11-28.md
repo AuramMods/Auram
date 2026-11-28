@@ -37,3 +37,22 @@ Both arms loaded a private copy of the save with 570 reported mods, four JVM-vis
 | p95 time until an individual chunk was ready | 5.79 s | 19.50 s |
 
 The initial candidate removes the synchronous callback waits in this replay. The foreground generation rate was lower during the candidate, and its longer run gave Voxy more time to generate competing LOD chunks. The control also pumps the main-thread chunk task queue while the callback is waiting. A follow-up invokes the native scheduler for existing tickets without joining their futures. The next comparison needs to check throughput separately under a fixed amount of Voxy work.
+
+### Initial copied-save replay at view 5 and simulation 10
+
+This comparison used the shipped view and simulation distances with the same 96-request fixture, CPU limit, mod list, and heap as the view-10 run.
+
+| Measurement | Published 1.0.77 | Queued fills at `9aac8d6` |
+| --- | ---: | ---: |
+| Measured ticks | 1,200 | 9,318 |
+| p95 MSPT | 11.22 | 12.22 |
+| p99 MSPT | 1,239.03 | 40.26 |
+| p99.9 MSPT | 11,225.72 | 120.72 |
+| Maximum MSPT | 17,273.73 | 444.15 |
+| Tick counts above 50 / 100 / 250 / 1,000 ms | 42 / 37 / 36 / 16 | 69 / 16 / 2 / 0 |
+| FULL became ready inside the callback | 36 of 36 | 0 of 70 |
+| Median cold callback wall time | 965.75 ms | 0.22 ms |
+| Fresh FULL chunks per second | 1.32 | 0.21 |
+| p95 time until an individual chunk was ready | 17.23 s | 41.25 s |
+
+The queue removed the multi-second stalls at view 5 as well. The candidate ran for more ticks, and p95 rose by 1 ms. Across the Voxy reporting intervals the candidate generated 179 background columns and the control generated 110. Both the callback timing and background coverage varied, and the foreground block fingerprints differed in both view-distance comparisons. The targeted fixture verified the actual biome replacements. A separate replay now fixes the batch cadence and removes Voxy background terrain work from both arms to test foreground chunk readiness.
