@@ -594,7 +594,7 @@ void main() {
     if (isEyeInWater == 0 && auramWeatherActive) {
       float rainAlpha = auramRainVolume(cameraPosition, np3, linearDistance);
       vec3 airLight = texelFetch2D(colortex4, ivec2(6, 37), 0).rgb;
-      vec3 scatter = min(max(airLight * 0.016 + vl.rgb * 0.15, vec3(0.035)), vec3(0.25) + color * 0.55);
+      vec3 scatter = vec3(0.075) + color * 0.50 + min(airLight * 0.025 + vl.rgb * 0.15, vec3(0.80));
       vec3 rainColor = color + scatter;
       color = mix(color, rainColor, rainAlpha);
     }

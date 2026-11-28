@@ -5,6 +5,7 @@ import dev.auram.bliss.qa.BaseFixture;
 import dev.auram.bliss.qa.RfFixture;
 import dev.auram.bliss.qa.VisualClock;
 import dev.auram.bliss.qa.WindowsShaders;
+import dev.auram.bliss.qa.WeatherProbe;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
@@ -70,6 +71,18 @@ abstract class LifecycleProbe {
                 }
                 case "audit-windows" -> WindowsShaders.export(Path.of(argument));
                 case "capture" -> SceneChecks.capture(argument);
+                case "weather-status" -> WeatherProbe.capture(argument);
+                case "weather-loopback" -> {
+                    String requested = command;
+                    WeatherProbe.listen(Integer.parseInt(argument))
+                            .whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
+                    return;
+                }
+                case "weather-sleep" -> {
+                    String requested = command;
+                    WeatherProbe.beginSleep().whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
+                    return;
+                }
                 case "fullscreen" -> SceneChecks.fullscreen(argument);
                 case "enter", "leave" -> SceneChecks.world(action);
                 case "server", "server-batch", "refresh-chests" -> {

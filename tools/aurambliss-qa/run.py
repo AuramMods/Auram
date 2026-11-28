@@ -60,6 +60,7 @@ def parse_args():
     parser.add_argument("--full", action="store_true", help="Copy the complete Minecraft pack")
     parser.add_argument("--size", default="854x480")
     parser.add_argument("--max-fps", type=int, default=90, help="Minecraft frame-rate limit (260 is Unlimited)")
+    parser.add_argument("--near-distance", type=int, default=8, choices=range(2, 33), metavar="CHUNKS")
     parser.add_argument("--heap", default="5g")
     parser.add_argument("--java-option", action="append", default=[])
     parser.add_argument("--timeout", type=int, default=180)
@@ -151,7 +152,7 @@ def prepare(args, work):
         resource_settings = [line for line in resource_settings if not line.startswith("resourcePacks:")]
         resource_settings.append("resourcePacks:" + json.dumps(selected))
     profile.write_text(
-        f"version:3465\nrenderDistance:8\nsimulationDistance:5\nmaxFps:{args.max_fps}\nenableVsync:false\nfullscreen:false\n"
+        f"version:3465\nrenderDistance:{args.near_distance}\nsimulationDistance:5\nmaxFps:{args.max_fps}\nenableVsync:false\nfullscreen:false\n"
         "pauseOnLostFocus:false\nsoundCategory_master:0.0\nnarrator:0\nonboardAccessibility:false\ntutorialStep:none\n"
         + "\n".join(resource_settings) + "\n"
     )

@@ -1,0 +1,40 @@
+gamerule doDaylightCycle false
+gamerule doWeatherCycle false
+gamerule doMobSpawning false
+gamerule doTileDrops false
+gamerule commandModificationBlockLimit 200000
+time set noon
+fill -32 55 -32 -17 63 95 minecraft:grass_block
+fill -16 55 -32 -1 63 95 minecraft:grass_block
+fill 0 55 -32 15 63 95 minecraft:grass_block
+fill 16 55 -32 31 63 95 minecraft:grass_block
+fill 32 55 -32 47 63 95 minecraft:grass_block
+fill 48 55 -32 63 63 95 minecraft:grass_block
+fill 64 55 -32 79 63 95 minecraft:grass_block
+fill 80 55 -32 95 63 95 minecraft:grass_block
+fill -32 64 -32 31 92 -1 minecraft:air
+fill -32 64 0 31 92 15 minecraft:air
+fill -32 64 16 31 92 31 minecraft:air
+fill 32 64 -32 95 92 -17 minecraft:air
+fill 32 64 -16 95 92 -1 minecraft:air
+fill 32 64 0 95 92 15 minecraft:air
+fill 32 64 16 95 92 31 minecraft:air
+fill 32 64 32 95 92 47 minecraft:air
+fill 32 64 48 95 92 63 minecraft:air
+fill 32 64 64 95 92 79 minecraft:air
+fill 32 64 80 95 92 95 minecraft:air
+fill 40 59 12 47 63 95 minecraft:air
+fill 40 59 12 47 60 95 minecraft:water
+fill -32 63 -32 -1 63 95 minecraft:sand
+fillbiome -32 55 -32 -1 78 95 minecraft:desert
+fillbiome 0 55 -32 39 78 95 minecraft:forest
+fillbiome 40 55 -32 47 78 95 minecraft:river
+fillbiome 48 55 -32 95 78 95 minecraft:jungle
+fill 48 64 32 56 64 36 minecraft:grass
+fill 36 64 34 39 64 39 minecraft:fern
+fill 51 64 39 51 68 39 minecraft:oak_log
+fill 49 68 37 53 70 41 minecraft:oak_leaves[persistent=true]
+fill 52 64 76 53 76 77 minecraft:red_concrete
+fill 35 64 58 36 72 59 minecraft:blue_concrete
+tp @p 49.5 65 16.5 5 4
+save-all flush

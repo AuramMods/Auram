@@ -81,3 +81,9 @@ For the shared RF shader path, supply the rebuilt compatibility JAR with `--comp
 ## Source inventory
 
 Generate the control inventory with `python3 tools/aurambliss-qa/inventory.py minecraft/shaderpacks/AuramBliss /tmp/bliss-options.json`. The output lists profile values, menu paths, source lines, suggested scene checks, dimensions and texture declarations.
+
+## Overworld weather replay
+
+Use a disposable Overworld with a flat staging area. First run a lifecycle file with `server-batch /absolute/path/to/weather-terrain.txt` from the fixtures directory. Save that copy and use it as the input to `--lifecycle tools/aurambliss-qa/fixtures/weather.txt`. The fixture builds nine blocks of grass-topped terrain with a desert strip, forest, a river, and jungle, plus foliage and two depth landmarks. The replay adds a roof and bed.
+
+Add the AuramCore runtime jar with `--mod` along with the dependencies needed by the tested build. Run with `--no-dh`. Repeat with Neo-Voxy, GLA and its loader dependencies on macOS, and pass `--near-distance 3`. The river and raised landmarks cross the three-chunk boundary. The probe obtains the weather line from the real F3 overlay and records it as `QA_WEATHER` in the client log. Check the matched captures for rainfall, denser clouds, reversed streak direction, local clear, and rain outside the roof.

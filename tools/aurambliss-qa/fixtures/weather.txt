@@ -1,0 +1,36 @@
+# Run on a disposable flat staging area with room for a roof above the player.
+server time set noon
+server gamerule doDaylightCycle false
+server execute as @p run weather affect humidity -100 16 180
+wait 12
+weather-status dry
+capture weather-dry
+server execute as @p run weather affect reset
+server execute as @p run weather affect humidity 100 16 180
+server execute as @p run weather affect pressure -100 16 180
+server execute as @p run weather affect wind 100 0 16 180
+wait 12
+weather-status east
+capture weather-east
+server execute as @p run weather affect wind -100 0 16 180
+server execute as @p run weather affect wind -100 0 16 180
+wait 12
+weather-status west
+capture weather-west
+server execute as @p run weather clear
+weather-status clear
+capture weather-personal-clear
+server execute as @p run weather resume
+server execute as @p at @s run fill ~-5 ~5 ~-5 ~5 ~5 ~5 minecraft:oak_planks
+wait 2
+weather-status roof
+capture weather-roof
+server gamemode creative @p
+server gamerule doDaylightCycle true
+server time set midnight
+server execute as @p at @s run fill ~1 ~-1 ~ ~2 ~-1 ~ minecraft:oak_planks
+server execute as @p at @s run setblock ~1 ~ ~ minecraft:red_bed[facing=east,part=foot]
+server execute as @p at @s run setblock ~2 ~ ~ minecraft:red_bed[facing=east,part=head]
+weather-sleep
+wait 12
+weather-status after-sleep
