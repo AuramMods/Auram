@@ -56,3 +56,19 @@ This comparison used the shipped view and simulation distances with the same 96-
 | p95 time until an individual chunk was ready | 17.23 s | 41.25 s |
 
 The queue removed the multi-second stalls at view 5 as well. The candidate ran for more ticks, and p95 rose by 1 ms. Across the Voxy reporting intervals the candidate generated 179 background columns and the control generated 110. Both the callback timing and background coverage varied, and the foreground block fingerprints differed in both view-distance comparisons. The targeted fixture verified the actual biome replacements. A separate replay now fixes the batch cadence and removes Voxy background terrain work from both arms to test foreground chunk readiness.
+
+## Voxy section encoding
+
+The capture used Neo-Voxy 0.4.23-beta.1. The server and section-storage code matched 0.4.24-beta.1, which serves as the control for this change. The candidate writes bulk big-endian voxel data and reuses the deflater and buffers within each column transaction. It keeps the zlib level and stream write boundaries. SQLite uses compressed blob equality to determine whether a section revision changes.
+
+The encoder replay used 80 real cached sections sampled equally from LOD levels 0 through 4. It checked every sample against the original stream and the on-disk entry. The parallel stage encoded 560 sections per arm with four workers and alternated order across five rounds.
+
+| Encoder measurement | Current stream | Batched at current level | Batched at best speed |
+| --- | ---: | ---: | ---: |
+| Compressed bytes for the 80 samples | 336,806 | 336,806 | 614,469 |
+| Median single-thread CPU per 240 sections | 697.52 ms | 624.00 ms | 122.43 ms |
+| Median combined worker CPU per 560 sections | 1,817.29 ms | 1,575.27 ms | 311.17 ms |
+| Median p95 queue delay | 451.55 ms | 388.96 ms | 77.08 ms |
+| Median encoder throughput | 1,133.95 sections/s | 1,339.03 sections/s | 6,620.84 sections/s |
+
+The default-level candidate reproduced the 80 stored blobs exactly. Best-speed compression increased sample size by 82.4% and changed the compressed bytes used to track revisions. The candidate retains the original compression level. A separate replay measures column commits on Voxy's SQLite writer, including on-disk size and revisions.
