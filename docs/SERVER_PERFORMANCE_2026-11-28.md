@@ -57,6 +57,20 @@ This comparison used the shipped view and simulation distances with the same 96-
 
 The queue removed the multi-second stalls at view 5 as well. The candidate ran for more ticks, and p95 rose by 1 ms. Across the Voxy reporting intervals the candidate generated 179 background columns and the control generated 110. Both the callback timing and background coverage varied, and the foreground block fingerprints differed in both view-distance comparisons. The targeted fixture verified the actual biome replacements. A separate replay now fixes the batch cadence and removes Voxy background terrain work from both arms to test foreground chunk readiness.
 
+The follow-up in AuramCore `d02ae2f` asks the main-thread chunk scheduler to start the already-ticketed work without joining a future. Its six cold-border cases passed all the original replacement and reload checks, including the guard against synchronous waits. Median callback time was 0.30 ms and the maximum was 4.41 ms.
+
+## Tom's Simple Storage
+
+The installed 1.7.1 terminal passed 60 paired update cases, including 61 packet comparisons, both oversized-item fallbacks, two live viewers, a hopper insertion, and a removal. Across 250 measured synthetic updates with 128 powered Mekanism items, AuramCore's existing sync fast path reduced Forge provider comparisons from 96,500 to 64,250 and median time for ten updates from 3.41 to 2.88 ms. The live terminal fixture took a median of 10.03 ms for 300 rebuilds of a 26-slot snapshot.
+
+The live chest fixture also changed a capability value in place. The slot retained the same stack object, item, count, and ordinary NBT, while Tom's original equality distinguished the two snapshots. Further rebuild caching is deferred because these inventory properties cannot invalidate the cache when a provider changes.
+
+## Datapack tick functions
+
+AuramCore `4fdff4e` adds the opt-in `auram.DatapackFunction` JFR event. It captures the parent function ID, tick number, duration, and command count. A nested call contributes to its enclosing invocation. The fixture verified event IDs and exact command counts for the installed Guns, Scorched, and Incendium functions.
+
+In the repeatable fixture with 32 armor stands and Guns item entities, the median cost per direct invocation was 0.521 ms for `ggunz:loop`, 0.169 ms for `incendium:clocks/main`, and 0.062 ms for `scorched:tick`. The Guns loop's lightning-rod command had the most repeated global selector passes in the prior command trace for this workload. The candidate checks the block before it expands the second selector.
+
 ## Voxy section encoding
 
 The capture used Neo-Voxy 0.4.23-beta.1. The server and section-storage code matched 0.4.24-beta.1, which serves as the control for this change. The candidate writes bulk big-endian voxel data and reuses the deflater and buffers within each column transaction. It keeps the zlib level and stream write boundaries. SQLite uses compressed blob equality to determine whether a section revision changes.
