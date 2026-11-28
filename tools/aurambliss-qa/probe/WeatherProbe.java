@@ -2,9 +2,6 @@ package dev.auram.bliss.qa;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
-import java.net.InetAddress;
-import java.io.IOException;
-import java.io.UncheckedIOException;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -22,19 +19,6 @@ public final class WeatherProbe {
             if (result.left().isPresent()) {
                 throw new IllegalStateException("Player could not enter the fixture bed: " + result.left().get());
             }
-        }, server);
-    }
-
-    public static CompletableFuture<Void> listen(int port) {
-        var server = Minecraft.m_91087_().m_91092_();
-        return CompletableFuture.runAsync(() -> {
-            server.m_129985_(false);
-            try {
-                server.m_129919_().m_9711_(InetAddress.getByAddress(new byte[]{127, 0, 0, 1}), port);
-            } catch (IOException ex) {
-                throw new UncheckedIOException(ex);
-            }
-            System.out.println("QA_WEATHER_LOOPBACK " + port);
         }, server);
     }
 

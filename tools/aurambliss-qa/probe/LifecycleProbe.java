@@ -72,12 +72,6 @@ abstract class LifecycleProbe {
                 case "audit-windows" -> WindowsShaders.export(Path.of(argument));
                 case "capture" -> SceneChecks.capture(argument);
                 case "weather-status" -> WeatherProbe.capture(argument);
-                case "weather-loopback" -> {
-                    String requested = command;
-                    WeatherProbe.listen(Integer.parseInt(argument))
-                            .whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
-                    return;
-                }
                 case "weather-sleep" -> {
                     String requested = command;
                     WeatherProbe.beginSleep().whenComplete((ignored, error) -> completeLifecycle(requested, start, error));
