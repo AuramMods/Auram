@@ -1,3 +1,5 @@
+#include "/lib/auram_weather.glsl"
+
 #ifdef HQ_CLOUDS
 	int maxIT_clouds = minRayMarchSteps;
 	int maxIT = maxRayMarchSteps;
@@ -89,6 +91,22 @@ float GetAltostratusDensity(vec3 pos){
 }
 
 float cloudCov(int layer, in vec3 pos, vec3 samplePos, float minHeight, float maxHeight){
+    float localRain = rainStrength;
+    float localCoverage = LAYER0_COVERAGE;
+    float densityBoost = 1.0;
+    #ifdef AURAM_LOCAL_WEATHER
+        if (auramWeatherActive) {
+            vec4 weather = auramSampleWeather(pos.xz);
+            float support = min(weather.z, 1.0);
+            float humidity = max(weather.z - support, 0.0);
+            localRain = mix(localRain, abs(weather.w), support);
+            float moistCloud = smoothstep(0.23, 0.85, humidity) * support;
+            localCoverage = mix(LAYER0_COVERAGE, mix(dailyWeatherParams0.x, Rain_coverage, localRain), support)
+                    + 0.34 * moistCloud;
+            densityBoost += 0.35 * moistCloud + 0.30 * abs(weather.w);
+        }
+    #endif
+
 	float FinalCloudCoverage = 0.0;
 	float coverage = 0.0;
 	float Topshape = 0.0;
@@ -140,13 +158,13 @@ float cloudCov(int layer, in vec3 pos, vec3 samplePos, float minHeight, float ma
 	if(layer == 0){
 		coverage = abs(CloudLarge*2.0 - 1.2)*0.5 - (1.0-CloudSmall);
 
-		float layer0 = min(min(coverage + LAYER0_COVERAGE, clamp(LAYER0_maxHEIGHT_FOG - pos.y,0,1)), 1.0 - clamp(LAYER0_minHEIGHT_FOG - pos.y,0,1));
+		float layer0 = min(min(coverage + localCoverage, clamp(LAYER0_maxHEIGHT_FOG - pos.y,0,1)), 1.0 - clamp(LAYER0_minHEIGHT_FOG - pos.y,0,1));
 
 		Topshape = max(pos.y - (LAYER0_maxHEIGHT_FOG - 75),0.0) / 200.0;
 		Topshape += max(pos.y - (LAYER0_maxHEIGHT_FOG - 10),0.0) / 15.0;
 		Baseshape = max(LAYER0_minHEIGHT_FOG + 12.5 - pos.y, 0.0) / 50.0;
 
-		FinalCloudCoverage = max(layer0 - Topshape - Baseshape * (1.0-rainStrength),0.0);
+		FinalCloudCoverage = max(layer0 - Topshape - Baseshape * (1.0-localRain),0.0);
 	}
 
 	if(layer == 1){
@@ -159,7 +177,7 @@ float cloudCov(int layer, in vec3 pos, vec3 samplePos, float minHeight, float ma
 		Topshape += max(pos.y - (LAYER1_maxHEIGHT_FOG - 10), 0.0) / 15.0;
 		Baseshape = max(LAYER1_minHEIGHT_FOG + 15.5 - pos.y, 0.0) / 50.0;
 
-		FinalCloudCoverage = max(layer1 - Topshape*Topshape - Baseshape * (1.0-rainStrength), 0.0);
+		FinalCloudCoverage = max(layer1 - Topshape*Topshape - Baseshape * (1.0-localRain), 0.0);
 	}
 
 
@@ -167,13 +185,13 @@ float cloudCov(int layer, in vec3 pos, vec3 samplePos, float minHeight, float ma
 	
 		#ifdef CloudLayer0 
 			float layer0_coverage =  abs(CloudLarge*2.0 - 1.2)*0.5 - (1.0-CloudSmall);
-			float layer0 = min(min(layer0_coverage + LAYER0_COVERAGE, clamp(LAYER0_maxHEIGHT_FOG - pos.y,0,1)), 1.0 - clamp(LAYER0_minHEIGHT_FOG - pos.y,0,1));
+			float layer0 = min(min(layer0_coverage + localCoverage, clamp(LAYER0_maxHEIGHT_FOG - pos.y,0,1)), 1.0 - clamp(LAYER0_minHEIGHT_FOG - pos.y,0,1));
 
 			Topshape = max(pos.y - (LAYER0_maxHEIGHT_FOG - 75),0.0) / 200.0;
 			Topshape += max(pos.y - (LAYER0_maxHEIGHT_FOG - 10),0.0) / 15.0;
 			Baseshape = max(LAYER0_minHEIGHT_FOG + 12.5 - pos.y, 0.0) / 50.0;
 
-			FinalCloudCoverage = max(layer0 - Topshape - Baseshape * (1.0-rainStrength),0.0);
+			FinalCloudCoverage = max(layer0 - Topshape - Baseshape * (1.0-localRain),0.0);
 		#endif
 		
 		#ifdef CloudLayer1
@@ -184,11 +202,11 @@ float cloudCov(int layer, in vec3 pos, vec3 samplePos, float minHeight, float ma
 			Topshape += max(pos.y - (LAYER1_maxHEIGHT_FOG - 10 ), 0.0) / 50;
 			Baseshape = max(LAYER1_minHEIGHT_FOG + 12.5 - pos.y, 0.0) / 50.0;
 
-			FinalCloudCoverage += max(layer1 - Topshape*Topshape - Baseshape * (1.0-rainStrength), 0.0);
+			FinalCloudCoverage += max(layer1 - Topshape*Topshape - Baseshape * (1.0-localRain), 0.0);
 		#endif
 	}
 
-	return FinalCloudCoverage;
+	return min(FinalCloudCoverage * densityBoost, 1.0);
 }
 
 //Erode cloud with 3d Perlin-worley noise, actual cloud value

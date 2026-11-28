@@ -266,7 +266,14 @@ uniform vec3 eyePosition;
 	/* DRAWBUFFERS:29 */
 #endif
 
+#if defined WEATHER && defined AURAM_WEATHER_BACKEND && defined OVERWORLD_SHADER && !defined ATUM_SHADER && !defined TWILIGHT_SHADER && !defined MIDNIGHT_SHADER && !defined AETHER_SHADER
+uniform bool auramWeatherHasField;
+#endif
+
 void main() {
+#if defined WEATHER && defined AURAM_WEATHER_BACKEND && defined OVERWORLD_SHADER && !defined ATUM_SHADER && !defined TWILIGHT_SHADER && !defined MIDNIGHT_SHADER && !defined AETHER_SHADER
+    if (auramWeatherHasField) discard;
+#endif
 	
 #ifdef DAMAGE_BLOCK_EFFECT
 	vec2 adjustedTexCoord = lmtexcoord.xy;

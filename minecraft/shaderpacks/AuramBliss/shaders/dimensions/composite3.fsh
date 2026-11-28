@@ -84,6 +84,7 @@ uniform float caveDetection;
   #include "/lib/sky_gradient.glsl"
   #include "/lib/lightning_stuff.glsl"
   #include "/lib/climate_settings.glsl"
+  #include "/lib/auram_weather.glsl"
 	// #define CLOUDSHADOWSONLY
   // #include "/lib/volumetricClouds.glsl"
 #endif
@@ -588,6 +589,16 @@ void main() {
 
   color *= vl.a*cloudAlpha ;
   color += vl.rgb;
+
+  #ifdef AURAM_LOCAL_WEATHER
+    if (isEyeInWater == 0 && auramWeatherActive) {
+      float rainAlpha = auramRainVolume(cameraPosition, np3, linearDistance);
+      vec3 airLight = texelFetch2D(colortex4, ivec2(6, 37), 0).rgb;
+      vec3 scatter = min(max(airLight * 0.016 + vl.rgb * 0.15, vec3(0.035)), vec3(0.25) + color * 0.55);
+      vec3 rainColor = color + scatter;
+      color = mix(color, rainColor, rainAlpha);
+    }
+  #endif
   bloomyFogMult *= mix(vl.a,vl.a*0.5 + 0.5, rainStrength);
   
 ////// --------------- VARIOUS FOG EFFECTS (in front of volumetric fog)
