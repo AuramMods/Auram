@@ -1,0 +1,113 @@
+# Adapt configuration - adaptation:adapt:chronos/upgrade/second_chance
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# One charged rewind to a few seconds ago: sneak and swap hands to use it, or a killing blow uses it for you.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# How far back the rewind goes before level scaling, in seconds.
+# Effect: Higher values rewind further.
+rewindSecondsBase = 3.0
+# Seconds added to the rewind per level.
+# Effect: Higher values rewind further at higher levels.
+rewindSecondsPerLevel = 1.0
+# Milliseconds between two recorded positions.
+# Effect: Lower values land the rewind more precisely at more cost.
+snapshotIntervalMillis = 100
+# Charge cooldown before level scaling, in milliseconds.
+# Effect: Higher values make the rewind rarer.
+cooldownMillisBase = 240000
+# Charge cooldown removed per level, in milliseconds.
+# Effect: Higher values recharge faster at higher levels.
+cooldownMillisPerLevel = 40000
+# Shortest charge cooldown at any level, in milliseconds.
+# Effect: Lower values allow more frequent rewinds.
+minimumCooldownMillis = 90000
+# Most health a killing blow's save leaves, as a share of your maximum health; the save never leaves more than you had before the blow.
+# Effect: Higher values leave you healthier after a save.
+saveHealthShare = 0.5
+# Invulnerability after a killing blow is stopped, in milliseconds.
+# Effect: Higher values protect you longer.
+invulnerabilityMillis = 2500
+# Radius in blocks of the slow on nearby enemies after a killing blow.
+# Effect: Higher values slow enemies from further away; capped at 12.
+enemySlowRadius = 6.0
+# Duration of that slow, in ticks.
+# Effect: Higher values keep enemies slowed longer.
+enemySlowTicks = 60
+# Slowness amplifier on nearby enemies.
+# Effect: Higher values slow enemies more.
+enemySlowAmplifier = 2
+# Share of each hit owed later instead, before level scaling.
+# Effect: Higher values move more of each hit into later pulses.
+deferShareBase = 0.05
+# Share of each hit owed later added per level.
+# Effect: Higher values defer more at higher levels; capped at 0.9.
+deferSharePerLevel = 0.1
+# Smallest hit that is partly owed later.
+# Effect: Higher values leave small hits whole.
+deferMinimumDamage = 1.0
+# One-second pulses the owed damage is paid over.
+# Effect: Higher values spread the debt thinner over a longer time.
+deferPaybackPulses = 10
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.clock-sounds]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.death-save-priority]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NORMAL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FIRST", "NORMAL", "LAST"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

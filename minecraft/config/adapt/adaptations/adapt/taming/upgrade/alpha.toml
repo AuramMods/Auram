@@ -1,0 +1,125 @@
+# Adapt configuration - adaptation:adapt:taming/upgrade/alpha
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Your pets hit harder, have more health and heal when hurt, more so inside your aura, and your bonded mount grows as you ride.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Pet damage bonus before level scaling.
+# Effect: Higher values make every pet hit harder.
+damageBoostBase = 0.25
+# Pet damage bonus added per level.
+# Effect: Higher values reward higher levels more.
+damageBoostPerLevel = 0.2
+# Pet maximum health bonus before level scaling.
+# Effect: Higher values make every pet tougher.
+healthBoostBase = 1.57
+# Pet maximum health bonus added per level.
+# Effect: Higher values reward higher levels more.
+healthBoostPerLevel = 0.5
+# Health a hurt pet regains before level scaling.
+# Effect: Higher values heal pets more per hit taken.
+regenerationBase = 3.0
+# Health regained added per level.
+# Effect: Higher values reward higher levels more.
+regenerationPerLevel = 1.0
+# Time before the same pet heals again, in milliseconds.
+# Effect: Lower values let pets heal more often.
+regenCooldownMillis = 6000.0
+# Aura radius around you before level scaling, in blocks.
+# Effect: Higher values reach farther pets.
+auraRadiusBase = 10.0
+# Aura radius added per level, in blocks.
+# Effect: Higher values widen the aura at higher levels.
+auraRadiusPerLevel = 4.0
+# Multiplier on the damage bonus and healing for pets inside your aura.
+# Effect: Higher values reward keeping pets close.
+nearMultiplier = 1.5
+# Ticks the aura's speed and regeneration last after each refresh.
+# Effect: Higher values keep the buffs longer after a pet leaves the aura.
+auraTicks = 80
+# Most loaded pets refreshed each second.
+# Effect: Higher values refresh large packs faster but cost more per tick.
+maxPetsPerPass = 128
+# Bonded mount growth cap before level scaling, as a fraction of its speed and health. 0.1 is 10%.
+# Effect: Higher values let a bonded mount grow further.
+growthCapBase = 0.0
+# Growth cap added per level.
+# Effect: Higher values reward higher levels more.
+growthCapPerLevel = 0.1
+# Growth a bonded mount gains for each block you ride it, as a fraction. 0.0001 is 1% per 100 blocks.
+# Effect: Higher values reach the cap sooner.
+growthPerBlock = 0.0001
+# Most blocks of riding counted each second.
+# Effect: Stops teleports and fast travel from counting as riding.
+maxBlocksPerSecond = 20.0
+# Growth between two shows of the mount's growth, as a fraction.
+# Effect: Lower values show growth more often.
+growthStep = 0.05
+# Farthest a bonded mount comes from when the whistle calls, in blocks.
+# Effect: Higher values call the mount from farther away.
+callRange = 128.0
+# Walking speed of a called mount.
+# Effect: Higher values bring the mount sooner.
+callSpeed = 1.4
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.regeneration]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.speed]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

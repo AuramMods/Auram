@@ -1,0 +1,73 @@
+# Adapt configuration - adaptation:adapt:seaborne/pressure_diver
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Absorption hearts build while you are in water or rain, up to a cap; any hit pauses the ward and it drains away soon after you dry off.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Most absorption health the ward holds at level 1; two health points show as one heart.
+# Effect: Higher values soak more damage.
+capAtLevelOne = 4.0
+# Most absorption health the ward holds at the top level.
+# Effect: Higher values soak more damage at the top level.
+capAtTopLevel = 12.0
+# Absorption health the ward gains each second while you are wet, at level 1.
+# Effect: Higher values refill the ward faster.
+gainPerSecondAtLevelOne = 0.5
+# Absorption health the ward gains each second while you are wet, at the top level.
+# Effect: Higher values refill the ward faster at the top level.
+gainPerSecondAtTopLevel = 1.0
+# Time the ward stops building after you take damage, at level 1, in milliseconds.
+# Effect: Higher values keep the ward from refilling during a fight.
+pauseMillisAtLevelOne = 6000.0
+# Time the ward stops building after you take damage, at the top level, in milliseconds.
+# Effect: Lower values let the ward refill sooner after a hit.
+pauseMillisAtTopLevel = 4000.0
+# Time the ward keeps its hearts after you dry off, at level 1, in milliseconds.
+# Effect: Higher values let you carry the ward out of the water.
+lingerMillisAtLevelOne = 2000.0
+# Time the ward keeps its hearts after you dry off, at the top level, in milliseconds.
+# Effect: Higher values let you carry the ward farther at the top level.
+lingerMillisAtTopLevel = 6000.0
+# Absorption health the ward loses each second once you are dry and the linger time is over.
+# Effect: Higher values drain the ward faster on land.
+drainPerSecond = 2.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

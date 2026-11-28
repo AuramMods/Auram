@@ -448,6 +448,54 @@ stack = false
 # Effect: With stack off only the highest node a player holds is multiplied into the boost total; with stack on every held node is multiplied together. Values at or below zero are ignored.
 [permissionXpMultipliers.multipliers]
 
+# Settings for Pack.
+[pack]
+# Offers players without the Adapt client mod a resource pack that turns Adapt menus into book pages.
+# Effect: The pack is never forced; players who decline or cannot load it keep the chest menus. Applies on restart.
+enabled = true
+# When the pack is offered: join, first-open or off.
+# Effect: join offers it once the client mod handshake window after joining has passed, first-open when the player first opens an Adapt menu, off only through /adapt pack offer. Applies on restart.
+offer = "join"
+# Milliseconds after joining that Adapt waits for the Adapt client mod before offering the pack.
+# Effect: Players whose client mod answers in this window are never offered the pack. Clamped to 0-60000. Applies on restart.
+handshakeWindowMillis = 3000
+# Serves the pack from a built-in HTTP listener on its own port.
+# Effect: The port must be reachable by players. Ignored while externalUrl is set; opened only when releaseUrl is blank, the pack differs from the released one, or a player could not download it from there. Applies on restart.
+serve = true
+# Address the pack listener binds.
+# Effect: 0.0.0.0 listens on every interface. Applies on restart.
+bind = "0.0.0.0"
+# TCP port of the pack listener.
+# Effect: 0 picks a free port at start. Applies on restart.
+port = 8164
+# Base address players download the served pack from, such as http://play.example.com:8164.
+# Effect: Blank uses the bind address, or this machine's address when binding 0.0.0.0. Applies on restart.
+publicUrl = ""
+# Address of a pack you host yourself; {sha1} is replaced with the pack hash.
+# Effect: When set, the built-in listener stays closed and players download from this address. Applies on restart.
+externalUrl = ""
+# Address of the released Adapt pack; {version} is replaced with the Adapt version.
+# Effect: Players download from it while this server's pack is byte for byte the released one and externalUrl is blank. The first failed download before any player loaded it switches to the built-in listener. Blank turns it off. Applies on restart.
+releaseUrl = "https://github.com/VolmitSoftware/Adapt/releases/download/ResourcePack/Adapt.Pack.v{version}.zip"
+# Language key of the text shown in the pack prompt.
+# Effect: Unknown keys fall back to the built-in prompt. Applies on restart.
+promptKey = "adapt.pack.prompt"
+# Writes the pack zip and its unzipped files to pack/export for merging into Nexo, ItemsAdder or CraftEngine.
+# Effect: Rewritten only when the pack's hash differs from the export already there. Applies on restart.
+export = true
+# Set when players get the Adapt pack inside another pack, such as one merged into Nexo, ItemsAdder or CraftEngine or set in server.properties.
+# Effect: Adapt then neither serves nor offers its own pack, but still bakes and exports it; a player gets book menus once their client reports any server pack loaded, until a pack is declined, fails or is discarded. A client that loaded an unrelated pack counts too. Bedrock players and players who chose chest menus keep chest menus. Applies on restart.
+merged = false
+# Threads that bake the pack at start and after asset changes; 0 uses half the cores, at most four.
+# Effect: More threads bake faster and need more memory. Clamped to 0-16. Applies on restart.
+bakeThreads = 0
+
+# Settings for Addons.
+[addons]
+# Namespaces whose skills and adaptations other addons may not disable at runtime.
+# Effect: List adapt to keep every built-in skill and adaptation available whatever addons are installed. An addon's attempt to disable listed content is refused and logged. Hot-reloadable for later attempts; vetoes already in force stay until lifted.
+vetoProtectedNamespaces = []
+
 # Controls Adaptation usage conflicts in the adaptationUsageConflicts section.
 [adaptationUsageConflicts]
 

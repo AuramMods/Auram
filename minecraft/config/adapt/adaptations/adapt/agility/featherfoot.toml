@@ -1,0 +1,132 @@
+# Adapt configuration - adaptation:adapt:agility/featherfoot
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Sprinting refuses to trample or trigger fragile ground. Every protection unlocks at its own level and can be switched off or retargeted at other blocks.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 1
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 4
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Requires the player to be sprinting for any protection to apply.
+# Effect: False protects the listed blocks while walking too.
+requireSprint = true
+# Enables the farmland protection entirely.
+# Effect: False stops farmland from ever being protected regardless of level.
+farmlandEnabled = true
+# Minimum level at which farmland protection applies.
+# Effect: Lower values unlock farmland protection sooner.
+farmlandMinLevel = 1
+# Blocks protected from being trampled by stepping on them.
+# Effect: Add block ids here to stop stepping from breaking or changing them.
+farmlandMaterials = ["FARMLAND"]
+# Enables the pressure-plate protection entirely.
+# Effect: False stops plates from ever being ignored regardless of level.
+pressurePlateEnabled = true
+# Minimum level at which pressure plates are not triggered.
+# Effect: Lower values unlock plate immunity sooner.
+pressurePlateMinLevel = 2
+# Covers every block in the vanilla pressure plate tag.
+# Effect: False restricts the protection to the listed blocks only.
+pressurePlateUseVanillaTag = true
+# Extra blocks treated as pressure plates.
+# Effect: Add block ids such as TRIPWIRE to also step over them without triggering.
+pressurePlateMaterials = []
+# Enables the sweet-berry protection entirely.
+# Effect: False stops berry bushes from ever being ignored regardless of level.
+berryBushEnabled = true
+# Minimum level at which sweet-berry slowdown and damage are ignored.
+# Effect: Lower values unlock berry-bush immunity sooner.
+berryBushMinLevel = 3
+# Blocks whose contact damage and slowdown are ignored.
+# Effect: Add block ids here to walk through them without being snagged.
+berryBushMaterials = ["SWEET_BERRY_BUSH"]
+# Enables the powder-snow protection entirely.
+# Effect: False stops powder snow from ever being ignored regardless of level.
+powderSnowEnabled = true
+# Minimum level at which powder-snow freezing is shrugged off.
+# Effect: Lower values unlock powder-snow crossing sooner.
+powderSnowMinLevel = 4
+# Blocks whose freezing effect is cleared on contact.
+# Effect: Add block ids here to cross them without accumulating freeze ticks.
+powderSnowMaterials = ["POWDER_SNOW"]
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.berries]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.farmland]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.plates]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.snow]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

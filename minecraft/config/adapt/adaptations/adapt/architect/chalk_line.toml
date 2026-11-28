@@ -1,0 +1,89 @@
+# Adapt configuration - adaptation:adapt:architect/chalk_line
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Craft persistent chalk guide wands for straight lines, polylines, circles, and arcs.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 2
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 4
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Maximum distance in blocks between selected control points.
+# Effect: Higher values permit larger guide segments but increase potential display work.
+maxSelectionDistance = 96.0
+# Maximum number of control vertices stored by a polyline wand.
+# Effect: Higher values permit more complex polylines before a new guide is required.
+maxPolylineVertices = 12
+# Maximum circle radius in blocks.
+# Effect: Higher values permit larger circle guides and may create more markers.
+maxCircleRadius = 15.0
+# Maximum computed radius in blocks for a three-point arc.
+# Effect: Higher values accept broader arcs whose centers may lie farther from their selected points.
+maxArcRadius = 64.0
+# Maximum block-display markers in one chalk guide.
+# Effect: Higher values allow larger guides at greater entity and reconciliation cost.
+maxGuideBlocks = 96
+# Maximum distance in blocks at which the held wand renders its private guide.
+# Effect: Higher values keep more distant markers active for the owner.
+renderRangeBlocks = 64.0
+# Adaptation xp granted whenever a complete chalk guide is drafted or extended.
+# Effect: Higher values speed up progression while using chalk wands.
+xpPerGuide = 3.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.color]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "SHAPE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["SHAPE", "AQUA", "GOLD", "PURPLE"]
+
+[playerPreferences.density]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "FULL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FULL", "HALF", "QUARTER"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

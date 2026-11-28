@@ -1,0 +1,90 @@
+# Adapt configuration - adaptation:adapt:blocking/upgrade/mirror_guard
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# A shield raised just before a hit negates it and sends it back, melee or projectile.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Timing window before level scaling, in milliseconds.
+# Effect: Higher values make the timed block easier to land.
+windowMillisBase = 250.0
+# Timing window added per level, in milliseconds.
+# Effect: Higher values widen the window at higher levels.
+windowMillisPerLevel = 100.0
+# Lowest dot product between your view and the attacker's direction that still counts as facing it.
+# Effect: Higher values require the attacker to be more directly in front of you.
+minFacingAlignment = 0.15
+# Share of the negated hit sent back before level scaling.
+# Effect: Higher values make reflected hits stronger.
+reflectShareBase = 0.6
+# Share of the negated hit sent back, added per level.
+# Effect: Higher values reward higher levels more.
+reflectSharePerLevel = 0.2
+# Speed of a reflected projectile relative to its incoming speed.
+# Effect: Higher values send projectiles back faster.
+reflectVelocityFactor = 1.0
+# Squared speed under which a reflected projectile is relaunched along your view instead.
+# Effect: Higher values relaunch more slow projectiles along your view.
+minReflectedVelocitySquared = 0.08
+# Cooldown before level scaling, in milliseconds.
+# Effect: Higher values make timed blocks rarer.
+cooldownMillisBase = 3000.0
+# Cooldown removed per level, in milliseconds.
+# Effect: Higher values let higher levels guard more often.
+cooldownMillisPerLevel = 500.0
+# Shortest cooldown at any level, in milliseconds.
+# Effect: Lower values allow more frequent timed blocks.
+minimumCooldownMillis = 1000.0
+# Skill XP for each negated hit.
+# Effect: Higher values reward timed blocks.
+xpOnNegate = 16.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.player-targets]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

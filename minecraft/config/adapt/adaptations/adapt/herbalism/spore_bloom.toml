@@ -1,0 +1,121 @@
+# Adapt configuration - adaptation:adapt:herbalism/spore_bloom
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Sneak-right-click mycelium with mushrooms to spread an outward spore-web that mutates nearby growth.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 1
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Allows flowers hit by the bloom to be replaced with mushrooms.
+# Effect: Disable this to keep flowers untouched while still converting soil into mushroom blocks.
+swapFlowersToMushrooms = true
+# Controls Bloom attempts base for the adapt:herbalism/spore_bloom adaptation.
+bloomAttemptsBase = 26.0
+# Scaling applied to the adapt:herbalism/spore_bloom adaptation.
+bloomAttemptsFactor = 58.0
+# Additional bloom attempts granted each adaptation level.
+# Effect: Higher values make each level spread across more total blocks.
+bloomAttemptsPerLevel = 12.0
+# Mushrooms consumed by a level one bloom.
+# Effect: Higher values make every bloom cost more mushrooms.
+sporeCostBase = 1.0
+# Additional mushrooms consumed per adaptation level above one.
+# Effect: Higher values make larger blooms cost proportionally more mushrooms.
+sporeCostPerLevel = 1.0
+# Distance/area limit used by the adapt:herbalism/spore_bloom adaptation.
+bloomRadiusBase = 5.0
+# Scaling applied to the adapt:herbalism/spore_bloom adaptation.
+bloomRadiusFactor = 10.0
+# Controls Spokes base for the adapt:herbalism/spore_bloom adaptation.
+spokesBase = 6.0
+# Scaling applied to the adapt:herbalism/spore_bloom adaptation.
+spokesFactor = 7.0
+# Controls Blocks per pulse base for the adapt:herbalism/spore_bloom adaptation.
+blocksPerPulseBase = 2.0
+# Scaling applied to the adapt:herbalism/spore_bloom adaptation.
+blocksPerPulseFactor = 4.0
+# Duration or timing used by the adapt:herbalism/spore_bloom adaptation.
+spreadIntervalTicksBase = 3.0
+# Scaling applied to the adapt:herbalism/spore_bloom adaptation.
+spreadIntervalTicksFactor = 1.6
+# Controls Food cost base for the adapt:herbalism/spore_bloom adaptation.
+foodCostBase = 2.0
+# Scaling applied to the adapt:herbalism/spore_bloom adaptation.
+foodCostFactor = 1.2
+# Cooldown between the adapt:herbalism/spore_bloom adaptation activations.
+cooldownMillisBase = 1700.0
+# Cooldown between the adapt:herbalism/spore_bloom adaptation activations.
+cooldownMillisFactor = 1100.0
+# XP gain tuning for the adapt:herbalism/spore_bloom adaptation.
+xpPerMushroomPlaced = 1.4
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.flower-conversion]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.soil-conversion]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.spread-limit]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "FULL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FULL", "HALF", "QUARTER"]
+

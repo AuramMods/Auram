@@ -1,0 +1,99 @@
+# Adapt configuration - adaptation:adapt:excavation/clod_hurler
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Digging soft ground with a shovel flings the dug block at the nearest hostile mob in sight; its drop flies back to you.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Throw range in blocks at level 1 before level scaling.
+# Effect: Higher values let digs reach farther mobs.
+rangeBase = 7.0
+# Range in blocks added at maximum level.
+# Effect: Higher values grow the range faster with level.
+rangeFactor = 25.0
+# Damage multiplier at level 0, applied to the held shovel's attack damage times block heft.
+# Effect: Higher values make every throw hit harder.
+damageMultiplierBase = 0.8
+# Damage multiplier added at maximum level.
+# Effect: Higher values reward leveling with stronger throws.
+damageMultiplierFactor = 0.6
+# Highest damage one throw can deal.
+# Effect: Lower values cap enchanted netherite shovels sooner.
+maxDamage = 14.0
+# Flight distance in blocks at which a throw reaches full damage.
+# Effect: Higher values ask for longer shots before damage peaks.
+sweetSpotBlocks = 8.0
+# Share of full damage a point-blank throw deals.
+# Effect: Higher values make close throws closer to full damage.
+closeFactor = 0.6
+# Milliseconds between throws at level 1.
+# Effect: Higher values slow how often digs can throw.
+cooldownMillisAtLevelOne = 2000.0
+# Milliseconds between throws at the top level; levels between are linear.
+# Effect: Lower values let high levels throw more often.
+cooldownMillisAtTopLevel = 500.0
+# Blocks per tick a flung block travels, before its arc.
+# Effect: Higher values give flatter, faster throws.
+throwSpeed = 1.1
+# Ticks a flung block may fly past its planned arc before it returns on its own.
+# Effect: Higher values let missed throws fall farther before they come back.
+flightGraceTicks = 20
+# Ticks a block's drop takes to fly back to you after landing.
+# Effect: Higher values show a slower return.
+returnTicks = 7
+# Most flung blocks in the air on the server at once.
+# Effect: Lower values cap the server cost of many diggers fighting at once.
+maxInFlight = 64
+# XP for each throw that hits a natural mob.
+# Effect: Higher values speed up Excavation from fighting with thrown blocks.
+xpPerHit = 4.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.trigger]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALWAYS"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["SNEAK", "SUPPRESS", "ALWAYS"]
+

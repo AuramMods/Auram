@@ -1,0 +1,54 @@
+# Adapt configuration - skill:adapt:nether
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this skill and everything registered under it.
+# Effect: Set to false to remove the skill from menus and stop its XP and adaptations.
+enabled = true
+# Skill colour as #RRGGBB, used for its name and pages.
+# Effect: Leave empty for the colour the skill was written with.
+skillColor = ""
+# XP below which an award in this skill is not shown to the player.
+# Effect: Higher values hide more small awards from the XP ticker.
+minXp = 100.0
+# XP gain tuning for the adapt:nether skill.
+witherDamageXp = 26.0
+# Cooldown in milliseconds between XP awards for taking wither effect damage.
+# Effect: Higher values reduce repeated wither damage XP frequency; lower values reward ticks more often.
+witherDamageXpCooldown = 1500
+# XP gain tuning for the adapt:nether skill.
+witherAttackXp = 15.0
+# Cooldown in milliseconds between XP awards for melee-attacking a wither boss.
+# Effect: Higher values reduce repeated wither attack XP frequency; lower values reward hits more often.
+witherAttackXpCooldown = 1500
+# XP gain tuning for the adapt:nether skill.
+witherSkeletonKillXp = 225.0
+# XP gain tuning for the adapt:nether skill.
+witherKillXp = 900.0
+# XP gain tuning for the adapt:nether skill.
+witherRoseBreakXp = 125.0
+# Cooldown between the adapt:nether skill activations.
+witherRoseBreakCooldown = 1200
+# XP per point of maximum health for killing blazes, ghasts, piglins, piglin brutes, hoglins, zoglins, magma cubes, and zombified piglins.
+netherMobMaxHealthXpMultiplier = 2.0
+# XP for mining nether quartz ore.
+netherQuartzOreXp = 62.5
+# XP for mining nether gold ore.
+netherGoldOreXp = 52.5
+# XP for mining ancient debris.
+ancientDebrisXp = 105.0
+
+# Server defaults and permitted choices for this skill's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,123 @@
+# Adapt configuration - adaptation:adapt:golem/node_weaving
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Sneak-right-click a block face while holding a node to anchor it there and direct your golems' work.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 2
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["adapt:golem/animus_binding@1"]
+# Most nodes you can own at once, by Node Weaving level from level 1 upward.
+# Effect: Higher values let players place more nodes.
+nodeCapByLevel = [4, 8, 12, 18, 24]
+# Largest face distance from a node in blocks, by Node Weaving level from level 1 upward. Values are clamped to 1 through 15; each area dimension is at most 16 blocks.
+# Effect: Higher values let players shift areas farther from the node while keeping it inside; new nodes start at radius 2 or this cap, whichever is lower.
+maxAreaRadiusByLevel = [8, 12, 15, 15, 15]
+# Filter entries a node can hold, by Node Weaving level from level 1 upward. Each value is capped at 18.
+# Effect: Higher values let a node filter more items and tags.
+filterSlotsByLevel = [3, 6, 6, 9, 18]
+# Golemancy XP paid the first time you place each type of node.
+# Effect: Higher values reward trying each node type more; each type pays once per player.
+firstNodeXp = 200.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.node-reveal]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ANY_ITEM"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ANY_ITEM", "CROOK_ONLY"]
+
+[playerPreferences.work-area-outline]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+# Settings for the adapt:golem/node_weaving adaptation Blank node recipe section.
+[blankNodeRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = ["CRC", "RAR", "CRC"]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:blank_node"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 4
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[blankNodeRecipe.keys]
+A = "AMETHYST_SHARD"
+C = "CLAY_BALL"
+R = "REDSTONE"
+
+# Settings for the adapt:golem/node_weaving adaptation Deposit node recipe section.
+[depositNodeRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", " B ", "   "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:node/deposit"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[depositNodeRecipe.keys]
+B = "golemancy:blank_node"
+X = "CHEST"
+

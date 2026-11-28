@@ -1,0 +1,93 @@
+# Adapt configuration - adaptation:adapt:golem/iron_frame
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Lets you bind iron golems and strengthens them with extra health, armor and attack, stronger ingot repairs, sweeping punches and a full-size Colossus Form.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["adapt:golem/animus_binding@1"]
+# Extra maximum health for your bound iron golems, by Iron Frame level from level 1 upward.
+# Effect: Higher values make iron golems tougher; a golem heals by any gain above the highest maximum health it has had.
+healthBonusByLevel = [10, 20, 30, 40, 50]
+# Extra armor for your bound iron golems, by Iron Frame level from level 1 upward.
+# Effect: Higher values make iron golems take less damage.
+armorBonusByLevel = [2, 4, 6, 8, 10]
+# Extra attack damage for your bound iron golems, by Iron Frame level from level 1 upward.
+# Effect: Higher values make iron golems hit harder.
+attackBonusByLevel = [1.5, 3.0, 4.5, 6.0, 7.5]
+# Extra health an iron ingot repair restores on your bound iron golems, on top of the vanilla 25, by Iron Frame level from level 1 upward.
+# Effect: Higher values make each ingot heal more.
+ingotHealBonusByLevel = [5, 10, 15, 20, 25]
+# Iron Frame level at which your bound iron golems' punches also hit nearby hostile mobs with Sweeping Fists.
+# Effect: Lower values unlock Sweeping Fists sooner.
+sweepLevel = 3
+# Extra hostile mobs each punch of a bound iron golem also hits with Sweeping Fists, by Iron Frame level from level 1 upward.
+# Effect: Higher values let each punch hit more mobs.
+sweepTargetsByLevel = [0, 0, 1, 1, 2]
+# Fraction of a punch's damage that Sweeping Fists deals to each extra mob. 0.5 is half.
+# Effect: Higher values make Sweeping Fists hit harder.
+sweepDamageFraction = 0.5
+# Blocks around the punched mob within which Sweeping Fists finds extra hostile mobs, from 0 to 8.
+# Effect: Higher values let Sweeping Fists reach mobs farther from the punched one.
+sweepRadius = 2.0
+# Iron Frame level at which the Golem menu offers Colossus Form for your bound iron golems. Golems in Colossus Form shrink back when you drop below it.
+# Effect: Lower values unlock Colossus Form sooner.
+colossusLevel = 5
+# Scale a bound iron golem grows to in Colossus Form, from 0.36 to 1.5. 1.0 is the vanilla iron golem size.
+# Effect: Higher values make golems in Colossus Form larger and need more room to grow.
+colossusScale = 1.0
+# Fraction added to a bound iron golem's total attack damage, frame bonus included, while it is in Colossus Form. 0.2 is 20% more.
+# Effect: Higher values make golems in Colossus Form hit harder.
+colossusAttackBonus = 0.2
+# Ticks a bound iron golem takes to grow into Colossus Form or shrink back.
+# Effect: Lower values make the change faster.
+colossusGrowTicks = 20
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.sweeping-fists]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

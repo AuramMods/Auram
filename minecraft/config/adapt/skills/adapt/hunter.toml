@@ -1,0 +1,45 @@
+# Adapt configuration - skill:adapt:hunter
+# This file is canonicalized on load; comments and new keys may update automatically.
+
+# Enables or disables this skill and everything registered under it.
+# Effect: Set to false to remove the skill from menus and stop its XP and adaptations.
+enabled = true
+# Skill colour as #RRGGBB, used for its name and pages.
+# Effect: Leave empty for the colour the skill was written with.
+skillColor = ""
+# XP below which an award in this skill is not shown to the player.
+# Effect: Higher values hide more small awards from the XP ticker.
+minXp = 100.0
+# XP gain tuning for the adapt:hunter skill.
+getXpForAttackingWithTools = true
+# Scaling applied to the adapt:hunter skill.
+creeperKillMultiplier = 2.0
+# XP gain tuning for the adapt:hunter skill.
+killMaxHealthXPMultiplier = 4.0
+# Flat XP added to every kill reward.
+killFlatXp = 30.0
+# Cooldown between the adapt:hunter skill activations.
+cooldownDelay = 1000
+# Kill reward multiplier for mobs from spawners, spawn eggs, buckets, breeding, portals, and golem or snowman builds.
+# Effect: Lower values make mob farms pay less.
+spawnerMobReductionXpMultiplier = 0.3
+# Controls Kills challenge reward for the adapt:hunter skill.
+killsChallengeReward = 500.0
+# Controls Boss kill reward for the adapt:hunter skill.
+bossKillReward = 1000.0
+
+# Server defaults and permitted choices for this skill's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

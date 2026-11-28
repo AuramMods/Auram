@@ -1,0 +1,90 @@
+# Adapt configuration - adaptation:adapt:seaborne/ink_veil
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Taking damage underwater bursts an ink cloud that blinds hostiles and briefly hides you from drowned and guardians.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 2
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.5
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 1
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base ink cloud radius in blocks.
+# Effect: Higher values blind hostiles across a wider area at low levels.
+cloudSizeBase = 4.0
+# Additional ink cloud radius gained across levels.
+# Effect: Higher values greatly widen the cloud at higher levels.
+cloudSizeFactor = 4.0
+# Base cooldown in milliseconds between ink bursts.
+# Effect: Lower values allow more frequent bursts; the effective cooldown shrinks as you level.
+cooldownMillisBase = 12000
+# Cooldown milliseconds removed at max level.
+# Effect: Higher values make higher levels burst far more often (floored at 3s).
+cooldownMillisReduction = 8000
+# Base duration in ticks that drowned and guardians cannot target the player after a burst.
+# Effect: Higher values keep those underwater hunters disengaged longer at low levels.
+concealmentTicksBase = 40.0
+# Additional anti-target duration in ticks gained across levels.
+# Effect: Higher values extend protection from drowned and guardian targeting at higher levels.
+concealmentTicksFactor = 40.0
+# Base blindness duration in ticks applied to nearby hostiles.
+# Effect: Higher values blind hostiles for longer at low levels.
+blindTicksBase = 60.0
+# Additional blindness ticks gained across levels.
+# Effect: Higher values blind hostiles for longer at higher levels.
+blindTicksFactor = 60.0
+# Maximum number of nearby hostile mobs affected by each ink burst.
+# Effect: Higher values let one cloud blind more mobs but increase burst-time work in dense farms.
+maxAffectedHostiles = 24
+# Duration in ticks of the expanding squid-ink cloud visual.
+# Effect: Higher values keep the cloud visible longer and emit more particles.
+cloudVisualTicks = 10
+# Bonus XP granted when an ink cloud bursts.
+# Effect: Higher values reward defensive bursts with more skill XP.
+burstXp = 10.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.visuals]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "FULL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FULL", "HALF", "QUARTER"]
+

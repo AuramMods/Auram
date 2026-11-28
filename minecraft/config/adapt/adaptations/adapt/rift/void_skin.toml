@@ -1,0 +1,117 @@
+# Adapt configuration - adaptation:adapt:rift/void_skin
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Any lethal damage blinks you to a nearby safe spot, or the current world's spawn when none exists, with brief resistance for one ender pearl.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 7
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 4
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 6
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Base cooldown in milliseconds between escapes.
+# Effect: Higher values force longer waits between escapes.
+cooldownBaseMillis = 120000
+# Cooldown reduction in milliseconds per adaptation level beyond the first.
+# Effect: Higher values make leveling shorten the cooldown faster.
+cooldownReductionPerLevelMillis = 18000
+# Lowest possible cooldown in milliseconds regardless of level.
+# Effect: Higher values keep a floor under cooldown reduction.
+minimumCooldownMillis = 45000
+# Base resistance duration in ticks applied after an escape.
+# Effect: Higher values keep the resistance buff up longer.
+resistanceTicksBase = 60
+# Extra resistance ticks per adaptation level.
+# Effect: Higher values extend the resistance buff as you level.
+resistanceTicksPerLevel = 20
+# Resistance amplifier applied after an escape.
+# Effect: Higher values reduce incoming damage more during the buff.
+resistanceAmplifier = 2
+# Maximum horizontal search radius in blocks for a safe blink spot.
+# Effect: Higher values let the escape reach further, up to a hard 16-block limit.
+searchRadius = 9.0
+# Minimum horizontal blink distance in blocks.
+# Effect: Higher values push the escape further from where you were hit.
+minRadius = 4.0
+# Skill XP granted when an escape triggers.
+# Effect: Higher values grant more skill XP per escape.
+xpOnEscape = 40.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.causes]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ALL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ALL", "COMBAT", "ENVIRONMENT"]
+
+[playerPreferences.death-save-priority]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NORMAL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FIRST", "NORMAL", "LAST"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.reserve]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "NONE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["NONE", "ONE", "FOUR"]
+
+[playerPreferences.spawn-fallback]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

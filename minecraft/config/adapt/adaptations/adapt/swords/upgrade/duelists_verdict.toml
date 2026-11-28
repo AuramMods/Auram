@@ -1,0 +1,118 @@
+# Adapt configuration - adaptation:adapt:swords/upgrade/duelists_verdict
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Duel bonus on any sword; a named sword wakes Riposte, Lunge and Verdict through natural kills.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 6
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 3
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 4
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Radius in blocks used to count engaged foes.
+# Effect: Higher values count foes from farther away when deciding if you are in a duel.
+engageRadius = 7.0
+# Duel bonus damage before level scaling.
+# Effect: Higher values raise damage in every duel.
+bonusDamageBase = 0.15
+# Duel bonus damage added per level.
+# Effect: Higher values reward higher levels more.
+bonusDamagePerLevel = 0.1
+# Damage reduction in a duel before level scaling.
+# Effect: Higher values make you harder to kill one on one.
+reductionBase = 0.1
+# Damage reduction added per level.
+# Effect: Higher values reward higher levels more.
+reductionPerLevel = 0.07
+# Highest damage reduction at any level.
+# Effect: Caps the reduction.
+maxReduction = 0.4
+# Health fraction at or under which the finishing bonus applies.
+# Effect: Higher values let the bonus start earlier in the fight.
+finishingThreshold = 0.3
+# Finishing bonus before level scaling.
+# Effect: Higher values make finishing blows hit harder.
+finishingBonusBase = 0.2
+# Finishing bonus added per level.
+# Effect: Higher values reward higher levels more.
+finishingBonusPerLevel = 0.15
+# Skill XP for each hit landed in a duel.
+# Effect: Higher values reward dueling.
+xpPerFocusedHit = 4.0
+# Natural kills with the awakened sword that wake Riposte.
+# Effect: Lower values wake the first technique sooner.
+riposteKills = 100
+# Natural kills with the awakened sword that wake Lunge.
+# Effect: Lower values wake the second technique sooner.
+lungeKills = 300
+# Natural kills with the awakened sword that wake Verdict.
+# Effect: Lower values wake the third technique sooner.
+verdictKills = 800
+# Flat damage the awakened sword banks per natural kill.
+# Effect: Higher values reach the cap with fewer kills.
+bladeBonusPerKill = 0.01
+# Most flat damage the awakened sword can bank, per level.
+# Effect: Higher values raise the cap at every level.
+bladeBonusCapPerLevel = 1.0
+# How long a shield block keeps the guaranteed critical ready, in milliseconds.
+# Effect: Higher values give more time to answer a block.
+riposteWindowMillis = 1500.0
+# Your normal attack reach in blocks; Lunge only fires on targets beyond it.
+# Effect: Higher values stop the lunge from firing on targets you could already hit.
+attackReach = 3.0
+# Extra blocks Lunge closes past your reach.
+# Effect: Higher values let you lunge at farther targets.
+lungeBlocks = 4.0
+# Forward push per block of distance to the target.
+# Effect: Higher values carry you farther per block.
+lungeSurgePerBlock = 0.3
+# Blocks short of the target the lunge aims to stop.
+# Effect: Higher values land you farther from the target.
+lungeStopShort = 1.5
+# Hard cap on the lunge push.
+# Effect: Lower values keep the lunge shorter.
+lungeMaxSurge = 1.6
+# Upward hop added to the lunge.
+# Effect: Higher values lift you more so the lunge clears ground friction.
+lungeVerticalBoost = 0.2
+# Time between two lunges, in milliseconds.
+# Effect: Lower values allow more frequent lunges.
+lungeCooldownMillis = 3000.0
+# Health fraction under which a hit from the awakened sword ends a non-boss mob.
+# Effect: Higher values let Verdict end fights earlier.
+verdictThreshold = 0.3
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

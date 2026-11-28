@@ -1,0 +1,156 @@
+# Adapt configuration - adaptation:adapt:rift/blink
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Blink with player-selectable activation, targeting and phasing. Reactive activation unlocks at level 2 and replaces double-jump with an attack dodge. Successful blinks deal level-scaled ender pearl damage.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 7
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.7
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 6
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Cooldown between successful Rift Blink triggers in milliseconds.
+# Effect: Higher values reduce blink frequency; lower values allow faster reuse.
+cooldownMillis = 2000
+# Vanilla ender pearl damage applied after a successful level-1 blink.
+# Effect: Higher values make low-level blinks more dangerous.
+pearlDamageBase = 5.0
+# Blink self-damage removed for each level beyond the first.
+# Effect: Higher values make leveling reduce the health cost faster.
+pearlDamageReductionPerLevel = 1.0
+# Minimum ender pearl damage a successful blink can inflict.
+# Effect: Higher values retain more self-damage at high levels.
+minimumPearlDamage = 1.0
+# Blink distance in blocks at level 0 before level scaling. The combined range is bounded from 0 to 128 blocks.
+# Effect: Higher values make every blink reach further regardless of level.
+baseDistance = 12.0
+# Additional blink distance in blocks granted at max level, scaling linearly with level.
+# Effect: Higher values widen the gap between low-level and max-level blink reach.
+distanceFactor = 20.0
+# Blocks searched downward from the aimed point to prefer landing on solid ground, bounded from 0 to 32.
+# Effect: Higher values snap blinks to ground from further above it; lower values allow more mid-air blinks.
+groundSnapDepth = 5
+# Velocity carried along the selected travel direction after a blink.
+# Effect: Higher values give a stronger dash feel on arrival; 0 stops the player dead.
+momentumCarry = 0.35
+# Minimum distance a blink must cover to trigger.
+# Effect: Higher values prevent short hops from consuming the blink.
+minBlinkDistance = 1.5
+# Allows phasing through obstacles using the player-selected phasing mode.
+# Effect: False blocks phasing regardless of player preference.
+allowPhasing = true
+# Maximum extra blocks searched upward for a landing when verticality is preferred, bounded from 0 to 16.
+# Effect: Higher values allow higher visible ledges within the normal blink range.
+verticalSearchHeight = 6
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.activation]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "MANUAL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["MANUAL", "REACTIVE"]
+
+[playerPreferences.direction]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "LOOK"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["LOOK", "MOMENTUM"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.landing]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "SERVER"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["SERVER", "NEAR", "NONE"]
+
+[playerPreferences.momentum]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "FULL"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["FULL", "HALF", "STOP"]
+
+[playerPreferences.phasing]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "SNEAK"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["SNEAK", "AIM", "NEVER", "AUTO"]
+
+[playerPreferences.reactive-direction]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "LOOK"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["LOOK", "AWAY_FROM_ATTACKER", "MOMENTUM"]
+
+[playerPreferences.targeting]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "DISTANCE"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["DISTANCE", "VERTICALITY"]
+

@@ -1,0 +1,196 @@
+# Adapt configuration - adaptation:adapt:seaborne/tidecaller
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Sneak while it is raining to dash like a water blink through the storm.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Distance/area limit used by the adapt:seaborne/tidecaller adaptation.
+dashDistanceBase = 6.0
+# Scaling applied to the adapt:seaborne/tidecaller adaptation.
+dashDistanceFactor = 8.0
+# Cooldown between the adapt:seaborne/tidecaller adaptation activations.
+cooldownTicksBase = 140.0
+# Cooldown between the adapt:seaborne/tidecaller adaptation activations.
+cooldownTicksFactor = 80.0
+# XP gain tuning for the adapt:seaborne/tidecaller adaptation.
+xpPerBurst = 11.0
+# Allows the original rain-based trigger for Tidecaller dashes.
+# Effect: Disable this to make dashes water-only.
+allowRainTrigger = true
+# Allows Tidecaller dashes while the player is in water.
+# Effect: Enable this to make sneak/attack water woosh work consistently.
+allowWaterTrigger = true
+# Enables sneak-to-dash trigger.
+# Effect: Disable this if you only want attack-based trigger behavior.
+enableSneakTrigger = true
+# Enables attack-swing trigger (any item or empty hand).
+# Effect: Enable this for left-click water flings without requiring special items.
+enableAttackTrigger = true
+# Requires sneaking for attack-swing trigger.
+# Effect: True makes attack trigger only fire while sneaking; false allows it anytime in valid dash environments.
+attackTriggerRequiresSneak = false
+# Restricts attack-swing trigger to water states only.
+# Effect: True prevents accidental attack-trigger dashes on land even if rain trigger is enabled.
+attackTriggerWaterOnly = true
+# Uses velocity-based dash movement instead of teleporting to a target.
+# Effect: True makes tidecaller behave like a movement burst and prevents blink-style wall bypass.
+useVelocityDash = true
+# If true, removes pitch from velocity dash direction.
+# Effect: True keeps movement mostly horizontal; false follows exact look direction including up/down.
+flattenVelocityDashDirection = false
+# Base forward velocity strength of a velocity dash.
+# Effect: Higher values produce faster bursts.
+velocityStrengthBase = 1.05
+# Additional forward velocity strength gained by adaptation level.
+# Effect: Higher values make higher levels burst farther/faster.
+velocityStrengthFactor = 0.85
+# Base vertical velocity contribution for velocity dashes.
+# Effect: Small positive values keep water movement fluid; lower values stay flatter.
+velocityVerticalBase = 0.01
+# Additional vertical velocity contribution gained by adaptation level.
+# Effect: Higher values increase upward kick at higher levels.
+velocityVerticalFactor = 0.05
+# Adds dash velocity on top of current velocity when true.
+# Effect: True preserves momentum chains; false applies a fresh velocity vector.
+velocityAdditive = true
+# Hard cap on resulting velocity magnitude after dash.
+# Effect: Lower values are safer for anticheat and collisions.
+maxResultingVelocity = 2.25
+# Cancels dash if a solid block is detected directly ahead.
+# Effect: Prevents wall clipping and blink-like wall bypass.
+blockDashWhenWallAhead = true
+# Distance ahead used to detect blocking walls.
+# Effect: Higher values are safer but can block dashes near tight spaces.
+wallCheckDistance = 1.2
+# Applies forward velocity after the dash teleport.
+# Effect: True makes the dash feel fluid instead of instantly stopping at the target.
+applyForwardMomentumAfterDash = true
+# Horizontal forward momentum applied after the dash teleport.
+# Effect: Higher values create a stronger forward burst after each dash.
+forwardMomentum = 1.05
+# Vertical momentum added or set after the dash teleport.
+# Effect: Small positive values help keep water movement smooth; negative values push downward.
+verticalMomentum = 0.02
+# If true, replaces current vertical velocity with verticalMomentum.
+# Effect: False adds verticalMomentum on top of existing vertical motion.
+replaceVerticalMomentum = false
+# Re-applies swimming pose after dash when the player started swimming and remains in water.
+# Effect: Prevents dash teleports from popping swimmers out of swim posture.
+preserveSwimmingAfterDash = true
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.attack]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.attack-sneak]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.attack-water]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.flat]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "OFF"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.rain]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.sneak]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+[playerPreferences.water]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

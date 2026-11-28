@@ -1,0 +1,61 @@
+# Adapt configuration - adaptation:adapt:mutated/excavation/adapt/pickaxe/signature/convergence
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Earthshaker and Landshaper clear one face of stone and soft ground together, each with its own tool.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 0
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.45
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 0
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = []
+# Levels subtracted from the level to get the face depth; at 0 the depth equals the level.
+# Effect: Higher values keep the face shallower.
+depthLevelOffset = 0
+# Extra durability each tool loses per block it breaks for the face.
+# Effect: Higher values wear the tools out faster.
+durabilityPerBlock = 1
+# Face blocks broken per tick, before the server-wide cap.
+# Effect: Higher values clear the face sooner but cost more per tick.
+blocksPerTick = 8
+# Ticks after the swing before the rest of the face breaks, once the upgrade has bored or dug.
+# Effect: Raise it if the face breaks before the upgrade.
+delayTicks = 2
+# Cooldown after a face is cleared, in milliseconds.
+# Effect: Higher values clear fewer faces.
+cooldownMillis = 0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+

@@ -1,0 +1,147 @@
+# Adapt configuration - adaptation:adapt:golem/angler_core
+# This file is canonicalized on load; comments and new keys may update automatically.
+#
+# Golems bound with an Angler Core fish the open water in front of a Fishing Node with a fishing rod from their home chest and deliver each catch, with more luck, a junk filter, faster catches in the rain and double catches as the core grows stronger.
+
+# Enables or disables this feature.
+# Effect: Set to false to disable behavior without uninstalling files.
+enabled = true
+# Prevents normal player unlearning after this adaptation is purchased.
+# Effect: The first purchase still uses the configured cost and confirmation; administrative bypass may lower it without a refund.
+permanent = false
+# Shows the particle effects for this adaptation.
+showParticles = true
+# Plays the sound effects for this adaptation.
+showSounds = true
+# Base knowledge cost used when learning this adaptation.
+# Effect: Higher values make each level cost more knowledge.
+baseCost = 3
+# Scaling factor applied to higher adaptation levels.
+# Effect: Higher values increase level-to-level cost growth.
+costFactor = 0.6
+# Maximum level a player can reach for this adaptation.
+# Effect: Higher values allow more levels; lower values cap progression sooner.
+maxLevel = 5
+# Knowledge cost required to purchase level 1.
+# Effect: Higher values make unlocking the first level more expensive.
+initialCost = 2
+# Adaptations the player must already have learned, each written as adaptationId@level; an id without a namespace is in this adaptation's namespace.
+# Effect: Learning or leveling this adaptation is refused until every listed adaptation is learned at that level, and those adaptations cannot be unlearned below it while this one is learned.
+requires = ["adapt:golem/node_weaving@1"]
+# Seconds an Angler waits for each catch, by Angler Core level from level 1 upward. Each Lure level on its rod takes 5 seconds off, down to 1 second, before the rain multiplier. Swiftness runes and Copper Frame's Static Overdrive shorten it. Values below 1 count as 1.
+# Effect: Lower values make Anglers catch more often.
+catchIntervalSecondsByLevel = [60, 50, 40, 32, 25]
+# Fishing luck of each catch, by Angler Core level from level 1 upward. Luck of the Sea on the Angler's rod adds its level. Each point changes the category weights by their luck shifts, as Luck of the Sea does. Values below 0 count as 0.
+# Effect: Higher values catch more treasure and less junk.
+luckByLevel = [0, 0, 1, 1, 2]
+# Angler Core level at which Fishing Nodes can turn on the junk filter, which throws junk catches back.
+# Effect: Lower values unlock the junk filter sooner.
+junkFilterLevel = 3
+# Angler Core level at which Anglers catch faster while it rains on their water.
+# Effect: Lower values unlock faster rain fishing sooner.
+rainLevel = 4
+# Multiplier on the catch time while it rains on the water, from rainLevel. 0.75 is 25% shorter. Values load between 0.05 and 1.
+# Effect: Lower values make rain fishing faster.
+rainIntervalMultiplier = 0.75
+# Angler Core level at which a catch can bring up a second catch.
+# Effect: Lower values unlock double catches sooner.
+doubleCatchLevel = 5
+# Chance, from 0 to 1, that a catch brings up a second catch from doubleCatchLevel. 0.1 is 10%.
+# Effect: Higher values give more double catches.
+doubleCatchChance = 0.1
+# Most Anglers that can fish at once in one chunk, counting every Fishing Node in it. Each Fishing Node seats up to 5 of them. Values below 1 count as 1.
+# Effect: Higher values let more Anglers share the same water.
+maxAnglersPerChunk = 2
+# Weight of the fish category at 0 luck.
+# Effect: Higher values catch fish more often.
+fishWeight = 85
+# Change to the fish weight per point of luck.
+# Effect: Lower values make luck replace more fish with treasure.
+fishLuckShift = -1
+# Weight of the junk category at 0 luck.
+# Effect: Higher values catch junk more often.
+junkWeight = 10
+# Change to the junk weight per point of luck. Weights never drop below 0.
+# Effect: Lower values make luck remove junk faster.
+junkLuckShift = -2
+# Weight of the treasure category at 0 luck.
+# Effect: Higher values catch treasure more often.
+treasureWeight = 5
+# Change to the treasure weight per point of luck.
+# Effect: Higher values make luck bring up treasure more often.
+treasureLuckShift = 2
+# Fish catches as MATERIAL:weight, or MATERIAL:weight:min:max for a stack size from min to max. Entries that are not an item or have no weight above 0 are ignored with a warning.
+# Effect: Add, remove or reweight entries to change which fish Anglers catch.
+fish = ["COD:60", "SALMON:25", "TROPICAL_FISH:2", "PUFFERFISH:13"]
+# Junk catches as MATERIAL:weight, or MATERIAL:weight:min:max for a stack size from min to max. Entries that are not an item or have no weight above 0 are ignored with a warning.
+# Effect: Add, remove or reweight entries to change which junk Anglers catch.
+junk = ["LILY_PAD:17", "LEATHER_BOOTS:10", "LEATHER:10", "BONE:10", "STRING:5", "FISHING_ROD:2", "BOWL:10", "STICK:5", "INK_SAC:1:10:10", "TRIPWIRE_HOOK:10", "ROTTEN_FLESH:10"]
+# Treasure catches as MATERIAL:weight, or MATERIAL:weight:min:max for a stack size from min to max. ENCHANTED_BOOK and items with durability, such as bows and fishing rods, are enchanted with treasureEnchantLevels. Entries that are not an item or have no weight above 0 are ignored with a warning.
+# Effect: Add, remove or reweight entries to change which treasure Anglers catch.
+treasure = ["NAME_TAG:1", "SADDLE:1", "BOW:1", "FISHING_ROD:1", "ENCHANTED_BOOK:1", "NAUTILUS_SHELL:1"]
+# Enchantment levels treasure enchanted books, bows, fishing rods and other durable treasure are enchanted with, as at an enchanting table, including treasure enchantments. Values load between 1 and 30.
+# Effect: Higher values give treasure stronger enchantments.
+treasureEnchantLevels = 30
+# Golemancy work XP paid for each catch, including junk the junk filter throws back. Values below 0 count as 0.
+# Effect: Higher values pay more XP for fishing.
+workXpPerCatch = 6.0
+
+# Server defaults and permitted choices for this adaptation's player preferences.
+# Effect: Each registered control can be locked or restricted without changing another player's saved choices.
+[playerPreferences]
+
+[playerPreferences.enabled]
+# Allows players to choose an unlocked permitted value.
+# Effect: False forces the server default without deleting saved player choices.
+playerEditable = true
+# Default preference value, using its registered uppercase name.
+# Effect: Applies when locked or when a saved choice is unavailable; level requirements still apply.
+defaultValue = "ON"
+# Preference values permitted by the server.
+# Effect: Only listed values can be selected; the default must be included.
+allowedValues = ["ON", "OFF"]
+
+# Settings for the adapt:golem/angler_core adaptation Angler core recipe section.
+[anglerCoreRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", "YBY", " Z "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:core/angler"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[anglerCoreRecipe.keys]
+B = "golemancy:blank_core"
+X = "FISHING_ROD"
+Y = "PRISMARINE_SHARD"
+Z = "DRIED_KELP"
+
+# Settings for the adapt:golem/angler_core adaptation Fishing node recipe section.
+[fishingNodeRecipe]
+# Crafting grid rows from top to bottom.
+# Effect: Use 1 to 3 rows of the same width, at most 3 characters each. Each character is a symbol from keys; a space leaves that slot empty.
+rows = [" X ", " B ", "   "]
+# Item this recipe crafts.
+# Effect: Accepts a material name such as SHIELD or a namespaced custom item such as namespace:item.
+result = "golemancy:node/fishing"
+# Number of result items one craft yields.
+# Effect: Accepts 1 to 64.
+amount = 1
+# Registers this recipe.
+# Effect: Set to false to remove the recipe from crafting.
+enabled = true
+
+# Ingredient for each row symbol.
+# Effect: Accepts a material name such as AMETHYST_SHARD, an item tag such as #planks or #minecraft:planks, or a namespaced custom item such as namespace:item.
+[fishingNodeRecipe.keys]
+B = "golemancy:blank_node"
+X = "FISHING_ROD"
+
