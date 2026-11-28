@@ -123,3 +123,11 @@ The SQLite replay ran the original writer alongside Voxy commit `61c81246` using
 | On-disk database bytes | 1,187,840 | 1,187,840 |
 
 Every round finished with identical stored section data and revisions. The production storage test also read legacy data in all three coverage modes, retained existing revisions for unchanged sections, and incremented only a changed section. These timings cover the compression and commit path. Terrain generation and extracting voxel data are upstream workloads.
+
+## Lithostitched jigsaw piece collision
+
+The experiment in AuramCore `c1547db` tracks accepted integer boxes separately and checks quarter-block-inset candidate boxes against them. It still checks the original enclosing shape and uses the stock voxel operation for unsupported geometry.
+
+Across 1,728 structure-start cases on three fixed seeds, both arms produced 11 accepted starts and 674 rejected attempts. Ordered piece IDs, positions, rotations, saved data, and random draws matched. All three complete-chunk fingerprints matched, including the selected village-start chunk.
+
+The structure-start workload took 1.73 s in the control and 1.67 s with the experiment. The three complete-chunk tests took a median of 2.82 s in the control and 3.28 s with the experiment. This sample provides parity evidence. The copied-save throughput run measures the effect across 96 requests with the Snowy Biomes change present in both arms.
